@@ -52,7 +52,7 @@ def test_get_gripper_joint_speed_exception(device, case):
     logger.debug(f'test_api:{case["api"]}')
     logger.debug(f'test_joint:{joint}')
 
-    with allure.step(f"断言调用接口触发 ValueError 异常，输入值: {joint}"):
+    with allure.step(f"调用 {case['api']} 异常场景接口，参数 joint={case['joint']}"):
         with pytest.raises(ValueError, match=f".*{joint}.*"):
             device.m.get_gripper_joint_speed(int(joint))
 

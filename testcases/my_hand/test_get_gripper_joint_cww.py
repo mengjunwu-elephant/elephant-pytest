@@ -48,7 +48,7 @@ def test_get_gripper_joint_cww_out_limit(device, case):
     logger.debug(f'test_api:{case["api"]}')
     logger.debug(f'test_joint:{case["joint"]}')
 
-    with allure.step("调用 get_gripper_joint_cww 接口，期待抛出 ValueError"):
+    with allure.step(f"调用 {case['api']} 异常场景接口，参数 joint={case['joint']}"):
         with pytest.raises(ValueError):
             device.m.get_gripper_joint_cww(int(case["joint"]))
 
