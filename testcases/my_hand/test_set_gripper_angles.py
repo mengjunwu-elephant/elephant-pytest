@@ -26,19 +26,19 @@ def test_set_gripper_angles_normal(device, case):
     title = case["title"]
     expected = case["expect_data"]
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
-    logger.debug(f'test_api:{case["api"]}')
-    logger.debug(f'test_angles:{case["angles"]}')
-    logger.debug(f'test_speed:{case["speed"]}')
+    with allure.step("打印测试参数信息"):
+        logger.debug(f'test_api:{case["api"]}')
+        logger.debug(f'test_angles:{case["angles"]}')
+        logger.debug(f'test_speed:{case["speed"]}')
 
-    with allure.step("调用 set_gripper_angles 接口"):
+    with allure.step("调用 set_gripper_angles 接口, angles={case['angles']}, speed={case['speed']"):
         set_res = device.m.set_gripper_angles(eval(case["angles"]), case["speed"])
         sleep(3)
-    with allure.step("调用 get_gripper_angles 接口"):
         get_res = device.m.get_gripper_angles()
+        logger.debug(f'set_res:{set_res},get_res:{get_res}')
 
     with allure.step("断言返回值类型为 int"):
         assert isinstance(set_res, int), f"返回类型断言失败，实际类型为{type(set_res)}"
-        logger.debug('请求类型断言成功')
 
     with allure.step("断言设置返回值"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
@@ -60,8 +60,10 @@ def test_set_gripper_angles_normal(device, case):
 def test_set_gripper_angles_exception(device, case):
     title = case["title"]
     logger.info(f'》》》》》用例【{case["title"]}】开始测试《《《《《')
-    logger.debug(f'test_api:{case["api"]}')
-    logger.debug(f'test_speed:{case["speed"]}')
+    with allure.step("打印测试参数信息"):
+        logger.debug(f'test_api:{case["api"]}')
+        logger.debug(f'test_angles:{case["angles"]}')
+        logger.debug(f'test_speed:{case["speed"]}')
 
     with allure.step(f"调用 {case['api']} 异常场景接口，参数 angles={case['angles']}, speed={case['speed']}"):
         with pytest.raises(ValueError, match=f".*{title}.*"):

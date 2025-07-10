@@ -23,8 +23,9 @@ def test_get_gripper_joint_speed_normal(device, case):
     expect = case['expect_data']
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
-    logger.debug(f'test_api:{case["api"]}')
-    logger.debug(f'test_joint:{joint}')
+    with allure.step("打印测试参数信息"):
+        logger.debug(f'test_api:{case["api"]}')
+        logger.debug(f'test_joint:{joint}')
 
     with allure.step(f"调用接口 get_gripper_joint_speed({joint})"):
         response = device.m.get_gripper_joint_speed(joint)
@@ -49,8 +50,9 @@ def test_get_gripper_joint_speed_exception(device, case):
     joint = case['joint']
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
-    logger.debug(f'test_api:{case["api"]}')
-    logger.debug(f'test_joint:{joint}')
+    with allure.step("打印测试参数信息"):
+        logger.debug(f'test_api:{case["api"]}')
+        logger.debug(f'test_joint:{joint}')
 
     with allure.step(f"调用 {case['api']} 异常场景接口，参数 joint={case['joint']}"):
         with pytest.raises(ValueError, match=f".*{joint}.*"):

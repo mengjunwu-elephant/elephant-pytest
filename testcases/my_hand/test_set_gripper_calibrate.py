@@ -25,8 +25,9 @@ def device():
 def test_set_gripper_joint_calibration(device, case):
     title = case["title"]
     logger.info(f'》》》》》用例【{case["title"]}】开始测试《《《《《')
-    logger.debug(f'test_api:{case["api"]}')
-    logger.debug(f'test_joints:{case["joint"]}')
+    with allure.step("打印测试参数信息"):
+        logger.debug(f'test_api:{case["api"]}')
+        logger.debug(f'test_joints:{case["joint"]}')
 
     set_res = device.m.set_gripper_joint_calibration(case["joint"])
     sleep(3)
@@ -43,8 +44,9 @@ def test_set_gripper_joint_calibration(device, case):
 def test_set_gripper_joint_calibration_exception(device, case):
     title = case["title"]
     logger.info(f'》》》》》用例【{case["title"]}】开始测试《《《《《')
-    logger.debug(f'test_api:{case["api"]}')
-    logger.debug(f'test_joints:{case["joint"]}')
+    with allure.step("打印测试参数信息"):
+        logger.debug(f'test_api:{case["api"]}')
+        logger.debug(f'test_joints:{case["joint"]}')
 
     with allure.step(f"调用 {case['api']} 异常场景接口，参数 joint={case['joint']}"):
         with pytest.raises(ValueError, match=f".*{case['title']}.*"):

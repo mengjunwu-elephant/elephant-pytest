@@ -1,52 +1,43 @@
-import unittest
-from ddt import ddt, data
-import settings
-from common1.test_data_handler import get_test_data_from_excel
+import pytest
+import allure
 from common1 import logger
 from settings import ProGripperBase
+from common1.test_data_handler import get_test_data_from_excel
 
-# 从Excel中提取数据
+# 获取测试数据
 cases = get_test_data_from_excel(ProGripperBase.TEST_DATA_FILE, "get_vir_pos")
 
+@pytest.fixture(scope="module")
+def device():
+    dev = ProGripperBase()
+    logger.info("初始化完成，接口测试开始")
+    yield dev
+    dev.m.close()
+    logger.info("环境清理完成，接口测试结束")
 
-@ddt
-class TestGetQueueCount(unittest.TestCase):
+@allure.feature("获取虚位")
+@allure.story("正常用例")
+@pytest.mark.parametrize("case", cases, ids=lambda c: c["title"])
+def test_get_vir_pos(device, case):
+    title = case["title"]
+    logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
 
+    with allure.step("打印测试参数信息"):
+        logger.debug(f'test_api: {case["api"]}')
+        logger.debug(f'test_parameters: {case.get("parameter", "")}')
 
-    # 初始化测试环境
-    @classmethod
-    def setUpClass(cls):
-        cls.device = ProGripperBase()  # 实例化夹爪
-        logger.info("初始化完成，接口测试开始")
+    with allure.step("调用接口 get_gripper_vir_pos 获取虚位"):
+        response = device.m.get_gripper_vir_pos()
+        logger.debug(f"接口返回结果：{response}")
 
-    # 清理测试环境
-    @classmethod
-    def tearDownClass(cls):
-        cls.device.m.close()
-        logger.info("环境清理完成，接口测试结束")
+    with allure.step("断言返回值类型为 int"):
+        assert isinstance(response, int), f"返回类型错误，期望 int，实际为 {type(response)}"
+        logger.debug("请求类型断言成功")
 
-    @data(*cases)
-    def test_get_vir_pos(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_parameters:{}'.format(case['parameter']))
-        # 请求发送
-        response = self.device.m.get_gripper_vir_pos()
-        try:
-            # 请求结果类型断言
-            if type(response) == int:
-                logger.debug('请求类型断言成功')
-            else:
-                logger.debug('请求类型断言失败，实际类型为{}'.format(type(response)))
-            # 请求结果断言
-            self.assertEqual(case['expect_data'], response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('期望数据：{}'.format(case['expect_data']))
-            logger.debug('实际结果：{}'.format(response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    with allure.step("断言返回值与期望值一致"):
+        allure.attach(str(case["expect_data"]), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response), name="实际返回值", attachment_type=allure.attachment_type.TEXT)
+        assert response == case["expect_data"], f"期望：{case['expect_data']}，实际：{response}"
+
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{title}】测试完成《《《《《')

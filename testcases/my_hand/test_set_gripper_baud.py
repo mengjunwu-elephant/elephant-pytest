@@ -27,8 +27,9 @@ def device():
 def test_set_gripper_baud(device, case):
     title = case["title"]
     logger.info(f'》》》》》用例【{case["title"]}】开始测试《《《《《')
-    logger.debug(f'test_api:{case["api"]}')
-    logger.debug(f'test_parameters:{case["parameter"]}')
+    with allure.step("打印测试参数信息"):
+        logger.debug(f'test_api:{case["api"]}')
+        logger.debug(f'test_parameters:{case["parameter"]}')
 
     set_res = device.m.set_gripper_baud(case["parameter"])
     device.m.close()
@@ -49,8 +50,9 @@ def test_set_gripper_baud(device, case):
 def test_set_gripper_baud_exception(device, case):
     title = case["title"]
     logger.info(f'》》》》》用例【{case["title"]}】开始测试《《《《《')
-    logger.debug(f'test_api:{case["api"]}')
-    logger.debug(f'test_parameters:{case["parameter"]}')
+    with allure.step("打印测试参数信息"):
+        logger.debug(f'test_api:{case["api"]}')
+        logger.debug(f'test_parameters:{case["parameter"]}')
 
     with allure.step(f"调用 {case['api']} 异常场景接口，参数 parameter={case['parameter']}"):
         with pytest.raises(ValueError, match=f".*{case['title']}.*"):

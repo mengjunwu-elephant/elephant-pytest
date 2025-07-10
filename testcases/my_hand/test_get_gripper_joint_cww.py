@@ -22,8 +22,9 @@ exception_cases = [case for case in cases if case.get("test_type") == "exception
 @pytest.mark.parametrize("case", normal_cases, ids=[case["title"] for case in normal_cases])
 def test_get_gripper_joint_cww(device, case):
     logger.info(f'》》》》》用例【{case["title"]}】开始测试《《《《《')
-    logger.debug(f'test_api:{case["api"]}')
-    logger.debug(f'test_joint:{case["joint"]}')
+    with allure.step("打印测试参数信息"):
+        logger.debug(f'test_api:{case["api"]}')
+        logger.debug(f'test_joint:{case["joint"]}')
 
     with allure.step("调用 get_gripper_joint_cww 接口"):
         response = device.m.get_gripper_joint_cww(case["joint"])
@@ -45,8 +46,10 @@ def test_get_gripper_joint_cww(device, case):
 @pytest.mark.parametrize("case", exception_cases, ids=[case["title"] for case in exception_cases])
 def test_get_gripper_joint_cww_out_limit(device, case):
     logger.info(f'》》》》》用例【{case["title"]}】开始测试《《《《《')
-    logger.debug(f'test_api:{case["api"]}')
-    logger.debug(f'test_joint:{case["joint"]}')
+
+    with allure.step("打印测试参数信息"):
+        logger.debug(f'test_api:{case["api"]}')
+        logger.debug(f'test_joint:{case["joint"]}')
 
     with allure.step(f"调用 {case['api']} 异常场景接口，参数 joint={case['joint']}"):
         with pytest.raises(ValueError):

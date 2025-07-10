@@ -1,144 +1,129 @@
-import unittest
-from site import abs_paths
-
-from ddt import ddt, data
-from time import sleep
-
-import settings
-from common1.test_data_handler import get_test_data_from_excel
+import pytest
+import allure
+import time
 from common1 import logger
 from settings import ProGripperBase
+from common1.test_data_handler import get_test_data_from_excel
 
-# 从Excel中提取数据
 cases = get_test_data_from_excel(ProGripperBase.TEST_DATA_FILE, "set_abs_gripper_angle")
 
+@pytest.fixture(scope="module")
+def device():
+    dev = ProGripperBase()
+    logger.info("初始化完成，接口测试开始")
+    yield dev
+    time.sleep(3)
+    dev.m.close()
+    logger.info("环境清理完成，接口测试结束")
 
-@ddt
-class TestSetAbsGripperAngle(unittest.TestCase):
+@pytest.fixture(autouse=True)
+def reset_gripper(device):
+    yield
+    device.m.set_abs_gripper_value(0, 100)
+    time.sleep(3)
+
+@allure.feature("绝对角度设置相关接口")
+@allure.story("设置绝对角度")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == 1], ids=lambda c: c["title"])
+def test_set_abs_gripper_angle(device, case):
+    title = case['title']
+    logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
+    logger.debug(f'test_api: {case["api"]}')
+    logger.debug(f'test_value: {case["value"]}')
+    with allure.step(f"调用 set_abs_gripper_value({case['value']})"):
+        response = device.m.set_abs_gripper_value(case["value"])
+        time.sleep(3)
+
+    with allure.step("断言返回类型为 int"):
+        assert isinstance(response, int), f"返回类型错误，期望 int，实际为 {type(response)}"
+        logger.debug("请求类型断言成功")
+
+    with allure.step("断言返回结果符合预期"):
+        allure.attach(str(case['expect_data']), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response), name="实际结果", attachment_type=allure.attachment_type.TEXT)
+        assert response == case['expect_data'], f"期望{case['expect_data']}，实际{response}"
+
+    logger.info(f'请求结果断言成功，用例【{title}】测试成功')
+    logger.info(f'》》》》》用例【{title}】测试完成《《《《《')
+
+@allure.feature("绝对角度设置相关接口")
+@allure.story("暂停与恢复")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == 2], ids=lambda c: c["title"])
+def test_pause_and_resume(device, case):
+    title = case['title']
+    logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
+
+    with allure.step("发送绝对角度"):
+        abs_res = device.m.set_abs_gripper_value(100, 1)
+        time.sleep(0.5)
+
+    with allure.step("暂停夹爪"):
+        pause_res = device.m.set_gripper_pause()
+        time.sleep(3)
+
+    with allure.step("恢复夹爪"):
+        resume_res = device.m.set_gripper_resume()
+        time.sleep(1)
+
+    with allure.step("断言返回类型均为 int"):
+        assert all(isinstance(r, int) for r in [abs_res, pause_res, resume_res]), \
+            f"返回类型错误，绝对角度返回{type(abs_res)}, 暂停返回{type(pause_res)}, 恢复返回{type(resume_res)}"
+        logger.debug('请求类型断言成功')
+
+    with allure.step("断言返回结果符合预期"):
+        expect = case['expect_data']
+        allure.attach(str(expect), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(f"abs_res: {abs_res}, pause_res: {pause_res}, resume_res: {resume_res}",
+                      name="实际结果", attachment_type=allure.attachment_type.TEXT)
+        assert abs_res == expect and pause_res == expect and resume_res == expect, \
+            f"返回结果不匹配，期望：{expect}"
+
+    logger.info(f'请求结果断言成功，用例【{title}】测试成功')
+    logger.info(f'》》》》》用例【{title}】测试完成《《《《《')
+
+@allure.feature("绝对角度设置相关接口")
+@allure.story("停止夹爪")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == 3], ids=lambda c: c["title"])
+def test_stop(device, case):
+    title = case['title']
+    logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
+
+    with allure.step("发送绝对角度"):
+        abs_res = device.m.set_abs_gripper_value(100, 1)
+        time.sleep(0.5)
+
+    with allure.step("停止夹爪"):
+        stop_res = device.m.set_gripper_stop()
+
+    with allure.step("断言返回类型均为 int"):
+        assert all(isinstance(r, int) for r in [abs_res, stop_res]), \
+            f"返回类型错误，绝对角度返回{type(abs_res)}, 停止返回{type(stop_res)}"
+        logger.debug('请求类型断言成功')
+
+    with allure.step("断言返回结果符合预期"):
+        expect = case['expect_data']
+        allure.attach(str(expect), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(f"abs_res: {abs_res}, stop_res: {stop_res}",
+                      name="实际结果", attachment_type=allure.attachment_type.TEXT)
+        assert abs_res == expect and stop_res == expect, f"返回结果不匹配，期望：{expect}"
+
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{title}】测试完成《《《《《')
 
 
-    # 初始化测试环境
-    @classmethod
-    def setUpClass(cls):
-        cls.device = ProGripperBase()  # 实例化夹爪
-        logger.info("初始化完成，接口测试开始")
+@allure.feature("绝对角度设置相关接口")
+@allure.story("异常用例验证")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
+def test_out_limit(device, case):
+    title = case['title']
+    logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
+    logger.debug(f'test_api: {case["api"]}')
+    logger.debug(f'test_value: {case["value"]}')
 
-    # 清理测试环境
-    @classmethod
-    def tearDownClass(cls):
-        sleep(3)
-        cls.device.m.close()
-        logger.info("环境清理完成，接口测试结束")
+    with allure.step("验证非法输入是否触发 ValueError"):
+        with pytest.raises(ValueError, match=f".*{case['title']}.*"):
+            device.m.set_abs_gripper_value(case["value"], case.get("speed", None))
 
-    def tearDown(self):
-        self.device.m.set_abs_gripper_value(0, 100)
-        sleep(3)
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{title}】测试完成《《《《《')
 
-    @data(*[case for case in cases if case.get("test_type") == 1])
-    def test_set_abs_gripper_angle(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_value:{}'.format(case['value']))
-        # 请求发送
-        response = self.device.m.set_abs_gripper_value(case["value"])
-        sleep(3)
-        try:
-            # 请求结果类型断言
-            if type(response) == int:
-                logger.debug('请求类型断言成功')
-            else:
-                logger.debug('请求类型断言失败，实际类型为{}'.format(type(response)))
-            # 请求结果断言
-            self.assertEqual(case['expect_data'], response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('期望数据：{}'.format(case['expect_data']))
-            logger.debug('实际结果：{}'.format(response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
-
-    @data(*[case for case in cases if case.get("test_type") == 2])
-    def test_pause_and_resume(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-
-        # 发送绝对角度
-        abs_res = self.device.m.set_abs_gripper_value(100, 1)
-        sleep(0.5)
-        pause_res = self.device.m.set_gripper_pause()
-        sleep(3)
-        resume_res = self.device.m.set_gripper_resume()
-        sleep(1)
-        try:
-            # 请求结果类型断言
-            if type(abs_res and pause_res and resume_res) == int:
-                logger.debug('请求类型断言成功')
-            else:
-                logger.debug(
-                    '请求类型断言失败，实际类型为绝对角度返回{}，暂停返回{}，恢复返回{}'.format(type(abs_res), type(pause_res),
-                                                                                             type(resume_res)))
-            # 请求结果断言
-            self.assertEqual(case['expect_data'], abs_res)
-            self.assertEqual(case['expect_data'], pause_res)
-            self.assertEqual(case['expect_data'], resume_res)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('期望数据：{}'.format(case['expect_data']))
-            logger.debug('实际结果绝对角度返回{}，暂停返回{}，恢复返回{}'.format(abs_res, pause_res, resume_res))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
-
-    @data(*[case for case in cases if case.get("test_type") == 3])
-    def test_stop(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 发送绝对角度
-        abs_res = self.device.m.set_abs_gripper_value(100, 1)
-        sleep(0.5)
-        stop_res = self.device.m.set_gripper_stop()
-        try:
-            # 请求结果类型断言
-            if type(abs_res and stop_res) == int:
-                logger.debug('请求类型断言成功')
-            else:
-                logger.debug(
-                    '请求类型断言失败，实际类型为绝对角度返回{}，停止返回{}'.format(type(abs_res), type(stop_res)))
-            # 请求结果断言
-            self.assertEqual(case['expect_data'], abs_res)
-            self.assertEqual(case['expect_data'], stop_res)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('期望数据：{}'.format(case['expect_data']))
-            logger.debug('实际结果绝对角度返回{}，停止返回{}'.format(abs_res, stop_res))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
-
-    @data(*[case for case in cases if case.get("test_type") == "exception"])  # 筛选无效等价类用例
-    def test_out_limit(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_value:{}'.format(case['value']))
-        # 请求发送
-        try:
-            with self.assertRaises(ValueError,
-                                   msg="用例{}未触发value错误，value值为{}".format(case['title'], case['value'])):
-                self.device.m.set_abs_gripper_value(case["value"], case["speed"])
-        except AssertionError:
-            logger.error("断言失败：用例{}未触发异常".format(case['title']))
-            raise  # 重新抛出异常，让测试框架捕获
-        except Exception as e:
-            logger.exception("未预期的异常发生：{}".format(str(e)))
-            raise
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))

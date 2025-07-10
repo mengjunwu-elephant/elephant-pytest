@@ -22,9 +22,10 @@ def device():
 def test_set_gripper_joint_p(device, case):
     title = case['title']
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
-    logger.debug(f'test_api: {case["api"]}')
-    logger.debug(f'test_joint: {case["joint"]}')
-    logger.debug(f'test_parameter: {case["parameter"]}')
+    with allure.step("打印测试参数信息"):
+        logger.debug(f'test_api: {case["api"]}')
+        logger.debug(f'test_joint: {case["joint"]}')
+        logger.debug(f'test_parameter: {case["parameter"]}')
 
     with allure.step(f"调用接口 set_gripper_joint_P，joint={case['joint']}，parameter={case['parameter']}"):
         set_res = device.m.set_gripper_joint_P(case["joint"], case["parameter"])
@@ -50,8 +51,10 @@ def test_set_gripper_joint_p(device, case):
 def test_set_gripper_joint_p_exception(device, case):
     title = case['title']
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
-    logger.debug(f'test_api: {case["api"]}')
-    logger.debug(f'test_parameter: {case["parameter"]}')
+    with allure.step("打印测试参数信息"):
+        logger.debug(f'test_api: {case["api"]}')
+        logger.debug(f'test_joint: {case["joint"]}')
+        logger.debug(f'test_parameter: {case["parameter"]}')
 
     with allure.step(f"调用 {case['api']} 异常场景接口，参数 joint={case['joint']}, parameter={case['parameter']}"):
         with pytest.raises(ValueError, match=f".*P值为{case['parameter']}.*"):

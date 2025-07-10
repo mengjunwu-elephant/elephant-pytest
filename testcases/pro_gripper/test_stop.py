@@ -1,54 +1,49 @@
-import unittest
-from ddt import ddt, data
-import settings
-from common1.test_data_handler import get_test_data_from_excel
+import pytest
+import allure
 from common1 import logger
+from common1.test_data_handler import get_test_data_from_excel
 from settings import ProGripperBase
 
-# 从Excel中提取数据
+# 从Excel中提取测试数据
 cases = get_test_data_from_excel(ProGripperBase.TEST_DATA_FILE, "stop")
 
 
-@ddt
-class TestStop(unittest.TestCase):
+@pytest.fixture(scope="module")
+def device():
+    dev = ProGripperBase()
+    logger.info("初始化完成，接口测试开始")
+    yield dev
+    dev.go_zero()
+    dev.m.close()
+    logger.info("环境清理完成，接口测试结束")
 
 
-    # 初始化测试环境
-    @classmethod
-    def setUpClass(cls):
-        cls.device = ProGripperBase()  # 实例化夹爪
-        logger.info("初始化完成，接口测试开始")
+@allure.feature("夹爪停止接口")
+@allure.story("功能测试")
+@pytest.mark.parametrize("case", cases, ids=lambda c: c["title"])
+def test_stop(device, case):
+    title = case["title"]
+    logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
 
-    # 清理测试环境
-    @classmethod
-    def tearDownClass(cls):
-        cls.device.go_zero()
-        cls.device.m.close()
-        logger.info("环境清理完成，接口测试结束")
+    with allure.step("打印测试参数信息"):
+        logger.debug(f'test_api: {case["api"]}')
+        logger.debug(f'test_parameters: {case["parameter"]}')
+        allure.attach(str(case["parameter"]), name="请求参数", attachment_type=allure.attachment_type.TEXT)
 
-    @data(*cases)
-    def test_stop(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_parameters:{}'.format(case['parameter']))
-        # 请求发送
-        self.device.m.set_abs_gripper_value(100)
-        response = self.device.m.set_gripper_stop()
-        try:
-            # 请求结果类型断言
-            if type(response) == int:
-                logger.debug('请求类型断言成功')
-            else:
-                logger.debug('请求类型断言失败，实际类型为{}'.format(type(response)))
-            # 请求结果断言
-            self.assertEqual(case['expect_data'], response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('期望数据：{}'.format(case['expect_data']))
-            logger.debug('实际结果：{}'.format(response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    with allure.step("设置夹爪绝对值为100，准备停止动作"):
+        device.m.set_abs_gripper_value(100)
+
+    with allure.step("调用停止接口"):
+        response = device.m.set_gripper_stop()
+        logger.debug(f"接口返回值: {response}")
+        allure.attach(str(response), name="接口返回值", attachment_type=allure.attachment_type.TEXT)
+
+    with allure.step("断言返回值类型为 int"):
+        assert isinstance(response, int), f"返回类型错误，应为 int，实际为 {type(response)}"
+
+    with allure.step("断言返回结果与期望一致"):
+        allure.attach(str(case["expect_data"]), name="期望返回值", attachment_type=allure.attachment_type.TEXT)
+        assert response == case["expect_data"], f"期望返回：{case['expect_data']}，实际返回：{response}"
+
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{title}】测试完成《《《《《')
