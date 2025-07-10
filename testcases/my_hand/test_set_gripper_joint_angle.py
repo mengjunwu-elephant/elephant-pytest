@@ -19,9 +19,11 @@ def device():
     dev.m.close()
     logger.info("环境清理完成，接口测试结束")
 
-@allure.feature("设置夹爪关节角度-正常用例")
+@allure.feature("设置夹爪关节角度")
+@allure.story("正常用例")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"])
 def test_set_gripper_joint_angle(device, case):
+    title = case["title"]
     logger.info(f'》》》》》用例【{case["title"]}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
     logger.debug(f'test_joint:{case["joint"]}')
@@ -45,19 +47,22 @@ def test_set_gripper_joint_angle(device, case):
         logger.debug(f'实际结果：{get_res}')
         pytest.fail(f"用例【{case['title']}】断言失败: {e}")
 
-    logger.info(f'请求结果断言成功，用例【{case["title"]}】测试成功')
-    logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{title}】测试完成《《《《《')
 
-@allure.feature("设置夹爪关节角度-异常用例")
+@allure.feature("设置夹爪关节角度")
+@allure.story("异常用例")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"])
 def test_set_gripper_joint_angle_exception(device, case):
+    title = case["title"]
     logger.info(f'》》》》》用例【{case["title"]}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
     logger.debug(f'test_joint:{case["joint"]}')
     logger.debug(f'test_angle:{case["angle"]}')
 
-    with pytest.raises(ValueError, match=f".*{case['title']}.*"):
-        device.m.set_gripper_joint_angle(case["joint"], case["angle"])
+    with allure.step(f"调用 {case['api']} 异常场景接口，参数 joint={case['joint']}, angle={case['angle']}"):
+        with pytest.raises(ValueError, match=f".*{case['title']}.*"):
+            device.m.set_gripper_joint_angle(case["joint"], case["angle"])
 
-    logger.info(f'请求结果断言成功，用例【{case["title"]}】测试成功')
-    logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{title}】测试完成《《《《《')

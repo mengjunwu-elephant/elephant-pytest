@@ -17,6 +17,7 @@ def device():
     dev.go_zero()
     dev.m.close()
     logger.info("环境清理完成，接口测试结束")
+
 @allure.feature("设置夹爪角度")
 @allure.story("正常用例")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"])
@@ -62,8 +63,9 @@ def test_set_gripper_angles_exception(device, case):
     logger.debug(f'test_api:{case["api"]}')
     logger.debug(f'test_speed:{case["speed"]}')
 
-    with pytest.raises(ValueError, match=f".*{title}.*"):
-        device.m.set_gripper_angles(eval(case["angles"]), case["speed"])
+    with allure.step(f"调用 {case['api']} 异常场景接口，参数 angles={case['angles']}, speed={case['speed']}"):
+        with pytest.raises(ValueError, match=f".*{title}.*"):
+            device.m.set_gripper_angles(eval(case["angles"]), case["speed"])
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{title}】测试完成《《《《《')

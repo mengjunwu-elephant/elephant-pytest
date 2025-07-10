@@ -17,7 +17,7 @@ def device():
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("夹爪姿态设置")
-@allure.story("设置夹爪姿态接口")
+@allure.story("正常用例")
 @pytest.mark.parametrize("case", cases, ids=[case["title"] for case in cases if case.get("test_type") == "normal"])
 def test_set_gripper_pose(device, case):
     title = case["title"]
@@ -42,12 +42,13 @@ def test_set_gripper_pose(device, case):
         assert response == expected, f"用例【{title}】断言失败，期望 {expected}，实际 {response}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{title}】测试完成《《《《《')
 
     # 模拟 tearDown 中的等待
     time.sleep(5)
 
 @allure.feature("夹爪姿态设置")
-@allure.story("设置夹爪姿态接口 - 异常用例")
+@allure.story("异常用例")
 @pytest.mark.parametrize("case", cases, ids=[case["title"] for case in cases if case.get("test_type") == "exception"])
 def test_set_gripper_pose_exception(device, case):
     title = case["title"]
@@ -62,4 +63,5 @@ def test_set_gripper_pose_exception(device, case):
         with pytest.raises(ValueError, match=f".*pose值为{case['pose']}.*"):
             device.m.set_gripper_pose(case["pose"], case["rank"], case["is_free"])
 
-    logger.info(f'✅ 用例【{title}】异常断言通过')
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{title}】测试完成《《《《《')

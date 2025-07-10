@@ -41,7 +41,8 @@ def test_set_gripper_joint_d(device, case):
         assert set_res == case['expect_data'], f"用例【{title}】断言失败，期望 {case['expect_data']}，实际 {set_res}"
         assert get_res == case["parameter"], f"用例【{title}】查询断言失败，期望 {case['parameter']}，实际 {get_res}"
 
-    logger.info(f'✅ 用例【{title}】测试成功')
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{title}】测试完成《《《《《')
 
 @allure.feature("夹爪关节D值设置")
 @allure.story("异常用例")
@@ -52,8 +53,9 @@ def test_set_gripper_joint_d_exception(device, case):
     logger.debug(f'test_api: {case["api"]}')
     logger.debug(f'test_parameter: {case["parameter"]}')
 
-    with allure.step(f"调用接口 set_gripper_joint_D，joint={case['joint']}，parameter={case['parameter']}，预期触发异常"):
+    with allure.step(f"调用 {case['api']} 异常场景接口，参数 joint={case['joint']}, parameter={case['parameter']}"):
         with pytest.raises(ValueError, match=f".*D值为{case['parameter']}.*"):
             device.m.set_gripper_joint_D(case["joint"], case["parameter"])
 
-    logger.info(f'✅ 用例【{title}】异常断言通过')
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{title}】测试完成《《《《《')

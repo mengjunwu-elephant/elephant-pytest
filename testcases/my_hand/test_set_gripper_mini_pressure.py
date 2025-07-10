@@ -16,7 +16,7 @@ def device():
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("夹爪最小启动力设置")
-@allure.story("设置夹爪最小启动力接口")
+@allure.story("正常用例")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"], ids=lambda c: c["title"])
 def test_set_gripper_joint_mini_pressure(device, case):
     title = case["title"]
@@ -43,9 +43,10 @@ def test_set_gripper_joint_mini_pressure(device, case):
         assert get_res == case["parameter"], f"用例【{title}】get接口断言失败，期望 {case['parameter']}，实际 {get_res}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{title}】测试完成《《《《《')
 
 @allure.feature("夹爪最小启动力设置")
-@allure.story("设置夹爪最小启动力接口 - 异常用例")
+@allure.story("异常用例")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
 def test_set_gripper_joint_mini_pressure_exception(device, case):
     title = case["title"]
@@ -59,4 +60,5 @@ def test_set_gripper_joint_mini_pressure_exception(device, case):
         with pytest.raises(ValueError, match=f".*最小启动力值为{case['parameter']}.*"):
             device.m.set_gripper_joint_mini_pressure(case["joint"], case["parameter"])
 
-    logger.info(f'✅ 用例【{title}】异常断言通过')
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{title}】测试完成《《《《《')

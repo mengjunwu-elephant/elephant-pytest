@@ -22,8 +22,10 @@ def device():
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"], ids=lambda c: c["title"])
 def test_set_gripper_joint_cww(device, case):
     title = case["title"]
-    logger.info(f"▶️ 开始执行用例【{title}】")
-    logger.debug(f"接口: {case['api']}, joint: {case['joint']}, 参数: {case['parameter']}")
+    logger.info(f'》》》》》用例【{case["title"]}】开始测试《《《《《')
+    logger.debug(f'test_api:{case["api"]}')
+    logger.debug(f'test_joint:{case["joint"]}')
+    logger.debug(f'test_parameter:{case["parameter"]}')
 
     with allure.step(f"调用 set_gripper_joint_cww，joint={case['joint']}，parameter={case['parameter']}"):
         set_res = device.m.set_gripper_joint_cww(case["joint"], case["parameter"])
@@ -40,18 +42,22 @@ def test_set_gripper_joint_cww(device, case):
         assert set_res == case["expect_data"], f"设置返回值断言失败：期望 {case['expect_data']}，实际 {set_res}"
         assert get_res == case["parameter"], f"读取返回值断言失败：期望 {case['parameter']}，实际 {get_res}"
 
-    logger.info(f"✅ 用例【{title}】测试成功")
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{title}】测试完成《《《《《')
 
 @allure.feature("夹爪关节CWW值设置")
 @allure.story("异常用例")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
 def test_set_gripper_joint_cww_exception(device, case):
     title = case["title"]
-    logger.info(f"▶️ 开始执行用例【{title}】")
-    logger.debug(f"接口: {case['api']}, 参数: {case['parameter']}")
+    logger.info(f'》》》》》用例【{case["title"]}】开始测试《《《《《')
+    logger.debug(f'test_api:{case["api"]}')
+    logger.debug(f'test_joint:{case["joint"]}')
+    logger.debug(f'test_parameter:{case["parameter"]}')
 
-    with allure.step("调用接口，预期触发 ValueError"):
+    with allure.step(f"调用 {case['api']} 异常场景接口，参数 joint={case['joint']}, parameter={case['parameter']}"):
         with pytest.raises(ValueError, match=f".*{case['parameter']}.*"):
             device.m.set_gripper_joint_cww(case["joint"], case["parameter"])
 
-    logger.info(f"✅ 用例【{title}】异常断言成功")
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{title}】测试完成《《《《《')

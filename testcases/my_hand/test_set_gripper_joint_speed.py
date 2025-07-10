@@ -17,7 +17,7 @@ def device():
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("夹爪关节速度设置")
-@allure.story("设置夹爪关节速度接口")
+@allure.story("正常用例")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"], ids=lambda c: c["title"])
 def test_set_gripper_joint_speed(device, case):
     title = case["title"]
@@ -42,9 +42,10 @@ def test_set_gripper_joint_speed(device, case):
         assert get_res == case["parameter"], f"用例【{title}】get接口断言失败，期望 {case['parameter']}，实际 {get_res}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{title}】测试完成《《《《《')
 
 @allure.feature("夹爪关节速度设置")
-@allure.story("设置夹爪关节速度接口 - 异常用例")
+@allure.story("异常用例")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
 def test_set_gripper_joint_speed_exception(device, case):
     title = case["title"]
@@ -52,8 +53,9 @@ def test_set_gripper_joint_speed_exception(device, case):
     logger.debug(f'test_api: {case["api"]}')
     logger.debug(f'test_parameter: {case["parameter"]}')
 
-    with allure.step(f"调用 {case['api']} 异常场景，joint={case['joint']}，parameter={case['parameter']}"):
+    with allure.step(f"调用 {case['api']} 异常场景接口，joint={case['joint']}，parameter={case['parameter']}"):
         with pytest.raises(ValueError, match=f".*速度值为{case['parameter']}.*"):
             device.m.set_gripper_joint_speed(case["joint"], case["parameter"])
 
-    logger.info(f'✅ 用例【{title}】异常断言通过')
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{title}】测试完成《《《《《')
