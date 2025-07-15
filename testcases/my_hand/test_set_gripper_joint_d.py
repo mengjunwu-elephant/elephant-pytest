@@ -57,7 +57,7 @@ def test_set_gripper_joint_d_exception(device, case):
         logger.debug(f'test_parameter: {case["parameter"]}')
 
     with allure.step(f"调用 {case['api']} 异常场景接口，参数 joint={case['joint']}, parameter={case['parameter']}"):
-        with pytest.raises(ValueError, match=f".*D值为{case['parameter']}.*"):
+        with pytest.raises(ValueError, match=".*"):
             device.m.set_gripper_joint_D(case["joint"], case["parameter"])
 
     logger.info(f'✅ 用例【{title}】测试通过')

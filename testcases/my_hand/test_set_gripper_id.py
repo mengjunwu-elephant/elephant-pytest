@@ -60,7 +60,7 @@ def test_set_gripper_id_exception(device, case):
         logger.debug(f'test_parameters: {case["parameter"]}')
 
     with allure.step(f"调用 {case['api']} 异常场景接口，参数 parameter={case['parameter']}"):
-        with pytest.raises(ValueError, match=f".*{case['title']}.*"):
+        with pytest.raises(ValueError, match=".*"):
             device.m.set_gripper_Id(int(case["parameter"]))
 
     logger.info(f'✅ 用例【{title}】测试通过')

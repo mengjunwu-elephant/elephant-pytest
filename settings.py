@@ -89,22 +89,6 @@ class MercuryBase:
         self.ml.set_pos_over_shoot(50)
         self.mr.set_pos_over_shoot(50)
 
-    @staticmethod
-    def is_in_position(target, current):
-        count = 0
-        if isinstance(target, (float,int)):
-            if abs(current) - 1 <= abs(target) <= abs(current) + 1:
-                return 1
-            else:
-                return -1
-        else:
-            for i, c in zip(target, current):
-                if abs(i) - 3 <= abs(c) <= abs(i) + 3:
-                    count += 1
-                    if count == len(target):
-                        return 1
-                else:
-                    return -1
 
     def set_default_p(self):
         for i in range(6):
@@ -160,19 +144,23 @@ class MyHandBase:
     # 测试数据配置
     TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/my_hand.xlsx')
 
-    def __init__(self, port="com3", baudrate=115200):
+    def __init__(self, port="com14", baudrate=115200):
         self.m = MyGripper_H100(port, baudrate=baudrate)
 
     def go_zero(self):
         self.m.set_gripper_angles([0, 0, 0, 0, 0, 0], self.speed)
 
     def set_default_p(self):
-        for i in range(6):
+        for i in range(4):
             self.m.set_gripper_joint_P(i + 1, 100)
+        self.m.set_gripper_joint_P(5, 32)
+        self.m.set_gripper_joint_P(6, 32)
 
     def set_default_d(self):
-        for i in range(6):
+        for i in range(4):
             self.m.set_gripper_joint_D(i + 1, 120)
+        self.m.set_gripper_joint_D(5, 10)
+        self.m.set_gripper_joint_D(6, 10)
 
     def set_default_i(self):
         for i in range(6):

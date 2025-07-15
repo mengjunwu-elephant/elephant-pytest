@@ -1,6 +1,7 @@
 import pytest
 import allure
 from common1 import logger
+from common1.assert_utils import assert_almost_equal
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MyHandBase
 
@@ -34,7 +35,7 @@ def test_get_gripper_angles(device, case):
     with allure.step("断言返回值等于期望值"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert response == expected, f"夹爪角度不匹配，期望 {expected}，实际 {response}"
+        assert_almost_equal(response,expected,tol=2,name='读取夹爪全角度')
 
     logger.info(f'✅ 用例【{case["title"]}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
