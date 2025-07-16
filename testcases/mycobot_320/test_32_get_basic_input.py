@@ -7,7 +7,7 @@ from common1.test_data_handler import get_test_data_from_excel
 from settings import Mycobot320Base
 
 # 从 Excel 读取测试数据
-cases = get_test_data_from_excel(Mycobot320Base.TEST_DATA_FILE, "get_digital_input")
+cases = get_test_data_from_excel(Mycobot320Base.TEST_DATA_FILE, "get_basic_input")
 
 normal_cases = [case for case in cases if case.get("test_type") == "normal"]
 logic_cases = [case for case in cases if case.get("test_type") == "logic"]
@@ -32,10 +32,10 @@ def device():
     dev.m.close()
     logger.info("环境清理完成，接口测试结束")
 
-@allure.feature("获取末端IO状态")
+@allure.feature("获取底部IO状态")
 @allure.story("正常用例值1")
 @pytest.mark.parametrize("case", normal_cases, ids=[case["title"] for case in normal_cases])
-def test_get_digital_input1(device, case):
+def test_get_basic_input1(device, case):
     title = case["title"]
     expected = case["expect_data"]
     joint = case["joint"]
@@ -44,11 +44,11 @@ def test_get_digital_input1(device, case):
     logger.debug(f'test_api:{case["api"]}')
     logger.debug(f'test_id:{case["joint"]}')
 
-    device.m.set_digital_output(joint, 1)
+    device.m.set_basic_output(joint, 1)
     time.sleep(0.1)
 
-    with allure.step("调用 get_digital_input 接口"):
-        response = device.m.get_digital_input(joint)
+    with allure.step("调用 get_basic_input 接口"):
+        response = device.m.get_basic_input(joint)
         logger.debug(f"接口返回：{response}")
 
     with allure.step("断言返回值类型为 int"):
@@ -62,10 +62,10 @@ def test_get_digital_input1(device, case):
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
 
-@allure.feature("获取末端IO状态")
+@allure.feature("获取底部IO状态")
 @allure.story("异常用例")
 @pytest.mark.parametrize("case", exception_cases, ids=[case["title"] for case in exception_cases])
-def test_get_digital_input2(device, case):
+def test_get_basic_input2(device, case):
     title = case["title"]
     joint = case["joint"]
 
@@ -74,16 +74,16 @@ def test_get_digital_input2(device, case):
     logger.debug(f'test_id:{case["joint"]}')
 
     with pytest.raises(ValueError, match=".*"):
-        device.m.get_digital_input(joint)
+        device.m.get_basic_input(joint)
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
 
 
-@allure.feature("获取末端IO状态")
+@allure.feature("获取底部IO状态")
 @allure.story("正常用例值0")
 @pytest.mark.parametrize("case", logic_cases, ids=[case["title"] for case in logic_cases])
-def test_get_digital_input3(device, case):
+def test_get_basic_input3(device, case):
     title = case["title"]
     expected = case["expect_data"]
     joint = case["joint"]
@@ -92,11 +92,11 @@ def test_get_digital_input3(device, case):
     logger.debug(f'test_api:{case["api"]}')
     logger.debug(f'test_id:{case["joint"]}')
 
-    device.m.set_digital_output(joint, 0)
+    device.m.set_basic_output(joint, 0)
     time.sleep(0.1)
 
-    with allure.step("调用 get_digital_input 接口"):
-        response = device.m.get_digital_input(joint)
+    with allure.step("调用 get_basic_input 接口"):
+        response = device.m.get_basic_input(joint)
         logger.debug(f"接口返回：{response}")
 
     with allure.step("断言返回值类型为 int"):
