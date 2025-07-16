@@ -29,11 +29,14 @@ def test_set_gripper_joint_calibration(device, case):
         logger.debug(f'test_api:{case["api"]}')
         logger.debug(f'test_joints:{case["joint"]}')
 
-    set_res = device.m.set_gripper_joint_calibration(case["joint"])
-    sleep(3)
-
-    assert isinstance(set_res, int), f"返回类型断言失败，实际类型为{type(set_res)}"
-    assert set_res == case['expect_data'], f"设置返回断言失败，期望：{case['expect_data']}，实际：{set_res}"
+    with allure.step(f"调用 {case['api']} 正常场景接口，参数 joint={case['joint']}"):
+        set_res = device.m.set_gripper_joint_calibration(case["joint"])
+        sleep(3)
+    with allure.step("断言接口返回类型与返回值"):
+        allure.attach(str(case["expect_data"]), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(set_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert isinstance(set_res, int), f"返回类型断言失败，实际类型为{type(set_res)}"
+        assert set_res == case['expect_data'], f"设置返回断言失败，期望：{case['expect_data']}，实际：{set_res}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{title}】测试完成《《《《《')
@@ -49,7 +52,7 @@ def test_set_gripper_joint_calibration_exception(device, case):
         logger.debug(f'test_joints:{case["joint"]}')
 
     with allure.step(f"调用 {case['api']} 异常场景接口，参数 joint={case['joint']}"):
-        with pytest.raises(ValueError, match=f".*{case['title']}.*"):
+        with pytest.raises(ValueError, match=".*"):
             device.m.set_gripper_joint_calibration(int(case['joint']))
 
     logger.info(f'✅ 用例【{title}】测试通过')

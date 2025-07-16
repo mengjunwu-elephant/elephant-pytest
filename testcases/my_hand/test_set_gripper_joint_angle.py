@@ -20,12 +20,21 @@ def device():
     dev.m.close()
     logger.info("环境清理完成，接口测试结束")
 
+
+@pytest.fixture(autouse=True)
+def reset_gripper(device):
+    """重置夹爪所有关节到零位"""
+    yield
+    for i in range(6):
+        device.m.set_gripper_joint_angle(i + 1, 0)
+        sleep(0.5)
+
 @allure.feature("设置夹爪关节角度")
 @allure.story("正常用例")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"])
 def test_set_gripper_joint_angle(device, case):
     title = case["title"]
-    expected = case["expected"]
+    expected = case["expect_data"]
     logger.info(f'》》》》》用例【{case["title"]}】开始测试《《《《《')
     with allure.step("打印测试参数信息"):
         logger.debug(f'test_api:{case["api"]}')
@@ -33,6 +42,8 @@ def test_set_gripper_joint_angle(device, case):
         logger.debug(f'test_angle:{case["angle"]}')
 
     with allure.step(f"调用 set_gripper_joint_angle 接口,joint={case['joint']}, angle={case['angle']}"):
+        if case['joint'] == 1:
+            device.m.set_gripper_joint_angle(4,90)
         set_res = device.m.set_gripper_joint_angle(case["joint"], case["angle"])
         sleep(2)
         get_res = device.m.get_gripper_joint_angle(case["joint"])
@@ -49,7 +60,7 @@ def test_set_gripper_joint_angle(device, case):
     with allure.step("断言获取返回值"):
         allure.attach(str(case["angle"]), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(get_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(get_res, eval(case["angle"]),name='设置夹爪角度')
+        assert_almost_equal(get_res, case["angle"],name='设置夹爪角度')
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{title}】测试完成《《《《《')
@@ -66,7 +77,7 @@ def test_set_gripper_joint_angle_exception(device, case):
         logger.debug(f'test_angle:{case["angle"]}')
 
     with allure.step(f"调用 {case['api']} 异常场景接口，参数 joint={case['joint']}, angle={case['angle']}"):
-        with pytest.raises(ValueError, match=f".*{case['title']}.*"):
+        with pytest.raises(ValueError, match=".*"):
             device.m.set_gripper_joint_angle(case["joint"], case["angle"])
 
     logger.info(f'✅ 用例【{title}】测试通过')

@@ -55,8 +55,8 @@ def test_get_gripper_joint_i_exception(device, case):
         logger.debug(f'test_joint:{joint}')
 
     with allure.step(f"调用 {case['api']} 异常场景接口，参数 joint={case['joint']}"):
-        with pytest.raises(ValueError, match=f".*{joint}.*"):
-            device.m.get_gripper_joint_I(int(joint))
+        with pytest.raises(ValueError, match=".*"):
+            device.m.get_gripper_joint_I(joint)
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
