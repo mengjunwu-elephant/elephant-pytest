@@ -11,7 +11,7 @@ if __name__ == '__main__':
                          "4: pro_gripper\n"
                          "5: my_hand\n"
                          "6: mycobot280\n"
-                         "7: mycobot320\n"
+                         "7: mycobot_320\n"
                          )
 
     # 获取对应用例路径

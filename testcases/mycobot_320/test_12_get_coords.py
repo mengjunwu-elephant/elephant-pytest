@@ -55,7 +55,7 @@ def test_get_coords1(device, case):
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(response, eval(expected), tol=10) #tol代表允许的误差值
+        assert_almost_equal(response, eval(expected), tol=5) #tol代表允许的误差值
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
