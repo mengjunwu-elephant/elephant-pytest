@@ -36,7 +36,7 @@ def test_pause1(device, case):
     logger.debug(f'test_api:{case["api"]}')
 
     with allure.step('控制机械臂运动'):
-
+        device.different_modes(ID)
 
     with allure.step(f"调用 pause 接口"):
         set_res = device.m.pause()

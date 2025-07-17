@@ -258,3 +258,33 @@ class Mycobot320Base:
             if self.m.is_moving() == 0:
                 break
         time.sleep(1)
+
+    def different_modes(self, ID):
+        if ID <= 4:
+            self.m.set_fresh_mode(0)
+            if ID == 1:
+                self.go_zero()
+                self.m.send_angles(self.zero_angles, self.speed)
+            elif ID == 2:
+                self.go_zero()
+                self.m.send_angle(1, 0, self.speed)
+            elif ID == 3:
+                self.go_coords()
+                self.m.send_coords(self.zero_coords, self.speed)
+            elif ID == 4:
+                self.go_coords()
+                self.m.send_coord(1, self.zero_coords[0], self.speed)
+        else:
+            self.m.set_fresh_mode(1)
+            if ID == 5:
+                self.go_zero()
+                self.m.send_angles(self.zero_angles, self.speed)
+            elif ID == 6:
+                self.go_zero()
+                self.m.send_angle(1, 0, self.speed)
+            elif ID == 7:
+                self.go_coords()
+                self.m.send_coords(self.zero_coords, self.speed)
+            elif ID == 8:
+                self.go_coords()
+                self.m.send_coord(1, self.zero_coords[0], self.speed)
