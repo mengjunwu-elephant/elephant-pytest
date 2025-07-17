@@ -24,10 +24,10 @@ def create_empty_test_files(methods, save_path):
         print(f"✅ 创建空文件: {filepath}")
 
 def main(output_dir):
-    methods = get_get_methods(MyCobot320)
+    methods = get_get_methods(MyCobot280)
     create_empty_test_files(methods, output_dir)
 
 
 if __name__ == "__main__":
-    output_dir = "../testcases/mycobot_320"  # ✅ 可自定义路径
+    output_dir = "../testcases/mycobot_280"  # ✅ 可自定义路径
     main(output_dir)

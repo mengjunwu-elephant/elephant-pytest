@@ -192,13 +192,16 @@ class Mycobot280Base:
     # 机械臂运动数据
     speed = 50
     coords_init_angles = [0, 0, -90, 0, 0, 0]
-
+    init_angles = [0, 0, 0, 0, 0, 0]
     # 测试数据配置
     TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mycobot_280.xlsx')
 
-    def __init__(self, port="com23", baudrate=115200):
+    def __init__(self, port="com25", baudrate=115200):
         self.mc = MyCobot280(port, baudrate=baudrate)
 
+    def default_settings(self):
+        self.mc.set_fresh_mode(1)
+        self.mc.go_home()
 
 # mycobot320配置
 class Mycobot320Base:
