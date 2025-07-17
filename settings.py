@@ -1,4 +1,6 @@
 import os
+import time
+
 from pymycobot import *
 
 from Myhand.MyHand import MyGripper_H100
@@ -15,7 +17,7 @@ CASES_DIR = {
     "4": "testcases/pro_gripper",
     "5": "testcases/my_hand",
     "6": "testcases/mycobot280",
-    "7": "testcases/mycobot320"
+    "7": "testcases/mycobot_320_123"
 }
 
 # 日志配置
@@ -89,6 +91,22 @@ class MercuryBase:
         self.ml.set_pos_over_shoot(50)
         self.mr.set_pos_over_shoot(50)
 
+    @staticmethod
+    def is_in_position(target, current):
+        count = 0
+        if isinstance(target, (float,int)):
+            if abs(current) - 1 <= abs(target) <= abs(current) + 1:
+                return 1
+            else:
+                return -1
+        else:
+            for i, c in zip(target, current):
+                if abs(i) - 3 <= abs(c) <= abs(i) + 3:
+                    count += 1
+                    if count == len(target):
+                        return 1
+                else:
+                    return -1
 
     def set_default_p(self):
         for i in range(6):
@@ -144,23 +162,19 @@ class MyHandBase:
     # 测试数据配置
     TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/my_hand.xlsx')
 
-    def __init__(self, port="com14", baudrate=115200):
+    def __init__(self, port="com3", baudrate=115200):
         self.m = MyGripper_H100(port, baudrate=baudrate)
 
     def go_zero(self):
         self.m.set_gripper_angles([0, 0, 0, 0, 0, 0], self.speed)
 
     def set_default_p(self):
-        for i in range(4):
+        for i in range(6):
             self.m.set_gripper_joint_P(i + 1, 100)
-        self.m.set_gripper_joint_P(5, 32)
-        self.m.set_gripper_joint_P(6, 32)
 
     def set_default_d(self):
-        for i in range(4):
+        for i in range(6):
             self.m.set_gripper_joint_D(i + 1, 120)
-        self.m.set_gripper_joint_D(5, 10)
-        self.m.set_gripper_joint_D(6, 10)
 
     def set_default_i(self):
         for i in range(6):
@@ -204,9 +218,40 @@ class Mycobot280Base:
 class Mycobot320Base:
     # 机械臂运动数据
     speed = 50
+    angles_init = [0, 0, -90, 0, 90, 0]
+    zero_angles = [0, 0, 0, 0, 0, 0]
+    zero_encodes = [2048, 2048, 2048, 2048, 2048, 2048]
+    coords_init_angles = [0, 10, -100, 0, 90, 0]
+    zero_coords = [190.2, -89.4, 235.9, 178.24, 0.18, -90.0]
 
     # 测试数据配置
     TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mycobot_320.xlsx')
 
-    def __init__(self, port="com23", baudrate=115200):
-        self.mc = MyCobot320(port, baudrate=baudrate)
+    def __init__(self, port="com3", baudrate=115200):
+        self.m = MyCobot320(port, baudrate=baudrate)
+
+    def range_comparison(self, expect_data, value, name='值'):
+        value_max = expect_data[1]
+        value_min = expect_data[0]
+        if len(value) != 6:
+            raise AssertionError(f"{name}长度不为6,实际为{len(value)}")
+        elif all(value_min <= i <= value_max for i in value):
+            return True
+        else:
+            raise AssertionError(f"{name}超出范围{value_min}~{value_max},实际值为{value}")
+
+    def go_zero(self):
+        self.m.send_angles(self.zero_angles, self.speed)
+        time.sleep(0.5)
+        while True:
+            if self.m.is_moving() == 0:
+                break
+        time.sleep(1)
+
+    def go_coords(self):
+        self.m.send_angles(self.coords_init_angles, self.speed)
+        time.sleep(0.5)
+        while True:
+            if self.m.is_moving() == 0:
+                break
+        time.sleep(1)
