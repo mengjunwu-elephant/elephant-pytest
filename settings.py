@@ -205,7 +205,7 @@ class MyHandBase:
 class Mycobot280Base:
     # 机械臂运动数据
     speed = 50
-    coords_init_angles = [0, 0, -90, 0, 0, 0]
+    coords_init_angles = [0,20,-90,-20,0,0]
     init_angles = [0, 0, 0, 0, 0, 0]
     # 测试数据配置
     TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mycobot_280.xlsx')
@@ -214,8 +214,20 @@ class Mycobot280Base:
         self.mc = MyCobot280(port, baudrate=baudrate)
 
     def default_settings(self):
-        self.mc.set_fresh_mode(1)
+        self.mc.power_on()
+        self.mc.set_fresh_mode(0)
         self.mc.go_home()
+        self.wait()
+        self.mc.clear_error_information()
+
+    def wait(self):
+        time.sleep(0.5) # 等待机械臂开始运动
+        while 1:
+            if self.mc.is_moving() == 1:
+                time.sleep(0.1)
+            else:
+                break
+        time.sleep(0.5) # 等待机械臂停止运动
 
 # mycobot320配置
 class Mycobot320Base:
