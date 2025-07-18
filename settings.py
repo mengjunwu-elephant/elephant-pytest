@@ -17,7 +17,7 @@ CASES_DIR = {
     "4": "testcases/pro_gripper",
     "5": "testcases/my_hand",
     "6": "testcases/mycobot280",
-    "7": "testcases/mycobot_320_123"
+    "7": "testcases/mycobot_320"
 }
 
 # 日志配置
