@@ -44,10 +44,10 @@ class TestIsInPosition(unittest.TestCase):
         logger.debug('test_parameter:{}'.format(case['parameter']))
         logger.debug('test_mode:{}'.format(case['mode']))
         # 左臂请求发送
-        l_response = self.device.ml.is_in_position(case['parameter'],case['mode'])
+        l_response = self.device.ml.wait(case['parameter'], case['mode'])
 
         # 右臂请求发送
-        r_response = self.device.mr.is_in_position(case['parameter'],case['mode'])
+        r_response = self.device.mr.wait(case['parameter'], case['mode'])
         try:
             # 请求结果类型断言
             if type(l_response) == int:
@@ -81,10 +81,10 @@ class TestIsInPosition(unittest.TestCase):
         logger.debug('test_parameter:{}'.format(case['parameter']))
         logger.debug('test_mode:{}'.format(case['mode']))
         # 左臂请求发送
-        l_response = self.device.ml.is_in_position(case['parameter'], case['mode'])
+        l_response = self.device.ml.wait(case['parameter'], case['mode'])
 
         # 右臂请求发送
-        r_response = self.device.mr.is_in_position(case['parameter'], case['mode'])
+        r_response = self.device.mr.wait(case['parameter'], case['mode'])
         try:
             # 请求结果类型断言
             if type(l_response) == int:
@@ -118,10 +118,10 @@ class TestIsInPosition(unittest.TestCase):
         logger.debug('test_parameter:{}'.format(case['parameter']))
         logger.debug('test_mode:{}'.format(case['mode']))
         # 左臂请求发送
-        l_response = self.device.ml.is_in_position(case['parameter'], case['mode'])
+        l_response = self.device.ml.wait(case['parameter'], case['mode'])
 
         # 右臂请求发送
-        r_response = self.device.mr.is_in_position(case['parameter'], case['mode'])
+        r_response = self.device.mr.wait(case['parameter'], case['mode'])
         try:
             # 请求结果类型断言
             if type(l_response) == int:
@@ -160,10 +160,10 @@ class TestIsInPosition(unittest.TestCase):
             with self.assertRaises(MercuryDataException,
                                    msg="用例{}未触发value错误，参数为{}{}".format(case['title'], case['parameter'],case['mode'])):
                 # 左臂请求发送
-                l_response = self.device.ml.is_in_position(case['parameter'], case['mode'])
+                l_response = self.device.ml.wait(case['parameter'], case['mode'])
 
                 # 右臂请求发送
-                r_response = self.device.mr.is_in_position(case['parameter'], case['mode'])
+                r_response = self.device.mr.wait(case['parameter'], case['mode'])
         except AssertionError:
             logger.error("断言失败：用例{}未触发异常".format(case['title']))
             raise  # 重新抛出异常，让测试框架捕获

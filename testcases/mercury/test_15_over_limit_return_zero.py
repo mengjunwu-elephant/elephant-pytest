@@ -52,8 +52,8 @@ class TestOverLimitReturnZero(unittest.TestCase):
         sleep(2)
         # 判断机械臂是否回到零位
         try:
-            self.device.ml.is_in_position([0, 0, 0, 0, 0, 90, 0], 0) and self.device.mr.is_in_position([0, 0, 0, 0, 0, 90, 0],
-                                                                                           0) == 1
+            self.device.ml.wait([0, 0, 0, 0, 0, 90, 0], 0) and self.device.mr.wait([0, 0, 0, 0, 0, 90, 0],
+                                                                                   0) == 1
         except Exception as e:
             logger.debug("左臂未回到零位，当前角度值为{}".format(l_get_res))
             logger.debug("右臂未回到零位，当前角度值为{}".format(r_get_res))

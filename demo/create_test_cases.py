@@ -7,7 +7,7 @@ def get_get_methods(cls):
     """
     获取类中所有以 'get' 开头的方法名
     """
-    return [name for name, func in inspect.getmembers(cls, predicate=inspect.isfunction) if name.startswith("get")]
+    return [name for name, func in inspect.getmembers(cls, predicate=inspect.isfunction) if name.startswith("jog")]
 
 def create_empty_test_files(methods, save_path):
     """
