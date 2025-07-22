@@ -31,7 +31,7 @@ def test_get_firmware_version(device, case):
         logger.debug(f"接口返回：{response}")
 
     with allure.step("断言返回值类型为 float"):
-        assert isinstance(response, float), f"返回类型错误，应为 int，实际为 {type(response)}"
+        assert isinstance(response, float), f"返回类型错误，应为 float，实际为 {type(response)}"
 
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
