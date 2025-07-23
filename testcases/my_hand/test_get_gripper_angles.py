@@ -21,6 +21,7 @@ def device():
 @allure.story("获取夹爪当前角度")
 @pytest.mark.parametrize("case", cases, ids=[case["title"] for case in cases])
 def test_get_gripper_angles(device, case):
+    expected = eval(case["expect_data"])
     logger.info(f'》》》》》用例【{case["title"]}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
 
@@ -31,11 +32,11 @@ def test_get_gripper_angles(device, case):
     with allure.step("断言返回值类型为 list"):
         assert isinstance(response, list), f"返回类型错误，应为 list，实际为 {type(response)}"
 
-    expected = eval(case["expect_data"])
+
     with allure.step("断言返回值等于期望值"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(response,expected,tol=2,name='读取夹爪全角度')
+        assert_almost_equal(response,expected,tol=3,name='读取夹爪全角度')
 
     logger.info(f'✅ 用例【{case["title"]}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')

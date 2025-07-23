@@ -31,4 +31,4 @@ def _assert_single_value(actual, expected, tol, name):
         name=name,
         attachment_type=allure.attachment_type.TEXT
     )
-    assert delta <= tol, f"{name} 超出容差 ±{tol}：期望 {expected}，实际 {actual}，偏差 {delta}"
+    assert delta < tol, f"{name} 超出容差 ±{tol}：期望 {expected}，实际 {actual}，偏差 {delta}"

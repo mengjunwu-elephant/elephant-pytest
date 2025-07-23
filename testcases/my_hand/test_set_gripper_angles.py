@@ -48,7 +48,7 @@ def test_set_gripper_angles_normal(device, case):
     with allure.step("断言获取返回值"):
         allure.attach(str(case["angles"]), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(get_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(get_res, eval(case["angles"]),tol=5,name='设置夹爪全角度')
+        assert_almost_equal(get_res, eval(case["angles"]),tol=3,name='设置夹爪全角度')
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{title}】测试完成《《《《《')
