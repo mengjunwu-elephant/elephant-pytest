@@ -28,21 +28,24 @@ def device():
 def test_get_control_mode_default(device, case):
     logger.info(f"》》》用例【{case['title']}】开始测试《《《")
 
-    with allure.step("发送 get_control_mode 指令"):
+    with allure.step("左臂发送 get_control_mode 指令"):
         l_response = device.ml.get_control_mode()
+    with allure.step("右臂发送 get_control_mode 指令"):
         r_response = device.mr.get_control_mode()
 
-    with allure.step("断言返回类型为 int"):
+    with allure.step("左臂断言返回类型为 int"):
         assert isinstance(l_response, int), f"左臂响应类型错误: {type(l_response)}"
+    with allure.step("右臂断言返回类型为 int"):
         assert isinstance(r_response, int), f"右臂响应类型错误: {type(r_response)}"
 
-    with allure.step("断言响应结果是否与预期一致"):
+    with allure.step("左臂断言响应结果"):
         allure.attach(str(case['l_expect_data']), name="左臂期望值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(case['r_expect_data']), name="右臂期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(l_response), name="左臂实际值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(r_response), name="右臂实际值", attachment_type=allure.attachment_type.TEXT)
-
         assert l_response == case['l_expect_data'], f"左臂控制模式不一致，期望: {case['l_expect_data']}，实际: {l_response}"
+
+    with allure.step("右臂断言响应结果"):
+        allure.attach(str(case['r_expect_data']), name="右臂期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(r_response), name="右臂实际值", attachment_type=allure.attachment_type.TEXT)
         assert r_response == case['r_expect_data'], f"右臂控制模式不一致，期望: {case['r_expect_data']}，实际: {r_response}"
 
     logger.info(f"✅ 用例【{case['title']}】测试通过")
@@ -63,17 +66,19 @@ def test_get_control_mode_after_setting(device, case):
         l_response = device.ml.get_control_mode()
         r_response = device.mr.get_control_mode()
 
-    with allure.step("断言返回类型为 int"):
+    with allure.step("左臂断言返回类型为 int"):
         assert isinstance(l_response, int), f"左臂响应类型错误: {type(l_response)}"
+    with allure.step("右臂断言返回类型为 int"):
         assert isinstance(r_response, int), f"右臂响应类型错误: {type(r_response)}"
 
-    with allure.step("断言控制模式设置后值正确"):
+    with allure.step("左臂断言控制模式设置后值正确"):
         allure.attach(str(case['l_expect_data']), name="左臂期望值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(case['r_expect_data']), name="右臂期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(l_response), name="左臂实际值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(r_response), name="右臂实际值", attachment_type=allure.attachment_type.TEXT)
-
         assert l_response == case['l_expect_data'], f"左臂控制模式不一致，期望: {case['l_expect_data']}，实际: {l_response}"
+
+    with allure.step("右臂断言控制模式设置后值正确"):
+        allure.attach(str(case['r_expect_data']), name="右臂期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(r_response), name="右臂实际值", attachment_type=allure.attachment_type.TEXT)
         assert r_response == case['r_expect_data'], f"右臂控制模式不一致，期望: {case['r_expect_data']}，实际: {r_response}"
 
     with allure.step("恢复控制模式并重启设备"):

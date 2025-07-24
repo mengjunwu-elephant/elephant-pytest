@@ -49,13 +49,19 @@ def test_over_limit_return_zero(device, case):
         l_get_res = device.ml.get_angles()
         r_get_res = device.mr.get_angles()
 
-    with allure.step("响应类型断言"):
+    with allure.step("左臂响应类型断言"):
         assert isinstance(l_response, int), f"左臂返回类型应为 int，实际为 {type(l_response)}"
+    with allure.step("右臂响应类型断言"):
         assert isinstance(r_response, int), f"右臂返回类型应为 int，实际为 {type(r_response)}"
 
-    with allure.step("响应值结果"):
-        assert l_response == case['l_expect_data'], f"左臂返回不符，期望：{case['l_expect_data']}，实际：{l_response}"
-        assert r_response == case['r_expect_data'], f"右臂返回不符，期望：{case['r_expect_data']}，实际：{r_response}"
+    with allure.step("左臂断言返回结果"):
+        allure.attach(str(case["l_expect_data"]),name= "左臂期望值",attachment_type= allure.attachment_type.TEXT)
+        allure.attach(str(l_response),name= "左臂实际值",attachment_type= allure.attachment_type.TEXT)
+        assert l_response == case["l_expect_data"], f"左臂断言失败，期望：{case['l_expect_data']}，实际：{l_response}"
+    with allure.step("右臂断言返回结果"):
+        allure.attach(str(case["r_expect_data"]),name= "右臂期望值",attachment_type= allure.attachment_type.TEXT)
+        allure.attach(str(r_response),name= "右臂实际值",attachment_type= allure.attachment_type.TEXT)
+        assert r_response == case["r_expect_data"], f"右臂断言失败，期望：{case['r_expect_data']}，实际：{r_response}"
 
     with allure.step("是否到达位置断言"):
         allure.attach(str(device.init_angles),name='左臂期望值',attachment_type=allure.attachment_type.TEXT)

@@ -1,6 +1,5 @@
 import pytest
 from settings import CASES_DIR,REPORT_DIR
-import datetime
 import os
 
 if __name__ == '__main__':

@@ -33,4 +33,4 @@ def get_test_data_from_excel(file, sheet_name):
 
 
 if __name__ == '__main__':
-    get_test_data_from_excel(r'../test_data/test_mercury.xlsx', 'Sheet1')
+    get_test_data_from_excel(r'../test_data/mercury.xlsx', 'Sheet1')

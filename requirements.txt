@@ -1,0 +1,5 @@
+pymycobot~=4.0.0
+allure-python-commons~=2.14.3
+openpyxl~=3.1.5
+pytest~=8.4.1
+allure-pytest>=2.13.0
