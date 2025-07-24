@@ -28,8 +28,9 @@ def device():
 def test_get_angles(device, case):
     logger.info(f"》》》用例【{case['title']}】开始测试《《《")
 
-    with allure.step("调用 get_angles 接口获取左右臂当前角度"):
+    with allure.step("左臂调用 get_angles 接口获取当前角度"):
         l_response = device.ml.get_angles()
+    with allure.step("右臂调用 get_angles 接口获取当前角度"):
         r_response = device.mr.get_angles()
 
     with allure.step("断言返回类型为 list"):
