@@ -35,22 +35,24 @@ def test_get_system_version_power_on(device, case):
         logger.debug(f"左臂响应：{l_response}")
         logger.debug(f"右臂响应：{r_response}")
 
-    with allure.step("断言响应数据类型"):
+    with allure.step("左臂断言响应数据类型"):
         assert isinstance(l_response, float), f"左臂返回值类型错误：应为 float,实际返回{type(l_response)}"
+
+    with allure.step("右臂断言响应数据类型"):
         assert isinstance(r_response, float), f"右臂返回值类型错误：应为 float,实际返回{type(r_response)}"
 
-    with allure.step("断言响应结果"):
+    with allure.step("左臂断言响应结果"):
         allure.attach(str(case['l_expect_data']), name="左臂期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(l_response), name="左臂实际值", attachment_type=allure.attachment_type.TEXT)
-
-        allure.attach(str(case['r_expect_data']), name="右臂期望值",attachment_type= allure.attachment_type.TEXT)
-        allure.attach(str(r_response), name="右臂实际值",attachment_type= allure.attachment_type.TEXT)
-
         assert l_response == case['l_expect_data'], f"用例【{title}】断言失败，期望 {case['l_expect_data']}，实际 {l_response}"
+
+
+    with allure.step("右臂断言响应结果"):
+        allure.attach(str(case['r_expect_data']), name="右臂期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(r_response), name="右臂实际值", attachment_type=allure.attachment_type.TEXT)
         assert r_response == case['r_expect_data'], f"用例【{title}】断言失败，期望 {case['r_expect_data']}，实际 {r_response}"
 
-        logger.info(f"✅ 用例【{title}】测试通过")
-
+    logger.info(f"✅ 用例【{title}】测试通过")
     device.reset()
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
@@ -69,21 +71,25 @@ def test_get_system_version_power_on_only(device, case):
         l_response = device.ml.get_system_version()
         r_response = device.mr.get_system_version()
 
-    with allure.step("断言响应数据类型"):
+    with allure.step("左臂断言响应数据类型"):
         assert isinstance(l_response, float), f"左臂返回值类型错误：应为 float,实际返回{type(l_response)}"
+
+    with allure.step("右臂断言响应数据类型"):
         assert isinstance(r_response, float), f"右臂返回值类型错误：应为 float,实际返回{type(r_response)}"
 
-    with allure.step("断言响应结果"):
-        allure.attach(str(case['l_expect_data']), name="左臂期望值",attachment_type= allure.attachment_type.TEXT)
-        allure.attach(str(l_response),name= "左臂实际值",attachment_type= allure.attachment_type.TEXT)
+    with allure.step("左臂断言响应结果"):
+        allure.attach(str(case['l_expect_data']), name="左臂期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(l_response), name="左臂实际值", attachment_type=allure.attachment_type.TEXT)
+        assert l_response == case[
+            'l_expect_data'], f"用例【{title}】断言失败，期望 {case['l_expect_data']}，实际 {l_response}"
 
-        allure.attach(str(case['r_expect_data']),name= "右臂期望值",attachment_type= allure.attachment_type.TEXT)
-        allure.attach(str(r_response),name= "右臂实际值",attachment_type= allure.attachment_type.TEXT)
+    with allure.step("右臂断言响应结果"):
+        allure.attach(str(case['r_expect_data']), name="右臂期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(r_response), name="右臂实际值", attachment_type=allure.attachment_type.TEXT)
+        assert r_response == case[
+            'r_expect_data'], f"用例【{title}】断言失败，期望 {case['r_expect_data']}，实际 {r_response}"
 
-        assert l_response == case['l_expect_data'], f"用例【{title}】断言失败，期望 {case['l_expect_data']}，实际 {l_response}"
-        assert r_response == case['r_expect_data'], f"用例【{title}】断言失败，期望 {case['r_expect_data']}，实际 {r_response}"
-
-        logger.info(f"✅ 用例【{title}】测试通过")
+    logger.info(f"✅ 用例【{title}】测试通过")
     device.reset()
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
@@ -102,20 +108,24 @@ def test_get_system_version_power_off(device, case):
         l_response = device.ml.get_system_version()
         r_response = device.mr.get_system_version()
 
-    with allure.step("断言响应数据类型"):
+    with allure.step("左臂断言响应数据类型"):
         assert isinstance(l_response, float), f"左臂返回值类型错误：应为 float,实际返回{type(l_response)}"
+
+    with allure.step("右臂断言响应数据类型"):
         assert isinstance(r_response, float), f"右臂返回值类型错误：应为 float,实际返回{type(r_response)}"
 
-    with allure.step("断言响应结果"):
-        allure.attach(str(case['l_expect_data']),name= "左臂期望值",attachment_type= allure.attachment_type.TEXT)
-        allure.attach(str(l_response),name= "左臂实际值",attachment_type= allure.attachment_type.TEXT)
+    with allure.step("左臂断言响应结果"):
+        allure.attach(str(case['l_expect_data']), name="左臂期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(l_response), name="左臂实际值", attachment_type=allure.attachment_type.TEXT)
+        assert l_response == case[
+            'l_expect_data'], f"用例【{title}】断言失败，期望 {case['l_expect_data']}，实际 {l_response}"
 
-        allure.attach(str(case['r_expect_data']),name="右臂期望值",attachment_type= allure.attachment_type.TEXT)
-        allure.attach(str(r_response),name= "右臂实际值",attachment_type= allure.attachment_type.TEXT)
+    with allure.step("右臂断言响应结果"):
+        allure.attach(str(case['r_expect_data']), name="右臂期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(r_response), name="右臂实际值", attachment_type=allure.attachment_type.TEXT)
+        assert r_response == case[
+            'r_expect_data'], f"用例【{title}】断言失败，期望 {case['r_expect_data']}，实际 {r_response}"
 
-        assert l_response == case['l_expect_data'], f"用例【{title}】断言失败，期望 {case['l_expect_data']}，实际 {l_response}"
-        assert r_response == case['r_expect_data'], f"用例【{title}】断言失败，期望 {case['r_expect_data']}，实际 {r_response}"
-
-        logger.info(f"✅ 用例【{title}】测试通过")
+    logger.info(f"✅ 用例【{title}】测试通过")
     device.reset()
     logger.info(f"》》》用例【{title}】测试完成《《《")

@@ -1,143 +1,102 @@
-import unittest
-
-from ddt import ddt, data
+import pytest
+import allure
 from pymycobot.error import MercuryDataException
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
-# 从Excel中提取数据
+# 加载用例
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "set_collision_threshold")
 
 
-@ddt
-class TestSetCollisionThreshold(unittest.TestCase):
+@pytest.fixture(scope="module")
+def device():
+    dev = MercuryBase()
+    dev.ml.power_on()
+    dev.mr.power_on()
+    logger.info("初始化完成，接口测试开始")
+    yield dev
+    # 恢复默认阈值
+    for i in range(7):
+        dev.ml.set_collision_threshold(i + 1, 100)
+        dev.mr.set_collision_threshold(i + 1, 100)
+    dev.mr.power_off()
+    dev.ml.power_off()
+    dev.close()
+    logger.info("环境清理完成，接口测试结束")
 
 
-    # 初始化测试环境
-    @classmethod
-    def setUpClass(cls):
-        """
-        水星系列初始化先左臂上电，后右臂上电
-        """
-        cls.device = MercuryBase()
-        cls.device.ml.power_on()
-        cls.device.mr.power_on()
-        logger.info("初始化完成，接口测试开始")
+@allure.feature("设置碰撞阈值")
+@allure.story("正常设置碰撞阈值")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"], ids=lambda c: c["title"])
+def test_set_collision_threshold_normal(device, case):
+    joint = case["joint"]
+    param = case["parameter"]
+    title = case["title"]
 
-    @classmethod
-    def tearDownClass(cls):
-        """
-        下电顺序为先右臂下电，后左臂下电
-        :return:
-        """
-        for i in range(7):
-            cls.device.ml.set_collision_threshold(i + 1,100)
-            cls.device.mr.set_collision_threshold(i + 1, 100)
-        cls.device.mr.power_off()
-        cls.device.ml.power_off()
-        cls.device.close()
-        logger.info("环境清理完成，接口测试结束")
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"参数: joint={joint}, param={param}")
 
-    @data(*[case for case in cases if case.get("test_type") == "normal"])
-    def test_set_collision_threshold(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_parameter:{}'.format(case['parameter']))
+    l_response = device.ml.set_collision_threshold(joint, param)
+    r_response = device.mr.set_collision_threshold(joint, param)
 
-        # 左臂请求发送
-        l_response = self.device.ml.set_collision_threshold(case["joint"],case['parameter'])
+    assert isinstance(l_response, int), f"左臂响应类型错误: {type(l_response)}"
+    assert isinstance(r_response, int), f"右臂响应类型错误: {type(r_response)}"
 
-        # 右臂请求发送
-        r_response = self.device.mr.set_collision_threshold(case["joint"],case['parameter'])
-        try:
-            # 请求结果类型断言
-            if type(l_response) == int:
-                logger.debug('左臂请求类型断言成功')
-            else:
-                logger.debug('左臂请求类型断言失败，实际类型为{}'.format(type(l_response)))
-            if type(r_response) == int:
-                logger.debug('右臂请求类型断言成功')
-            else:
-                logger.debug('右臂请求类型断言失败，实际类型为{}'.format(type(r_response)))
-            # 请求结果断言
-            self.assertEqual(case['r_expect_data'], r_response)
-            self.assertEqual(case['l_expect_data'], l_response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('左臂期望数据：{}'.format(case['l_expect_data']))
-            logger.debug('右臂期望数据：{}'.format(case['r_expect_data']))
-            logger.debug('左臂实际结果：{}'.format(l_response))
-            logger.debug('右臂实际结果：{}'.format(r_response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    assert l_response == case["l_expect_data"], f"左臂响应错误: 期望={case['l_expect_data']}, 实际={l_response}"
+    assert r_response == case["r_expect_data"], f"右臂响应错误: 期望={case['r_expect_data']}, 实际={r_response}"
 
-    @data(*[case for case in cases if case.get("test_type") == "exception"])  # 筛选无效等价类用例
-    def test_out_limit(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_parameter:{}'.format(case['parameter']))
-        # 请求发送
-        try:
-            with self.assertRaises(MercuryDataException,
-                                   msg="用例{}未触发value错误，参数为{}".format(case['title'], case['parameter'])):
-                self.device.ml.set_collision_threshold(case["joint"],case['parameter'])
-                self.device.mr.set_collision_threshold(case["joint"],case['parameter'])
-        except AssertionError:
-            logger.error("断言失败：用例{}未触发异常".format(case['title']))
-            raise  # 重新抛出异常，让测试框架捕获
-        except Exception as e:
-            logger.exception("未预期的异常发生：{}".format(str(e)))
-            raise
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    logger.info(f"✅ 用例【{title}】测试成功")
 
-    @data(*[case for case in cases if case.get("test_type") == "save_or_not"])
-    def test_save_or_not(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_parameter:{}'.format(case['parameter']))
-        # 左臂请求发送
-        l_response = self.device.ml.set_collision_threshold(case["joint"],case['parameter'])
-        # 右臂请求发送
-        r_response = self.device.mr.set_collision_threshold(case["joint"],case['parameter'])
 
-        # 设置机械臂重启
-        self.device.reset()
+@allure.feature("设置碰撞阈值")
+@allure.story("异常设置 - 越界/非法参数应抛异常")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
+def test_set_collision_threshold_exception(device, case):
+    joint = case["joint"]
+    param = case["parameter"]
+    title = case["title"]
 
-        # 读取默认值
-        l_get_res = self.device.ml.get_collision_threshold()
-        r_get_res = self.device.mr.get_collision_threshold()
-        try:
-            # 请求结果类型断言
-            if type(l_response) == int:
-                logger.debug('左臂请求类型断言成功')
-            else:
-                logger.debug('左臂请求类型断言失败，实际类型为{}'.format(type(l_get_res)))
-            if type(r_response) == int:
-                logger.debug('右臂请求类型断言成功')
-            else:
-                logger.debug('右臂请求类型断言失败，实际类型为{}'.format(type(r_get_res)))
-            # 请求结果断言
-            self.assertEqual(eval(case['r_expect_data']), r_get_res)
-            self.assertEqual(eval(case['l_expect_data']), l_get_res)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('左臂期望数据：{}'.format(case['l_expect_data']))
-            logger.debug('右臂期望数据：{}'.format(case['r_expect_data']))
-            logger.debug('左臂实际结果：{}'.format(l_get_res))
-            logger.debug('右臂实际结果：{}'.format(r_get_res))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"参数: joint={joint}, param={param}")
+
+    with pytest.raises(MercuryDataException):
+        device.ml.set_collision_threshold(joint, param)
+    with pytest.raises(MercuryDataException):
+        device.mr.set_collision_threshold(joint, param)
+
+    logger.info(f"✅ 用例【{title}】触发异常验证成功")
+
+
+@allure.feature("设置碰撞阈值")
+@allure.story("设置后重启是否保存")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "save_or_not"], ids=lambda c: c["title"])
+def test_set_collision_threshold_persistence(device, case):
+    joint = case["joint"]
+    param = case["parameter"]
+    title = case["title"]
+
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"参数: joint={joint}, param={param}")
+
+    # 设置新阈值
+    l_response = device.ml.set_collision_threshold(joint, param)
+    r_response = device.mr.set_collision_threshold(joint, param)
+
+    # 重启
+    device.reset()
+
+    # 读取设置值
+    l_get_res = device.ml.get_collision_threshold()
+    r_get_res = device.mr.get_collision_threshold()
+
+    # 类型断言
+    assert isinstance(l_response, int)
+    assert isinstance(r_response, int)
+
+    # 结果断言（eval 转换字符串列表）
+    assert l_get_res == eval(case["l_expect_data"]), f"左臂读取值不一致: {l_get_res}"
+    assert r_get_res == eval(case["r_expect_data"]), f"右臂读取值不一致: {r_get_res}"
+
+    logger.info(f"✅ 用例【{title}】测试成功")

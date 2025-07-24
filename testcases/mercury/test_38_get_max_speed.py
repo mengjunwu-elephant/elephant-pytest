@@ -1,98 +1,68 @@
-import unittest
-
-from ddt import ddt, data
+import pytest
+import allure
 from pymycobot.error import MercuryDataException
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
-# 从Excel中提取数据
+# 读取测试数据
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "get_max_speed")
 
 
-@ddt
-class TestGetMaxSpeed(unittest.TestCase):
+@pytest.fixture(scope="module")
+def device():
+    dev = MercuryBase()
+    dev.ml.power_on()
+    dev.mr.power_on()
+    logger.info("初始化完成，接口测试开始")
+    yield dev
+    dev.mr.power_off()
+    dev.ml.power_off()
+    dev.close()
+    logger.info("环境清理完成，接口测试结束")
 
 
-    # 初始化测试环境
-    @classmethod
-    def setUpClass(cls):
-        """
-        水星系列初始化先左臂上电，后右臂上电
-        """
-        cls.device = MercuryBase()
-        cls.device.ml.power_on()
-        cls.device.mr.power_on()
-        logger.info("初始化完成，接口测试开始")
+@allure.feature("获取最大速度")
+@allure.story("正常参数")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"], ids=lambda c: c["title"])
+def test_get_max_speed_normal(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"API: {case['api']}")
+    logger.debug(f"参数: {case['parameter']}")
 
-    @classmethod
-    def tearDownClass(cls):
-        """
-        下电顺序为先右臂下电，后左臂下电
-        :return:
-        """
-        cls.device.mr.power_off()
-        cls.device.ml.power_off()
-        cls.device.close()
-        logger.info("环境清理完成，接口测试结束")
+    with allure.step("发送 get_max_speed 指令"):
+        l_response = device.ml.get_max_speed(case["parameter"])
+        r_response = device.mr.get_max_speed(case["parameter"])
 
-    @data(*[case for case in cases if case.get("test_type") == "normal"])
-    def test_get_max_speed(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_parameter:{}'.format(case['parameter']))
+    with allure.step("断言返回类型"):
+        assert isinstance(l_response, int), f"左臂返回类型应为 int，实际为 {type(l_response)}"
+        assert isinstance(r_response, int), f"右臂返回类型应为 int，实际为 {type(r_response)}"
 
-        # 左臂请求发送
-        l_response = self.device.ml.get_max_speed(case["parameter"])
+    with allure.step("断言返回值"):
+        assert l_response == case["l_expect_data"], f"左臂返回值不符，期望：{case['l_expect_data']}，实际：{l_response}"
+        assert r_response == case["r_expect_data"], f"右臂返回值不符，期望：{case['r_expect_data']}，实际：{r_response}"
 
-        # 右臂请求发送
-        r_response = self.device.mr.get_max_speed(case["parameter"])
-        try:
-            # 请求结果类型断言
-            if type(l_response) == int:
-                logger.debug('左臂请求类型断言成功')
-            else:
-                logger.debug('左臂请求类型断言失败，实际类型为{}'.format(type(l_response)))
-            if type(r_response) == int:
-                logger.debug('右臂请求类型断言成功')
-            else:
-                logger.debug('右臂请求类型断言失败，实际类型为{}'.format(type(r_response)))
-            # 请求结果断言
-            self.assertEqual(case['r_expect_data'], r_response)
-            self.assertEqual(case['l_expect_data'], l_response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('左臂期望数据：{}'.format(case['l_expect_data']))
-            logger.debug('右臂期望数据：{}'.format(case['r_expect_data']))
-            logger.debug('左臂实际结果：{}'.format(l_response))
-            logger.debug('右臂实际结果：{}'.format(r_response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    logger.info(f"✅ 用例【{title}】测试通过")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
 
-    @data(*[case for case in cases if case.get("test_type") == "exception"])  # 筛选无效等价类用例
-    def test_out_limit(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_parameter:{}'.format(case['parameter']))
-        # 请求发送
-        try:
-            with self.assertRaises(MercuryDataException,
-                                   msg="用例{}未触发value错误，参数为{}".format(case['title'], case['parameter'])):
-                self.device.ml.get_max_speed(case['parameter'])
-                self.device.mr.get_max_speed(case['parameter'])
-        except AssertionError:
-            logger.error("断言失败：用例{}未触发异常".format(case['title']))
-            raise  # 重新抛出异常，让测试框架捕获
-        except Exception as e:
-            logger.exception("未预期的异常发生：{}".format(str(e)))
-            raise
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+
+@allure.feature("获取最大速度")
+@allure.story("异常参数")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
+def test_get_max_speed_exception(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"API: {case['api']}")
+    logger.debug(f"参数: {case['parameter']}")
+
+    with allure.step("断言抛出 MercuryDataException 异常"):
+        with pytest.raises(MercuryDataException,
+                           match=".*",
+                           message=f"用例【{title}】未触发 MercuryDataException，参数：{case['parameter']}"):
+            device.ml.get_max_speed(case["parameter"])
+            device.mr.get_max_speed(case["parameter"])
+
+    logger.info(f"✅ 用例【{title}】测试通过")
+    logger.info(f"》》》用例【{title}】测试完成《《《")

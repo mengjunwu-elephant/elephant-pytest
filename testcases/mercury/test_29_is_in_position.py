@@ -1,6 +1,5 @@
-import unittest
-
-from ddt import ddt, data
+import pytest
+import allure
 from pymycobot.error import MercuryDataException
 
 from common1 import logger
@@ -11,167 +10,60 @@ from settings import MercuryBase
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "is_in_position")
 
 
-@ddt
-class TestIsInPosition(unittest.TestCase):
+@pytest.fixture(scope="module")
+def device():
+    dev = MercuryBase()
+    dev.ml.power_on()
+    dev.mr.power_on()
+    logger.info("初始化完成，接口测试开始")
+    yield dev
+    dev.mr.power_off()
+    dev.ml.power_off()
+    dev.close()
+    logger.info("环境清理完成，接口测试结束")
 
 
-    @classmethod
-    def setUpClass(cls):
-        """
-        水星系列初始化先左臂上电，后右臂上电
-        """
-        cls.device = MercuryBase()
-        cls.device.ml.power_on()
-        cls.device.mr.power_on()
-        logger.info("初始化完成，接口测试开始")
+@allure.feature("is_in_position 接口测试")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] in ("angle", "coords", "base_coords")], ids=lambda c: c["title"])
+def test_is_in_position_normal(device, case):
+    title = case["title"]
+    param = case["parameter"]
+    mode = case["mode"]
 
-    @classmethod
-    def tearDownClass(cls):
-        """
-        下电顺序为先右臂下电，后左臂下电
-        :return:
-        """
-        cls.device.mr.power_off()
-        cls.device.ml.power_off()
-        cls.device.close()
-        logger.info("环境清理完成，接口测试结束")
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"接口: {case['api']}，参数: {param}，模式: {mode}")
 
-    @data(*[case for case in cases if case.get("test_type") == "angle"])
-    def test_is_in_position_angle(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_parameter:{}'.format(case['parameter']))
-        logger.debug('test_mode:{}'.format(case['mode']))
-        # 左臂请求发送
-        l_response = self.device.ml.wait(case['parameter'], case['mode'])
+    with allure.step("调用 is_in_position 接口进行 is_in_position 测试"):
+        l_response = device.ml.is_in_position(param, mode)
+        r_response = device.mr.is_in_position(param, mode)
 
-        # 右臂请求发送
-        r_response = self.device.mr.wait(case['parameter'], case['mode'])
-        try:
-            # 请求结果类型断言
-            if type(l_response) == int:
-                logger.debug('左臂请求类型断言成功')
-            else:
-                logger.debug('左臂请求类型断言失败，实际类型为{}'.format(type(l_response)))
-            if type(r_response) == int:
-                logger.debug('右臂请求类型断言成功')
-            else:
-                logger.debug('右臂请求类型断言失败，实际类型为{}'.format(type(r_response)))
-            # 请求结果断言
-            self.assertEqual(case['r_expect_data'], r_response)
-            self.assertEqual(case['l_expect_data'], l_response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('左臂期望数据：{}'.format(case['l_expect_data']))
-            logger.debug('右臂期望数据：{}'.format(case['r_expect_data']))
-            logger.debug('左臂实际结果：{}'.format(l_response))
-            logger.debug('右臂实际结果：{}'.format(r_response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    with allure.step("断言返回类型为 int"):
+        assert isinstance(l_response, int), f"左臂返回类型错误: {type(l_response)}"
+        assert isinstance(r_response, int), f"右臂返回类型错误: {type(r_response)}"
 
-    @data(*[case for case in cases if case.get("test_type") == "coords"])
-    def test_is_in_position_coords(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_parameter:{}'.format(case['parameter']))
-        logger.debug('test_mode:{}'.format(case['mode']))
-        # 左臂请求发送
-        l_response = self.device.ml.wait(case['parameter'], case['mode'])
+    with allure.step("断言返回值是否符合预期"):
+        assert l_response == case["l_expect_data"], f"左臂期望值 {case['l_expect_data']}，实际为 {l_response}"
+        assert r_response == case["r_expect_data"], f"右臂期望值 {case['r_expect_data']}，实际为 {r_response}"
 
-        # 右臂请求发送
-        r_response = self.device.mr.wait(case['parameter'], case['mode'])
-        try:
-            # 请求结果类型断言
-            if type(l_response) == int:
-                logger.debug('左臂请求类型断言成功')
-            else:
-                logger.debug('左臂请求类型断言失败，实际类型为{}'.format(type(l_response)))
-            if type(r_response) == int:
-                logger.debug('右臂请求类型断言成功')
-            else:
-                logger.debug('右臂请求类型断言失败，实际类型为{}'.format(type(r_response)))
-            # 请求结果断言
-            self.assertEqual(case['r_expect_data'], r_response)
-            self.assertEqual(case['l_expect_data'], l_response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('左臂期望数据：{}'.format(case['l_expect_data']))
-            logger.debug('右臂期望数据：{}'.format(case['r_expect_data']))
-            logger.debug('左臂实际结果：{}'.format(l_response))
-            logger.debug('右臂实际结果：{}'.format(r_response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
-
-    @data(*[case for case in cases if case.get("test_type") == "base_coords"])
-    def test_is_in_position_base_coords(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_parameter:{}'.format(case['parameter']))
-        logger.debug('test_mode:{}'.format(case['mode']))
-        # 左臂请求发送
-        l_response = self.device.ml.wait(case['parameter'], case['mode'])
-
-        # 右臂请求发送
-        r_response = self.device.mr.wait(case['parameter'], case['mode'])
-        try:
-            # 请求结果类型断言
-            if type(l_response) == int:
-                logger.debug('左臂请求类型断言成功')
-            else:
-                logger.debug('左臂请求类型断言失败，实际类型为{}'.format(type(l_response)))
-            if type(r_response) == int:
-                logger.debug('右臂请求类型断言成功')
-            else:
-                logger.debug('右臂请求类型断言失败，实际类型为{}'.format(type(r_response)))
-            # 请求结果断言
-            self.assertEqual(case['r_expect_data'], r_response)
-            self.assertEqual(case['l_expect_data'], l_response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('左臂期望数据：{}'.format(case['l_expect_data']))
-            logger.debug('右臂期望数据：{}'.format(case['r_expect_data']))
-            logger.debug('左臂实际结果：{}'.format(l_response))
-            logger.debug('右臂实际结果：{}'.format(r_response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    logger.info(f"✅ 用例【{title}】测试通过")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
 
 
-    @data(*[case for case in cases if case.get("test_type") == "exception"])  # 筛选无效等价类用例
-    def test_out_limit(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_parameter:{}'.format(case['parameter']))
-        logger.debug('test_mode:{}'.format(case['mode']))
-        # 请求发送
-        try:
-            with self.assertRaises(MercuryDataException,
-                                   msg="用例{}未触发value错误，参数为{}{}".format(case['title'], case['parameter'],case['mode'])):
-                # 左臂请求发送
-                l_response = self.device.ml.wait(case['parameter'], case['mode'])
+@allure.feature("is_in_position 接口测试")
+@allure.story("异常参数测试")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "exception"], ids=lambda c: c["title"])
+def test_is_in_position_exception(device, case):
+    title = case["title"]
+    param = case["parameter"]
+    mode = case["mode"]
 
-                # 右臂请求发送
-                r_response = self.device.mr.wait(case['parameter'], case['mode'])
-        except AssertionError:
-            logger.error("断言失败：用例{}未触发异常".format(case['title']))
-            raise  # 重新抛出异常，让测试框架捕获
-        except Exception as e:
-            logger.exception("未预期的异常发生：{}".format(str(e)))
-            raise
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"接口: {case['api']}，参数: {param}，模式: {mode}")
 
+    with allure.step("断言抛出 MercuryDataException"):
+        with pytest.raises(MercuryDataException):
+            device.ml.is_in_position(param, mode)
+            device.mr.is_in_position(param, mode)
+
+    logger.info(f"✅ 用例【{title}】异常测试通过")
+    logger.info(f"》》》用例【{title}】测试完成《《《")

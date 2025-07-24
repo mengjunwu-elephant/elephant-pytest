@@ -4,6 +4,7 @@ from Myhand.MyHand import MyGripper_H100
 
 m = MyGripper_H100("com14",id=14, debug=1)
 
+# m.set_gripper_joint_calibration(4)
 # print(m.set_gripper_baud(0))
 # m.set_gripper_Id(14)
 # print(m.get_gripper_Id())
@@ -14,11 +15,13 @@ m = MyGripper_H100("com14",id=14, debug=1)
 # m.set_gripper_joint_speed(6,100)
 # while 1:
 #     time.sleep(1)
-#     m.set_gripper_joint_angle(5,0)
+# m.set_gripper_joint_angle(4,50)
 #     time.sleep(1)
 #     m.set_gripper_joint_angle(5,100)
-m.set_gripper_pose(4,15,0)
+# m.set_gripper_pose(4,15,0)
 # m.set_gripper_joint_angle(3,100)
+# for i in range(100):
+#     print(m.get_gripper_status())
 # m.set_gripper_joint_D(5,10)
 # m.set_gripper_joint_D(6,10)
 # print(m.get_gripper_joint_P(5),m.get_gripper_joint_D(5),)

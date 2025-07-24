@@ -1,73 +1,46 @@
-import unittest
-
-from ddt import ddt, data
+import pytest
+import allure
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
-# 从Excel中提取数据
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "get_end_type")
 
+@pytest.fixture(scope="module")
+def device():
+    dev = MercuryBase()
+    dev.ml.power_on()
+    dev.mr.power_on()
+    logger.info("初始化完成，接口测试开始")
+    yield dev
+    dev.mr.power_off()
+    dev.ml.power_off()
+    dev.close()
+    logger.info("环境清理完成，接口测试结束")
 
-@ddt
-class TestGetEndType(unittest.TestCase):
 
+@allure.feature("获取末端类型")
+@allure.story("正常用例 - 获取左右臂末端类型")
+@pytest.mark.parametrize("case", cases, ids=lambda c: c["title"])
+def test_get_end_type(device, case):
+    title = case['title']
+    logger.info(f"》》》》》用例【{title}】开始测试《《《《《")
+    logger.debug(f"test_api: {case['api']}")
 
-    @classmethod
-    def setUpClass(cls):
-        """
-        水星系列初始化先左臂上电，后右臂上电
-        """
-        cls.device = MercuryBase()
-        cls.device.ml.power_on()
-        cls.device.mr.power_on()
-        logger.info("初始化完成，接口测试开始")
+    with allure.step("获取左臂末端类型"):
+        l_response = device.ml.get_end_type()
 
-    @classmethod
-    def tearDownClass(cls):
-        """
-        下电顺序为先右臂下电，后左臂下电
-        :return:
-        """
-        cls.device.mr.power_off()
-        cls.device.ml.power_off()
-        cls.device.close()
-        logger.info("环境清理完成，接口测试结束")
+    with allure.step("获取右臂末端类型"):
+        r_response = device.mr.get_end_type()
 
-    @data(*cases)
-    def test_get_end_type(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        # 左臂请求发送
-        l_response = self.device.ml.get_end_type()
+    with allure.step("断言返回类型为int"):
+        assert isinstance(l_response, int), f"左臂返回类型错误：{type(l_response)}"
+        assert isinstance(r_response, int), f"右臂返回类型错误：{type(r_response)}"
 
-        # 右臂请求发送
-        r_response = self.device.mr.get_end_type()
+    with allure.step("断言返回结果与期望值一致"):
+        assert l_response == case['l_expect_data'], f"左臂期望={case['l_expect_data']}，实际={l_response}"
+        assert r_response == case['r_expect_data'], f"右臂期望={case['r_expect_data']}，实际={r_response}"
 
-        # 请求结果类型断言
-        if type(l_response) == int:
-            logger.debug('左臂请求类型断言成功')
-        else:
-            logger.debug('左臂请求类型断言失败，实际类型为{}'.format(type(l_response)))
-        if type(r_response) == int:
-            logger.debug('右臂请求类型断言成功')
-        else:
-            logger.debug('右臂请求类型断言失败，实际类型为{}'.format(type(r_response)))
-
-        # 请求结果断言
-        try:
-            self.assertEqual(case['r_expect_data'], r_response)
-            self.assertEqual(case['l_expect_data'], l_response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('左臂期望数据：{}'.format(case['l_expect_data']))
-            logger.debug('右臂期望数据：{}'.format(case['r_expect_data']))
-            logger.debug('左臂实际结果：{}'.format(l_response))
-            logger.debug('右臂实际结果：{}'.format(r_response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功,用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    logger.info(f"请求结果断言成功,用例【{title}】测试成功")
+    logger.info(f"》》》》》用例【{title}】测试完成《《《《《")

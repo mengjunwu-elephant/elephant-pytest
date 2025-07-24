@@ -91,22 +91,6 @@ class MercuryBase:
         self.ml.set_pos_over_shoot(50)
         self.mr.set_pos_over_shoot(50)
 
-    @staticmethod
-    def is_in_position(target, current):
-        count = 0
-        if isinstance(target, (float,int)):
-            if abs(current) - 1 <= abs(target) <= abs(current) + 1:
-                return 1
-            else:
-                return -1
-        else:
-            for i, c in zip(target, current):
-                if abs(i) - 3 <= abs(c) <= abs(i) + 3:
-                    count += 1
-                    if count == len(target):
-                        return 1
-                else:
-                    return -1
 
     def set_default_p(self):
         for i in range(6):

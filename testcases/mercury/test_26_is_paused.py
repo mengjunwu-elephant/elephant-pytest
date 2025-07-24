@@ -1,120 +1,82 @@
-import unittest
-
-from ddt import ddt, data
+import pytest
+import allure
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
-# 从Excel中提取数据
+# 加载用例数据
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "is_paused")
 
 
-@ddt
-class TestIsPaused(unittest.TestCase):
+@pytest.fixture(scope="module")
+def device():
+    dev = MercuryBase()
+    dev.ml.power_on()
+    dev.mr.power_on()
+    logger.info("初始化完成，接口测试开始")
+    yield dev
+    dev.mr.power_off()
+    dev.ml.power_off()
+    dev.close()
+    logger.info("环境清理完成，接口测试结束")
 
 
-    @classmethod
-    def setUpClass(cls):
-        """
-        水星系列初始化先左臂上电，后右臂上电
-        """
-        cls.device = MercuryBase()
-        cls.device.ml.power_on()
-        cls.device.mr.power_on()
-        logger.info("初始化完成，接口测试开始")
+@pytest.fixture(autouse=True)
+def setup_env(device):
+    device.ml.set_limit_switch(2, 0)
+    device.mr.set_limit_switch(2, 0)
+    device.init_coords()
+    yield
+    device.go_zero()
+    device.reset()
 
-    @classmethod
-    def tearDownClass(cls):
-        """
-        下电顺序为先右臂下电，后左臂下电
-        :return:
-        """
-        cls.device.mr.power_off()
-        cls.device.ml.power_off()
-        cls.device.close()
-        logger.info("环境清理完成，接口测试结束")
 
-    def setUp(self):
-        self.device.ml.set_limit_switch(2,0)
-        self.device.mr.set_limit_switch(2, 0)
-        self.device.init_coords()
+@allure.feature("is_paused 状态查询")
+@allure.story("执行 pause 后查询状态")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
+def test_is_paused_after_pause(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
 
-    def tearDown(self):
-        self.device.go_zero()
-        self.device.reset()
+    with allure.step("先调用 pause 进行暂停"):
+        device.ml.pause()
+        device.mr.pause()
 
-    @data(*[case for case in cases if case.get("test_type") == "normal"])
-    def test_is_paused(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_parameter:{}'.format(case['parameter']))
-        self.device.ml.pause()
-        self.device.mr.pause()
-        # 左臂请求发送
-        l_response = self.device.ml.is_paused()
+    with allure.step("查询 is_paused 状态"):
+        l_response = device.ml.is_paused()
+        r_response = device.mr.is_paused()
 
-        # 右臂请求发送
-        r_response = self.device.mr.is_paused()
-        try:
-            # 请求结果类型断言
-            if type(l_response) == int:
-                logger.debug('左臂请求类型断言成功')
-            else:
-                logger.debug('左臂请求类型断言失败，实际类型为{}'.format(type(l_response)))
-            if type(r_response) == int:
-                logger.debug('右臂请求类型断言成功')
-            else:
-                logger.debug('右臂请求类型断言失败，实际类型为{}'.format(type(r_response)))
-            # 请求结果断言
-            self.assertEqual(case['r_expect_data'], r_response)
-            self.assertEqual(case['l_expect_data'], l_response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('左臂期望数据：{}'.format(case['l_expect_data']))
-            logger.debug('右臂期望数据：{}'.format(case['r_expect_data']))
-            logger.debug('左臂实际结果：{}'.format(l_response))
-            logger.debug('右臂实际结果：{}'.format(r_response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    with allure.step("断言类型正确"):
+        assert isinstance(l_response, int), f"左臂类型错误: {type(l_response)}"
+        assert isinstance(r_response, int), f"右臂类型错误: {type(r_response)}"
 
-    @data(*[case for case in cases if case.get("test_type") == "normal1"])
-    def test_is_paused_1(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_parameter:{}'.format(case['parameter']))
-        # 左臂请求发送
-        l_response = self.device.ml.is_paused()
+    with allure.step("断言返回值正确"):
+        assert l_response == case["l_expect_data"], f"左臂返回错误: {l_response}"
+        assert r_response == case["r_expect_data"], f"右臂返回错误: {r_response}"
 
-        # 右臂请求发送
-        r_response = self.device.mr.is_paused()
-        try:
-            # 请求结果类型断言
-            if type(l_response) == int:
-                logger.debug('左臂请求类型断言成功')
-            else:
-                logger.debug('左臂请求类型断言失败，实际类型为{}'.format(type(l_response)))
-            if type(r_response) == int:
-                logger.debug('右臂请求类型断言成功')
-            else:
-                logger.debug('右臂请求类型断言失败，实际类型为{}'.format(type(r_response)))
-            # 请求结果断言
-            self.assertEqual(case['r_expect_data'], r_response)
-            self.assertEqual(case['l_expect_data'], l_response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('左臂期望数据：{}'.format(case['l_expect_data']))
-            logger.debug('右臂期望数据：{}'.format(case['r_expect_data']))
-            logger.debug('左臂实际结果：{}'.format(l_response))
-            logger.debug('右臂实际结果：{}'.format(r_response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    logger.info(f"✅ 用例【{title}】测试通过")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
 
+
+@allure.feature("is_paused 状态查询")
+@allure.story("未调用 pause 直接查询")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal1"], ids=lambda c: c["title"])
+def test_is_paused_without_pause(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+
+    with allure.step("直接查询 is_paused 状态（未先 pause）"):
+        l_response = device.ml.is_paused()
+        r_response = device.mr.is_paused()
+
+    with allure.step("断言类型正确"):
+        assert isinstance(l_response, int), f"左臂类型错误: {type(l_response)}"
+        assert isinstance(r_response, int), f"右臂类型错误: {type(r_response)}"
+
+    with allure.step("断言返回值正确"):
+        assert l_response == case["l_expect_data"], f"左臂返回错误: {l_response}"
+        assert r_response == case["r_expect_data"], f"右臂返回错误: {r_response}"
+
+    logger.info(f"✅ 用例【{title}】测试通过")
+    logger.info(f"》》》用例【{title}】测试完成《《《")

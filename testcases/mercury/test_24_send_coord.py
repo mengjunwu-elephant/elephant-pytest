@@ -1,129 +1,93 @@
-import unittest
-
-from ddt import ddt, data
+import pytest
+import allure
 from pymycobot.error import MercuryDataException
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
-# 从Excel中提取数据
+# 加载测试数据
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "send_coord")
 
 
-@ddt
-class TestSendCoord(unittest.TestCase):
+@pytest.fixture(scope="module")
+def device():
+    """初始化设备，仅模块级一次"""
+    dev = MercuryBase()
+    dev.ml.power_on()
+    dev.mr.power_on()
+    logger.info("设备初始化完成")
+    yield dev
+    dev.go_zero()
+    dev.mr.power_off()
+    dev.ml.power_off()
+    dev.close()
+    logger.info("设备已关闭")
 
 
-    @classmethod
-    def setUpClass(cls):
-        """
-        水星系列初始化先左臂上电，后右臂上电
-        """
-        cls.device = MercuryBase()
-        cls.device.ml.power_on()
-        cls.device.mr.power_on()
-        logger.info("初始化完成，接口测试开始")
+@pytest.fixture(autouse=True)
+def reset_coords(device):
+    """每个用例前初始化坐标"""
+    device.init_coords()
 
-    @classmethod
-    def tearDownClass(cls):
-        """
-        下电顺序为先右臂下电，后左臂下电
-        :return:
-        """
-        cls.device.go_zero()
-        cls.device.mr.power_off()
-        cls.device.ml.power_off()
-        cls.device.close()
-        logger.info("环境清理完成，接口测试结束")
 
-    def setUp(self):
-        self.device.init_coords()
+@allure.feature("send_coord 接口")
+@allure.story("正常用例")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"], ids=lambda c: c["title"])
+def test_send_coord_normal(device, case):
+    allure.dynamic.title(case["title"])
+    logger.info(f"【开始测试】：{case['title']}")
 
-    @data(*[case for case in cases if case.get("test_type") == "normal"])
-    def test_send_coord(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_axis:{}'.format(case['axis']))
-        logger.debug('test_parameter_1:{}'.format(case['parameter']))
-        logger.debug('test_parameter_2:{}'.format(case['speed']))
-        # 左臂请求发送
-        l_response = self.device.ml.send_coord(case["axis"],case["parameter"],case["speed"])
-        # 右臂请求发送
-        r_response = self.device.mr.send_coord(case["axis"],case["parameter"], case["speed"])
-        try:
-            # 请求结果类型断言
-            if type(l_response) == int:
-                logger.debug('左臂请求类型断言成功')
-            else:
-                logger.debug('左臂请求类型断言失败，实际类型为{}'.format(type(l_response)))
-            if type(r_response) == int:
-                logger.debug('左臂请求类型断言成功')
-            else:
-                logger.debug('左臂请求类型断言失败，实际类型为{}'.format(type(r_response)))
-            # 请求结果断言
-            self.assertEqual(case['l_expect_data'], l_response)
-            self.assertEqual(case['r_expect_data'], r_response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('左臂期望数据：{}'.format(case['l_expect_data']))
-            logger.debug('右臂期望数据：{}'.format(case['r_expect_data']))
-            logger.debug('左臂实际结果：{}'.format(l_response))
-            logger.debug('右臂实际结果：{}'.format(r_response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功,用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    axis = case["axis"]
+    param = case["parameter"]
+    speed = case["speed"]
 
-    @data(*[case for case in cases if case.get("test_type") in {"exception","left"}])  # 筛选无效等价类用例
-    def test_out_limit_left(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_axis:{}'.format(case['axis']))
-        logger.debug('test_parameter_1:{}'.format(case['parameter']))
-        logger.debug('test_parameter_2:{}'.format(case['speed']))
-        # 请求发送
-        try:
-            with self.assertRaises(MercuryDataException,
-                                   msg="用例{}未触发value错误，坐标，速度为{}{}".format(case['title'], case['parameter'],case['speed'])):
-                # 左臂请求发送
-                self.device.ml.send_coord(case["axis"],case["parameter"], case["speed"])
-        except AssertionError:
-            logger.error("断言失败：用例{}未触发异常".format(case['title']))
-            raise  # 重新抛出异常，让测试框架捕获
-        except Exception as e:
-            logger.exception("未预期的异常发生：{}".format(str(e)))
-            raise
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    with allure.step("左臂发送坐标"):
+        l_resp = device.ml.send_coord(axis, param, speed)
+        logger.debug(f"左臂返回：{l_resp}")
+        assert isinstance(l_resp, int), f"左臂返回类型错误，应为 int，实际为 {type(l_resp)}"
+        assert l_resp == case["l_expect_data"], f"左臂预期 {case['l_expect_data']}，实际 {l_resp}"
 
-    @data(*[case for case in cases if case.get("test_type") in {"exception", "right"}])  # 筛选无效等价类用例
-    def test_out_limit_right(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_axis:{}'.format(case['axis']))
-        logger.debug('test_parameter_1:{}'.format(case['parameter']))
-        logger.debug('test_parameter_2:{}'.format(case['speed']))
-        # 请求发送
-        try:
-            with self.assertRaises(MercuryDataException,
-                                   msg="用例{}未触发value错误，坐标，速度为{}{}".format(case['title'], case['parameter'],
-                                                                                      case['speed'])):
-                # 右臂请求发送
-                self.device.mr.send_coord(case["axis"],case["parameter"], case["speed"])
-        except AssertionError:
-            logger.error("断言失败：用例{}未触发异常".format(case['title']))
-            raise  # 重新抛出异常，让测试框架捕获
-        except Exception as e:
-            logger.exception("未预期的异常发生：{}".format(str(e)))
-            raise
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    with allure.step("右臂发送坐标"):
+        r_resp = device.mr.send_coord(axis, param, speed)
+        logger.debug(f"右臂返回：{r_resp}")
+        assert isinstance(r_resp, int), f"右臂返回类型错误，应为 int，实际为 {type(r_resp)}"
+        assert r_resp == case["r_expect_data"], f"右臂预期 {case['r_expect_data']}，实际 {r_resp}"
+
+    logger.info(f"✅ 用例【{case['title']}】通过")
+
+
+@allure.feature("send_coord 接口")
+@allure.story("异常用例 - 左臂")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") in {"exception", "left"}],
+                         ids=lambda c: c["title"])
+def test_send_coord_left_exception(device, case):
+    allure.dynamic.title(f"[左臂异常] {case['title']}")
+    logger.info(f"【开始测试 - 左臂异常】：{case['title']}")
+
+    axis = case["axis"]
+    param = case["parameter"]
+    speed = case["speed"]
+
+    with allure.step("发送非法坐标参数至左臂"):
+        with pytest.raises(MercuryDataException):
+            device.ml.send_coord(axis, param, speed)
+    logger.info(f"✅ 左臂异常用例【{case['title']}】验证通过")
+
+
+@allure.feature("send_coord 接口")
+@allure.story("异常用例 - 右臂")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") in {"exception", "right"}],
+                         ids=lambda c: c["title"])
+def test_send_coord_right_exception(device, case):
+    allure.dynamic.title(f"[右臂异常] {case['title']}")
+    logger.info(f"【开始测试 - 右臂异常】：{case['title']}")
+
+    axis = case["axis"]
+    param = case["parameter"]
+    speed = case["speed"]
+
+    with allure.step("发送非法坐标参数至右臂"):
+        with pytest.raises(MercuryDataException):
+            device.mr.send_coord(axis, param, speed)
+    logger.info(f"✅ 右臂异常用例【{case['title']}】验证通过")

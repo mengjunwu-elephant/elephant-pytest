@@ -1,166 +1,115 @@
-import unittest
+import pytest
+import allure
 from time import sleep
-
-from ddt import ddt, data
 from pymycobot.error import MercuryDataException
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
-# 从Excel中提取数据
+# 加载测试数据
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "set_joint_max_angle")
 
 
-@ddt
-class TestSetJointMaxAngle(unittest.TestCase):
+@pytest.fixture(scope="module")
+def device():
+    dev = MercuryBase()
+    dev.ml.power_on()
+    dev.mr.power_on()
+    logger.info("初始化完成，接口测试开始")
+    yield dev
+    dev.mr.power_off()
+    dev.ml.power_off()
+    dev.close()
+    logger.info("环境清理完成，接口测试结束")
 
 
-    @classmethod
-    def setUpClass(cls):
-        """
-        水星系列初始化先左臂上电，后右臂上电
-        """
-        cls.device = MercuryBase()
-        cls.device.ml.power_on()
-        cls.device.mr.power_on()
-        logger.info("初始化完成，接口测试开始")
+@pytest.fixture(autouse=True)
+def restore_zero(device):
+    yield
+    device.go_zero()
+    sleep(3)
 
-    @classmethod
-    def tearDownClass(cls):
-        """
-        下电顺序为先右臂下电，后左臂下电
-        :return:
-        """
-        cls.device.mr.power_off()
-        cls.device.ml.power_off()
-        cls.device.close()
-        logger.info("环境清理完成，接口测试结束")
 
-    def tearDown(self):
-        self.device.go_zero()
+@allure.feature("设置关节最大角度")
+@allure.story("正常用例 - 限位设置后能到达 + 返回值正确")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"], ids=lambda c: c["title"])
+def test_set_joint_max_angle_normal(device, case):
+    title = case["title"]
+    joint_id = case["id"]
+    param = case["parameter"]
+
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+
+    with allure.step("设置最大角度 + 执行运动指令"):
+        l_response = device.ml.set_joint_max_angle(param)
+        r_response = device.mr.set_joint_max_angle(param)
+
+        device.ml.send_angle(joint_id, param, device.speed)
+        device.mr.send_angle(joint_id, param, device.speed)
         sleep(3)
 
-    @data(*[case for case in cases if case.get("test_type") == "normal"])  # 筛选有效等价类用例
-    @data(*cases)
-    def test_set_joint_max_angle(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_id:{}'.format(case['id']))
-        logger.debug('test_parameter:{}'.format(case['parameter']))
-        # 左臂请求发送
-        l_response = self.device.ml.set_joint_max_angle(case["parameter"])
-        self.device.ml.send_angle(case["id"], case["parameter"], self.device.speed)  # 使机械臂运动到软件限位，判断是否能够到达
-        sleep(3)
-        l_get_res = self.device.is_in_position(case["parameter"], self.device.ml.get_angle(case["id"]))
-        # 右臂请求发送
-        r_response = self.device.mr.set_joint_max_angle(case["id"])
-        self.device.mr.send_angle(case["id"], case["parameter"], self.device.speed)
-        sleep(3)
-        r_get_res = self.device.is_in_position(case["parameter"], self.device.mr.get_angle(case["id"]))
+    with allure.step("判断是否到达目标角度"):
+        l_curr = device.ml.get_angle(joint_id)
+        r_curr = device.mr.get_angle(joint_id)
+        assert device.is_in_position(param, l_curr), f"左臂未到达最大角度，当前={l_curr}, 目标={param}"
+        assert device.is_in_position(param, r_curr), f"右臂未到达最大角度，当前={r_curr}, 目标={param}"
 
-        # 机械臂是否到达软件限位判断
-        try:
-            self.assertEqual(l_get_res, 1)
-            self.assertEqual(r_get_res, 1)
-        except AssertionError as e:
-            logger.exception("{}关节未到位软件限位，断言失败".format(case["id"]))
-            logger.debug("左臂{}关节设置的软件限位值为{}，当前角度值为{}".format(case['id'], case["parameter"],
-                                                                                     self.device.ml.get_angle(
-                                                                                         case["id"])))
-            logger.debug("右臂{}关节设置的软件限位值为{}，当前角度值为{}".format(case['id'], case["parameter"],
-                                                                                     self.device.mr.get_angle(
-                                                                                         case["id"])))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        # 请求结果类型断言
-        if type(l_response) == int:
-            logger.debug('左臂请求类型断言成功')
-        else:
-            logger.debug('左臂请求类型断言失败，实际类型为{}'.format(type(l_response)))
-        if type(r_response) == int:
-            logger.debug('右臂请求类型断言成功')
-        else:
-            logger.debug('右臂请求类型断言失败，实际类型为{}'.format(type(r_response)))
+    with allure.step("断言类型和返回数据一致"):
+        assert isinstance(l_response, int), f"左臂返回类型错误：{type(l_response)}"
+        assert isinstance(r_response, int), f"右臂返回类型错误：{type(r_response)}"
+        assert l_response == case["l_expect_data"], f"左臂返回错误：期望={case['l_expect_data']}, 实际={l_response}"
+        assert r_response == case["r_expect_data"], f"右臂返回错误：期望={case['r_expect_data']}, 实际={r_response}"
 
-        # 请求结果断言
-        try:
-            self.assertEqual(case['r_expect_data'], r_response)
-            self.assertEqual(case['l_expect_data'], l_response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('左臂期望数据：{}'.format(case['l_expect_data']))
-            logger.debug('右臂期望数据：{}'.format(case['r_expect_data']))
-            logger.debug('左臂实际结果：{}'.format(l_response))
-            logger.debug('右臂实际结果：{}'.format(r_response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功,用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    logger.info(f"✅ 用例【{title}】测试通过")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
 
-    @data(*[case for case in cases if case.get("test_type") == "exception"])  # 筛选无效等价类用例
-    def test_out_limit(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_id:{}'.format(case['id']))
-        logger.debug('test_parameter:{}'.format(case['parameter']))
-        # 请求发送
-        try:
-            with self.assertRaises(MercuryDataException, msg="用例{}未触发value错误，id值为{}".format(case['title'], case['id'])):
-                self.device.ml.set_joint_min_angle(case["parameter"])
-                self.device.mr.set_joint_min_angle(case["parameter"])
-        except AssertionError:
-            logger.error("断言失败：用例{}未触发异常".format(case['title']))
-            raise  # 重新抛出异常，让测试框架捕获
-        except Exception as e:
-            logger.exception("未预期的异常发生：{}".format(str(e)))
-            raise
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
 
-    @data(*[case for case in cases if case.get("test_type") == "save_or_not"])
-    def test_save_or_not(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_id:{}'.format(case['id']))
-        logger.debug('test_parameter:{}'.format(case['parameter']))
-        # 左臂请求发送
-        l_response = self.device.ml.set_joint_max_angle(case['id'],case['parameter'])
-        # 右臂请求发送
-        r_response = self.device.mr.set_joint_max_angle(case['id'],case['parameter'])
+@allure.feature("设置关节最大角度")
+@allure.story("异常用例 - 设置非法角度抛出异常")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
+def test_set_joint_max_angle_exception(device, case):
+    title = case["title"]
+    param = case["parameter"]
 
-        # 设置机械臂重启
-        self.device.reset()
+    logger.info(f"》》》用例【{title}】开始测试《《《")
 
-        # 读取默认值
-        l_get_res = self.device.ml.get_joint_max_angle(case['id'])
-        r_get_res = self.device.mr.get_joint_max_angle(case['id'])
-        try:
-            # 请求结果类型断言
-            if type(l_response) == int:
-                logger.debug('左臂请求类型断言成功')
-            else:
-                logger.debug('左臂请求类型断言失败，实际类型为{}'.format(type(l_get_res)))
-            if type(r_response) == int:
-                logger.debug('右臂请求类型断言成功')
-            else:
-                logger.debug('右臂请求类型断言失败，实际类型为{}'.format(type(r_get_res)))
-            # 请求结果断言
-            self.assertEqual(case['r_expect_data'], r_get_res)
-            self.assertEqual(case['l_expect_data'], l_get_res)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('左臂期望数据：{}'.format(case['l_expect_data']))
-            logger.debug('右臂期望数据：{}'.format(case['r_expect_data']))
-            logger.debug('左臂实际结果：{}'.format(l_get_res))
-            logger.debug('右臂实际结果：{}'.format(r_get_res))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    with allure.step("断言设置非法角度抛出 MercuryDataException"):
+        with pytest.raises(MercuryDataException):
+            device.ml.set_joint_max_angle(param)
+        with pytest.raises(MercuryDataException):
+            device.mr.set_joint_max_angle(param)
+
+    logger.info(f"✅ 异常用例【{title}】测试通过")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
+
+
+@allure.feature("设置关节最大角度")
+@allure.story("设置是否保存 - 重启后验证限位值是否保留")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "save_or_not"], ids=lambda c: c["title"])
+def test_set_joint_max_angle_save_or_not(device, case):
+    title = case["title"]
+    joint_id = case["id"]
+    param = case["parameter"]
+
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+
+    with allure.step("设置最大角度"):
+        l_response = device.ml.set_joint_max_angle(joint_id, param)
+        r_response = device.mr.set_joint_max_angle(joint_id, param)
+
+    with allure.step("设备重启"):
+        device.reset()
+
+    with allure.step("读取重启后的最大角度值"):
+        l_actual = device.ml.get_joint_max_angle(joint_id)
+        r_actual = device.mr.get_joint_max_angle(joint_id)
+
+    with allure.step("断言值是否保存"):
+        assert isinstance(l_response, int), f"左臂返回类型错误：{type(l_response)}"
+        assert isinstance(r_response, int), f"右臂返回类型错误：{type(r_response)}"
+        assert l_actual == case["l_expect_data"], f"左臂最大角度未正确保存：期望={case['l_expect_data']}, 实际={l_actual}"
+        assert r_actual == case["r_expect_data"], f"右臂最大角度未正确保存：期望={case['r_expect_data']}, 实际={r_actual}"
+
+    logger.info(f"✅ 用例【{title}】测试通过")
+    logger.info(f"》》》用例【{title}】测试完成《《《")

@@ -1,141 +1,95 @@
-import unittest
-
-from ddt import ddt, data
+import pytest
+import allure
 from pymycobot.error import MercuryDataException
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
-# 从Excel中提取数据
+# 从Excel中读取测试数据
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "set_max_acc")
 
 
-@ddt
-class TestSetMaxAcc(unittest.TestCase):
+@pytest.fixture(scope="module")
+def device():
+    dev = MercuryBase()
+    dev.ml.power_on()
+    dev.mr.power_on()
+    logger.info("初始化完成，接口测试开始")
+    yield dev
+    dev.mr.power_off()
+    dev.ml.power_off()
+    dev.close()
+    logger.info("环境清理完成，接口测试结束")
 
 
-    # 初始化测试环境
-    @classmethod
-    def setUpClass(cls):
-        """
-        水星系列初始化先左臂上电，后右臂上电
-        """
-        cls.device = MercuryBase()
-        cls.device.ml.power_on()
-        cls.device.mr.power_on()
-        logger.info("初始化完成，接口测试开始")
+@allure.feature("设置最大加速度")
+@allure.story("正常设置验证")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"], ids=lambda c: c["title"])
+def test_set_max_acc_normal(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"API: {case['api']} | 参数: {case['parameter']}")
 
-    @classmethod
-    def tearDownClass(cls):
-        """
-        下电顺序为先右臂下电，后左臂下电
-        :return:
-        """
-        cls.device.mr.power_off()
-        cls.device.ml.power_off()
-        cls.device.close()
-        logger.info("环境清理完成，接口测试结束")
+    with allure.step("发送 set_max_acc 请求"):
+        l_res = device.ml.set_max_acc(case["mode"], case["parameter"])
+        r_res = device.mr.set_max_acc(case["mode"], case["parameter"])
 
-    @data(*[case for case in cases if case.get("test_type") == "normal"])
-    def test_set_max_acc(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_parameter:{}'.format(case['parameter']))
+    with allure.step("类型断言"):
+        assert isinstance(l_res, int), f"左臂返回类型应为 int，实际为 {type(l_res)}"
+        assert isinstance(r_res, int), f"右臂返回类型应为 int，实际为 {type(r_res)}"
 
-        # 左臂请求发送
-        l_response = self.device.ml.set_max_acc(case['mode'],case['parameter'])
+    with allure.step("结果断言"):
+        assert l_res == case["l_expect_data"], f"左臂期望值：{case['l_expect_data']}，实际值：{l_res}"
+        assert r_res == case["r_expect_data"], f"右臂期望值：{case['r_expect_data']}，实际值：{r_res}"
 
-        # 右臂请求发送
-        r_response = self.device.mr.set_max_acc(case['mode'],case['parameter'])
-        try:
-            # 请求结果类型断言
-            if type(l_response) == int:
-                logger.debug('左臂请求类型断言成功')
-            else:
-                logger.debug('左臂请求类型断言失败，实际类型为{}'.format(type(l_response)))
-            if type(r_response) == int:
-                logger.debug('右臂请求类型断言成功')
-            else:
-                logger.debug('右臂请求类型断言失败，实际类型为{}'.format(type(r_response)))
-            # 请求结果断言
-            self.assertEqual(case['r_expect_data'], r_response)
-            self.assertEqual(case['l_expect_data'], l_response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('左臂期望数据：{}'.format(case['l_expect_data']))
-            logger.debug('右臂期望数据：{}'.format(case['r_expect_data']))
-            logger.debug('左臂实际结果：{}'.format(l_response))
-            logger.debug('右臂实际结果：{}'.format(r_response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    logger.info(f"✅ 用例【{title}】测试通过")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
 
-    @data(*[case for case in cases if case.get("test_type") == "exception"])  # 筛选无效等价类用例
-    def test_out_limit(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_parameter:{}'.format(case['parameter']))
-        # 请求发送
-        try:
-            with self.assertRaises(MercuryDataException,
-                                   msg="用例{}未触发value错误，参数为{}{}".format(case['title'], case['parameter'],case['mode'])):
-                self.device.ml.set_max_acc(case['mode'],case['parameter'])
-                self.device.mr.set_max_acc(case['mode'],case['parameter'])
-        except AssertionError:
-            logger.error("断言失败：用例{}未触发异常".format(case['title']))
-            raise  # 重新抛出异常，让测试框架捕获
-        except Exception as e:
-            logger.exception("未预期的异常发生：{}".format(str(e)))
-            raise
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
 
-    @data(*[case for case in cases if case.get("test_type") == "save_or_not"])
-    def test_save_or_not(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_parameter:{}'.format(case['parameter']))
-        logger.debug('test_mode:{}'.format(case['mode']))
-        # 左臂请求发送
-        l_response = self.device.ml.set_max_acc(case['mode'],case['parameter'])
-        # 右臂请求发送
-        r_response = self.device.mr.set_max_acc(case['mode'],case['parameter'])
+@allure.feature("设置最大加速度")
+@allure.story("异常参数验证")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
+def test_set_max_acc_exception(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"API: {case['api']} | 参数: {case['parameter']} | 模式: {case['mode']}")
 
-        # 设置机械臂重启
-        self.device.reset()
+    with allure.step("断言抛出 MercuryDataException"):
+        with pytest.raises(MercuryDataException):
+            device.ml.set_max_acc(case["mode"], case["parameter"])
+            device.mr.set_max_acc(case["mode"], case["parameter"])
 
-        # 读取默认值
-        l_get_res = self.device.ml.get_max_acc(case['mode'])
-        r_get_res = self.device.mr.get_max_acc(case['mode'])
-        try:
-            # 请求结果类型断言
-            if type(l_response) == int:
-                logger.debug('左臂请求类型断言成功')
-            else:
-                logger.debug('左臂请求类型断言失败，实际类型为{}'.format(type(l_get_res)))
-            if type(r_response) == int:
-                logger.debug('右臂请求类型断言成功')
-            else:
-                logger.debug('右臂请求类型断言失败，实际类型为{}'.format(type(r_get_res)))
-            # 请求结果断言
-            self.assertEqual(case['r_expect_data'], r_get_res)
-            self.assertEqual(case['l_expect_data'], l_get_res)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('左臂期望数据：{}'.format(case['l_expect_data']))
-            logger.debug('右臂期望数据：{}'.format(case['r_expect_data']))
-            logger.debug('左臂实际结果：{}'.format(l_get_res))
-            logger.debug('右臂实际结果：{}'.format(r_get_res))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    logger.info(f"✅ 用例【{title}】异常断言通过")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
+
+
+@allure.feature("设置最大加速度")
+@allure.story("保存验证")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "save_or_not"], ids=lambda c: c["title"])
+def test_set_max_acc_persistence(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"API: {case['api']} | 参数: {case['parameter']} | 模式: {case['mode']}")
+
+    with allure.step("设置 max_acc"):
+        l_res = device.ml.set_max_acc(case["mode"], case["parameter"])
+        r_res = device.mr.set_max_acc(case["mode"], case["parameter"])
+
+    with allure.step("重启设备"):
+        device.reset()
+
+    with allure.step("读取重启后设置值"):
+        l_get = device.ml.get_max_acc(case["mode"])
+        r_get = device.mr.get_max_acc(case["mode"])
+
+    with allure.step("类型断言"):
+        assert isinstance(l_get, int), f"左臂读取类型错误：{type(l_get)}"
+        assert isinstance(r_get, int), f"右臂读取类型错误：{type(r_get)}"
+
+    with allure.step("值断言"):
+        assert l_get == case["l_expect_data"], f"左臂断言失败，期望：{case['l_expect_data']}，实际：{l_get}"
+        assert r_get == case["r_expect_data"], f"右臂断言失败，期望：{case['r_expect_data']}，实际：{r_get}"
+
+    logger.info(f"✅ 用例【{title}】保存性验证通过")
+    logger.info(f"》》》用例【{title}】测试完成《《《")

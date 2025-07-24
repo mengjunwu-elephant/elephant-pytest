@@ -1,101 +1,76 @@
-import unittest
-
-from ddt import ddt, data
+import pytest
+import allure
 from pymycobot.error import MercuryDataException
-
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
-# 从Excel中提取数据
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "jog_rpy")
 
 
-@ddt
-class TestJogRPY(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        """
-        水星系列初始化先左臂上电，后右臂上电
-        """
-        cls.device = MercuryBase()
-        cls.device.ml.power_on()
-        cls.device.mr.power_on()
-        logger.info("初始化完成，接口测试开始")
+@pytest.fixture(scope="module")
+def device():
+    dev = MercuryBase()
+    dev.ml.power_on()
+    dev.mr.power_on()
+    logger.info("初始化完成，接口测试开始")
+    yield dev
+    dev.go_zero()
+    dev.mr.power_off()
+    dev.ml.power_off()
+    dev.close()
+    logger.info("环境清理完成，接口测试结束")
 
-    @classmethod
-    def tearDownClass(cls):
-        """
-        下电顺序为先右臂下电，后左臂下电
-        :return:
-        """
-        cls.device.go_zero()
-        cls.device.mr.power_off()
-        cls.device.ml.power_off()
-        cls.device.close()
-        logger.info("环境清理完成，接口测试结束")
 
-    def setUp(self):
-        self.device.init_coords()
+@pytest.fixture(autouse=True)
+def reset_coords(device):
+    device.init_coords()
+    yield
 
-    @data(*[case for case in cases if case.get("test_type") == "normal"])
-    def test_jog_rpy(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_axis:{}'.format(case['axis']))
-        logger.debug('test_parameter_1:{}'.format(case['parameter']))
-        logger.debug('test_parameter_2:{}'.format(case['speed']))
-        # 左臂请求发送
-        l_response = self.device.ml.jog_rpy(case["axis"],case["parameter"],case["speed"])
-        # 右臂请求发送
-        r_response = self.device.mr.jog_rpy(case["axis"],case["parameter"], case["speed"])
-        try:
-            # 请求结果类型断言
-            if type(l_response) == int:
-                logger.debug('左臂请求类型断言成功')
-            else:
-                logger.debug('左臂请求类型断言失败，实际类型为{}'.format(type(l_response)))
-            if type(r_response) == int:
-                logger.debug('左臂请求类型断言成功')
-            else:
-                logger.debug('左臂请求类型断言失败，实际类型为{}'.format(type(r_response)))
-            # 请求结果断言
-            self.assertEqual(case['l_expect_data'], l_response)
-            self.assertEqual(case['r_expect_data'], r_response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('左臂期望数据：{}'.format(case['l_expect_data']))
-            logger.debug('右臂期望数据：{}'.format(case['r_expect_data']))
-            logger.debug('左臂实际结果：{}'.format(l_response))
-            logger.debug('右臂实际结果：{}'.format(r_response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功,用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
 
-    @data(*[case for case in cases if case.get("test_type") == "exception"])  # 筛选无效等价类用例
-    def test_out_limit(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_axis:{}'.format(case['axis']))
-        logger.debug('test_parameter_1:{}'.format(case['parameter']))
-        logger.debug('test_parameter_2:{}'.format(case['speed']))
-        # 请求发送
-        try:
-            with self.assertRaises(MercuryDataException,
-                                   msg="用例{}未触发value错误，方向，速度为{}{}".format(case['title'], case['parameter'],case['speed'])):
-                # 左臂请求发送
-                self.device.ml.jog_rpy(case["axis"],case["parameter"], case["speed"])
-        except AssertionError:
-            logger.error("断言失败：用例{}未触发异常".format(case['title']))
-            raise  # 重新抛出异常，让测试框架捕获
-        except Exception as e:
-            logger.exception("未预期的异常发生：{}".format(str(e)))
-            raise
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+@allure.feature("jog_rpy 接口测试")
+@allure.story("正常功能验证")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
+def test_jog_rpy_normal(device, case):
+    axis = case["axis"]
+    param = case["parameter"]
+    speed = case["speed"]
+    title = case["title"]
+
+    logger.info(f"》》》开始用例【{title}】《《《")
+    logger.debug(f"Axis: {axis}, Param: {param}, Speed: {speed}")
+
+    with allure.step("发送 jog_rpy 指令（左臂）"):
+        l_response = device.ml.jog_rpy(axis, param, speed)
+
+    with allure.step("发送 jog_rpy 指令（右臂）"):
+        r_response = device.mr.jog_rpy(axis, param, speed)
+
+    with allure.step("校验返回类型"):
+        assert isinstance(l_response, int), f"左臂响应类型应为 int，实际为 {type(l_response)}"
+        assert isinstance(r_response, int), f"右臂响应类型应为 int，实际为 {type(r_response)}"
+
+    with allure.step("断言响应值正确"):
+        assert l_response == case["l_expect_data"], f"左臂期望 {case['l_expect_data']}，实际 {l_response}"
+        assert r_response == case["r_expect_data"], f"右臂期望 {case['r_expect_data']}，实际 {r_response}"
+
+    logger.info(f"✅ 用例【{title}】测试成功")
+
+
+@allure.feature("jog_rpy 接口测试")
+@allure.story("异常边界验证")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "exception"], ids=lambda c: c["title"])
+def test_jog_rpy_exception(device, case):
+    axis = case["axis"]
+    param = case["parameter"]
+    speed = case["speed"]
+    title = case["title"]
+
+    logger.info(f"》》》开始异常用例【{title}】《《《")
+    logger.debug(f"Axis: {axis}, Param: {param}, Speed: {speed}")
+
+    with allure.step("发送异常 jog_rpy 指令并捕获 MercuryDataException"):
+        with pytest.raises(MercuryDataException):
+            device.ml.jog_rpy(axis, param, speed)
+
+    logger.info(f"✅ 异常用例【{title}】触发成功")

@@ -1,95 +1,79 @@
-import unittest
-
-from ddt import ddt, data
+import pytest
+import allure
 from pymycobot.error import MercuryDataException
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
-# 从Excel中提取数据
+# 从 Excel 中加载用例
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "set_color")
 
 
-@ddt
-class TestSetColor(unittest.TestCase):
+@pytest.fixture(scope="module")
+def device():
+    dev = MercuryBase()
+    dev.ml.power_on()
+    dev.mr.power_on()
+    logger.info("初始化完成，接口测试开始")
+    yield dev
+    dev.mr.power_off()
+    dev.ml.power_off()
+    dev.close()
+    logger.info("环境清理完成，接口测试结束")
 
 
-    @classmethod
-    def setUpClass(cls):
-        """
-        水星系列初始化先左臂上电，后右臂上电
-        """
-        cls.device = MercuryBase()
-        cls.device.ml.power_on()
-        cls.device.mr.power_on()
-        logger.info("初始化完成，接口测试开始")
+@allure.feature("设置颜色")
+@allure.story("正常用例 - 设置左右臂颜色")
+@pytest.mark.parametrize(
+    "case",
+    [c for c in cases if c.get("test_type") == "normal"],
+    ids=lambda c: c["title"],
+)
+def test_set_color_normal(device, case):
+    title = case["title"]
+    r, g, b = case["r"], case["g"], case["b"]
 
-    @classmethod
-    def tearDownClass(cls):
-        """
-        下电顺序为先右臂下电，后左臂下电
-        :return:
-        """
-        cls.device.mr.power_off()
-        cls.device.ml.power_off()
-        cls.device.close()
-        logger.info("环境清理完成，接口测试结束")
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"测试API: set_color, 参数: r={r}, g={g}, b={b}")
+
+    with allure.step("左臂发送设置颜色指令"):
+        l_response = device.ml.set_color(r, g, b)
+
+    with allure.step("右臂发送设置颜色指令"):
+        r_response = device.mr.set_color(r, g, b)
+
+    with allure.step("断言返回类型为 int"):
+        assert isinstance(l_response, int), f"左臂返回类型错误：{type(l_response)}"
+        assert isinstance(r_response, int), f"右臂返回类型错误：{type(r_response)}"
+
+    with allure.step("断言返回值正确"):
+        assert l_response == case["l_expect_data"], f"左臂期望={case['l_expect_data']}, 实际={l_response}"
+        assert r_response == case["r_expect_data"], f"右臂期望={case['r_expect_data']}, 实际={r_response}"
+
+    logger.info(f"✅ 用例【{title}】测试通过")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
 
 
-    @data(*[case for case in cases if case.get("test_type") == "normal"])
-    def test_set_color(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        # 左臂请求发送
-        l_response = self.device.ml.set_color(case["r"],case["g"],case["b"])
+@allure.feature("设置颜色")
+@allure.story("异常用例 - 设置颜色参数越界抛异常")
+@pytest.mark.parametrize(
+    "case",
+    [c for c in cases if c.get("test_type") == "exception"],
+    ids=lambda c: c["title"],
+)
+def test_set_color_exception(device, case):
+    title = case["title"]
+    r, g, b = case["r"], case["g"], case["b"]
 
-        # 右臂请求发送
-        r_response = self.device.mr.set_color(case["r"],case["g"],case["b"])
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"测试API: set_color, 参数: r={r}, g={g}, b={b}")
 
-        try:
-            # 请求结果类型断言
-            if type(l_response) == int:
-                logger.debug('左臂请求类型断言成功')
-            else:
-                logger.debug('左臂请求类型断言失败，实际类型为{}'.format(type(l_response)))
-            if type(r_response) == int:
-                logger.debug('右臂请求类型断言成功')
-            else:
-                logger.debug('右臂请求类型断言失败，实际类型为{}'.format(type(r_response)))
-            # 请求结果断言
-            self.assertEqual(case['r_expect_data'], r_response)
-            self.assertEqual(case['l_expect_data'], l_response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('左臂期望数据：{}'.format(case['l_expect_data']))
-            logger.debug('右臂期望数据：{}'.format(case['r_expect_data']))
-            logger.debug('左臂实际结果：{}'.format(l_response))
-            logger.debug('右臂实际结果：{}'.format(r_response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功,用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    with allure.step("断言设置非法颜色值抛出 MercuryDataException"):
+        with pytest.raises(MercuryDataException):
+            device.ml.set_color(r, g, b)
+        with pytest.raises(MercuryDataException):
+            device.mr.set_color(r, g, b)
 
-    @data(*[case for case in cases if case.get("test_type") == "exception"])  # 筛选无效等价类用例
-    def test_out_limit(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        # 请求发送
-        try:
-            with self.assertRaises(MercuryDataException, msg="用例{}未触发value错误，rgb值为{}{}{}".format(case['title'], case["r"],case["g"],case["b"])):
-                self.device.ml.set_color(case["r"],case["g"],case["b"])
-                self.device.mr.set_color(case["r"],case["g"],case["b"])
-        except AssertionError:
-            logger.error("断言失败：用例{}未触发异常".format(case['title']))
-            raise  # 重新抛出异常，让测试框架捕获
-        except Exception as e:
-            logger.exception("未预期的异常发生：{}".format(str(e)))
-            raise
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    logger.info(f"✅ 异常断言成功，用例【{title}】测试通过")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
