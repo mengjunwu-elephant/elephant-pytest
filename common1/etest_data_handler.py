@@ -32,5 +32,5 @@ def get_test_data_from_excel(file, sheet_name):
     return data
 
 
-if __name__ == '__main__':
-    get_test_data_from_excel(r'../test_data/test_mercury.xlsx', 'Sheet1')
+# excel = get_test_data_from_excel(r'../test_data/mycobot_280.xlsx', 'get_modify_version')
+# print(excel)

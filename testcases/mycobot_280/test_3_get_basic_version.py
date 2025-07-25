@@ -1,7 +1,7 @@
 import pytest
 import allure
 from common1 import logger
-from common1.test_data_handler import get_test_data_from_excel
+from common1.etest_data_handler import get_test_data_from_excel
 from settings import Mycobot280Base
 
 # 从 Excel 读取测试数据

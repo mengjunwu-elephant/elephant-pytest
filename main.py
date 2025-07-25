@@ -2,15 +2,26 @@ import pytest
 from settings import CASES_DIR,REPORT_DIR
 import datetime
 import os
+from common1 import logger
 
 if __name__ == '__main__':
+    # logger.info("开始执行接口自动化用例".center(50, "*"))
+    # pytest.main()
+    # logger.info("接口自动化用例执行完成".center(50, "*"))
+    # logger.info("开始生成测试报告".center(50, "*"))
+    # os.system("allure generate ./report/json_report/ -o ./report/html_report --clean")
+    # logger.info("测试报告生成成功".center(50, "*"))
+
+
+
+
     product_name = input("请输入数字选择需要测试的产品:\n"
                          "1: mercury\n"
                          "2: mercury_pro_gripper\n"
                          "3: mercury_my_hand\n"
                          "4: pro_gripper\n"
                          "5: my_hand\n"
-                         "6: mycobot280\n"
+                         "6: mycobot_280\n"
                          "7: mycobot_320\n"
                          )
 
@@ -36,6 +47,7 @@ if __name__ == '__main__':
         case_path,
         f"--alluredir={REPORT_DIR}"
     ])
+    pytest.main()
 
     print("\n✅ 测试执行完成，生成报告中...")
 

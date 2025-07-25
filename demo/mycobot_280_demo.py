@@ -1,6 +1,6 @@
 from pymycobot import MyCobot280
 
-mc = MyCobot280("COM25",debug=1)
+mc = MyCobot280("COM10",debug=1)
 # mc.go_home()
 # mc.release_all_servos()
 # mc.focus_all_servos()
