@@ -199,3 +199,71 @@ DEBUG 2025-07-25 14:59:31,512 [test_get_error_information.py-->line:33]:接口�
 INFO 2025-07-25 14:59:31,512 [test_get_error_information.py-->line:43]:✅ 用例【获取报错信息】测试通过
 INFO 2025-07-25 14:59:31,513 [test_get_error_information.py-->line:44]:》》》》》用例【获取报错信息】测试完成《《《《《
 INFO 2025-07-25 14:59:31,538 [test_get_error_information.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-07-25 15:46:31,373 [test_get_error_information.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-07-25 15:46:31,376 [test_get_error_information.py-->line:31]:》》》》》用例【获取报错信息】开始测试《《《《《
+DEBUG 2025-07-25 15:46:31,376 [test_get_error_information.py-->line:32]:test_api:getErrorInformation
+DEBUG 2025-07-25 15:46:31,382 [test_get_error_information.py-->line:42]:接口返回：0
+INFO 2025-07-25 15:46:31,382 [test_get_error_information.py-->line:52]:✅ 用例【获取报错信息】测试通过
+INFO 2025-07-25 15:46:31,382 [test_get_error_information.py-->line:53]:》》》》》用例【获取报错信息】测试完成《《《《《
+INFO 2025-07-25 15:46:32,926 [test_get_error_information.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-07-25 15:47:34,648 [test_get_error_information.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-07-25 15:47:34,651 [test_get_error_information.py-->line:31]:》》》》》用例【获取报错信息】开始测试《《《《《
+DEBUG 2025-07-25 15:47:34,651 [test_get_error_information.py-->line:32]:test_api:getErrorInformation
+DEBUG 2025-07-25 15:47:34,656 [test_get_error_information.py-->line:42]:接口返回：0
+INFO 2025-07-25 15:47:34,657 [test_get_error_information.py-->line:52]:✅ 用例【获取报错信息】测试通过
+INFO 2025-07-25 15:47:34,657 [test_get_error_information.py-->line:53]:》》》》》用例【获取报错信息】测试完成《《《《《
+INFO 2025-07-25 15:47:34,659 [test_get_error_information.py-->line:31]:》》》》》用例【获取4关节超限报错信息】开始测试《《《《《
+DEBUG 2025-07-25 15:47:34,659 [test_get_error_information.py-->line:32]:test_api:getErrorInformation
+DEBUG 2025-07-25 15:47:34,909 [test_get_error_information.py-->line:42]:接口返回：19
+INFO 2025-07-25 15:47:34,910 [test_get_error_information.py-->line:52]:✅ 用例【获取4关节超限报错信息】测试通过
+INFO 2025-07-25 15:47:34,910 [test_get_error_information.py-->line:53]:》》》》》用例【获取4关节超限报错信息】测试完成《《《《《
+INFO 2025-07-25 15:47:36,455 [test_get_error_information.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-07-25 15:48:36,646 [test_get_error_information.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-07-25 15:48:36,648 [test_get_error_information.py-->line:31]:》》》》》用例【获取报错信息】开始测试《《《《《
+DEBUG 2025-07-25 15:48:36,648 [test_get_error_information.py-->line:32]:test_api:getErrorInformation
+DEBUG 2025-07-25 15:48:36,872 [test_get_error_information.py-->line:42]:接口返回：19
+INFO 2025-07-25 15:48:36,934 [test_get_error_information.py-->line:31]:》》》》》用例【获取4关节超限报错信息】开始测试《《《《《
+DEBUG 2025-07-25 15:48:36,934 [test_get_error_information.py-->line:32]:test_api:getErrorInformation
+DEBUG 2025-07-25 15:48:37,177 [test_get_error_information.py-->line:42]:接口返回：19
+INFO 2025-07-25 15:48:37,178 [test_get_error_information.py-->line:52]:✅ 用例【获取4关节超限报错信息】测试通过
+INFO 2025-07-25 15:48:37,178 [test_get_error_information.py-->line:53]:》》》》》用例【获取4关节超限报错信息】测试完成《《《《《
+INFO 2025-07-25 15:48:37,230 [test_get_error_information.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-07-25 15:49:09,859 [test_get_error_information.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-07-25 15:49:09,861 [test_get_error_information.py-->line:31]:》》》》》用例【获取报错信息】开始测试《《《《《
+DEBUG 2025-07-25 15:49:09,861 [test_get_error_information.py-->line:32]:test_api:getErrorInformation
+DEBUG 2025-07-25 15:49:09,865 [test_get_error_information.py-->line:42]:接口返回：0
+INFO 2025-07-25 15:49:09,865 [test_get_error_information.py-->line:52]:✅ 用例【获取报错信息】测试通过
+INFO 2025-07-25 15:49:09,865 [test_get_error_information.py-->line:53]:》》》》》用例【获取报错信息】测试完成《《《《《
+INFO 2025-07-25 15:49:09,867 [test_get_error_information.py-->line:31]:》》》》》用例【获取4关节超限报错信息】开始测试《《《《《
+DEBUG 2025-07-25 15:49:09,867 [test_get_error_information.py-->line:32]:test_api:getErrorInformation
+DEBUG 2025-07-25 15:49:10,117 [test_get_error_information.py-->line:42]:接口返回：19
+INFO 2025-07-25 15:49:10,117 [test_get_error_information.py-->line:52]:✅ 用例【获取4关节超限报错信息】测试通过
+INFO 2025-07-25 15:49:10,117 [test_get_error_information.py-->line:53]:》》》》》用例【获取4关节超限报错信息】测试完成《《《《《
+INFO 2025-07-25 15:49:10,176 [test_get_error_information.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-07-25 15:49:19,275 [test_get_error_information.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-07-25 15:49:19,277 [test_get_error_information.py-->line:31]:》》》》》用例【获取报错信息】开始测试《《《《《
+DEBUG 2025-07-25 15:49:19,277 [test_get_error_information.py-->line:32]:test_api:getErrorInformation
+DEBUG 2025-07-25 15:49:19,505 [test_get_error_information.py-->line:42]:接口返回：0
+INFO 2025-07-25 15:49:19,506 [test_get_error_information.py-->line:52]:✅ 用例【获取报错信息】测试通过
+INFO 2025-07-25 15:49:19,506 [test_get_error_information.py-->line:53]:》》》》》用例【获取报错信息】测试完成《《《《《
+INFO 2025-07-25 15:49:19,509 [test_get_error_information.py-->line:31]:》》》》》用例【获取4关节超限报错信息】开始测试《《《《《
+DEBUG 2025-07-25 15:49:19,509 [test_get_error_information.py-->line:32]:test_api:getErrorInformation
+DEBUG 2025-07-25 15:49:19,758 [test_get_error_information.py-->line:42]:接口返回：19
+INFO 2025-07-25 15:49:19,758 [test_get_error_information.py-->line:52]:✅ 用例【获取4关节超限报错信息】测试通过
+INFO 2025-07-25 15:49:19,759 [test_get_error_information.py-->line:53]:》》》》》用例【获取4关节超限报错信息】测试完成《《《《《
+INFO 2025-07-25 15:49:19,815 [test_get_error_information.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-07-25 16:04:33,229 [test_clear_error_information.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-07-25 16:04:33,231 [test_clear_error_information.py-->line:30]:》》》》》用例【清除报错信息】开始测试《《《《《
+DEBUG 2025-07-25 16:04:33,231 [test_clear_error_information.py-->line:31]:test_api:clear_error_information
+DEBUG 2025-07-25 16:04:33,843 [test_clear_error_information.py-->line:41]:执行清除报错后，获取报错信息接口返回：0
+INFO 2025-07-25 16:04:33,843 [test_clear_error_information.py-->line:51]:✅ 用例【清除报错信息】测试通过
+INFO 2025-07-25 16:04:33,843 [test_clear_error_information.py-->line:52]:》》》》》用例【清除报错信息】测试完成《《《《《
+INFO 2025-07-25 16:04:33,867 [test_clear_error_information.py-->line:21]:环境清理完成，接口测试结束
+INFO 2025-07-25 16:07:00,901 [test_clear_error_information.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-07-25 16:07:00,903 [test_clear_error_information.py-->line:30]:》》》》》用例【清除报错信息】开始测试《《《《《
+DEBUG 2025-07-25 16:07:00,903 [test_clear_error_information.py-->line:31]:test_api:clear_error_information
+INFO 2025-07-25 16:07:01,369 [test_clear_error_information.py-->line:38]:执行清除报错前接口返回：19
+DEBUG 2025-07-25 16:07:01,422 [test_clear_error_information.py-->line:43]:执行清除报错后，获取报错信息接口返回：0
+INFO 2025-07-25 16:07:01,423 [test_clear_error_information.py-->line:53]:✅ 用例【清除报错信息】测试通过
+INFO 2025-07-25 16:07:01,423 [test_clear_error_information.py-->line:54]:》》》》》用例【清除报错信息】测试完成《《《《《
+INFO 2025-07-25 16:07:01,458 [test_clear_error_information.py-->line:21]:环境清理完成，接口测试结束

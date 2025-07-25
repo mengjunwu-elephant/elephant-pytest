@@ -13,8 +13,11 @@ cases = get_test_data_from_excel(Mycobot280Base.TEST_DATA_FILE, "get_error_infor
 def device():
     """设备初始化和清理"""
     dev = Mycobot280Base()
-    logger.info("初始化完成，接口测试开始")
+    dev.default_settings()
+    if dev.is_moving():
+        logger.info("初始化完成，接口测试开始")
     yield dev
+    dev.mc.clear_error_information()
     dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
@@ -27,6 +30,12 @@ def test_get_basic_version(device, case):
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
+
+    # 控制J4到限位值，触发异常场景，返回自干涉错误信息19
+    if case["test_type"]=="exception":
+        device.mc.send_angle(4,-145,50)
+        if device.is_moving():
+            response= device.mc.get_error_information()
 
     with allure.step("调用 get_error_information 接口"):
         response = device.mc.get_error_information()

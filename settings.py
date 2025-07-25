@@ -217,6 +217,7 @@ class Mycobot280Base:
         self.mc.set_fresh_mode(1)
         self.mc.go_home()
 
+    # 回零位
     def go_zero(self):
         self.mc.send_angles(self.zero_angles, self.speed)
         time.sleep(0.5)
@@ -224,6 +225,13 @@ class Mycobot280Base:
             if self.mc.is_moving() == 0:
                 break
         time.sleep(1)
+    # 判断是否到点位 1到位
+    def is_moving(self):
+        while True:
+            statu = self.mc.is_moving()
+            if statu==0:
+                break
+        return 1
 
 # mycobot320配置
 class Mycobot320Base:
