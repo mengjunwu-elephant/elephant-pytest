@@ -206,7 +206,7 @@ class Mycobot280Base:
     # 机械臂运动数据
     speed = 50
     coords_init_angles = [0, 0, -90, 0, 0, 0]
-    init_angles = [0, 0, 0, 0, 0, 0]
+    zero_angles = [0, 0, 0, 0, 0, 0]
     # 测试数据配置
     TEST_DATA_FILE = os.path.join(BASE_DIR, 'test_data/mycobot_280.xlsx')
 
@@ -216,6 +216,14 @@ class Mycobot280Base:
     def default_settings(self):
         self.mc.set_fresh_mode(1)
         self.mc.go_home()
+
+    def go_zero(self):
+        self.mc.send_angles(self.zero_angles, self.speed)
+        time.sleep(0.5)
+        while True:
+            if self.mc.is_moving() == 0:
+                break
+        time.sleep(1)
 
 # mycobot320配置
 class Mycobot320Base:
