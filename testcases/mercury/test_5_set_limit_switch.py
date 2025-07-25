@@ -91,7 +91,7 @@ def test_position_feedback(device, case):
 @allure.story("非法参数设置 - 异常值校验")
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "exception"], ids=lambda c: c["title"])
 def test_out_limit(device, case):
-    title = case['title"]']
+    title = case['title']
     logger.info(f"》》》用例【{case['title']}】开始测试《《《")
     logger.debug(f"参数1: {case['parameter_1']}，参数2: {case['parameter_2']}")
 

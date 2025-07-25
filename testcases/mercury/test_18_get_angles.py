@@ -33,8 +33,9 @@ def test_get_angles(device, case):
     with allure.step("右臂调用 get_angles 接口获取当前角度"):
         r_response = device.mr.get_angles()
 
-    with allure.step("断言返回类型为 list"):
+    with allure.step("左臂断言返回类型为 list"):
         assert isinstance(l_response, list), f"左臂响应类型错误: {type(l_response)}"
+    with allure.step("右臂断言返回类型为 list"):
         assert isinstance(r_response, list), f"右臂响应类型错误: {type(r_response)}"
 
     with allure.step("断言角度值是否符合预期"):
