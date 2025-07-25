@@ -1,0 +1,201 @@
+INFO 2025-07-25 14:03:48,520 [test_1_get_modify_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 14:03:48,522 [test_1_get_modify_version.py-->line:26]:》》》》》用例【正确获取固件modify版本号】开始测试《《《《《
+DEBUG 2025-07-25 14:03:48,523 [test_1_get_modify_version.py-->line:27]:test_api:get_modify_version
+DEBUG 2025-07-25 14:03:48,606 [test_1_get_modify_version.py-->line:31]:接口返回：0
+INFO 2025-07-25 14:03:48,607 [test_1_get_modify_version.py-->line:41]:✅ 用例【正确获取固件modify版本号】测试通过
+INFO 2025-07-25 14:03:48,607 [test_1_get_modify_version.py-->line:42]:》》》》》用例【正确获取固件modify版本号】测试完成《《《《《
+INFO 2025-07-25 14:03:48,642 [test_1_get_modify_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:03:50,147 [test_2_get_system_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 14:03:50,149 [test_2_get_system_version.py-->line:26]:》》》》》用例【正确获取固件版本号】开始测试《《《《《
+DEBUG 2025-07-25 14:03:50,149 [test_2_get_system_version.py-->line:27]:test_api:get_system_version
+DEBUG 2025-07-25 14:03:50,154 [test_2_get_system_version.py-->line:31]:接口返回：7.3
+INFO 2025-07-25 14:03:50,157 [test_2_get_system_version.py-->line:41]:✅ 用例【正确获取固件版本号】测试通过
+INFO 2025-07-25 14:03:50,157 [test_2_get_system_version.py-->line:42]:》》》》》用例【正确获取固件版本号】测试完成《《《《《
+INFO 2025-07-25 14:03:50,183 [test_2_get_system_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:03:51,689 [test_3_get_basic_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 14:03:51,690 [test_3_get_basic_version.py-->line:26]:》》》》》用例【正确获取固件basic版本号】开始测试《《《《《
+DEBUG 2025-07-25 14:03:51,690 [test_3_get_basic_version.py-->line:27]:test_api:get_basic_version
+DEBUG 2025-07-25 14:03:51,693 [test_3_get_basic_version.py-->line:31]:接口返回：2.4
+INFO 2025-07-25 14:03:51,696 [test_3_get_basic_version.py-->line:41]:✅ 用例【正确获取固件basic版本号】测试通过
+INFO 2025-07-25 14:03:51,696 [test_3_get_basic_version.py-->line:42]:》》》》》用例【正确获取固件basic版本号】测试完成《《《《《
+INFO 2025-07-25 14:03:51,731 [test_3_get_basic_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:03:53,391 [test_1_get_modify_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 14:03:53,392 [test_1_get_modify_version.py-->line:26]:》》》》》用例【正确获取固件modify版本号】开始测试《《《《《
+DEBUG 2025-07-25 14:03:53,392 [test_1_get_modify_version.py-->line:27]:test_api:get_modify_version
+DEBUG 2025-07-25 14:03:53,398 [test_1_get_modify_version.py-->line:31]:接口返回：0
+INFO 2025-07-25 14:03:53,399 [test_1_get_modify_version.py-->line:41]:✅ 用例【正确获取固件modify版本号】测试通过
+INFO 2025-07-25 14:03:53,399 [test_1_get_modify_version.py-->line:42]:》》》》》用例【正确获取固件modify版本号】测试完成《《《《《
+INFO 2025-07-25 14:03:53,429 [test_1_get_modify_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:03:54,932 [test_2_get_system_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 14:03:54,934 [test_2_get_system_version.py-->line:26]:》》》》》用例【正确获取固件版本号】开始测试《《《《《
+DEBUG 2025-07-25 14:03:54,935 [test_2_get_system_version.py-->line:27]:test_api:get_system_version
+DEBUG 2025-07-25 14:03:54,940 [test_2_get_system_version.py-->line:31]:接口返回：7.3
+INFO 2025-07-25 14:03:54,940 [test_2_get_system_version.py-->line:41]:✅ 用例【正确获取固件版本号】测试通过
+INFO 2025-07-25 14:03:54,940 [test_2_get_system_version.py-->line:42]:》》》》》用例【正确获取固件版本号】测试完成《《《《《
+INFO 2025-07-25 14:03:54,961 [test_2_get_system_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:03:56,463 [test_3_get_basic_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 14:03:56,464 [test_3_get_basic_version.py-->line:26]:》》》》》用例【正确获取固件basic版本号】开始测试《《《《《
+DEBUG 2025-07-25 14:03:56,464 [test_3_get_basic_version.py-->line:27]:test_api:get_basic_version
+DEBUG 2025-07-25 14:03:56,467 [test_3_get_basic_version.py-->line:31]:接口返回：2.4
+INFO 2025-07-25 14:03:56,467 [test_3_get_basic_version.py-->line:41]:✅ 用例【正确获取固件basic版本号】测试通过
+INFO 2025-07-25 14:03:56,467 [test_3_get_basic_version.py-->line:42]:》》》》》用例【正确获取固件basic版本号】测试完成《《《《《
+INFO 2025-07-25 14:03:56,492 [test_3_get_basic_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:05:41,451 [test_1_get_modify_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 14:05:41,454 [test_1_get_modify_version.py-->line:26]:》》》》》用例【正确获取固件modify版本号】开始测试《《《《《
+DEBUG 2025-07-25 14:05:41,454 [test_1_get_modify_version.py-->line:27]:test_api:get_modify_version
+DEBUG 2025-07-25 14:05:41,515 [test_1_get_modify_version.py-->line:31]:接口返回：0
+INFO 2025-07-25 14:05:41,516 [test_1_get_modify_version.py-->line:41]:✅ 用例【正确获取固件modify版本号】测试通过
+INFO 2025-07-25 14:05:41,516 [test_1_get_modify_version.py-->line:42]:》》》》》用例【正确获取固件modify版本号】测试完成《《《《《
+INFO 2025-07-25 14:05:41,540 [test_1_get_modify_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:05:43,045 [test_2_get_system_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 14:05:43,046 [test_2_get_system_version.py-->line:26]:》》》》》用例【正确获取固件版本号】开始测试《《《《《
+DEBUG 2025-07-25 14:05:43,047 [test_2_get_system_version.py-->line:27]:test_api:get_system_version
+DEBUG 2025-07-25 14:05:43,051 [test_2_get_system_version.py-->line:31]:接口返回：7.3
+INFO 2025-07-25 14:05:43,052 [test_2_get_system_version.py-->line:41]:✅ 用例【正确获取固件版本号】测试通过
+INFO 2025-07-25 14:05:43,053 [test_2_get_system_version.py-->line:42]:》》》》》用例【正确获取固件版本号】测试完成《《《《《
+INFO 2025-07-25 14:05:43,077 [test_2_get_system_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:05:44,581 [test_3_get_basic_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 14:05:44,582 [test_3_get_basic_version.py-->line:26]:》》》》》用例【正确获取固件basic版本号】开始测试《《《《《
+DEBUG 2025-07-25 14:05:44,582 [test_3_get_basic_version.py-->line:27]:test_api:get_basic_version
+DEBUG 2025-07-25 14:05:44,585 [test_3_get_basic_version.py-->line:31]:接口返回：2.4
+INFO 2025-07-25 14:05:44,587 [test_3_get_basic_version.py-->line:41]:✅ 用例【正确获取固件basic版本号】测试通过
+INFO 2025-07-25 14:05:44,587 [test_3_get_basic_version.py-->line:42]:》》》》》用例【正确获取固件basic版本号】测试完成《《《《《
+INFO 2025-07-25 14:05:44,613 [test_3_get_basic_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:05:46,308 [test_1_get_modify_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 14:05:46,310 [test_1_get_modify_version.py-->line:26]:》》》》》用例【正确获取固件modify版本号】开始测试《《《《《
+DEBUG 2025-07-25 14:05:46,311 [test_1_get_modify_version.py-->line:27]:test_api:get_modify_version
+DEBUG 2025-07-25 14:05:46,316 [test_1_get_modify_version.py-->line:31]:接口返回：0
+INFO 2025-07-25 14:05:46,317 [test_1_get_modify_version.py-->line:41]:✅ 用例【正确获取固件modify版本号】测试通过
+INFO 2025-07-25 14:05:46,317 [test_1_get_modify_version.py-->line:42]:》》》》》用例【正确获取固件modify版本号】测试完成《《《《《
+INFO 2025-07-25 14:05:46,345 [test_1_get_modify_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:05:47,848 [test_2_get_system_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 14:05:47,850 [test_2_get_system_version.py-->line:26]:》》》》》用例【正确获取固件版本号】开始测试《《《《《
+DEBUG 2025-07-25 14:05:47,850 [test_2_get_system_version.py-->line:27]:test_api:get_system_version
+DEBUG 2025-07-25 14:05:47,855 [test_2_get_system_version.py-->line:31]:接口返回：7.3
+INFO 2025-07-25 14:05:47,856 [test_2_get_system_version.py-->line:41]:✅ 用例【正确获取固件版本号】测试通过
+INFO 2025-07-25 14:05:47,856 [test_2_get_system_version.py-->line:42]:》》》》》用例【正确获取固件版本号】测试完成《《《《《
+INFO 2025-07-25 14:05:47,878 [test_2_get_system_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:05:49,381 [test_3_get_basic_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 14:05:49,383 [test_3_get_basic_version.py-->line:26]:》》》》》用例【正确获取固件basic版本号】开始测试《《《《《
+DEBUG 2025-07-25 14:05:49,383 [test_3_get_basic_version.py-->line:27]:test_api:get_basic_version
+DEBUG 2025-07-25 14:05:49,387 [test_3_get_basic_version.py-->line:31]:接口返回：2.4
+INFO 2025-07-25 14:05:49,387 [test_3_get_basic_version.py-->line:41]:✅ 用例【正确获取固件basic版本号】测试通过
+INFO 2025-07-25 14:05:49,387 [test_3_get_basic_version.py-->line:42]:》》》》》用例【正确获取固件basic版本号】测试完成《《《《《
+INFO 2025-07-25 14:05:49,418 [test_3_get_basic_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:36:37,509 [test_4_clear_queue.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-07-25 14:36:37,510 [test_4_clear_queue.py-->line:31]:》》》》》用例【清空队列数据】开始测试《《《《《
+DEBUG 2025-07-25 14:36:37,510 [test_4_clear_queue.py-->line:32]:test_api:clear_queue
+INFO 2025-07-25 14:36:40,843 [test_4_clear_queue.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:37:54,130 [test_4_clear_queue.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-07-25 14:37:54,131 [test_4_clear_queue.py-->line:31]:》》》》》用例【清空队列数据】开始测试《《《《《
+DEBUG 2025-07-25 14:37:54,131 [test_4_clear_queue.py-->line:32]:test_api:clear_queue
+DEBUG 2025-07-25 14:37:56,321 [test_4_clear_queue.py-->line:42]:接口返回：1
+INFO 2025-07-25 14:37:56,876 [test_4_clear_queue.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:38:57,666 [test_4_clear_queue.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-07-25 14:38:57,667 [test_4_clear_queue.py-->line:31]:》》》》》用例【清空队列数据】开始测试《《《《《
+DEBUG 2025-07-25 14:38:57,667 [test_4_clear_queue.py-->line:32]:test_api:clear_queue
+DEBUG 2025-07-25 14:38:59,639 [test_4_clear_queue.py-->line:42]:接口返回：1
+INFO 2025-07-25 14:38:59,863 [test_4_clear_queue.py-->line:52]:✅ 用例【清空队列数据】测试通过
+INFO 2025-07-25 14:38:59,863 [test_4_clear_queue.py-->line:53]:》》》》》用例【清空队列数据】测试完成《《《《《
+INFO 2025-07-25 14:38:59,905 [test_4_clear_queue.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:40:05,950 [test_4_clear_queue.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-07-25 14:40:05,951 [test_4_clear_queue.py-->line:33]:》》》》》用例【清空队列数据】开始测试《《《《《
+DEBUG 2025-07-25 14:40:05,951 [test_4_clear_queue.py-->line:34]:test_api:clear_queue
+DEBUG 2025-07-25 14:40:10,438 [test_4_clear_queue.py-->line:45]:接口返回：1
+INFO 2025-07-25 14:40:10,945 [test_4_clear_queue.py-->line:55]:✅ 用例【清空队列数据】测试通过
+INFO 2025-07-25 14:40:10,945 [test_4_clear_queue.py-->line:56]:》》》》》用例【清空队列数据】测试完成《《《《《
+INFO 2025-07-25 14:40:10,995 [test_4_clear_queue.py-->line:24]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:41:43,984 [test_4_clear_queue.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-07-25 14:41:43,985 [test_4_clear_queue.py-->line:33]:》》》》》用例【清空队列数据】开始测试《《《《《
+DEBUG 2025-07-25 14:41:43,985 [test_4_clear_queue.py-->line:34]:test_api:clear_queue
+DEBUG 2025-07-25 14:41:48,475 [test_4_clear_queue.py-->line:45]:接口返回：1
+INFO 2025-07-25 14:41:48,982 [test_4_clear_queue.py-->line:55]:✅ 用例【清空队列数据】测试通过
+INFO 2025-07-25 14:41:48,982 [test_4_clear_queue.py-->line:56]:》》》》》用例【清空队列数据】测试完成《《《《《
+INFO 2025-07-25 14:41:49,074 [test_4_clear_queue.py-->line:24]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:56:05,249 [test_get_error_information.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-07-25 14:56:05,253 [test_get_error_information.py-->line:28]:》》》》》用例【获取报错信息】开始测试《《《《《
+DEBUG 2025-07-25 14:56:05,253 [test_get_error_information.py-->line:29]:test_api:getErrorInformation
+DEBUG 2025-07-25 14:56:05,327 [test_get_error_information.py-->line:33]:接口返回：0
+INFO 2025-07-25 14:56:05,327 [test_get_error_information.py-->line:43]:✅ 用例【获取报错信息】测试通过
+INFO 2025-07-25 14:56:05,327 [test_get_error_information.py-->line:44]:》》》》》用例【获取报错信息】测试完成《《《《《
+INFO 2025-07-25 14:56:05,330 [test_get_error_information.py-->line:28]:》》》》》用例【None】开始测试《《《《《
+DEBUG 2025-07-25 14:56:05,330 [test_get_error_information.py-->line:29]:test_api:None
+DEBUG 2025-07-25 14:56:05,334 [test_get_error_information.py-->line:33]:接口返回：0
+INFO 2025-07-25 14:56:05,408 [test_get_error_information.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:57:32,972 [test_get_error_information.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-07-25 14:57:32,974 [test_get_error_information.py-->line:28]:》》》》》用例【获取报错信息】开始测试《《《《《
+DEBUG 2025-07-25 14:57:32,974 [test_get_error_information.py-->line:29]:test_api:getErrorInformation
+DEBUG 2025-07-25 14:57:33,036 [test_get_error_information.py-->line:33]:接口返回：0
+INFO 2025-07-25 14:57:33,037 [test_get_error_information.py-->line:43]:✅ 用例【获取报错信息】测试通过
+INFO 2025-07-25 14:57:33,037 [test_get_error_information.py-->line:44]:》》》》》用例【获取报错信息】测试完成《《《《《
+INFO 2025-07-25 14:57:33,071 [test_get_error_information.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:59:05,005 [test_1_get_modify_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 14:59:05,007 [test_1_get_modify_version.py-->line:26]:》》》》》用例【正确获取固件modify版本号】开始测试《《《《《
+DEBUG 2025-07-25 14:59:05,007 [test_1_get_modify_version.py-->line:27]:test_api:get_modify_version
+DEBUG 2025-07-25 14:59:05,075 [test_1_get_modify_version.py-->line:31]:接口返回：0
+INFO 2025-07-25 14:59:05,076 [test_1_get_modify_version.py-->line:41]:✅ 用例【正确获取固件modify版本号】测试通过
+INFO 2025-07-25 14:59:05,076 [test_1_get_modify_version.py-->line:42]:》》》》》用例【正确获取固件modify版本号】测试完成《《《《《
+INFO 2025-07-25 14:59:05,107 [test_1_get_modify_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:59:06,612 [test_2_get_system_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 14:59:06,614 [test_2_get_system_version.py-->line:26]:》》》》》用例【正确获取固件版本号】开始测试《《《《《
+DEBUG 2025-07-25 14:59:06,614 [test_2_get_system_version.py-->line:27]:test_api:get_system_version
+DEBUG 2025-07-25 14:59:06,620 [test_2_get_system_version.py-->line:31]:接口返回：7.3
+INFO 2025-07-25 14:59:06,622 [test_2_get_system_version.py-->line:41]:✅ 用例【正确获取固件版本号】测试通过
+INFO 2025-07-25 14:59:06,622 [test_2_get_system_version.py-->line:42]:》》》》》用例【正确获取固件版本号】测试完成《《《《《
+INFO 2025-07-25 14:59:06,656 [test_2_get_system_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:59:08,160 [test_3_get_basic_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 14:59:08,161 [test_3_get_basic_version.py-->line:26]:》》》》》用例【正确获取固件basic版本号】开始测试《《《《《
+DEBUG 2025-07-25 14:59:08,162 [test_3_get_basic_version.py-->line:27]:test_api:get_basic_version
+DEBUG 2025-07-25 14:59:08,165 [test_3_get_basic_version.py-->line:31]:接口返回：2.4
+INFO 2025-07-25 14:59:08,166 [test_3_get_basic_version.py-->line:41]:✅ 用例【正确获取固件basic版本号】测试通过
+INFO 2025-07-25 14:59:08,167 [test_3_get_basic_version.py-->line:42]:》》》》》用例【正确获取固件basic版本号】测试完成《《《《《
+INFO 2025-07-25 14:59:08,188 [test_3_get_basic_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:59:09,705 [test_4_clear_queue.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-07-25 14:59:09,706 [test_4_clear_queue.py-->line:33]:》》》》》用例【清空队列数据】开始测试《《《《《
+DEBUG 2025-07-25 14:59:09,706 [test_4_clear_queue.py-->line:34]:test_api:clear_queue
+DEBUG 2025-07-25 14:59:14,411 [test_4_clear_queue.py-->line:45]:接口返回：1
+INFO 2025-07-25 14:59:15,576 [test_4_clear_queue.py-->line:55]:✅ 用例【清空队列数据】测试通过
+INFO 2025-07-25 14:59:15,577 [test_4_clear_queue.py-->line:56]:》》》》》用例【清空队列数据】测试完成《《《《《
+INFO 2025-07-25 14:59:16,047 [test_4_clear_queue.py-->line:24]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:59:17,552 [test_get_error_information.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-07-25 14:59:17,553 [test_get_error_information.py-->line:28]:》》》》》用例【获取报错信息】开始测试《《《《《
+DEBUG 2025-07-25 14:59:17,553 [test_get_error_information.py-->line:29]:test_api:getErrorInformation
+DEBUG 2025-07-25 14:59:17,560 [test_get_error_information.py-->line:33]:接口返回：0
+INFO 2025-07-25 14:59:17,563 [test_get_error_information.py-->line:43]:✅ 用例【获取报错信息】测试通过
+INFO 2025-07-25 14:59:17,563 [test_get_error_information.py-->line:44]:》》》》》用例【获取报错信息】测试完成《《《《《
+INFO 2025-07-25 14:59:17,594 [test_get_error_information.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:59:19,233 [test_1_get_modify_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 14:59:19,234 [test_1_get_modify_version.py-->line:26]:》》》》》用例【正确获取固件modify版本号】开始测试《《《《《
+DEBUG 2025-07-25 14:59:19,234 [test_1_get_modify_version.py-->line:27]:test_api:get_modify_version
+DEBUG 2025-07-25 14:59:19,240 [test_1_get_modify_version.py-->line:31]:接口返回：0
+INFO 2025-07-25 14:59:19,240 [test_1_get_modify_version.py-->line:41]:✅ 用例【正确获取固件modify版本号】测试通过
+INFO 2025-07-25 14:59:19,240 [test_1_get_modify_version.py-->line:42]:》》》》》用例【正确获取固件modify版本号】测试完成《《《《《
+INFO 2025-07-25 14:59:19,265 [test_1_get_modify_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:59:20,769 [test_2_get_system_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 14:59:20,771 [test_2_get_system_version.py-->line:26]:》》》》》用例【正确获取固件版本号】开始测试《《《《《
+DEBUG 2025-07-25 14:59:20,771 [test_2_get_system_version.py-->line:27]:test_api:get_system_version
+DEBUG 2025-07-25 14:59:20,777 [test_2_get_system_version.py-->line:31]:接口返回：7.3
+INFO 2025-07-25 14:59:20,777 [test_2_get_system_version.py-->line:41]:✅ 用例【正确获取固件版本号】测试通过
+INFO 2025-07-25 14:59:20,777 [test_2_get_system_version.py-->line:42]:》》》》》用例【正确获取固件版本号】测试完成《《《《《
+INFO 2025-07-25 14:59:20,811 [test_2_get_system_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:59:22,316 [test_3_get_basic_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 14:59:22,317 [test_3_get_basic_version.py-->line:26]:》》》》》用例【正确获取固件basic版本号】开始测试《《《《《
+DEBUG 2025-07-25 14:59:22,317 [test_3_get_basic_version.py-->line:27]:test_api:get_basic_version
+DEBUG 2025-07-25 14:59:22,321 [test_3_get_basic_version.py-->line:31]:接口返回：2.4
+INFO 2025-07-25 14:59:22,321 [test_3_get_basic_version.py-->line:41]:✅ 用例【正确获取固件basic版本号】测试通过
+INFO 2025-07-25 14:59:22,321 [test_3_get_basic_version.py-->line:42]:》》》》》用例【正确获取固件basic版本号】测试完成《《《《《
+INFO 2025-07-25 14:59:22,355 [test_3_get_basic_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:59:23,871 [test_4_clear_queue.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-07-25 14:59:23,872 [test_4_clear_queue.py-->line:33]:》》》》》用例【清空队列数据】开始测试《《《《《
+DEBUG 2025-07-25 14:59:23,872 [test_4_clear_queue.py-->line:34]:test_api:clear_queue
+DEBUG 2025-07-25 14:59:28,797 [test_4_clear_queue.py-->line:45]:接口返回：1
+INFO 2025-07-25 14:59:29,303 [test_4_clear_queue.py-->line:55]:✅ 用例【清空队列数据】测试通过
+INFO 2025-07-25 14:59:29,303 [test_4_clear_queue.py-->line:56]:》》》》》用例【清空队列数据】测试完成《《《《《
+INFO 2025-07-25 14:59:29,780 [test_4_clear_queue.py-->line:24]:环境清理完成，接口测试结束
+INFO 2025-07-25 14:59:31,283 [test_get_error_information.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-07-25 14:59:31,285 [test_get_error_information.py-->line:28]:》》》》》用例【获取报错信息】开始测试《《《《《
+DEBUG 2025-07-25 14:59:31,285 [test_get_error_information.py-->line:29]:test_api:getErrorInformation
+DEBUG 2025-07-25 14:59:31,512 [test_get_error_information.py-->line:33]:接口返回：0
+INFO 2025-07-25 14:59:31,512 [test_get_error_information.py-->line:43]:✅ 用例【获取报错信息】测试通过
+INFO 2025-07-25 14:59:31,513 [test_get_error_information.py-->line:44]:》》》》》用例【获取报错信息】测试完成《《《《《
+INFO 2025-07-25 14:59:31,538 [test_get_error_information.py-->line:19]:环境清理完成，接口测试结束
