@@ -1001,3 +1001,105 @@ DEBUG 2025-07-28 19:22:59,664 [test_17_send_angles.py-->line:83]:test_speed: 101
 INFO 2025-07-28 19:22:59,664 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，速度超限（101）】测试通过
 INFO 2025-07-28 19:22:59,664 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，速度超限（101）】测试完成《《《《《
 INFO 2025-07-28 19:23:00,810 [test_17_send_angles.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-07-28 19:45:40,911 [test_18_get_coords.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-07-28 19:45:40,914 [test_18_get_coords.py-->line:33]:》》》》》用例【刷新模式下获取坐标】开始测试《《《《《
+DEBUG 2025-07-28 19:45:40,915 [test_18_get_coords.py-->line:34]:test_api:get_angles
+DEBUG 2025-07-28 19:45:40,915 [test_18_get_coords.py-->line:35]:test_data:[170,-62,230,179,0,-90]
+DEBUG 2025-07-28 19:45:40,940 [test_18_get_coords.py-->line:39]:设置运动模式为：1
+DEBUG 2025-07-28 19:45:42,495 [test_18_get_coords.py-->line:45]:coords：[170,-62,230,179,0,-90]
+DEBUG 2025-07-28 19:45:42,726 [test_18_get_coords.py-->line:50]:接口返回：[168.3, -62.7, 226.5, 177.36, -0.2, -90.34]
+INFO 2025-07-28 19:45:42,798 [test_18_get_coords.py-->line:33]:》》》》》用例【插补模式下获取坐标】开始测试《《《《《
+DEBUG 2025-07-28 19:45:42,798 [test_18_get_coords.py-->line:34]:test_api:get_angles
+DEBUG 2025-07-28 19:45:42,799 [test_18_get_coords.py-->line:35]:test_data:[170,-20,230,179,0,-90]
+DEBUG 2025-07-28 19:45:42,825 [test_18_get_coords.py-->line:39]:设置运动模式为：0
+DEBUG 2025-07-28 19:45:44,156 [test_18_get_coords.py-->line:45]:coords：[170,-20,230,179,0,-90]
+DEBUG 2025-07-28 19:45:44,169 [test_18_get_coords.py-->line:50]:接口返回：[170.6, -22.2, 226.4, 177.48, -0.82, -90.15]
+INFO 2025-07-28 19:45:50,215 [test_18_get_coords.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-07-28 19:46:43,927 [test_18_get_coords.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-07-28 19:46:43,930 [test_18_get_coords.py-->line:33]:》》》》》用例【刷新模式下获取坐标】开始测试《《《《《
+DEBUG 2025-07-28 19:46:43,930 [test_18_get_coords.py-->line:34]:test_api:get_angles
+DEBUG 2025-07-28 19:46:43,930 [test_18_get_coords.py-->line:35]:test_data:[170,-62,230,179,0,-90]
+DEBUG 2025-07-28 19:46:43,955 [test_18_get_coords.py-->line:39]:设置运动模式为：1
+DEBUG 2025-07-28 19:46:45,399 [test_18_get_coords.py-->line:45]:coords：[170,-62,230,179,0,-90]
+DEBUG 2025-07-28 19:46:45,413 [test_18_get_coords.py-->line:50]:接口返回：[168.8, -61.5, 226.5, 177.36, -0.29, -89.89]
+INFO 2025-07-28 19:46:45,481 [test_18_get_coords.py-->line:33]:》》》》》用例【插补模式下获取坐标】开始测试《《《《《
+DEBUG 2025-07-28 19:46:45,481 [test_18_get_coords.py-->line:34]:test_api:get_angles
+DEBUG 2025-07-28 19:46:45,481 [test_18_get_coords.py-->line:35]:test_data:[170,-20,230,179,0,-90]
+DEBUG 2025-07-28 19:46:45,507 [test_18_get_coords.py-->line:39]:设置运动模式为：0
+DEBUG 2025-07-28 19:46:46,837 [test_18_get_coords.py-->line:45]:coords：[170,-20,230,179,0,-90]
+DEBUG 2025-07-28 19:46:46,850 [test_18_get_coords.py-->line:50]:接口返回：[170.8, -21.0, 226.4, 177.51, -0.91, -89.71]
+INFO 2025-07-28 19:46:52,764 [test_18_get_coords.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-07-28 19:48:42,521 [test_18_get_coords.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-07-28 19:48:42,523 [test_18_get_coords.py-->line:33]:》》》》》用例【刷新模式下获取坐标】开始测试《《《《《
+DEBUG 2025-07-28 19:48:42,523 [test_18_get_coords.py-->line:34]:test_api:get_angles
+DEBUG 2025-07-28 19:48:42,524 [test_18_get_coords.py-->line:35]:test_data:[170,-62,230,179,0,-90]
+DEBUG 2025-07-28 19:48:42,551 [test_18_get_coords.py-->line:39]:设置运动模式为：1
+DEBUG 2025-07-28 19:48:44,317 [test_18_get_coords.py-->line:45]:coords：[170,-62,230,179,0,-90]
+INFO 2025-07-28 19:48:44,393 [test_18_get_coords.py-->line:33]:》》》》》用例【插补模式下获取坐标】开始测试《《《《《
+DEBUG 2025-07-28 19:48:44,393 [test_18_get_coords.py-->line:34]:test_api:get_angles
+DEBUG 2025-07-28 19:48:44,393 [test_18_get_coords.py-->line:35]:test_data:[170,-20,230,179,0,-90]
+DEBUG 2025-07-28 19:48:44,418 [test_18_get_coords.py-->line:39]:设置运动模式为：0
+DEBUG 2025-07-28 19:48:45,762 [test_18_get_coords.py-->line:45]:coords：[170,-20,230,179,0,-90]
+INFO 2025-07-28 19:48:51,722 [test_18_get_coords.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-07-28 19:49:34,806 [test_18_get_coords.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-07-28 19:49:34,808 [test_18_get_coords.py-->line:33]:》》》》》用例【刷新模式下获取坐标】开始测试《《《《《
+DEBUG 2025-07-28 19:49:34,808 [test_18_get_coords.py-->line:34]:test_api:get_angles
+DEBUG 2025-07-28 19:49:34,808 [test_18_get_coords.py-->line:35]:test_data:[170,-62,230,179,0,-90]
+DEBUG 2025-07-28 19:49:34,834 [test_18_get_coords.py-->line:39]:设置运动模式为：1
+DEBUG 2025-07-28 19:49:36,268 [test_18_get_coords.py-->line:45]:coords：[170,-62,230,179,0,-90]
+DEBUG 2025-07-28 19:49:36,282 [test_18_get_coords.py-->line:50]:接口返回：[168.8, -61.5, 226.5, 177.36, -0.29, -89.89]
+INFO 2025-07-28 19:49:36,347 [test_18_get_coords.py-->line:33]:》》》》》用例【插补模式下获取坐标】开始测试《《《《《
+DEBUG 2025-07-28 19:49:36,347 [test_18_get_coords.py-->line:34]:test_api:get_angles
+DEBUG 2025-07-28 19:49:36,347 [test_18_get_coords.py-->line:35]:test_data:[170,-20,230,179,0,-90]
+DEBUG 2025-07-28 19:49:36,373 [test_18_get_coords.py-->line:39]:设置运动模式为：0
+DEBUG 2025-07-28 19:49:37,702 [test_18_get_coords.py-->line:45]:coords：[170,-20,230,179,0,-90]
+DEBUG 2025-07-28 19:49:37,716 [test_18_get_coords.py-->line:50]:接口返回：[170.7, -22.0, 226.9, 177.68, -0.86, -90.06]
+INFO 2025-07-28 19:49:43,349 [test_18_get_coords.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-07-28 19:50:38,927 [test_18_get_coords.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-07-28 19:50:38,929 [test_18_get_coords.py-->line:33]:》》》》》用例【刷新模式下获取坐标】开始测试《《《《《
+DEBUG 2025-07-28 19:50:38,929 [test_18_get_coords.py-->line:34]:test_api:get_angles
+DEBUG 2025-07-28 19:50:38,930 [test_18_get_coords.py-->line:35]:test_data:[170,-62,230,179,0,-90]
+DEBUG 2025-07-28 19:50:38,955 [test_18_get_coords.py-->line:39]:设置运动模式为：1
+DEBUG 2025-07-28 19:50:40,389 [test_18_get_coords.py-->line:45]:coords：[170,-62,230,179,0,-90]
+DEBUG 2025-07-28 19:50:40,403 [test_18_get_coords.py-->line:50]:接口返回：[168.1, -62.6, 227.0, 177.54, -0.37, -90.24]
+INFO 2025-07-28 19:50:40,473 [test_18_get_coords.py-->line:33]:》》》》》用例【插补模式下获取坐标】开始测试《《《《《
+DEBUG 2025-07-28 19:50:40,473 [test_18_get_coords.py-->line:34]:test_api:get_angles
+DEBUG 2025-07-28 19:50:40,473 [test_18_get_coords.py-->line:35]:test_data:[170,-20,230,179,0,-90]
+DEBUG 2025-07-28 19:50:40,498 [test_18_get_coords.py-->line:39]:设置运动模式为：0
+DEBUG 2025-07-28 19:50:41,826 [test_18_get_coords.py-->line:45]:coords：[170,-20,230,179,0,-90]
+DEBUG 2025-07-28 19:50:41,840 [test_18_get_coords.py-->line:50]:接口返回：[170.7, -22.1, 226.4, 177.53, -0.99, -90.05]
+INFO 2025-07-28 19:50:47,790 [test_18_get_coords.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-07-28 19:51:37,921 [test_18_get_coords.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-07-28 19:51:37,923 [test_18_get_coords.py-->line:33]:》》》》》用例【刷新模式下获取坐标】开始测试《《《《《
+DEBUG 2025-07-28 19:51:37,923 [test_18_get_coords.py-->line:34]:test_api:get_angles
+DEBUG 2025-07-28 19:51:37,923 [test_18_get_coords.py-->line:35]:test_data:[170,-62,230,179,0,-90]
+DEBUG 2025-07-28 19:51:37,949 [test_18_get_coords.py-->line:39]:设置运动模式为：1
+DEBUG 2025-07-28 19:51:39,934 [test_18_get_coords.py-->line:45]:coords：[170,-62,230,179,0,-90]
+DEBUG 2025-07-28 19:51:40,599 [test_18_get_coords.py-->line:50]:接口返回：-1
+INFO 2025-07-28 19:51:40,668 [test_18_get_coords.py-->line:33]:》》》》》用例【插补模式下获取坐标】开始测试《《《《《
+DEBUG 2025-07-28 19:51:40,668 [test_18_get_coords.py-->line:34]:test_api:get_angles
+DEBUG 2025-07-28 19:51:40,668 [test_18_get_coords.py-->line:35]:test_data:[170,-20,230,179,0,-90]
+DEBUG 2025-07-28 19:51:40,909 [test_18_get_coords.py-->line:39]:设置运动模式为：0
+DEBUG 2025-07-28 19:51:42,240 [test_18_get_coords.py-->line:45]:coords：[170,-20,230,179,0,-90]
+DEBUG 2025-07-28 19:51:42,260 [test_18_get_coords.py-->line:50]:接口返回：[170.7, -21.8, 226.4, 177.53, -0.99, -89.97]
+INFO 2025-07-28 19:51:42,261 [test_18_get_coords.py-->line:60]:✅ 用例【插补模式下获取坐标】测试通过
+INFO 2025-07-28 19:51:42,261 [test_18_get_coords.py-->line:61]:》》》》》用例【插补模式下获取坐标】测试完成《《《《《
+INFO 2025-07-28 19:51:48,259 [test_18_get_coords.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-07-28 19:52:41,735 [test_18_get_coords.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-07-28 19:52:41,737 [test_18_get_coords.py-->line:33]:》》》》》用例【刷新模式下获取坐标】开始测试《《《《《
+DEBUG 2025-07-28 19:52:41,738 [test_18_get_coords.py-->line:34]:test_api:get_angles
+DEBUG 2025-07-28 19:52:41,738 [test_18_get_coords.py-->line:35]:test_data:[170,-62,230,179,0,-90]
+DEBUG 2025-07-28 19:52:41,764 [test_18_get_coords.py-->line:39]:设置运动模式为：1
+DEBUG 2025-07-28 19:52:43,199 [test_18_get_coords.py-->line:45]:coords：[170,-62,230,179,0,-90]
+DEBUG 2025-07-28 19:52:43,213 [test_18_get_coords.py-->line:50]:接口返回：[168.4, -62.7, 226.5, 177.36, -0.46, -90.24]
+INFO 2025-07-28 19:52:43,215 [test_18_get_coords.py-->line:60]:✅ 用例【刷新模式下获取坐标】测试通过
+INFO 2025-07-28 19:52:43,215 [test_18_get_coords.py-->line:61]:》》》》》用例【刷新模式下获取坐标】测试完成《《《《《
+INFO 2025-07-28 19:52:43,217 [test_18_get_coords.py-->line:33]:》》》》》用例【插补模式下获取坐标】开始测试《《《《《
+DEBUG 2025-07-28 19:52:43,218 [test_18_get_coords.py-->line:34]:test_api:get_angles
+DEBUG 2025-07-28 19:52:43,218 [test_18_get_coords.py-->line:35]:test_data:[170,-20,230,179,0,-90]
+DEBUG 2025-07-28 19:52:43,244 [test_18_get_coords.py-->line:39]:设置运动模式为：0
+DEBUG 2025-07-28 19:52:44,574 [test_18_get_coords.py-->line:45]:coords：[170,-20,230,179,0,-90]
+DEBUG 2025-07-28 19:52:44,588 [test_18_get_coords.py-->line:50]:接口返回：[170.8, -21.0, 226.4, 177.53, -0.99, -89.7]
+INFO 2025-07-28 19:52:44,588 [test_18_get_coords.py-->line:60]:✅ 用例【插补模式下获取坐标】测试通过
+INFO 2025-07-28 19:52:44,588 [test_18_get_coords.py-->line:61]:》》》》》用例【插补模式下获取坐标】测试完成《《《《《
+INFO 2025-07-28 19:52:50,555 [test_18_get_coords.py-->line:23]:环境清理完成，接口测试结束

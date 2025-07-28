@@ -1,10 +1,14 @@
+from time import sleep
+
 from pymycobot import MyCobot280
 
 mc = MyCobot280("COM10",debug=1)
 version = mc.get_system_version()
 print(version)
 # mc.send_angles([50,50,50,50,50,50],20)
-mc.send_angles([0,0,0,0,0,0],20)
+mc.send_angles([0,0,-90,0,0,0],20)
+sleep(5)
+print("coord:",mc.get_coords())
 # mc.power_on()
 # mc.power_off()
 # mc.power_off()
