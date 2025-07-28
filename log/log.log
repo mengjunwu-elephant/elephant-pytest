@@ -267,3 +267,737 @@ DEBUG 2025-07-25 16:07:01,422 [test_clear_error_information.py-->line:43]:执行
 INFO 2025-07-25 16:07:01,423 [test_clear_error_information.py-->line:53]:✅ 用例【清除报错信息】测试通过
 INFO 2025-07-25 16:07:01,423 [test_clear_error_information.py-->line:54]:》》》》》用例【清除报错信息】测试完成《《《《《
 INFO 2025-07-25 16:07:01,458 [test_clear_error_information.py-->line:21]:环境清理完成，接口测试结束
+INFO 2025-07-25 18:37:16,460 [test_10_focus_all_servos.py-->line:17]:初始化完成，接口测试开始
+INFO 2025-07-25 18:37:16,463 [test_10_focus_all_servos.py-->line:31]:》》》》》用例【正确锁紧所有关节】开始测试《《《《《
+DEBUG 2025-07-25 18:37:16,463 [test_10_focus_all_servos.py-->line:32]:test_api:focus_all_servos
+DEBUG 2025-07-25 18:37:16,540 [test_10_focus_all_servos.py-->line:39]:接口返回：1
+INFO 2025-07-25 18:37:40,923 [test_10_focus_all_servos.py-->line:52]:✅ 用例【正确锁紧所有关节】测试通过
+INFO 2025-07-25 18:37:40,923 [test_10_focus_all_servos.py-->line:53]:》》》》》用例【正确锁紧所有关节】测试完成《《《《《
+INFO 2025-07-25 18:37:42,084 [test_10_focus_all_servos.py-->line:21]:环境清理完成，接口测试结束
+INFO 2025-07-25 18:37:43,589 [test_11_set_free_mode.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-07-25 18:37:43,591 [test_11_set_free_mode.py-->line:34]:》》》》》用例【正确设置自由模式（1）】开始测试《《《《《
+DEBUG 2025-07-25 18:37:43,591 [test_11_set_free_mode.py-->line:35]:test_api:set_free_mode
+DEBUG 2025-07-25 18:37:43,591 [test_11_set_free_mode.py-->line:36]:parameters:1
+DEBUG 2025-07-25 18:37:43,617 [test_11_set_free_mode.py-->line:40]:接口返回：1
+INFO 2025-07-25 18:37:57,063 [test_11_set_free_mode.py-->line:54]:✅ 用例【正确设置自由模式（1）】测试通过
+INFO 2025-07-25 18:37:57,063 [test_11_set_free_mode.py-->line:55]:》》》》》用例【正确设置自由模式（1）】测试完成《《《《《
+INFO 2025-07-25 18:37:57,066 [test_11_set_free_mode.py-->line:34]:》》》》》用例【正确设置自由模式（0）】开始测试《《《《《
+DEBUG 2025-07-25 18:37:57,066 [test_11_set_free_mode.py-->line:35]:test_api:set_free_mode
+DEBUG 2025-07-25 18:37:57,066 [test_11_set_free_mode.py-->line:36]:parameters:0
+DEBUG 2025-07-25 18:37:57,092 [test_11_set_free_mode.py-->line:40]:接口返回：1
+INFO 2025-07-25 18:38:25,109 [test_11_set_free_mode.py-->line:54]:✅ 用例【正确设置自由模式（0）】测试通过
+INFO 2025-07-25 18:38:25,109 [test_11_set_free_mode.py-->line:55]:》》》》》用例【正确设置自由模式（0）】测试完成《《《《《
+INFO 2025-07-25 18:38:25,111 [test_11_set_free_mode.py-->line:62]:》》》》》用例【设置自由模式超限】开始测试《《《《《
+DEBUG 2025-07-25 18:38:25,112 [test_11_set_free_mode.py-->line:65]:test_api: set_free_mode
+DEBUG 2025-07-25 18:38:25,112 [test_11_set_free_mode.py-->line:66]:test_parameters: 2
+INFO 2025-07-25 18:38:25,112 [test_11_set_free_mode.py-->line:72]:✅ 用例【设置自由模式超限】测试通过
+INFO 2025-07-25 18:38:25,112 [test_11_set_free_mode.py-->line:73]:》》》》》用例【设置自由模式超限】测试完成《《《《《
+INFO 2025-07-25 18:38:25,113 [test_11_set_free_mode.py-->line:62]:》》》》》用例【设置自由模式超限】开始测试《《《《《
+DEBUG 2025-07-25 18:38:25,114 [test_11_set_free_mode.py-->line:65]:test_api: set_free_mode
+DEBUG 2025-07-25 18:38:25,114 [test_11_set_free_mode.py-->line:66]:test_parameters: -1
+INFO 2025-07-25 18:38:25,114 [test_11_set_free_mode.py-->line:72]:✅ 用例【设置自由模式超限】测试通过
+INFO 2025-07-25 18:38:25,114 [test_11_set_free_mode.py-->line:73]:》》》》》用例【设置自由模式超限】测试完成《《《《《
+INFO 2025-07-25 18:38:26,613 [test_11_set_free_mode.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-07-25 18:38:28,116 [test_12_is_free_mode.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-07-25 18:38:28,118 [test_12_is_free_mode.py-->line:31]:》》》》》用例【查看当前是否为自由模式（1）】开始测试《《《《《
+DEBUG 2025-07-25 18:38:28,118 [test_12_is_free_mode.py-->line:32]:test_api:is_free_mode
+DEBUG 2025-07-25 18:38:28,118 [test_12_is_free_mode.py-->line:33]:test_data:1
+DEBUG 2025-07-25 18:38:28,149 [test_12_is_free_mode.py-->line:40]:接口返回：1
+INFO 2025-07-25 18:38:28,150 [test_12_is_free_mode.py-->line:51]:✅ 用例【查看当前是否为自由模式（1）】测试通过
+INFO 2025-07-25 18:38:28,151 [test_12_is_free_mode.py-->line:52]:》》》》》用例【查看当前是否为自由模式（1）】测试完成《《《《《
+INFO 2025-07-25 18:38:28,154 [test_12_is_free_mode.py-->line:31]:》》》》》用例【查看当前是否为自由模式（0）】开始测试《《《《《
+DEBUG 2025-07-25 18:38:28,154 [test_12_is_free_mode.py-->line:32]:test_api:is_free_mode
+DEBUG 2025-07-25 18:38:28,154 [test_12_is_free_mode.py-->line:33]:test_data:0
+DEBUG 2025-07-25 18:38:28,184 [test_12_is_free_mode.py-->line:40]:接口返回：0
+INFO 2025-07-25 18:38:28,186 [test_12_is_free_mode.py-->line:51]:✅ 用例【查看当前是否为自由模式（0）】测试通过
+INFO 2025-07-25 18:38:28,187 [test_12_is_free_mode.py-->line:52]:》》》》》用例【查看当前是否为自由模式（0）】测试完成《《《《《
+INFO 2025-07-25 18:38:29,352 [test_12_is_free_mode.py-->line:21]:环境清理完成，接口测试结束
+INFO 2025-07-25 18:38:30,857 [test_13_set_fresh_mode.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-07-25 18:38:30,858 [test_13_set_fresh_mode.py-->line:32]:》》》》》用例【正确设置运动模式（1）】开始测试《《《《《
+DEBUG 2025-07-25 18:38:30,859 [test_13_set_fresh_mode.py-->line:33]:test_api:set_fresh_mode
+DEBUG 2025-07-25 18:38:30,859 [test_13_set_fresh_mode.py-->line:34]:parameters:1
+DEBUG 2025-07-25 18:38:30,870 [test_13_set_fresh_mode.py-->line:38]:接口返回：1
+INFO 2025-07-25 18:38:30,872 [test_13_set_fresh_mode.py-->line:48]:✅ 用例【正确设置运动模式（1）】测试通过
+INFO 2025-07-25 18:38:30,872 [test_13_set_fresh_mode.py-->line:49]:》》》》》用例【正确设置运动模式（1）】测试完成《《《《《
+INFO 2025-07-25 18:38:30,875 [test_13_set_fresh_mode.py-->line:32]:》》》》》用例【正确设置运动模式（0）】开始测试《《《《《
+DEBUG 2025-07-25 18:38:30,875 [test_13_set_fresh_mode.py-->line:33]:test_api:set_fresh_mode
+DEBUG 2025-07-25 18:38:30,875 [test_13_set_fresh_mode.py-->line:34]:parameters:0
+DEBUG 2025-07-25 18:38:30,886 [test_13_set_fresh_mode.py-->line:38]:接口返回：1
+INFO 2025-07-25 18:38:30,887 [test_13_set_fresh_mode.py-->line:48]:✅ 用例【正确设置运动模式（0）】测试通过
+INFO 2025-07-25 18:38:30,888 [test_13_set_fresh_mode.py-->line:49]:》》》》》用例【正确设置运动模式（0）】测试完成《《《《《
+INFO 2025-07-25 18:38:30,891 [test_13_set_fresh_mode.py-->line:56]:》》》》》用例【设置运动模式超限】开始测试《《《《《
+DEBUG 2025-07-25 18:38:30,891 [test_13_set_fresh_mode.py-->line:59]:test_api: set_fresh_mode
+DEBUG 2025-07-25 18:38:30,891 [test_13_set_fresh_mode.py-->line:60]:test_parameters: 2
+INFO 2025-07-25 18:38:30,891 [test_13_set_fresh_mode.py-->line:66]:✅ 用例【设置运动模式超限】测试通过
+INFO 2025-07-25 18:38:30,892 [test_13_set_fresh_mode.py-->line:67]:》》》》》用例【设置运动模式超限】测试完成《《《《《
+INFO 2025-07-25 18:38:30,894 [test_13_set_fresh_mode.py-->line:56]:》》》》》用例【设置运动模式超限】开始测试《《《《《
+DEBUG 2025-07-25 18:38:30,894 [test_13_set_fresh_mode.py-->line:59]:test_api: set_fresh_mode
+DEBUG 2025-07-25 18:38:30,894 [test_13_set_fresh_mode.py-->line:60]:test_parameters: -1
+INFO 2025-07-25 18:38:30,894 [test_13_set_fresh_mode.py-->line:66]:✅ 用例【设置运动模式超限】测试通过
+INFO 2025-07-25 18:38:30,894 [test_13_set_fresh_mode.py-->line:67]:》》》》》用例【设置运动模式超限】测试完成《《《《《
+INFO 2025-07-25 18:38:32,043 [test_13_set_fresh_mode.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-07-25 18:38:33,548 [test_14_get_fresh_mode.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-07-25 18:38:33,550 [test_14_get_fresh_mode.py-->line:31]:》》》》》用例【查看当前是否为刷新模式】开始测试《《《《《
+DEBUG 2025-07-25 18:38:33,550 [test_14_get_fresh_mode.py-->line:32]:test_api:get_fresh_mode
+DEBUG 2025-07-25 18:38:33,550 [test_14_get_fresh_mode.py-->line:33]:test_data:1
+DEBUG 2025-07-25 18:38:33,566 [test_14_get_fresh_mode.py-->line:40]:接口返回：1
+INFO 2025-07-25 18:38:33,568 [test_14_get_fresh_mode.py-->line:51]:✅ 用例【查看当前是否为刷新模式】测试通过
+INFO 2025-07-25 18:38:33,568 [test_14_get_fresh_mode.py-->line:52]:》》》》》用例【查看当前是否为刷新模式】测试完成《《《《《
+INFO 2025-07-25 18:38:33,571 [test_14_get_fresh_mode.py-->line:31]:》》》》》用例【查看当前是否为插补模式】开始测试《《《《《
+DEBUG 2025-07-25 18:38:33,571 [test_14_get_fresh_mode.py-->line:32]:test_api:get_fresh_mode
+DEBUG 2025-07-25 18:38:33,571 [test_14_get_fresh_mode.py-->line:33]:test_data:0
+DEBUG 2025-07-25 18:38:33,586 [test_14_get_fresh_mode.py-->line:40]:接口返回：0
+INFO 2025-07-25 18:38:33,587 [test_14_get_fresh_mode.py-->line:51]:✅ 用例【查看当前是否为插补模式】测试通过
+INFO 2025-07-25 18:38:33,587 [test_14_get_fresh_mode.py-->line:52]:》》》》》用例【查看当前是否为插补模式】测试完成《《《《《
+INFO 2025-07-25 18:38:34,760 [test_14_get_fresh_mode.py-->line:21]:环境清理完成，接口测试结束
+INFO 2025-07-25 18:38:36,265 [test_15_get_angles.py-->line:17]:初始化完成，接口测试开始
+INFO 2025-07-25 18:38:36,267 [test_15_get_angles.py-->line:31]:》》》》》用例【刷新模式下获取角度】开始测试《《《《《
+DEBUG 2025-07-25 18:38:36,267 [test_15_get_angles.py-->line:32]:test_api:get_angles
+DEBUG 2025-07-25 18:38:36,267 [test_15_get_angles.py-->line:33]:test_data:[20,20,20,20,20,20]
+DEBUG 2025-07-25 18:38:36,294 [test_15_get_angles.py-->line:37]:设置运动模式为：1
+DEBUG 2025-07-25 18:38:37,524 [test_15_get_angles.py-->line:43]:angles：[20,20,20,20,20,20]
+DEBUG 2025-07-25 18:38:37,539 [test_15_get_angles.py-->line:48]:接口返回：[19.42, 20.39, 19.86, 20.83, 19.42, 19.42]
+INFO 2025-07-25 18:38:37,543 [test_15_get_angles.py-->line:58]:✅ 用例【刷新模式下获取角度】测试通过
+INFO 2025-07-25 18:38:37,543 [test_15_get_angles.py-->line:59]:》》》》》用例【刷新模式下获取角度】测试完成《《《《《
+INFO 2025-07-25 18:38:37,545 [test_15_get_angles.py-->line:31]:》》》》》用例【插补模式下获取角度】开始测试《《《《《
+DEBUG 2025-07-25 18:38:37,545 [test_15_get_angles.py-->line:32]:test_api:get_angles
+DEBUG 2025-07-25 18:38:37,545 [test_15_get_angles.py-->line:33]:test_data:[10,30,20,10,20,20]
+DEBUG 2025-07-25 18:38:37,571 [test_15_get_angles.py-->line:37]:设置运动模式为：0
+DEBUG 2025-07-25 18:38:38,808 [test_15_get_angles.py-->line:43]:angles：[10,30,20,10,20,20]
+DEBUG 2025-07-25 18:38:38,822 [test_15_get_angles.py-->line:48]:接口返回：[10.89, 30.58, 19.86, 11.16, 19.42, 19.42]
+INFO 2025-07-25 18:38:38,828 [test_15_get_angles.py-->line:58]:✅ 用例【插补模式下获取角度】测试通过
+INFO 2025-07-25 18:38:38,828 [test_15_get_angles.py-->line:59]:》》》》》用例【插补模式下获取角度】测试完成《《《《《
+INFO 2025-07-25 18:38:41,654 [test_15_get_angles.py-->line:21]:环境清理完成，接口测试结束
+INFO 2025-07-25 18:38:43,160 [test_16_send_angle.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-07-25 18:38:44,174 [test_16_send_angle.py-->line:37]:》》》》》用例【刷新模式下设置1关节正限位】开始测试《《《《《
+DEBUG 2025-07-25 18:38:44,174 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:38:44,174 [test_16_send_angle.py-->line:39]:test_joint:1
+DEBUG 2025-07-25 18:38:44,174 [test_16_send_angle.py-->line:40]:test_angle:168
+DEBUG 2025-07-25 18:38:44,174 [test_16_send_angle.py-->line:41]:test_speed:10
+DEBUG 2025-07-25 18:38:44,174 [test_16_send_angle.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-25 18:38:51,215 [test_16_send_angle.py-->line:72]:✅ 用例【刷新模式下设置1关节正限位】测试通过
+INFO 2025-07-25 18:38:51,215 [test_16_send_angle.py-->line:73]:》》》》》用例【刷新模式下设置1关节正限位】测试完成《《《《《
+INFO 2025-07-25 18:38:58,344 [test_16_send_angle.py-->line:37]:》》》》》用例【刷新模式下设置1关节负限位】开始测试《《《《《
+DEBUG 2025-07-25 18:38:58,344 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:38:58,344 [test_16_send_angle.py-->line:39]:test_joint:1
+DEBUG 2025-07-25 18:38:58,344 [test_16_send_angle.py-->line:40]:test_angle:-168
+DEBUG 2025-07-25 18:38:58,344 [test_16_send_angle.py-->line:41]:test_speed:20
+DEBUG 2025-07-25 18:38:58,344 [test_16_send_angle.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-25 18:39:04,730 [test_16_send_angle.py-->line:72]:✅ 用例【刷新模式下设置1关节负限位】测试通过
+INFO 2025-07-25 18:39:04,731 [test_16_send_angle.py-->line:73]:》》》》》用例【刷新模式下设置1关节负限位】测试完成《《《《《
+INFO 2025-07-25 18:39:11,803 [test_16_send_angle.py-->line:37]:》》》》》用例【刷新模式下设置2关节正限位】开始测试《《《《《
+DEBUG 2025-07-25 18:39:11,803 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:39:11,803 [test_16_send_angle.py-->line:39]:test_joint:2
+DEBUG 2025-07-25 18:39:11,803 [test_16_send_angle.py-->line:40]:test_angle:135
+DEBUG 2025-07-25 18:39:11,803 [test_16_send_angle.py-->line:41]:test_speed:30
+DEBUG 2025-07-25 18:39:11,803 [test_16_send_angle.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-25 18:39:15,534 [test_16_send_angle.py-->line:72]:✅ 用例【刷新模式下设置2关节正限位】测试通过
+INFO 2025-07-25 18:39:15,534 [test_16_send_angle.py-->line:73]:》》》》》用例【刷新模式下设置2关节正限位】测试完成《《《《《
+INFO 2025-07-25 18:39:21,374 [test_16_send_angle.py-->line:37]:》》》》》用例【刷新模式下设置2关节负限位】开始测试《《《《《
+DEBUG 2025-07-25 18:39:21,374 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:39:21,374 [test_16_send_angle.py-->line:39]:test_joint:2
+DEBUG 2025-07-25 18:39:21,374 [test_16_send_angle.py-->line:40]:test_angle:-135
+DEBUG 2025-07-25 18:39:21,375 [test_16_send_angle.py-->line:41]:test_speed:40
+DEBUG 2025-07-25 18:39:21,375 [test_16_send_angle.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-25 18:39:24,662 [test_16_send_angle.py-->line:72]:✅ 用例【刷新模式下设置2关节负限位】测试通过
+INFO 2025-07-25 18:39:24,662 [test_16_send_angle.py-->line:73]:》》》》》用例【刷新模式下设置2关节负限位】测试完成《《《《《
+INFO 2025-07-25 18:39:30,393 [test_16_send_angle.py-->line:37]:》》》》》用例【刷新模式下设置3关节正限位】开始测试《《《《《
+DEBUG 2025-07-25 18:39:30,393 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:39:30,393 [test_16_send_angle.py-->line:39]:test_joint:3
+DEBUG 2025-07-25 18:39:30,393 [test_16_send_angle.py-->line:40]:test_angle:150
+DEBUG 2025-07-25 18:39:30,393 [test_16_send_angle.py-->line:41]:test_speed:50
+DEBUG 2025-07-25 18:39:30,393 [test_16_send_angle.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-25 18:39:33,227 [test_16_send_angle.py-->line:72]:✅ 用例【刷新模式下设置3关节正限位】测试通过
+INFO 2025-07-25 18:39:33,227 [test_16_send_angle.py-->line:73]:》》》》》用例【刷新模式下设置3关节正限位】测试完成《《《《《
+INFO 2025-07-25 18:39:39,627 [test_16_send_angle.py-->line:37]:》》》》》用例【刷新模式下设置3关节负限位】开始测试《《《《《
+DEBUG 2025-07-25 18:39:39,627 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:39:39,627 [test_16_send_angle.py-->line:39]:test_joint:3
+DEBUG 2025-07-25 18:39:39,627 [test_16_send_angle.py-->line:40]:test_angle:-150
+DEBUG 2025-07-25 18:39:39,627 [test_16_send_angle.py-->line:41]:test_speed:60
+DEBUG 2025-07-25 18:39:39,627 [test_16_send_angle.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-25 18:39:42,126 [test_16_send_angle.py-->line:72]:✅ 用例【刷新模式下设置3关节负限位】测试通过
+INFO 2025-07-25 18:39:42,126 [test_16_send_angle.py-->line:73]:》》》》》用例【刷新模式下设置3关节负限位】测试完成《《《《《
+INFO 2025-07-25 18:39:48,524 [test_16_send_angle.py-->line:37]:》》》》》用例【刷新模式下设置4关节正限位】开始测试《《《《《
+DEBUG 2025-07-25 18:39:48,524 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:39:48,524 [test_16_send_angle.py-->line:39]:test_joint:4
+DEBUG 2025-07-25 18:39:48,524 [test_16_send_angle.py-->line:40]:test_angle:145
+DEBUG 2025-07-25 18:39:48,524 [test_16_send_angle.py-->line:41]:test_speed:70
+DEBUG 2025-07-25 18:39:48,524 [test_16_send_angle.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-25 18:39:52,710 [test_16_send_angle.py-->line:72]:✅ 用例【刷新模式下设置4关节正限位】测试通过
+INFO 2025-07-25 18:39:52,710 [test_16_send_angle.py-->line:73]:》》》》》用例【刷新模式下设置4关节正限位】测试完成《《《《《
+INFO 2025-07-25 18:39:58,884 [test_16_send_angle.py-->line:37]:》》》》》用例【刷新模式下设置4关节负限位】开始测试《《《《《
+DEBUG 2025-07-25 18:39:58,884 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:39:58,884 [test_16_send_angle.py-->line:39]:test_joint:4
+DEBUG 2025-07-25 18:39:58,884 [test_16_send_angle.py-->line:40]:test_angle:-145
+DEBUG 2025-07-25 18:39:58,884 [test_16_send_angle.py-->line:41]:test_speed:80
+DEBUG 2025-07-25 18:39:58,884 [test_16_send_angle.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-25 18:40:03,073 [test_16_send_angle.py-->line:72]:✅ 用例【刷新模式下设置4关节负限位】测试通过
+INFO 2025-07-25 18:40:03,073 [test_16_send_angle.py-->line:73]:》》》》》用例【刷新模式下设置4关节负限位】测试完成《《《《《
+INFO 2025-07-25 18:40:09,247 [test_16_send_angle.py-->line:37]:》》》》》用例【刷新模式下设置5关节正限位】开始测试《《《《《
+DEBUG 2025-07-25 18:40:09,248 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:40:09,248 [test_16_send_angle.py-->line:39]:test_joint:5
+DEBUG 2025-07-25 18:40:09,248 [test_16_send_angle.py-->line:40]:test_angle:165
+DEBUG 2025-07-25 18:40:09,248 [test_16_send_angle.py-->line:41]:test_speed:90
+DEBUG 2025-07-25 18:40:09,248 [test_16_send_angle.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-25 18:40:11,409 [test_16_send_angle.py-->line:72]:✅ 用例【刷新模式下设置5关节正限位】测试通过
+INFO 2025-07-25 18:40:11,410 [test_16_send_angle.py-->line:73]:》》》》》用例【刷新模式下设置5关节正限位】测试完成《《《《《
+INFO 2025-07-25 18:40:18,261 [test_16_send_angle.py-->line:37]:》》》》》用例【刷新模式下设置5关节负限位】开始测试《《《《《
+DEBUG 2025-07-25 18:40:18,262 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:40:18,262 [test_16_send_angle.py-->line:39]:test_joint:5
+DEBUG 2025-07-25 18:40:18,262 [test_16_send_angle.py-->line:40]:test_angle:-165
+DEBUG 2025-07-25 18:40:18,262 [test_16_send_angle.py-->line:41]:test_speed:100
+DEBUG 2025-07-25 18:40:18,262 [test_16_send_angle.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-25 18:40:27,281 [test_16_send_angle.py-->line:37]:》》》》》用例【刷新模式下设置6关节正限位】开始测试《《《《《
+DEBUG 2025-07-25 18:40:27,282 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:40:27,282 [test_16_send_angle.py-->line:39]:test_joint:6
+DEBUG 2025-07-25 18:40:27,282 [test_16_send_angle.py-->line:40]:test_angle:180
+DEBUG 2025-07-25 18:40:27,282 [test_16_send_angle.py-->line:41]:test_speed:10
+DEBUG 2025-07-25 18:40:27,282 [test_16_send_angle.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-25 18:40:34,760 [test_16_send_angle.py-->line:72]:✅ 用例【刷新模式下设置6关节正限位】测试通过
+INFO 2025-07-25 18:40:34,760 [test_16_send_angle.py-->line:73]:》》》》》用例【刷新模式下设置6关节正限位】测试完成《《《《《
+INFO 2025-07-25 18:40:42,221 [test_16_send_angle.py-->line:37]:》》》》》用例【刷新模式下设置6关节负限位】开始测试《《《《《
+DEBUG 2025-07-25 18:40:42,222 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:40:42,222 [test_16_send_angle.py-->line:39]:test_joint:6
+DEBUG 2025-07-25 18:40:42,222 [test_16_send_angle.py-->line:40]:test_angle:-180
+DEBUG 2025-07-25 18:40:42,222 [test_16_send_angle.py-->line:41]:test_speed:20
+DEBUG 2025-07-25 18:40:42,222 [test_16_send_angle.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-25 18:40:48,926 [test_16_send_angle.py-->line:72]:✅ 用例【刷新模式下设置6关节负限位】测试通过
+INFO 2025-07-25 18:40:48,926 [test_16_send_angle.py-->line:73]:》》》》》用例【刷新模式下设置6关节负限位】测试完成《《《《《
+INFO 2025-07-25 18:40:56,330 [test_16_send_angle.py-->line:37]:》》》》》用例【插补模式下设置1关节正限位】开始测试《《《《《
+DEBUG 2025-07-25 18:40:56,331 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:40:56,331 [test_16_send_angle.py-->line:39]:test_joint:1
+DEBUG 2025-07-25 18:40:56,331 [test_16_send_angle.py-->line:40]:test_angle:168
+DEBUG 2025-07-25 18:40:56,331 [test_16_send_angle.py-->line:41]:test_speed:30
+DEBUG 2025-07-25 18:40:56,331 [test_16_send_angle.py-->line:42]:test_fresh_mode:0
+INFO 2025-07-25 18:41:01,590 [test_16_send_angle.py-->line:72]:✅ 用例【插补模式下设置1关节正限位】测试通过
+INFO 2025-07-25 18:41:01,590 [test_16_send_angle.py-->line:73]:》》》》》用例【插补模式下设置1关节正限位】测试完成《《《《《
+INFO 2025-07-25 18:41:03,894 [test_16_send_angle.py-->line:37]:》》》》》用例【插补模式下设置1关节负限位】开始测试《《《《《
+DEBUG 2025-07-25 18:41:03,894 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:41:03,895 [test_16_send_angle.py-->line:39]:test_joint:1
+DEBUG 2025-07-25 18:41:03,895 [test_16_send_angle.py-->line:40]:test_angle:-168
+DEBUG 2025-07-25 18:41:03,895 [test_16_send_angle.py-->line:41]:test_speed:40
+DEBUG 2025-07-25 18:41:03,895 [test_16_send_angle.py-->line:42]:test_fresh_mode:0
+INFO 2025-07-25 18:41:20,951 [test_16_send_angle.py-->line:37]:》》》》》用例【插补模式下设置2关节正限位】开始测试《《《《《
+DEBUG 2025-07-25 18:41:20,951 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:41:20,952 [test_16_send_angle.py-->line:39]:test_joint:2
+DEBUG 2025-07-25 18:41:20,952 [test_16_send_angle.py-->line:40]:test_angle:135
+DEBUG 2025-07-25 18:41:20,952 [test_16_send_angle.py-->line:41]:test_speed:50
+DEBUG 2025-07-25 18:41:20,952 [test_16_send_angle.py-->line:42]:test_fresh_mode:0
+INFO 2025-07-25 18:41:39,940 [test_16_send_angle.py-->line:37]:》》》》》用例【插补模式下设置2关节负限位】开始测试《《《《《
+DEBUG 2025-07-25 18:41:39,941 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:41:39,941 [test_16_send_angle.py-->line:39]:test_joint:2
+DEBUG 2025-07-25 18:41:39,941 [test_16_send_angle.py-->line:40]:test_angle:-135
+DEBUG 2025-07-25 18:41:39,941 [test_16_send_angle.py-->line:41]:test_speed:60
+DEBUG 2025-07-25 18:41:39,941 [test_16_send_angle.py-->line:42]:test_fresh_mode:0
+INFO 2025-07-25 18:41:44,801 [test_16_send_angle.py-->line:72]:✅ 用例【插补模式下设置2关节负限位】测试通过
+INFO 2025-07-25 18:41:44,801 [test_16_send_angle.py-->line:73]:》》》》》用例【插补模式下设置2关节负限位】测试完成《《《《《
+INFO 2025-07-25 18:41:54,411 [test_16_send_angle.py-->line:37]:》》》》》用例【插补模式下设置3关节正限位】开始测试《《《《《
+DEBUG 2025-07-25 18:41:54,411 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:41:54,411 [test_16_send_angle.py-->line:39]:test_joint:3
+DEBUG 2025-07-25 18:41:54,412 [test_16_send_angle.py-->line:40]:test_angle:150
+DEBUG 2025-07-25 18:41:54,412 [test_16_send_angle.py-->line:41]:test_speed:70
+DEBUG 2025-07-25 18:41:54,412 [test_16_send_angle.py-->line:42]:test_fresh_mode:0
+INFO 2025-07-25 18:41:57,145 [test_16_send_angle.py-->line:72]:✅ 用例【插补模式下设置3关节正限位】测试通过
+INFO 2025-07-25 18:41:57,145 [test_16_send_angle.py-->line:73]:》》》》》用例【插补模式下设置3关节正限位】测试完成《《《《《
+INFO 2025-07-25 18:42:07,864 [test_16_send_angle.py-->line:37]:》》》》》用例【插补模式下设置3关节负限位】开始测试《《《《《
+DEBUG 2025-07-25 18:42:07,865 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:42:07,865 [test_16_send_angle.py-->line:39]:test_joint:3
+DEBUG 2025-07-25 18:42:07,865 [test_16_send_angle.py-->line:40]:test_angle:-150
+DEBUG 2025-07-25 18:42:07,865 [test_16_send_angle.py-->line:41]:test_speed:80
+DEBUG 2025-07-25 18:42:07,865 [test_16_send_angle.py-->line:42]:test_fresh_mode:0
+INFO 2025-07-25 18:42:10,474 [test_16_send_angle.py-->line:72]:✅ 用例【插补模式下设置3关节负限位】测试通过
+INFO 2025-07-25 18:42:10,474 [test_16_send_angle.py-->line:73]:》》》》》用例【插补模式下设置3关节负限位】测试完成《《《《《
+INFO 2025-07-25 18:42:21,166 [test_16_send_angle.py-->line:37]:》》》》》用例【插补模式下设置4关节正限位】开始测试《《《《《
+DEBUG 2025-07-25 18:42:21,166 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:42:21,166 [test_16_send_angle.py-->line:39]:test_joint:4
+DEBUG 2025-07-25 18:42:21,166 [test_16_send_angle.py-->line:40]:test_angle:145
+DEBUG 2025-07-25 18:42:21,166 [test_16_send_angle.py-->line:41]:test_speed:90
+DEBUG 2025-07-25 18:42:21,166 [test_16_send_angle.py-->line:42]:test_fresh_mode:0
+INFO 2025-07-25 18:42:26,148 [test_16_send_angle.py-->line:72]:✅ 用例【插补模式下设置4关节正限位】测试通过
+INFO 2025-07-25 18:42:26,148 [test_16_send_angle.py-->line:73]:》》》》》用例【插补模式下设置4关节正限位】测试完成《《《《《
+INFO 2025-07-25 18:42:36,467 [test_16_send_angle.py-->line:37]:》》》》》用例【插补模式下设置4关节负限位】开始测试《《《《《
+DEBUG 2025-07-25 18:42:36,467 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:42:36,468 [test_16_send_angle.py-->line:39]:test_joint:4
+DEBUG 2025-07-25 18:42:36,468 [test_16_send_angle.py-->line:40]:test_angle:-145
+DEBUG 2025-07-25 18:42:36,468 [test_16_send_angle.py-->line:41]:test_speed:100
+DEBUG 2025-07-25 18:42:36,468 [test_16_send_angle.py-->line:42]:test_fresh_mode:0
+INFO 2025-07-25 18:42:41,395 [test_16_send_angle.py-->line:72]:✅ 用例【插补模式下设置4关节负限位】测试通过
+INFO 2025-07-25 18:42:41,396 [test_16_send_angle.py-->line:73]:》》》》》用例【插补模式下设置4关节负限位】测试完成《《《《《
+INFO 2025-07-25 18:42:46,406 [test_16_send_angle.py-->line:37]:》》》》》用例【插补模式下设置5关节正限位】开始测试《《《《《
+DEBUG 2025-07-25 18:42:46,406 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:42:46,407 [test_16_send_angle.py-->line:39]:test_joint:5
+DEBUG 2025-07-25 18:42:46,407 [test_16_send_angle.py-->line:40]:test_angle:165
+DEBUG 2025-07-25 18:42:46,407 [test_16_send_angle.py-->line:41]:test_speed:60
+DEBUG 2025-07-25 18:42:46,407 [test_16_send_angle.py-->line:42]:test_fresh_mode:0
+INFO 2025-07-25 18:42:56,686 [test_16_send_angle.py-->line:37]:》》》》》用例【插补模式下设置5关节负限位】开始测试《《《《《
+DEBUG 2025-07-25 18:42:56,687 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:42:56,687 [test_16_send_angle.py-->line:39]:test_joint:5
+DEBUG 2025-07-25 18:42:56,687 [test_16_send_angle.py-->line:40]:test_angle:-165
+DEBUG 2025-07-25 18:42:56,687 [test_16_send_angle.py-->line:41]:test_speed:60
+DEBUG 2025-07-25 18:42:56,687 [test_16_send_angle.py-->line:42]:test_fresh_mode:0
+INFO 2025-07-25 18:43:09,432 [test_16_send_angle.py-->line:37]:》》》》》用例【插补模式下设置6关节正限位】开始测试《《《《《
+DEBUG 2025-07-25 18:43:09,432 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:43:09,432 [test_16_send_angle.py-->line:39]:test_joint:6
+DEBUG 2025-07-25 18:43:09,433 [test_16_send_angle.py-->line:40]:test_angle:180
+DEBUG 2025-07-25 18:43:09,433 [test_16_send_angle.py-->line:41]:test_speed:60
+DEBUG 2025-07-25 18:43:09,433 [test_16_send_angle.py-->line:42]:test_fresh_mode:0
+INFO 2025-07-25 18:43:25,210 [test_16_send_angle.py-->line:37]:》》》》》用例【插补模式下设置6关节负限位】开始测试《《《《《
+DEBUG 2025-07-25 18:43:25,211 [test_16_send_angle.py-->line:38]:test_api:send_angle
+DEBUG 2025-07-25 18:43:25,211 [test_16_send_angle.py-->line:39]:test_joint:6
+DEBUG 2025-07-25 18:43:25,211 [test_16_send_angle.py-->line:40]:test_angle:-180
+DEBUG 2025-07-25 18:43:25,211 [test_16_send_angle.py-->line:41]:test_speed:60
+DEBUG 2025-07-25 18:43:25,211 [test_16_send_angle.py-->line:42]:test_fresh_mode:0
+INFO 2025-07-25 18:43:48,781 [test_16_send_angle.py-->line:80]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-07-25 18:43:48,781 [test_16_send_angle.py-->line:83]:test_api: send_angle
+DEBUG 2025-07-25 18:43:48,781 [test_16_send_angle.py-->line:84]:test_joint: 7
+DEBUG 2025-07-25 18:43:48,781 [test_16_send_angle.py-->line:85]:test_angle: 0
+DEBUG 2025-07-25 18:43:48,781 [test_16_send_angle.py-->line:86]:test_speed: 60
+INFO 2025-07-25 18:43:48,781 [test_16_send_angle.py-->line:92]:✅ 用例【设置关节超限】测试通过
+INFO 2025-07-25 18:43:48,781 [test_16_send_angle.py-->line:93]:》》》》》用例【设置关节超限】测试完成《《《《《
+INFO 2025-07-25 18:43:49,799 [test_16_send_angle.py-->line:80]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-07-25 18:43:49,799 [test_16_send_angle.py-->line:83]:test_api: send_angle
+DEBUG 2025-07-25 18:43:49,799 [test_16_send_angle.py-->line:84]:test_joint: 0
+DEBUG 2025-07-25 18:43:49,799 [test_16_send_angle.py-->line:85]:test_angle: 0
+DEBUG 2025-07-25 18:43:49,799 [test_16_send_angle.py-->line:86]:test_speed: 60
+INFO 2025-07-25 18:43:49,800 [test_16_send_angle.py-->line:92]:✅ 用例【设置关节超限】测试通过
+INFO 2025-07-25 18:43:49,800 [test_16_send_angle.py-->line:93]:》》》》》用例【设置关节超限】测试完成《《《《《
+INFO 2025-07-25 18:43:50,818 [test_16_send_angle.py-->line:80]:》》》》》用例【设置角度超限】开始测试《《《《《
+DEBUG 2025-07-25 18:43:50,819 [test_16_send_angle.py-->line:83]:test_api: send_angle
+DEBUG 2025-07-25 18:43:50,819 [test_16_send_angle.py-->line:84]:test_joint: 1
+DEBUG 2025-07-25 18:43:50,819 [test_16_send_angle.py-->line:85]:test_angle: 170
+DEBUG 2025-07-25 18:43:50,819 [test_16_send_angle.py-->line:86]:test_speed: 60
+INFO 2025-07-25 18:43:50,819 [test_16_send_angle.py-->line:92]:✅ 用例【设置角度超限】测试通过
+INFO 2025-07-25 18:43:50,819 [test_16_send_angle.py-->line:93]:》》》》》用例【设置角度超限】测试完成《《《《《
+INFO 2025-07-25 18:43:51,836 [test_16_send_angle.py-->line:80]:》》》》》用例【设置角度超限】开始测试《《《《《
+DEBUG 2025-07-25 18:43:51,836 [test_16_send_angle.py-->line:83]:test_api: send_angle
+DEBUG 2025-07-25 18:43:51,836 [test_16_send_angle.py-->line:84]:test_joint: 2
+DEBUG 2025-07-25 18:43:51,836 [test_16_send_angle.py-->line:85]:test_angle: -140
+DEBUG 2025-07-25 18:43:51,836 [test_16_send_angle.py-->line:86]:test_speed: 60
+INFO 2025-07-25 18:43:51,837 [test_16_send_angle.py-->line:92]:✅ 用例【设置角度超限】测试通过
+INFO 2025-07-25 18:43:51,837 [test_16_send_angle.py-->line:93]:》》》》》用例【设置角度超限】测试完成《《《《《
+INFO 2025-07-25 18:43:52,855 [test_16_send_angle.py-->line:80]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2025-07-25 18:43:52,855 [test_16_send_angle.py-->line:83]:test_api: send_angle
+DEBUG 2025-07-25 18:43:52,855 [test_16_send_angle.py-->line:84]:test_joint: 1
+DEBUG 2025-07-25 18:43:52,855 [test_16_send_angle.py-->line:85]:test_angle: 20
+DEBUG 2025-07-25 18:43:52,855 [test_16_send_angle.py-->line:86]:test_speed: 101
+INFO 2025-07-25 18:43:52,856 [test_16_send_angle.py-->line:92]:✅ 用例【设置速度超限】测试通过
+INFO 2025-07-25 18:43:52,856 [test_16_send_angle.py-->line:93]:》》》》》用例【设置速度超限】测试完成《《《《《
+INFO 2025-07-25 18:43:53,873 [test_16_send_angle.py-->line:80]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2025-07-25 18:43:53,874 [test_16_send_angle.py-->line:83]:test_api: send_angle
+DEBUG 2025-07-25 18:43:53,874 [test_16_send_angle.py-->line:84]:test_joint: 1
+DEBUG 2025-07-25 18:43:53,874 [test_16_send_angle.py-->line:85]:test_angle: 30
+DEBUG 2025-07-25 18:43:53,874 [test_16_send_angle.py-->line:86]:test_speed: 0
+INFO 2025-07-25 18:43:53,874 [test_16_send_angle.py-->line:92]:✅ 用例【设置速度超限】测试通过
+INFO 2025-07-25 18:43:53,875 [test_16_send_angle.py-->line:93]:》》》》》用例【设置速度超限】测试完成《《《《《
+INFO 2025-07-25 18:43:55,025 [test_16_send_angle.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-07-25 18:43:56,531 [test_1_get_modify_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 18:43:56,532 [test_1_get_modify_version.py-->line:26]:》》》》》用例【正确获取固件modify版本号】开始测试《《《《《
+DEBUG 2025-07-25 18:43:56,532 [test_1_get_modify_version.py-->line:27]:test_api:get_modify_version
+DEBUG 2025-07-25 18:43:56,537 [test_1_get_modify_version.py-->line:31]:接口返回：0
+INFO 2025-07-25 18:43:56,567 [test_1_get_modify_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 18:43:58,072 [test_2_get_system_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 18:43:58,074 [test_2_get_system_version.py-->line:26]:》》》》》用例【正确获取固件版本号】开始测试《《《《《
+DEBUG 2025-07-25 18:43:58,074 [test_2_get_system_version.py-->line:27]:test_api:get_system_version
+DEBUG 2025-07-25 18:43:58,079 [test_2_get_system_version.py-->line:31]:接口返回：7.3
+INFO 2025-07-25 18:43:58,111 [test_2_get_system_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 18:43:59,617 [test_3_get_basic_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 18:43:59,618 [test_3_get_basic_version.py-->line:26]:》》》》》用例【正确获取固件basic版本号】开始测试《《《《《
+DEBUG 2025-07-25 18:43:59,618 [test_3_get_basic_version.py-->line:27]:test_api:get_basic_version
+DEBUG 2025-07-25 18:43:59,622 [test_3_get_basic_version.py-->line:31]:接口返回：2.4
+INFO 2025-07-25 18:43:59,623 [test_3_get_basic_version.py-->line:41]:✅ 用例【正确获取固件basic版本号】测试通过
+INFO 2025-07-25 18:43:59,624 [test_3_get_basic_version.py-->line:42]:》》》》》用例【正确获取固件basic版本号】测试完成《《《《《
+INFO 2025-07-25 18:43:59,649 [test_3_get_basic_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-07-25 18:44:01,153 [test_4_get_error_information.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-07-25 18:44:01,154 [test_4_get_error_information.py-->line:30]:》》》》》用例【获取机械臂报错信息（坐标超限）】开始测试《《《《《
+DEBUG 2025-07-25 18:44:01,154 [test_4_get_error_information.py-->line:31]:test_api:get_error_information
+DEBUG 2025-07-25 18:44:03,183 [test_4_get_error_information.py-->line:43]:接口返回：33
+INFO 2025-07-25 18:44:03,208 [test_4_get_error_information.py-->line:56]:✅ 用例【获取机械臂报错信息（坐标超限）】测试通过
+INFO 2025-07-25 18:44:03,209 [test_4_get_error_information.py-->line:57]:》》》》》用例【获取机械臂报错信息（坐标超限）】测试完成《《《《《
+INFO 2025-07-25 18:44:03,213 [test_4_get_error_information.py-->line:30]:》》》》》用例【获取机械臂报错信息（无报错）】开始测试《《《《《
+DEBUG 2025-07-25 18:44:03,213 [test_4_get_error_information.py-->line:31]:test_api:get_error_information
+DEBUG 2025-07-25 18:44:06,609 [test_4_get_error_information.py-->line:43]:接口返回：0
+INFO 2025-07-25 18:44:06,635 [test_4_get_error_information.py-->line:56]:✅ 用例【获取机械臂报错信息（无报错）】测试通过
+INFO 2025-07-25 18:44:06,635 [test_4_get_error_information.py-->line:57]:》》》》》用例【获取机械臂报错信息（无报错）】测试完成《《《《《
+INFO 2025-07-25 18:44:12,393 [test_4_get_error_information.py-->line:20]:环境清理完成，接口测试结束
+INFO 2025-07-25 18:44:13,899 [test_5_clear_error_information.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 18:44:13,900 [test_5_clear_error_information.py-->line:27]:》》》》》用例【正确清除机械臂报错信息】开始测试《《《《《
+DEBUG 2025-07-25 18:44:13,900 [test_5_clear_error_information.py-->line:28]:test_api:clear_error_information
+DEBUG 2025-07-25 18:44:18,828 [test_5_clear_error_information.py-->line:40]:接口返回：33
+DEBUG 2025-07-25 18:44:18,851 [test_5_clear_error_information.py-->line:44]:接口返回：1
+INFO 2025-07-25 18:44:18,877 [test_5_clear_error_information.py-->line:57]:✅ 用例【正确清除机械臂报错信息】测试通过
+INFO 2025-07-25 18:44:18,877 [test_5_clear_error_information.py-->line:58]:》》》》》用例【正确清除机械臂报错信息】测试完成《《《《《
+INFO 2025-07-25 18:44:22,445 [test_5_clear_error_information.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-07-25 18:44:23,950 [test_6_power_on.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 18:44:24,965 [test_6_power_on.py-->line:34]:》》》》》用例【机械臂上电情况上电，且是否能够运动】开始测试《《《《《
+DEBUG 2025-07-25 18:44:24,966 [test_6_power_on.py-->line:35]:test_api:power_on
+DEBUG 2025-07-25 18:44:24,966 [test_6_power_on.py-->line:36]:test_expected:1
+DEBUG 2025-07-25 18:44:24,966 [test_6_power_on.py-->line:37]:test_is_power_on_status:1
+DEBUG 2025-07-25 18:44:24,966 [test_6_power_on.py-->line:38]:move_status:1
+DEBUG 2025-07-25 18:44:25,041 [test_6_power_on.py-->line:42]:接口返回：1
+INFO 2025-07-25 18:44:27,136 [test_6_power_on.py-->line:61]:✅ 用例【机械臂上电情况上电，且是否能够运动】测试通过
+INFO 2025-07-25 18:44:27,136 [test_6_power_on.py-->line:62]:》》》》》用例【机械臂上电情况上电，且是否能够运动】测试完成《《《《《
+INFO 2025-07-25 18:44:29,433 [test_6_power_on.py-->line:74]:》》》》》用例【机械臂下电情况上电,且是否能够运动】开始测试《《《《《
+DEBUG 2025-07-25 18:44:29,434 [test_6_power_on.py-->line:75]:test_api:power_on
+DEBUG 2025-07-25 18:44:29,434 [test_6_power_on.py-->line:76]:test_expected:1
+DEBUG 2025-07-25 18:44:29,434 [test_6_power_on.py-->line:77]:test_is_power_on_status:1
+DEBUG 2025-07-25 18:44:29,434 [test_6_power_on.py-->line:78]:move_status:1
+DEBUG 2025-07-25 18:44:29,573 [test_6_power_on.py-->line:85]:接口返回：1
+INFO 2025-07-25 18:44:31,754 [test_6_power_on.py-->line:104]:✅ 用例【机械臂下电情况上电,且是否能够运动】测试通过
+INFO 2025-07-25 18:44:31,755 [test_6_power_on.py-->line:105]:》》》》》用例【机械臂下电情况上电,且是否能够运动】测试完成《《《《《
+INFO 2025-07-25 18:44:35,809 [test_6_power_on.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-07-25 18:44:37,315 [test_7_power_off.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-07-25 18:44:37,316 [test_7_power_off.py-->line:37]:》》》》》用例【机械臂下电情况下电,且是否能够运动】开始测试《《《《《
+DEBUG 2025-07-25 18:44:37,317 [test_7_power_off.py-->line:38]:test_api:power_off
+DEBUG 2025-07-25 18:44:37,317 [test_7_power_off.py-->line:39]:test_expected:-1
+DEBUG 2025-07-25 18:44:37,317 [test_7_power_off.py-->line:40]:test_is_power_on_status:0
+DEBUG 2025-07-25 18:44:37,317 [test_7_power_off.py-->line:41]:move_status:-1
+DEBUG 2025-07-25 18:44:38,042 [test_7_power_off.py-->line:48]:接口返回：-1
+INFO 2025-07-25 18:44:40,373 [test_7_power_off.py-->line:67]:✅ 用例【机械臂下电情况下电,且是否能够运动】测试通过
+INFO 2025-07-25 18:44:40,373 [test_7_power_off.py-->line:68]:》》》》》用例【机械臂下电情况下电,且是否能够运动】测试完成《《《《《
+INFO 2025-07-25 18:44:42,721 [test_7_power_off.py-->line:80]:》》》》》用例【机械臂上电情况下电，且是否能够运动】开始测试《《《《《
+DEBUG 2025-07-25 18:44:42,721 [test_7_power_off.py-->line:81]:test_api:power_off
+DEBUG 2025-07-25 18:44:42,721 [test_7_power_off.py-->line:82]:test_expected:1
+DEBUG 2025-07-25 18:44:42,721 [test_7_power_off.py-->line:83]:test_is_power_on_status:0
+DEBUG 2025-07-25 18:44:42,721 [test_7_power_off.py-->line:84]:move_status:-1
+DEBUG 2025-07-25 18:44:42,864 [test_7_power_off.py-->line:91]:接口返回：1
+INFO 2025-07-25 18:44:45,190 [test_7_power_off.py-->line:110]:✅ 用例【机械臂上电情况下电，且是否能够运动】测试通过
+INFO 2025-07-25 18:44:45,191 [test_7_power_off.py-->line:111]:》》》》》用例【机械臂上电情况下电，且是否能够运动】测试完成《《《《《
+INFO 2025-07-25 18:44:48,660 [test_7_power_off.py-->line:20]:环境清理完成，接口测试结束
+INFO 2025-07-25 18:44:50,166 [test_8_is_power_on.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-07-25 18:44:50,167 [test_8_is_power_on.py-->line:27]:》》》》》用例【查看机械臂下电状态下是否上电状态】开始测试《《《《《
+DEBUG 2025-07-25 18:44:50,167 [test_8_is_power_on.py-->line:28]:test_api:power_off
+DEBUG 2025-07-25 18:44:50,168 [test_8_is_power_on.py-->line:29]:test_expected:0
+DEBUG 2025-07-25 18:44:50,237 [test_8_is_power_on.py-->line:36]:接口返回：0
+INFO 2025-07-25 18:44:50,239 [test_8_is_power_on.py-->line:46]:✅ 用例【查看机械臂下电状态下是否上电状态】测试通过
+INFO 2025-07-25 18:44:50,239 [test_8_is_power_on.py-->line:47]:》》》》》用例【查看机械臂下电状态下是否上电状态】测试完成《《《《《
+INFO 2025-07-25 18:44:50,244 [test_8_is_power_on.py-->line:58]:》》》》》用例【查看机械臂上电状态下是否上电状态】开始测试《《《《《
+DEBUG 2025-07-25 18:44:50,244 [test_8_is_power_on.py-->line:59]:test_api:power_off
+DEBUG 2025-07-25 18:44:50,244 [test_8_is_power_on.py-->line:60]:test_expected:1
+INFO 2025-07-25 18:44:50,326 [test_8_is_power_on.py-->line:77]:✅ 用例【查看机械臂上电状态下是否上电状态】测试通过
+INFO 2025-07-25 18:44:50,326 [test_8_is_power_on.py-->line:78]:》》》》》用例【查看机械臂上电状态下是否上电状态】测试完成《《《《《
+INFO 2025-07-25 18:44:51,475 [test_8_is_power_on.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-07-25 18:44:52,981 [test_9_release_all_servos.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-07-25 18:44:52,983 [test_9_release_all_servos.py-->line:30]:》》》》》用例【正确放松所有关节】开始测试《《《《《
+DEBUG 2025-07-25 18:44:52,983 [test_9_release_all_servos.py-->line:31]:test_api:release_all_servos
+DEBUG 2025-07-25 18:45:16,349 [test_9_release_all_servos.py-->line:38]:接口返回：1
+INFO 2025-07-25 18:46:07,684 [test_9_release_all_servos.py-->line:54]:✅ 用例【正确放松所有关节】测试通过
+INFO 2025-07-25 18:46:07,684 [test_9_release_all_servos.py-->line:55]:》》》》》用例【正确放松所有关节】测试完成《《《《《
+INFO 2025-07-25 18:46:08,834 [test_9_release_all_servos.py-->line:20]:环境清理完成，接口测试结束
+INFO 2025-07-28 11:52:37,270 [test_17_send_angles.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-07-28 11:52:40,265 [test_17_send_angles.py-->line:37]:》》》》》用例【刷新模式下正确设置多关节角度，速度10】开始测试《《《《《
+DEBUG 2025-07-28 11:52:40,265 [test_17_send_angles.py-->line:38]:test_api:send_angles
+DEBUG 2025-07-28 11:52:40,265 [test_17_send_angles.py-->line:39]:test_angle:[50,50,50,50,50,50]
+DEBUG 2025-07-28 11:52:40,265 [test_17_send_angles.py-->line:40]:test_speed:10
+DEBUG 2025-07-28 11:52:40,266 [test_17_send_angles.py-->line:41]:test_fresh_mode:1
+INFO 2025-07-28 11:52:41,358 [test_17_send_angles.py-->line:37]:》》》》》用例【刷新模式下正确设置多关节角度，速度50】开始测试《《《《《
+DEBUG 2025-07-28 11:52:41,359 [test_17_send_angles.py-->line:38]:test_api:send_angles
+DEBUG 2025-07-28 11:52:41,359 [test_17_send_angles.py-->line:39]:test_angle:[-50,-50,-50,-50,-50,-50]
+DEBUG 2025-07-28 11:52:41,359 [test_17_send_angles.py-->line:40]:test_speed:50
+DEBUG 2025-07-28 11:52:41,359 [test_17_send_angles.py-->line:41]:test_fresh_mode:1
+INFO 2025-07-28 11:52:42,390 [test_17_send_angles.py-->line:37]:》》》》》用例【刷新模式下正确设置多关节角度，速度100】开始测试《《《《《
+DEBUG 2025-07-28 11:52:42,391 [test_17_send_angles.py-->line:38]:test_api:send_angles
+DEBUG 2025-07-28 11:52:42,391 [test_17_send_angles.py-->line:39]:test_angle:[45,45,-90,60,60,60]
+DEBUG 2025-07-28 11:52:42,391 [test_17_send_angles.py-->line:40]:test_speed:100
+DEBUG 2025-07-28 11:52:42,392 [test_17_send_angles.py-->line:41]:test_fresh_mode:1
+INFO 2025-07-28 11:52:43,558 [test_17_send_angles.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-07-28 11:58:24,544 [test_17_send_angles.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-07-28 11:58:25,644 [test_17_send_angles.py-->line:38]:》》》》》用例【刷新模式下正确设置多关节角度，速度10】开始测试《《《《《
+DEBUG 2025-07-28 11:58:25,644 [test_17_send_angles.py-->line:39]:test_api:send_angles
+DEBUG 2025-07-28 11:58:25,644 [test_17_send_angles.py-->line:40]:test_angle:[50,50,50,50,50,50]
+DEBUG 2025-07-28 11:58:25,644 [test_17_send_angles.py-->line:41]:test_speed:10
+DEBUG 2025-07-28 11:58:25,644 [test_17_send_angles.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-28 11:58:26,735 [test_17_send_angles.py-->line:38]:》》》》》用例【刷新模式下正确设置多关节角度，速度50】开始测试《《《《《
+DEBUG 2025-07-28 11:58:26,736 [test_17_send_angles.py-->line:39]:test_api:send_angles
+DEBUG 2025-07-28 11:58:26,736 [test_17_send_angles.py-->line:40]:test_angle:[-50,-50,-50,-50,-50,-50]
+DEBUG 2025-07-28 11:58:26,736 [test_17_send_angles.py-->line:41]:test_speed:50
+DEBUG 2025-07-28 11:58:26,736 [test_17_send_angles.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-28 11:58:27,770 [test_17_send_angles.py-->line:38]:》》》》》用例【刷新模式下正确设置多关节角度，速度100】开始测试《《《《《
+DEBUG 2025-07-28 11:58:27,770 [test_17_send_angles.py-->line:39]:test_api:send_angles
+DEBUG 2025-07-28 11:58:27,771 [test_17_send_angles.py-->line:40]:test_angle:[45,45,-90,60,60,60]
+DEBUG 2025-07-28 11:58:27,771 [test_17_send_angles.py-->line:41]:test_speed:100
+DEBUG 2025-07-28 11:58:27,771 [test_17_send_angles.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-28 11:58:28,938 [test_17_send_angles.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-07-28 12:03:21,686 [test_17_send_angles.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-07-28 12:03:22,765 [test_17_send_angles.py-->line:38]:》》》》》用例【刷新模式下正确设置多关节角度，速度10】开始测试《《《《《
+DEBUG 2025-07-28 12:03:22,765 [test_17_send_angles.py-->line:39]:test_api:send_angles
+DEBUG 2025-07-28 12:03:22,765 [test_17_send_angles.py-->line:40]:test_angle:[50,50,50,50,50,50]
+DEBUG 2025-07-28 12:03:22,765 [test_17_send_angles.py-->line:41]:test_speed:10
+DEBUG 2025-07-28 12:03:22,766 [test_17_send_angles.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-28 12:03:23,862 [test_17_send_angles.py-->line:38]:》》》》》用例【刷新模式下正确设置多关节角度，速度50】开始测试《《《《《
+DEBUG 2025-07-28 12:03:23,863 [test_17_send_angles.py-->line:39]:test_api:send_angles
+DEBUG 2025-07-28 12:03:23,863 [test_17_send_angles.py-->line:40]:test_angle:[-50,-50,-50,-50,-50,-50]
+DEBUG 2025-07-28 12:03:23,863 [test_17_send_angles.py-->line:41]:test_speed:50
+DEBUG 2025-07-28 12:03:23,863 [test_17_send_angles.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-28 12:03:24,896 [test_17_send_angles.py-->line:38]:》》》》》用例【刷新模式下正确设置多关节角度，速度100】开始测试《《《《《
+DEBUG 2025-07-28 12:03:24,897 [test_17_send_angles.py-->line:39]:test_api:send_angles
+DEBUG 2025-07-28 12:03:24,897 [test_17_send_angles.py-->line:40]:test_angle:[45,45,-90,60,60,60]
+DEBUG 2025-07-28 12:03:24,897 [test_17_send_angles.py-->line:41]:test_speed:100
+DEBUG 2025-07-28 12:03:24,897 [test_17_send_angles.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-28 12:03:26,072 [test_17_send_angles.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-07-28 12:05:29,017 [test_17_send_angles.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-07-28 12:05:30,084 [test_17_send_angles.py-->line:38]:》》》》》用例【刷新模式下正确设置多关节角度，速度10】开始测试《《《《《
+DEBUG 2025-07-28 12:05:30,085 [test_17_send_angles.py-->line:39]:test_api:send_angles
+DEBUG 2025-07-28 12:05:30,085 [test_17_send_angles.py-->line:40]:test_angle:[50,50,50,50,50,50]
+DEBUG 2025-07-28 12:05:30,085 [test_17_send_angles.py-->line:41]:test_speed:10
+DEBUG 2025-07-28 12:05:30,085 [test_17_send_angles.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-28 12:05:35,414 [test_17_send_angles.py-->line:38]:》》》》》用例【刷新模式下正确设置多关节角度，速度50】开始测试《《《《《
+DEBUG 2025-07-28 12:05:35,415 [test_17_send_angles.py-->line:39]:test_api:send_angles
+DEBUG 2025-07-28 12:05:35,415 [test_17_send_angles.py-->line:40]:test_angle:[-50,-50,-50,-50,-50,-50]
+DEBUG 2025-07-28 12:05:35,415 [test_17_send_angles.py-->line:41]:test_speed:50
+DEBUG 2025-07-28 12:05:35,415 [test_17_send_angles.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-28 12:05:39,576 [test_17_send_angles.py-->line:38]:》》》》》用例【刷新模式下正确设置多关节角度，速度100】开始测试《《《《《
+DEBUG 2025-07-28 12:05:39,576 [test_17_send_angles.py-->line:39]:test_api:send_angles
+DEBUG 2025-07-28 12:05:39,576 [test_17_send_angles.py-->line:40]:test_angle:[45,45,-90,60,60,60]
+DEBUG 2025-07-28 12:05:39,576 [test_17_send_angles.py-->line:41]:test_speed:100
+DEBUG 2025-07-28 12:05:39,576 [test_17_send_angles.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-28 12:05:48,053 [test_17_send_angles.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-07-28 12:30:55,415 [test_17_send_angles.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-07-28 12:30:56,528 [test_17_send_angles.py-->line:38]:》》》》》用例【刷新模式下正确设置多关节角度，速度10】开始测试《《《《《
+DEBUG 2025-07-28 12:30:56,528 [test_17_send_angles.py-->line:39]:test_api:send_angles
+DEBUG 2025-07-28 12:30:56,528 [test_17_send_angles.py-->line:40]:test_angle:[50,50,50,50,50,50]
+DEBUG 2025-07-28 12:30:56,528 [test_17_send_angles.py-->line:41]:test_speed:10
+DEBUG 2025-07-28 12:30:56,528 [test_17_send_angles.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-28 12:31:02,104 [test_17_send_angles.py-->line:38]:》》》》》用例【刷新模式下正确设置多关节角度，速度50】开始测试《《《《《
+DEBUG 2025-07-28 12:31:02,104 [test_17_send_angles.py-->line:39]:test_api:send_angles
+DEBUG 2025-07-28 12:31:02,104 [test_17_send_angles.py-->line:40]:test_angle:[-50,-50,-50,-50,-50,-50]
+DEBUG 2025-07-28 12:31:02,104 [test_17_send_angles.py-->line:41]:test_speed:50
+DEBUG 2025-07-28 12:31:02,104 [test_17_send_angles.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-28 12:31:06,339 [test_17_send_angles.py-->line:38]:》》》》》用例【刷新模式下正确设置多关节角度，速度100】开始测试《《《《《
+DEBUG 2025-07-28 12:31:06,339 [test_17_send_angles.py-->line:39]:test_api:send_angles
+DEBUG 2025-07-28 12:31:06,339 [test_17_send_angles.py-->line:40]:test_angle:[45,45,-90,60,60,60]
+DEBUG 2025-07-28 12:31:06,339 [test_17_send_angles.py-->line:41]:test_speed:100
+DEBUG 2025-07-28 12:31:06,339 [test_17_send_angles.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-28 12:31:14,742 [test_17_send_angles.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-07-28 12:31:54,636 [test_17_send_angles.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-07-28 12:31:55,756 [test_17_send_angles.py-->line:38]:》》》》》用例【刷新模式下正确设置多关节角度，速度10】开始测试《《《《《
+DEBUG 2025-07-28 12:31:55,756 [test_17_send_angles.py-->line:39]:test_api:send_angles
+DEBUG 2025-07-28 12:31:55,756 [test_17_send_angles.py-->line:40]:test_angle:[50,50,50,50,50,50]
+DEBUG 2025-07-28 12:31:55,757 [test_17_send_angles.py-->line:41]:test_speed:10
+DEBUG 2025-07-28 12:31:55,757 [test_17_send_angles.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-28 12:31:58,384 [test_17_send_angles.py-->line:68]:✅ 用例【刷新模式下正确设置多关节角度，速度10】测试通过
+INFO 2025-07-28 12:31:58,385 [test_17_send_angles.py-->line:69]:》》》》》用例【刷新模式下正确设置多关节角度，速度10】测试完成《《《《《
+INFO 2025-07-28 12:32:01,090 [test_17_send_angles.py-->line:38]:》》》》》用例【刷新模式下正确设置多关节角度，速度50】开始测试《《《《《
+DEBUG 2025-07-28 12:32:01,091 [test_17_send_angles.py-->line:39]:test_api:send_angles
+DEBUG 2025-07-28 12:32:01,091 [test_17_send_angles.py-->line:40]:test_angle:[-50,-50,-50,-50,-50,-50]
+DEBUG 2025-07-28 12:32:01,091 [test_17_send_angles.py-->line:41]:test_speed:50
+DEBUG 2025-07-28 12:32:01,091 [test_17_send_angles.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-28 12:32:02,592 [test_17_send_angles.py-->line:68]:✅ 用例【刷新模式下正确设置多关节角度，速度50】测试通过
+INFO 2025-07-28 12:32:02,592 [test_17_send_angles.py-->line:69]:》》》》》用例【刷新模式下正确设置多关节角度，速度50】测试完成《《《《《
+INFO 2025-07-28 12:32:05,184 [test_17_send_angles.py-->line:38]:》》》》》用例【刷新模式下正确设置多关节角度，速度100】开始测试《《《《《
+DEBUG 2025-07-28 12:32:05,184 [test_17_send_angles.py-->line:39]:test_api:send_angles
+DEBUG 2025-07-28 12:32:05,184 [test_17_send_angles.py-->line:40]:test_angle:[45,45,-90,60,60,60]
+DEBUG 2025-07-28 12:32:05,184 [test_17_send_angles.py-->line:41]:test_speed:100
+DEBUG 2025-07-28 12:32:05,185 [test_17_send_angles.py-->line:42]:test_fresh_mode:1
+INFO 2025-07-28 12:32:06,797 [test_17_send_angles.py-->line:68]:✅ 用例【刷新模式下正确设置多关节角度，速度100】测试通过
+INFO 2025-07-28 12:32:06,797 [test_17_send_angles.py-->line:69]:》》》》》用例【刷新模式下正确设置多关节角度，速度100】测试完成《《《《《
+INFO 2025-07-28 12:32:09,559 [test_17_send_angles.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-07-28 19:19:23,533 [test_17_send_angles.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-07-28 19:19:24,617 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，1关节超限（170）】开始测试《《《《《
+DEBUG 2025-07-28 19:19:24,617 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:19:24,618 [test_17_send_angles.py-->line:82]:test_angle: [170, 0, 0, 0, 0, 0]
+DEBUG 2025-07-28 19:19:24,618 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:19:25,699 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，1关节超限（-170）】开始测试《《《《《
+DEBUG 2025-07-28 19:19:25,699 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:19:25,699 [test_17_send_angles.py-->line:82]:test_angle: [-170, 0, 0, 0, 0, 0]
+DEBUG 2025-07-28 19:19:25,699 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:19:26,719 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，2关节超限（170）】开始测试《《《《《
+DEBUG 2025-07-28 19:19:26,719 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:19:26,719 [test_17_send_angles.py-->line:82]:test_angle: [0, 170, 0, 0, 0, 0]
+DEBUG 2025-07-28 19:19:26,719 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:19:27,738 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，2关节超限（-170）】开始测试《《《《《
+DEBUG 2025-07-28 19:19:27,738 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:19:27,739 [test_17_send_angles.py-->line:82]:test_angle: [0, -170, 0, 0, 0, 0]
+DEBUG 2025-07-28 19:19:27,739 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:19:28,758 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，3关节超限（170）】开始测试《《《《《
+DEBUG 2025-07-28 19:19:28,758 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:19:28,758 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 170, 0, 0, 0]
+DEBUG 2025-07-28 19:19:28,758 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:19:29,779 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，3关节超限（-170）】开始测试《《《《《
+DEBUG 2025-07-28 19:19:29,779 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:19:29,779 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, -170, 0, 0, 0]
+DEBUG 2025-07-28 19:19:29,779 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:19:30,801 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，4关节超限（170）】开始测试《《《《《
+DEBUG 2025-07-28 19:19:30,801 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:19:30,802 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 0, 170, 0, 0]
+DEBUG 2025-07-28 19:19:30,802 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:19:31,822 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，4关节超限（-170）】开始测试《《《《《
+DEBUG 2025-07-28 19:19:31,822 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:19:31,822 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 0, -170, 0, 0]
+DEBUG 2025-07-28 19:19:31,823 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:19:32,842 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，5关节超限（170）】开始测试《《《《《
+DEBUG 2025-07-28 19:19:32,842 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:19:32,842 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 0, 0, 170, 0]
+DEBUG 2025-07-28 19:19:32,842 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:19:33,861 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，5关节超限（-170）】开始测试《《《《《
+DEBUG 2025-07-28 19:19:33,862 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:19:33,862 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 0, 0, -170, 0]
+DEBUG 2025-07-28 19:19:33,862 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:19:34,882 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，6关节超限（-190）】开始测试《《《《《
+DEBUG 2025-07-28 19:19:34,883 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:19:34,883 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 0, 0, 0, -190]
+DEBUG 2025-07-28 19:19:34,883 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:19:35,904 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，6关节超限（190）】开始测试《《《《《
+DEBUG 2025-07-28 19:19:35,905 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:19:35,905 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 0, 0, 0, 190]
+DEBUG 2025-07-28 19:19:35,905 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:19:37,054 [test_17_send_angles.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-07-28 19:20:12,199 [test_17_send_angles.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-07-28 19:20:13,272 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，1关节超限（170）】开始测试《《《《《
+DEBUG 2025-07-28 19:20:13,272 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:20:13,273 [test_17_send_angles.py-->line:82]:test_angle: [170, 0, 0, 0, 0, 0]
+DEBUG 2025-07-28 19:20:13,273 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:20:13,273 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，1关节超限（170）】测试通过
+INFO 2025-07-28 19:20:13,273 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，1关节超限（170）】测试完成《《《《《
+INFO 2025-07-28 19:20:14,292 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，1关节超限（-170）】开始测试《《《《《
+DEBUG 2025-07-28 19:20:14,292 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:20:14,293 [test_17_send_angles.py-->line:82]:test_angle: [-170, 0, 0, 0, 0, 0]
+DEBUG 2025-07-28 19:20:14,293 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:20:14,293 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，1关节超限（-170）】测试通过
+INFO 2025-07-28 19:20:14,293 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，1关节超限（-170）】测试完成《《《《《
+INFO 2025-07-28 19:20:15,310 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，2关节超限（170）】开始测试《《《《《
+DEBUG 2025-07-28 19:20:15,310 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:20:15,311 [test_17_send_angles.py-->line:82]:test_angle: [0, 170, 0, 0, 0, 0]
+DEBUG 2025-07-28 19:20:15,311 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:20:15,311 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，2关节超限（170）】测试通过
+INFO 2025-07-28 19:20:15,311 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，2关节超限（170）】测试完成《《《《《
+INFO 2025-07-28 19:20:16,327 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，2关节超限（-170）】开始测试《《《《《
+DEBUG 2025-07-28 19:20:16,328 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:20:16,328 [test_17_send_angles.py-->line:82]:test_angle: [0, -170, 0, 0, 0, 0]
+DEBUG 2025-07-28 19:20:16,328 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:20:16,329 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，2关节超限（-170）】测试通过
+INFO 2025-07-28 19:20:16,329 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，2关节超限（-170）】测试完成《《《《《
+INFO 2025-07-28 19:20:17,346 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，3关节超限（170）】开始测试《《《《《
+DEBUG 2025-07-28 19:20:17,346 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:20:17,346 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 170, 0, 0, 0]
+DEBUG 2025-07-28 19:20:17,347 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:20:17,347 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，3关节超限（170）】测试通过
+INFO 2025-07-28 19:20:17,347 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，3关节超限（170）】测试完成《《《《《
+INFO 2025-07-28 19:20:18,365 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，3关节超限（-170）】开始测试《《《《《
+DEBUG 2025-07-28 19:20:18,365 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:20:18,366 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, -170, 0, 0, 0]
+DEBUG 2025-07-28 19:20:18,366 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:20:18,366 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，3关节超限（-170）】测试通过
+INFO 2025-07-28 19:20:18,366 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，3关节超限（-170）】测试完成《《《《《
+INFO 2025-07-28 19:20:19,383 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，4关节超限（170）】开始测试《《《《《
+DEBUG 2025-07-28 19:20:19,383 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:20:19,383 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 0, 170, 0, 0]
+DEBUG 2025-07-28 19:20:19,383 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:20:19,384 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，4关节超限（170）】测试通过
+INFO 2025-07-28 19:20:19,384 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，4关节超限（170）】测试完成《《《《《
+INFO 2025-07-28 19:20:20,401 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，4关节超限（-170）】开始测试《《《《《
+DEBUG 2025-07-28 19:20:20,401 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:20:20,401 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 0, -170, 0, 0]
+DEBUG 2025-07-28 19:20:20,401 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:20:20,402 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，4关节超限（-170）】测试通过
+INFO 2025-07-28 19:20:20,402 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，4关节超限（-170）】测试完成《《《《《
+INFO 2025-07-28 19:20:21,419 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，5关节超限（170）】开始测试《《《《《
+DEBUG 2025-07-28 19:20:21,419 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:20:21,419 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 0, 0, 170, 0]
+DEBUG 2025-07-28 19:20:21,419 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:20:21,420 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，5关节超限（170）】测试通过
+INFO 2025-07-28 19:20:21,420 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，5关节超限（170）】测试完成《《《《《
+INFO 2025-07-28 19:20:22,435 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，5关节超限（-170）】开始测试《《《《《
+DEBUG 2025-07-28 19:20:22,436 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:20:22,436 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 0, 0, -170, 0]
+DEBUG 2025-07-28 19:20:22,436 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:20:22,436 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，5关节超限（-170）】测试通过
+INFO 2025-07-28 19:20:22,437 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，5关节超限（-170）】测试完成《《《《《
+INFO 2025-07-28 19:20:23,453 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，6关节超限（-190）】开始测试《《《《《
+DEBUG 2025-07-28 19:20:23,453 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:20:23,453 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 0, 0, 0, -190]
+DEBUG 2025-07-28 19:20:23,454 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:20:23,454 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，6关节超限（-190）】测试通过
+INFO 2025-07-28 19:20:23,454 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，6关节超限（-190）】测试完成《《《《《
+INFO 2025-07-28 19:20:24,470 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，6关节超限（190）】开始测试《《《《《
+DEBUG 2025-07-28 19:20:24,471 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:20:24,471 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 0, 0, 0, 190]
+DEBUG 2025-07-28 19:20:24,471 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:20:24,472 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，6关节超限（190）】测试通过
+INFO 2025-07-28 19:20:24,472 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，6关节超限（190）】测试完成《《《《《
+INFO 2025-07-28 19:20:25,614 [test_17_send_angles.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-07-28 19:22:45,365 [test_17_send_angles.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-07-28 19:22:46,443 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，1关节超限（170）】开始测试《《《《《
+DEBUG 2025-07-28 19:22:46,443 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:22:46,443 [test_17_send_angles.py-->line:82]:test_angle: [170, 0, 0, 0, 0, 0]
+DEBUG 2025-07-28 19:22:46,443 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:22:46,444 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，1关节超限（170）】测试通过
+INFO 2025-07-28 19:22:46,444 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，1关节超限（170）】测试完成《《《《《
+INFO 2025-07-28 19:22:47,461 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，1关节超限（-170）】开始测试《《《《《
+DEBUG 2025-07-28 19:22:47,462 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:22:47,462 [test_17_send_angles.py-->line:82]:test_angle: [-170, 0, 0, 0, 0, 0]
+DEBUG 2025-07-28 19:22:47,462 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:22:47,462 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，1关节超限（-170）】测试通过
+INFO 2025-07-28 19:22:47,462 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，1关节超限（-170）】测试完成《《《《《
+INFO 2025-07-28 19:22:48,478 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，2关节超限（170）】开始测试《《《《《
+DEBUG 2025-07-28 19:22:48,479 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:22:48,479 [test_17_send_angles.py-->line:82]:test_angle: [0, 170, 0, 0, 0, 0]
+DEBUG 2025-07-28 19:22:48,479 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:22:48,479 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，2关节超限（170）】测试通过
+INFO 2025-07-28 19:22:48,479 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，2关节超限（170）】测试完成《《《《《
+INFO 2025-07-28 19:22:49,494 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，2关节超限（-170）】开始测试《《《《《
+DEBUG 2025-07-28 19:22:49,494 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:22:49,494 [test_17_send_angles.py-->line:82]:test_angle: [0, -170, 0, 0, 0, 0]
+DEBUG 2025-07-28 19:22:49,495 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:22:49,495 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，2关节超限（-170）】测试通过
+INFO 2025-07-28 19:22:49,495 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，2关节超限（-170）】测试完成《《《《《
+INFO 2025-07-28 19:22:50,510 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，3关节超限（170）】开始测试《《《《《
+DEBUG 2025-07-28 19:22:50,511 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:22:50,511 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 170, 0, 0, 0]
+DEBUG 2025-07-28 19:22:50,511 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:22:50,511 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，3关节超限（170）】测试通过
+INFO 2025-07-28 19:22:50,511 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，3关节超限（170）】测试完成《《《《《
+INFO 2025-07-28 19:22:51,528 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，3关节超限（-170）】开始测试《《《《《
+DEBUG 2025-07-28 19:22:51,529 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:22:51,529 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, -170, 0, 0, 0]
+DEBUG 2025-07-28 19:22:51,529 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:22:51,529 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，3关节超限（-170）】测试通过
+INFO 2025-07-28 19:22:51,529 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，3关节超限（-170）】测试完成《《《《《
+INFO 2025-07-28 19:22:52,544 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，4关节超限（170）】开始测试《《《《《
+DEBUG 2025-07-28 19:22:52,545 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:22:52,545 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 0, 170, 0, 0]
+DEBUG 2025-07-28 19:22:52,545 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:22:52,545 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，4关节超限（170）】测试通过
+INFO 2025-07-28 19:22:52,545 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，4关节超限（170）】测试完成《《《《《
+INFO 2025-07-28 19:22:53,560 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，4关节超限（-170）】开始测试《《《《《
+DEBUG 2025-07-28 19:22:53,561 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:22:53,561 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 0, -170, 0, 0]
+DEBUG 2025-07-28 19:22:53,561 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:22:53,561 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，4关节超限（-170）】测试通过
+INFO 2025-07-28 19:22:53,561 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，4关节超限（-170）】测试完成《《《《《
+INFO 2025-07-28 19:22:54,578 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，5关节超限（170）】开始测试《《《《《
+DEBUG 2025-07-28 19:22:54,578 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:22:54,579 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 0, 0, 170, 0]
+DEBUG 2025-07-28 19:22:54,579 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:22:54,579 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，5关节超限（170）】测试通过
+INFO 2025-07-28 19:22:54,579 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，5关节超限（170）】测试完成《《《《《
+INFO 2025-07-28 19:22:55,595 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，5关节超限（-170）】开始测试《《《《《
+DEBUG 2025-07-28 19:22:55,596 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:22:55,596 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 0, 0, -170, 0]
+DEBUG 2025-07-28 19:22:55,596 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:22:55,596 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，5关节超限（-170）】测试通过
+INFO 2025-07-28 19:22:55,596 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，5关节超限（-170）】测试完成《《《《《
+INFO 2025-07-28 19:22:56,612 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，6关节超限（-190）】开始测试《《《《《
+DEBUG 2025-07-28 19:22:56,612 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:22:56,612 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 0, 0, 0, -190]
+DEBUG 2025-07-28 19:22:56,612 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:22:56,612 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，6关节超限（-190）】测试通过
+INFO 2025-07-28 19:22:56,612 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，6关节超限（-190）】测试完成《《《《《
+INFO 2025-07-28 19:22:57,627 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，6关节超限（190）】开始测试《《《《《
+DEBUG 2025-07-28 19:22:57,628 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:22:57,628 [test_17_send_angles.py-->line:82]:test_angle: [0, 0, 0, 0, 0, 190]
+DEBUG 2025-07-28 19:22:57,628 [test_17_send_angles.py-->line:83]:test_speed: 50
+INFO 2025-07-28 19:22:57,628 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，6关节超限（190）】测试通过
+INFO 2025-07-28 19:22:57,628 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，6关节超限（190）】测试完成《《《《《
+INFO 2025-07-28 19:22:58,645 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，速度超限（0）】开始测试《《《《《
+DEBUG 2025-07-28 19:22:58,645 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:22:58,646 [test_17_send_angles.py-->line:82]:test_angle: [50, 50, 50, 50, 50, 50]
+DEBUG 2025-07-28 19:22:58,646 [test_17_send_angles.py-->line:83]:test_speed: 0
+INFO 2025-07-28 19:22:58,646 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，速度超限（0）】测试通过
+INFO 2025-07-28 19:22:58,646 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，速度超限（0）】测试完成《《《《《
+INFO 2025-07-28 19:22:59,663 [test_17_send_angles.py-->line:78]:》》》》》用例【设置多关节，速度超限（101）】开始测试《《《《《
+DEBUG 2025-07-28 19:22:59,664 [test_17_send_angles.py-->line:81]:test_api: send_angles
+DEBUG 2025-07-28 19:22:59,664 [test_17_send_angles.py-->line:82]:test_angle: [50, 50, 50, 50, 50, 50]
+DEBUG 2025-07-28 19:22:59,664 [test_17_send_angles.py-->line:83]:test_speed: 101
+INFO 2025-07-28 19:22:59,664 [test_17_send_angles.py-->line:89]:✅ 用例【设置多关节，速度超限（101）】测试通过
+INFO 2025-07-28 19:22:59,664 [test_17_send_angles.py-->line:90]:》》》》》用例【设置多关节，速度超限（101）】测试完成《《《《《
+INFO 2025-07-28 19:23:00,810 [test_17_send_angles.py-->line:23]:环境清理完成，接口测试结束

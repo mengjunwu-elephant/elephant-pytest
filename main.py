@@ -9,7 +9,7 @@ if __name__ == '__main__':
                          "3: mercury_my_hand\n"
                          "4: pro_gripper\n"
                          "5: my_hand\n"
-                         "6: mycobot280\n"
+                         "6: mycobot_280\n"
                          "7: mycobot_320\n"
                          )
 

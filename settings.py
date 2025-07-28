@@ -16,7 +16,7 @@ CASES_DIR = {
     "3": "testcases/mercury_my_hand",
     "4": "testcases/pro_gripper",
     "5": "testcases/my_hand",
-    "6": "testcases/mycobot280",
+    "6": "testcases/mycobot_280",
     "7": "testcases/mycobot_320"
 }
 
@@ -39,7 +39,7 @@ class Mycobot280Base:
     # 测试数据配置
     TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mycobot_280.xlsx')
 
-    def __init__(self, port="com25", baudrate=115200):
+    def __init__(self, port="com10", baudrate=115200):
         self.mc = MyCobot280(port, baudrate=baudrate)
 
     def default_settings(self):
