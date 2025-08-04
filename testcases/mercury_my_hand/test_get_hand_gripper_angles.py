@@ -1,53 +1,42 @@
-import unittest
-
-from ddt import ddt, data
-
+import pytest
+import allure
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
-# 从Excel中提取数据
+# 读取测试数据
 cases = get_test_data_from_excel(MercuryBase.MY_HAND_TEST_DATA_FILE, "get_hand_gripper_angles")
 
 
-@ddt
-class TestGetHandGripperAngles(unittest.TestCase):
+@pytest.fixture(scope="module")
+def device():
+    dev = MercuryBase()
+    dev.ml.set_hand_gripper_angles([0, 0, 0, 0, 0, 0], dev.speed)
+    logger.info("初始化完成，接口测试开始")
+    yield dev
+    dev.close()
+    logger.info("环境清理完成，接口测试结束")
 
 
-    # 初始化测试环境
-    @classmethod
-    def setUpClass(cls):
-        cls.device = MercuryBase()  # 实例化夹爪
-        cls.device.ml.set_hand_gripper_angles([0, 0, 0, 0, 0, 0], cls.device.speed)
-        logger.info("初始化完成，接口测试开始")
+@allure.feature("获取全关节角度")
+@allure.story("获取所有夹爪关节角度")
+@pytest.mark.parametrize("case", cases, ids=lambda c: c["title"])
+def test_get_hand_gripper_angles(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"test_api: {case['api']}")
 
-    # 清理测试环境
-    @classmethod
-    def tearDownClass(cls):
-        cls.device.close()
-        logger.info("环境清理完成，接口测试结束")
+    with allure.step("发送请求，获取所有夹爪关节角度"):
+        response = device.ml.get_hand_gripper_angles()
 
-    @data(*cases)
-    def test_get_hand_gripper_angles(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        # 请求发送
-        response = self.device.ml.get_hand_gripper_angles()
-        try:
-            # 请求结果类型断言
-            if type(response) == list:
-                logger.debug('请求类型断言成功')
-            else:
-                logger.debug('请求类型断言失败，实际类型为{}'.format(type(response)))
-            # 请求结果断言
-            self.assertEqual(eval(case['expect_data']), response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('期望数据：{}'.format(case['expect_data']))
-            logger.debug('实际结果：{}'.format(response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    with allure.step("断言返回类型为 list"):
+        assert isinstance(response, list), f"返回类型错误，期望 list，实际为 {type(response)}"
+
+    with allure.step("断言返回值等于期望值"):
+        expected = eval(case["expect_data"])
+        allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert response == expected, f"断言失败，期望：{expected}，实际：{response}"
+
+    logger.info(f"✅ 用例【{title}】测试成功")
+    logger.info(f"》》》用例【{title}】测试完成《《《")

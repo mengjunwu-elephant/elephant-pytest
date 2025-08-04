@@ -1,51 +1,39 @@
-import unittest
-from ddt import ddt, data
+import pytest
+import allure
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
-# 从Excel中提取数据
 cases = get_test_data_from_excel(MercuryBase.MY_HAND_TEST_DATA_FILE, "get_hand_firmware_major_version")
 
+@pytest.fixture(scope="module")
+def device():
+    dev = MercuryBase()
+    logger.info("初始化完成，接口测试开始")
+    yield dev
+    dev.close()
+    logger.info("环境清理完成，接口测试结束")
 
-@ddt
-class TestGetHandFirmwareMajorVersion(unittest.TestCase):
 
+@allure.feature("获取主版本号")
+@allure.story("查询固件主版本号")
+@pytest.mark.parametrize("case", cases, ids=lambda c: c["title"])
+def test_get_hand_firmware_major_version(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"test_api: {case['api']}")
+    logger.debug(f"test_parameter: {case['parameter']}")
 
-    # 初始化测试环境
-    @classmethod
-    def setUpClass(cls):
-        cls.device = MercuryBase()  # 实例化夹爪
-        logger.info("初始化完成，接口测试开始")
+    with allure.step("发送请求，获取固件主版本号"):
+        response = device.ml.get_hand_firmware_major_version()
 
-    # 清理测试环境
-    @classmethod
-    def tearDownClass(cls):
-        cls.device.close()
-        logger.info("环境清理完成，接口测试结束")
+    with allure.step("断言返回类型为 float"):
+        assert isinstance(response, float), f"返回类型错误，期望 float，实际为 {type(response)}"
 
-    @data(*cases)
-    def test_get_hand_firmware_major_version(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_parameters:{}'.format(case['parameter']))
-        # 请求发送
-        response = self.device.ml.get_hand_firmware_major_version()
-        try:
-            # 请求结果类型断言
-            if type(response) == float:
-                logger.debug('请求类型断言成功')
-            else:
-                logger.debug('请求类型断言失败，实际类型为{}'.format(type(response)))
-            # 请求结果断言
-            self.assertEqual(case['expect_data'], response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('期望数据：{}'.format(case['expect_data']))
-            logger.debug('实际结果：{}'.format(response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    with allure.step("断言返回结果等于期望值"):
+        allure.attach(str(case["expect_data"]), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert response == case["expect_data"], f"断言失败，期望：{case['expect_data']}，实际：{response}"
+
+    logger.info(f"✅ 用例【{title}】测试成功")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
