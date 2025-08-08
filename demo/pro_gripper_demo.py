@@ -1,20 +1,26 @@
-from elegripper.elegripper import Gripper
+from time import sleep
 
+from pymycobot import ConveyorAPI
 
-# m = Gripper("com3",id=10)
-# m.set_gripper_Id(-1)
-# m.set_gripper_Id(10)
-# m.set_gripper_Id(14)
-# m.set_gripper_value(101)
-# print(m.set_gripper_mini_pressure(-1))
-# print(m.get_gripper_Id())
-# m.set_gripper_baud(0)
-
-def device():
-    for i in range(5):
-        yield i
-
-dev = device()
-
-print(next(dev))
-print(next(dev))
+mc = ConveyorAPI("com14",debug=1)
+sleep(3)
+print(mc.read_firmware_version())
+sleep(2)
+mc.set_motor_speed(1,10)
+sleep(2)
+print(mc.get_motor_speed())
+sleep(2)
+print(mc.get_motor_direction())
+sleep(2)
+for i in range(10):
+    mc.set_motor_direction(1)
+    sleep(5)
+    mc.set_motor_direction(0)
+    print(i)
+    sleep(5)
+mc.set_motor_speed(0,10)
+sleep(2)
+print(mc.get_motor_speed())
+sleep(2)
+print(mc.get_motor_direction())
+sleep(2)

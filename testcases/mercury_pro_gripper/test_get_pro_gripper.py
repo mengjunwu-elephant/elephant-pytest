@@ -1,52 +1,39 @@
-import unittest
-from ddt import ddt, data
-import settings
+import pytest
+import allure
 from common1.test_data_handler import get_test_data_from_excel
 from common1 import logger
 from settings import MercuryBase
 
-# 从Excel中提取数据
 cases = get_test_data_from_excel(MercuryBase.PRO_GRIPPER_TEST_DATA_FILE, "get_pro_gripper")
 
+@pytest.fixture(scope="module")
+def device():
+    dev = MercuryBase()
+    logger.info("初始化完成，接口测试开始")
+    yield dev
+    dev.close()
+    logger.info("环境清理完成，接口测试结束")
 
-@ddt
-class TestGetProGripper(unittest.TestCase):
+@allure.feature("获取Pro夹爪参数")
+@allure.story("正常用例")
+@pytest.mark.parametrize("case", cases, ids=lambda c: c["title"])
+def test_get_pro_gripper(device, case):
+    logger.info(f"》》》用例【{case['title']}】开始测试《《《")
+    logger.debug(f"test_api: {case['api']}")
+    logger.debug(f"test_parameters: {case['parameter']}")
 
+    with allure.step("调用接口获取夹爪状态"):
+        response = device.ml.get_pro_gripper(case['parameter'])
+        logger.debug(f"接口返回值: {response}")
+        allure.attach(str(response), "接口返回值", allure.attachment_type.TEXT)
 
-    # 初始化测试环境
-    @classmethod
-    def setUpClass(cls):
-        cls.device = MercuryBase()  # 实例化夹爪
-        logger.info("初始化完成，接口测试开始")
+    with allure.step("断言返回值类型为 int"):
+        assert isinstance(response, int), f"返回类型错误，实际为 {type(response)}"
 
-    # 清理测试环境
-    @classmethod
-    def tearDownClass(cls):
-        cls.device.close()
-        logger.info("环境清理完成，接口测试结束")
+    with allure.step("断言返回值与期望值相符"):
+        allure.attach(str(case['expect_data']), "期望值", allure.attachment_type.TEXT)
+        allure.attach(str(response), "实际值", allure.attachment_type.TEXT)
+        assert response == case['expect_data'], f"断言失败，期望：{case['expect_data']}，实际：{response}"
 
-    @data(*cases)
-    def test_get_pro_gripper(self, case):
-        logger.info('》》》》》用例【{}】开始测试《《《《《'.format(case['title']))
-        # 调试信息
-        logger.debug('test_api:{}'.format(case['api']))
-        logger.debug('test_parameters:{}'.format(case['parameter']))
-        # 请求发送
-        response = self.device.ml.get_pro_gripper(case['parameter'])
-        try:
-            # 请求结果类型断言
-            if type(response) == int:
-                logger.debug('请求类型断言成功')
-            else:
-                logger.debug('请求类型断言失败，实际类型为{}'.format(type(response)))
-            # 请求结果断言
-            self.assertEqual(case['expect_data'], response)
-        except AssertionError as e:
-            logger.exception('请求结果断言失败')
-            logger.debug('期望数据：{}'.format(case['expect_data']))
-            logger.debug('实际结果：{}'.format(response))
-            self.fail("用例【{}】断言失败".format(case['title']))
-        else:
-            logger.info('请求结果断言成功，用例【{}】测试成功'.format(case['title']))
-        finally:
-            logger.info('》》》》》用例【{}】测试完成《《《《《'.format(case['title']))
+    logger.info(f"✅ 用例【{case['title']}】测试成功")
+    logger.info(f"》》》用例【{case['title']}】测试完成《《《")
