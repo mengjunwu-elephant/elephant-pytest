@@ -11,6 +11,7 @@ from settings import Mycobot320Base
 cases = get_test_data_from_excel(Mycobot320Base.TEST_DATA_FILE, "is_paused")
 
 normal_cases = [case for case in cases if case.get("test_type") == "normal"]
+exception_cases = [case for case in cases if case.get("test_type") == "exception"]
 
 @pytest.fixture(scope="module")
 def device():
@@ -61,6 +62,39 @@ def test_is_paused1(device, case):
         allure.attach(str(expected_2), name="get接口期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(get_res_2), name="get接口实际值", attachment_type=allure.attachment_type.TEXT)
         assert get_res_2 == expected_2, f"用例【{title}】断言失败，期望 {expected_2}，实际 {get_res_2}"
+
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
+
+
+@allure.feature("检查程序是否暂停移动命令")
+@allure.story("异常用例")
+@pytest.mark.parametrize("case", exception_cases, ids=[case["title"] for case in exception_cases])
+def test_is_paused2(device, case):
+    ID = case["ID"]
+    title = case["title"]
+    expected_1 = case["expect_data_1"]
+
+    logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
+    logger.debug(f'test_api:{case["api"]}')
+
+    with allure.step('机械臂下电'):
+        device.m.power_off()
+
+    with allure.step(f"调用 is_paused 接口"):
+        set_res = device.m.is_paused()
+        logger.debug(f"set_res返回:{set_res}")
+
+    with allure.step('机械臂上电'):
+        device.m.power_on()
+
+    with allure.step("断言返回值类型为 int"):
+        assert isinstance(set_res, int), f"返回类型错误,应为{type(expected_1)},实际为 {type(set_res)}"
+
+    with allure.step("断言is_paused返回值"):
+        allure.attach(str(expected_1), name="set接口期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(set_res), name="set接口实际值", attachment_type=allure.attachment_type.TEXT)
+        assert set_res == expected_1, f"用例【{title}】断言失败，期望 {expected_1}，实际 {set_res}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
