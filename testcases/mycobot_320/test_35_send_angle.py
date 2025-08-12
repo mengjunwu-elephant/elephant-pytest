@@ -70,7 +70,7 @@ def test_send_angle1(device, case):
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
 
-@allure.feature("设置单关节角度运动  ")
+@allure.feature("设置单关节角度运动")
 @allure.story("异常用例")
 @pytest.mark.parametrize("case", exception_cases, ids=[case["title"] for case in exception_cases])
 def test_send_angle2(device, case):
@@ -87,6 +87,9 @@ def test_send_angle2(device, case):
 
     with pytest.raises(MyCobot320DataException, match=".*"):
         device.m.send_angle(joint, angle, speed)
+
+    with allure.step(f'清除机械臂错误'):
+        device.m.clear_error_information()
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')

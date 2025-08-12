@@ -2,53 +2,28 @@ import time
 
 from pymycobot import MyCobot320
 
-m = MyCobot320("COM13",debug=True)
+m = MyCobot320("COM26")
 
-# m.set_fresh_mode(0)
+# m.power_off()
+
+# print(m.is_in_position([0, 0, 0, 0, 0, 0],1))
+# m.power_on()
 # print(m.get_fresh_mode())
-# for i in range(1,7):
-#     print(m.get_joint_min_angle(i),m.get_joint_max_angle(i))
-# m.clear_error_information()
-# print(m.get_fresh_mode())
-# m.send_angles([0, 0, -90, 0, 90, 0],50)
-# m.send_angles([0, 0, 0, 0, 0, 0],20)
-# m.send_coords([190.2, -89.4, 235.9, 178.24, 0.18, -90.0],20)
-# m.send_coord(1,190,20)
-# m.send_angle(1,0,50)
-# print(m.get_system_version(),m.get_basic_version(),m.get_atom_version())
-# print(m.get_hand_firmware_major_version(14))
-# print(m.get_hand_firmware_minor_version(14))
-# m.send_coords([210,-50,200,150,50,-50],20)
-# m.resume()
-# print(m.get_hand_gripper_id(14))
-# print(m.is_in_position([190.2, -89.4, 235.9, 178.24, 0.18, -90.0],1))
-# print(m.is_in_position([1000, 0, -90, 0, 90, 0],0))
-# m.clear_error_information()
-# print(m.get_hand_gripper_type(14))
-# for i in range(100):
-#     print(m.set_hand_gripper_id(13,14))
-#     print(m.get_hand_gripper_id(13))
-# print(m.set_hand_gripper_enabled(14,0))
-# print(m.set_hand_gripper_angle(14,1,101))
-#     print(m.get_hand_gripper_angle(14,1))
-# print(m.set_hand_gripper_calibrate(14,1))
-#     print(m.get_hand_gripper_status(14))
-# print(m.get_hand_gripper_p(14,7))
-# print(m.get_hand_gripper_i(14,7))
-# print(m.get_hand_gripper_d(14,7))
-# print(m.get_hand_gripper_torque(14,7))
-# print(m.get_hand_gripper_clockwise(14,7))
-# print(m.get_hand_gripper_counterclockwise(14,7))
-# print(m.set_hand_gripper_p(14,1,151))
-# print(m.set_hand_gripper_i(14,1,300))
-# print(m.set_hand_gripper_d(14,1,300))
-# print(m.set_hand_gripper_torque(14,1,300))
-# print(m.set_hand_gripper_clockwise(14,1,10))
-# print(m.set_hand_gripper_counterclockwise(14,1,10))
-# print(m.set_hand_gripper_min_pressure(14,1,300))
-# print(m.set_hand_gripper_speed(14,1,100))
-# print(m.get_hand_gripper_min_pressure(14,1))
-# print(m.get_hand_gripper_default_speed(14,7))
-# print(m.get_hand_gripper_angles(14))
-# print(m.set_hand_gripper_angles(14,[1, 30, 20, 60, 30, 10],10))
-print(m.get_system_version())
+
+# m.jog_angle(2,0,-1)
+# input()
+# m.stop()
+# m.send_angles([0, 10, -100, 0, -90, 0], 50)
+#
+# m.set_encoder(1,1000,10)
+# m.set_encoders([1000, 1000, 1000, 1000, 1000, 1000], 1000)
+# time.sleep(0.5)
+# while True:
+#     print(m.is_moving())
+#     time.sleep(0.1)
+
+
+
+m.set_joint_min(1,10)
+
+

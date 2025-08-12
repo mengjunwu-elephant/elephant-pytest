@@ -23,7 +23,7 @@ def device():
     dev.m.close()
     logger.info("环境清理完成，接口测试结束")
 
-@allure.feature("关节软件最小限位")
+@allure.feature("读取关节软件最小限位")
 @allure.story("正常用例")
 @pytest.mark.parametrize("case", normal_cases, ids=[case["title"] for case in normal_cases])
 def test_get_joint_min_angle1(device, case):
@@ -50,7 +50,7 @@ def test_get_joint_min_angle1(device, case):
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
 
-@allure.feature("关节软件最小限位")
+@allure.feature("读取关节软件最小限位")
 @allure.story("异常用例")
 @pytest.mark.parametrize("case", exception_cases, ids=[case["title"] for case in exception_cases])
 def test_get_joint_min_angle2(device, case):
