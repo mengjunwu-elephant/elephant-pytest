@@ -23,7 +23,13 @@ m = MyCobot320("COM26")
 #     time.sleep(0.1)
 
 
-
-m.set_joint_min(1,10)
+min_limit = [-168, -135, -145, -148, -168, -180]
+for i in range(1,7):
+    m.set_joint_min(i, 30)
+    time.sleep(0.1)
+    print(m.get_joint_min_angle(i))
+    m.set_joint_min(i, min_limit[i-1])
+    time.sleep(0.1)
+    print(m.get_joint_min_angle(i))
 
 

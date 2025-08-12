@@ -1,10 +1,6 @@
 import os
 import time
-
 from pymycobot import *
-
-from Myhand.MyHand import MyGripper_H100
-from elegripper.elegripper import Gripper
 
 # 项目路径
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -112,3 +108,15 @@ class Mycobot320Base:
             else:
                 break
         time.sleep(0.5)
+
+    def min_limit(self):
+        min_limit = [-168, -135, -145, -148, -168, -180]
+        for i in range(1,7):
+            self.m.set_joint_min(i, min_limit[i-1])
+            time.sleep(0.1)
+
+    def max_limit(self):
+        max_limit = [168, 135, 145, 148, 168, 180]
+        for i in range(1,7):
+            self.m.set_joint_max(i, max_limit[i-1])
+            time.sleep(0.1)

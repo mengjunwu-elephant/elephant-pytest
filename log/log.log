@@ -80497,3 +80497,673 @@ DEBUG 2025-08-12 13:56:01,082 [test_51_set_joint_min.py-->line:74]:test_angle:-1
 INFO 2025-08-12 13:56:01,082 [test_51_set_joint_min.py-->line:79]:✅ 用例【设置超限角度】测试通过
 INFO 2025-08-12 13:56:01,082 [test_51_set_joint_min.py-->line:80]:》》》》》用例【设置超限角度】测试完成《《《《《
 INFO 2025-08-12 13:56:01,110 [test_51_set_joint_min.py-->line:24]:环境清理完成，接口测试结束
+INFO 2025-08-12 14:37:36,954 [test_51_set_joint_min.py-->line:21]:初始化完成，接口测试开始
+INFO 2025-08-12 14:37:37,041 [test_51_set_joint_min.py-->line:38]:》》》》》用例【设置1关节软件限位最小值】开始测试《《《《《
+DEBUG 2025-08-12 14:37:37,041 [test_51_set_joint_min.py-->line:39]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:37,041 [test_51_set_joint_min.py-->line:40]:test_id:1
+DEBUG 2025-08-12 14:37:37,041 [test_51_set_joint_min.py-->line:41]:test_angle:-30
+DEBUG 2025-08-12 14:37:37,191 [test_51_set_joint_min.py-->line:47]:接口返回：1
+INFO 2025-08-12 14:37:37,191 [test_51_set_joint_min.py-->line:62]:✅ 用例【设置1关节软件限位最小值】测试通过
+INFO 2025-08-12 14:37:37,191 [test_51_set_joint_min.py-->line:63]:》》》》》用例【设置1关节软件限位最小值】测试完成《《《《《
+INFO 2025-08-12 14:37:37,194 [test_51_set_joint_min.py-->line:38]:》》》》》用例【设置2关节软件限位最小值】开始测试《《《《《
+DEBUG 2025-08-12 14:37:37,194 [test_51_set_joint_min.py-->line:39]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:37,194 [test_51_set_joint_min.py-->line:40]:test_id:2
+DEBUG 2025-08-12 14:37:37,194 [test_51_set_joint_min.py-->line:41]:test_angle:-30
+DEBUG 2025-08-12 14:37:37,340 [test_51_set_joint_min.py-->line:47]:接口返回：1
+INFO 2025-08-12 14:37:37,340 [test_51_set_joint_min.py-->line:62]:✅ 用例【设置2关节软件限位最小值】测试通过
+INFO 2025-08-12 14:37:37,340 [test_51_set_joint_min.py-->line:63]:》》》》》用例【设置2关节软件限位最小值】测试完成《《《《《
+INFO 2025-08-12 14:37:37,343 [test_51_set_joint_min.py-->line:38]:》》》》》用例【设置3关节软件限位最小值】开始测试《《《《《
+DEBUG 2025-08-12 14:37:37,343 [test_51_set_joint_min.py-->line:39]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:37,343 [test_51_set_joint_min.py-->line:40]:test_id:3
+DEBUG 2025-08-12 14:37:37,344 [test_51_set_joint_min.py-->line:41]:test_angle:-30
+DEBUG 2025-08-12 14:37:37,490 [test_51_set_joint_min.py-->line:47]:接口返回：1
+INFO 2025-08-12 14:37:37,490 [test_51_set_joint_min.py-->line:62]:✅ 用例【设置3关节软件限位最小值】测试通过
+INFO 2025-08-12 14:37:37,490 [test_51_set_joint_min.py-->line:63]:》》》》》用例【设置3关节软件限位最小值】测试完成《《《《《
+INFO 2025-08-12 14:37:37,493 [test_51_set_joint_min.py-->line:38]:》》》》》用例【设置4关节软件限位最小值】开始测试《《《《《
+DEBUG 2025-08-12 14:37:37,493 [test_51_set_joint_min.py-->line:39]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:37,493 [test_51_set_joint_min.py-->line:40]:test_id:4
+DEBUG 2025-08-12 14:37:37,493 [test_51_set_joint_min.py-->line:41]:test_angle:-30
+DEBUG 2025-08-12 14:37:37,642 [test_51_set_joint_min.py-->line:47]:接口返回：1
+INFO 2025-08-12 14:37:37,642 [test_51_set_joint_min.py-->line:62]:✅ 用例【设置4关节软件限位最小值】测试通过
+INFO 2025-08-12 14:37:37,643 [test_51_set_joint_min.py-->line:63]:》》》》》用例【设置4关节软件限位最小值】测试完成《《《《《
+INFO 2025-08-12 14:37:37,645 [test_51_set_joint_min.py-->line:38]:》》》》》用例【设置5关节软件限位最小值】开始测试《《《《《
+DEBUG 2025-08-12 14:37:37,646 [test_51_set_joint_min.py-->line:39]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:37,646 [test_51_set_joint_min.py-->line:40]:test_id:5
+DEBUG 2025-08-12 14:37:37,646 [test_51_set_joint_min.py-->line:41]:test_angle:-30
+DEBUG 2025-08-12 14:37:37,790 [test_51_set_joint_min.py-->line:47]:接口返回：1
+INFO 2025-08-12 14:37:37,791 [test_51_set_joint_min.py-->line:62]:✅ 用例【设置5关节软件限位最小值】测试通过
+INFO 2025-08-12 14:37:37,791 [test_51_set_joint_min.py-->line:63]:》》》》》用例【设置5关节软件限位最小值】测试完成《《《《《
+INFO 2025-08-12 14:37:37,793 [test_51_set_joint_min.py-->line:38]:》》》》》用例【设置6关节软件限位最小值】开始测试《《《《《
+DEBUG 2025-08-12 14:37:37,793 [test_51_set_joint_min.py-->line:39]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:37,793 [test_51_set_joint_min.py-->line:40]:test_id:6
+DEBUG 2025-08-12 14:37:37,793 [test_51_set_joint_min.py-->line:41]:test_angle:-30
+DEBUG 2025-08-12 14:37:37,940 [test_51_set_joint_min.py-->line:47]:接口返回：1
+INFO 2025-08-12 14:37:37,940 [test_51_set_joint_min.py-->line:62]:✅ 用例【设置6关节软件限位最小值】测试通过
+INFO 2025-08-12 14:37:37,940 [test_51_set_joint_min.py-->line:63]:》》》》》用例【设置6关节软件限位最小值】测试完成《《《《《
+INFO 2025-08-12 14:37:37,943 [test_51_set_joint_min.py-->line:74]:》》》》》用例【运动到全关节45位置】开始测试《《《《《
+DEBUG 2025-08-12 14:37:37,943 [test_51_set_joint_min.py-->line:75]:test_api:send_angles
+DEBUG 2025-08-12 14:37:37,943 [test_51_set_joint_min.py-->line:76]:test_angle:[-45,-45,-45,-45,-45,-45]
+DEBUG 2025-08-12 14:37:39,232 [test_51_set_joint_min.py-->line:82]:接口返回：1
+INFO 2025-08-12 14:37:39,233 [test_51_set_joint_min.py-->line:97]:✅ 用例【运动到全关节45位置】测试通过
+INFO 2025-08-12 14:37:39,233 [test_51_set_joint_min.py-->line:98]:》》》》》用例【运动到全关节45位置】测试完成《《《《《
+INFO 2025-08-12 14:37:39,236 [test_51_set_joint_min.py-->line:108]:》》》》》用例【设置超限关节】开始测试《《《《《
+DEBUG 2025-08-12 14:37:39,236 [test_51_set_joint_min.py-->line:109]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:39,236 [test_51_set_joint_min.py-->line:110]:test_id:7
+DEBUG 2025-08-12 14:37:39,236 [test_51_set_joint_min.py-->line:111]:test_angle:-30
+INFO 2025-08-12 14:37:39,236 [test_51_set_joint_min.py-->line:116]:✅ 用例【设置超限关节】测试通过
+INFO 2025-08-12 14:37:39,236 [test_51_set_joint_min.py-->line:117]:》》》》》用例【设置超限关节】测试完成《《《《《
+INFO 2025-08-12 14:37:39,240 [test_51_set_joint_min.py-->line:108]:》》》》》用例【设置超限关节】开始测试《《《《《
+DEBUG 2025-08-12 14:37:39,240 [test_51_set_joint_min.py-->line:109]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:39,240 [test_51_set_joint_min.py-->line:110]:test_id:0
+DEBUG 2025-08-12 14:37:39,240 [test_51_set_joint_min.py-->line:111]:test_angle:-30
+INFO 2025-08-12 14:37:39,241 [test_51_set_joint_min.py-->line:116]:✅ 用例【设置超限关节】测试通过
+INFO 2025-08-12 14:37:39,241 [test_51_set_joint_min.py-->line:117]:》》》》》用例【设置超限关节】测试完成《《《《《
+INFO 2025-08-12 14:37:39,243 [test_51_set_joint_min.py-->line:108]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:37:39,243 [test_51_set_joint_min.py-->line:109]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:39,243 [test_51_set_joint_min.py-->line:110]:test_id:1
+DEBUG 2025-08-12 14:37:39,243 [test_51_set_joint_min.py-->line:111]:test_angle:-169
+INFO 2025-08-12 14:37:39,243 [test_51_set_joint_min.py-->line:116]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:37:39,243 [test_51_set_joint_min.py-->line:117]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:37:39,247 [test_51_set_joint_min.py-->line:108]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:37:39,247 [test_51_set_joint_min.py-->line:109]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:39,247 [test_51_set_joint_min.py-->line:110]:test_id:2
+DEBUG 2025-08-12 14:37:39,247 [test_51_set_joint_min.py-->line:111]:test_angle:-136
+INFO 2025-08-12 14:37:39,247 [test_51_set_joint_min.py-->line:116]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:37:39,247 [test_51_set_joint_min.py-->line:117]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:37:39,250 [test_51_set_joint_min.py-->line:108]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:37:39,250 [test_51_set_joint_min.py-->line:109]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:39,250 [test_51_set_joint_min.py-->line:110]:test_id:3
+DEBUG 2025-08-12 14:37:39,250 [test_51_set_joint_min.py-->line:111]:test_angle:-146
+INFO 2025-08-12 14:37:39,250 [test_51_set_joint_min.py-->line:116]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:37:39,250 [test_51_set_joint_min.py-->line:117]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:37:39,252 [test_51_set_joint_min.py-->line:108]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:37:39,252 [test_51_set_joint_min.py-->line:109]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:39,252 [test_51_set_joint_min.py-->line:110]:test_id:4
+DEBUG 2025-08-12 14:37:39,252 [test_51_set_joint_min.py-->line:111]:test_angle:-149
+INFO 2025-08-12 14:37:39,252 [test_51_set_joint_min.py-->line:116]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:37:39,252 [test_51_set_joint_min.py-->line:117]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:37:39,255 [test_51_set_joint_min.py-->line:108]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:37:39,255 [test_51_set_joint_min.py-->line:109]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:39,255 [test_51_set_joint_min.py-->line:110]:test_id:5
+DEBUG 2025-08-12 14:37:39,255 [test_51_set_joint_min.py-->line:111]:test_angle:-169
+INFO 2025-08-12 14:37:39,255 [test_51_set_joint_min.py-->line:116]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:37:39,255 [test_51_set_joint_min.py-->line:117]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:37:39,257 [test_51_set_joint_min.py-->line:108]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:37:39,259 [test_51_set_joint_min.py-->line:109]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:39,259 [test_51_set_joint_min.py-->line:110]:test_id:6
+DEBUG 2025-08-12 14:37:39,259 [test_51_set_joint_min.py-->line:111]:test_angle:-181
+INFO 2025-08-12 14:37:39,259 [test_51_set_joint_min.py-->line:116]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:37:39,259 [test_51_set_joint_min.py-->line:117]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:37:39,260 [test_51_set_joint_min.py-->line:108]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:37:39,260 [test_51_set_joint_min.py-->line:109]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:39,260 [test_51_set_joint_min.py-->line:110]:test_id:1
+DEBUG 2025-08-12 14:37:39,260 [test_51_set_joint_min.py-->line:111]:test_angle:169
+INFO 2025-08-12 14:37:39,260 [test_51_set_joint_min.py-->line:116]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:37:39,261 [test_51_set_joint_min.py-->line:117]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:37:39,263 [test_51_set_joint_min.py-->line:108]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:37:39,263 [test_51_set_joint_min.py-->line:109]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:39,263 [test_51_set_joint_min.py-->line:110]:test_id:2
+DEBUG 2025-08-12 14:37:39,263 [test_51_set_joint_min.py-->line:111]:test_angle:136
+INFO 2025-08-12 14:37:39,265 [test_51_set_joint_min.py-->line:116]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:37:39,265 [test_51_set_joint_min.py-->line:117]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:37:39,267 [test_51_set_joint_min.py-->line:108]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:37:39,267 [test_51_set_joint_min.py-->line:109]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:39,267 [test_51_set_joint_min.py-->line:110]:test_id:3
+DEBUG 2025-08-12 14:37:39,267 [test_51_set_joint_min.py-->line:111]:test_angle:146
+INFO 2025-08-12 14:37:39,267 [test_51_set_joint_min.py-->line:116]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:37:39,267 [test_51_set_joint_min.py-->line:117]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:37:39,269 [test_51_set_joint_min.py-->line:108]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:37:39,269 [test_51_set_joint_min.py-->line:109]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:39,269 [test_51_set_joint_min.py-->line:110]:test_id:4
+DEBUG 2025-08-12 14:37:39,269 [test_51_set_joint_min.py-->line:111]:test_angle:149
+INFO 2025-08-12 14:37:39,269 [test_51_set_joint_min.py-->line:116]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:37:39,270 [test_51_set_joint_min.py-->line:117]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:37:39,271 [test_51_set_joint_min.py-->line:108]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:37:39,273 [test_51_set_joint_min.py-->line:109]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:39,273 [test_51_set_joint_min.py-->line:110]:test_id:5
+DEBUG 2025-08-12 14:37:39,273 [test_51_set_joint_min.py-->line:111]:test_angle:169
+INFO 2025-08-12 14:37:39,273 [test_51_set_joint_min.py-->line:116]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:37:39,273 [test_51_set_joint_min.py-->line:117]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:37:39,275 [test_51_set_joint_min.py-->line:108]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:37:39,275 [test_51_set_joint_min.py-->line:109]:test_api:set_joint_min
+DEBUG 2025-08-12 14:37:39,275 [test_51_set_joint_min.py-->line:110]:test_id:6
+DEBUG 2025-08-12 14:37:39,275 [test_51_set_joint_min.py-->line:111]:test_angle:181
+INFO 2025-08-12 14:37:39,275 [test_51_set_joint_min.py-->line:116]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:37:39,275 [test_51_set_joint_min.py-->line:117]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:37:40,027 [test_51_set_joint_min.py-->line:26]:环境清理完成，接口测试结束
+INFO 2025-08-12 14:38:24,509 [test_51_set_joint_min.py-->line:21]:初始化完成，接口测试开始
+INFO 2025-08-12 14:38:26,436 [test_51_set_joint_min.py-->line:39]:》》》》》用例【设置1关节软件限位最小值】开始测试《《《《《
+DEBUG 2025-08-12 14:38:26,436 [test_51_set_joint_min.py-->line:40]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:26,436 [test_51_set_joint_min.py-->line:41]:test_id:1
+DEBUG 2025-08-12 14:38:26,436 [test_51_set_joint_min.py-->line:42]:test_angle:-30
+DEBUG 2025-08-12 14:38:26,571 [test_51_set_joint_min.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:38:26,571 [test_51_set_joint_min.py-->line:63]:✅ 用例【设置1关节软件限位最小值】测试通过
+INFO 2025-08-12 14:38:26,573 [test_51_set_joint_min.py-->line:64]:》》》》》用例【设置1关节软件限位最小值】测试完成《《《《《
+INFO 2025-08-12 14:38:26,576 [test_51_set_joint_min.py-->line:39]:》》》》》用例【设置2关节软件限位最小值】开始测试《《《《《
+DEBUG 2025-08-12 14:38:26,576 [test_51_set_joint_min.py-->line:40]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:26,577 [test_51_set_joint_min.py-->line:41]:test_id:2
+DEBUG 2025-08-12 14:38:26,577 [test_51_set_joint_min.py-->line:42]:test_angle:-30
+DEBUG 2025-08-12 14:38:26,721 [test_51_set_joint_min.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:38:26,721 [test_51_set_joint_min.py-->line:63]:✅ 用例【设置2关节软件限位最小值】测试通过
+INFO 2025-08-12 14:38:26,721 [test_51_set_joint_min.py-->line:64]:》》》》》用例【设置2关节软件限位最小值】测试完成《《《《《
+INFO 2025-08-12 14:38:26,725 [test_51_set_joint_min.py-->line:39]:》》》》》用例【设置3关节软件限位最小值】开始测试《《《《《
+DEBUG 2025-08-12 14:38:26,725 [test_51_set_joint_min.py-->line:40]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:26,725 [test_51_set_joint_min.py-->line:41]:test_id:3
+DEBUG 2025-08-12 14:38:26,725 [test_51_set_joint_min.py-->line:42]:test_angle:-30
+DEBUG 2025-08-12 14:38:26,870 [test_51_set_joint_min.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:38:26,870 [test_51_set_joint_min.py-->line:63]:✅ 用例【设置3关节软件限位最小值】测试通过
+INFO 2025-08-12 14:38:26,871 [test_51_set_joint_min.py-->line:64]:》》》》》用例【设置3关节软件限位最小值】测试完成《《《《《
+INFO 2025-08-12 14:38:26,873 [test_51_set_joint_min.py-->line:39]:》》》》》用例【设置4关节软件限位最小值】开始测试《《《《《
+DEBUG 2025-08-12 14:38:26,873 [test_51_set_joint_min.py-->line:40]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:26,873 [test_51_set_joint_min.py-->line:41]:test_id:4
+DEBUG 2025-08-12 14:38:26,873 [test_51_set_joint_min.py-->line:42]:test_angle:-30
+DEBUG 2025-08-12 14:38:27,021 [test_51_set_joint_min.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:38:27,021 [test_51_set_joint_min.py-->line:63]:✅ 用例【设置4关节软件限位最小值】测试通过
+INFO 2025-08-12 14:38:27,021 [test_51_set_joint_min.py-->line:64]:》》》》》用例【设置4关节软件限位最小值】测试完成《《《《《
+INFO 2025-08-12 14:38:27,023 [test_51_set_joint_min.py-->line:39]:》》》》》用例【设置5关节软件限位最小值】开始测试《《《《《
+DEBUG 2025-08-12 14:38:27,023 [test_51_set_joint_min.py-->line:40]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:27,023 [test_51_set_joint_min.py-->line:41]:test_id:5
+DEBUG 2025-08-12 14:38:27,023 [test_51_set_joint_min.py-->line:42]:test_angle:-30
+DEBUG 2025-08-12 14:38:27,170 [test_51_set_joint_min.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:38:27,170 [test_51_set_joint_min.py-->line:63]:✅ 用例【设置5关节软件限位最小值】测试通过
+INFO 2025-08-12 14:38:27,170 [test_51_set_joint_min.py-->line:64]:》》》》》用例【设置5关节软件限位最小值】测试完成《《《《《
+INFO 2025-08-12 14:38:27,174 [test_51_set_joint_min.py-->line:39]:》》》》》用例【设置6关节软件限位最小值】开始测试《《《《《
+DEBUG 2025-08-12 14:38:27,174 [test_51_set_joint_min.py-->line:40]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:27,174 [test_51_set_joint_min.py-->line:41]:test_id:6
+DEBUG 2025-08-12 14:38:27,174 [test_51_set_joint_min.py-->line:42]:test_angle:-30
+DEBUG 2025-08-12 14:38:27,320 [test_51_set_joint_min.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:38:27,320 [test_51_set_joint_min.py-->line:63]:✅ 用例【设置6关节软件限位最小值】测试通过
+INFO 2025-08-12 14:38:27,320 [test_51_set_joint_min.py-->line:64]:》》》》》用例【设置6关节软件限位最小值】测试完成《《《《《
+INFO 2025-08-12 14:38:27,323 [test_51_set_joint_min.py-->line:75]:》》》》》用例【运动到全关节45位置】开始测试《《《《《
+DEBUG 2025-08-12 14:38:27,324 [test_51_set_joint_min.py-->line:76]:test_api:send_angles
+DEBUG 2025-08-12 14:38:27,324 [test_51_set_joint_min.py-->line:77]:test_angle:[-45,-45,-45,-45,-45,-45]
+DEBUG 2025-08-12 14:38:28,673 [test_51_set_joint_min.py-->line:83]:接口返回：1
+INFO 2025-08-12 14:38:28,674 [test_51_set_joint_min.py-->line:98]:✅ 用例【运动到全关节45位置】测试通过
+INFO 2025-08-12 14:38:28,674 [test_51_set_joint_min.py-->line:99]:》》》》》用例【运动到全关节45位置】测试完成《《《《《
+INFO 2025-08-12 14:38:28,677 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限关节】开始测试《《《《《
+DEBUG 2025-08-12 14:38:28,677 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:28,677 [test_51_set_joint_min.py-->line:111]:test_id:7
+DEBUG 2025-08-12 14:38:28,678 [test_51_set_joint_min.py-->line:112]:test_angle:-30
+INFO 2025-08-12 14:38:28,678 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限关节】测试通过
+INFO 2025-08-12 14:38:28,678 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限关节】测试完成《《《《《
+INFO 2025-08-12 14:38:28,681 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限关节】开始测试《《《《《
+DEBUG 2025-08-12 14:38:28,681 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:28,681 [test_51_set_joint_min.py-->line:111]:test_id:0
+DEBUG 2025-08-12 14:38:28,681 [test_51_set_joint_min.py-->line:112]:test_angle:-30
+INFO 2025-08-12 14:38:28,681 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限关节】测试通过
+INFO 2025-08-12 14:38:28,681 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限关节】测试完成《《《《《
+INFO 2025-08-12 14:38:28,685 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:38:28,685 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:28,685 [test_51_set_joint_min.py-->line:111]:test_id:1
+DEBUG 2025-08-12 14:38:28,685 [test_51_set_joint_min.py-->line:112]:test_angle:-169
+INFO 2025-08-12 14:38:28,685 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:38:28,685 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:38:28,688 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:38:28,688 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:28,688 [test_51_set_joint_min.py-->line:111]:test_id:2
+DEBUG 2025-08-12 14:38:28,688 [test_51_set_joint_min.py-->line:112]:test_angle:-136
+INFO 2025-08-12 14:38:28,688 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:38:28,688 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:38:28,691 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:38:28,691 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:28,691 [test_51_set_joint_min.py-->line:111]:test_id:3
+DEBUG 2025-08-12 14:38:28,691 [test_51_set_joint_min.py-->line:112]:test_angle:-146
+INFO 2025-08-12 14:38:28,691 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:38:28,691 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:38:28,693 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:38:28,694 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:28,694 [test_51_set_joint_min.py-->line:111]:test_id:4
+DEBUG 2025-08-12 14:38:28,694 [test_51_set_joint_min.py-->line:112]:test_angle:-149
+INFO 2025-08-12 14:38:28,694 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:38:28,694 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:38:28,697 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:38:28,697 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:28,697 [test_51_set_joint_min.py-->line:111]:test_id:5
+DEBUG 2025-08-12 14:38:28,697 [test_51_set_joint_min.py-->line:112]:test_angle:-169
+INFO 2025-08-12 14:38:28,697 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:38:28,697 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:38:28,701 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:38:28,701 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:28,701 [test_51_set_joint_min.py-->line:111]:test_id:6
+DEBUG 2025-08-12 14:38:28,701 [test_51_set_joint_min.py-->line:112]:test_angle:-181
+INFO 2025-08-12 14:38:28,701 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:38:28,701 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:38:28,705 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:38:28,705 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:28,705 [test_51_set_joint_min.py-->line:111]:test_id:1
+DEBUG 2025-08-12 14:38:28,705 [test_51_set_joint_min.py-->line:112]:test_angle:169
+INFO 2025-08-12 14:38:28,705 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:38:28,705 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:38:28,707 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:38:28,708 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:28,708 [test_51_set_joint_min.py-->line:111]:test_id:2
+DEBUG 2025-08-12 14:38:28,708 [test_51_set_joint_min.py-->line:112]:test_angle:136
+INFO 2025-08-12 14:38:28,708 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:38:28,708 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:38:28,710 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:38:28,710 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:28,710 [test_51_set_joint_min.py-->line:111]:test_id:3
+DEBUG 2025-08-12 14:38:28,710 [test_51_set_joint_min.py-->line:112]:test_angle:146
+INFO 2025-08-12 14:38:28,710 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:38:28,710 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:38:28,712 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:38:28,713 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:28,713 [test_51_set_joint_min.py-->line:111]:test_id:4
+DEBUG 2025-08-12 14:38:28,713 [test_51_set_joint_min.py-->line:112]:test_angle:149
+INFO 2025-08-12 14:38:28,713 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:38:28,713 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:38:28,716 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:38:28,716 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:28,716 [test_51_set_joint_min.py-->line:111]:test_id:5
+DEBUG 2025-08-12 14:38:28,716 [test_51_set_joint_min.py-->line:112]:test_angle:169
+INFO 2025-08-12 14:38:28,716 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:38:28,716 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:38:28,718 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:38:28,718 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:38:28,718 [test_51_set_joint_min.py-->line:111]:test_id:6
+DEBUG 2025-08-12 14:38:28,718 [test_51_set_joint_min.py-->line:112]:test_angle:181
+INFO 2025-08-12 14:38:28,718 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:38:28,718 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:38:31,395 [test_51_set_joint_min.py-->line:27]:环境清理完成，接口测试结束
+INFO 2025-08-12 14:44:31,213 [test_52_set_joint_max.py-->line:21]:初始化完成，接口测试开始
+INFO 2025-08-12 14:44:32,763 [test_52_set_joint_max.py-->line:39]:》》》》》用例【设置1关节软件限位最大值】开始测试《《《《《
+DEBUG 2025-08-12 14:44:32,763 [test_52_set_joint_max.py-->line:40]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:32,763 [test_52_set_joint_max.py-->line:41]:test_id:1
+DEBUG 2025-08-12 14:44:32,765 [test_52_set_joint_max.py-->line:42]:test_angle:30
+DEBUG 2025-08-12 14:44:32,899 [test_52_set_joint_max.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:44:32,899 [test_52_set_joint_max.py-->line:63]:✅ 用例【设置1关节软件限位最大值】测试通过
+INFO 2025-08-12 14:44:32,899 [test_52_set_joint_max.py-->line:64]:》》》》》用例【设置1关节软件限位最大值】测试完成《《《《《
+INFO 2025-08-12 14:44:32,905 [test_52_set_joint_max.py-->line:39]:》》》》》用例【设置2关节软件限位最大值】开始测试《《《《《
+DEBUG 2025-08-12 14:44:32,905 [test_52_set_joint_max.py-->line:40]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:32,905 [test_52_set_joint_max.py-->line:41]:test_id:2
+DEBUG 2025-08-12 14:44:32,905 [test_52_set_joint_max.py-->line:42]:test_angle:30
+DEBUG 2025-08-12 14:44:33,051 [test_52_set_joint_max.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:44:33,052 [test_52_set_joint_max.py-->line:63]:✅ 用例【设置2关节软件限位最大值】测试通过
+INFO 2025-08-12 14:44:33,052 [test_52_set_joint_max.py-->line:64]:》》》》》用例【设置2关节软件限位最大值】测试完成《《《《《
+INFO 2025-08-12 14:44:33,054 [test_52_set_joint_max.py-->line:39]:》》》》》用例【设置3关节软件限位最大值】开始测试《《《《《
+DEBUG 2025-08-12 14:44:33,055 [test_52_set_joint_max.py-->line:40]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:33,055 [test_52_set_joint_max.py-->line:41]:test_id:3
+DEBUG 2025-08-12 14:44:33,055 [test_52_set_joint_max.py-->line:42]:test_angle:30
+DEBUG 2025-08-12 14:44:33,199 [test_52_set_joint_max.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:44:33,199 [test_52_set_joint_max.py-->line:63]:✅ 用例【设置3关节软件限位最大值】测试通过
+INFO 2025-08-12 14:44:33,199 [test_52_set_joint_max.py-->line:64]:》》》》》用例【设置3关节软件限位最大值】测试完成《《《《《
+INFO 2025-08-12 14:44:33,203 [test_52_set_joint_max.py-->line:39]:》》》》》用例【设置4关节软件限位最大值】开始测试《《《《《
+DEBUG 2025-08-12 14:44:33,203 [test_52_set_joint_max.py-->line:40]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:33,203 [test_52_set_joint_max.py-->line:41]:test_id:4
+DEBUG 2025-08-12 14:44:33,203 [test_52_set_joint_max.py-->line:42]:test_angle:30
+DEBUG 2025-08-12 14:44:33,349 [test_52_set_joint_max.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:44:33,350 [test_52_set_joint_max.py-->line:63]:✅ 用例【设置4关节软件限位最大值】测试通过
+INFO 2025-08-12 14:44:33,350 [test_52_set_joint_max.py-->line:64]:》》》》》用例【设置4关节软件限位最大值】测试完成《《《《《
+INFO 2025-08-12 14:44:33,352 [test_52_set_joint_max.py-->line:39]:》》》》》用例【设置5关节软件限位最大值】开始测试《《《《《
+DEBUG 2025-08-12 14:44:33,352 [test_52_set_joint_max.py-->line:40]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:33,352 [test_52_set_joint_max.py-->line:41]:test_id:5
+DEBUG 2025-08-12 14:44:33,352 [test_52_set_joint_max.py-->line:42]:test_angle:30
+DEBUG 2025-08-12 14:44:33,499 [test_52_set_joint_max.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:44:33,499 [test_52_set_joint_max.py-->line:63]:✅ 用例【设置5关节软件限位最大值】测试通过
+INFO 2025-08-12 14:44:33,499 [test_52_set_joint_max.py-->line:64]:》》》》》用例【设置5关节软件限位最大值】测试完成《《《《《
+INFO 2025-08-12 14:44:33,502 [test_52_set_joint_max.py-->line:39]:》》》》》用例【设置6关节软件限位最大值】开始测试《《《《《
+DEBUG 2025-08-12 14:44:33,502 [test_52_set_joint_max.py-->line:40]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:33,502 [test_52_set_joint_max.py-->line:41]:test_id:6
+DEBUG 2025-08-12 14:44:33,502 [test_52_set_joint_max.py-->line:42]:test_angle:30
+DEBUG 2025-08-12 14:44:33,649 [test_52_set_joint_max.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:44:33,649 [test_52_set_joint_max.py-->line:63]:✅ 用例【设置6关节软件限位最大值】测试通过
+INFO 2025-08-12 14:44:33,649 [test_52_set_joint_max.py-->line:64]:》》》》》用例【设置6关节软件限位最大值】测试完成《《《《《
+INFO 2025-08-12 14:44:33,652 [test_52_set_joint_max.py-->line:75]:》》》》》用例【运动到全关节45位置】开始测试《《《《《
+DEBUG 2025-08-12 14:44:33,653 [test_52_set_joint_max.py-->line:76]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:33,653 [test_52_set_joint_max.py-->line:77]:test_angle:[45,45,45,45,45,45]
+DEBUG 2025-08-12 14:44:34,971 [test_52_set_joint_max.py-->line:83]:接口返回：1
+INFO 2025-08-12 14:44:34,972 [test_52_set_joint_max.py-->line:98]:✅ 用例【运动到全关节45位置】测试通过
+INFO 2025-08-12 14:44:34,972 [test_52_set_joint_max.py-->line:99]:》》》》》用例【运动到全关节45位置】测试完成《《《《《
+INFO 2025-08-12 14:44:34,974 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限关节】开始测试《《《《《
+DEBUG 2025-08-12 14:44:34,974 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:34,974 [test_52_set_joint_max.py-->line:111]:test_id:7
+DEBUG 2025-08-12 14:44:34,975 [test_52_set_joint_max.py-->line:112]:test_angle:30
+INFO 2025-08-12 14:44:34,975 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限关节】测试通过
+INFO 2025-08-12 14:44:34,975 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限关节】测试完成《《《《《
+INFO 2025-08-12 14:44:34,978 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限关节】开始测试《《《《《
+DEBUG 2025-08-12 14:44:34,978 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:34,978 [test_52_set_joint_max.py-->line:111]:test_id:0
+DEBUG 2025-08-12 14:44:34,978 [test_52_set_joint_max.py-->line:112]:test_angle:30
+INFO 2025-08-12 14:44:34,978 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限关节】测试通过
+INFO 2025-08-12 14:44:34,978 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限关节】测试完成《《《《《
+INFO 2025-08-12 14:44:34,981 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:44:34,982 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:34,982 [test_52_set_joint_max.py-->line:111]:test_id:1
+DEBUG 2025-08-12 14:44:34,982 [test_52_set_joint_max.py-->line:112]:test_angle:-169
+INFO 2025-08-12 14:44:34,982 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:44:34,982 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:44:34,984 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:44:34,984 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:34,984 [test_52_set_joint_max.py-->line:111]:test_id:2
+DEBUG 2025-08-12 14:44:34,984 [test_52_set_joint_max.py-->line:112]:test_angle:-136
+INFO 2025-08-12 14:44:34,984 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:44:34,984 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:44:34,987 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:44:34,987 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:34,988 [test_52_set_joint_max.py-->line:111]:test_id:3
+DEBUG 2025-08-12 14:44:34,988 [test_52_set_joint_max.py-->line:112]:test_angle:-146
+INFO 2025-08-12 14:44:34,988 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:44:34,988 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:44:34,990 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:44:34,990 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:34,990 [test_52_set_joint_max.py-->line:111]:test_id:4
+DEBUG 2025-08-12 14:44:34,990 [test_52_set_joint_max.py-->line:112]:test_angle:-149
+INFO 2025-08-12 14:44:34,990 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:44:34,990 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:44:34,993 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:44:34,993 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:34,993 [test_52_set_joint_max.py-->line:111]:test_id:5
+DEBUG 2025-08-12 14:44:34,993 [test_52_set_joint_max.py-->line:112]:test_angle:-169
+INFO 2025-08-12 14:44:34,993 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:44:34,993 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:44:34,996 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:44:34,996 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:34,996 [test_52_set_joint_max.py-->line:111]:test_id:6
+DEBUG 2025-08-12 14:44:34,996 [test_52_set_joint_max.py-->line:112]:test_angle:-181
+INFO 2025-08-12 14:44:34,996 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:44:34,996 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:44:34,999 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:44:34,999 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:34,999 [test_52_set_joint_max.py-->line:111]:test_id:1
+DEBUG 2025-08-12 14:44:34,999 [test_52_set_joint_max.py-->line:112]:test_angle:169
+INFO 2025-08-12 14:44:34,999 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:44:34,999 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:44:35,001 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:44:35,001 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:35,001 [test_52_set_joint_max.py-->line:111]:test_id:2
+DEBUG 2025-08-12 14:44:35,001 [test_52_set_joint_max.py-->line:112]:test_angle:136
+INFO 2025-08-12 14:44:35,001 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:44:35,001 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:44:35,003 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:44:35,004 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:35,004 [test_52_set_joint_max.py-->line:111]:test_id:3
+DEBUG 2025-08-12 14:44:35,004 [test_52_set_joint_max.py-->line:112]:test_angle:146
+INFO 2025-08-12 14:44:35,004 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:44:35,004 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:44:35,007 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:44:35,007 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:35,007 [test_52_set_joint_max.py-->line:111]:test_id:4
+DEBUG 2025-08-12 14:44:35,007 [test_52_set_joint_max.py-->line:112]:test_angle:149
+INFO 2025-08-12 14:44:35,007 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:44:35,007 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:44:35,009 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:44:35,009 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:35,009 [test_52_set_joint_max.py-->line:111]:test_id:5
+DEBUG 2025-08-12 14:44:35,009 [test_52_set_joint_max.py-->line:112]:test_angle:169
+INFO 2025-08-12 14:44:35,009 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:44:35,009 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:44:35,011 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:44:35,012 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:44:35,012 [test_52_set_joint_max.py-->line:111]:test_id:6
+DEBUG 2025-08-12 14:44:35,012 [test_52_set_joint_max.py-->line:112]:test_angle:181
+INFO 2025-08-12 14:44:35,012 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:44:35,012 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:44:37,714 [test_52_set_joint_max.py-->line:27]:环境清理完成，接口测试结束
+INFO 2025-08-12 14:45:10,849 [test_51_set_joint_min.py-->line:21]:初始化完成，接口测试开始
+INFO 2025-08-12 14:45:12,430 [test_51_set_joint_min.py-->line:39]:》》》》》用例【设置1关节软件限位最小值】开始测试《《《《《
+DEBUG 2025-08-12 14:45:12,430 [test_51_set_joint_min.py-->line:40]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:12,430 [test_51_set_joint_min.py-->line:41]:test_id:1
+DEBUG 2025-08-12 14:45:12,430 [test_51_set_joint_min.py-->line:42]:test_angle:-30
+DEBUG 2025-08-12 14:45:12,559 [test_51_set_joint_min.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:45:12,564 [test_51_set_joint_min.py-->line:63]:✅ 用例【设置1关节软件限位最小值】测试通过
+INFO 2025-08-12 14:45:12,564 [test_51_set_joint_min.py-->line:64]:》》》》》用例【设置1关节软件限位最小值】测试完成《《《《《
+INFO 2025-08-12 14:45:12,567 [test_51_set_joint_min.py-->line:39]:》》》》》用例【设置2关节软件限位最小值】开始测试《《《《《
+DEBUG 2025-08-12 14:45:12,568 [test_51_set_joint_min.py-->line:40]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:12,568 [test_51_set_joint_min.py-->line:41]:test_id:2
+DEBUG 2025-08-12 14:45:12,568 [test_51_set_joint_min.py-->line:42]:test_angle:-30
+DEBUG 2025-08-12 14:45:12,708 [test_51_set_joint_min.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:45:12,713 [test_51_set_joint_min.py-->line:63]:✅ 用例【设置2关节软件限位最小值】测试通过
+INFO 2025-08-12 14:45:12,713 [test_51_set_joint_min.py-->line:64]:》》》》》用例【设置2关节软件限位最小值】测试完成《《《《《
+INFO 2025-08-12 14:45:12,716 [test_51_set_joint_min.py-->line:39]:》》》》》用例【设置3关节软件限位最小值】开始测试《《《《《
+DEBUG 2025-08-12 14:45:12,717 [test_51_set_joint_min.py-->line:40]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:12,717 [test_51_set_joint_min.py-->line:41]:test_id:3
+DEBUG 2025-08-12 14:45:12,717 [test_51_set_joint_min.py-->line:42]:test_angle:-30
+DEBUG 2025-08-12 14:45:12,859 [test_51_set_joint_min.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:45:12,864 [test_51_set_joint_min.py-->line:63]:✅ 用例【设置3关节软件限位最小值】测试通过
+INFO 2025-08-12 14:45:12,864 [test_51_set_joint_min.py-->line:64]:》》》》》用例【设置3关节软件限位最小值】测试完成《《《《《
+INFO 2025-08-12 14:45:12,867 [test_51_set_joint_min.py-->line:39]:》》》》》用例【设置4关节软件限位最小值】开始测试《《《《《
+DEBUG 2025-08-12 14:45:12,867 [test_51_set_joint_min.py-->line:40]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:12,867 [test_51_set_joint_min.py-->line:41]:test_id:4
+DEBUG 2025-08-12 14:45:12,867 [test_51_set_joint_min.py-->line:42]:test_angle:-30
+DEBUG 2025-08-12 14:45:13,009 [test_51_set_joint_min.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:45:13,012 [test_51_set_joint_min.py-->line:63]:✅ 用例【设置4关节软件限位最小值】测试通过
+INFO 2025-08-12 14:45:13,012 [test_51_set_joint_min.py-->line:64]:》》》》》用例【设置4关节软件限位最小值】测试完成《《《《《
+INFO 2025-08-12 14:45:13,019 [test_51_set_joint_min.py-->line:39]:》》》》》用例【设置5关节软件限位最小值】开始测试《《《《《
+DEBUG 2025-08-12 14:45:13,019 [test_51_set_joint_min.py-->line:40]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:13,019 [test_51_set_joint_min.py-->line:41]:test_id:5
+DEBUG 2025-08-12 14:45:13,019 [test_51_set_joint_min.py-->line:42]:test_angle:-30
+DEBUG 2025-08-12 14:45:13,159 [test_51_set_joint_min.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:45:13,161 [test_51_set_joint_min.py-->line:63]:✅ 用例【设置5关节软件限位最小值】测试通过
+INFO 2025-08-12 14:45:13,161 [test_51_set_joint_min.py-->line:64]:》》》》》用例【设置5关节软件限位最小值】测试完成《《《《《
+INFO 2025-08-12 14:45:13,167 [test_51_set_joint_min.py-->line:39]:》》》》》用例【设置6关节软件限位最小值】开始测试《《《《《
+DEBUG 2025-08-12 14:45:13,167 [test_51_set_joint_min.py-->line:40]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:13,167 [test_51_set_joint_min.py-->line:41]:test_id:6
+DEBUG 2025-08-12 14:45:13,167 [test_51_set_joint_min.py-->line:42]:test_angle:-30
+DEBUG 2025-08-12 14:45:13,309 [test_51_set_joint_min.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:45:13,313 [test_51_set_joint_min.py-->line:63]:✅ 用例【设置6关节软件限位最小值】测试通过
+INFO 2025-08-12 14:45:13,313 [test_51_set_joint_min.py-->line:64]:》》》》》用例【设置6关节软件限位最小值】测试完成《《《《《
+INFO 2025-08-12 14:45:13,318 [test_51_set_joint_min.py-->line:75]:》》》》》用例【运动到全关节45位置】开始测试《《《《《
+DEBUG 2025-08-12 14:45:13,318 [test_51_set_joint_min.py-->line:76]:test_api:send_angles
+DEBUG 2025-08-12 14:45:13,318 [test_51_set_joint_min.py-->line:77]:test_angle:[-45,-45,-45,-45,-45,-45]
+DEBUG 2025-08-12 14:45:14,631 [test_51_set_joint_min.py-->line:83]:接口返回：1
+INFO 2025-08-12 14:45:14,637 [test_51_set_joint_min.py-->line:98]:✅ 用例【运动到全关节45位置】测试通过
+INFO 2025-08-12 14:45:14,637 [test_51_set_joint_min.py-->line:99]:》》》》》用例【运动到全关节45位置】测试完成《《《《《
+INFO 2025-08-12 14:45:14,641 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限关节】开始测试《《《《《
+DEBUG 2025-08-12 14:45:14,641 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:14,641 [test_51_set_joint_min.py-->line:111]:test_id:7
+DEBUG 2025-08-12 14:45:14,641 [test_51_set_joint_min.py-->line:112]:test_angle:-30
+INFO 2025-08-12 14:45:14,641 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限关节】测试通过
+INFO 2025-08-12 14:45:14,641 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限关节】测试完成《《《《《
+INFO 2025-08-12 14:45:14,647 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限关节】开始测试《《《《《
+DEBUG 2025-08-12 14:45:14,647 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:14,647 [test_51_set_joint_min.py-->line:111]:test_id:0
+DEBUG 2025-08-12 14:45:14,647 [test_51_set_joint_min.py-->line:112]:test_angle:-30
+INFO 2025-08-12 14:45:14,647 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限关节】测试通过
+INFO 2025-08-12 14:45:14,647 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限关节】测试完成《《《《《
+INFO 2025-08-12 14:45:14,650 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:14,651 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:14,651 [test_51_set_joint_min.py-->line:111]:test_id:1
+DEBUG 2025-08-12 14:45:14,651 [test_51_set_joint_min.py-->line:112]:test_angle:-169
+INFO 2025-08-12 14:45:14,651 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:14,651 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:14,655 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:14,655 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:14,655 [test_51_set_joint_min.py-->line:111]:test_id:2
+DEBUG 2025-08-12 14:45:14,655 [test_51_set_joint_min.py-->line:112]:test_angle:-136
+INFO 2025-08-12 14:45:14,655 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:14,655 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:14,658 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:14,658 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:14,659 [test_51_set_joint_min.py-->line:111]:test_id:3
+DEBUG 2025-08-12 14:45:14,659 [test_51_set_joint_min.py-->line:112]:test_angle:-146
+INFO 2025-08-12 14:45:14,659 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:14,659 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:14,661 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:14,662 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:14,662 [test_51_set_joint_min.py-->line:111]:test_id:4
+DEBUG 2025-08-12 14:45:14,662 [test_51_set_joint_min.py-->line:112]:test_angle:-149
+INFO 2025-08-12 14:45:14,662 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:14,662 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:14,666 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:14,666 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:14,666 [test_51_set_joint_min.py-->line:111]:test_id:5
+DEBUG 2025-08-12 14:45:14,666 [test_51_set_joint_min.py-->line:112]:test_angle:-169
+INFO 2025-08-12 14:45:14,666 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:14,666 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:14,668 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:14,669 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:14,669 [test_51_set_joint_min.py-->line:111]:test_id:6
+DEBUG 2025-08-12 14:45:14,669 [test_51_set_joint_min.py-->line:112]:test_angle:-181
+INFO 2025-08-12 14:45:14,669 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:14,669 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:14,674 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:14,674 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:14,674 [test_51_set_joint_min.py-->line:111]:test_id:1
+DEBUG 2025-08-12 14:45:14,674 [test_51_set_joint_min.py-->line:112]:test_angle:169
+INFO 2025-08-12 14:45:14,674 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:14,674 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:14,678 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:14,679 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:14,679 [test_51_set_joint_min.py-->line:111]:test_id:2
+DEBUG 2025-08-12 14:45:14,679 [test_51_set_joint_min.py-->line:112]:test_angle:136
+INFO 2025-08-12 14:45:14,679 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:14,679 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:14,682 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:14,682 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:14,682 [test_51_set_joint_min.py-->line:111]:test_id:3
+DEBUG 2025-08-12 14:45:14,682 [test_51_set_joint_min.py-->line:112]:test_angle:146
+INFO 2025-08-12 14:45:14,682 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:14,682 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:14,686 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:14,686 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:14,686 [test_51_set_joint_min.py-->line:111]:test_id:4
+DEBUG 2025-08-12 14:45:14,686 [test_51_set_joint_min.py-->line:112]:test_angle:149
+INFO 2025-08-12 14:45:14,686 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:14,687 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:14,689 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:14,689 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:14,689 [test_51_set_joint_min.py-->line:111]:test_id:5
+DEBUG 2025-08-12 14:45:14,689 [test_51_set_joint_min.py-->line:112]:test_angle:169
+INFO 2025-08-12 14:45:14,689 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:14,690 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:14,692 [test_51_set_joint_min.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:14,693 [test_51_set_joint_min.py-->line:110]:test_api:set_joint_min
+DEBUG 2025-08-12 14:45:14,693 [test_51_set_joint_min.py-->line:111]:test_id:6
+DEBUG 2025-08-12 14:45:14,693 [test_51_set_joint_min.py-->line:112]:test_angle:181
+INFO 2025-08-12 14:45:14,693 [test_51_set_joint_min.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:14,693 [test_51_set_joint_min.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:17,378 [test_51_set_joint_min.py-->line:27]:环境清理完成，接口测试结束
+INFO 2025-08-12 14:45:17,385 [test_52_set_joint_max.py-->line:21]:初始化完成，接口测试开始
+INFO 2025-08-12 14:45:18,934 [test_52_set_joint_max.py-->line:39]:》》》》》用例【设置1关节软件限位最大值】开始测试《《《《《
+DEBUG 2025-08-12 14:45:18,935 [test_52_set_joint_max.py-->line:40]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:18,935 [test_52_set_joint_max.py-->line:41]:test_id:1
+DEBUG 2025-08-12 14:45:18,935 [test_52_set_joint_max.py-->line:42]:test_angle:30
+DEBUG 2025-08-12 14:45:19,070 [test_52_set_joint_max.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:45:19,073 [test_52_set_joint_max.py-->line:63]:✅ 用例【设置1关节软件限位最大值】测试通过
+INFO 2025-08-12 14:45:19,074 [test_52_set_joint_max.py-->line:64]:》》》》》用例【设置1关节软件限位最大值】测试完成《《《《《
+INFO 2025-08-12 14:45:19,077 [test_52_set_joint_max.py-->line:39]:》》》》》用例【设置2关节软件限位最大值】开始测试《《《《《
+DEBUG 2025-08-12 14:45:19,077 [test_52_set_joint_max.py-->line:40]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:19,077 [test_52_set_joint_max.py-->line:41]:test_id:2
+DEBUG 2025-08-12 14:45:19,078 [test_52_set_joint_max.py-->line:42]:test_angle:30
+DEBUG 2025-08-12 14:45:19,221 [test_52_set_joint_max.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:45:19,225 [test_52_set_joint_max.py-->line:63]:✅ 用例【设置2关节软件限位最大值】测试通过
+INFO 2025-08-12 14:45:19,225 [test_52_set_joint_max.py-->line:64]:》》》》》用例【设置2关节软件限位最大值】测试完成《《《《《
+INFO 2025-08-12 14:45:19,230 [test_52_set_joint_max.py-->line:39]:》》》》》用例【设置3关节软件限位最大值】开始测试《《《《《
+DEBUG 2025-08-12 14:45:19,230 [test_52_set_joint_max.py-->line:40]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:19,230 [test_52_set_joint_max.py-->line:41]:test_id:3
+DEBUG 2025-08-12 14:45:19,230 [test_52_set_joint_max.py-->line:42]:test_angle:30
+DEBUG 2025-08-12 14:45:19,370 [test_52_set_joint_max.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:45:19,373 [test_52_set_joint_max.py-->line:63]:✅ 用例【设置3关节软件限位最大值】测试通过
+INFO 2025-08-12 14:45:19,373 [test_52_set_joint_max.py-->line:64]:》》》》》用例【设置3关节软件限位最大值】测试完成《《《《《
+INFO 2025-08-12 14:45:19,378 [test_52_set_joint_max.py-->line:39]:》》》》》用例【设置4关节软件限位最大值】开始测试《《《《《
+DEBUG 2025-08-12 14:45:19,378 [test_52_set_joint_max.py-->line:40]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:19,378 [test_52_set_joint_max.py-->line:41]:test_id:4
+DEBUG 2025-08-12 14:45:19,378 [test_52_set_joint_max.py-->line:42]:test_angle:30
+DEBUG 2025-08-12 14:45:19,520 [test_52_set_joint_max.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:45:19,524 [test_52_set_joint_max.py-->line:63]:✅ 用例【设置4关节软件限位最大值】测试通过
+INFO 2025-08-12 14:45:19,524 [test_52_set_joint_max.py-->line:64]:》》》》》用例【设置4关节软件限位最大值】测试完成《《《《《
+INFO 2025-08-12 14:45:19,530 [test_52_set_joint_max.py-->line:39]:》》》》》用例【设置5关节软件限位最大值】开始测试《《《《《
+DEBUG 2025-08-12 14:45:19,530 [test_52_set_joint_max.py-->line:40]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:19,530 [test_52_set_joint_max.py-->line:41]:test_id:5
+DEBUG 2025-08-12 14:45:19,530 [test_52_set_joint_max.py-->line:42]:test_angle:30
+DEBUG 2025-08-12 14:45:19,671 [test_52_set_joint_max.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:45:19,676 [test_52_set_joint_max.py-->line:63]:✅ 用例【设置5关节软件限位最大值】测试通过
+INFO 2025-08-12 14:45:19,676 [test_52_set_joint_max.py-->line:64]:》》》》》用例【设置5关节软件限位最大值】测试完成《《《《《
+INFO 2025-08-12 14:45:19,680 [test_52_set_joint_max.py-->line:39]:》》》》》用例【设置6关节软件限位最大值】开始测试《《《《《
+DEBUG 2025-08-12 14:45:19,680 [test_52_set_joint_max.py-->line:40]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:19,680 [test_52_set_joint_max.py-->line:41]:test_id:6
+DEBUG 2025-08-12 14:45:19,680 [test_52_set_joint_max.py-->line:42]:test_angle:30
+DEBUG 2025-08-12 14:45:19,820 [test_52_set_joint_max.py-->line:48]:接口返回：1
+INFO 2025-08-12 14:45:19,823 [test_52_set_joint_max.py-->line:63]:✅ 用例【设置6关节软件限位最大值】测试通过
+INFO 2025-08-12 14:45:19,824 [test_52_set_joint_max.py-->line:64]:》》》》》用例【设置6关节软件限位最大值】测试完成《《《《《
+INFO 2025-08-12 14:45:19,827 [test_52_set_joint_max.py-->line:75]:》》》》》用例【运动到全关节45位置】开始测试《《《《《
+DEBUG 2025-08-12 14:45:19,827 [test_52_set_joint_max.py-->line:76]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:19,827 [test_52_set_joint_max.py-->line:77]:test_angle:[45,45,45,45,45,45]
+DEBUG 2025-08-12 14:45:21,172 [test_52_set_joint_max.py-->line:83]:接口返回：1
+INFO 2025-08-12 14:45:21,178 [test_52_set_joint_max.py-->line:98]:✅ 用例【运动到全关节45位置】测试通过
+INFO 2025-08-12 14:45:21,178 [test_52_set_joint_max.py-->line:99]:》》》》》用例【运动到全关节45位置】测试完成《《《《《
+INFO 2025-08-12 14:45:21,181 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限关节】开始测试《《《《《
+DEBUG 2025-08-12 14:45:21,183 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:21,183 [test_52_set_joint_max.py-->line:111]:test_id:7
+DEBUG 2025-08-12 14:45:21,183 [test_52_set_joint_max.py-->line:112]:test_angle:30
+INFO 2025-08-12 14:45:21,183 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限关节】测试通过
+INFO 2025-08-12 14:45:21,183 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限关节】测试完成《《《《《
+INFO 2025-08-12 14:45:21,186 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限关节】开始测试《《《《《
+DEBUG 2025-08-12 14:45:21,186 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:21,186 [test_52_set_joint_max.py-->line:111]:test_id:0
+DEBUG 2025-08-12 14:45:21,186 [test_52_set_joint_max.py-->line:112]:test_angle:30
+INFO 2025-08-12 14:45:21,186 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限关节】测试通过
+INFO 2025-08-12 14:45:21,186 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限关节】测试完成《《《《《
+INFO 2025-08-12 14:45:21,189 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:21,189 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:21,189 [test_52_set_joint_max.py-->line:111]:test_id:1
+DEBUG 2025-08-12 14:45:21,189 [test_52_set_joint_max.py-->line:112]:test_angle:-169
+INFO 2025-08-12 14:45:21,190 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:21,190 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:21,192 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:21,192 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:21,193 [test_52_set_joint_max.py-->line:111]:test_id:2
+DEBUG 2025-08-12 14:45:21,193 [test_52_set_joint_max.py-->line:112]:test_angle:-136
+INFO 2025-08-12 14:45:21,193 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:21,193 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:21,196 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:21,196 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:21,196 [test_52_set_joint_max.py-->line:111]:test_id:3
+DEBUG 2025-08-12 14:45:21,196 [test_52_set_joint_max.py-->line:112]:test_angle:-146
+INFO 2025-08-12 14:45:21,196 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:21,196 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:21,199 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:21,199 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:21,199 [test_52_set_joint_max.py-->line:111]:test_id:4
+DEBUG 2025-08-12 14:45:21,199 [test_52_set_joint_max.py-->line:112]:test_angle:-149
+INFO 2025-08-12 14:45:21,199 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:21,199 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:21,202 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:21,202 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:21,202 [test_52_set_joint_max.py-->line:111]:test_id:5
+DEBUG 2025-08-12 14:45:21,202 [test_52_set_joint_max.py-->line:112]:test_angle:-169
+INFO 2025-08-12 14:45:21,202 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:21,202 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:21,206 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:21,206 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:21,206 [test_52_set_joint_max.py-->line:111]:test_id:6
+DEBUG 2025-08-12 14:45:21,206 [test_52_set_joint_max.py-->line:112]:test_angle:-181
+INFO 2025-08-12 14:45:21,206 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:21,206 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:21,209 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:21,209 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:21,209 [test_52_set_joint_max.py-->line:111]:test_id:1
+DEBUG 2025-08-12 14:45:21,209 [test_52_set_joint_max.py-->line:112]:test_angle:169
+INFO 2025-08-12 14:45:21,209 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:21,209 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:21,212 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:21,212 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:21,212 [test_52_set_joint_max.py-->line:111]:test_id:2
+DEBUG 2025-08-12 14:45:21,212 [test_52_set_joint_max.py-->line:112]:test_angle:136
+INFO 2025-08-12 14:45:21,213 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:21,213 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:21,217 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:21,217 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:21,217 [test_52_set_joint_max.py-->line:111]:test_id:3
+DEBUG 2025-08-12 14:45:21,217 [test_52_set_joint_max.py-->line:112]:test_angle:146
+INFO 2025-08-12 14:45:21,217 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:21,217 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:21,221 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:21,221 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:21,221 [test_52_set_joint_max.py-->line:111]:test_id:4
+DEBUG 2025-08-12 14:45:21,221 [test_52_set_joint_max.py-->line:112]:test_angle:149
+INFO 2025-08-12 14:45:21,221 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:21,221 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:21,224 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:21,224 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:21,224 [test_52_set_joint_max.py-->line:111]:test_id:5
+DEBUG 2025-08-12 14:45:21,224 [test_52_set_joint_max.py-->line:112]:test_angle:169
+INFO 2025-08-12 14:45:21,224 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:21,224 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:21,227 [test_52_set_joint_max.py-->line:109]:》》》》》用例【设置超限角度】开始测试《《《《《
+DEBUG 2025-08-12 14:45:21,227 [test_52_set_joint_max.py-->line:110]:test_api:set_joint_max
+DEBUG 2025-08-12 14:45:21,228 [test_52_set_joint_max.py-->line:111]:test_id:6
+DEBUG 2025-08-12 14:45:21,228 [test_52_set_joint_max.py-->line:112]:test_angle:181
+INFO 2025-08-12 14:45:21,228 [test_52_set_joint_max.py-->line:117]:✅ 用例【设置超限角度】测试通过
+INFO 2025-08-12 14:45:21,228 [test_52_set_joint_max.py-->line:118]:》》》》》用例【设置超限角度】测试完成《《《《《
+INFO 2025-08-12 14:45:23,920 [test_52_set_joint_max.py-->line:27]:环境清理完成，接口测试结束
