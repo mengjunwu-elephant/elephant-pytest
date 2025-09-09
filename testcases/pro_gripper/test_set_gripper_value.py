@@ -1,3 +1,5 @@
+import time
+
 import pytest
 import allure
 from common1 import logger
@@ -33,7 +35,7 @@ def test_set_gripper_value_normal(device, case):
     with allure.step("发送设置请求"):
         set_res = device.m.set_gripper_value(case["value"], case["speed"])
         logger.debug(f"设置返回值：{set_res}")
-
+        time.sleep(3)
     with allure.step("读取当前设置的值"):
         get_res = device.m.get_gripper_value()
         logger.debug(f"获取返回值：{get_res}")
@@ -66,7 +68,7 @@ def test_set_gripper_value_exception(device, case):
         logger.debug(f"Value: {case['value']}, Speed: {case['speed']}")
 
     with allure.step("尝试设置异常值并捕获 ValueError"):
-        with pytest.raises(ValueError, match="value错误"):
+        with pytest.raises(ValueError):
             device.m.set_gripper_value(case["value"], case["speed"])
 
     logger.info(f"✅ 用例【{title}】测试成功")

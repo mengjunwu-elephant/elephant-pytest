@@ -72353,3 +72353,2021 @@ DEBUG 2025-07-23 17:50:43,979 [test_set_gripper_pose.py-->line:62]:test_is_free:
 INFO 2025-07-23 17:50:43,979 [test_set_gripper_pose.py-->line:68]:✅ 用例【设置rank参数超限】测试通过
 INFO 2025-07-23 17:50:43,979 [test_set_gripper_pose.py-->line:69]:》》》》》用例【设置rank参数超限】测试完成《《《《《
 INFO 2025-07-23 17:50:46,993 [test_set_gripper_pose.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:20:34,736 [test_get_close_angle.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:20:34,739 [test_get_close_angle.py-->line:23]:》》》》》用例【正确获取夹爪关闭角度】开始测试《《《《《
+DEBUG 2025-08-25 15:20:34,739 [test_get_close_angle.py-->line:26]:test_api: get_close_angle
+DEBUG 2025-08-25 15:20:34,739 [test_get_close_angle.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:20:34,788 [test_get_close_angle.py-->line:31]:接口返回结果：0
+DEBUG 2025-08-25 15:20:34,788 [test_get_close_angle.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:20:34,791 [test_get_close_angle.py-->line:42]:✅ 用例【正确获取夹爪关闭角度】测试通过
+INFO 2025-08-25 15:20:34,791 [test_get_close_angle.py-->line:43]:》》》》》用例【正确获取夹爪关闭角度】测试完成《《《《《
+INFO 2025-08-25 15:20:34,820 [test_get_close_angle.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:20:34,825 [test_get_firmware_version.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:20:34,826 [test_get_firmware_version.py-->line:23]:》》》》》用例【正确获取固件版本号】开始测试《《《《《
+DEBUG 2025-08-25 15:20:34,826 [test_get_firmware_version.py-->line:26]:test_api: get_firmware_version
+DEBUG 2025-08-25 15:20:34,826 [test_get_firmware_version.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:20:34,868 [test_get_firmware_version.py-->line:31]:接口返回值：13
+DEBUG 2025-08-25 15:20:34,868 [test_get_firmware_version.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:20:35,043 [test_get_firmware_version.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:20:35,047 [test_get_gripper_baud.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:20:35,048 [test_get_gripper_baud.py-->line:23]:》》》》》用例【正确获取夹爪波特率】开始测试《《《《《
+DEBUG 2025-08-25 15:20:35,048 [test_get_gripper_baud.py-->line:26]:test_api: get_gripper_baud
+DEBUG 2025-08-25 15:20:35,048 [test_get_gripper_baud.py-->line:27]:test_baud: None
+DEBUG 2025-08-25 15:20:35,090 [test_get_gripper_baud.py-->line:31]:接口返回值：0
+DEBUG 2025-08-25 15:20:35,090 [test_get_gripper_baud.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:20:35,092 [test_get_gripper_baud.py-->line:42]:✅ 用例【正确获取夹爪波特率】测试通过
+INFO 2025-08-25 15:20:35,092 [test_get_gripper_baud.py-->line:43]:》》》》》用例【正确获取夹爪波特率】测试完成《《《《《
+INFO 2025-08-25 15:20:35,121 [test_get_gripper_baud.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:20:35,126 [test_get_gripper_cw.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:20:35,127 [test_get_gripper_cw.py-->line:23]:》》》》》用例【正确获取夹爪顺时针可运行误差】开始测试《《《《《
+DEBUG 2025-08-25 15:20:35,127 [test_get_gripper_cw.py-->line:26]:test_api: set_gripper_cw
+DEBUG 2025-08-25 15:20:35,127 [test_get_gripper_cw.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:20:35,182 [test_get_gripper_cw.py-->line:31]:接口返回值：5
+DEBUG 2025-08-25 15:20:35,182 [test_get_gripper_cw.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:20:35,214 [test_get_gripper_cw.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:20:35,218 [test_get_gripper_cww.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:20:35,218 [test_get_gripper_cww.py-->line:23]:》》》》》用例【正确获取夹爪逆时针可运行误差】开始测试《《《《《
+DEBUG 2025-08-25 15:20:35,218 [test_get_gripper_cww.py-->line:26]:test_api: set_gripper_cww
+DEBUG 2025-08-25 15:20:35,218 [test_get_gripper_cww.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:20:35,260 [test_get_gripper_cww.py-->line:31]:接口返回值: 5
+DEBUG 2025-08-25 15:20:35,260 [test_get_gripper_cww.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:20:35,292 [test_get_gripper_cww.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:20:35,297 [test_get_gripper_d.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:20:35,298 [test_get_gripper_d.py-->line:23]:》》》》》用例【正确获取夹爪D值】开始测试《《《《《
+DEBUG 2025-08-25 15:20:35,298 [test_get_gripper_d.py-->line:26]:test_api: get_gripper_D
+DEBUG 2025-08-25 15:20:35,298 [test_get_gripper_d.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:20:35,339 [test_get_gripper_d.py-->line:31]:接口返回值: 120
+DEBUG 2025-08-25 15:20:35,339 [test_get_gripper_d.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:20:35,341 [test_get_gripper_d.py-->line:42]:✅ 用例【正确获取夹爪D值】测试通过
+INFO 2025-08-25 15:20:35,342 [test_get_gripper_d.py-->line:43]:》》》》》用例【正确获取夹爪D值】测试完成《《《《《
+INFO 2025-08-25 15:20:35,369 [test_get_gripper_d.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:20:35,373 [test_get_gripper_i.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:20:35,374 [test_get_gripper_i.py-->line:23]:》》》》》用例【正确读取夹爪I值】开始测试《《《《《
+DEBUG 2025-08-25 15:20:35,374 [test_get_gripper_i.py-->line:26]:test_api: get_gripper_I
+DEBUG 2025-08-25 15:20:35,374 [test_get_gripper_i.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:20:35,416 [test_get_gripper_i.py-->line:31]:接口返回值: 0
+DEBUG 2025-08-25 15:20:35,416 [test_get_gripper_i.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:20:35,418 [test_get_gripper_i.py-->line:42]:✅ 用例【正确读取夹爪I值】测试通过
+INFO 2025-08-25 15:20:35,418 [test_get_gripper_i.py-->line:43]:》》》》》用例【正确读取夹爪I值】测试完成《《《《《
+INFO 2025-08-25 15:20:35,448 [test_get_gripper_i.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:20:35,453 [test_get_gripper_id.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:20:35,454 [test_get_gripper_id.py-->line:25]:》》》》》用例【正确设置固件ID号】开始测试《《《《《
+DEBUG 2025-08-25 15:20:35,454 [test_get_gripper_id.py-->line:28]:test_api: set_gripper_id
+DEBUG 2025-08-25 15:20:35,454 [test_get_gripper_id.py-->line:29]:test_parameters: 10
+DEBUG 2025-08-25 15:20:35,496 [test_get_gripper_id.py-->line:33]:设置返回结果：1
+DEBUG 2025-08-25 15:20:35,543 [test_get_gripper_id.py-->line:37]:获取到的ID：10
+DEBUG 2025-08-25 15:20:35,543 [test_get_gripper_id.py-->line:41]:请求类型断言成功
+INFO 2025-08-25 15:20:35,544 [test_get_gripper_id.py-->line:49]:✅ 用例【正确设置固件ID号】测试通过
+INFO 2025-08-25 15:20:35,544 [test_get_gripper_id.py-->line:50]:》》》》》用例【正确设置固件ID号】测试完成《《《《《
+INFO 2025-08-25 15:20:35,548 [test_get_gripper_id.py-->line:58]:》》》》》用例【设置固件ID号（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:20:35,549 [test_get_gripper_id.py-->line:61]:test_api: set_gripper_id
+DEBUG 2025-08-25 15:20:35,549 [test_get_gripper_id.py-->line:62]:test_parameters: -1
+INFO 2025-08-25 15:20:35,618 [test_get_gripper_id.py-->line:58]:》》》》》用例【设置固件ID号（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:20:35,618 [test_get_gripper_id.py-->line:61]:test_api: set_gripper_id
+DEBUG 2025-08-25 15:20:35,618 [test_get_gripper_id.py-->line:62]:test_parameters: 255
+INFO 2025-08-25 15:20:35,714 [test_get_gripper_id.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:20:35,718 [test_get_gripper_min_pressure.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:20:35,719 [test_get_gripper_min_pressure.py-->line:23]:》》》》》用例【正确获取夹爪最小启动力】开始测试《《《《《
+DEBUG 2025-08-25 15:20:35,719 [test_get_gripper_min_pressure.py-->line:26]:test_api: get_gripper_min_pressue
+DEBUG 2025-08-25 15:20:35,719 [test_get_gripper_min_pressure.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:20:35,776 [test_get_gripper_min_pressure.py-->line:31]:接口返回结果：0
+DEBUG 2025-08-25 15:20:35,776 [test_get_gripper_min_pressure.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:20:35,779 [test_get_gripper_min_pressure.py-->line:42]:✅ 用例【正确获取夹爪最小启动力】测试通过
+INFO 2025-08-25 15:20:35,779 [test_get_gripper_min_pressure.py-->line:43]:》》》》》用例【正确获取夹爪最小启动力】测试完成《《《《《
+INFO 2025-08-25 15:20:35,806 [test_get_gripper_min_pressure.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:20:35,813 [test_get_gripper_p.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:20:35,814 [test_get_gripper_p.py-->line:24]:》》》》》用例【正确获取夹爪P值】开始测试《《《《《
+DEBUG 2025-08-25 15:20:35,814 [test_get_gripper_p.py-->line:27]:test_api: get_gripper_P
+DEBUG 2025-08-25 15:20:35,814 [test_get_gripper_p.py-->line:28]:test_parameters: None
+DEBUG 2025-08-25 15:20:35,869 [test_get_gripper_p.py-->line:32]:接口返回结果：100
+DEBUG 2025-08-25 15:20:35,869 [test_get_gripper_p.py-->line:36]:请求类型断言成功
+INFO 2025-08-25 15:20:35,900 [test_get_gripper_p.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:20:35,905 [test_get_gripper_status.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:20:35,906 [test_get_gripper_status.py-->line:25]:》》》》》用例【获取夹爪运动时的夹持状态】开始测试《《《《《
+DEBUG 2025-08-25 15:20:35,906 [test_get_gripper_status.py-->line:27]:API: get_gripper_status, 参数: None
+DEBUG 2025-08-25 15:20:36,260 [test_get_gripper_status.py-->line:33]:接口返回结果：0
+INFO 2025-08-25 15:20:36,263 [test_get_gripper_status.py-->line:44]:》》》》》用例【获取夹爪停止运动时的夹持状态】开始测试《《《《《
+DEBUG 2025-08-25 15:20:36,263 [test_get_gripper_status.py-->line:46]:API: get_gripper_status, 参数: None
+DEBUG 2025-08-25 15:20:41,316 [test_get_gripper_status.py-->line:51]:接口返回结果：1
+INFO 2025-08-25 15:20:41,319 [test_get_gripper_status.py-->line:62]:》》》》》用例【获取夹爪停止运动且夹到物体时的夹持状态】开始测试《《《《《
+DEBUG 2025-08-25 15:21:00,162 [test_get_gripper_status.py-->line:70]:接口返回结果：2
+INFO 2025-08-25 15:21:00,168 [test_get_gripper_status.py-->line:81]:》》》》》用例【获取夹爪停止运动且物体掉落时的夹持状态】开始测试《《《《《
+DEBUG 2025-08-25 15:21:04,104 [test_get_gripper_status.py-->line:87]:接口返回结果：3
+INFO 2025-08-25 15:21:04,104 [test_get_gripper_status.py-->line:93]:✅ 用例【获取夹爪停止运动且物体掉落时的夹持状态】测试通过
+INFO 2025-08-25 15:21:04,104 [test_get_gripper_status.py-->line:94]:》》》》》用例【获取夹爪停止运动且物体掉落时的夹持状态】测试完成《《《《《
+INFO 2025-08-25 15:21:04,229 [test_get_gripper_status.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:04,235 [test_get_gripper_torque.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:04,236 [test_get_gripper_torque.py-->line:23]:》》》》》用例【正确获取夹爪扭矩】开始测试《《《《《
+DEBUG 2025-08-25 15:21:04,236 [test_get_gripper_torque.py-->line:26]:test_api: get_gripper_torque
+DEBUG 2025-08-25 15:21:04,236 [test_get_gripper_torque.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:21:04,291 [test_get_gripper_torque.py-->line:31]:接口返回结果：100
+DEBUG 2025-08-25 15:21:04,291 [test_get_gripper_torque.py-->line:35]:类型断言成功
+INFO 2025-08-25 15:21:04,294 [test_get_gripper_torque.py-->line:42]:✅ 用例【正确获取夹爪扭矩】测试成功
+INFO 2025-08-25 15:21:04,294 [test_get_gripper_torque.py-->line:43]:》》》》》用例【正确获取夹爪扭矩】测试完成《《《《《
+INFO 2025-08-25 15:21:04,323 [test_get_gripper_torque.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:04,327 [test_get_modified_version.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:04,328 [test_get_modified_version.py-->line:23]:》》》》》用例【正确获取固件次版本号】开始测试《《《《《
+DEBUG 2025-08-25 15:21:04,328 [test_get_modified_version.py-->line:26]:test_api: get_modified_version
+DEBUG 2025-08-25 15:21:04,328 [test_get_modified_version.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:21:04,370 [test_get_modified_version.py-->line:31]:接口返回结果：3
+DEBUG 2025-08-25 15:21:04,370 [test_get_modified_version.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:21:04,401 [test_get_modified_version.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:04,405 [test_get_open_angle.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:04,405 [test_get_open_angle.py-->line:23]:》》》》》用例【获取夹爪张开角度】开始测试《《《《《
+DEBUG 2025-08-25 15:21:04,405 [test_get_open_angle.py-->line:26]:test_api: get_open_angle
+DEBUG 2025-08-25 15:21:04,405 [test_get_open_angle.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:21:04,448 [test_get_open_angle.py-->line:31]:接口返回结果：100
+DEBUG 2025-08-25 15:21:04,448 [test_get_open_angle.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:21:04,450 [test_get_open_angle.py-->line:42]:✅ 用例【获取夹爪张开角度】测试通过
+INFO 2025-08-25 15:21:04,451 [test_get_open_angle.py-->line:43]:》》》》》用例【获取夹爪张开角度】测试完成《《《《《
+INFO 2025-08-25 15:21:04,480 [test_get_open_angle.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:04,484 [test_get_protection_current.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:04,485 [test_get_protection_current.py-->line:23]:》》》》》用例【正确获取夹爪夹持电流】开始测试《《《《《
+DEBUG 2025-08-25 15:21:04,485 [test_get_protection_current.py-->line:26]:test_api: get_protection_current
+DEBUG 2025-08-25 15:21:04,485 [test_get_protection_current.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:21:04,526 [test_get_protection_current.py-->line:31]:接口返回结果：41
+DEBUG 2025-08-25 15:21:04,526 [test_get_protection_current.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:21:04,557 [test_get_protection_current.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:04,560 [test_get_queue_count.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:04,561 [test_get_queue_count.py-->line:23]:》》》》》用例【正确获取夹爪队列长度】开始测试《《《《《
+DEBUG 2025-08-25 15:21:04,561 [test_get_queue_count.py-->line:26]:test_api: get_queue_count
+DEBUG 2025-08-25 15:21:04,561 [test_get_queue_count.py-->line:27]:test_parameters: None
+INFO 2025-08-25 15:21:04,604 [test_get_queue_count.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:04,608 [test_get_to_set_speed.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:04,609 [test_get_to_set_speed.py-->line:23]:》》》》》用例【正确获取夹爪速度】开始测试《《《《《
+DEBUG 2025-08-25 15:21:04,609 [test_get_to_set_speed.py-->line:26]:test_api: get_to_set_speed
+DEBUG 2025-08-25 15:21:04,609 [test_get_to_set_speed.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:21:04,651 [test_get_to_set_speed.py-->line:31]:接口返回结果：100
+DEBUG 2025-08-25 15:21:04,651 [test_get_to_set_speed.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:21:04,654 [test_get_to_set_speed.py-->line:42]:✅ 用例【正确获取夹爪速度】测试通过
+INFO 2025-08-25 15:21:04,654 [test_get_to_set_speed.py-->line:43]:》》》》》用例【正确获取夹爪速度】测试完成《《《《《
+INFO 2025-08-25 15:21:04,683 [test_get_to_set_speed.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:04,687 [test_get_vir_pos.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:04,688 [test_get_vir_pos.py-->line:23]:》》》》》用例【正确获取夹爪虚位数值】开始测试《《《《《
+DEBUG 2025-08-25 15:21:04,688 [test_get_vir_pos.py-->line:26]:test_api: get_vir_pos
+DEBUG 2025-08-25 15:21:04,688 [test_get_vir_pos.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:21:04,730 [test_get_vir_pos.py-->line:31]:接口返回结果：8
+DEBUG 2025-08-25 15:21:04,730 [test_get_vir_pos.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:21:04,733 [test_get_vir_pos.py-->line:42]:✅ 用例【正确获取夹爪虚位数值】测试通过
+INFO 2025-08-25 15:21:04,733 [test_get_vir_pos.py-->line:43]:》》》》》用例【正确获取夹爪虚位数值】测试完成《《《《《
+INFO 2025-08-25 15:21:04,761 [test_get_vir_pos.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:04,764 [test_pause.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:04,765 [test_pause.py-->line:25]:》》》》》用例【正确设置夹爪暂停】开始测试《《《《《
+DEBUG 2025-08-25 15:21:04,765 [test_pause.py-->line:28]:test_api: pause
+DEBUG 2025-08-25 15:21:04,765 [test_pause.py-->line:29]:test_parameters: None
+DEBUG 2025-08-25 15:21:05,104 [test_pause.py-->line:37]:接口返回结果：1
+DEBUG 2025-08-25 15:21:05,104 [test_pause.py-->line:41]:请求类型断言成功
+INFO 2025-08-25 15:21:05,107 [test_pause.py-->line:48]:✅ 用例【正确设置夹爪暂停】测试通过
+INFO 2025-08-25 15:21:05,108 [test_pause.py-->line:49]:》》》》》用例【正确设置夹爪暂停】测试完成《《《《《
+INFO 2025-08-25 15:21:05,180 [test_pause.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:05,183 [test_resume.py-->line:12]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:05,184 [test_resume.py-->line:22]:》》》》》用例【正确设置夹爪恢复运动】开始测试《《《《《
+DEBUG 2025-08-25 15:21:05,184 [test_resume.py-->line:25]:test_api: resume
+DEBUG 2025-08-25 15:21:05,184 [test_resume.py-->line:26]:test_parameters: None
+DEBUG 2025-08-25 15:21:05,226 [test_resume.py-->line:30]:接口返回结果：1
+DEBUG 2025-08-25 15:21:05,226 [test_resume.py-->line:34]:请求类型断言成功
+INFO 2025-08-25 15:21:05,227 [test_resume.py-->line:41]:✅ 用例【正确设置夹爪恢复运动】测试通过
+INFO 2025-08-25 15:21:05,227 [test_resume.py-->line:42]:》》》》》用例【正确设置夹爪恢复运动】测试完成《《《《《
+INFO 2025-08-25 15:21:05,258 [test_resume.py-->line:15]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:05,261 [test_set_abs_gripper_angle.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:05,262 [test_set_abs_gripper_angle.py-->line:30]:》》》》》用例【正确设置夹爪绝对运动】开始测试《《《《《
+DEBUG 2025-08-25 15:21:05,262 [test_set_abs_gripper_angle.py-->line:31]:test_api: set_abs_gripper_angle
+DEBUG 2025-08-25 15:21:05,262 [test_set_abs_gripper_angle.py-->line:32]:test_value: 50
+DEBUG 2025-08-25 15:21:09,062 [test_set_abs_gripper_angle.py-->line:39]:请求类型断言成功
+INFO 2025-08-25 15:21:09,064 [test_set_abs_gripper_angle.py-->line:46]:请求结果断言成功，用例【正确设置夹爪绝对运动】测试成功
+INFO 2025-08-25 15:21:09,064 [test_set_abs_gripper_angle.py-->line:47]:》》》》》用例【正确设置夹爪绝对运动】测试完成《《《《《
+INFO 2025-08-25 15:21:12,661 [test_set_abs_gripper_angle.py-->line:54]:》》》》》用例【绝对运动中暂停，恢复运动】开始测试《《《《《
+DEBUG 2025-08-25 15:21:19,844 [test_set_abs_gripper_angle.py-->line:71]:请求类型断言成功
+INFO 2025-08-25 15:21:19,846 [test_set_abs_gripper_angle.py-->line:81]:请求结果断言成功，用例【绝对运动中暂停，恢复运动】测试成功
+INFO 2025-08-25 15:21:19,846 [test_set_abs_gripper_angle.py-->line:82]:》》》》》用例【绝对运动中暂停，恢复运动】测试完成《《《《《
+INFO 2025-08-25 15:21:23,644 [test_set_abs_gripper_angle.py-->line:89]:》》》》》用例【绝对运动中停止运动】开始测试《《《《《
+DEBUG 2025-08-25 15:21:26,785 [test_set_abs_gripper_angle.py-->line:101]:请求类型断言成功
+INFO 2025-08-25 15:21:26,787 [test_set_abs_gripper_angle.py-->line:110]:✅ 用例【绝对运动中停止运动】测试通过
+INFO 2025-08-25 15:21:26,788 [test_set_abs_gripper_angle.py-->line:111]:》》》》》用例【绝对运动中停止运动】测试完成《《《《《
+INFO 2025-08-25 15:21:30,567 [test_set_abs_gripper_angle.py-->line:119]:》》》》》用例【设置绝对运动角度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:30,567 [test_set_abs_gripper_angle.py-->line:120]:test_api: set_abs_gripper_angle
+DEBUG 2025-08-25 15:21:30,567 [test_set_abs_gripper_angle.py-->line:121]:test_value: 101
+INFO 2025-08-25 15:21:34,175 [test_set_abs_gripper_angle.py-->line:119]:》》》》》用例【设置绝对运动速度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:34,175 [test_set_abs_gripper_angle.py-->line:120]:test_api: set_abs_gripper_angle
+DEBUG 2025-08-25 15:21:34,175 [test_set_abs_gripper_angle.py-->line:121]:test_value: 60
+INFO 2025-08-25 15:21:40,790 [test_set_abs_gripper_angle.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:40,797 [test_set_close_angle.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:40,798 [test_set_close_angle.py-->line:24]:》》》》》用例【正确设置夹爪关闭角度】开始测试《《《《《
+DEBUG 2025-08-25 15:21:40,798 [test_set_close_angle.py-->line:25]:test_api: set_close_angle
+DEBUG 2025-08-25 15:21:40,798 [test_set_close_angle.py-->line:26]:test_parameters: 10
+DEBUG 2025-08-25 15:21:40,853 [test_set_close_angle.py-->line:33]:请求类型断言成功
+INFO 2025-08-25 15:21:40,855 [test_set_close_angle.py-->line:40]:✅ 用例【正确设置夹爪关闭角度】测试通过
+INFO 2025-08-25 15:21:40,855 [test_set_close_angle.py-->line:41]:》》》》》用例【正确设置夹爪关闭角度】测试完成《《《《《
+INFO 2025-08-25 15:21:40,859 [test_set_close_angle.py-->line:49]:》》》》》用例【设置夹爪关闭角度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:40,859 [test_set_close_angle.py-->line:50]:test_api: set_close_angle
+DEBUG 2025-08-25 15:21:40,859 [test_set_close_angle.py-->line:51]:test_parameters: -1
+INFO 2025-08-25 15:21:40,859 [test_set_close_angle.py-->line:57]:✅ 用例【设置夹爪关闭角度（超限）】测试通过
+INFO 2025-08-25 15:21:40,859 [test_set_close_angle.py-->line:58]:》》》》》用例【设置夹爪关闭角度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:21:40,861 [test_set_close_angle.py-->line:49]:》》》》》用例【设置夹爪关闭角度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:40,861 [test_set_close_angle.py-->line:50]:test_api: set_close_angle
+DEBUG 2025-08-25 15:21:40,861 [test_set_close_angle.py-->line:51]:test_parameters: 101
+INFO 2025-08-25 15:21:40,862 [test_set_close_angle.py-->line:57]:✅ 用例【设置夹爪关闭角度（超限）】测试通过
+INFO 2025-08-25 15:21:40,862 [test_set_close_angle.py-->line:58]:》》》》》用例【设置夹爪关闭角度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:21:40,948 [test_set_close_angle.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:40,953 [test_set_gripper_baud.py-->line:17]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:40,954 [test_set_gripper_baud.py-->line:32]:》》》》》用例【正确设置固件波特率号】开始测试《《《《《
+DEBUG 2025-08-25 15:21:40,954 [test_set_gripper_baud.py-->line:35]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:21:40,954 [test_set_gripper_baud.py-->line:36]:test_parameters: 1
+DEBUG 2025-08-25 15:21:41,009 [test_set_gripper_baud.py-->line:40]:设置波特率返回：1
+DEBUG 2025-08-25 15:21:42,592 [test_set_gripper_baud.py-->line:48]:读取波特率返回：1
+INFO 2025-08-25 15:21:42,592 [test_set_gripper_baud.py-->line:55]:✅ 用例【正确设置固件波特率号】测试通过
+INFO 2025-08-25 15:21:42,592 [test_set_gripper_baud.py-->line:56]:》》》》》用例【正确设置固件波特率号】测试完成《《《《《
+INFO 2025-08-25 15:21:42,627 [test_set_gripper_baud.py-->line:64]:》》》》》用例【设置波特率参数超限】开始测试《《《《《
+DEBUG 2025-08-25 15:21:42,627 [test_set_gripper_baud.py-->line:67]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:21:42,628 [test_set_gripper_baud.py-->line:68]:test_parameters: 6
+INFO 2025-08-25 15:21:42,628 [test_set_gripper_baud.py-->line:74]:✅ 用例【设置波特率参数超限】测试通过
+INFO 2025-08-25 15:21:42,628 [test_set_gripper_baud.py-->line:75]:》》》》》用例【设置波特率参数超限】测试完成《《《《《
+INFO 2025-08-25 15:21:42,630 [test_set_gripper_baud.py-->line:64]:》》》》》用例【设置波特率参数超限】开始测试《《《《《
+DEBUG 2025-08-25 15:21:42,630 [test_set_gripper_baud.py-->line:67]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:21:42,630 [test_set_gripper_baud.py-->line:68]:test_parameters: -1
+INFO 2025-08-25 15:21:42,630 [test_set_gripper_baud.py-->line:74]:✅ 用例【设置波特率参数超限】测试通过
+INFO 2025-08-25 15:21:42,630 [test_set_gripper_baud.py-->line:75]:》》》》》用例【设置波特率参数超限】测试完成《《《《《
+INFO 2025-08-25 15:21:42,714 [test_set_gripper_baud.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:42,720 [test_set_gripper_calibrate.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:42,721 [test_set_gripper_calibrate.py-->line:27]:》》》》》用例【正确设置夹爪零位】开始测试《《《《《
+DEBUG 2025-08-25 15:21:42,721 [test_set_gripper_calibrate.py-->line:30]:test_api: set_gripper_calibration
+DEBUG 2025-08-25 15:21:42,721 [test_set_gripper_calibrate.py-->line:31]:test_parameters: None
+DEBUG 2025-08-25 15:21:51,272 [test_set_gripper_calibrate.py-->line:36]:接口返回结果：1
+DEBUG 2025-08-25 15:21:51,272 [test_set_gripper_calibrate.py-->line:40]:请求类型断言成功
+INFO 2025-08-25 15:21:51,274 [test_set_gripper_calibrate.py-->line:47]:✅ 用例【正确设置夹爪零位】测试通过
+INFO 2025-08-25 15:21:51,274 [test_set_gripper_calibrate.py-->line:48]:》》》》》用例【正确设置夹爪零位】测试完成《《《《《
+INFO 2025-08-25 15:21:51,304 [test_set_gripper_calibrate.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:51,309 [test_set_gripper_cw.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:51,310 [test_set_gripper_cw.py-->line:26]:》》》》》用例【正确设置夹爪顺时针可运行误差】开始测试《《《《《
+DEBUG 2025-08-25 15:21:51,310 [test_set_gripper_cw.py-->line:29]:test_api: set_gripper_cw
+DEBUG 2025-08-25 15:21:51,310 [test_set_gripper_cw.py-->line:30]:test_parameters: 10
+DEBUG 2025-08-25 15:21:51,351 [test_set_gripper_cw.py-->line:34]:设置返回值：1
+DEBUG 2025-08-25 15:21:51,398 [test_set_gripper_cw.py-->line:38]:获取返回值：10
+DEBUG 2025-08-25 15:21:51,398 [test_set_gripper_cw.py-->line:42]:请求类型断言成功
+INFO 2025-08-25 15:21:51,401 [test_set_gripper_cw.py-->line:51]:✅ 用例【正确设置夹爪顺时针可运行误差】测试通过
+INFO 2025-08-25 15:21:51,401 [test_set_gripper_cw.py-->line:52]:》》》》》用例【正确设置夹爪顺时针可运行误差】测试完成《《《《《
+INFO 2025-08-25 15:21:51,405 [test_set_gripper_cw.py-->line:60]:》》》》》用例【设置夹爪顺时针可运行误差(超限)】开始测试《《《《《
+DEBUG 2025-08-25 15:21:51,405 [test_set_gripper_cw.py-->line:63]:test_api: set_gripper_cw
+DEBUG 2025-08-25 15:21:51,405 [test_set_gripper_cw.py-->line:64]:test_parameters: 17
+INFO 2025-08-25 15:21:51,405 [test_set_gripper_cw.py-->line:70]:✅ 用例【设置夹爪顺时针可运行误差(超限)】测试通过
+INFO 2025-08-25 15:21:51,405 [test_set_gripper_cw.py-->line:71]:》》》》》用例【设置夹爪顺时针可运行误差(超限)】测试完成《《《《《
+INFO 2025-08-25 15:21:51,407 [test_set_gripper_cw.py-->line:60]:》》》》》用例【设置夹爪顺时针可运行误差(超限)】开始测试《《《《《
+DEBUG 2025-08-25 15:21:51,407 [test_set_gripper_cw.py-->line:63]:test_api: set_gripper_cw
+DEBUG 2025-08-25 15:21:51,407 [test_set_gripper_cw.py-->line:64]:test_parameters: -1
+INFO 2025-08-25 15:21:51,407 [test_set_gripper_cw.py-->line:70]:✅ 用例【设置夹爪顺时针可运行误差(超限)】测试通过
+INFO 2025-08-25 15:21:51,407 [test_set_gripper_cw.py-->line:71]:》》》》》用例【设置夹爪顺时针可运行误差(超限)】测试完成《《《《《
+INFO 2025-08-25 15:21:51,491 [test_set_gripper_cw.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:51,496 [test_set_gripper_cww.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:51,497 [test_set_gripper_cww.py-->line:26]:》》》》》用例【正确设置夹爪逆时针可运行误差】开始测试《《《《《
+DEBUG 2025-08-25 15:21:51,497 [test_set_gripper_cww.py-->line:29]:test_api: set_gripper_cww
+DEBUG 2025-08-25 15:21:51,497 [test_set_gripper_cww.py-->line:30]:test_parameters: 10
+DEBUG 2025-08-25 15:21:51,538 [test_set_gripper_cww.py-->line:34]:设置返回值：1
+DEBUG 2025-08-25 15:21:51,585 [test_set_gripper_cww.py-->line:38]:获取返回值：10
+DEBUG 2025-08-25 15:21:51,585 [test_set_gripper_cww.py-->line:42]:请求类型断言成功
+INFO 2025-08-25 15:21:51,587 [test_set_gripper_cww.py-->line:51]:✅ 用例【正确设置夹爪逆时针可运行误差】测试通过
+INFO 2025-08-25 15:21:51,587 [test_set_gripper_cww.py-->line:52]:》》》》》用例【正确设置夹爪逆时针可运行误差】测试完成《《《《《
+INFO 2025-08-25 15:21:51,590 [test_set_gripper_cww.py-->line:60]:》》》》》用例【设置夹爪逆时针可运行误差(超限)】开始测试《《《《《
+DEBUG 2025-08-25 15:21:51,590 [test_set_gripper_cww.py-->line:63]:test_api: set_gripper_cww
+DEBUG 2025-08-25 15:21:51,590 [test_set_gripper_cww.py-->line:64]:test_parameters: 17
+INFO 2025-08-25 15:21:51,590 [test_set_gripper_cww.py-->line:70]:✅ 用例【设置夹爪逆时针可运行误差(超限)】测试通过
+INFO 2025-08-25 15:21:51,590 [test_set_gripper_cww.py-->line:71]:》》》》》用例【设置夹爪逆时针可运行误差(超限)】测试完成《《《《《
+INFO 2025-08-25 15:21:51,592 [test_set_gripper_cww.py-->line:60]:》》》》》用例【设置夹爪逆时针可运行误差(超限)】开始测试《《《《《
+DEBUG 2025-08-25 15:21:51,592 [test_set_gripper_cww.py-->line:63]:test_api: set_gripper_cww
+DEBUG 2025-08-25 15:21:51,592 [test_set_gripper_cww.py-->line:64]:test_parameters: -1
+INFO 2025-08-25 15:21:51,592 [test_set_gripper_cww.py-->line:70]:✅ 用例【设置夹爪逆时针可运行误差(超限)】测试通过
+INFO 2025-08-25 15:21:51,592 [test_set_gripper_cww.py-->line:71]:》》》》》用例【设置夹爪逆时针可运行误差(超限)】测试完成《《《《《
+INFO 2025-08-25 15:21:51,678 [test_set_gripper_cww.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:51,684 [test_set_gripper_d.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:51,685 [test_set_gripper_d.py-->line:26]:》》》》》用例【正确设置夹爪D值】开始测试《《《《《
+DEBUG 2025-08-25 15:21:51,685 [test_set_gripper_d.py-->line:29]:test_api: set_gripper_D
+DEBUG 2025-08-25 15:21:51,685 [test_set_gripper_d.py-->line:30]:test_parameters: 20
+DEBUG 2025-08-25 15:21:51,726 [test_set_gripper_d.py-->line:34]:设置返回值：1
+DEBUG 2025-08-25 15:21:51,772 [test_set_gripper_d.py-->line:38]:获取返回值：20
+DEBUG 2025-08-25 15:21:51,772 [test_set_gripper_d.py-->line:42]:请求类型断言成功
+INFO 2025-08-25 15:21:51,774 [test_set_gripper_d.py-->line:50]:✅ 用例【正确设置夹爪D值】测试通过
+INFO 2025-08-25 15:21:51,774 [test_set_gripper_d.py-->line:51]:》》》》》用例【正确设置夹爪D值】测试完成《《《《《
+INFO 2025-08-25 15:21:51,776 [test_set_gripper_d.py-->line:59]:》》》》》用例【设置夹爪D值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:51,777 [test_set_gripper_d.py-->line:62]:test_api: set_gripper_D
+DEBUG 2025-08-25 15:21:51,777 [test_set_gripper_d.py-->line:63]:test_parameters: 255
+INFO 2025-08-25 15:21:51,777 [test_set_gripper_d.py-->line:69]:✅ 用例【设置夹爪D值（超限）】测试通过
+INFO 2025-08-25 15:21:51,777 [test_set_gripper_d.py-->line:70]:》》》》》用例【设置夹爪D值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:21:51,779 [test_set_gripper_d.py-->line:59]:》》》》》用例【设置夹爪D值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:51,779 [test_set_gripper_d.py-->line:62]:test_api: set_gripper_D
+DEBUG 2025-08-25 15:21:51,779 [test_set_gripper_d.py-->line:63]:test_parameters: -1
+INFO 2025-08-25 15:21:51,779 [test_set_gripper_d.py-->line:69]:✅ 用例【设置夹爪D值（超限）】测试通过
+INFO 2025-08-25 15:21:51,779 [test_set_gripper_d.py-->line:70]:》》》》》用例【设置夹爪D值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:21:51,866 [test_set_gripper_d.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:51,872 [test_set_gripper_enabled.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:51,873 [test_set_gripper_enabled.py-->line:25]:》》》》》用例【正确设置夹爪使能状态(上使能)】开始测试《《《《《
+DEBUG 2025-08-25 15:21:51,873 [test_set_gripper_enabled.py-->line:28]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:21:51,873 [test_set_gripper_enabled.py-->line:29]:test_parameters: 1
+DEBUG 2025-08-25 15:21:51,929 [test_set_gripper_enabled.py-->line:33]:接口返回结果：1
+DEBUG 2025-08-25 15:21:51,929 [test_set_gripper_enabled.py-->line:37]:请求类型断言成功
+INFO 2025-08-25 15:21:51,931 [test_set_gripper_enabled.py-->line:44]:✅ 用例【正确设置夹爪使能状态(上使能)】测试通过
+INFO 2025-08-25 15:21:51,932 [test_set_gripper_enabled.py-->line:45]:》》》》》用例【正确设置夹爪使能状态(上使能)】测试完成《《《《《
+INFO 2025-08-25 15:21:51,936 [test_set_gripper_enabled.py-->line:25]:》》》》》用例【正确设置夹爪使能状态(下使能)】开始测试《《《《《
+DEBUG 2025-08-25 15:21:51,936 [test_set_gripper_enabled.py-->line:28]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:21:51,936 [test_set_gripper_enabled.py-->line:29]:test_parameters: 0
+DEBUG 2025-08-25 15:21:51,977 [test_set_gripper_enabled.py-->line:33]:接口返回结果：1
+DEBUG 2025-08-25 15:21:51,977 [test_set_gripper_enabled.py-->line:37]:请求类型断言成功
+INFO 2025-08-25 15:21:51,979 [test_set_gripper_enabled.py-->line:44]:✅ 用例【正确设置夹爪使能状态(下使能)】测试通过
+INFO 2025-08-25 15:21:51,979 [test_set_gripper_enabled.py-->line:45]:》》》》》用例【正确设置夹爪使能状态(下使能)】测试完成《《《《《
+INFO 2025-08-25 15:21:51,982 [test_set_gripper_enabled.py-->line:53]:》》》》》用例【设置夹爪使能状态（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:51,982 [test_set_gripper_enabled.py-->line:56]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:21:51,982 [test_set_gripper_enabled.py-->line:57]:test_parameters: 2
+INFO 2025-08-25 15:21:51,982 [test_set_gripper_enabled.py-->line:63]:✅ 用例【设置夹爪使能状态（超限）】测试通过
+INFO 2025-08-25 15:21:51,982 [test_set_gripper_enabled.py-->line:64]:》》》》》用例【设置夹爪使能状态（超限）】测试完成《《《《《
+INFO 2025-08-25 15:21:51,985 [test_set_gripper_enabled.py-->line:53]:》》》》》用例【设置夹爪使能状态（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:51,985 [test_set_gripper_enabled.py-->line:56]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:21:51,985 [test_set_gripper_enabled.py-->line:57]:test_parameters: -1
+INFO 2025-08-25 15:21:51,985 [test_set_gripper_enabled.py-->line:63]:✅ 用例【设置夹爪使能状态（超限）】测试通过
+INFO 2025-08-25 15:21:51,985 [test_set_gripper_enabled.py-->line:64]:》》》》》用例【设置夹爪使能状态（超限）】测试完成《《《《《
+INFO 2025-08-25 15:21:52,009 [test_set_gripper_enabled.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:52,014 [test_set_gripper_i.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:52,014 [test_set_gripper_i.py-->line:26]:》》》》》用例【正确设置夹爪I值】开始测试《《《《《
+DEBUG 2025-08-25 15:21:52,015 [test_set_gripper_i.py-->line:29]:test_api: set_gripper_I
+DEBUG 2025-08-25 15:21:52,015 [test_set_gripper_i.py-->line:30]:test_parameters: 20
+DEBUG 2025-08-25 15:21:52,055 [test_set_gripper_i.py-->line:34]:设置返回值: 1
+DEBUG 2025-08-25 15:21:52,102 [test_set_gripper_i.py-->line:38]:读取返回值: 20
+INFO 2025-08-25 15:21:52,104 [test_set_gripper_i.py-->line:49]:✅ 用例【正确设置夹爪I值】测试通过
+INFO 2025-08-25 15:21:52,104 [test_set_gripper_i.py-->line:50]:》》》》》用例【正确设置夹爪I值】测试完成《《《《《
+INFO 2025-08-25 15:21:52,108 [test_set_gripper_i.py-->line:58]:》》》》》用例【设置夹爪I值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:52,108 [test_set_gripper_i.py-->line:61]:test_api: set_gripper_I
+DEBUG 2025-08-25 15:21:52,108 [test_set_gripper_i.py-->line:62]:test_parameters: 255
+INFO 2025-08-25 15:21:52,108 [test_set_gripper_i.py-->line:68]:✅ 用例【设置夹爪I值（超限）】测试通过
+INFO 2025-08-25 15:21:52,108 [test_set_gripper_i.py-->line:69]:》》》》》用例【设置夹爪I值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:21:52,110 [test_set_gripper_i.py-->line:58]:》》》》》用例【设置夹爪I值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:52,110 [test_set_gripper_i.py-->line:61]:test_api: set_gripper_I
+DEBUG 2025-08-25 15:21:52,110 [test_set_gripper_i.py-->line:62]:test_parameters: -1
+INFO 2025-08-25 15:21:52,110 [test_set_gripper_i.py-->line:68]:✅ 用例【设置夹爪I值（超限）】测试通过
+INFO 2025-08-25 15:21:52,110 [test_set_gripper_i.py-->line:69]:》》》》》用例【设置夹爪I值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:21:52,195 [test_set_gripper_i.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:52,199 [test_set_gripper_id.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:52,199 [test_set_gripper_id.py-->line:26]:》》》》》用例【正确设置固件ID号】开始测试《《《《《
+DEBUG 2025-08-25 15:21:52,199 [test_set_gripper_id.py-->line:29]:test_api: set_gripper_id
+DEBUG 2025-08-25 15:21:52,199 [test_set_gripper_id.py-->line:30]:test_parameters: 10
+DEBUG 2025-08-25 15:21:52,241 [test_set_gripper_id.py-->line:34]:设置返回值: 1
+DEBUG 2025-08-25 15:21:52,288 [test_set_gripper_id.py-->line:38]:读取返回值: 10
+INFO 2025-08-25 15:21:52,290 [test_set_gripper_id.py-->line:50]:✅ 用例【正确设置固件ID号】测试通过
+INFO 2025-08-25 15:21:52,290 [test_set_gripper_id.py-->line:51]:》》》》》用例【正确设置固件ID号】测试完成《《《《《
+INFO 2025-08-25 15:21:52,292 [test_set_gripper_id.py-->line:59]:》》》》》用例【设置固件ID号（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:52,293 [test_set_gripper_id.py-->line:62]:test_api: set_gripper_id
+DEBUG 2025-08-25 15:21:52,293 [test_set_gripper_id.py-->line:63]:test_parameters: -1
+INFO 2025-08-25 15:21:52,308 [test_set_gripper_id.py-->line:59]:》》》》》用例【设置固件ID号（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:52,308 [test_set_gripper_id.py-->line:62]:test_api: set_gripper_id
+DEBUG 2025-08-25 15:21:52,308 [test_set_gripper_id.py-->line:63]:test_parameters: 255
+INFO 2025-08-25 15:21:52,399 [test_set_gripper_id.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:52,402 [test_set_gripper_min_pressure.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:52,403 [test_set_gripper_min_pressure.py-->line:26]:》》》》》用例【正确设置夹爪最小启动力】开始测试《《《《《
+DEBUG 2025-08-25 15:21:52,403 [test_set_gripper_min_pressure.py-->line:29]:test_api: set_gripper_min_pressue
+DEBUG 2025-08-25 15:21:52,403 [test_set_gripper_min_pressure.py-->line:30]:test_parameters: 10
+DEBUG 2025-08-25 15:21:52,446 [test_set_gripper_min_pressure.py-->line:34]:设置返回值: 1
+DEBUG 2025-08-25 15:21:52,492 [test_set_gripper_min_pressure.py-->line:38]:读取返回值: 10
+DEBUG 2025-08-25 15:21:52,492 [test_set_gripper_min_pressure.py-->line:42]:请求类型断言成功
+INFO 2025-08-25 15:21:52,499 [test_set_gripper_min_pressure.py-->line:61]:》》》》》用例【设置夹爪最小启动力（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:52,500 [test_set_gripper_min_pressure.py-->line:64]:test_api: set_gripper_min_pressue
+DEBUG 2025-08-25 15:21:52,500 [test_set_gripper_min_pressure.py-->line:65]:test_parameters: 255
+INFO 2025-08-25 15:21:52,515 [test_set_gripper_min_pressure.py-->line:61]:》》》》》用例【设置夹爪最小启动力（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:52,515 [test_set_gripper_min_pressure.py-->line:64]:test_api: set_gripper_min_pressue
+DEBUG 2025-08-25 15:21:52,515 [test_set_gripper_min_pressure.py-->line:65]:test_parameters: -1
+INFO 2025-08-25 15:21:52,633 [test_set_gripper_min_pressure.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:52,637 [test_set_gripper_p.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:52,638 [test_set_gripper_p.py-->line:26]:》》》》》用例【正确设置夹爪P值】开始测试《《《《《
+DEBUG 2025-08-25 15:21:52,638 [test_set_gripper_p.py-->line:29]:test_api: set_gripper_P
+DEBUG 2025-08-25 15:21:52,638 [test_set_gripper_p.py-->line:30]:test_parameters: 20
+DEBUG 2025-08-25 15:21:52,681 [test_set_gripper_p.py-->line:34]:设置返回值: 1
+DEBUG 2025-08-25 15:21:52,728 [test_set_gripper_p.py-->line:38]:获取返回值: 20
+DEBUG 2025-08-25 15:21:52,728 [test_set_gripper_p.py-->line:42]:请求类型断言成功
+INFO 2025-08-25 15:21:52,734 [test_set_gripper_p.py-->line:61]:》》》》》用例【设置夹爪P值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:52,735 [test_set_gripper_p.py-->line:64]:test_api: set_gripper_P
+DEBUG 2025-08-25 15:21:52,735 [test_set_gripper_p.py-->line:65]:test_parameters: 255
+INFO 2025-08-25 15:21:52,750 [test_set_gripper_p.py-->line:61]:》》》》》用例【设置夹爪P值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:52,750 [test_set_gripper_p.py-->line:64]:test_api: set_gripper_P
+DEBUG 2025-08-25 15:21:52,750 [test_set_gripper_p.py-->line:65]:test_parameters: -1
+INFO 2025-08-25 15:21:52,836 [test_set_gripper_p.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:52,839 [test_set_gripper_torque.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:52,840 [test_set_gripper_torque.py-->line:26]:》》》》》用例【正确设置夹爪扭矩】开始测试《《《《《
+DEBUG 2025-08-25 15:21:52,840 [test_set_gripper_torque.py-->line:29]:API: set_gripper_torque
+DEBUG 2025-08-25 15:21:52,840 [test_set_gripper_torque.py-->line:30]:Parameter: 10
+DEBUG 2025-08-25 15:21:52,883 [test_set_gripper_torque.py-->line:34]:设置返回值：1
+DEBUG 2025-08-25 15:21:52,937 [test_set_gripper_torque.py-->line:38]:获取返回值：10
+DEBUG 2025-08-25 15:21:52,937 [test_set_gripper_torque.py-->line:42]:请求类型断言成功
+INFO 2025-08-25 15:21:52,944 [test_set_gripper_torque.py-->line:61]:》》》》》用例【设置夹爪扭矩（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:52,944 [test_set_gripper_torque.py-->line:64]:API: set_gripper_torque
+DEBUG 2025-08-25 15:21:52,944 [test_set_gripper_torque.py-->line:65]:Parameter: 255
+INFO 2025-08-25 15:21:52,959 [test_set_gripper_torque.py-->line:61]:》》》》》用例【设置夹爪扭矩（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:52,959 [test_set_gripper_torque.py-->line:64]:API: set_gripper_torque
+DEBUG 2025-08-25 15:21:52,959 [test_set_gripper_torque.py-->line:65]:Parameter: -1
+INFO 2025-08-25 15:21:53,056 [test_set_gripper_torque.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:53,062 [test_set_gripper_value.py-->line:15]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:53,063 [test_set_gripper_value.py-->line:27]:》》》》》用例【正确设置夹爪角度(100度)】开始测试《《《《《
+DEBUG 2025-08-25 15:21:53,063 [test_set_gripper_value.py-->line:30]:API: set_gripper_value
+DEBUG 2025-08-25 15:21:53,063 [test_set_gripper_value.py-->line:31]:Value: 100, Speed: 30
+DEBUG 2025-08-25 15:21:53,151 [test_set_gripper_value.py-->line:35]:设置返回值：1
+DEBUG 2025-08-25 15:21:53,197 [test_set_gripper_value.py-->line:39]:获取返回值：0
+DEBUG 2025-08-25 15:21:53,197 [test_set_gripper_value.py-->line:43]:请求类型断言成功
+INFO 2025-08-25 15:21:53,308 [test_set_gripper_value.py-->line:27]:》》》》》用例【正确设置夹爪角度(0度)】开始测试《《《《《
+DEBUG 2025-08-25 15:21:53,308 [test_set_gripper_value.py-->line:30]:API: set_gripper_value
+DEBUG 2025-08-25 15:21:53,308 [test_set_gripper_value.py-->line:31]:Value: 0, Speed: 50
+DEBUG 2025-08-25 15:21:53,399 [test_set_gripper_value.py-->line:35]:设置返回值：1
+DEBUG 2025-08-25 15:21:53,446 [test_set_gripper_value.py-->line:39]:获取返回值：23
+DEBUG 2025-08-25 15:21:53,446 [test_set_gripper_value.py-->line:43]:请求类型断言成功
+INFO 2025-08-25 15:21:53,480 [test_set_gripper_value.py-->line:62]:》》》》》用例【设置夹爪速度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:53,480 [test_set_gripper_value.py-->line:65]:API: set_gripper_value
+DEBUG 2025-08-25 15:21:53,480 [test_set_gripper_value.py-->line:66]:Value: 50, Speed: 101
+INFO 2025-08-25 15:21:53,497 [test_set_gripper_value.py-->line:62]:》》》》》用例【设置夹爪角度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:53,497 [test_set_gripper_value.py-->line:65]:API: set_gripper_value
+DEBUG 2025-08-25 15:21:53,497 [test_set_gripper_value.py-->line:66]:Value: 101, Speed: 50
+INFO 2025-08-25 15:21:53,633 [test_set_gripper_value.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:53,637 [test_set_open_angle.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:53,637 [test_set_open_angle.py-->line:26]:》》》》》用例【正确设置夹爪张开角度】开始测试《《《《《
+DEBUG 2025-08-25 15:21:53,638 [test_set_open_angle.py-->line:29]:API: set_open_angle
+DEBUG 2025-08-25 15:21:53,638 [test_set_open_angle.py-->line:30]:参数: 10
+DEBUG 2025-08-25 15:21:53,679 [test_set_open_angle.py-->line:34]:设置返回值：1
+DEBUG 2025-08-25 15:21:53,679 [test_set_open_angle.py-->line:38]:请求类型断言成功
+INFO 2025-08-25 15:21:53,682 [test_set_open_angle.py-->line:45]:✅ 用例【正确设置夹爪张开角度】测试成功
+INFO 2025-08-25 15:21:53,682 [test_set_open_angle.py-->line:46]:》》》》》用例【正确设置夹爪张开角度】测试完成《《《《《
+INFO 2025-08-25 15:21:53,686 [test_set_open_angle.py-->line:54]:》》》》》用例【设置夹爪张开角度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:53,686 [test_set_open_angle.py-->line:57]:API: set_open_angle
+DEBUG 2025-08-25 15:21:53,686 [test_set_open_angle.py-->line:58]:参数: -1
+INFO 2025-08-25 15:21:53,701 [test_set_open_angle.py-->line:54]:》》》》》用例【设置夹爪张开角度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:21:53,703 [test_set_open_angle.py-->line:57]:API: set_open_angle
+DEBUG 2025-08-25 15:21:53,703 [test_set_open_angle.py-->line:58]:参数: 101
+INFO 2025-08-25 15:21:53,820 [test_set_open_angle.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:21:53,824 [test_set_out_put.py-->line:15]:初始化完成，接口测试开始
+INFO 2025-08-25 15:21:53,824 [test_set_out_put.py-->line:27]:》》》》》用例【正确设置夹爪IO张开】开始测试《《《《《
+DEBUG 2025-08-25 15:21:53,825 [test_set_out_put.py-->line:30]:API: set_out_put
+DEBUG 2025-08-25 15:21:53,825 [test_set_out_put.py-->line:31]:参数: 2
+DEBUG 2025-08-25 15:21:53,866 [test_set_out_put.py-->line:35]:设置返回值：1
+DEBUG 2025-08-25 15:21:56,870 [test_set_out_put.py-->line:40]:请求类型断言成功
+INFO 2025-08-25 15:21:56,872 [test_set_out_put.py-->line:47]:✅ 用例【正确设置夹爪IO张开】测试成功
+INFO 2025-08-25 15:21:56,872 [test_set_out_put.py-->line:48]:》》》》》用例【正确设置夹爪IO张开】测试完成《《《《《
+INFO 2025-08-25 15:21:56,876 [test_set_out_put.py-->line:27]:》》》》》用例【正确设置夹爪IO关闭】开始测试《《《《《
+DEBUG 2025-08-25 15:21:56,876 [test_set_out_put.py-->line:30]:API: set_out_put
+DEBUG 2025-08-25 15:21:56,876 [test_set_out_put.py-->line:31]:参数: 1
+DEBUG 2025-08-25 15:21:56,918 [test_set_out_put.py-->line:35]:设置返回值：1
+DEBUG 2025-08-25 15:21:59,923 [test_set_out_put.py-->line:40]:请求类型断言成功
+INFO 2025-08-25 15:21:59,924 [test_set_out_put.py-->line:47]:✅ 用例【正确设置夹爪IO关闭】测试成功
+INFO 2025-08-25 15:21:59,925 [test_set_out_put.py-->line:48]:》》》》》用例【正确设置夹爪IO关闭】测试完成《《《《《
+INFO 2025-08-25 15:21:59,927 [test_set_out_put.py-->line:27]:》》》》》用例【正确设置夹爪IO张开】开始测试《《《《《
+DEBUG 2025-08-25 15:21:59,927 [test_set_out_put.py-->line:30]:API: set_out_put
+DEBUG 2025-08-25 15:21:59,927 [test_set_out_put.py-->line:31]:参数: 3
+DEBUG 2025-08-25 15:21:59,970 [test_set_out_put.py-->line:35]:设置返回值：1
+DEBUG 2025-08-25 15:22:02,972 [test_set_out_put.py-->line:40]:请求类型断言成功
+INFO 2025-08-25 15:22:02,975 [test_set_out_put.py-->line:47]:✅ 用例【正确设置夹爪IO张开】测试成功
+INFO 2025-08-25 15:22:02,975 [test_set_out_put.py-->line:48]:》》》》》用例【正确设置夹爪IO张开】测试完成《《《《《
+INFO 2025-08-25 15:22:02,979 [test_set_out_put.py-->line:27]:》》》》》用例【正确设置夹爪IO关闭】开始测试《《《《《
+DEBUG 2025-08-25 15:22:02,979 [test_set_out_put.py-->line:30]:API: set_out_put
+DEBUG 2025-08-25 15:22:02,979 [test_set_out_put.py-->line:31]:参数: 0
+DEBUG 2025-08-25 15:22:03,035 [test_set_out_put.py-->line:35]:设置返回值：1
+DEBUG 2025-08-25 15:22:06,042 [test_set_out_put.py-->line:40]:请求类型断言成功
+INFO 2025-08-25 15:22:06,044 [test_set_out_put.py-->line:47]:✅ 用例【正确设置夹爪IO关闭】测试成功
+INFO 2025-08-25 15:22:06,044 [test_set_out_put.py-->line:48]:》》》》》用例【正确设置夹爪IO关闭】测试完成《《《《《
+INFO 2025-08-25 15:22:06,050 [test_set_out_put.py-->line:56]:》》》》》用例【设置夹爪IO(超限)】开始测试《《《《《
+DEBUG 2025-08-25 15:22:06,050 [test_set_out_put.py-->line:59]:API: set_out_put
+DEBUG 2025-08-25 15:22:06,050 [test_set_out_put.py-->line:60]:参数: 4
+INFO 2025-08-25 15:22:06,069 [test_set_out_put.py-->line:56]:》》》》》用例【设置夹爪IO(超限)】开始测试《《《《《
+DEBUG 2025-08-25 15:22:06,069 [test_set_out_put.py-->line:59]:API: set_out_put
+DEBUG 2025-08-25 15:22:06,069 [test_set_out_put.py-->line:60]:参数: -1
+INFO 2025-08-25 15:22:06,167 [test_set_out_put.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:22:06,173 [test_set_protection_current.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:22:06,174 [test_set_protection_current.py-->line:24]:》》》》》用例【正确设置夹爪夹持电流】开始测试《《《《《
+DEBUG 2025-08-25 15:22:06,174 [test_set_protection_current.py-->line:27]:API: set_protection_current
+DEBUG 2025-08-25 15:22:06,174 [test_set_protection_current.py-->line:28]:参数: 60
+INFO 2025-08-25 15:22:06,194 [test_set_protection_current.py-->line:56]:》》》》》用例【设置夹爪夹持电流（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:22:06,194 [test_set_protection_current.py-->line:59]:API: set_protection_current
+DEBUG 2025-08-25 15:22:06,194 [test_set_protection_current.py-->line:60]:参数: 301
+INFO 2025-08-25 15:22:06,212 [test_set_protection_current.py-->line:56]:》》》》》用例【设置夹爪夹持电流（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:22:06,212 [test_set_protection_current.py-->line:59]:API: set_protection_current
+DEBUG 2025-08-25 15:22:06,212 [test_set_protection_current.py-->line:60]:参数: -1
+INFO 2025-08-25 15:22:06,308 [test_set_protection_current.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:22:06,313 [test_set_speed.py-->line:12]:初始化完成，接口测试开始
+INFO 2025-08-25 15:22:06,314 [test_set_speed.py-->line:23]:》》》》》用例【正确设置夹爪速度】开始测试《《《《《
+DEBUG 2025-08-25 15:22:06,314 [test_set_speed.py-->line:26]:test_api: set_speed
+DEBUG 2025-08-25 15:22:06,314 [test_set_speed.py-->line:27]:test_parameters: 100
+DEBUG 2025-08-25 15:22:06,370 [test_set_speed.py-->line:32]:设置返回值：1
+DEBUG 2025-08-25 15:22:06,371 [test_set_speed.py-->line:37]:请求类型断言成功
+INFO 2025-08-25 15:22:06,373 [test_set_speed.py-->line:44]:✅ 用例【正确设置夹爪速度】测试通过
+INFO 2025-08-25 15:22:06,373 [test_set_speed.py-->line:45]:》》》》》用例【正确设置夹爪速度】测试完成《《《《《
+INFO 2025-08-25 15:22:06,377 [test_set_speed.py-->line:53]:》》》》》用例【设置夹爪速度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:22:06,377 [test_set_speed.py-->line:56]:test_api: set_speed
+DEBUG 2025-08-25 15:22:06,377 [test_set_speed.py-->line:57]:test_parameters: 101
+INFO 2025-08-25 15:22:06,377 [test_set_speed.py-->line:63]:✅ 用例【设置夹爪速度（超限）】测试通过
+INFO 2025-08-25 15:22:06,378 [test_set_speed.py-->line:64]:》》》》》用例【设置夹爪速度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:22:06,380 [test_set_speed.py-->line:53]:》》》》》用例【设置夹爪速度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:22:06,380 [test_set_speed.py-->line:56]:test_api: set_speed
+DEBUG 2025-08-25 15:22:06,380 [test_set_speed.py-->line:57]:test_parameters: 0
+INFO 2025-08-25 15:22:06,380 [test_set_speed.py-->line:63]:✅ 用例【设置夹爪速度（超限）】测试通过
+INFO 2025-08-25 15:22:06,380 [test_set_speed.py-->line:64]:》》》》》用例【设置夹爪速度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:22:06,463 [test_set_speed.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:22:06,469 [test_set_vir_pos.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:22:06,470 [test_set_vir_pos.py-->line:26]:》》》》》用例【正确设置夹爪虚位数值】开始测试《《《《《
+DEBUG 2025-08-25 15:22:06,470 [test_set_vir_pos.py-->line:29]:test_api: set_vir_pos
+DEBUG 2025-08-25 15:22:06,470 [test_set_vir_pos.py-->line:30]:test_parameters: 8
+DEBUG 2025-08-25 15:22:06,527 [test_set_vir_pos.py-->line:35]:设置返回值: 1
+DEBUG 2025-08-25 15:22:06,574 [test_set_vir_pos.py-->line:39]:读取返回值: 8
+INFO 2025-08-25 15:22:06,576 [test_set_vir_pos.py-->line:51]:✅ 用例【正确设置夹爪虚位数值】测试通过
+INFO 2025-08-25 15:22:06,576 [test_set_vir_pos.py-->line:52]:》》》》》用例【正确设置夹爪虚位数值】测试完成《《《《《
+INFO 2025-08-25 15:22:06,578 [test_set_vir_pos.py-->line:60]:》》》》》用例【设置夹爪虚位数值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:22:06,578 [test_set_vir_pos.py-->line:63]:test_api: set_vir_pos
+DEBUG 2025-08-25 15:22:06,578 [test_set_vir_pos.py-->line:64]:test_parameters: 101
+INFO 2025-08-25 15:22:06,578 [test_set_vir_pos.py-->line:70]:✅ 用例【设置夹爪虚位数值（超限）】测试通过
+INFO 2025-08-25 15:22:06,578 [test_set_vir_pos.py-->line:71]:》》》》》用例【设置夹爪虚位数值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:22:06,582 [test_set_vir_pos.py-->line:60]:》》》》》用例【设置夹爪虚位数值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:22:06,582 [test_set_vir_pos.py-->line:63]:test_api: set_vir_pos
+DEBUG 2025-08-25 15:22:06,582 [test_set_vir_pos.py-->line:64]:test_parameters: -1
+INFO 2025-08-25 15:22:06,582 [test_set_vir_pos.py-->line:70]:✅ 用例【设置夹爪虚位数值（超限）】测试通过
+INFO 2025-08-25 15:22:06,582 [test_set_vir_pos.py-->line:71]:》》》》》用例【设置夹爪虚位数值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:22:06,667 [test_set_vir_pos.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:22:06,672 [test_stop.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:22:06,673 [test_stop.py-->line:26]:》》》》》用例【正确设置夹爪停止运动】开始测试《《《《《
+DEBUG 2025-08-25 15:22:06,673 [test_stop.py-->line:29]:test_api: stop
+DEBUG 2025-08-25 15:22:06,673 [test_stop.py-->line:30]:test_parameters: None
+DEBUG 2025-08-25 15:22:07,474 [test_stop.py-->line:38]:接口返回值: 1
+INFO 2025-08-25 15:22:07,475 [test_stop.py-->line:48]:✅ 用例【正确设置夹爪停止运动】测试通过
+INFO 2025-08-25 15:22:07,475 [test_stop.py-->line:49]:》》》》》用例【正确设置夹爪停止运动】测试完成《《《《《
+INFO 2025-08-25 15:22:07,599 [test_stop.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:32,531 [test_get_close_angle.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:32,532 [test_get_close_angle.py-->line:23]:》》》》》用例【正确获取夹爪关闭角度】开始测试《《《《《
+DEBUG 2025-08-25 15:27:32,532 [test_get_close_angle.py-->line:26]:test_api: get_close_angle
+DEBUG 2025-08-25 15:27:32,532 [test_get_close_angle.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:27:32,587 [test_get_close_angle.py-->line:31]:接口返回结果：0
+DEBUG 2025-08-25 15:27:32,587 [test_get_close_angle.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:27:32,589 [test_get_close_angle.py-->line:42]:✅ 用例【正确获取夹爪关闭角度】测试通过
+INFO 2025-08-25 15:27:32,589 [test_get_close_angle.py-->line:43]:》》》》》用例【正确获取夹爪关闭角度】测试完成《《《《《
+INFO 2025-08-25 15:27:32,617 [test_get_close_angle.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:32,621 [test_get_firmware_version.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:32,622 [test_get_firmware_version.py-->line:23]:》》》》》用例【正确获取固件版本号】开始测试《《《《《
+DEBUG 2025-08-25 15:27:32,622 [test_get_firmware_version.py-->line:26]:test_api: get_firmware_version
+DEBUG 2025-08-25 15:27:32,622 [test_get_firmware_version.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:27:32,664 [test_get_firmware_version.py-->line:31]:接口返回值：13
+DEBUG 2025-08-25 15:27:32,664 [test_get_firmware_version.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:27:32,790 [test_get_firmware_version.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:32,794 [test_get_gripper_baud.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:32,795 [test_get_gripper_baud.py-->line:23]:》》》》》用例【正确获取夹爪波特率】开始测试《《《《《
+DEBUG 2025-08-25 15:27:32,795 [test_get_gripper_baud.py-->line:26]:test_api: get_gripper_baud
+DEBUG 2025-08-25 15:27:32,795 [test_get_gripper_baud.py-->line:27]:test_baud: None
+DEBUG 2025-08-25 15:27:32,837 [test_get_gripper_baud.py-->line:31]:接口返回值：0
+DEBUG 2025-08-25 15:27:32,837 [test_get_gripper_baud.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:27:32,838 [test_get_gripper_baud.py-->line:42]:✅ 用例【正确获取夹爪波特率】测试通过
+INFO 2025-08-25 15:27:32,838 [test_get_gripper_baud.py-->line:43]:》》》》》用例【正确获取夹爪波特率】测试完成《《《《《
+INFO 2025-08-25 15:27:32,868 [test_get_gripper_baud.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:32,872 [test_get_gripper_cw.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:32,873 [test_get_gripper_cw.py-->line:23]:》》》》》用例【正确获取夹爪顺时针可运行误差】开始测试《《《《《
+DEBUG 2025-08-25 15:27:32,873 [test_get_gripper_cw.py-->line:26]:test_api: set_gripper_cw
+DEBUG 2025-08-25 15:27:32,873 [test_get_gripper_cw.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:27:32,915 [test_get_gripper_cw.py-->line:31]:接口返回值：3
+DEBUG 2025-08-25 15:27:32,915 [test_get_gripper_cw.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:27:32,917 [test_get_gripper_cw.py-->line:42]:✅ 用例【正确获取夹爪顺时针可运行误差】测试通过
+INFO 2025-08-25 15:27:32,917 [test_get_gripper_cw.py-->line:43]:》》》》》用例【正确获取夹爪顺时针可运行误差】测试完成《《《《《
+INFO 2025-08-25 15:27:32,947 [test_get_gripper_cw.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:32,955 [test_get_gripper_cww.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:32,956 [test_get_gripper_cww.py-->line:23]:》》》》》用例【正确获取夹爪逆时针可运行误差】开始测试《《《《《
+DEBUG 2025-08-25 15:27:32,956 [test_get_gripper_cww.py-->line:26]:test_api: set_gripper_cww
+DEBUG 2025-08-25 15:27:32,956 [test_get_gripper_cww.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:27:33,009 [test_get_gripper_cww.py-->line:31]:接口返回值: 3
+DEBUG 2025-08-25 15:27:33,009 [test_get_gripper_cww.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:27:33,011 [test_get_gripper_cww.py-->line:42]:✅ 用例【正确获取夹爪逆时针可运行误差】测试通过
+INFO 2025-08-25 15:27:33,011 [test_get_gripper_cww.py-->line:43]:》》》》》用例【正确获取夹爪逆时针可运行误差】测试完成《《《《《
+INFO 2025-08-25 15:27:33,040 [test_get_gripper_cww.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:33,043 [test_get_gripper_d.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:33,044 [test_get_gripper_d.py-->line:23]:》》》》》用例【正确获取夹爪D值】开始测试《《《《《
+DEBUG 2025-08-25 15:27:33,044 [test_get_gripper_d.py-->line:26]:test_api: get_gripper_D
+DEBUG 2025-08-25 15:27:33,044 [test_get_gripper_d.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:27:33,086 [test_get_gripper_d.py-->line:31]:接口返回值: 120
+DEBUG 2025-08-25 15:27:33,086 [test_get_gripper_d.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:27:33,087 [test_get_gripper_d.py-->line:42]:✅ 用例【正确获取夹爪D值】测试通过
+INFO 2025-08-25 15:27:33,087 [test_get_gripper_d.py-->line:43]:》》》》》用例【正确获取夹爪D值】测试完成《《《《《
+INFO 2025-08-25 15:27:33,117 [test_get_gripper_d.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:33,122 [test_get_gripper_i.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:33,123 [test_get_gripper_i.py-->line:23]:》》》》》用例【正确读取夹爪I值】开始测试《《《《《
+DEBUG 2025-08-25 15:27:33,123 [test_get_gripper_i.py-->line:26]:test_api: get_gripper_I
+DEBUG 2025-08-25 15:27:33,123 [test_get_gripper_i.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:27:33,165 [test_get_gripper_i.py-->line:31]:接口返回值: 0
+DEBUG 2025-08-25 15:27:33,165 [test_get_gripper_i.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:27:33,167 [test_get_gripper_i.py-->line:42]:✅ 用例【正确读取夹爪I值】测试通过
+INFO 2025-08-25 15:27:33,167 [test_get_gripper_i.py-->line:43]:》》》》》用例【正确读取夹爪I值】测试完成《《《《《
+INFO 2025-08-25 15:27:33,198 [test_get_gripper_i.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:33,203 [test_get_gripper_id.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:33,204 [test_get_gripper_id.py-->line:25]:》》》》》用例【正确设置固件ID号】开始测试《《《《《
+DEBUG 2025-08-25 15:27:33,204 [test_get_gripper_id.py-->line:28]:test_api: set_gripper_id
+DEBUG 2025-08-25 15:27:33,204 [test_get_gripper_id.py-->line:29]:test_parameters: 10
+DEBUG 2025-08-25 15:27:33,245 [test_get_gripper_id.py-->line:33]:设置返回结果：1
+DEBUG 2025-08-25 15:27:33,292 [test_get_gripper_id.py-->line:37]:获取到的ID：10
+DEBUG 2025-08-25 15:27:33,292 [test_get_gripper_id.py-->line:41]:请求类型断言成功
+INFO 2025-08-25 15:27:33,292 [test_get_gripper_id.py-->line:49]:✅ 用例【正确设置固件ID号】测试通过
+INFO 2025-08-25 15:27:33,292 [test_get_gripper_id.py-->line:50]:》》》》》用例【正确设置固件ID号】测试完成《《《《《
+INFO 2025-08-25 15:27:33,296 [test_get_gripper_id.py-->line:58]:》》》》》用例【设置固件ID号（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:27:33,296 [test_get_gripper_id.py-->line:61]:test_api: set_gripper_id
+DEBUG 2025-08-25 15:27:33,296 [test_get_gripper_id.py-->line:62]:test_parameters: -1
+INFO 2025-08-25 15:27:33,319 [test_get_gripper_id.py-->line:58]:》》》》》用例【设置固件ID号（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:27:33,319 [test_get_gripper_id.py-->line:61]:test_api: set_gripper_id
+DEBUG 2025-08-25 15:27:33,319 [test_get_gripper_id.py-->line:62]:test_parameters: 255
+INFO 2025-08-25 15:27:33,418 [test_get_gripper_id.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:33,423 [test_get_gripper_min_pressure.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:33,424 [test_get_gripper_min_pressure.py-->line:23]:》》》》》用例【正确获取夹爪最小启动力】开始测试《《《《《
+DEBUG 2025-08-25 15:27:33,424 [test_get_gripper_min_pressure.py-->line:26]:test_api: get_gripper_min_pressue
+DEBUG 2025-08-25 15:27:33,424 [test_get_gripper_min_pressure.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:27:33,466 [test_get_gripper_min_pressure.py-->line:31]:接口返回结果：0
+DEBUG 2025-08-25 15:27:33,466 [test_get_gripper_min_pressure.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:27:33,469 [test_get_gripper_min_pressure.py-->line:42]:✅ 用例【正确获取夹爪最小启动力】测试通过
+INFO 2025-08-25 15:27:33,469 [test_get_gripper_min_pressure.py-->line:43]:》》》》》用例【正确获取夹爪最小启动力】测试完成《《《《《
+INFO 2025-08-25 15:27:33,498 [test_get_gripper_min_pressure.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:33,504 [test_get_gripper_p.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:33,506 [test_get_gripper_p.py-->line:24]:》》》》》用例【正确获取夹爪P值】开始测试《《《《《
+DEBUG 2025-08-25 15:27:33,506 [test_get_gripper_p.py-->line:27]:test_api: get_gripper_P
+DEBUG 2025-08-25 15:27:33,506 [test_get_gripper_p.py-->line:28]:test_parameters: None
+DEBUG 2025-08-25 15:27:33,560 [test_get_gripper_p.py-->line:32]:接口返回结果：120
+DEBUG 2025-08-25 15:27:33,560 [test_get_gripper_p.py-->line:36]:请求类型断言成功
+INFO 2025-08-25 15:27:33,562 [test_get_gripper_p.py-->line:43]:✅ 用例【正确获取夹爪P值】测试通过
+INFO 2025-08-25 15:27:33,562 [test_get_gripper_p.py-->line:44]:》》》》》用例【正确获取夹爪P值】测试完成《《《《《
+INFO 2025-08-25 15:27:33,592 [test_get_gripper_p.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:33,597 [test_get_gripper_status.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:33,598 [test_get_gripper_status.py-->line:25]:》》》》》用例【获取夹爪运动时的夹持状态】开始测试《《《《《
+DEBUG 2025-08-25 15:27:33,598 [test_get_gripper_status.py-->line:27]:API: get_gripper_status, 参数: None
+DEBUG 2025-08-25 15:27:33,936 [test_get_gripper_status.py-->line:33]:接口返回结果：0
+INFO 2025-08-25 15:27:33,938 [test_get_gripper_status.py-->line:44]:》》》》》用例【获取夹爪停止运动时的夹持状态】开始测试《《《《《
+DEBUG 2025-08-25 15:27:33,938 [test_get_gripper_status.py-->line:46]:API: get_gripper_status, 参数: None
+DEBUG 2025-08-25 15:27:38,990 [test_get_gripper_status.py-->line:51]:接口返回结果：1
+INFO 2025-08-25 15:27:38,996 [test_get_gripper_status.py-->line:62]:》》》》》用例【获取夹爪停止运动且夹到物体时的夹持状态】开始测试《《《《《
+DEBUG 2025-08-25 15:27:43,744 [test_get_gripper_status.py-->line:70]:接口返回结果：2
+INFO 2025-08-25 15:27:43,750 [test_get_gripper_status.py-->line:81]:》》》》》用例【获取夹爪停止运动且物体掉落时的夹持状态】开始测试《《《《《
+DEBUG 2025-08-25 15:27:49,472 [test_get_gripper_status.py-->line:87]:接口返回结果：3
+INFO 2025-08-25 15:27:49,472 [test_get_gripper_status.py-->line:93]:✅ 用例【获取夹爪停止运动且物体掉落时的夹持状态】测试通过
+INFO 2025-08-25 15:27:49,472 [test_get_gripper_status.py-->line:94]:》》》》》用例【获取夹爪停止运动且物体掉落时的夹持状态】测试完成《《《《《
+INFO 2025-08-25 15:27:49,596 [test_get_gripper_status.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:49,602 [test_get_gripper_torque.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:49,603 [test_get_gripper_torque.py-->line:23]:》》》》》用例【正确获取夹爪扭矩】开始测试《《《《《
+DEBUG 2025-08-25 15:27:49,603 [test_get_gripper_torque.py-->line:26]:test_api: get_gripper_torque
+DEBUG 2025-08-25 15:27:49,603 [test_get_gripper_torque.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:27:49,659 [test_get_gripper_torque.py-->line:31]:接口返回结果：100
+DEBUG 2025-08-25 15:27:49,659 [test_get_gripper_torque.py-->line:35]:类型断言成功
+INFO 2025-08-25 15:27:49,660 [test_get_gripper_torque.py-->line:42]:✅ 用例【正确获取夹爪扭矩】测试成功
+INFO 2025-08-25 15:27:49,660 [test_get_gripper_torque.py-->line:43]:》》》》》用例【正确获取夹爪扭矩】测试完成《《《《《
+INFO 2025-08-25 15:27:49,690 [test_get_gripper_torque.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:49,694 [test_get_modified_version.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:49,695 [test_get_modified_version.py-->line:23]:》》》》》用例【正确获取固件次版本号】开始测试《《《《《
+DEBUG 2025-08-25 15:27:49,695 [test_get_modified_version.py-->line:26]:test_api: get_modified_version
+DEBUG 2025-08-25 15:27:49,695 [test_get_modified_version.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:27:49,738 [test_get_modified_version.py-->line:31]:接口返回结果：3
+DEBUG 2025-08-25 15:27:49,738 [test_get_modified_version.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:27:49,769 [test_get_modified_version.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:49,775 [test_get_open_angle.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:49,776 [test_get_open_angle.py-->line:23]:》》》》》用例【获取夹爪张开角度】开始测试《《《《《
+DEBUG 2025-08-25 15:27:49,776 [test_get_open_angle.py-->line:26]:test_api: get_open_angle
+DEBUG 2025-08-25 15:27:49,776 [test_get_open_angle.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:27:49,832 [test_get_open_angle.py-->line:31]:接口返回结果：100
+DEBUG 2025-08-25 15:27:49,832 [test_get_open_angle.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:27:49,834 [test_get_open_angle.py-->line:42]:✅ 用例【获取夹爪张开角度】测试通过
+INFO 2025-08-25 15:27:49,834 [test_get_open_angle.py-->line:43]:》》》》》用例【获取夹爪张开角度】测试完成《《《《《
+INFO 2025-08-25 15:27:49,863 [test_get_open_angle.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:49,868 [test_get_protection_current.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:49,869 [test_get_protection_current.py-->line:23]:》》》》》用例【正确获取夹爪夹持电流】开始测试《《《《《
+DEBUG 2025-08-25 15:27:49,869 [test_get_protection_current.py-->line:26]:test_api: get_protection_current
+DEBUG 2025-08-25 15:27:49,869 [test_get_protection_current.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:27:49,911 [test_get_protection_current.py-->line:31]:接口返回结果：44
+DEBUG 2025-08-25 15:27:49,911 [test_get_protection_current.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:27:49,943 [test_get_protection_current.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:49,949 [test_get_queue_count.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:49,950 [test_get_queue_count.py-->line:23]:》》》》》用例【正确获取夹爪队列长度】开始测试《《《《《
+DEBUG 2025-08-25 15:27:49,950 [test_get_queue_count.py-->line:26]:test_api: get_queue_count
+DEBUG 2025-08-25 15:27:49,950 [test_get_queue_count.py-->line:27]:test_parameters: None
+INFO 2025-08-25 15:27:49,989 [test_get_queue_count.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:49,992 [test_get_to_set_speed.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:49,993 [test_get_to_set_speed.py-->line:23]:》》》》》用例【正确获取夹爪速度】开始测试《《《《《
+DEBUG 2025-08-25 15:27:49,993 [test_get_to_set_speed.py-->line:26]:test_api: get_to_set_speed
+DEBUG 2025-08-25 15:27:49,993 [test_get_to_set_speed.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:27:50,037 [test_get_to_set_speed.py-->line:31]:接口返回结果：100
+DEBUG 2025-08-25 15:27:50,037 [test_get_to_set_speed.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:27:50,040 [test_get_to_set_speed.py-->line:42]:✅ 用例【正确获取夹爪速度】测试通过
+INFO 2025-08-25 15:27:50,040 [test_get_to_set_speed.py-->line:43]:》》》》》用例【正确获取夹爪速度】测试完成《《《《《
+INFO 2025-08-25 15:27:50,068 [test_get_to_set_speed.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:50,072 [test_get_vir_pos.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:50,073 [test_get_vir_pos.py-->line:23]:》》》》》用例【正确获取夹爪虚位数值】开始测试《《《《《
+DEBUG 2025-08-25 15:27:50,073 [test_get_vir_pos.py-->line:26]:test_api: get_vir_pos
+DEBUG 2025-08-25 15:27:50,073 [test_get_vir_pos.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:27:50,115 [test_get_vir_pos.py-->line:31]:接口返回结果：8
+DEBUG 2025-08-25 15:27:50,115 [test_get_vir_pos.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:27:50,118 [test_get_vir_pos.py-->line:42]:✅ 用例【正确获取夹爪虚位数值】测试通过
+INFO 2025-08-25 15:27:50,118 [test_get_vir_pos.py-->line:43]:》》》》》用例【正确获取夹爪虚位数值】测试完成《《《《《
+INFO 2025-08-25 15:27:50,147 [test_get_vir_pos.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:50,152 [test_pause.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:50,153 [test_pause.py-->line:25]:》》》》》用例【正确设置夹爪暂停】开始测试《《《《《
+DEBUG 2025-08-25 15:27:50,153 [test_pause.py-->line:28]:test_api: pause
+DEBUG 2025-08-25 15:27:50,153 [test_pause.py-->line:29]:test_parameters: None
+DEBUG 2025-08-25 15:27:50,489 [test_pause.py-->line:37]:接口返回结果：1
+DEBUG 2025-08-25 15:27:50,489 [test_pause.py-->line:41]:请求类型断言成功
+INFO 2025-08-25 15:27:50,490 [test_pause.py-->line:48]:✅ 用例【正确设置夹爪暂停】测试通过
+INFO 2025-08-25 15:27:50,492 [test_pause.py-->line:49]:》》》》》用例【正确设置夹爪暂停】测试完成《《《《《
+INFO 2025-08-25 15:27:50,567 [test_pause.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:50,573 [test_resume.py-->line:12]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:50,574 [test_resume.py-->line:22]:》》》》》用例【正确设置夹爪恢复运动】开始测试《《《《《
+DEBUG 2025-08-25 15:27:50,574 [test_resume.py-->line:25]:test_api: resume
+DEBUG 2025-08-25 15:27:50,574 [test_resume.py-->line:26]:test_parameters: None
+DEBUG 2025-08-25 15:27:50,615 [test_resume.py-->line:30]:接口返回结果：1
+DEBUG 2025-08-25 15:27:50,615 [test_resume.py-->line:34]:请求类型断言成功
+INFO 2025-08-25 15:27:50,616 [test_resume.py-->line:41]:✅ 用例【正确设置夹爪恢复运动】测试通过
+INFO 2025-08-25 15:27:50,616 [test_resume.py-->line:42]:》》》》》用例【正确设置夹爪恢复运动】测试完成《《《《《
+INFO 2025-08-25 15:27:50,647 [test_resume.py-->line:15]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:27:50,650 [test_set_abs_gripper_angle.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:27:50,651 [test_set_abs_gripper_angle.py-->line:30]:》》》》》用例【正确设置夹爪绝对运动】开始测试《《《《《
+DEBUG 2025-08-25 15:27:50,651 [test_set_abs_gripper_angle.py-->line:31]:test_api: set_abs_gripper_angle
+DEBUG 2025-08-25 15:27:50,651 [test_set_abs_gripper_angle.py-->line:32]:test_value: 50
+DEBUG 2025-08-25 15:27:54,391 [test_set_abs_gripper_angle.py-->line:39]:请求类型断言成功
+INFO 2025-08-25 15:27:54,394 [test_set_abs_gripper_angle.py-->line:46]:请求结果断言成功，用例【正确设置夹爪绝对运动】测试成功
+INFO 2025-08-25 15:27:54,394 [test_set_abs_gripper_angle.py-->line:47]:》》》》》用例【正确设置夹爪绝对运动】测试完成《《《《《
+INFO 2025-08-25 15:27:57,961 [test_set_abs_gripper_angle.py-->line:54]:》》》》》用例【绝对运动中暂停，恢复运动】开始测试《《《《《
+DEBUG 2025-08-25 15:28:05,120 [test_set_abs_gripper_angle.py-->line:71]:请求类型断言成功
+INFO 2025-08-25 15:28:05,123 [test_set_abs_gripper_angle.py-->line:81]:请求结果断言成功，用例【绝对运动中暂停，恢复运动】测试成功
+INFO 2025-08-25 15:28:05,123 [test_set_abs_gripper_angle.py-->line:82]:》》》》》用例【绝对运动中暂停，恢复运动】测试完成《《《《《
+INFO 2025-08-25 15:28:08,883 [test_set_abs_gripper_angle.py-->line:89]:》》》》》用例【绝对运动中停止运动】开始测试《《《《《
+DEBUG 2025-08-25 15:28:11,980 [test_set_abs_gripper_angle.py-->line:101]:请求类型断言成功
+INFO 2025-08-25 15:28:11,981 [test_set_abs_gripper_angle.py-->line:110]:✅ 用例【绝对运动中停止运动】测试通过
+INFO 2025-08-25 15:28:11,981 [test_set_abs_gripper_angle.py-->line:111]:》》》》》用例【绝对运动中停止运动】测试完成《《《《《
+INFO 2025-08-25 15:28:15,778 [test_set_abs_gripper_angle.py-->line:119]:》》》》》用例【设置绝对运动角度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:15,778 [test_set_abs_gripper_angle.py-->line:120]:test_api: set_abs_gripper_angle
+DEBUG 2025-08-25 15:28:15,778 [test_set_abs_gripper_angle.py-->line:121]:test_value: 101
+INFO 2025-08-25 15:28:15,779 [test_set_abs_gripper_angle.py-->line:127]:✅ 用例【设置绝对运动角度（超限）】测试通过
+INFO 2025-08-25 15:28:15,779 [test_set_abs_gripper_angle.py-->line:128]:》》》》》用例【设置绝对运动角度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:19,368 [test_set_abs_gripper_angle.py-->line:119]:》》》》》用例【设置绝对运动速度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:19,368 [test_set_abs_gripper_angle.py-->line:120]:test_api: set_abs_gripper_angle
+DEBUG 2025-08-25 15:28:19,368 [test_set_abs_gripper_angle.py-->line:121]:test_value: 60
+INFO 2025-08-25 15:28:19,369 [test_set_abs_gripper_angle.py-->line:127]:✅ 用例【设置绝对运动速度（超限）】测试通过
+INFO 2025-08-25 15:28:19,369 [test_set_abs_gripper_angle.py-->line:128]:》》》》》用例【设置绝对运动速度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:25,986 [test_set_abs_gripper_angle.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:25,990 [test_set_close_angle.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:25,991 [test_set_close_angle.py-->line:24]:》》》》》用例【正确设置夹爪关闭角度】开始测试《《《《《
+DEBUG 2025-08-25 15:28:25,991 [test_set_close_angle.py-->line:25]:test_api: set_close_angle
+DEBUG 2025-08-25 15:28:25,992 [test_set_close_angle.py-->line:26]:test_parameters: 10
+DEBUG 2025-08-25 15:28:26,032 [test_set_close_angle.py-->line:33]:请求类型断言成功
+INFO 2025-08-25 15:28:26,035 [test_set_close_angle.py-->line:40]:✅ 用例【正确设置夹爪关闭角度】测试通过
+INFO 2025-08-25 15:28:26,035 [test_set_close_angle.py-->line:41]:》》》》》用例【正确设置夹爪关闭角度】测试完成《《《《《
+INFO 2025-08-25 15:28:26,039 [test_set_close_angle.py-->line:49]:》》》》》用例【设置夹爪关闭角度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:26,039 [test_set_close_angle.py-->line:50]:test_api: set_close_angle
+DEBUG 2025-08-25 15:28:26,039 [test_set_close_angle.py-->line:51]:test_parameters: -1
+INFO 2025-08-25 15:28:26,039 [test_set_close_angle.py-->line:57]:✅ 用例【设置夹爪关闭角度（超限）】测试通过
+INFO 2025-08-25 15:28:26,039 [test_set_close_angle.py-->line:58]:》》》》》用例【设置夹爪关闭角度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:26,042 [test_set_close_angle.py-->line:49]:》》》》》用例【设置夹爪关闭角度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:26,042 [test_set_close_angle.py-->line:50]:test_api: set_close_angle
+DEBUG 2025-08-25 15:28:26,042 [test_set_close_angle.py-->line:51]:test_parameters: 101
+INFO 2025-08-25 15:28:26,042 [test_set_close_angle.py-->line:57]:✅ 用例【设置夹爪关闭角度（超限）】测试通过
+INFO 2025-08-25 15:28:26,042 [test_set_close_angle.py-->line:58]:》》》》》用例【设置夹爪关闭角度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:26,126 [test_set_close_angle.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:26,131 [test_set_gripper_baud.py-->line:17]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:26,132 [test_set_gripper_baud.py-->line:32]:》》》》》用例【正确设置固件波特率号】开始测试《《《《《
+DEBUG 2025-08-25 15:28:26,132 [test_set_gripper_baud.py-->line:35]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:28:26,132 [test_set_gripper_baud.py-->line:36]:test_parameters: 1
+DEBUG 2025-08-25 15:28:26,172 [test_set_gripper_baud.py-->line:40]:设置波特率返回：1
+DEBUG 2025-08-25 15:28:27,765 [test_set_gripper_baud.py-->line:48]:读取波特率返回：1
+INFO 2025-08-25 15:28:27,765 [test_set_gripper_baud.py-->line:55]:✅ 用例【正确设置固件波特率号】测试通过
+INFO 2025-08-25 15:28:27,765 [test_set_gripper_baud.py-->line:56]:》》》》》用例【正确设置固件波特率号】测试完成《《《《《
+INFO 2025-08-25 15:28:27,802 [test_set_gripper_baud.py-->line:64]:》》》》》用例【设置波特率参数超限】开始测试《《《《《
+DEBUG 2025-08-25 15:28:27,802 [test_set_gripper_baud.py-->line:67]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:28:27,802 [test_set_gripper_baud.py-->line:68]:test_parameters: 6
+INFO 2025-08-25 15:28:27,802 [test_set_gripper_baud.py-->line:74]:✅ 用例【设置波特率参数超限】测试通过
+INFO 2025-08-25 15:28:27,802 [test_set_gripper_baud.py-->line:75]:》》》》》用例【设置波特率参数超限】测试完成《《《《《
+INFO 2025-08-25 15:28:27,804 [test_set_gripper_baud.py-->line:64]:》》》》》用例【设置波特率参数超限】开始测试《《《《《
+DEBUG 2025-08-25 15:28:27,805 [test_set_gripper_baud.py-->line:67]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:28:27,805 [test_set_gripper_baud.py-->line:68]:test_parameters: -1
+INFO 2025-08-25 15:28:27,805 [test_set_gripper_baud.py-->line:74]:✅ 用例【设置波特率参数超限】测试通过
+INFO 2025-08-25 15:28:27,805 [test_set_gripper_baud.py-->line:75]:》》》》》用例【设置波特率参数超限】测试完成《《《《《
+INFO 2025-08-25 15:28:27,889 [test_set_gripper_baud.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:27,896 [test_set_gripper_calibrate.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:27,897 [test_set_gripper_calibrate.py-->line:27]:》》》》》用例【正确设置夹爪零位】开始测试《《《《《
+DEBUG 2025-08-25 15:28:27,897 [test_set_gripper_calibrate.py-->line:30]:test_api: set_gripper_calibration
+DEBUG 2025-08-25 15:28:27,897 [test_set_gripper_calibrate.py-->line:31]:test_parameters: None
+DEBUG 2025-08-25 15:28:36,409 [test_set_gripper_calibrate.py-->line:36]:接口返回结果：1
+DEBUG 2025-08-25 15:28:36,409 [test_set_gripper_calibrate.py-->line:40]:请求类型断言成功
+INFO 2025-08-25 15:28:36,411 [test_set_gripper_calibrate.py-->line:47]:✅ 用例【正确设置夹爪零位】测试通过
+INFO 2025-08-25 15:28:36,411 [test_set_gripper_calibrate.py-->line:48]:》》》》》用例【正确设置夹爪零位】测试完成《《《《《
+INFO 2025-08-25 15:28:36,440 [test_set_gripper_calibrate.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:36,445 [test_set_gripper_cw.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:36,446 [test_set_gripper_cw.py-->line:26]:》》》》》用例【正确设置夹爪顺时针可运行误差】开始测试《《《《《
+DEBUG 2025-08-25 15:28:36,446 [test_set_gripper_cw.py-->line:29]:test_api: set_gripper_cw
+DEBUG 2025-08-25 15:28:36,446 [test_set_gripper_cw.py-->line:30]:test_parameters: 10
+DEBUG 2025-08-25 15:28:36,503 [test_set_gripper_cw.py-->line:34]:设置返回值：1
+DEBUG 2025-08-25 15:28:36,549 [test_set_gripper_cw.py-->line:38]:获取返回值：10
+DEBUG 2025-08-25 15:28:36,549 [test_set_gripper_cw.py-->line:42]:请求类型断言成功
+INFO 2025-08-25 15:28:36,552 [test_set_gripper_cw.py-->line:51]:✅ 用例【正确设置夹爪顺时针可运行误差】测试通过
+INFO 2025-08-25 15:28:36,552 [test_set_gripper_cw.py-->line:52]:》》》》》用例【正确设置夹爪顺时针可运行误差】测试完成《《《《《
+INFO 2025-08-25 15:28:36,555 [test_set_gripper_cw.py-->line:60]:》》》》》用例【设置夹爪顺时针可运行误差(超限)】开始测试《《《《《
+DEBUG 2025-08-25 15:28:36,556 [test_set_gripper_cw.py-->line:63]:test_api: set_gripper_cw
+DEBUG 2025-08-25 15:28:36,556 [test_set_gripper_cw.py-->line:64]:test_parameters: 17
+INFO 2025-08-25 15:28:36,556 [test_set_gripper_cw.py-->line:70]:✅ 用例【设置夹爪顺时针可运行误差(超限)】测试通过
+INFO 2025-08-25 15:28:36,556 [test_set_gripper_cw.py-->line:71]:》》》》》用例【设置夹爪顺时针可运行误差(超限)】测试完成《《《《《
+INFO 2025-08-25 15:28:36,558 [test_set_gripper_cw.py-->line:60]:》》》》》用例【设置夹爪顺时针可运行误差(超限)】开始测试《《《《《
+DEBUG 2025-08-25 15:28:36,558 [test_set_gripper_cw.py-->line:63]:test_api: set_gripper_cw
+DEBUG 2025-08-25 15:28:36,558 [test_set_gripper_cw.py-->line:64]:test_parameters: -1
+INFO 2025-08-25 15:28:36,558 [test_set_gripper_cw.py-->line:70]:✅ 用例【设置夹爪顺时针可运行误差(超限)】测试通过
+INFO 2025-08-25 15:28:36,558 [test_set_gripper_cw.py-->line:71]:》》》》》用例【设置夹爪顺时针可运行误差(超限)】测试完成《《《《《
+INFO 2025-08-25 15:28:36,642 [test_set_gripper_cw.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:36,645 [test_set_gripper_cww.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:36,646 [test_set_gripper_cww.py-->line:26]:》》》》》用例【正确设置夹爪逆时针可运行误差】开始测试《《《《《
+DEBUG 2025-08-25 15:28:36,646 [test_set_gripper_cww.py-->line:29]:test_api: set_gripper_cww
+DEBUG 2025-08-25 15:28:36,646 [test_set_gripper_cww.py-->line:30]:test_parameters: 10
+DEBUG 2025-08-25 15:28:36,688 [test_set_gripper_cww.py-->line:34]:设置返回值：0
+DEBUG 2025-08-25 15:28:36,735 [test_set_gripper_cww.py-->line:38]:获取返回值：3
+DEBUG 2025-08-25 15:28:36,735 [test_set_gripper_cww.py-->line:42]:请求类型断言成功
+INFO 2025-08-25 15:28:36,743 [test_set_gripper_cww.py-->line:60]:》》》》》用例【设置夹爪逆时针可运行误差(超限)】开始测试《《《《《
+DEBUG 2025-08-25 15:28:36,744 [test_set_gripper_cww.py-->line:63]:test_api: set_gripper_cww
+DEBUG 2025-08-25 15:28:36,744 [test_set_gripper_cww.py-->line:64]:test_parameters: 17
+INFO 2025-08-25 15:28:36,744 [test_set_gripper_cww.py-->line:70]:✅ 用例【设置夹爪逆时针可运行误差(超限)】测试通过
+INFO 2025-08-25 15:28:36,744 [test_set_gripper_cww.py-->line:71]:》》》》》用例【设置夹爪逆时针可运行误差(超限)】测试完成《《《《《
+INFO 2025-08-25 15:28:36,745 [test_set_gripper_cww.py-->line:60]:》》》》》用例【设置夹爪逆时针可运行误差(超限)】开始测试《《《《《
+DEBUG 2025-08-25 15:28:36,745 [test_set_gripper_cww.py-->line:63]:test_api: set_gripper_cww
+DEBUG 2025-08-25 15:28:36,745 [test_set_gripper_cww.py-->line:64]:test_parameters: -1
+INFO 2025-08-25 15:28:36,745 [test_set_gripper_cww.py-->line:70]:✅ 用例【设置夹爪逆时针可运行误差(超限)】测试通过
+INFO 2025-08-25 15:28:36,745 [test_set_gripper_cww.py-->line:71]:》》》》》用例【设置夹爪逆时针可运行误差(超限)】测试完成《《《《《
+INFO 2025-08-25 15:28:36,830 [test_set_gripper_cww.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:36,836 [test_set_gripper_d.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:36,837 [test_set_gripper_d.py-->line:26]:》》》》》用例【正确设置夹爪D值】开始测试《《《《《
+DEBUG 2025-08-25 15:28:36,837 [test_set_gripper_d.py-->line:29]:test_api: set_gripper_D
+DEBUG 2025-08-25 15:28:36,837 [test_set_gripper_d.py-->line:30]:test_parameters: 20
+DEBUG 2025-08-25 15:28:36,892 [test_set_gripper_d.py-->line:34]:设置返回值：0
+DEBUG 2025-08-25 15:28:36,938 [test_set_gripper_d.py-->line:38]:获取返回值：120
+DEBUG 2025-08-25 15:28:36,938 [test_set_gripper_d.py-->line:42]:请求类型断言成功
+INFO 2025-08-25 15:28:36,946 [test_set_gripper_d.py-->line:59]:》》》》》用例【设置夹爪D值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:36,946 [test_set_gripper_d.py-->line:62]:test_api: set_gripper_D
+DEBUG 2025-08-25 15:28:36,946 [test_set_gripper_d.py-->line:63]:test_parameters: 255
+INFO 2025-08-25 15:28:36,946 [test_set_gripper_d.py-->line:69]:✅ 用例【设置夹爪D值（超限）】测试通过
+INFO 2025-08-25 15:28:36,946 [test_set_gripper_d.py-->line:70]:》》》》》用例【设置夹爪D值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:36,948 [test_set_gripper_d.py-->line:59]:》》》》》用例【设置夹爪D值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:36,948 [test_set_gripper_d.py-->line:62]:test_api: set_gripper_D
+DEBUG 2025-08-25 15:28:36,948 [test_set_gripper_d.py-->line:63]:test_parameters: -1
+INFO 2025-08-25 15:28:36,948 [test_set_gripper_d.py-->line:69]:✅ 用例【设置夹爪D值（超限）】测试通过
+INFO 2025-08-25 15:28:36,948 [test_set_gripper_d.py-->line:70]:》》》》》用例【设置夹爪D值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:37,031 [test_set_gripper_d.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:37,037 [test_set_gripper_enabled.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:37,037 [test_set_gripper_enabled.py-->line:25]:》》》》》用例【正确设置夹爪使能状态(上使能)】开始测试《《《《《
+DEBUG 2025-08-25 15:28:37,037 [test_set_gripper_enabled.py-->line:28]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:28:37,038 [test_set_gripper_enabled.py-->line:29]:test_parameters: 1
+DEBUG 2025-08-25 15:28:37,078 [test_set_gripper_enabled.py-->line:33]:接口返回结果：1
+DEBUG 2025-08-25 15:28:37,079 [test_set_gripper_enabled.py-->line:37]:请求类型断言成功
+INFO 2025-08-25 15:28:37,081 [test_set_gripper_enabled.py-->line:44]:✅ 用例【正确设置夹爪使能状态(上使能)】测试通过
+INFO 2025-08-25 15:28:37,081 [test_set_gripper_enabled.py-->line:45]:》》》》》用例【正确设置夹爪使能状态(上使能)】测试完成《《《《《
+INFO 2025-08-25 15:28:37,085 [test_set_gripper_enabled.py-->line:25]:》》》》》用例【正确设置夹爪使能状态(下使能)】开始测试《《《《《
+DEBUG 2025-08-25 15:28:37,085 [test_set_gripper_enabled.py-->line:28]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:28:37,086 [test_set_gripper_enabled.py-->line:29]:test_parameters: 0
+DEBUG 2025-08-25 15:28:37,141 [test_set_gripper_enabled.py-->line:33]:接口返回结果：1
+DEBUG 2025-08-25 15:28:37,141 [test_set_gripper_enabled.py-->line:37]:请求类型断言成功
+INFO 2025-08-25 15:28:37,142 [test_set_gripper_enabled.py-->line:44]:✅ 用例【正确设置夹爪使能状态(下使能)】测试通过
+INFO 2025-08-25 15:28:37,142 [test_set_gripper_enabled.py-->line:45]:》》》》》用例【正确设置夹爪使能状态(下使能)】测试完成《《《《《
+INFO 2025-08-25 15:28:37,147 [test_set_gripper_enabled.py-->line:53]:》》》》》用例【设置夹爪使能状态（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:37,147 [test_set_gripper_enabled.py-->line:56]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:28:37,147 [test_set_gripper_enabled.py-->line:57]:test_parameters: 2
+INFO 2025-08-25 15:28:37,147 [test_set_gripper_enabled.py-->line:63]:✅ 用例【设置夹爪使能状态（超限）】测试通过
+INFO 2025-08-25 15:28:37,147 [test_set_gripper_enabled.py-->line:64]:》》》》》用例【设置夹爪使能状态（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:37,150 [test_set_gripper_enabled.py-->line:53]:》》》》》用例【设置夹爪使能状态（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:37,150 [test_set_gripper_enabled.py-->line:56]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:28:37,150 [test_set_gripper_enabled.py-->line:57]:test_parameters: -1
+INFO 2025-08-25 15:28:37,150 [test_set_gripper_enabled.py-->line:63]:✅ 用例【设置夹爪使能状态（超限）】测试通过
+INFO 2025-08-25 15:28:37,150 [test_set_gripper_enabled.py-->line:64]:》》》》》用例【设置夹爪使能状态（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:37,172 [test_set_gripper_enabled.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:37,178 [test_set_gripper_i.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:37,179 [test_set_gripper_i.py-->line:26]:》》》》》用例【正确设置夹爪I值】开始测试《《《《《
+DEBUG 2025-08-25 15:28:37,179 [test_set_gripper_i.py-->line:29]:test_api: set_gripper_I
+DEBUG 2025-08-25 15:28:37,179 [test_set_gripper_i.py-->line:30]:test_parameters: 20
+DEBUG 2025-08-25 15:28:37,234 [test_set_gripper_i.py-->line:34]:设置返回值: 0
+DEBUG 2025-08-25 15:28:37,281 [test_set_gripper_i.py-->line:38]:读取返回值: 20
+INFO 2025-08-25 15:28:37,291 [test_set_gripper_i.py-->line:58]:》》》》》用例【设置夹爪I值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:37,291 [test_set_gripper_i.py-->line:61]:test_api: set_gripper_I
+DEBUG 2025-08-25 15:28:37,291 [test_set_gripper_i.py-->line:62]:test_parameters: 255
+INFO 2025-08-25 15:28:37,291 [test_set_gripper_i.py-->line:68]:✅ 用例【设置夹爪I值（超限）】测试通过
+INFO 2025-08-25 15:28:37,292 [test_set_gripper_i.py-->line:69]:》》》》》用例【设置夹爪I值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:37,293 [test_set_gripper_i.py-->line:58]:》》》》》用例【设置夹爪I值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:37,293 [test_set_gripper_i.py-->line:61]:test_api: set_gripper_I
+DEBUG 2025-08-25 15:28:37,294 [test_set_gripper_i.py-->line:62]:test_parameters: -1
+INFO 2025-08-25 15:28:37,294 [test_set_gripper_i.py-->line:68]:✅ 用例【设置夹爪I值（超限）】测试通过
+INFO 2025-08-25 15:28:37,294 [test_set_gripper_i.py-->line:69]:》》》》》用例【设置夹爪I值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:37,373 [test_set_gripper_i.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:37,377 [test_set_gripper_id.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:37,378 [test_set_gripper_id.py-->line:26]:》》》》》用例【正确设置固件ID号】开始测试《《《《《
+DEBUG 2025-08-25 15:28:37,378 [test_set_gripper_id.py-->line:29]:test_api: set_gripper_id
+DEBUG 2025-08-25 15:28:37,378 [test_set_gripper_id.py-->line:30]:test_parameters: 10
+DEBUG 2025-08-25 15:28:37,420 [test_set_gripper_id.py-->line:34]:设置返回值: 1
+DEBUG 2025-08-25 15:28:37,468 [test_set_gripper_id.py-->line:38]:读取返回值: 10
+INFO 2025-08-25 15:28:37,469 [test_set_gripper_id.py-->line:50]:✅ 用例【正确设置固件ID号】测试通过
+INFO 2025-08-25 15:28:37,469 [test_set_gripper_id.py-->line:51]:》》》》》用例【正确设置固件ID号】测试完成《《《《《
+INFO 2025-08-25 15:28:37,471 [test_set_gripper_id.py-->line:59]:》》》》》用例【设置固件ID号（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:37,471 [test_set_gripper_id.py-->line:62]:test_api: set_gripper_id
+DEBUG 2025-08-25 15:28:37,471 [test_set_gripper_id.py-->line:63]:test_parameters: -1
+INFO 2025-08-25 15:28:37,471 [test_set_gripper_id.py-->line:69]:✅ 用例【设置固件ID号（超限）】测试通过
+INFO 2025-08-25 15:28:37,471 [test_set_gripper_id.py-->line:70]:》》》》》用例【设置固件ID号（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:37,473 [test_set_gripper_id.py-->line:59]:》》》》》用例【设置固件ID号（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:37,473 [test_set_gripper_id.py-->line:62]:test_api: set_gripper_id
+DEBUG 2025-08-25 15:28:37,473 [test_set_gripper_id.py-->line:63]:test_parameters: 255
+INFO 2025-08-25 15:28:37,473 [test_set_gripper_id.py-->line:69]:✅ 用例【设置固件ID号（超限）】测试通过
+INFO 2025-08-25 15:28:37,474 [test_set_gripper_id.py-->line:70]:》》》》》用例【设置固件ID号（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:37,546 [test_set_gripper_id.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:37,550 [test_set_gripper_min_pressure.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:37,551 [test_set_gripper_min_pressure.py-->line:26]:》》》》》用例【正确设置夹爪最小启动力】开始测试《《《《《
+DEBUG 2025-08-25 15:28:37,551 [test_set_gripper_min_pressure.py-->line:29]:test_api: set_gripper_min_pressue
+DEBUG 2025-08-25 15:28:37,551 [test_set_gripper_min_pressure.py-->line:30]:test_parameters: 10
+DEBUG 2025-08-25 15:28:37,592 [test_set_gripper_min_pressure.py-->line:34]:设置返回值: 1
+DEBUG 2025-08-25 15:28:37,640 [test_set_gripper_min_pressure.py-->line:38]:读取返回值: 10
+DEBUG 2025-08-25 15:28:37,640 [test_set_gripper_min_pressure.py-->line:42]:请求类型断言成功
+INFO 2025-08-25 15:28:37,649 [test_set_gripper_min_pressure.py-->line:61]:》》》》》用例【设置夹爪最小启动力（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:37,649 [test_set_gripper_min_pressure.py-->line:64]:test_api: set_gripper_min_pressue
+DEBUG 2025-08-25 15:28:37,649 [test_set_gripper_min_pressure.py-->line:65]:test_parameters: 255
+INFO 2025-08-25 15:28:37,649 [test_set_gripper_min_pressure.py-->line:71]:✅ 用例【设置夹爪最小启动力（超限）】测试通过
+INFO 2025-08-25 15:28:37,649 [test_set_gripper_min_pressure.py-->line:72]:》》》》》用例【设置夹爪最小启动力（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:37,651 [test_set_gripper_min_pressure.py-->line:61]:》》》》》用例【设置夹爪最小启动力（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:37,651 [test_set_gripper_min_pressure.py-->line:64]:test_api: set_gripper_min_pressue
+DEBUG 2025-08-25 15:28:37,651 [test_set_gripper_min_pressure.py-->line:65]:test_parameters: -1
+INFO 2025-08-25 15:28:37,651 [test_set_gripper_min_pressure.py-->line:71]:✅ 用例【设置夹爪最小启动力（超限）】测试通过
+INFO 2025-08-25 15:28:37,651 [test_set_gripper_min_pressure.py-->line:72]:》》》》》用例【设置夹爪最小启动力（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:37,734 [test_set_gripper_min_pressure.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:37,740 [test_set_gripper_p.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:37,741 [test_set_gripper_p.py-->line:26]:》》》》》用例【正确设置夹爪P值】开始测试《《《《《
+DEBUG 2025-08-25 15:28:37,741 [test_set_gripper_p.py-->line:29]:test_api: set_gripper_P
+DEBUG 2025-08-25 15:28:37,741 [test_set_gripper_p.py-->line:30]:test_parameters: 20
+DEBUG 2025-08-25 15:28:37,782 [test_set_gripper_p.py-->line:34]:设置返回值: 1
+DEBUG 2025-08-25 15:28:37,828 [test_set_gripper_p.py-->line:38]:获取返回值: 20
+DEBUG 2025-08-25 15:28:37,828 [test_set_gripper_p.py-->line:42]:请求类型断言成功
+INFO 2025-08-25 15:28:37,836 [test_set_gripper_p.py-->line:61]:》》》》》用例【设置夹爪P值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:37,836 [test_set_gripper_p.py-->line:64]:test_api: set_gripper_P
+DEBUG 2025-08-25 15:28:37,836 [test_set_gripper_p.py-->line:65]:test_parameters: 255
+INFO 2025-08-25 15:28:37,836 [test_set_gripper_p.py-->line:71]:✅ 用例【设置夹爪P值（超限）】测试成功
+INFO 2025-08-25 15:28:37,837 [test_set_gripper_p.py-->line:72]:》》》》》用例【设置夹爪P值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:37,838 [test_set_gripper_p.py-->line:61]:》》》》》用例【设置夹爪P值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:37,839 [test_set_gripper_p.py-->line:64]:test_api: set_gripper_P
+DEBUG 2025-08-25 15:28:37,839 [test_set_gripper_p.py-->line:65]:test_parameters: -1
+INFO 2025-08-25 15:28:37,839 [test_set_gripper_p.py-->line:71]:✅ 用例【设置夹爪P值（超限）】测试成功
+INFO 2025-08-25 15:28:37,839 [test_set_gripper_p.py-->line:72]:》》》》》用例【设置夹爪P值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:37,922 [test_set_gripper_p.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:37,926 [test_set_gripper_torque.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:37,927 [test_set_gripper_torque.py-->line:26]:》》》》》用例【正确设置夹爪扭矩】开始测试《《《《《
+DEBUG 2025-08-25 15:28:37,927 [test_set_gripper_torque.py-->line:29]:API: set_gripper_torque
+DEBUG 2025-08-25 15:28:37,927 [test_set_gripper_torque.py-->line:30]:Parameter: 10
+DEBUG 2025-08-25 15:28:37,968 [test_set_gripper_torque.py-->line:34]:设置返回值：1
+DEBUG 2025-08-25 15:28:38,023 [test_set_gripper_torque.py-->line:38]:获取返回值：10
+DEBUG 2025-08-25 15:28:38,024 [test_set_gripper_torque.py-->line:42]:请求类型断言成功
+INFO 2025-08-25 15:28:38,055 [test_set_gripper_torque.py-->line:61]:》》》》》用例【设置夹爪扭矩（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:38,056 [test_set_gripper_torque.py-->line:64]:API: set_gripper_torque
+DEBUG 2025-08-25 15:28:38,056 [test_set_gripper_torque.py-->line:65]:Parameter: 255
+INFO 2025-08-25 15:28:38,056 [test_set_gripper_torque.py-->line:71]:✅ 用例【设置夹爪扭矩（超限）】测试成功
+INFO 2025-08-25 15:28:38,056 [test_set_gripper_torque.py-->line:72]:》》》》》用例【设置夹爪扭矩（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:38,058 [test_set_gripper_torque.py-->line:61]:》》》》》用例【设置夹爪扭矩（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:38,058 [test_set_gripper_torque.py-->line:64]:API: set_gripper_torque
+DEBUG 2025-08-25 15:28:38,058 [test_set_gripper_torque.py-->line:65]:Parameter: -1
+INFO 2025-08-25 15:28:38,058 [test_set_gripper_torque.py-->line:71]:✅ 用例【设置夹爪扭矩（超限）】测试成功
+INFO 2025-08-25 15:28:38,058 [test_set_gripper_torque.py-->line:72]:》》》》》用例【设置夹爪扭矩（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:38,141 [test_set_gripper_torque.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:38,146 [test_set_gripper_value.py-->line:15]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:38,147 [test_set_gripper_value.py-->line:27]:》》》》》用例【正确设置夹爪角度(100度)】开始测试《《《《《
+DEBUG 2025-08-25 15:28:38,147 [test_set_gripper_value.py-->line:30]:API: set_gripper_value
+DEBUG 2025-08-25 15:28:38,147 [test_set_gripper_value.py-->line:31]:Value: 100, Speed: 30
+DEBUG 2025-08-25 15:28:38,233 [test_set_gripper_value.py-->line:35]:设置返回值：1
+DEBUG 2025-08-25 15:28:38,281 [test_set_gripper_value.py-->line:39]:获取返回值：0
+DEBUG 2025-08-25 15:28:38,281 [test_set_gripper_value.py-->line:43]:请求类型断言成功
+INFO 2025-08-25 15:28:38,312 [test_set_gripper_value.py-->line:27]:》》》》》用例【正确设置夹爪角度(0度)】开始测试《《《《《
+DEBUG 2025-08-25 15:28:38,312 [test_set_gripper_value.py-->line:30]:API: set_gripper_value
+DEBUG 2025-08-25 15:28:38,312 [test_set_gripper_value.py-->line:31]:Value: 0, Speed: 50
+DEBUG 2025-08-25 15:28:38,408 [test_set_gripper_value.py-->line:35]:设置返回值：1
+DEBUG 2025-08-25 15:28:38,455 [test_set_gripper_value.py-->line:39]:获取返回值：14
+DEBUG 2025-08-25 15:28:38,455 [test_set_gripper_value.py-->line:43]:请求类型断言成功
+INFO 2025-08-25 15:28:38,486 [test_set_gripper_value.py-->line:62]:》》》》》用例【设置夹爪速度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:38,486 [test_set_gripper_value.py-->line:65]:API: set_gripper_value
+DEBUG 2025-08-25 15:28:38,486 [test_set_gripper_value.py-->line:66]:Value: 50, Speed: 101
+INFO 2025-08-25 15:28:38,486 [test_set_gripper_value.py-->line:72]:✅ 用例【设置夹爪速度（超限）】测试成功
+INFO 2025-08-25 15:28:38,486 [test_set_gripper_value.py-->line:73]:》》》》》用例【设置夹爪速度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:38,487 [test_set_gripper_value.py-->line:62]:》》》》》用例【设置夹爪角度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:38,487 [test_set_gripper_value.py-->line:65]:API: set_gripper_value
+DEBUG 2025-08-25 15:28:38,487 [test_set_gripper_value.py-->line:66]:Value: 101, Speed: 50
+INFO 2025-08-25 15:28:38,489 [test_set_gripper_value.py-->line:72]:✅ 用例【设置夹爪角度（超限）】测试成功
+INFO 2025-08-25 15:28:38,489 [test_set_gripper_value.py-->line:73]:》》》》》用例【设置夹爪角度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:38,611 [test_set_gripper_value.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:38,617 [test_set_open_angle.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:38,617 [test_set_open_angle.py-->line:26]:》》》》》用例【正确设置夹爪张开角度】开始测试《《《《《
+DEBUG 2025-08-25 15:28:38,618 [test_set_open_angle.py-->line:29]:API: set_open_angle
+DEBUG 2025-08-25 15:28:38,618 [test_set_open_angle.py-->line:30]:参数: 10
+DEBUG 2025-08-25 15:28:38,659 [test_set_open_angle.py-->line:34]:设置返回值：1
+DEBUG 2025-08-25 15:28:38,659 [test_set_open_angle.py-->line:38]:请求类型断言成功
+INFO 2025-08-25 15:28:38,661 [test_set_open_angle.py-->line:45]:✅ 用例【正确设置夹爪张开角度】测试成功
+INFO 2025-08-25 15:28:38,661 [test_set_open_angle.py-->line:46]:》》》》》用例【正确设置夹爪张开角度】测试完成《《《《《
+INFO 2025-08-25 15:28:38,665 [test_set_open_angle.py-->line:54]:》》》》》用例【设置夹爪张开角度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:38,665 [test_set_open_angle.py-->line:57]:API: set_open_angle
+DEBUG 2025-08-25 15:28:38,666 [test_set_open_angle.py-->line:58]:参数: -1
+INFO 2025-08-25 15:28:38,666 [test_set_open_angle.py-->line:64]:✅ 用例【设置夹爪张开角度（超限）】测试成功
+INFO 2025-08-25 15:28:38,666 [test_set_open_angle.py-->line:65]:》》》》》用例【设置夹爪张开角度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:38,670 [test_set_open_angle.py-->line:54]:》》》》》用例【设置夹爪张开角度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:38,670 [test_set_open_angle.py-->line:57]:API: set_open_angle
+DEBUG 2025-08-25 15:28:38,670 [test_set_open_angle.py-->line:58]:参数: 101
+INFO 2025-08-25 15:28:38,670 [test_set_open_angle.py-->line:64]:✅ 用例【设置夹爪张开角度（超限）】测试成功
+INFO 2025-08-25 15:28:38,670 [test_set_open_angle.py-->line:65]:》》》》》用例【设置夹爪张开角度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:38,753 [test_set_open_angle.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:38,758 [test_set_out_put.py-->line:15]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:38,759 [test_set_out_put.py-->line:27]:》》》》》用例【正确设置夹爪IO张开】开始测试《《《《《
+DEBUG 2025-08-25 15:28:38,759 [test_set_out_put.py-->line:30]:API: set_out_put
+DEBUG 2025-08-25 15:28:38,759 [test_set_out_put.py-->line:31]:参数: 2
+DEBUG 2025-08-25 15:28:38,799 [test_set_out_put.py-->line:35]:设置返回值：1
+DEBUG 2025-08-25 15:28:41,812 [test_set_out_put.py-->line:40]:请求类型断言成功
+INFO 2025-08-25 15:28:41,814 [test_set_out_put.py-->line:47]:✅ 用例【正确设置夹爪IO张开】测试成功
+INFO 2025-08-25 15:28:41,814 [test_set_out_put.py-->line:48]:》》》》》用例【正确设置夹爪IO张开】测试完成《《《《《
+INFO 2025-08-25 15:28:41,819 [test_set_out_put.py-->line:27]:》》》》》用例【正确设置夹爪IO关闭】开始测试《《《《《
+DEBUG 2025-08-25 15:28:41,819 [test_set_out_put.py-->line:30]:API: set_out_put
+DEBUG 2025-08-25 15:28:41,819 [test_set_out_put.py-->line:31]:参数: 1
+DEBUG 2025-08-25 15:28:41,874 [test_set_out_put.py-->line:35]:设置返回值：1
+DEBUG 2025-08-25 15:28:44,882 [test_set_out_put.py-->line:40]:请求类型断言成功
+INFO 2025-08-25 15:28:44,885 [test_set_out_put.py-->line:47]:✅ 用例【正确设置夹爪IO关闭】测试成功
+INFO 2025-08-25 15:28:44,885 [test_set_out_put.py-->line:48]:》》》》》用例【正确设置夹爪IO关闭】测试完成《《《《《
+INFO 2025-08-25 15:28:44,889 [test_set_out_put.py-->line:27]:》》》》》用例【正确设置夹爪IO张开】开始测试《《《《《
+DEBUG 2025-08-25 15:28:44,889 [test_set_out_put.py-->line:30]:API: set_out_put
+DEBUG 2025-08-25 15:28:44,889 [test_set_out_put.py-->line:31]:参数: 3
+DEBUG 2025-08-25 15:28:44,945 [test_set_out_put.py-->line:35]:设置返回值：1
+DEBUG 2025-08-25 15:28:47,952 [test_set_out_put.py-->line:40]:请求类型断言成功
+INFO 2025-08-25 15:28:47,955 [test_set_out_put.py-->line:47]:✅ 用例【正确设置夹爪IO张开】测试成功
+INFO 2025-08-25 15:28:47,955 [test_set_out_put.py-->line:48]:》》》》》用例【正确设置夹爪IO张开】测试完成《《《《《
+INFO 2025-08-25 15:28:47,960 [test_set_out_put.py-->line:27]:》》》》》用例【正确设置夹爪IO关闭】开始测试《《《《《
+DEBUG 2025-08-25 15:28:47,960 [test_set_out_put.py-->line:30]:API: set_out_put
+DEBUG 2025-08-25 15:28:47,960 [test_set_out_put.py-->line:31]:参数: 0
+DEBUG 2025-08-25 15:28:48,015 [test_set_out_put.py-->line:35]:设置返回值：1
+DEBUG 2025-08-25 15:28:51,026 [test_set_out_put.py-->line:40]:请求类型断言成功
+INFO 2025-08-25 15:28:51,028 [test_set_out_put.py-->line:47]:✅ 用例【正确设置夹爪IO关闭】测试成功
+INFO 2025-08-25 15:28:51,028 [test_set_out_put.py-->line:48]:》》》》》用例【正确设置夹爪IO关闭】测试完成《《《《《
+INFO 2025-08-25 15:28:51,034 [test_set_out_put.py-->line:56]:》》》》》用例【设置夹爪IO(超限)】开始测试《《《《《
+DEBUG 2025-08-25 15:28:51,034 [test_set_out_put.py-->line:59]:API: set_out_put
+DEBUG 2025-08-25 15:28:51,034 [test_set_out_put.py-->line:60]:参数: 4
+INFO 2025-08-25 15:28:51,034 [test_set_out_put.py-->line:66]:✅ 用例【设置夹爪IO(超限)】测试成功
+INFO 2025-08-25 15:28:51,034 [test_set_out_put.py-->line:67]:》》》》》用例【设置夹爪IO(超限)】测试完成《《《《《
+INFO 2025-08-25 15:28:51,036 [test_set_out_put.py-->line:56]:》》》》》用例【设置夹爪IO(超限)】开始测试《《《《《
+DEBUG 2025-08-25 15:28:51,036 [test_set_out_put.py-->line:59]:API: set_out_put
+DEBUG 2025-08-25 15:28:51,037 [test_set_out_put.py-->line:60]:参数: -1
+INFO 2025-08-25 15:28:51,037 [test_set_out_put.py-->line:66]:✅ 用例【设置夹爪IO(超限)】测试成功
+INFO 2025-08-25 15:28:51,037 [test_set_out_put.py-->line:67]:》》》》》用例【设置夹爪IO(超限)】测试完成《《《《《
+INFO 2025-08-25 15:28:51,118 [test_set_out_put.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:51,124 [test_set_protection_current.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:51,125 [test_set_protection_current.py-->line:24]:》》》》》用例【正确设置夹爪夹持电流】开始测试《《《《《
+DEBUG 2025-08-25 15:28:51,125 [test_set_protection_current.py-->line:27]:API: set_protection_current
+DEBUG 2025-08-25 15:28:51,126 [test_set_protection_current.py-->line:28]:参数: 60
+INFO 2025-08-25 15:28:51,139 [test_set_protection_current.py-->line:56]:》》》》》用例【设置夹爪夹持电流（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:51,139 [test_set_protection_current.py-->line:59]:API: set_protection_current
+DEBUG 2025-08-25 15:28:51,139 [test_set_protection_current.py-->line:60]:参数: 301
+INFO 2025-08-25 15:28:51,139 [test_set_protection_current.py-->line:66]:✅ 用例【设置夹爪夹持电流（超限）】测试成功
+INFO 2025-08-25 15:28:51,139 [test_set_protection_current.py-->line:67]:》》》》》用例【设置夹爪夹持电流（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:51,140 [test_set_protection_current.py-->line:56]:》》》》》用例【设置夹爪夹持电流（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:51,141 [test_set_protection_current.py-->line:59]:API: set_protection_current
+DEBUG 2025-08-25 15:28:51,141 [test_set_protection_current.py-->line:60]:参数: -1
+INFO 2025-08-25 15:28:51,141 [test_set_protection_current.py-->line:66]:✅ 用例【设置夹爪夹持电流（超限）】测试成功
+INFO 2025-08-25 15:28:51,141 [test_set_protection_current.py-->line:67]:》》》》》用例【设置夹爪夹持电流（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:51,227 [test_set_protection_current.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:51,232 [test_set_speed.py-->line:12]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:51,233 [test_set_speed.py-->line:23]:》》》》》用例【正确设置夹爪速度】开始测试《《《《《
+DEBUG 2025-08-25 15:28:51,233 [test_set_speed.py-->line:26]:test_api: set_speed
+DEBUG 2025-08-25 15:28:51,233 [test_set_speed.py-->line:27]:test_parameters: 100
+DEBUG 2025-08-25 15:28:51,274 [test_set_speed.py-->line:32]:设置返回值：1
+DEBUG 2025-08-25 15:28:51,276 [test_set_speed.py-->line:37]:请求类型断言成功
+INFO 2025-08-25 15:28:51,277 [test_set_speed.py-->line:44]:✅ 用例【正确设置夹爪速度】测试通过
+INFO 2025-08-25 15:28:51,277 [test_set_speed.py-->line:45]:》》》》》用例【正确设置夹爪速度】测试完成《《《《《
+INFO 2025-08-25 15:28:51,280 [test_set_speed.py-->line:53]:》》》》》用例【设置夹爪速度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:51,280 [test_set_speed.py-->line:56]:test_api: set_speed
+DEBUG 2025-08-25 15:28:51,280 [test_set_speed.py-->line:57]:test_parameters: 101
+INFO 2025-08-25 15:28:51,280 [test_set_speed.py-->line:63]:✅ 用例【设置夹爪速度（超限）】测试通过
+INFO 2025-08-25 15:28:51,280 [test_set_speed.py-->line:64]:》》》》》用例【设置夹爪速度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:51,282 [test_set_speed.py-->line:53]:》》》》》用例【设置夹爪速度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:51,282 [test_set_speed.py-->line:56]:test_api: set_speed
+DEBUG 2025-08-25 15:28:51,282 [test_set_speed.py-->line:57]:test_parameters: 0
+INFO 2025-08-25 15:28:51,282 [test_set_speed.py-->line:63]:✅ 用例【设置夹爪速度（超限）】测试通过
+INFO 2025-08-25 15:28:51,282 [test_set_speed.py-->line:64]:》》》》》用例【设置夹爪速度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:51,366 [test_set_speed.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:51,372 [test_set_vir_pos.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:51,373 [test_set_vir_pos.py-->line:26]:》》》》》用例【正确设置夹爪虚位数值】开始测试《《《《《
+DEBUG 2025-08-25 15:28:51,373 [test_set_vir_pos.py-->line:29]:test_api: set_vir_pos
+DEBUG 2025-08-25 15:28:51,373 [test_set_vir_pos.py-->line:30]:test_parameters: 8
+DEBUG 2025-08-25 15:28:51,429 [test_set_vir_pos.py-->line:35]:设置返回值: 1
+DEBUG 2025-08-25 15:28:51,475 [test_set_vir_pos.py-->line:39]:读取返回值: 8
+INFO 2025-08-25 15:28:51,477 [test_set_vir_pos.py-->line:51]:✅ 用例【正确设置夹爪虚位数值】测试通过
+INFO 2025-08-25 15:28:51,477 [test_set_vir_pos.py-->line:52]:》》》》》用例【正确设置夹爪虚位数值】测试完成《《《《《
+INFO 2025-08-25 15:28:51,480 [test_set_vir_pos.py-->line:60]:》》》》》用例【设置夹爪虚位数值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:51,480 [test_set_vir_pos.py-->line:63]:test_api: set_vir_pos
+DEBUG 2025-08-25 15:28:51,480 [test_set_vir_pos.py-->line:64]:test_parameters: 101
+INFO 2025-08-25 15:28:51,481 [test_set_vir_pos.py-->line:70]:✅ 用例【设置夹爪虚位数值（超限）】测试通过
+INFO 2025-08-25 15:28:51,481 [test_set_vir_pos.py-->line:71]:》》》》》用例【设置夹爪虚位数值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:51,482 [test_set_vir_pos.py-->line:60]:》》》》》用例【设置夹爪虚位数值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:28:51,482 [test_set_vir_pos.py-->line:63]:test_api: set_vir_pos
+DEBUG 2025-08-25 15:28:51,482 [test_set_vir_pos.py-->line:64]:test_parameters: -1
+INFO 2025-08-25 15:28:51,482 [test_set_vir_pos.py-->line:70]:✅ 用例【设置夹爪虚位数值（超限）】测试通过
+INFO 2025-08-25 15:28:51,483 [test_set_vir_pos.py-->line:71]:》》》》》用例【设置夹爪虚位数值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:28:51,568 [test_set_vir_pos.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:28:51,575 [test_stop.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:28:51,576 [test_stop.py-->line:26]:》》》》》用例【正确设置夹爪停止运动】开始测试《《《《《
+DEBUG 2025-08-25 15:28:51,576 [test_stop.py-->line:29]:test_api: stop
+DEBUG 2025-08-25 15:28:51,576 [test_stop.py-->line:30]:test_parameters: None
+DEBUG 2025-08-25 15:28:52,397 [test_stop.py-->line:38]:接口返回值: 1
+INFO 2025-08-25 15:28:52,398 [test_stop.py-->line:48]:✅ 用例【正确设置夹爪停止运动】测试通过
+INFO 2025-08-25 15:28:52,398 [test_stop.py-->line:49]:》》》》》用例【正确设置夹爪停止运动】测试完成《《《《《
+INFO 2025-08-25 15:28:52,523 [test_stop.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:33:59,292 [test_get_close_angle.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:33:59,293 [test_get_close_angle.py-->line:23]:》》》》》用例【正确获取夹爪关闭角度】开始测试《《《《《
+DEBUG 2025-08-25 15:33:59,293 [test_get_close_angle.py-->line:26]:test_api: get_close_angle
+DEBUG 2025-08-25 15:33:59,293 [test_get_close_angle.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:33:59,345 [test_get_close_angle.py-->line:31]:接口返回结果：0
+DEBUG 2025-08-25 15:33:59,345 [test_get_close_angle.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:33:59,350 [test_get_close_angle.py-->line:42]:✅ 用例【正确获取夹爪关闭角度】测试通过
+INFO 2025-08-25 15:33:59,350 [test_get_close_angle.py-->line:43]:》》》》》用例【正确获取夹爪关闭角度】测试完成《《《《《
+INFO 2025-08-25 15:33:59,378 [test_get_close_angle.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:33:59,383 [test_get_firmware_version.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:33:59,384 [test_get_firmware_version.py-->line:23]:》》》》》用例【正确获取固件版本号】开始测试《《《《《
+DEBUG 2025-08-25 15:33:59,384 [test_get_firmware_version.py-->line:26]:test_api: get_firmware_version
+DEBUG 2025-08-25 15:33:59,385 [test_get_firmware_version.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:33:59,440 [test_get_firmware_version.py-->line:31]:接口返回值：13
+DEBUG 2025-08-25 15:33:59,440 [test_get_firmware_version.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:33:59,442 [test_get_firmware_version.py-->line:42]:✅ 用例【正确获取固件版本号】测试通过
+INFO 2025-08-25 15:33:59,442 [test_get_firmware_version.py-->line:43]:》》》》》用例【正确获取固件版本号】测试完成《《《《《
+INFO 2025-08-25 15:33:59,470 [test_get_firmware_version.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:33:59,476 [test_get_gripper_baud.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:33:59,477 [test_get_gripper_baud.py-->line:23]:》》》》》用例【正确获取夹爪波特率】开始测试《《《《《
+DEBUG 2025-08-25 15:33:59,477 [test_get_gripper_baud.py-->line:26]:test_api: get_gripper_baud
+DEBUG 2025-08-25 15:33:59,477 [test_get_gripper_baud.py-->line:27]:test_baud: None
+DEBUG 2025-08-25 15:33:59,517 [test_get_gripper_baud.py-->line:31]:接口返回值：0
+DEBUG 2025-08-25 15:33:59,518 [test_get_gripper_baud.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:33:59,519 [test_get_gripper_baud.py-->line:42]:✅ 用例【正确获取夹爪波特率】测试通过
+INFO 2025-08-25 15:33:59,519 [test_get_gripper_baud.py-->line:43]:》》》》》用例【正确获取夹爪波特率】测试完成《《《《《
+INFO 2025-08-25 15:33:59,548 [test_get_gripper_baud.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:33:59,552 [test_get_gripper_cw.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:33:59,553 [test_get_gripper_cw.py-->line:23]:》》》》》用例【正确获取夹爪顺时针可运行误差】开始测试《《《《《
+DEBUG 2025-08-25 15:33:59,553 [test_get_gripper_cw.py-->line:26]:test_api: set_gripper_cw
+DEBUG 2025-08-25 15:33:59,553 [test_get_gripper_cw.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:33:59,594 [test_get_gripper_cw.py-->line:31]:接口返回值：3
+DEBUG 2025-08-25 15:33:59,594 [test_get_gripper_cw.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:33:59,596 [test_get_gripper_cw.py-->line:42]:✅ 用例【正确获取夹爪顺时针可运行误差】测试通过
+INFO 2025-08-25 15:33:59,597 [test_get_gripper_cw.py-->line:43]:》》》》》用例【正确获取夹爪顺时针可运行误差】测试完成《《《《《
+INFO 2025-08-25 15:33:59,625 [test_get_gripper_cw.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:33:59,631 [test_get_gripper_cww.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:33:59,632 [test_get_gripper_cww.py-->line:23]:》》》》》用例【正确获取夹爪逆时针可运行误差】开始测试《《《《《
+DEBUG 2025-08-25 15:33:59,632 [test_get_gripper_cww.py-->line:26]:test_api: set_gripper_cww
+DEBUG 2025-08-25 15:33:59,632 [test_get_gripper_cww.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:33:59,672 [test_get_gripper_cww.py-->line:31]:接口返回值: 3
+DEBUG 2025-08-25 15:33:59,673 [test_get_gripper_cww.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:33:59,674 [test_get_gripper_cww.py-->line:42]:✅ 用例【正确获取夹爪逆时针可运行误差】测试通过
+INFO 2025-08-25 15:33:59,674 [test_get_gripper_cww.py-->line:43]:》》》》》用例【正确获取夹爪逆时针可运行误差】测试完成《《《《《
+INFO 2025-08-25 15:33:59,704 [test_get_gripper_cww.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:33:59,709 [test_get_gripper_d.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:33:59,710 [test_get_gripper_d.py-->line:23]:》》》》》用例【正确获取夹爪D值】开始测试《《《《《
+DEBUG 2025-08-25 15:33:59,710 [test_get_gripper_d.py-->line:26]:test_api: get_gripper_D
+DEBUG 2025-08-25 15:33:59,710 [test_get_gripper_d.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:33:59,752 [test_get_gripper_d.py-->line:31]:接口返回值: 120
+DEBUG 2025-08-25 15:33:59,752 [test_get_gripper_d.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:33:59,753 [test_get_gripper_d.py-->line:42]:✅ 用例【正确获取夹爪D值】测试通过
+INFO 2025-08-25 15:33:59,753 [test_get_gripper_d.py-->line:43]:》》》》》用例【正确获取夹爪D值】测试完成《《《《《
+INFO 2025-08-25 15:33:59,782 [test_get_gripper_d.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:33:59,786 [test_get_gripper_i.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:33:59,786 [test_get_gripper_i.py-->line:23]:》》》》》用例【正确读取夹爪I值】开始测试《《《《《
+DEBUG 2025-08-25 15:33:59,786 [test_get_gripper_i.py-->line:26]:test_api: get_gripper_I
+DEBUG 2025-08-25 15:33:59,787 [test_get_gripper_i.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:33:59,829 [test_get_gripper_i.py-->line:31]:接口返回值: 0
+DEBUG 2025-08-25 15:33:59,829 [test_get_gripper_i.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:33:59,830 [test_get_gripper_i.py-->line:42]:✅ 用例【正确读取夹爪I值】测试通过
+INFO 2025-08-25 15:33:59,830 [test_get_gripper_i.py-->line:43]:》》》》》用例【正确读取夹爪I值】测试完成《《《《《
+INFO 2025-08-25 15:33:59,860 [test_get_gripper_i.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:33:59,866 [test_get_gripper_id.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:33:59,866 [test_get_gripper_id.py-->line:25]:》》》》》用例【正确设置固件ID号】开始测试《《《《《
+DEBUG 2025-08-25 15:33:59,866 [test_get_gripper_id.py-->line:28]:test_api: set_gripper_id
+DEBUG 2025-08-25 15:33:59,866 [test_get_gripper_id.py-->line:29]:test_parameters: 10
+DEBUG 2025-08-25 15:33:59,908 [test_get_gripper_id.py-->line:33]:设置返回结果：1
+DEBUG 2025-08-25 15:33:59,954 [test_get_gripper_id.py-->line:37]:获取到的ID：10
+DEBUG 2025-08-25 15:33:59,954 [test_get_gripper_id.py-->line:41]:请求类型断言成功
+INFO 2025-08-25 15:33:59,954 [test_get_gripper_id.py-->line:49]:✅ 用例【正确设置固件ID号】测试通过
+INFO 2025-08-25 15:33:59,955 [test_get_gripper_id.py-->line:50]:》》》》》用例【正确设置固件ID号】测试完成《《《《《
+INFO 2025-08-25 15:33:59,960 [test_get_gripper_id.py-->line:58]:》》》》》用例【设置固件ID号（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:33:59,960 [test_get_gripper_id.py-->line:61]:test_api: set_gripper_id
+DEBUG 2025-08-25 15:33:59,960 [test_get_gripper_id.py-->line:62]:test_parameters: -1
+INFO 2025-08-25 15:34:00,062 [test_get_gripper_id.py-->line:58]:》》》》》用例【设置固件ID号（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:34:00,062 [test_get_gripper_id.py-->line:61]:test_api: set_gripper_id
+DEBUG 2025-08-25 15:34:00,062 [test_get_gripper_id.py-->line:62]:test_parameters: 255
+INFO 2025-08-25 15:34:00,174 [test_get_gripper_id.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:34:00,178 [test_get_gripper_min_pressure.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:34:00,179 [test_get_gripper_min_pressure.py-->line:23]:》》》》》用例【正确获取夹爪最小启动力】开始测试《《《《《
+DEBUG 2025-08-25 15:34:00,179 [test_get_gripper_min_pressure.py-->line:26]:test_api: get_gripper_min_pressue
+DEBUG 2025-08-25 15:34:00,179 [test_get_gripper_min_pressure.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:34:00,222 [test_get_gripper_min_pressure.py-->line:31]:接口返回结果：0
+DEBUG 2025-08-25 15:34:00,222 [test_get_gripper_min_pressure.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:34:00,224 [test_get_gripper_min_pressure.py-->line:42]:✅ 用例【正确获取夹爪最小启动力】测试通过
+INFO 2025-08-25 15:34:00,224 [test_get_gripper_min_pressure.py-->line:43]:》》》》》用例【正确获取夹爪最小启动力】测试完成《《《《《
+INFO 2025-08-25 15:34:00,254 [test_get_gripper_min_pressure.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:34:00,258 [test_get_gripper_p.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:34:00,259 [test_get_gripper_p.py-->line:24]:》》》》》用例【正确获取夹爪P值】开始测试《《《《《
+DEBUG 2025-08-25 15:34:00,259 [test_get_gripper_p.py-->line:27]:test_api: get_gripper_P
+DEBUG 2025-08-25 15:34:00,259 [test_get_gripper_p.py-->line:28]:test_parameters: None
+DEBUG 2025-08-25 15:34:00,299 [test_get_gripper_p.py-->line:32]:接口返回结果：120
+DEBUG 2025-08-25 15:34:00,299 [test_get_gripper_p.py-->line:36]:请求类型断言成功
+INFO 2025-08-25 15:34:00,300 [test_get_gripper_p.py-->line:43]:✅ 用例【正确获取夹爪P值】测试通过
+INFO 2025-08-25 15:34:00,300 [test_get_gripper_p.py-->line:44]:》》》》》用例【正确获取夹爪P值】测试完成《《《《《
+INFO 2025-08-25 15:34:00,331 [test_get_gripper_p.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:34:00,337 [test_get_gripper_status.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:34:00,338 [test_get_gripper_status.py-->line:25]:》》》》》用例【获取夹爪运动时的夹持状态】开始测试《《《《《
+DEBUG 2025-08-25 15:34:00,338 [test_get_gripper_status.py-->line:27]:API: get_gripper_status, 参数: None
+DEBUG 2025-08-25 15:34:00,675 [test_get_gripper_status.py-->line:33]:接口返回结果：0
+INFO 2025-08-25 15:34:00,680 [test_get_gripper_status.py-->line:44]:》》》》》用例【获取夹爪停止运动时的夹持状态】开始测试《《《《《
+DEBUG 2025-08-25 15:34:00,680 [test_get_gripper_status.py-->line:46]:API: get_gripper_status, 参数: None
+DEBUG 2025-08-25 15:34:05,741 [test_get_gripper_status.py-->line:51]:接口返回结果：1
+INFO 2025-08-25 15:34:05,746 [test_get_gripper_status.py-->line:62]:》》》》》用例【获取夹爪停止运动且夹到物体时的夹持状态】开始测试《《《《《
+DEBUG 2025-08-25 15:34:12,656 [test_get_gripper_status.py-->line:70]:接口返回结果：3
+INFO 2025-08-25 15:34:12,667 [test_get_gripper_status.py-->line:81]:》》》》》用例【获取夹爪停止运动且物体掉落时的夹持状态】开始测试《《《《《
+DEBUG 2025-08-25 15:34:16,221 [test_get_gripper_status.py-->line:87]:接口返回结果：3
+INFO 2025-08-25 15:34:16,222 [test_get_gripper_status.py-->line:93]:✅ 用例【获取夹爪停止运动且物体掉落时的夹持状态】测试通过
+INFO 2025-08-25 15:34:16,222 [test_get_gripper_status.py-->line:94]:》》》》》用例【获取夹爪停止运动且物体掉落时的夹持状态】测试完成《《《《《
+INFO 2025-08-25 15:34:16,345 [test_get_gripper_status.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:34:16,352 [test_get_gripper_torque.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:34:16,353 [test_get_gripper_torque.py-->line:23]:》》》》》用例【正确获取夹爪扭矩】开始测试《《《《《
+DEBUG 2025-08-25 15:34:16,353 [test_get_gripper_torque.py-->line:26]:test_api: get_gripper_torque
+DEBUG 2025-08-25 15:34:16,353 [test_get_gripper_torque.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:34:16,410 [test_get_gripper_torque.py-->line:31]:接口返回结果：100
+DEBUG 2025-08-25 15:34:16,410 [test_get_gripper_torque.py-->line:35]:类型断言成功
+INFO 2025-08-25 15:34:16,412 [test_get_gripper_torque.py-->line:42]:✅ 用例【正确获取夹爪扭矩】测试成功
+INFO 2025-08-25 15:34:16,413 [test_get_gripper_torque.py-->line:43]:》》》》》用例【正确获取夹爪扭矩】测试完成《《《《《
+INFO 2025-08-25 15:34:16,442 [test_get_gripper_torque.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:34:16,448 [test_get_modified_version.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:34:16,448 [test_get_modified_version.py-->line:23]:》》》》》用例【正确获取固件次版本号】开始测试《《《《《
+DEBUG 2025-08-25 15:34:16,448 [test_get_modified_version.py-->line:26]:test_api: get_modified_version
+DEBUG 2025-08-25 15:34:16,448 [test_get_modified_version.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:34:16,489 [test_get_modified_version.py-->line:31]:接口返回结果：3
+DEBUG 2025-08-25 15:34:16,489 [test_get_modified_version.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:34:16,535 [test_get_modified_version.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:34:16,540 [test_get_open_angle.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:34:16,540 [test_get_open_angle.py-->line:23]:》》》》》用例【获取夹爪张开角度】开始测试《《《《《
+DEBUG 2025-08-25 15:34:16,540 [test_get_open_angle.py-->line:26]:test_api: get_open_angle
+DEBUG 2025-08-25 15:34:16,540 [test_get_open_angle.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:34:16,597 [test_get_open_angle.py-->line:31]:接口返回结果：100
+DEBUG 2025-08-25 15:34:16,597 [test_get_open_angle.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:34:16,599 [test_get_open_angle.py-->line:42]:✅ 用例【获取夹爪张开角度】测试通过
+INFO 2025-08-25 15:34:16,599 [test_get_open_angle.py-->line:43]:》》》》》用例【获取夹爪张开角度】测试完成《《《《《
+INFO 2025-08-25 15:34:16,628 [test_get_open_angle.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:34:16,633 [test_get_protection_current.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:34:16,634 [test_get_protection_current.py-->line:23]:》》》》》用例【正确获取夹爪夹持电流】开始测试《《《《《
+DEBUG 2025-08-25 15:34:16,634 [test_get_protection_current.py-->line:26]:test_api: get_protection_current
+DEBUG 2025-08-25 15:34:16,634 [test_get_protection_current.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:34:16,675 [test_get_protection_current.py-->line:31]:接口返回结果：44
+DEBUG 2025-08-25 15:34:16,675 [test_get_protection_current.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:34:16,706 [test_get_protection_current.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:34:16,710 [test_get_queue_count.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:34:16,710 [test_get_queue_count.py-->line:23]:》》》》》用例【正确获取夹爪队列长度】开始测试《《《《《
+DEBUG 2025-08-25 15:34:16,710 [test_get_queue_count.py-->line:26]:test_api: get_queue_count
+DEBUG 2025-08-25 15:34:16,710 [test_get_queue_count.py-->line:27]:test_parameters: None
+INFO 2025-08-25 15:34:16,753 [test_get_queue_count.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:34:16,757 [test_get_to_set_speed.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:34:16,757 [test_get_to_set_speed.py-->line:23]:》》》》》用例【正确获取夹爪速度】开始测试《《《《《
+DEBUG 2025-08-25 15:34:16,757 [test_get_to_set_speed.py-->line:26]:test_api: get_to_set_speed
+DEBUG 2025-08-25 15:34:16,758 [test_get_to_set_speed.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:34:16,800 [test_get_to_set_speed.py-->line:31]:接口返回结果：100
+DEBUG 2025-08-25 15:34:16,800 [test_get_to_set_speed.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:34:16,803 [test_get_to_set_speed.py-->line:42]:✅ 用例【正确获取夹爪速度】测试通过
+INFO 2025-08-25 15:34:16,803 [test_get_to_set_speed.py-->line:43]:》》》》》用例【正确获取夹爪速度】测试完成《《《《《
+INFO 2025-08-25 15:34:16,831 [test_get_to_set_speed.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:34:16,836 [test_get_vir_pos.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:34:16,837 [test_get_vir_pos.py-->line:23]:》》》》》用例【正确获取夹爪虚位数值】开始测试《《《《《
+DEBUG 2025-08-25 15:34:16,837 [test_get_vir_pos.py-->line:26]:test_api: get_vir_pos
+DEBUG 2025-08-25 15:34:16,837 [test_get_vir_pos.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 15:34:16,878 [test_get_vir_pos.py-->line:31]:接口返回结果：8
+DEBUG 2025-08-25 15:34:16,878 [test_get_vir_pos.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 15:34:16,879 [test_get_vir_pos.py-->line:42]:✅ 用例【正确获取夹爪虚位数值】测试通过
+INFO 2025-08-25 15:34:16,879 [test_get_vir_pos.py-->line:43]:》》》》》用例【正确获取夹爪虚位数值】测试完成《《《《《
+INFO 2025-08-25 15:34:16,909 [test_get_vir_pos.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:34:16,912 [test_pause.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:34:16,913 [test_pause.py-->line:25]:》》》》》用例【正确设置夹爪暂停】开始测试《《《《《
+DEBUG 2025-08-25 15:34:16,914 [test_pause.py-->line:28]:test_api: pause
+DEBUG 2025-08-25 15:34:16,914 [test_pause.py-->line:29]:test_parameters: None
+DEBUG 2025-08-25 15:34:17,252 [test_pause.py-->line:37]:接口返回结果：1
+DEBUG 2025-08-25 15:34:17,252 [test_pause.py-->line:41]:请求类型断言成功
+INFO 2025-08-25 15:34:17,253 [test_pause.py-->line:48]:✅ 用例【正确设置夹爪暂停】测试通过
+INFO 2025-08-25 15:34:17,253 [test_pause.py-->line:49]:》》》》》用例【正确设置夹爪暂停】测试完成《《《《《
+INFO 2025-08-25 15:34:17,330 [test_pause.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:34:17,334 [test_resume.py-->line:12]:初始化完成，接口测试开始
+INFO 2025-08-25 15:34:17,334 [test_resume.py-->line:22]:》》》》》用例【正确设置夹爪恢复运动】开始测试《《《《《
+DEBUG 2025-08-25 15:34:17,335 [test_resume.py-->line:25]:test_api: resume
+DEBUG 2025-08-25 15:34:17,335 [test_resume.py-->line:26]:test_parameters: None
+DEBUG 2025-08-25 15:34:17,378 [test_resume.py-->line:30]:接口返回结果：1
+DEBUG 2025-08-25 15:34:17,378 [test_resume.py-->line:34]:请求类型断言成功
+INFO 2025-08-25 15:34:17,380 [test_resume.py-->line:41]:✅ 用例【正确设置夹爪恢复运动】测试通过
+INFO 2025-08-25 15:34:17,380 [test_resume.py-->line:42]:》》》》》用例【正确设置夹爪恢复运动】测试完成《《《《《
+INFO 2025-08-25 15:34:17,409 [test_resume.py-->line:15]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:34:17,412 [test_set_abs_gripper_angle.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:34:17,413 [test_set_abs_gripper_angle.py-->line:30]:》》》》》用例【正确设置夹爪绝对运动】开始测试《《《《《
+DEBUG 2025-08-25 15:34:17,413 [test_set_abs_gripper_angle.py-->line:31]:test_api: set_abs_gripper_angle
+DEBUG 2025-08-25 15:34:17,413 [test_set_abs_gripper_angle.py-->line:32]:test_value: 50
+DEBUG 2025-08-25 15:34:21,143 [test_set_abs_gripper_angle.py-->line:39]:请求类型断言成功
+INFO 2025-08-25 15:34:21,145 [test_set_abs_gripper_angle.py-->line:46]:请求结果断言成功，用例【正确设置夹爪绝对运动】测试成功
+INFO 2025-08-25 15:34:21,146 [test_set_abs_gripper_angle.py-->line:47]:》》》》》用例【正确设置夹爪绝对运动】测试完成《《《《《
+INFO 2025-08-25 15:34:24,726 [test_set_abs_gripper_angle.py-->line:54]:》》》》》用例【绝对运动中暂停，恢复运动】开始测试《《《《《
+DEBUG 2025-08-25 15:34:31,894 [test_set_abs_gripper_angle.py-->line:71]:请求类型断言成功
+INFO 2025-08-25 15:34:31,896 [test_set_abs_gripper_angle.py-->line:81]:请求结果断言成功，用例【绝对运动中暂停，恢复运动】测试成功
+INFO 2025-08-25 15:34:31,897 [test_set_abs_gripper_angle.py-->line:82]:》》》》》用例【绝对运动中暂停，恢复运动】测试完成《《《《《
+INFO 2025-08-25 15:34:35,652 [test_set_abs_gripper_angle.py-->line:89]:》》》》》用例【绝对运动中停止运动】开始测试《《《《《
+DEBUG 2025-08-25 15:34:38,777 [test_set_abs_gripper_angle.py-->line:101]:请求类型断言成功
+INFO 2025-08-25 15:34:38,779 [test_set_abs_gripper_angle.py-->line:110]:✅ 用例【绝对运动中停止运动】测试通过
+INFO 2025-08-25 15:34:38,779 [test_set_abs_gripper_angle.py-->line:111]:》》》》》用例【绝对运动中停止运动】测试完成《《《《《
+INFO 2025-08-25 15:34:42,533 [test_set_abs_gripper_angle.py-->line:119]:》》》》》用例【设置绝对运动角度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:34:42,533 [test_set_abs_gripper_angle.py-->line:120]:test_api: set_abs_gripper_angle
+DEBUG 2025-08-25 15:34:42,533 [test_set_abs_gripper_angle.py-->line:121]:test_value: 101
+INFO 2025-08-25 15:34:42,534 [test_set_abs_gripper_angle.py-->line:127]:✅ 用例【设置绝对运动角度（超限）】测试通过
+INFO 2025-08-25 15:34:42,534 [test_set_abs_gripper_angle.py-->line:128]:》》》》》用例【设置绝对运动角度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:34:46,125 [test_set_abs_gripper_angle.py-->line:119]:》》》》》用例【设置绝对运动速度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:34:46,125 [test_set_abs_gripper_angle.py-->line:120]:test_api: set_abs_gripper_angle
+DEBUG 2025-08-25 15:34:46,125 [test_set_abs_gripper_angle.py-->line:121]:test_value: 60
+INFO 2025-08-25 15:34:46,126 [test_set_abs_gripper_angle.py-->line:127]:✅ 用例【设置绝对运动速度（超限）】测试通过
+INFO 2025-08-25 15:34:46,126 [test_set_abs_gripper_angle.py-->line:128]:》》》》》用例【设置绝对运动速度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:34:52,743 [test_set_abs_gripper_angle.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:34:52,749 [test_set_close_angle.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:34:52,750 [test_set_close_angle.py-->line:24]:》》》》》用例【正确设置夹爪关闭角度】开始测试《《《《《
+DEBUG 2025-08-25 15:34:52,750 [test_set_close_angle.py-->line:25]:test_api: set_close_angle
+DEBUG 2025-08-25 15:34:52,750 [test_set_close_angle.py-->line:26]:test_parameters: 10
+DEBUG 2025-08-25 15:34:52,805 [test_set_close_angle.py-->line:33]:请求类型断言成功
+INFO 2025-08-25 15:34:52,807 [test_set_close_angle.py-->line:40]:✅ 用例【正确设置夹爪关闭角度】测试通过
+INFO 2025-08-25 15:34:52,807 [test_set_close_angle.py-->line:41]:》》》》》用例【正确设置夹爪关闭角度】测试完成《《《《《
+INFO 2025-08-25 15:34:52,811 [test_set_close_angle.py-->line:49]:》》》》》用例【设置夹爪关闭角度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:34:52,811 [test_set_close_angle.py-->line:50]:test_api: set_close_angle
+DEBUG 2025-08-25 15:34:52,811 [test_set_close_angle.py-->line:51]:test_parameters: -1
+INFO 2025-08-25 15:34:52,812 [test_set_close_angle.py-->line:57]:✅ 用例【设置夹爪关闭角度（超限）】测试通过
+INFO 2025-08-25 15:34:52,812 [test_set_close_angle.py-->line:58]:》》》》》用例【设置夹爪关闭角度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:34:52,813 [test_set_close_angle.py-->line:49]:》》》》》用例【设置夹爪关闭角度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:34:52,813 [test_set_close_angle.py-->line:50]:test_api: set_close_angle
+DEBUG 2025-08-25 15:34:52,814 [test_set_close_angle.py-->line:51]:test_parameters: 101
+INFO 2025-08-25 15:34:52,814 [test_set_close_angle.py-->line:57]:✅ 用例【设置夹爪关闭角度（超限）】测试通过
+INFO 2025-08-25 15:34:52,814 [test_set_close_angle.py-->line:58]:》》》》》用例【设置夹爪关闭角度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:34:52,898 [test_set_close_angle.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:34:52,904 [test_set_gripper_baud.py-->line:17]:初始化完成，接口测试开始
+INFO 2025-08-25 15:34:52,905 [test_set_gripper_baud.py-->line:32]:》》》》》用例【正确设置固件波特率号】开始测试《《《《《
+DEBUG 2025-08-25 15:34:52,905 [test_set_gripper_baud.py-->line:35]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:34:52,905 [test_set_gripper_baud.py-->line:36]:test_parameters: 1
+DEBUG 2025-08-25 15:34:52,962 [test_set_gripper_baud.py-->line:40]:设置波特率返回：1
+DEBUG 2025-08-25 15:34:54,555 [test_set_gripper_baud.py-->line:48]:读取波特率返回：1
+INFO 2025-08-25 15:34:54,555 [test_set_gripper_baud.py-->line:55]:✅ 用例【正确设置固件波特率号】测试通过
+INFO 2025-08-25 15:34:54,555 [test_set_gripper_baud.py-->line:56]:》》》》》用例【正确设置固件波特率号】测试完成《《《《《
+INFO 2025-08-25 15:34:54,591 [test_set_gripper_baud.py-->line:64]:》》》》》用例【设置波特率参数超限】开始测试《《《《《
+DEBUG 2025-08-25 15:34:54,591 [test_set_gripper_baud.py-->line:67]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:34:54,591 [test_set_gripper_baud.py-->line:68]:test_parameters: 6
+INFO 2025-08-25 15:34:54,591 [test_set_gripper_baud.py-->line:74]:✅ 用例【设置波特率参数超限】测试通过
+INFO 2025-08-25 15:34:54,592 [test_set_gripper_baud.py-->line:75]:》》》》》用例【设置波特率参数超限】测试完成《《《《《
+INFO 2025-08-25 15:34:54,594 [test_set_gripper_baud.py-->line:64]:》》》》》用例【设置波特率参数超限】开始测试《《《《《
+DEBUG 2025-08-25 15:34:54,594 [test_set_gripper_baud.py-->line:67]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:34:54,594 [test_set_gripper_baud.py-->line:68]:test_parameters: -1
+INFO 2025-08-25 15:34:54,594 [test_set_gripper_baud.py-->line:74]:✅ 用例【设置波特率参数超限】测试通过
+INFO 2025-08-25 15:34:54,594 [test_set_gripper_baud.py-->line:75]:》》》》》用例【设置波特率参数超限】测试完成《《《《《
+INFO 2025-08-25 15:34:54,679 [test_set_gripper_baud.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:34:54,686 [test_set_gripper_calibrate.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-08-25 15:34:54,687 [test_set_gripper_calibrate.py-->line:27]:》》》》》用例【正确设置夹爪零位】开始测试《《《《《
+DEBUG 2025-08-25 15:34:54,687 [test_set_gripper_calibrate.py-->line:30]:test_api: set_gripper_calibration
+DEBUG 2025-08-25 15:34:54,687 [test_set_gripper_calibrate.py-->line:31]:test_parameters: None
+DEBUG 2025-08-25 15:35:03,230 [test_set_gripper_calibrate.py-->line:36]:接口返回结果：1
+DEBUG 2025-08-25 15:35:03,231 [test_set_gripper_calibrate.py-->line:40]:请求类型断言成功
+INFO 2025-08-25 15:35:03,233 [test_set_gripper_calibrate.py-->line:47]:✅ 用例【正确设置夹爪零位】测试通过
+INFO 2025-08-25 15:35:03,234 [test_set_gripper_calibrate.py-->line:48]:》》》》》用例【正确设置夹爪零位】测试完成《《《《《
+INFO 2025-08-25 15:35:03,262 [test_set_gripper_calibrate.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:35:03,267 [test_set_gripper_cw.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:35:03,268 [test_set_gripper_cw.py-->line:26]:》》》》》用例【正确设置夹爪顺时针可运行误差】开始测试《《《《《
+DEBUG 2025-08-25 15:35:03,268 [test_set_gripper_cw.py-->line:29]:test_api: set_gripper_cw
+DEBUG 2025-08-25 15:35:03,268 [test_set_gripper_cw.py-->line:30]:test_parameters: 10
+DEBUG 2025-08-25 15:35:03,324 [test_set_gripper_cw.py-->line:34]:设置返回值：1
+DEBUG 2025-08-25 15:35:03,371 [test_set_gripper_cw.py-->line:38]:获取返回值：10
+DEBUG 2025-08-25 15:35:03,371 [test_set_gripper_cw.py-->line:42]:请求类型断言成功
+INFO 2025-08-25 15:35:03,374 [test_set_gripper_cw.py-->line:51]:✅ 用例【正确设置夹爪顺时针可运行误差】测试通过
+INFO 2025-08-25 15:35:03,374 [test_set_gripper_cw.py-->line:52]:》》》》》用例【正确设置夹爪顺时针可运行误差】测试完成《《《《《
+INFO 2025-08-25 15:35:03,378 [test_set_gripper_cw.py-->line:60]:》》》》》用例【设置夹爪顺时针可运行误差(超限)】开始测试《《《《《
+DEBUG 2025-08-25 15:35:03,378 [test_set_gripper_cw.py-->line:63]:test_api: set_gripper_cw
+DEBUG 2025-08-25 15:35:03,378 [test_set_gripper_cw.py-->line:64]:test_parameters: 17
+INFO 2025-08-25 15:35:03,378 [test_set_gripper_cw.py-->line:70]:✅ 用例【设置夹爪顺时针可运行误差(超限)】测试通过
+INFO 2025-08-25 15:35:03,378 [test_set_gripper_cw.py-->line:71]:》》》》》用例【设置夹爪顺时针可运行误差(超限)】测试完成《《《《《
+INFO 2025-08-25 15:35:03,380 [test_set_gripper_cw.py-->line:60]:》》》》》用例【设置夹爪顺时针可运行误差(超限)】开始测试《《《《《
+DEBUG 2025-08-25 15:35:03,380 [test_set_gripper_cw.py-->line:63]:test_api: set_gripper_cw
+DEBUG 2025-08-25 15:35:03,380 [test_set_gripper_cw.py-->line:64]:test_parameters: -1
+INFO 2025-08-25 15:35:03,380 [test_set_gripper_cw.py-->line:70]:✅ 用例【设置夹爪顺时针可运行误差(超限)】测试通过
+INFO 2025-08-25 15:35:03,381 [test_set_gripper_cw.py-->line:71]:》》》》》用例【设置夹爪顺时针可运行误差(超限)】测试完成《《《《《
+INFO 2025-08-25 15:35:03,464 [test_set_gripper_cw.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:35:03,467 [test_set_gripper_cww.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:35:03,468 [test_set_gripper_cww.py-->line:26]:》》》》》用例【正确设置夹爪逆时针可运行误差】开始测试《《《《《
+DEBUG 2025-08-25 15:35:03,468 [test_set_gripper_cww.py-->line:29]:test_api: set_gripper_cww
+DEBUG 2025-08-25 15:35:03,468 [test_set_gripper_cww.py-->line:30]:test_parameters: 10
+DEBUG 2025-08-25 15:35:03,511 [test_set_gripper_cww.py-->line:34]:设置返回值：1
+DEBUG 2025-08-25 15:35:03,558 [test_set_gripper_cww.py-->line:38]:获取返回值：10
+DEBUG 2025-08-25 15:35:03,558 [test_set_gripper_cww.py-->line:42]:请求类型断言成功
+INFO 2025-08-25 15:35:03,562 [test_set_gripper_cww.py-->line:51]:✅ 用例【正确设置夹爪逆时针可运行误差】测试通过
+INFO 2025-08-25 15:35:03,562 [test_set_gripper_cww.py-->line:52]:》》》》》用例【正确设置夹爪逆时针可运行误差】测试完成《《《《《
+INFO 2025-08-25 15:35:03,564 [test_set_gripper_cww.py-->line:60]:》》》》》用例【设置夹爪逆时针可运行误差(超限)】开始测试《《《《《
+DEBUG 2025-08-25 15:35:03,564 [test_set_gripper_cww.py-->line:63]:test_api: set_gripper_cww
+DEBUG 2025-08-25 15:35:03,564 [test_set_gripper_cww.py-->line:64]:test_parameters: 17
+INFO 2025-08-25 15:35:03,565 [test_set_gripper_cww.py-->line:70]:✅ 用例【设置夹爪逆时针可运行误差(超限)】测试通过
+INFO 2025-08-25 15:35:03,565 [test_set_gripper_cww.py-->line:71]:》》》》》用例【设置夹爪逆时针可运行误差(超限)】测试完成《《《《《
+INFO 2025-08-25 15:35:03,567 [test_set_gripper_cww.py-->line:60]:》》》》》用例【设置夹爪逆时针可运行误差(超限)】开始测试《《《《《
+DEBUG 2025-08-25 15:35:03,567 [test_set_gripper_cww.py-->line:63]:test_api: set_gripper_cww
+DEBUG 2025-08-25 15:35:03,567 [test_set_gripper_cww.py-->line:64]:test_parameters: -1
+INFO 2025-08-25 15:35:03,567 [test_set_gripper_cww.py-->line:70]:✅ 用例【设置夹爪逆时针可运行误差(超限)】测试通过
+INFO 2025-08-25 15:35:03,567 [test_set_gripper_cww.py-->line:71]:》》》》》用例【设置夹爪逆时针可运行误差(超限)】测试完成《《《《《
+INFO 2025-08-25 15:35:03,651 [test_set_gripper_cww.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:35:03,656 [test_set_gripper_d.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:35:03,657 [test_set_gripper_d.py-->line:26]:》》》》》用例【正确设置夹爪D值】开始测试《《《《《
+DEBUG 2025-08-25 15:35:03,657 [test_set_gripper_d.py-->line:29]:test_api: set_gripper_D
+DEBUG 2025-08-25 15:35:03,657 [test_set_gripper_d.py-->line:30]:test_parameters: 20
+DEBUG 2025-08-25 15:35:03,713 [test_set_gripper_d.py-->line:34]:设置返回值：1
+DEBUG 2025-08-25 15:35:03,759 [test_set_gripper_d.py-->line:38]:获取返回值：20
+DEBUG 2025-08-25 15:35:03,759 [test_set_gripper_d.py-->line:42]:请求类型断言成功
+INFO 2025-08-25 15:35:03,760 [test_set_gripper_d.py-->line:50]:✅ 用例【正确设置夹爪D值】测试通过
+INFO 2025-08-25 15:35:03,760 [test_set_gripper_d.py-->line:51]:》》》》》用例【正确设置夹爪D值】测试完成《《《《《
+INFO 2025-08-25 15:35:03,763 [test_set_gripper_d.py-->line:59]:》》》》》用例【设置夹爪D值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:03,763 [test_set_gripper_d.py-->line:62]:test_api: set_gripper_D
+DEBUG 2025-08-25 15:35:03,763 [test_set_gripper_d.py-->line:63]:test_parameters: 255
+INFO 2025-08-25 15:35:03,763 [test_set_gripper_d.py-->line:69]:✅ 用例【设置夹爪D值（超限）】测试通过
+INFO 2025-08-25 15:35:03,763 [test_set_gripper_d.py-->line:70]:》》》》》用例【设置夹爪D值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:03,765 [test_set_gripper_d.py-->line:59]:》》》》》用例【设置夹爪D值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:03,765 [test_set_gripper_d.py-->line:62]:test_api: set_gripper_D
+DEBUG 2025-08-25 15:35:03,765 [test_set_gripper_d.py-->line:63]:test_parameters: -1
+INFO 2025-08-25 15:35:03,765 [test_set_gripper_d.py-->line:69]:✅ 用例【设置夹爪D值（超限）】测试通过
+INFO 2025-08-25 15:35:03,765 [test_set_gripper_d.py-->line:70]:》》》》》用例【设置夹爪D值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:03,853 [test_set_gripper_d.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:35:03,860 [test_set_gripper_enabled.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:35:03,860 [test_set_gripper_enabled.py-->line:25]:》》》》》用例【正确设置夹爪使能状态(上使能)】开始测试《《《《《
+DEBUG 2025-08-25 15:35:03,861 [test_set_gripper_enabled.py-->line:28]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:35:03,861 [test_set_gripper_enabled.py-->line:29]:test_parameters: 1
+DEBUG 2025-08-25 15:35:03,913 [test_set_gripper_enabled.py-->line:33]:接口返回结果：1
+DEBUG 2025-08-25 15:35:03,913 [test_set_gripper_enabled.py-->line:37]:请求类型断言成功
+INFO 2025-08-25 15:35:03,916 [test_set_gripper_enabled.py-->line:44]:✅ 用例【正确设置夹爪使能状态(上使能)】测试通过
+INFO 2025-08-25 15:35:03,916 [test_set_gripper_enabled.py-->line:45]:》》》》》用例【正确设置夹爪使能状态(上使能)】测试完成《《《《《
+INFO 2025-08-25 15:35:03,921 [test_set_gripper_enabled.py-->line:25]:》》》》》用例【正确设置夹爪使能状态(下使能)】开始测试《《《《《
+DEBUG 2025-08-25 15:35:03,921 [test_set_gripper_enabled.py-->line:28]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:35:03,921 [test_set_gripper_enabled.py-->line:29]:test_parameters: 0
+DEBUG 2025-08-25 15:35:03,975 [test_set_gripper_enabled.py-->line:33]:接口返回结果：1
+DEBUG 2025-08-25 15:35:03,975 [test_set_gripper_enabled.py-->line:37]:请求类型断言成功
+INFO 2025-08-25 15:35:03,976 [test_set_gripper_enabled.py-->line:44]:✅ 用例【正确设置夹爪使能状态(下使能)】测试通过
+INFO 2025-08-25 15:35:03,977 [test_set_gripper_enabled.py-->line:45]:》》》》》用例【正确设置夹爪使能状态(下使能)】测试完成《《《《《
+INFO 2025-08-25 15:35:03,980 [test_set_gripper_enabled.py-->line:53]:》》》》》用例【设置夹爪使能状态（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:03,980 [test_set_gripper_enabled.py-->line:56]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:35:03,980 [test_set_gripper_enabled.py-->line:57]:test_parameters: 2
+INFO 2025-08-25 15:35:03,980 [test_set_gripper_enabled.py-->line:63]:✅ 用例【设置夹爪使能状态（超限）】测试通过
+INFO 2025-08-25 15:35:03,980 [test_set_gripper_enabled.py-->line:64]:》》》》》用例【设置夹爪使能状态（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:03,983 [test_set_gripper_enabled.py-->line:53]:》》》》》用例【设置夹爪使能状态（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:03,983 [test_set_gripper_enabled.py-->line:56]:test_api: set_gripper_baud
+DEBUG 2025-08-25 15:35:03,983 [test_set_gripper_enabled.py-->line:57]:test_parameters: -1
+INFO 2025-08-25 15:35:03,983 [test_set_gripper_enabled.py-->line:63]:✅ 用例【设置夹爪使能状态（超限）】测试通过
+INFO 2025-08-25 15:35:03,983 [test_set_gripper_enabled.py-->line:64]:》》》》》用例【设置夹爪使能状态（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:04,007 [test_set_gripper_enabled.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:35:04,011 [test_set_gripper_i.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:35:04,011 [test_set_gripper_i.py-->line:26]:》》》》》用例【正确设置夹爪I值】开始测试《《《《《
+DEBUG 2025-08-25 15:35:04,011 [test_set_gripper_i.py-->line:29]:test_api: set_gripper_I
+DEBUG 2025-08-25 15:35:04,011 [test_set_gripper_i.py-->line:30]:test_parameters: 20
+DEBUG 2025-08-25 15:35:04,054 [test_set_gripper_i.py-->line:34]:设置返回值: 0
+DEBUG 2025-08-25 15:35:04,101 [test_set_gripper_i.py-->line:38]:读取返回值: 0
+INFO 2025-08-25 15:35:04,112 [test_set_gripper_i.py-->line:58]:》》》》》用例【设置夹爪I值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:04,112 [test_set_gripper_i.py-->line:61]:test_api: set_gripper_I
+DEBUG 2025-08-25 15:35:04,112 [test_set_gripper_i.py-->line:62]:test_parameters: 255
+INFO 2025-08-25 15:35:04,113 [test_set_gripper_i.py-->line:68]:✅ 用例【设置夹爪I值（超限）】测试通过
+INFO 2025-08-25 15:35:04,113 [test_set_gripper_i.py-->line:69]:》》》》》用例【设置夹爪I值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:04,116 [test_set_gripper_i.py-->line:58]:》》》》》用例【设置夹爪I值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:04,116 [test_set_gripper_i.py-->line:61]:test_api: set_gripper_I
+DEBUG 2025-08-25 15:35:04,116 [test_set_gripper_i.py-->line:62]:test_parameters: -1
+INFO 2025-08-25 15:35:04,116 [test_set_gripper_i.py-->line:68]:✅ 用例【设置夹爪I值（超限）】测试通过
+INFO 2025-08-25 15:35:04,116 [test_set_gripper_i.py-->line:69]:》》》》》用例【设置夹爪I值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:04,195 [test_set_gripper_i.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:35:04,201 [test_set_gripper_id.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:35:04,202 [test_set_gripper_id.py-->line:26]:》》》》》用例【正确设置固件ID号】开始测试《《《《《
+DEBUG 2025-08-25 15:35:04,202 [test_set_gripper_id.py-->line:29]:test_api: set_gripper_id
+DEBUG 2025-08-25 15:35:04,202 [test_set_gripper_id.py-->line:30]:test_parameters: 10
+DEBUG 2025-08-25 15:35:04,258 [test_set_gripper_id.py-->line:34]:设置返回值: 1
+DEBUG 2025-08-25 15:35:04,304 [test_set_gripper_id.py-->line:38]:读取返回值: 10
+INFO 2025-08-25 15:35:04,305 [test_set_gripper_id.py-->line:50]:✅ 用例【正确设置固件ID号】测试通过
+INFO 2025-08-25 15:35:04,305 [test_set_gripper_id.py-->line:51]:》》》》》用例【正确设置固件ID号】测试完成《《《《《
+INFO 2025-08-25 15:35:04,307 [test_set_gripper_id.py-->line:59]:》》》》》用例【设置固件ID号（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:04,307 [test_set_gripper_id.py-->line:62]:test_api: set_gripper_id
+DEBUG 2025-08-25 15:35:04,308 [test_set_gripper_id.py-->line:63]:test_parameters: -1
+INFO 2025-08-25 15:35:04,308 [test_set_gripper_id.py-->line:69]:✅ 用例【设置固件ID号（超限）】测试通过
+INFO 2025-08-25 15:35:04,308 [test_set_gripper_id.py-->line:70]:》》》》》用例【设置固件ID号（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:04,310 [test_set_gripper_id.py-->line:59]:》》》》》用例【设置固件ID号（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:04,310 [test_set_gripper_id.py-->line:62]:test_api: set_gripper_id
+DEBUG 2025-08-25 15:35:04,310 [test_set_gripper_id.py-->line:63]:test_parameters: 255
+INFO 2025-08-25 15:35:04,310 [test_set_gripper_id.py-->line:69]:✅ 用例【设置固件ID号（超限）】测试通过
+INFO 2025-08-25 15:35:04,310 [test_set_gripper_id.py-->line:70]:》》》》》用例【设置固件ID号（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:04,397 [test_set_gripper_id.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:35:04,401 [test_set_gripper_min_pressure.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:35:04,401 [test_set_gripper_min_pressure.py-->line:26]:》》》》》用例【正确设置夹爪最小启动力】开始测试《《《《《
+DEBUG 2025-08-25 15:35:04,402 [test_set_gripper_min_pressure.py-->line:29]:test_api: set_gripper_min_pressue
+DEBUG 2025-08-25 15:35:04,402 [test_set_gripper_min_pressure.py-->line:30]:test_parameters: 10
+DEBUG 2025-08-25 15:35:04,443 [test_set_gripper_min_pressure.py-->line:34]:设置返回值: 1
+DEBUG 2025-08-25 15:35:04,490 [test_set_gripper_min_pressure.py-->line:38]:读取返回值: 10
+DEBUG 2025-08-25 15:35:04,490 [test_set_gripper_min_pressure.py-->line:42]:请求类型断言成功
+INFO 2025-08-25 15:35:04,501 [test_set_gripper_min_pressure.py-->line:61]:》》》》》用例【设置夹爪最小启动力（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:04,502 [test_set_gripper_min_pressure.py-->line:64]:test_api: set_gripper_min_pressue
+DEBUG 2025-08-25 15:35:04,502 [test_set_gripper_min_pressure.py-->line:65]:test_parameters: 255
+INFO 2025-08-25 15:35:04,502 [test_set_gripper_min_pressure.py-->line:71]:✅ 用例【设置夹爪最小启动力（超限）】测试通过
+INFO 2025-08-25 15:35:04,502 [test_set_gripper_min_pressure.py-->line:72]:》》》》》用例【设置夹爪最小启动力（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:04,503 [test_set_gripper_min_pressure.py-->line:61]:》》》》》用例【设置夹爪最小启动力（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:04,503 [test_set_gripper_min_pressure.py-->line:64]:test_api: set_gripper_min_pressue
+DEBUG 2025-08-25 15:35:04,503 [test_set_gripper_min_pressure.py-->line:65]:test_parameters: -1
+INFO 2025-08-25 15:35:04,503 [test_set_gripper_min_pressure.py-->line:71]:✅ 用例【设置夹爪最小启动力（超限）】测试通过
+INFO 2025-08-25 15:35:04,504 [test_set_gripper_min_pressure.py-->line:72]:》》》》》用例【设置夹爪最小启动力（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:04,582 [test_set_gripper_min_pressure.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:35:04,588 [test_set_gripper_p.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:35:04,589 [test_set_gripper_p.py-->line:26]:》》》》》用例【正确设置夹爪P值】开始测试《《《《《
+DEBUG 2025-08-25 15:35:04,589 [test_set_gripper_p.py-->line:29]:test_api: set_gripper_P
+DEBUG 2025-08-25 15:35:04,589 [test_set_gripper_p.py-->line:30]:test_parameters: 20
+DEBUG 2025-08-25 15:35:04,630 [test_set_gripper_p.py-->line:34]:设置返回值: 1
+DEBUG 2025-08-25 15:35:04,678 [test_set_gripper_p.py-->line:38]:获取返回值: 20
+DEBUG 2025-08-25 15:35:04,678 [test_set_gripper_p.py-->line:42]:请求类型断言成功
+INFO 2025-08-25 15:35:04,685 [test_set_gripper_p.py-->line:61]:》》》》》用例【设置夹爪P值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:04,686 [test_set_gripper_p.py-->line:64]:test_api: set_gripper_P
+DEBUG 2025-08-25 15:35:04,686 [test_set_gripper_p.py-->line:65]:test_parameters: 255
+INFO 2025-08-25 15:35:04,686 [test_set_gripper_p.py-->line:71]:✅ 用例【设置夹爪P值（超限）】测试成功
+INFO 2025-08-25 15:35:04,686 [test_set_gripper_p.py-->line:72]:》》》》》用例【设置夹爪P值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:04,688 [test_set_gripper_p.py-->line:61]:》》》》》用例【设置夹爪P值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:04,688 [test_set_gripper_p.py-->line:64]:test_api: set_gripper_P
+DEBUG 2025-08-25 15:35:04,688 [test_set_gripper_p.py-->line:65]:test_parameters: -1
+INFO 2025-08-25 15:35:04,689 [test_set_gripper_p.py-->line:71]:✅ 用例【设置夹爪P值（超限）】测试成功
+INFO 2025-08-25 15:35:04,689 [test_set_gripper_p.py-->line:72]:》》》》》用例【设置夹爪P值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:04,773 [test_set_gripper_p.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:35:04,777 [test_set_gripper_torque.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:35:04,778 [test_set_gripper_torque.py-->line:26]:》》》》》用例【正确设置夹爪扭矩】开始测试《《《《《
+DEBUG 2025-08-25 15:35:04,778 [test_set_gripper_torque.py-->line:29]:API: set_gripper_torque
+DEBUG 2025-08-25 15:35:04,778 [test_set_gripper_torque.py-->line:30]:Parameter: 10
+DEBUG 2025-08-25 15:35:04,819 [test_set_gripper_torque.py-->line:34]:设置返回值：1
+DEBUG 2025-08-25 15:35:04,875 [test_set_gripper_torque.py-->line:38]:获取返回值：10
+DEBUG 2025-08-25 15:35:04,875 [test_set_gripper_torque.py-->line:42]:请求类型断言成功
+INFO 2025-08-25 15:35:04,882 [test_set_gripper_torque.py-->line:61]:》》》》》用例【设置夹爪扭矩（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:04,882 [test_set_gripper_torque.py-->line:64]:API: set_gripper_torque
+DEBUG 2025-08-25 15:35:04,882 [test_set_gripper_torque.py-->line:65]:Parameter: 255
+INFO 2025-08-25 15:35:04,882 [test_set_gripper_torque.py-->line:71]:✅ 用例【设置夹爪扭矩（超限）】测试成功
+INFO 2025-08-25 15:35:04,882 [test_set_gripper_torque.py-->line:72]:》》》》》用例【设置夹爪扭矩（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:04,886 [test_set_gripper_torque.py-->line:61]:》》》》》用例【设置夹爪扭矩（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:04,886 [test_set_gripper_torque.py-->line:64]:API: set_gripper_torque
+DEBUG 2025-08-25 15:35:04,886 [test_set_gripper_torque.py-->line:65]:Parameter: -1
+INFO 2025-08-25 15:35:04,886 [test_set_gripper_torque.py-->line:71]:✅ 用例【设置夹爪扭矩（超限）】测试成功
+INFO 2025-08-25 15:35:04,887 [test_set_gripper_torque.py-->line:72]:》》》》》用例【设置夹爪扭矩（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:04,961 [test_set_gripper_torque.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:35:04,966 [test_set_gripper_value.py-->line:15]:初始化完成，接口测试开始
+INFO 2025-08-25 15:35:04,967 [test_set_gripper_value.py-->line:27]:》》》》》用例【正确设置夹爪角度(100度)】开始测试《《《《《
+DEBUG 2025-08-25 15:35:04,967 [test_set_gripper_value.py-->line:30]:API: set_gripper_value
+DEBUG 2025-08-25 15:35:04,967 [test_set_gripper_value.py-->line:31]:Value: 100, Speed: 30
+DEBUG 2025-08-25 15:35:05,069 [test_set_gripper_value.py-->line:35]:设置返回值：1
+DEBUG 2025-08-25 15:35:05,116 [test_set_gripper_value.py-->line:39]:获取返回值：0
+DEBUG 2025-08-25 15:35:05,116 [test_set_gripper_value.py-->line:43]:请求类型断言成功
+INFO 2025-08-25 15:35:05,154 [test_set_gripper_value.py-->line:27]:》》》》》用例【正确设置夹爪角度(0度)】开始测试《《《《《
+DEBUG 2025-08-25 15:35:05,154 [test_set_gripper_value.py-->line:30]:API: set_gripper_value
+DEBUG 2025-08-25 15:35:05,154 [test_set_gripper_value.py-->line:31]:Value: 0, Speed: 50
+DEBUG 2025-08-25 15:35:05,257 [test_set_gripper_value.py-->line:35]:设置返回值：1
+DEBUG 2025-08-25 15:35:05,304 [test_set_gripper_value.py-->line:39]:获取返回值：15
+DEBUG 2025-08-25 15:35:05,304 [test_set_gripper_value.py-->line:43]:请求类型断言成功
+INFO 2025-08-25 15:35:05,339 [test_set_gripper_value.py-->line:62]:》》》》》用例【设置夹爪速度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:05,339 [test_set_gripper_value.py-->line:65]:API: set_gripper_value
+DEBUG 2025-08-25 15:35:05,339 [test_set_gripper_value.py-->line:66]:Value: 50, Speed: 101
+INFO 2025-08-25 15:35:05,340 [test_set_gripper_value.py-->line:72]:✅ 用例【设置夹爪速度（超限）】测试成功
+INFO 2025-08-25 15:35:05,340 [test_set_gripper_value.py-->line:73]:》》》》》用例【设置夹爪速度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:05,342 [test_set_gripper_value.py-->line:62]:》》》》》用例【设置夹爪角度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:05,342 [test_set_gripper_value.py-->line:65]:API: set_gripper_value
+DEBUG 2025-08-25 15:35:05,342 [test_set_gripper_value.py-->line:66]:Value: 101, Speed: 50
+INFO 2025-08-25 15:35:05,342 [test_set_gripper_value.py-->line:72]:✅ 用例【设置夹爪角度（超限）】测试成功
+INFO 2025-08-25 15:35:05,342 [test_set_gripper_value.py-->line:73]:》》》》》用例【设置夹爪角度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:05,477 [test_set_gripper_value.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:35:05,483 [test_set_open_angle.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:35:05,484 [test_set_open_angle.py-->line:26]:》》》》》用例【正确设置夹爪张开角度】开始测试《《《《《
+DEBUG 2025-08-25 15:35:05,484 [test_set_open_angle.py-->line:29]:API: set_open_angle
+DEBUG 2025-08-25 15:35:05,484 [test_set_open_angle.py-->line:30]:参数: 10
+DEBUG 2025-08-25 15:35:05,524 [test_set_open_angle.py-->line:34]:设置返回值：1
+DEBUG 2025-08-25 15:35:05,524 [test_set_open_angle.py-->line:38]:请求类型断言成功
+INFO 2025-08-25 15:35:05,527 [test_set_open_angle.py-->line:45]:✅ 用例【正确设置夹爪张开角度】测试成功
+INFO 2025-08-25 15:35:05,527 [test_set_open_angle.py-->line:46]:》》》》》用例【正确设置夹爪张开角度】测试完成《《《《《
+INFO 2025-08-25 15:35:05,532 [test_set_open_angle.py-->line:54]:》》》》》用例【设置夹爪张开角度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:05,532 [test_set_open_angle.py-->line:57]:API: set_open_angle
+DEBUG 2025-08-25 15:35:05,532 [test_set_open_angle.py-->line:58]:参数: -1
+INFO 2025-08-25 15:35:05,532 [test_set_open_angle.py-->line:64]:✅ 用例【设置夹爪张开角度（超限）】测试成功
+INFO 2025-08-25 15:35:05,532 [test_set_open_angle.py-->line:65]:》》》》》用例【设置夹爪张开角度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:05,534 [test_set_open_angle.py-->line:54]:》》》》》用例【设置夹爪张开角度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:05,535 [test_set_open_angle.py-->line:57]:API: set_open_angle
+DEBUG 2025-08-25 15:35:05,535 [test_set_open_angle.py-->line:58]:参数: 101
+INFO 2025-08-25 15:35:05,535 [test_set_open_angle.py-->line:64]:✅ 用例【设置夹爪张开角度（超限）】测试成功
+INFO 2025-08-25 15:35:05,535 [test_set_open_angle.py-->line:65]:》》》》》用例【设置夹爪张开角度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:05,619 [test_set_open_angle.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:35:05,624 [test_set_out_put.py-->line:15]:初始化完成，接口测试开始
+INFO 2025-08-25 15:35:05,624 [test_set_out_put.py-->line:27]:》》》》》用例【正确设置夹爪IO张开】开始测试《《《《《
+DEBUG 2025-08-25 15:35:05,624 [test_set_out_put.py-->line:30]:API: set_out_put
+DEBUG 2025-08-25 15:35:05,624 [test_set_out_put.py-->line:31]:参数: 2
+DEBUG 2025-08-25 15:35:05,666 [test_set_out_put.py-->line:35]:设置返回值：1
+DEBUG 2025-08-25 15:35:08,681 [test_set_out_put.py-->line:40]:请求类型断言成功
+INFO 2025-08-25 15:35:08,683 [test_set_out_put.py-->line:47]:✅ 用例【正确设置夹爪IO张开】测试成功
+INFO 2025-08-25 15:35:08,683 [test_set_out_put.py-->line:48]:》》》》》用例【正确设置夹爪IO张开】测试完成《《《《《
+INFO 2025-08-25 15:35:08,687 [test_set_out_put.py-->line:27]:》》》》》用例【正确设置夹爪IO关闭】开始测试《《《《《
+DEBUG 2025-08-25 15:35:08,687 [test_set_out_put.py-->line:30]:API: set_out_put
+DEBUG 2025-08-25 15:35:08,687 [test_set_out_put.py-->line:31]:参数: 1
+DEBUG 2025-08-25 15:35:08,743 [test_set_out_put.py-->line:35]:设置返回值：1
+DEBUG 2025-08-25 15:35:11,749 [test_set_out_put.py-->line:40]:请求类型断言成功
+INFO 2025-08-25 15:35:11,752 [test_set_out_put.py-->line:47]:✅ 用例【正确设置夹爪IO关闭】测试成功
+INFO 2025-08-25 15:35:11,752 [test_set_out_put.py-->line:48]:》》》》》用例【正确设置夹爪IO关闭】测试完成《《《《《
+INFO 2025-08-25 15:35:11,756 [test_set_out_put.py-->line:27]:》》》》》用例【正确设置夹爪IO张开】开始测试《《《《《
+DEBUG 2025-08-25 15:35:11,756 [test_set_out_put.py-->line:30]:API: set_out_put
+DEBUG 2025-08-25 15:35:11,756 [test_set_out_put.py-->line:31]:参数: 3
+DEBUG 2025-08-25 15:35:11,810 [test_set_out_put.py-->line:35]:设置返回值：1
+DEBUG 2025-08-25 15:35:14,823 [test_set_out_put.py-->line:40]:请求类型断言成功
+INFO 2025-08-25 15:35:14,826 [test_set_out_put.py-->line:47]:✅ 用例【正确设置夹爪IO张开】测试成功
+INFO 2025-08-25 15:35:14,826 [test_set_out_put.py-->line:48]:》》》》》用例【正确设置夹爪IO张开】测试完成《《《《《
+INFO 2025-08-25 15:35:14,830 [test_set_out_put.py-->line:27]:》》》》》用例【正确设置夹爪IO关闭】开始测试《《《《《
+DEBUG 2025-08-25 15:35:14,830 [test_set_out_put.py-->line:30]:API: set_out_put
+DEBUG 2025-08-25 15:35:14,830 [test_set_out_put.py-->line:31]:参数: 0
+DEBUG 2025-08-25 15:35:14,870 [test_set_out_put.py-->line:35]:设置返回值：1
+DEBUG 2025-08-25 15:35:17,885 [test_set_out_put.py-->line:40]:请求类型断言成功
+INFO 2025-08-25 15:35:17,888 [test_set_out_put.py-->line:47]:✅ 用例【正确设置夹爪IO关闭】测试成功
+INFO 2025-08-25 15:35:17,888 [test_set_out_put.py-->line:48]:》》》》》用例【正确设置夹爪IO关闭】测试完成《《《《《
+INFO 2025-08-25 15:35:17,893 [test_set_out_put.py-->line:56]:》》》》》用例【设置夹爪IO(超限)】开始测试《《《《《
+DEBUG 2025-08-25 15:35:17,893 [test_set_out_put.py-->line:59]:API: set_out_put
+DEBUG 2025-08-25 15:35:17,893 [test_set_out_put.py-->line:60]:参数: 4
+INFO 2025-08-25 15:35:17,893 [test_set_out_put.py-->line:66]:✅ 用例【设置夹爪IO(超限)】测试成功
+INFO 2025-08-25 15:35:17,893 [test_set_out_put.py-->line:67]:》》》》》用例【设置夹爪IO(超限)】测试完成《《《《《
+INFO 2025-08-25 15:35:17,896 [test_set_out_put.py-->line:56]:》》》》》用例【设置夹爪IO(超限)】开始测试《《《《《
+DEBUG 2025-08-25 15:35:17,896 [test_set_out_put.py-->line:59]:API: set_out_put
+DEBUG 2025-08-25 15:35:17,896 [test_set_out_put.py-->line:60]:参数: -1
+INFO 2025-08-25 15:35:17,896 [test_set_out_put.py-->line:66]:✅ 用例【设置夹爪IO(超限)】测试成功
+INFO 2025-08-25 15:35:17,896 [test_set_out_put.py-->line:67]:》》》》》用例【设置夹爪IO(超限)】测试完成《《《《《
+INFO 2025-08-25 15:35:17,979 [test_set_out_put.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:35:17,984 [test_set_protection_current.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 15:35:17,985 [test_set_protection_current.py-->line:24]:》》》》》用例【正确设置夹爪夹持电流】开始测试《《《《《
+DEBUG 2025-08-25 15:35:17,985 [test_set_protection_current.py-->line:27]:API: set_protection_current
+DEBUG 2025-08-25 15:35:17,985 [test_set_protection_current.py-->line:28]:参数: 60
+INFO 2025-08-25 15:35:18,002 [test_set_protection_current.py-->line:56]:》》》》》用例【设置夹爪夹持电流（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:18,002 [test_set_protection_current.py-->line:59]:API: set_protection_current
+DEBUG 2025-08-25 15:35:18,002 [test_set_protection_current.py-->line:60]:参数: 301
+INFO 2025-08-25 15:35:18,002 [test_set_protection_current.py-->line:66]:✅ 用例【设置夹爪夹持电流（超限）】测试成功
+INFO 2025-08-25 15:35:18,002 [test_set_protection_current.py-->line:67]:》》》》》用例【设置夹爪夹持电流（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:18,003 [test_set_protection_current.py-->line:56]:》》》》》用例【设置夹爪夹持电流（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:18,003 [test_set_protection_current.py-->line:59]:API: set_protection_current
+DEBUG 2025-08-25 15:35:18,003 [test_set_protection_current.py-->line:60]:参数: -1
+INFO 2025-08-25 15:35:18,003 [test_set_protection_current.py-->line:66]:✅ 用例【设置夹爪夹持电流（超限）】测试成功
+INFO 2025-08-25 15:35:18,004 [test_set_protection_current.py-->line:67]:》》》》》用例【设置夹爪夹持电流（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:18,088 [test_set_protection_current.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:35:18,095 [test_set_speed.py-->line:12]:初始化完成，接口测试开始
+INFO 2025-08-25 15:35:18,096 [test_set_speed.py-->line:23]:》》》》》用例【正确设置夹爪速度】开始测试《《《《《
+DEBUG 2025-08-25 15:35:18,096 [test_set_speed.py-->line:26]:test_api: set_speed
+DEBUG 2025-08-25 15:35:18,096 [test_set_speed.py-->line:27]:test_parameters: 100
+DEBUG 2025-08-25 15:35:18,151 [test_set_speed.py-->line:32]:设置返回值：1
+DEBUG 2025-08-25 15:35:18,152 [test_set_speed.py-->line:37]:请求类型断言成功
+INFO 2025-08-25 15:35:18,153 [test_set_speed.py-->line:44]:✅ 用例【正确设置夹爪速度】测试通过
+INFO 2025-08-25 15:35:18,153 [test_set_speed.py-->line:45]:》》》》》用例【正确设置夹爪速度】测试完成《《《《《
+INFO 2025-08-25 15:35:18,158 [test_set_speed.py-->line:53]:》》》》》用例【设置夹爪速度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:18,158 [test_set_speed.py-->line:56]:test_api: set_speed
+DEBUG 2025-08-25 15:35:18,158 [test_set_speed.py-->line:57]:test_parameters: 101
+INFO 2025-08-25 15:35:18,158 [test_set_speed.py-->line:63]:✅ 用例【设置夹爪速度（超限）】测试通过
+INFO 2025-08-25 15:35:18,158 [test_set_speed.py-->line:64]:》》》》》用例【设置夹爪速度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:18,160 [test_set_speed.py-->line:53]:》》》》》用例【设置夹爪速度（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:18,160 [test_set_speed.py-->line:56]:test_api: set_speed
+DEBUG 2025-08-25 15:35:18,160 [test_set_speed.py-->line:57]:test_parameters: 0
+INFO 2025-08-25 15:35:18,160 [test_set_speed.py-->line:63]:✅ 用例【设置夹爪速度（超限）】测试通过
+INFO 2025-08-25 15:35:18,160 [test_set_speed.py-->line:64]:》》》》》用例【设置夹爪速度（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:18,244 [test_set_speed.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:35:18,249 [test_set_vir_pos.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:35:18,249 [test_set_vir_pos.py-->line:26]:》》》》》用例【正确设置夹爪虚位数值】开始测试《《《《《
+DEBUG 2025-08-25 15:35:18,250 [test_set_vir_pos.py-->line:29]:test_api: set_vir_pos
+DEBUG 2025-08-25 15:35:18,250 [test_set_vir_pos.py-->line:30]:test_parameters: 8
+DEBUG 2025-08-25 15:35:18,291 [test_set_vir_pos.py-->line:35]:设置返回值: 1
+DEBUG 2025-08-25 15:35:18,337 [test_set_vir_pos.py-->line:39]:读取返回值: 8
+INFO 2025-08-25 15:35:18,338 [test_set_vir_pos.py-->line:51]:✅ 用例【正确设置夹爪虚位数值】测试通过
+INFO 2025-08-25 15:35:18,338 [test_set_vir_pos.py-->line:52]:》》》》》用例【正确设置夹爪虚位数值】测试完成《《《《《
+INFO 2025-08-25 15:35:18,342 [test_set_vir_pos.py-->line:60]:》》》》》用例【设置夹爪虚位数值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:18,342 [test_set_vir_pos.py-->line:63]:test_api: set_vir_pos
+DEBUG 2025-08-25 15:35:18,342 [test_set_vir_pos.py-->line:64]:test_parameters: 101
+INFO 2025-08-25 15:35:18,342 [test_set_vir_pos.py-->line:70]:✅ 用例【设置夹爪虚位数值（超限）】测试通过
+INFO 2025-08-25 15:35:18,342 [test_set_vir_pos.py-->line:71]:》》》》》用例【设置夹爪虚位数值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:18,345 [test_set_vir_pos.py-->line:60]:》》》》》用例【设置夹爪虚位数值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 15:35:18,345 [test_set_vir_pos.py-->line:63]:test_api: set_vir_pos
+DEBUG 2025-08-25 15:35:18,345 [test_set_vir_pos.py-->line:64]:test_parameters: -1
+INFO 2025-08-25 15:35:18,345 [test_set_vir_pos.py-->line:70]:✅ 用例【设置夹爪虚位数值（超限）】测试通过
+INFO 2025-08-25 15:35:18,345 [test_set_vir_pos.py-->line:71]:》》》》》用例【设置夹爪虚位数值（超限）】测试完成《《《《《
+INFO 2025-08-25 15:35:18,432 [test_set_vir_pos.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 15:35:18,438 [test_stop.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 15:35:18,439 [test_stop.py-->line:26]:》》》》》用例【正确设置夹爪停止运动】开始测试《《《《《
+DEBUG 2025-08-25 15:35:18,439 [test_stop.py-->line:29]:test_api: stop
+DEBUG 2025-08-25 15:35:18,439 [test_stop.py-->line:30]:test_parameters: None
+INFO 2025-08-25 15:35:23,687 [test_stop.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 16:02:53,443 [test_set_gripper_id.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 16:02:53,444 [test_set_gripper_id.py-->line:26]:》》》》》用例【正确设置固件ID号】开始测试《《《《《
+DEBUG 2025-08-25 16:02:53,444 [test_set_gripper_id.py-->line:29]:test_api: set_gripper_id
+DEBUG 2025-08-25 16:02:53,444 [test_set_gripper_id.py-->line:30]:test_parameters: 10
+DEBUG 2025-08-25 16:02:53,487 [test_set_gripper_id.py-->line:34]:设置返回值: 1
+DEBUG 2025-08-25 16:02:53,533 [test_set_gripper_id.py-->line:38]:读取返回值: 10
+INFO 2025-08-25 16:02:53,533 [test_set_gripper_id.py-->line:50]:✅ 用例【正确设置固件ID号】测试通过
+INFO 2025-08-25 16:02:53,533 [test_set_gripper_id.py-->line:51]:》》》》》用例【正确设置固件ID号】测试完成《《《《《
+INFO 2025-08-25 16:02:53,535 [test_set_gripper_id.py-->line:59]:》》》》》用例【设置固件ID号（超限）】开始测试《《《《《
+DEBUG 2025-08-25 16:02:53,535 [test_set_gripper_id.py-->line:62]:test_api: set_gripper_id
+DEBUG 2025-08-25 16:02:53,535 [test_set_gripper_id.py-->line:63]:test_parameters: -1
+INFO 2025-08-25 16:02:53,536 [test_set_gripper_id.py-->line:69]:✅ 用例【设置固件ID号（超限）】测试通过
+INFO 2025-08-25 16:02:53,536 [test_set_gripper_id.py-->line:70]:》》》》》用例【设置固件ID号（超限）】测试完成《《《《《
+INFO 2025-08-25 16:02:53,537 [test_set_gripper_id.py-->line:59]:》》》》》用例【设置固件ID号（超限）】开始测试《《《《《
+DEBUG 2025-08-25 16:02:53,537 [test_set_gripper_id.py-->line:62]:test_api: set_gripper_id
+DEBUG 2025-08-25 16:02:53,537 [test_set_gripper_id.py-->line:63]:test_parameters: 255
+INFO 2025-08-25 16:02:53,537 [test_set_gripper_id.py-->line:69]:✅ 用例【设置固件ID号（超限）】测试通过
+INFO 2025-08-25 16:02:53,537 [test_set_gripper_id.py-->line:70]:》》》》》用例【设置固件ID号（超限）】测试完成《《《《《
+INFO 2025-08-25 16:02:53,610 [test_set_gripper_id.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 16:04:54,887 [test_get_gripper_i.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 16:04:54,888 [test_get_gripper_i.py-->line:23]:》》》》》用例【正确读取夹爪I值】开始测试《《《《《
+DEBUG 2025-08-25 16:04:54,888 [test_get_gripper_i.py-->line:26]:test_api: get_gripper_I
+DEBUG 2025-08-25 16:04:54,888 [test_get_gripper_i.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 16:04:54,942 [test_get_gripper_i.py-->line:31]:接口返回值: 0
+DEBUG 2025-08-25 16:04:54,942 [test_get_gripper_i.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 16:04:54,942 [test_get_gripper_i.py-->line:42]:✅ 用例【正确读取夹爪I值】测试通过
+INFO 2025-08-25 16:04:54,942 [test_get_gripper_i.py-->line:43]:》》》》》用例【正确读取夹爪I值】测试完成《《《《《
+INFO 2025-08-25 16:04:54,973 [test_get_gripper_i.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 16:05:02,927 [test_set_gripper_i.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 16:05:02,928 [test_set_gripper_i.py-->line:26]:》》》》》用例【正确设置夹爪I值】开始测试《《《《《
+DEBUG 2025-08-25 16:05:02,928 [test_set_gripper_i.py-->line:29]:test_api: set_gripper_I
+DEBUG 2025-08-25 16:05:02,928 [test_set_gripper_i.py-->line:30]:test_parameters: 20
+DEBUG 2025-08-25 16:05:02,969 [test_set_gripper_i.py-->line:34]:设置返回值: 0
+DEBUG 2025-08-25 16:05:03,016 [test_set_gripper_i.py-->line:38]:读取返回值: 0
+INFO 2025-08-25 16:05:03,098 [test_set_gripper_i.py-->line:58]:》》》》》用例【设置夹爪I值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 16:05:03,098 [test_set_gripper_i.py-->line:61]:test_api: set_gripper_I
+DEBUG 2025-08-25 16:05:03,098 [test_set_gripper_i.py-->line:62]:test_parameters: 255
+INFO 2025-08-25 16:05:03,098 [test_set_gripper_i.py-->line:68]:✅ 用例【设置夹爪I值（超限）】测试通过
+INFO 2025-08-25 16:05:03,099 [test_set_gripper_i.py-->line:69]:》》》》》用例【设置夹爪I值（超限）】测试完成《《《《《
+INFO 2025-08-25 16:05:03,100 [test_set_gripper_i.py-->line:58]:》》》》》用例【设置夹爪I值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 16:05:03,100 [test_set_gripper_i.py-->line:61]:test_api: set_gripper_I
+DEBUG 2025-08-25 16:05:03,100 [test_set_gripper_i.py-->line:62]:test_parameters: -1
+INFO 2025-08-25 16:05:03,100 [test_set_gripper_i.py-->line:68]:✅ 用例【设置夹爪I值（超限）】测试通过
+INFO 2025-08-25 16:05:03,100 [test_set_gripper_i.py-->line:69]:》》》》》用例【设置夹爪I值（超限）】测试完成《《《《《
+INFO 2025-08-25 16:05:03,188 [test_set_gripper_i.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 16:05:14,213 [test_set_gripper_i.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 16:05:14,214 [test_set_gripper_i.py-->line:26]:》》》》》用例【正确设置夹爪I值】开始测试《《《《《
+DEBUG 2025-08-25 16:05:14,214 [test_set_gripper_i.py-->line:29]:test_api: set_gripper_I
+DEBUG 2025-08-25 16:05:14,215 [test_set_gripper_i.py-->line:30]:test_parameters: 20
+DEBUG 2025-08-25 16:05:14,259 [test_set_gripper_i.py-->line:34]:设置返回值: 1
+DEBUG 2025-08-25 16:05:14,305 [test_set_gripper_i.py-->line:38]:读取返回值: 20
+INFO 2025-08-25 16:05:14,305 [test_set_gripper_i.py-->line:49]:✅ 用例【正确设置夹爪I值】测试通过
+INFO 2025-08-25 16:05:14,305 [test_set_gripper_i.py-->line:50]:》》》》》用例【正确设置夹爪I值】测试完成《《《《《
+INFO 2025-08-25 16:05:14,311 [test_set_gripper_i.py-->line:58]:》》》》》用例【设置夹爪I值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 16:05:14,312 [test_set_gripper_i.py-->line:61]:test_api: set_gripper_I
+DEBUG 2025-08-25 16:05:14,312 [test_set_gripper_i.py-->line:62]:test_parameters: 255
+INFO 2025-08-25 16:05:14,312 [test_set_gripper_i.py-->line:68]:✅ 用例【设置夹爪I值（超限）】测试通过
+INFO 2025-08-25 16:05:14,312 [test_set_gripper_i.py-->line:69]:》》》》》用例【设置夹爪I值（超限）】测试完成《《《《《
+INFO 2025-08-25 16:05:14,314 [test_set_gripper_i.py-->line:58]:》》》》》用例【设置夹爪I值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 16:05:14,314 [test_set_gripper_i.py-->line:61]:test_api: set_gripper_I
+DEBUG 2025-08-25 16:05:14,314 [test_set_gripper_i.py-->line:62]:test_parameters: -1
+INFO 2025-08-25 16:05:14,314 [test_set_gripper_i.py-->line:68]:✅ 用例【设置夹爪I值（超限）】测试通过
+INFO 2025-08-25 16:05:14,314 [test_set_gripper_i.py-->line:69]:》》》》》用例【设置夹爪I值（超限）】测试完成《《《《《
+INFO 2025-08-25 16:05:14,398 [test_set_gripper_i.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 16:05:18,529 [test_set_gripper_i.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 16:05:18,529 [test_set_gripper_i.py-->line:26]:》》》》》用例【正确设置夹爪I值】开始测试《《《《《
+DEBUG 2025-08-25 16:05:18,529 [test_set_gripper_i.py-->line:29]:test_api: set_gripper_I
+DEBUG 2025-08-25 16:05:18,529 [test_set_gripper_i.py-->line:30]:test_parameters: 20
+DEBUG 2025-08-25 16:05:18,584 [test_set_gripper_i.py-->line:34]:设置返回值: 1
+DEBUG 2025-08-25 16:05:18,631 [test_set_gripper_i.py-->line:38]:读取返回值: 20
+INFO 2025-08-25 16:05:18,631 [test_set_gripper_i.py-->line:49]:✅ 用例【正确设置夹爪I值】测试通过
+INFO 2025-08-25 16:05:18,631 [test_set_gripper_i.py-->line:50]:》》》》》用例【正确设置夹爪I值】测试完成《《《《《
+INFO 2025-08-25 16:05:18,635 [test_set_gripper_i.py-->line:58]:》》》》》用例【设置夹爪I值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 16:05:18,635 [test_set_gripper_i.py-->line:61]:test_api: set_gripper_I
+DEBUG 2025-08-25 16:05:18,635 [test_set_gripper_i.py-->line:62]:test_parameters: 255
+INFO 2025-08-25 16:05:18,635 [test_set_gripper_i.py-->line:68]:✅ 用例【设置夹爪I值（超限）】测试通过
+INFO 2025-08-25 16:05:18,635 [test_set_gripper_i.py-->line:69]:》》》》》用例【设置夹爪I值（超限）】测试完成《《《《《
+INFO 2025-08-25 16:05:18,636 [test_set_gripper_i.py-->line:58]:》》》》》用例【设置夹爪I值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 16:05:18,636 [test_set_gripper_i.py-->line:61]:test_api: set_gripper_I
+DEBUG 2025-08-25 16:05:18,637 [test_set_gripper_i.py-->line:62]:test_parameters: -1
+INFO 2025-08-25 16:05:18,637 [test_set_gripper_i.py-->line:68]:✅ 用例【设置夹爪I值（超限）】测试通过
+INFO 2025-08-25 16:05:18,637 [test_set_gripper_i.py-->line:69]:》》》》》用例【设置夹爪I值（超限）】测试完成《《《《《
+INFO 2025-08-25 16:05:18,710 [test_set_gripper_i.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 16:05:20,392 [test_set_gripper_i.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 16:05:20,393 [test_set_gripper_i.py-->line:26]:》》》》》用例【正确设置夹爪I值】开始测试《《《《《
+DEBUG 2025-08-25 16:05:20,393 [test_set_gripper_i.py-->line:29]:test_api: set_gripper_I
+DEBUG 2025-08-25 16:05:20,393 [test_set_gripper_i.py-->line:30]:test_parameters: 20
+DEBUG 2025-08-25 16:05:20,445 [test_set_gripper_i.py-->line:34]:设置返回值: 1
+DEBUG 2025-08-25 16:05:20,492 [test_set_gripper_i.py-->line:38]:读取返回值: 20
+INFO 2025-08-25 16:05:20,492 [test_set_gripper_i.py-->line:49]:✅ 用例【正确设置夹爪I值】测试通过
+INFO 2025-08-25 16:05:20,492 [test_set_gripper_i.py-->line:50]:》》》》》用例【正确设置夹爪I值】测试完成《《《《《
+INFO 2025-08-25 16:05:20,497 [test_set_gripper_i.py-->line:58]:》》》》》用例【设置夹爪I值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 16:05:20,498 [test_set_gripper_i.py-->line:61]:test_api: set_gripper_I
+DEBUG 2025-08-25 16:05:20,498 [test_set_gripper_i.py-->line:62]:test_parameters: 255
+INFO 2025-08-25 16:05:20,498 [test_set_gripper_i.py-->line:68]:✅ 用例【设置夹爪I值（超限）】测试通过
+INFO 2025-08-25 16:05:20,498 [test_set_gripper_i.py-->line:69]:》》》》》用例【设置夹爪I值（超限）】测试完成《《《《《
+INFO 2025-08-25 16:05:20,500 [test_set_gripper_i.py-->line:58]:》》》》》用例【设置夹爪I值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 16:05:20,500 [test_set_gripper_i.py-->line:61]:test_api: set_gripper_I
+DEBUG 2025-08-25 16:05:20,500 [test_set_gripper_i.py-->line:62]:test_parameters: -1
+INFO 2025-08-25 16:05:20,500 [test_set_gripper_i.py-->line:68]:✅ 用例【设置夹爪I值（超限）】测试通过
+INFO 2025-08-25 16:05:20,500 [test_set_gripper_i.py-->line:69]:》》》》》用例【设置夹爪I值（超限）】测试完成《《《《《
+INFO 2025-08-25 16:05:20,586 [test_set_gripper_i.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 16:05:22,052 [test_set_gripper_i.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-25 16:05:22,053 [test_set_gripper_i.py-->line:26]:》》》》》用例【正确设置夹爪I值】开始测试《《《《《
+DEBUG 2025-08-25 16:05:22,053 [test_set_gripper_i.py-->line:29]:test_api: set_gripper_I
+DEBUG 2025-08-25 16:05:22,053 [test_set_gripper_i.py-->line:30]:test_parameters: 20
+DEBUG 2025-08-25 16:05:22,104 [test_set_gripper_i.py-->line:34]:设置返回值: 0
+DEBUG 2025-08-25 16:05:22,151 [test_set_gripper_i.py-->line:38]:读取返回值: 20
+INFO 2025-08-25 16:05:22,228 [test_set_gripper_i.py-->line:58]:》》》》》用例【设置夹爪I值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 16:05:22,228 [test_set_gripper_i.py-->line:61]:test_api: set_gripper_I
+DEBUG 2025-08-25 16:05:22,228 [test_set_gripper_i.py-->line:62]:test_parameters: 255
+INFO 2025-08-25 16:05:22,229 [test_set_gripper_i.py-->line:68]:✅ 用例【设置夹爪I值（超限）】测试通过
+INFO 2025-08-25 16:05:22,229 [test_set_gripper_i.py-->line:69]:》》》》》用例【设置夹爪I值（超限）】测试完成《《《《《
+INFO 2025-08-25 16:05:22,230 [test_set_gripper_i.py-->line:58]:》》》》》用例【设置夹爪I值（超限）】开始测试《《《《《
+DEBUG 2025-08-25 16:05:22,232 [test_set_gripper_i.py-->line:61]:test_api: set_gripper_I
+DEBUG 2025-08-25 16:05:22,232 [test_set_gripper_i.py-->line:62]:test_parameters: -1
+INFO 2025-08-25 16:05:22,232 [test_set_gripper_i.py-->line:68]:✅ 用例【设置夹爪I值（超限）】测试通过
+INFO 2025-08-25 16:05:22,232 [test_set_gripper_i.py-->line:69]:》》》》》用例【设置夹爪I值（超限）】测试完成《《《《《
+INFO 2025-08-25 16:05:22,309 [test_set_gripper_i.py-->line:18]:环境清理完成，接口测试结束
+INFO 2025-08-25 16:06:33,054 [test_get_firmware_version.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 16:06:33,055 [test_get_firmware_version.py-->line:23]:》》》》》用例【正确获取固件版本号】开始测试《《《《《
+DEBUG 2025-08-25 16:06:33,055 [test_get_firmware_version.py-->line:26]:test_api: get_firmware_version
+DEBUG 2025-08-25 16:06:33,055 [test_get_firmware_version.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 16:06:33,096 [test_get_firmware_version.py-->line:31]:接口返回值：13
+DEBUG 2025-08-25 16:06:33,096 [test_get_firmware_version.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 16:06:33,097 [test_get_firmware_version.py-->line:42]:✅ 用例【正确获取固件版本号】测试通过
+INFO 2025-08-25 16:06:33,098 [test_get_firmware_version.py-->line:43]:》》》》》用例【正确获取固件版本号】测试完成《《《《《
+INFO 2025-08-25 16:06:33,128 [test_get_firmware_version.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 16:07:15,467 [test_get_firmware_version.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 16:07:15,468 [test_get_firmware_version.py-->line:23]:》》》》》用例【正确获取固件版本号】开始测试《《《《《
+DEBUG 2025-08-25 16:07:15,468 [test_get_firmware_version.py-->line:26]:test_api: get_firmware_version
+DEBUG 2025-08-25 16:07:15,468 [test_get_firmware_version.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 16:07:15,512 [test_get_firmware_version.py-->line:31]:接口返回值：13
+DEBUG 2025-08-25 16:07:15,512 [test_get_firmware_version.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 16:07:15,512 [test_get_firmware_version.py-->line:42]:✅ 用例【正确获取固件版本号】测试通过
+INFO 2025-08-25 16:07:15,514 [test_get_firmware_version.py-->line:43]:》》》》》用例【正确获取固件版本号】测试完成《《《《《
+INFO 2025-08-25 16:07:15,544 [test_get_firmware_version.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 16:07:25,040 [test_get_modified_version.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 16:07:25,041 [test_get_modified_version.py-->line:23]:》》》》》用例【正确获取固件次版本号】开始测试《《《《《
+DEBUG 2025-08-25 16:07:25,042 [test_get_modified_version.py-->line:26]:test_api: get_modified_version
+DEBUG 2025-08-25 16:07:25,042 [test_get_modified_version.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 16:07:25,090 [test_get_modified_version.py-->line:31]:接口返回结果：3
+DEBUG 2025-08-25 16:07:25,090 [test_get_modified_version.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 16:07:25,201 [test_get_modified_version.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 16:12:24,498 [test_get_modified_version.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 16:12:24,499 [test_get_modified_version.py-->line:23]:》》》》》用例【正确获取固件次版本号】开始测试《《《《《
+DEBUG 2025-08-25 16:12:24,499 [test_get_modified_version.py-->line:26]:test_api: get_modified_version
+DEBUG 2025-08-25 16:12:24,499 [test_get_modified_version.py-->line:27]:test_parameters: None
+INFO 2025-08-25 16:12:29,705 [test_get_modified_version.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 16:12:45,470 [test_get_firmware_version.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-25 16:12:45,471 [test_get_firmware_version.py-->line:23]:》》》》》用例【正确获取固件版本号】开始测试《《《《《
+DEBUG 2025-08-25 16:12:45,471 [test_get_firmware_version.py-->line:26]:test_api: get_firmware_version
+DEBUG 2025-08-25 16:12:45,471 [test_get_firmware_version.py-->line:27]:test_parameters: None
+DEBUG 2025-08-25 16:12:45,517 [test_get_firmware_version.py-->line:31]:接口返回值：13
+DEBUG 2025-08-25 16:12:45,517 [test_get_firmware_version.py-->line:35]:请求类型断言成功
+INFO 2025-08-25 16:12:45,517 [test_get_firmware_version.py-->line:42]:✅ 用例【正确获取固件版本号】测试通过
+INFO 2025-08-25 16:12:45,519 [test_get_firmware_version.py-->line:43]:》》》》》用例【正确获取固件版本号】测试完成《《《《《
+INFO 2025-08-25 16:12:45,549 [test_get_firmware_version.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-25 16:20:14,255 [test_set_gripper_calibrate.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-08-25 16:20:14,256 [test_set_gripper_calibrate.py-->line:27]:》》》》》用例【正确设置夹爪零位】开始测试《《《《《
+DEBUG 2025-08-25 16:20:14,256 [test_set_gripper_calibrate.py-->line:30]:test_api: set_gripper_calibration
+DEBUG 2025-08-25 16:20:14,256 [test_set_gripper_calibrate.py-->line:31]:test_parameters: None
+DEBUG 2025-08-25 16:20:22,274 [test_set_gripper_calibrate.py-->line:36]:接口返回结果：1
+DEBUG 2025-08-25 16:20:22,274 [test_set_gripper_calibrate.py-->line:40]:请求类型断言成功
+INFO 2025-08-25 16:20:22,274 [test_set_gripper_calibrate.py-->line:47]:✅ 用例【正确设置夹爪零位】测试通过
+INFO 2025-08-25 16:20:22,275 [test_set_gripper_calibrate.py-->line:48]:》》》》》用例【正确设置夹爪零位】测试完成《《《《《
+INFO 2025-08-25 16:20:22,306 [test_set_gripper_calibrate.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-08-26 11:19:46,485 [test_get_open_angle.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-26 11:19:46,487 [test_get_open_angle.py-->line:23]:》》》》》用例【获取夹爪张开角度】开始测试《《《《《
+DEBUG 2025-08-26 11:19:46,487 [test_get_open_angle.py-->line:26]:test_api: get_open_angle
+DEBUG 2025-08-26 11:19:46,487 [test_get_open_angle.py-->line:27]:test_parameters: None
+DEBUG 2025-08-26 11:19:46,490 [test_get_open_angle.py-->line:31]:接口返回结果：0
+DEBUG 2025-08-26 11:19:46,490 [test_get_open_angle.py-->line:35]:请求类型断言成功
+INFO 2025-08-26 11:19:46,639 [test_get_open_angle.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-26 11:19:56,639 [test_get_open_angle.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-26 11:19:56,641 [test_get_open_angle.py-->line:23]:》》》》》用例【获取夹爪张开角度】开始测试《《《《《
+DEBUG 2025-08-26 11:19:56,641 [test_get_open_angle.py-->line:26]:test_api: get_open_angle
+DEBUG 2025-08-26 11:19:56,641 [test_get_open_angle.py-->line:27]:test_parameters: None
+DEBUG 2025-08-26 11:19:56,643 [test_get_open_angle.py-->line:31]:接口返回结果：0
+DEBUG 2025-08-26 11:19:56,643 [test_get_open_angle.py-->line:35]:请求类型断言成功
+INFO 2025-08-26 11:19:56,762 [test_get_open_angle.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-27 11:54:22,702 [test_get_modified_version.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-27 11:54:22,705 [test_get_modified_version.py-->line:23]:》》》》》用例【正确获取固件次版本号】开始测试《《《《《
+DEBUG 2025-08-27 11:54:22,705 [test_get_modified_version.py-->line:26]:test_api: get_modified_version
+DEBUG 2025-08-27 11:54:22,705 [test_get_modified_version.py-->line:27]:test_parameters: None
+DEBUG 2025-08-27 11:54:22,758 [test_get_modified_version.py-->line:31]:接口返回结果：-2
+DEBUG 2025-08-27 11:54:22,759 [test_get_modified_version.py-->line:35]:请求类型断言成功
+INFO 2025-08-27 11:54:41,657 [test_get_close_angle.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-27 11:54:41,659 [test_get_close_angle.py-->line:23]:》》》》》用例【正确获取夹爪关闭角度】开始测试《《《《《
+DEBUG 2025-08-27 11:54:41,659 [test_get_close_angle.py-->line:26]:test_api: get_close_angle
+DEBUG 2025-08-27 11:54:41,659 [test_get_close_angle.py-->line:27]:test_parameters: None
+DEBUG 2025-08-27 11:54:41,703 [test_get_close_angle.py-->line:31]:接口返回结果：-2
+DEBUG 2025-08-27 11:54:41,703 [test_get_close_angle.py-->line:35]:请求类型断言成功
+INFO 2025-08-27 15:39:01,670 [test_set_gripper_d.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-08-27 15:39:01,671 [test_set_gripper_d.py-->line:26]:》》》》》用例【正确设置夹爪D值】开始测试《《《《《
+DEBUG 2025-08-27 15:39:01,671 [test_set_gripper_d.py-->line:29]:test_api: set_gripper_D
+DEBUG 2025-08-27 15:39:01,671 [test_set_gripper_d.py-->line:30]:test_parameters: 20
+INFO 2025-08-27 15:39:06,889 [test_set_gripper_d.py-->line:59]:》》》》》用例【设置夹爪D值（超限）】开始测试《《《《《
+DEBUG 2025-08-27 15:39:06,889 [test_set_gripper_d.py-->line:62]:test_api: set_gripper_D
+DEBUG 2025-08-27 15:39:06,890 [test_set_gripper_d.py-->line:63]:test_parameters: 255
+INFO 2025-08-27 15:39:06,890 [test_set_gripper_d.py-->line:69]:✅ 用例【设置夹爪D值（超限）】测试通过
+INFO 2025-08-27 15:39:06,890 [test_set_gripper_d.py-->line:70]:》》》》》用例【设置夹爪D值（超限）】测试完成《《《《《
+INFO 2025-08-27 15:39:06,891 [test_set_gripper_d.py-->line:59]:》》》》》用例【设置夹爪D值（超限）】开始测试《《《《《
+DEBUG 2025-08-27 15:39:06,891 [test_set_gripper_d.py-->line:62]:test_api: set_gripper_D
+DEBUG 2025-08-27 15:39:06,891 [test_set_gripper_d.py-->line:63]:test_parameters: -1
+INFO 2025-08-27 15:39:06,891 [test_set_gripper_d.py-->line:69]:✅ 用例【设置夹爪D值（超限）】测试通过
+INFO 2025-08-27 15:39:06,891 [test_set_gripper_d.py-->line:70]:》》》》》用例【设置夹爪D值（超限）】测试完成《《《《《
+INFO 2025-08-27 15:40:06,385 [test_get_firmware_version.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-27 15:40:06,386 [test_get_firmware_version.py-->line:23]:》》》》》用例【正确获取固件版本号】开始测试《《《《《
+DEBUG 2025-08-27 15:40:06,386 [test_get_firmware_version.py-->line:26]:test_api: get_firmware_version
+DEBUG 2025-08-27 15:40:06,386 [test_get_firmware_version.py-->line:27]:test_parameters: None
+INFO 2025-08-27 15:40:47,096 [test_get_firmware_version.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-27 15:40:47,097 [test_get_firmware_version.py-->line:23]:》》》》》用例【正确获取固件版本号】开始测试《《《《《
+DEBUG 2025-08-27 15:40:47,097 [test_get_firmware_version.py-->line:26]:test_api: get_firmware_version
+DEBUG 2025-08-27 15:40:47,097 [test_get_firmware_version.py-->line:27]:test_parameters: None
+DEBUG 2025-08-27 15:40:47,099 [test_get_firmware_version.py-->line:31]:接口返回值：13
+DEBUG 2025-08-27 15:40:47,099 [test_get_firmware_version.py-->line:35]:请求类型断言成功
+INFO 2025-08-27 15:40:47,100 [test_get_firmware_version.py-->line:42]:✅ 用例【正确获取固件版本号】测试通过
+INFO 2025-08-27 15:40:47,101 [test_get_firmware_version.py-->line:43]:》》》》》用例【正确获取固件版本号】测试完成《《《《《
+INFO 2025-08-27 15:40:47,135 [test_get_firmware_version.py-->line:16]:环境清理完成，接口测试结束
+INFO 2025-08-27 15:40:56,847 [test_set_abs_gripper_angle.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-27 15:40:56,848 [test_set_abs_gripper_angle.py-->line:30]:》》》》》用例【正确设置夹爪绝对运动】开始测试《《《《《
+DEBUG 2025-08-27 15:40:56,848 [test_set_abs_gripper_angle.py-->line:31]:test_api: set_abs_gripper_angle
+DEBUG 2025-08-27 15:40:56,849 [test_set_abs_gripper_angle.py-->line:32]:test_value: 50
+INFO 2025-08-27 15:41:08,386 [test_set_abs_gripper_angle.py-->line:54]:》》》》》用例【绝对运动中暂停，恢复运动】开始测试《《《《《
+INFO 2025-08-27 15:41:16,898 [test_set_abs_gripper_angle.py-->line:89]:》》》》》用例【绝对运动中停止运动】开始测试《《《《《
+INFO 2025-08-27 15:41:25,416 [test_set_abs_gripper_angle.py-->line:119]:》》》》》用例【设置绝对运动角度（超限）】开始测试《《《《《
+DEBUG 2025-08-27 15:41:25,417 [test_set_abs_gripper_angle.py-->line:120]:test_api: set_abs_gripper_angle
+DEBUG 2025-08-27 15:41:25,417 [test_set_abs_gripper_angle.py-->line:121]:test_value: 101
+INFO 2025-08-27 15:41:25,417 [test_set_abs_gripper_angle.py-->line:127]:✅ 用例【设置绝对运动角度（超限）】测试通过
+INFO 2025-08-27 15:41:25,417 [test_set_abs_gripper_angle.py-->line:128]:》》》》》用例【设置绝对运动角度（超限）】测试完成《《《《《
+INFO 2025-08-27 15:41:30,443 [test_set_abs_gripper_angle.py-->line:119]:》》》》》用例【设置绝对运动速度（超限）】开始测试《《《《《
+DEBUG 2025-08-27 15:41:30,445 [test_set_abs_gripper_angle.py-->line:120]:test_api: set_abs_gripper_angle
+DEBUG 2025-08-27 15:41:30,445 [test_set_abs_gripper_angle.py-->line:121]:test_value: 60
+INFO 2025-08-27 15:41:30,445 [test_set_abs_gripper_angle.py-->line:127]:✅ 用例【设置绝对运动速度（超限）】测试通过
+INFO 2025-08-27 15:41:30,445 [test_set_abs_gripper_angle.py-->line:128]:》》》》》用例【设置绝对运动速度（超限）】测试完成《《《《《
+INFO 2025-08-27 15:41:36,986 [test_set_abs_gripper_angle.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-08-27 15:44:06,561 [test_set_gripper_calibrate.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-08-27 15:44:06,562 [test_set_gripper_calibrate.py-->line:27]:》》》》》用例【正确设置夹爪零位】开始测试《《《《《
+DEBUG 2025-08-27 15:44:06,562 [test_set_gripper_calibrate.py-->line:30]:test_api: set_gripper_calibration
+DEBUG 2025-08-27 15:44:06,562 [test_set_gripper_calibrate.py-->line:31]:test_parameters: None
+DEBUG 2025-08-27 15:44:14,610 [test_set_gripper_calibrate.py-->line:36]:接口返回结果：1
+DEBUG 2025-08-27 15:44:14,610 [test_set_gripper_calibrate.py-->line:40]:请求类型断言成功
+INFO 2025-08-27 15:44:14,610 [test_set_gripper_calibrate.py-->line:47]:✅ 用例【正确设置夹爪零位】测试通过
+INFO 2025-08-27 15:44:14,611 [test_set_gripper_calibrate.py-->line:48]:》》》》》用例【正确设置夹爪零位】测试完成《《《《《
+INFO 2025-08-27 15:44:14,642 [test_set_gripper_calibrate.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-08-27 15:44:29,148 [test_set_gripper_value.py-->line:15]:初始化完成，接口测试开始
+INFO 2025-08-27 15:44:29,150 [test_set_gripper_value.py-->line:27]:》》》》》用例【正确设置夹爪角度(100度)】开始测试《《《《《
+DEBUG 2025-08-27 15:44:29,150 [test_set_gripper_value.py-->line:30]:API: set_gripper_value
+DEBUG 2025-08-27 15:44:29,150 [test_set_gripper_value.py-->line:31]:Value: 100, Speed: 30
+DEBUG 2025-08-27 15:44:29,155 [test_set_gripper_value.py-->line:35]:设置返回值：1
+DEBUG 2025-08-27 15:44:29,157 [test_set_gripper_value.py-->line:39]:获取返回值：1
+DEBUG 2025-08-27 15:44:29,157 [test_set_gripper_value.py-->line:43]:请求类型断言成功
+INFO 2025-08-27 15:44:29,268 [test_set_gripper_value.py-->line:27]:》》》》》用例【正确设置夹爪角度(0度)】开始测试《《《《《
+DEBUG 2025-08-27 15:44:29,268 [test_set_gripper_value.py-->line:30]:API: set_gripper_value
+DEBUG 2025-08-27 15:44:29,268 [test_set_gripper_value.py-->line:31]:Value: 0, Speed: 50
+DEBUG 2025-08-27 15:44:29,274 [test_set_gripper_value.py-->line:35]:设置返回值：1
+DEBUG 2025-08-27 15:44:29,277 [test_set_gripper_value.py-->line:39]:获取返回值：5
+DEBUG 2025-08-27 15:44:29,277 [test_set_gripper_value.py-->line:43]:请求类型断言成功
+INFO 2025-08-27 15:44:29,283 [test_set_gripper_value.py-->line:62]:》》》》》用例【设置夹爪速度（超限）】开始测试《《《《《
+DEBUG 2025-08-27 15:44:29,283 [test_set_gripper_value.py-->line:65]:API: set_gripper_value
+DEBUG 2025-08-27 15:44:29,283 [test_set_gripper_value.py-->line:66]:Value: 50, Speed: 101
+INFO 2025-08-27 15:44:29,283 [test_set_gripper_value.py-->line:72]:✅ 用例【设置夹爪速度（超限）】测试成功
+INFO 2025-08-27 15:44:29,283 [test_set_gripper_value.py-->line:73]:》》》》》用例【设置夹爪速度（超限）】测试完成《《《《《
+INFO 2025-08-27 15:44:29,286 [test_set_gripper_value.py-->line:62]:》》》》》用例【设置夹爪角度（超限）】开始测试《《《《《
+DEBUG 2025-08-27 15:44:29,286 [test_set_gripper_value.py-->line:65]:API: set_gripper_value
+DEBUG 2025-08-27 15:44:29,286 [test_set_gripper_value.py-->line:66]:Value: 101, Speed: 50
+INFO 2025-08-27 15:44:29,286 [test_set_gripper_value.py-->line:72]:✅ 用例【设置夹爪角度（超限）】测试成功
+INFO 2025-08-27 15:44:29,286 [test_set_gripper_value.py-->line:73]:》》》》》用例【设置夹爪角度（超限）】测试完成《《《《《
+INFO 2025-08-27 15:44:29,348 [test_set_gripper_value.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-08-27 15:44:47,112 [test_set_gripper_value.py-->line:15]:初始化完成，接口测试开始
+INFO 2025-08-27 15:44:47,113 [test_set_gripper_value.py-->line:27]:》》》》》用例【正确设置夹爪角度(100度)】开始测试《《《《《
+DEBUG 2025-08-27 15:44:47,113 [test_set_gripper_value.py-->line:30]:API: set_gripper_value
+DEBUG 2025-08-27 15:44:47,113 [test_set_gripper_value.py-->line:31]:Value: 100, Speed: 30
+DEBUG 2025-08-27 15:44:47,118 [test_set_gripper_value.py-->line:35]:设置返回值：1
+DEBUG 2025-08-27 15:44:47,121 [test_set_gripper_value.py-->line:39]:获取返回值：0
+DEBUG 2025-08-27 15:44:47,121 [test_set_gripper_value.py-->line:43]:请求类型断言成功
+INFO 2025-08-27 15:44:47,211 [test_set_gripper_value.py-->line:27]:》》》》》用例【正确设置夹爪角度(0度)】开始测试《《《《《
+DEBUG 2025-08-27 15:44:47,211 [test_set_gripper_value.py-->line:30]:API: set_gripper_value
+DEBUG 2025-08-27 15:44:47,211 [test_set_gripper_value.py-->line:31]:Value: 0, Speed: 50
+DEBUG 2025-08-27 15:44:47,217 [test_set_gripper_value.py-->line:35]:设置返回值：1
+DEBUG 2025-08-27 15:44:47,224 [test_set_gripper_value.py-->line:39]:获取返回值：1
+DEBUG 2025-08-27 15:44:47,224 [test_set_gripper_value.py-->line:43]:请求类型断言成功
+INFO 2025-08-27 15:44:47,224 [test_set_gripper_value.py-->line:53]:✅ 用例【正确设置夹爪角度(0度)】测试成功
+INFO 2025-08-27 15:44:47,225 [test_set_gripper_value.py-->line:54]:》》》》》用例【正确设置夹爪角度(0度)】测试完成《《《《《
+INFO 2025-08-27 15:44:47,226 [test_set_gripper_value.py-->line:62]:》》》》》用例【设置夹爪速度（超限）】开始测试《《《《《
+DEBUG 2025-08-27 15:44:47,226 [test_set_gripper_value.py-->line:65]:API: set_gripper_value
+DEBUG 2025-08-27 15:44:47,226 [test_set_gripper_value.py-->line:66]:Value: 50, Speed: 101
+INFO 2025-08-27 15:44:47,226 [test_set_gripper_value.py-->line:72]:✅ 用例【设置夹爪速度（超限）】测试成功
+INFO 2025-08-27 15:44:47,226 [test_set_gripper_value.py-->line:73]:》》》》》用例【设置夹爪速度（超限）】测试完成《《《《《
+INFO 2025-08-27 15:44:47,228 [test_set_gripper_value.py-->line:62]:》》》》》用例【设置夹爪角度（超限）】开始测试《《《《《
+DEBUG 2025-08-27 15:44:47,229 [test_set_gripper_value.py-->line:65]:API: set_gripper_value
+DEBUG 2025-08-27 15:44:47,229 [test_set_gripper_value.py-->line:66]:Value: 101, Speed: 50
+INFO 2025-08-27 15:44:47,229 [test_set_gripper_value.py-->line:72]:✅ 用例【设置夹爪角度（超限）】测试成功
+INFO 2025-08-27 15:44:47,229 [test_set_gripper_value.py-->line:73]:》》》》》用例【设置夹爪角度（超限）】测试完成《《《《《
+INFO 2025-08-27 15:44:47,295 [test_set_gripper_value.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-08-27 15:45:31,882 [test_set_gripper_value.py-->line:17]:初始化完成，接口测试开始
+INFO 2025-08-27 15:45:31,883 [test_set_gripper_value.py-->line:29]:》》》》》用例【正确设置夹爪角度(100度)】开始测试《《《《《
+DEBUG 2025-08-27 15:45:31,884 [test_set_gripper_value.py-->line:32]:API: set_gripper_value
+DEBUG 2025-08-27 15:45:31,884 [test_set_gripper_value.py-->line:33]:Value: 100, Speed: 30
+DEBUG 2025-08-27 15:45:31,889 [test_set_gripper_value.py-->line:37]:设置返回值：1
+DEBUG 2025-08-27 15:45:34,891 [test_set_gripper_value.py-->line:41]:获取返回值：100
+DEBUG 2025-08-27 15:45:34,892 [test_set_gripper_value.py-->line:45]:请求类型断言成功
+INFO 2025-08-27 15:45:34,892 [test_set_gripper_value.py-->line:55]:✅ 用例【正确设置夹爪角度(100度)】测试成功
+INFO 2025-08-27 15:45:34,893 [test_set_gripper_value.py-->line:56]:》》》》》用例【正确设置夹爪角度(100度)】测试完成《《《《《
+INFO 2025-08-27 15:45:34,895 [test_set_gripper_value.py-->line:29]:》》》》》用例【正确设置夹爪角度(0度)】开始测试《《《《《
+DEBUG 2025-08-27 15:45:34,896 [test_set_gripper_value.py-->line:32]:API: set_gripper_value
+DEBUG 2025-08-27 15:45:34,896 [test_set_gripper_value.py-->line:33]:Value: 0, Speed: 50
+DEBUG 2025-08-27 15:45:34,901 [test_set_gripper_value.py-->line:37]:设置返回值：1
+DEBUG 2025-08-27 15:45:37,911 [test_set_gripper_value.py-->line:41]:获取返回值：0
+DEBUG 2025-08-27 15:45:37,911 [test_set_gripper_value.py-->line:45]:请求类型断言成功
+INFO 2025-08-27 15:45:37,911 [test_set_gripper_value.py-->line:55]:✅ 用例【正确设置夹爪角度(0度)】测试成功
+INFO 2025-08-27 15:45:37,911 [test_set_gripper_value.py-->line:56]:》》》》》用例【正确设置夹爪角度(0度)】测试完成《《《《《
+INFO 2025-08-27 15:45:37,913 [test_set_gripper_value.py-->line:64]:》》》》》用例【设置夹爪速度（超限）】开始测试《《《《《
+DEBUG 2025-08-27 15:45:37,913 [test_set_gripper_value.py-->line:67]:API: set_gripper_value
+DEBUG 2025-08-27 15:45:37,913 [test_set_gripper_value.py-->line:68]:Value: 50, Speed: 101
+INFO 2025-08-27 15:45:37,914 [test_set_gripper_value.py-->line:74]:✅ 用例【设置夹爪速度（超限）】测试成功
+INFO 2025-08-27 15:45:37,914 [test_set_gripper_value.py-->line:75]:》》》》》用例【设置夹爪速度（超限）】测试完成《《《《《
+INFO 2025-08-27 15:45:37,915 [test_set_gripper_value.py-->line:64]:》》》》》用例【设置夹爪角度（超限）】开始测试《《《《《
+DEBUG 2025-08-27 15:45:37,915 [test_set_gripper_value.py-->line:67]:API: set_gripper_value
+DEBUG 2025-08-27 15:45:37,915 [test_set_gripper_value.py-->line:68]:Value: 101, Speed: 50
+INFO 2025-08-27 15:45:37,915 [test_set_gripper_value.py-->line:74]:✅ 用例【设置夹爪角度（超限）】测试成功
+INFO 2025-08-27 15:45:37,915 [test_set_gripper_value.py-->line:75]:》》》》》用例【设置夹爪角度（超限）】测试完成《《《《《
+INFO 2025-08-27 15:45:37,955 [test_set_gripper_value.py-->line:21]:环境清理完成，接口测试结束
+INFO 2025-08-27 15:45:46,611 [test_set_abs_gripper_angle.py-->line:13]:初始化完成，接口测试开始
+INFO 2025-08-27 15:45:46,612 [test_set_abs_gripper_angle.py-->line:30]:》》》》》用例【正确设置夹爪绝对运动】开始测试《《《《《
+DEBUG 2025-08-27 15:45:46,612 [test_set_abs_gripper_angle.py-->line:31]:test_api: set_abs_gripper_angle
+DEBUG 2025-08-27 15:45:46,612 [test_set_abs_gripper_angle.py-->line:32]:test_value: 50
+INFO 2025-08-27 15:45:58,142 [test_set_abs_gripper_angle.py-->line:54]:》》》》》用例【绝对运动中暂停，恢复运动】开始测试《《《《《
+INFO 2025-08-27 15:46:06,664 [test_set_abs_gripper_angle.py-->line:89]:》》》》》用例【绝对运动中停止运动】开始测试《《《《《
+INFO 2025-08-27 15:46:15,180 [test_set_abs_gripper_angle.py-->line:119]:》》》》》用例【设置绝对运动角度（超限）】开始测试《《《《《
+DEBUG 2025-08-27 15:46:15,181 [test_set_abs_gripper_angle.py-->line:120]:test_api: set_abs_gripper_angle
+DEBUG 2025-08-27 15:46:15,181 [test_set_abs_gripper_angle.py-->line:121]:test_value: 101
+INFO 2025-08-27 15:46:15,181 [test_set_abs_gripper_angle.py-->line:127]:✅ 用例【设置绝对运动角度（超限）】测试通过
+INFO 2025-08-27 15:46:15,181 [test_set_abs_gripper_angle.py-->line:128]:》》》》》用例【设置绝对运动角度（超限）】测试完成《《《《《
+INFO 2025-08-27 15:46:20,217 [test_set_abs_gripper_angle.py-->line:119]:》》》》》用例【设置绝对运动速度（超限）】开始测试《《《《《
+DEBUG 2025-08-27 15:46:20,217 [test_set_abs_gripper_angle.py-->line:120]:test_api: set_abs_gripper_angle
+DEBUG 2025-08-27 15:46:20,217 [test_set_abs_gripper_angle.py-->line:121]:test_value: 60
+INFO 2025-08-27 15:46:20,217 [test_set_abs_gripper_angle.py-->line:127]:✅ 用例【设置绝对运动速度（超限）】测试通过
+INFO 2025-08-27 15:46:20,217 [test_set_abs_gripper_angle.py-->line:128]:》》》》》用例【设置绝对运动速度（超限）】测试完成《《《《《
+INFO 2025-08-27 15:46:26,732 [test_set_abs_gripper_angle.py-->line:17]:环境清理完成，接口测试结束

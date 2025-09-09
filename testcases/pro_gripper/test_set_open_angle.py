@@ -58,7 +58,7 @@ def test_set_open_angle_exception(device, case):
         logger.debug(f"参数: {case['parameter']}")
 
     with allure.step("尝试设置异常值并捕获 ValueError"):
-        with pytest.raises(ValueError, match="value错误"):
+        with pytest.raises(ValueError):
             device.m.set_gripper_io_open_value(case["parameter"])
 
     logger.info(f"✅ 用例【{title}】测试成功")

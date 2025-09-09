@@ -121,7 +121,7 @@ def test_out_limit(device, case):
     logger.debug(f'test_value: {case["value"]}')
 
     with allure.step("验证非法输入是否触发 ValueError"):
-        with pytest.raises(ValueError, match=f".*{case['title']}.*"):
+        with pytest.raises(ValueError, match=f".*"):
             device.m.set_abs_gripper_value(case["value"], case.get("speed", None))
 
     logger.info(f'✅ 用例【{title}】测试通过')

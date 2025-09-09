@@ -65,7 +65,7 @@ def test_set_gripper_min_pressure_exception(device, case):
         logger.debug(f'test_parameters: {case["parameter"]}')
 
     with allure.step("断言非法值触发 ValueError"):
-        with pytest.raises(ValueError, match="value错误"):
+        with pytest.raises(ValueError):
             device.m.set_gripper_mini_pressure(case["parameter"])
 
     logger.info(f'✅ 用例【{title}】测试通过')

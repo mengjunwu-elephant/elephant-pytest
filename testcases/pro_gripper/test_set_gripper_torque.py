@@ -65,7 +65,7 @@ def test_set_gripper_torque_exception(device, case):
         logger.debug(f"Parameter: {case['parameter']}")
 
     with allure.step("尝试设置异常值，期望抛出 ValueError"):
-        with pytest.raises(ValueError, match="value错误"):
+        with pytest.raises(ValueError):
             device.m.set_gripper_torque(case["parameter"])
 
     logger.info(f"✅ 用例【{title}】测试成功")

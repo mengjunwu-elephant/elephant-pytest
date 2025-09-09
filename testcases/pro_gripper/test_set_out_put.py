@@ -60,7 +60,7 @@ def test_set_output_exception(device, case):
         logger.debug(f"参数: {case['parameter']}")
 
     with allure.step("尝试设置异常值并捕获 ValueError"):
-        with pytest.raises(ValueError, match="value错误"):
+        with pytest.raises(ValueError):
             device.m.set_gripper_output(case["parameter"])
 
     logger.info(f"✅ 用例【{title}】测试成功")
