@@ -1,0 +1,8 @@
+10:20:35.730 DEBU [pymycobot.common] _write: fe fe 5 13 7 1 e8 e 
+10:20:35.735 DEBU [pymycobot.common] _read : FE FE 05 13 FF 01 28 4D
+10:20:39.964 DEBU [pymycobot.common] _write: fe fe 5 13 8 1 18 b 
+10:20:39.969 DEBU [pymycobot.common] _read : FE FE 05 13 FF 01 28 4D
+10:20:45.722 DEBU [pymycobot.common] _write: fe fe 5 13 9 1 88 a 
+10:20:45.726 DEBU [pymycobot.common] _read : FE FE 05 13 FF 01 28 4D
+10:23:05.932 DEBU [pymycobot.common] _write: fe fe 5 13 8 1 18 b 
+10:23:05.938 DEBU [pymycobot.common] _read : FE FE 05 13 FF 01 28 4D

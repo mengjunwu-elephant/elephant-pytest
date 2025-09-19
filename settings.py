@@ -13,7 +13,8 @@ CASES_DIR = {
     "4": "testcases/pro_gripper",
     "5": "testcases/my_hand",
     "6": "testcases/mycobot280",
-    "7": "testcases/mycobot_320_123"
+    "7": "testcases/mycobot_320",
+    "8": "testcases/mycobot_450"
 }
 
 # 日志配置
@@ -28,95 +29,54 @@ LOG_CONFIG = {
 REPORT_DIR = "allure-results"
 
 # mycobot320配置
-class Mycobot320Base:
+class Mycobot450Base:
     # 机械臂运动数据
-    speed = 50
-    angles_init = [0, 0, -90, 0, 90, 0]
+    speed = 10
+    coords_init_angles =[0, 30, -100, -20, 0.0, 0.0] #坐标值：[149.9, -86.8, 298.4, 179.99, 0.0, -90.0]
     zero_angles = [0, 0, 0, 0, 0, 0]
-    zero_encodes = [2048, 2048, 2048, 2048, 2048, 2048]
-    coords_init_angles = [0, 10, -100, 0, 90, 0]
-    zero_coords = [190.2, -89.4, 235.9, 178.24, 0.18, -90.0]
-    angles_init_coords = [-1.9, -154.2, 523.8, -89.99, 0.43, -177.29]
+    min_angles = [-165,-120,-158,-165,-165,-175]
+    max_angles = [165,120,158,165,165,175]
 
     # 测试数据配置
-    TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mycobot_320.xlsx')
+    TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mycobot_450.xlsx')
 
-    def __init__(self, port="com26", baudrate=115200):
-        self.m = MyCobot320(port, baudrate=baudrate)
+    def __init__(self, ip='192.168.0.232'):
+        self.mc = Pro450Client(ip=ip)
 
-    def range_comparison(self, expect_data, value, name='值'):
-        value_max = expect_data[1]
-        value_min = expect_data[0]
-        if len(value) != 6:
-            raise AssertionError(f"{name}长度不为6,实际为{len(value)}")
-        elif all(value_min <= i <= value_max for i in value):
-            return True
-        else:
-            raise AssertionError(f"{name}超出范围{value_min}~{value_max},实际值为{value}")
+    def default_settings(self):
+        self.mc.set_fresh_mode(0)
+        self.mc.set_debug_state(0)
+        self.mc.stop(1)
+
+    def default_speed(self):
+        self.mc.set_max_speed(0, 150)
+        self.mc.set_max_speed(1, 200)
+        self.mc.set_max_acc(0, 200)
+        self.mc.set_max_acc(1, 400)
+
+    def default_angle(self):
+        for i,j in enumerate(self.min_angles):
+            self.mc.set_joint_min_angle(i+1,j)
+            time.sleep(0.1)
+        for i,j in enumerate(self.max_angles):
+            self.mc.set_joint_max_angle(i+1,j)
+            time.sleep(0.1)
+
+    def default_base_io_output(self):
+        for i in range(12):
+            self.mc.set_base_io_output(i+1,0)
+            time.sleep(0.2)
+
+    def default_tool_reference(self):
+        self.mc.set_tool_reference([0,0,0,0,0,0])
+        self.mc.set_end_type(0)
 
     def go_zero(self):
-        self.m.send_angles(self.zero_angles, self.speed)
-        time.sleep(0.5)
-        while True:
-            if self.m.is_moving() == 0:
-                break
-        time.sleep(1)
-
-    def go_coords(self):
-        self.m.send_angles(self.coords_init_angles, self.speed)
-        time.sleep(0.5)
-        while True:
-            if self.m.is_moving() == 0:
-                break
-        time.sleep(1)
-
-    def different_modes(self, ID):
-        if ID <= 4:
-            self.m.set_fresh_mode(0)
-            if ID == 1:
-                self.go_zero()
-                self.m.send_angles(self.angles_init, self.speed)
-            elif ID == 2:
-                self.go_zero()
-                self.m.send_angle(1, 100, self.speed)
-            elif ID == 3:
-                self.go_coords()
-                self.m.send_coords(self.angles_init_coords, self.speed)
-            elif ID == 4:
-                self.go_coords()
-                self.m.send_coord(1, self.zero_coords[0]+50, self.speed)
-        else:
-            self.m.set_fresh_mode(1)
-            if ID == 5:
-                self.go_zero()
-                self.m.send_angles(self.angles_init, self.speed)
-            elif ID == 6:
-                self.go_zero()
-                self.m.send_angle(1, 100, self.speed)
-            elif ID == 7:
-                self.go_coords()
-                self.m.send_coords(self.angles_init_coords, self.speed)
-            elif ID == 8:
-                self.go_coords()
-                self.m.send_coord(1, self.zero_coords[0]+50, self.speed)
+        self.mc.send_angles(self.zero_angles, self.speed)
+        time.sleep(2)
 
     def wait(self):
-        time.sleep(0.5)  # 等待机械臂开始运动
-        while 1:
-            if self.m.is_moving() == 1:
-                time.sleep(0.1)
-            else:
-                break
-        time.sleep(0.5)
-
-    def min_limit(self):
-        min_limit = [-168, -135, -145, -148, -168, -180]
-        for i in range(1,7):
-            self.m.set_joint_min(i, min_limit[i-1])
+        time.sleep(0.3)
+        while self.mc.is_moving():
             time.sleep(0.1)
-
-    def max_limit(self):
-        max_limit = [168, 135, 145, 148, 168, 180]
-        for i in range(1,7):
-            self.m.set_joint_max(i, max_limit[i-1])
-            time.sleep(0.1)
+        time.sleep(1)
