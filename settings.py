@@ -7,14 +7,8 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # 产品名称
 CASES_DIR = {
-    "1": "testcases/mercury",
-    "2": "testcases/mercury_pro_gripper",
-    "3": "testcases/mercury_my_hand",
-    "4": "testcases/pro_gripper",
-    "5": "testcases/my_hand",
-    "6": "testcases/mycobot280",
-    "7": "testcases/mycobot_320",
-    "8": "testcases/mycobot_450"
+    "1": "testcases/mycobot_450",
+    "2": "testcases/pro_gripper"
 }
 
 # 日志配置
@@ -28,7 +22,7 @@ LOG_CONFIG = {
 
 REPORT_DIR = "allure-results"
 
-# mycobot320配置
+# mycobot450配置
 class Mycobot450Base:
     # 机械臂运动数据
     speed = 10
@@ -39,6 +33,7 @@ class Mycobot450Base:
 
     # 测试数据配置
     TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mycobot_450.xlsx')
+    PRO_GRIPPER_TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/pro_gripper.xlsx')
 
     def __init__(self, ip='192.168.0.232'):
         self.mc = Pro450Client(ip=ip)
