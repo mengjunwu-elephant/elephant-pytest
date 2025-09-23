@@ -3,7 +3,6 @@ import time
 
 from pymycobot import *
 
-from Myhand.MyHand import MyGripper_H100
 from elegripper.elegripper import Gripper
 
 # 项目路径
