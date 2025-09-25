@@ -51,6 +51,8 @@ def test_send_angle(device, case):
             device.wait()
         elif case['joint'] == 2 and case['angle'] == -135:
             device.mc.send_angle(3,90,50)
+        elif case['joint'] == 2 and case['angle'] == 135:
+            device.mc.send_angle(3,-90,50)
 
     with allure.step("调用 send_angle 接口"):
         response = device.mc.send_angle(case['joint'], case['angle'], case['speed'])

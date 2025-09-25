@@ -49,7 +49,11 @@ def test_send_angles(device, case):
         response = device.mc.send_angles(angles,case['speed'])
         device.wait()
 
-    with allure.step("断言返回值类型为 list"):
+    with allure.step("调用 get_angles 接口获取当前角度"):
+        current_angle = device.mc.get_angles()
+        allure.attach(str(current_angle), name="当前角度", attachment_type=allure.attachment_type.TEXT)
+
+    with allure.step("断言返回值类型为 int"):
         assert isinstance(response, int), f"返回类型错误，应为 int，实际为 {type(response)}"
 
     with allure.step("断言接口返回结果"):
@@ -57,13 +61,10 @@ def test_send_angles(device, case):
         allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
         assert response == expected, f"用例【{title}】断言失败，期望 {expected}，实际 {response}"
 
-    with allure.step("调用 get_angles 接口获取当前角度"):
-        current_angle = device.mc.get_angles()
-        allure.attach(str(current_angle), name="当前角度", attachment_type=allure.attachment_type.TEXT)
-
-    with allure.step("断言是否到达点位"):
-        result = device.mc.is_in_position(angles, 0)
-        assert result==expected,f"机械臂没有到达点位，目标角度为{angles},实际角度为{current_angle}"
+    with allure.step("断言 get_angles返回结果"):
+        allure.attach(str(angles), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(current_angle), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert_almost_equal(angles, current_angle, 1,'设置全关节角度'), f"用例【{title}】断言失败，期望 {angles}，实际 {current_angle}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')

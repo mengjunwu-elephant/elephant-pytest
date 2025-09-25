@@ -14,8 +14,6 @@ cases = get_test_data_from_excel(Mycobot280Base.TEST_DATA_FILE, "get_coords")
 def device():
     """设备初始化和清理"""
     dev = Mycobot280Base()
-    dev.mc.send_angles([0,0,-90,0,0,0],50)
-    dev.wait()
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.default_settings()
@@ -34,6 +32,10 @@ def test_get_coords(device, case):
     logger.debug(f'test_api:{case["api"]}')
     logger.debug(f'test_data:{case["coords"]}')
 
+    with allure.step("使机械臂运动到坐标初始姿态"):
+        device.mc.send_angles(device.coords_init_angles,device.speed)
+        device.wait()
+
     with allure.step("设置运动模式"):
         device.mc.set_free_mode(case["fresh_mode"])
         logger.debug(f"设置运动模式为：{case['fresh_mode']}")
@@ -42,8 +44,6 @@ def test_get_coords(device, case):
     with allure.step("调用 send_coords 接口"):
         device.mc.send_coords(eval(case["coords"]),device.speed)
         device.wait()
-        logger.debug(f"coords：{case['coords']}")
-        allure.attach(str(case["coords"]), name="coords", attachment_type=allure.attachment_type.TEXT)
 
     with allure.step("调用 get_coords 接口"):
         response = (device.mc.get_coords())
@@ -55,7 +55,38 @@ def test_get_coords(device, case):
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(response,expected,tol=5,name='获取全角度'), f"用例【{title}】断言失败，期望 {expected}，实际 {response}"
+        assert_almost_equal(response,expected,tol=2,name='获取全坐标'), f"用例【{title}】断言失败，期望 {expected}，实际 {response}"
+
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
+
+
+@allure.feature("获取机械臂全角度")
+@allure.story("计算运动学正解")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal1"], ids=lambda c: c["title"])
+def test_get_coords1(device, case):
+    title = case["title"]
+    expected = eval(case["expect_data"])
+
+    logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
+    logger.debug(f'test_api:{case["api"]}')
+    logger.debug(f'test_data:{case["coords"]}')
+
+    with allure.step("使机械臂运动到坐标初始姿态"):
+        device.mc.send_angles(device.coords_init_angles,device.speed)
+        device.wait()
+
+    with allure.step("调用 get_coords 接口"):
+        response = (device.mc.get_coords(eval(case['angles'])))
+        logger.debug(f"接口返回：{response}")
+
+    with allure.step("断言返回值类型为 list"):
+        assert isinstance(response, list), f"返回类型错误，应为 list，实际为 {type(response)}"
+
+    with allure.step("断言接口返回结果"):
+        allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert_almost_equal(response,expected,tol=2,name='计算运动学正解'), f"用例【{title}】断言失败，期望 {expected}，实际 {response}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')

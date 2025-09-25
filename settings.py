@@ -33,13 +33,13 @@ REPORT_DIR = "allure-results"
 class Mycobot280Base:
     # 机械臂运动数据
     speed = 50
-    coords_init_angles = [0,20,-90,-20,0,0]
+    coords_init_angles = [0,20,-90,-20,0,0] #坐标值：[128.8, -62.2, 227.7, 178.42, -0.28, -90.08]
     init_angles = [0, 0, 0, 0, 0, 0]
     # 测试数据配置
     TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mycobot_280.xlsx')
 
     def __init__(self, port="com10", baudrate=115200):
-        self.mc = MyCobot280(port, baudrate=baudrate)
+        self.mc = MyCobot280(port, baudrate=baudrate,debug=1)
 
     def default_settings(self):
         self.mc.power_on()

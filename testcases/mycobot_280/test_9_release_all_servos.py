@@ -40,7 +40,7 @@ def test_release_all_servos(device, case):
     with allure.step('循环读取全关节角度'):
         for i in range(100):
             print(f'第{i+1}次读取全关节角度:{device.mc.get_angles()}')
-            time.sleep(0.5)
+            time.sleep(0.2)
 
     with allure.step("断言返回值类型为 int"):
         assert isinstance(response, int), f"返回类型错误，应为 int，实际为 {type(response)}"
