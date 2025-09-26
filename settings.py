@@ -35,6 +35,14 @@ class Mycobot280Base:
     speed = 50
     coords_init_angles = [0,20,-90,-20,0,0] #坐标值：[128.8, -62.2, 227.7, 178.42, -0.28, -90.08]
     init_angles = [0, 0, 0, 0, 0, 0]
+
+    angles_min = [-168, -135, -150, -145, -155, -180]
+    angles_max = [168, 135, 150, 145, 160, 180]
+
+    # 自适应夹爪配置
+    hts_gripper_torque = 200
+    hts_gripper_protect_current = 300
+
     # 测试数据配置
     TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mycobot_280.xlsx')
 
@@ -55,4 +63,12 @@ class Mycobot280Base:
                 time.sleep(0.1)
             else:
                 break
-        time.sleep(0.5) # 等待机械臂停止运动
+        time.sleep(1) # 等待机械臂停止运动
+
+    def default_angles(self):
+        for i,j in enumerate(self.angles_min):
+            self.mc.set_joint_min(i+1,j)
+            time.sleep(0.1)
+        for i,j in enumerate(self.angles_max):
+            self.mc.set_joint_max(i+1,j)
+            time.sleep(0.1)

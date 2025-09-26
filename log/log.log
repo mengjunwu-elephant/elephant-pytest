@@ -6802,3 +6802,1033 @@ DEBUG 2025-09-24 16:24:57,702 [test_33_jog_increment_coord.py-->line:138]:axis:1
 DEBUG 2025-09-24 16:24:57,702 [test_33_jog_increment_coord.py-->line:139]:increment:467
 DEBUG 2025-09-24 16:24:57,703 [test_33_jog_increment_coord.py-->line:140]:speed:50
 INFO 2025-09-24 16:25:03,729 [test_33_jog_increment_coord.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-09-25 10:46:36,712 [test_34_set_HTS_gripper_torque.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-09-25 10:46:36,713 [test_34_set_HTS_gripper_torque.py-->line:30]:》》》用例【正常设置自适应夹爪扭矩】开始测试《《《
+DEBUG 2025-09-25 10:46:36,715 [test_34_set_HTS_gripper_torque.py-->line:31]:参数: 200
+INFO 2025-09-25 10:46:36,909 [test_34_set_HTS_gripper_torque.py-->line:30]:》》》用例【正常设置自适应夹爪扭矩】开始测试《《《
+DEBUG 2025-09-25 10:46:36,910 [test_34_set_HTS_gripper_torque.py-->line:31]:参数: 100
+INFO 2025-09-25 10:46:39,154 [test_34_set_HTS_gripper_torque.py-->line:21]:环境清理完成，接口测试结束
+INFO 2025-09-25 10:47:03,556 [test_34_set_HTS_gripper_torque.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-09-25 10:47:03,557 [test_34_set_HTS_gripper_torque.py-->line:30]:》》》用例【正常设置自适应夹爪扭矩】开始测试《《《
+DEBUG 2025-09-25 10:47:03,557 [test_34_set_HTS_gripper_torque.py-->line:31]:参数: 200
+INFO 2025-09-25 10:47:03,587 [test_34_set_HTS_gripper_torque.py-->line:51]:✅ 用例【正常设置自适应夹爪扭矩】测试通过
+INFO 2025-09-25 10:47:03,589 [test_34_set_HTS_gripper_torque.py-->line:52]:》》》用例【正常设置自适应夹爪扭矩】测试完成《《《
+INFO 2025-09-25 10:47:03,590 [test_34_set_HTS_gripper_torque.py-->line:30]:》》》用例【正常设置自适应夹爪扭矩】开始测试《《《
+DEBUG 2025-09-25 10:47:03,592 [test_34_set_HTS_gripper_torque.py-->line:31]:参数: 100
+INFO 2025-09-25 10:47:05,122 [test_34_set_HTS_gripper_torque.py-->line:21]:环境清理完成，接口测试结束
+INFO 2025-09-25 10:50:14,204 [test_34_set_HTS_gripper_torque.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-09-25 10:50:14,205 [test_34_set_HTS_gripper_torque.py-->line:30]:》》》用例【正常设置自适应夹爪扭矩】开始测试《《《
+DEBUG 2025-09-25 10:50:14,205 [test_34_set_HTS_gripper_torque.py-->line:31]:参数: 980
+INFO 2025-09-25 10:50:14,280 [test_34_set_HTS_gripper_torque.py-->line:51]:✅ 用例【正常设置自适应夹爪扭矩】测试通过
+INFO 2025-09-25 10:50:14,280 [test_34_set_HTS_gripper_torque.py-->line:52]:》》》用例【正常设置自适应夹爪扭矩】测试完成《《《
+INFO 2025-09-25 10:50:14,283 [test_34_set_HTS_gripper_torque.py-->line:30]:》》》用例【正常设置自适应夹爪扭矩】开始测试《《《
+DEBUG 2025-09-25 10:50:14,283 [test_34_set_HTS_gripper_torque.py-->line:31]:参数: 300
+INFO 2025-09-25 10:50:14,317 [test_34_set_HTS_gripper_torque.py-->line:51]:✅ 用例【正常设置自适应夹爪扭矩】测试通过
+INFO 2025-09-25 10:50:14,317 [test_34_set_HTS_gripper_torque.py-->line:52]:》》》用例【正常设置自适应夹爪扭矩】测试完成《《《
+INFO 2025-09-25 10:50:14,319 [test_34_set_HTS_gripper_torque.py-->line:61]:》》》用例【设置自适应夹爪扭矩超限】开始测试《《《
+DEBUG 2025-09-25 10:50:14,319 [test_34_set_HTS_gripper_torque.py-->line:62]:接口: set_hts_gripper_torque，参数: 981
+INFO 2025-09-25 10:50:14,319 [test_34_set_HTS_gripper_torque.py-->line:68]:✅ 用例【设置自适应夹爪扭矩超限】异常测试通过
+INFO 2025-09-25 10:50:14,319 [test_34_set_HTS_gripper_torque.py-->line:69]:》》》用例【设置自适应夹爪扭矩超限】测试完成《《《
+INFO 2025-09-25 10:50:14,320 [test_34_set_HTS_gripper_torque.py-->line:61]:》》》用例【设置自适应夹爪扭矩超限】开始测试《《《
+DEBUG 2025-09-25 10:50:14,320 [test_34_set_HTS_gripper_torque.py-->line:62]:接口: set_hts_gripper_torque，参数: 149
+INFO 2025-09-25 10:50:14,320 [test_34_set_HTS_gripper_torque.py-->line:68]:✅ 用例【设置自适应夹爪扭矩超限】异常测试通过
+INFO 2025-09-25 10:50:14,320 [test_34_set_HTS_gripper_torque.py-->line:69]:》》》用例【设置自适应夹爪扭矩超限】测试完成《《《
+INFO 2025-09-25 10:50:15,464 [test_34_set_HTS_gripper_torque.py-->line:21]:环境清理完成，接口测试结束
+INFO 2025-09-25 10:53:45,508 [test_34_set_HTS_gripper_torque.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-09-25 10:53:45,509 [test_34_set_HTS_gripper_torque.py-->line:31]:》》》用例【正常设置自适应夹爪扭矩】开始测试《《《
+DEBUG 2025-09-25 10:53:45,510 [test_34_set_HTS_gripper_torque.py-->line:32]:参数: 980
+INFO 2025-09-25 10:53:45,547 [test_34_set_HTS_gripper_torque.py-->line:52]:✅ 用例【正常设置自适应夹爪扭矩】测试通过
+INFO 2025-09-25 10:53:45,547 [test_34_set_HTS_gripper_torque.py-->line:53]:》》》用例【正常设置自适应夹爪扭矩】测试完成《《《
+INFO 2025-09-25 10:53:45,550 [test_34_set_HTS_gripper_torque.py-->line:31]:》》》用例【正常设置自适应夹爪扭矩】开始测试《《《
+DEBUG 2025-09-25 10:53:45,550 [test_34_set_HTS_gripper_torque.py-->line:32]:参数: 300
+INFO 2025-09-25 10:53:45,583 [test_34_set_HTS_gripper_torque.py-->line:52]:✅ 用例【正常设置自适应夹爪扭矩】测试通过
+INFO 2025-09-25 10:53:45,584 [test_34_set_HTS_gripper_torque.py-->line:53]:》》》用例【正常设置自适应夹爪扭矩】测试完成《《《
+INFO 2025-09-25 10:53:45,586 [test_34_set_HTS_gripper_torque.py-->line:62]:》》》用例【设置自适应夹爪扭矩超限】开始测试《《《
+DEBUG 2025-09-25 10:53:45,586 [test_34_set_HTS_gripper_torque.py-->line:63]:接口: set_hts_gripper_torque，参数: 981
+INFO 2025-09-25 10:53:45,586 [test_34_set_HTS_gripper_torque.py-->line:69]:✅ 用例【设置自适应夹爪扭矩超限】异常测试通过
+INFO 2025-09-25 10:53:45,586 [test_34_set_HTS_gripper_torque.py-->line:70]:》》》用例【设置自适应夹爪扭矩超限】测试完成《《《
+INFO 2025-09-25 10:53:45,588 [test_34_set_HTS_gripper_torque.py-->line:62]:》》》用例【设置自适应夹爪扭矩超限】开始测试《《《
+DEBUG 2025-09-25 10:53:45,588 [test_34_set_HTS_gripper_torque.py-->line:63]:接口: set_hts_gripper_torque，参数: 149
+INFO 2025-09-25 10:53:45,589 [test_34_set_HTS_gripper_torque.py-->line:69]:✅ 用例【设置自适应夹爪扭矩超限】异常测试通过
+INFO 2025-09-25 10:53:45,589 [test_34_set_HTS_gripper_torque.py-->line:70]:》》》用例【设置自适应夹爪扭矩超限】测试完成《《《
+INFO 2025-09-25 10:53:46,744 [test_34_set_HTS_gripper_torque.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-09-25 10:56:21,318 [test_35_get_HTS_gripper_torque.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-09-25 10:56:21,320 [test_35_get_HTS_gripper_torque.py-->line:29]:》》》》》用例【正常获取自适应夹爪扭矩默认值】开始测试《《《《《
+DEBUG 2025-09-25 10:56:21,320 [test_35_get_HTS_gripper_torque.py-->line:30]:test_api:set_hts_gripper_torque
+DEBUG 2025-09-25 10:56:21,329 [test_35_get_HTS_gripper_torque.py-->line:34]:接口返回：300
+INFO 2025-09-25 10:56:22,676 [test_35_get_HTS_gripper_torque.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-09-25 10:56:38,478 [test_35_get_HTS_gripper_torque.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-09-25 10:56:38,479 [test_35_get_HTS_gripper_torque.py-->line:29]:》》》》》用例【正常获取自适应夹爪扭矩默认值】开始测试《《《《《
+DEBUG 2025-09-25 10:56:38,479 [test_35_get_HTS_gripper_torque.py-->line:30]:test_api:set_hts_gripper_torque
+DEBUG 2025-09-25 10:56:38,488 [test_35_get_HTS_gripper_torque.py-->line:34]:接口返回：300
+INFO 2025-09-25 10:56:38,488 [test_35_get_HTS_gripper_torque.py-->line:44]:✅ 用例【正常获取自适应夹爪扭矩默认值】测试通过
+INFO 2025-09-25 10:56:38,488 [test_35_get_HTS_gripper_torque.py-->line:45]:》》》》》用例【正常获取自适应夹爪扭矩默认值】测试完成《《《《《
+INFO 2025-09-25 10:56:39,629 [test_35_get_HTS_gripper_torque.py-->line:19]:环境清理完成，接口测试结束
+INFO 2025-09-25 11:04:15,118 [test_36_set_gripper_protect_current.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-09-25 11:04:15,119 [test_36_set_gripper_protect_current.py-->line:32]:》》》用例【正常设置自适应夹爪电流】开始测试《《《
+DEBUG 2025-09-25 11:04:15,120 [test_36_set_gripper_protect_current.py-->line:33]:参数: 200
+INFO 2025-09-25 11:04:15,142 [test_36_set_gripper_protect_current.py-->line:53]:✅ 用例【正常设置自适应夹爪电流】测试通过
+INFO 2025-09-25 11:04:15,142 [test_36_set_gripper_protect_current.py-->line:54]:》》》用例【正常设置自适应夹爪电流】测试完成《《《
+INFO 2025-09-25 11:04:15,144 [test_36_set_gripper_protect_current.py-->line:32]:》》》用例【正常设置自适应夹爪电流】开始测试《《《
+DEBUG 2025-09-25 11:04:15,144 [test_36_set_gripper_protect_current.py-->line:33]:参数: 500
+INFO 2025-09-25 11:04:15,168 [test_36_set_gripper_protect_current.py-->line:53]:✅ 用例【正常设置自适应夹爪电流】测试通过
+INFO 2025-09-25 11:04:15,168 [test_36_set_gripper_protect_current.py-->line:54]:》》》用例【正常设置自适应夹爪电流】测试完成《《《
+INFO 2025-09-25 11:04:15,171 [test_36_set_gripper_protect_current.py-->line:63]:》》》用例【设置自适应夹爪电流超限】开始测试《《《
+DEBUG 2025-09-25 11:04:15,171 [test_36_set_gripper_protect_current.py-->line:64]:接口: set_gripper_protect_current，参数: 501
+INFO 2025-09-25 11:04:15,171 [test_36_set_gripper_protect_current.py-->line:70]:✅ 用例【设置自适应夹爪电流超限】异常测试通过
+INFO 2025-09-25 11:04:15,171 [test_36_set_gripper_protect_current.py-->line:71]:》》》用例【设置自适应夹爪电流超限】测试完成《《《
+INFO 2025-09-25 11:04:15,174 [test_36_set_gripper_protect_current.py-->line:63]:》》》用例【设置自适应夹爪电流超限】开始测试《《《
+DEBUG 2025-09-25 11:04:15,174 [test_36_set_gripper_protect_current.py-->line:64]:接口: set_gripper_protect_current，参数: 0
+INFO 2025-09-25 11:04:15,174 [test_36_set_gripper_protect_current.py-->line:70]:✅ 用例【设置自适应夹爪电流超限】异常测试通过
+INFO 2025-09-25 11:04:15,174 [test_36_set_gripper_protect_current.py-->line:71]:》》》用例【设置自适应夹爪电流超限】测试完成《《《
+INFO 2025-09-25 11:04:16,351 [test_36_set_gripper_protect_current.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-09-25 11:08:47,013 [test_37_get_gripper_protect_current.py-->line:16]:初始化完成，接口测试开始
+INFO 2025-09-25 11:08:47,014 [test_37_get_gripper_protect_current.py-->line:30]:》》》》》用例【正常获取自适应夹爪夹持电流默认值】开始测试《《《《《
+DEBUG 2025-09-25 11:08:47,015 [test_37_get_gripper_protect_current.py-->line:31]:test_api:set_hts_gripper_torque
+DEBUG 2025-09-25 11:08:47,023 [test_37_get_gripper_protect_current.py-->line:35]:接口返回：300
+INFO 2025-09-25 11:08:47,023 [test_37_get_gripper_protect_current.py-->line:45]:✅ 用例【正常获取自适应夹爪夹持电流默认值】测试通过
+INFO 2025-09-25 11:08:47,023 [test_37_get_gripper_protect_current.py-->line:46]:》》》》》用例【正常获取自适应夹爪夹持电流默认值】测试完成《《《《《
+INFO 2025-09-25 11:08:48,185 [test_37_get_gripper_protect_current.py-->line:20]:环境清理完成，接口测试结束
+INFO 2025-09-25 11:29:14,929 [test_38_set_encoder.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-09-25 11:29:15,957 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置1关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:15,957 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:29:15,958 [test_38_set_encoder.py-->line:39]:test_joint:1
+INFO 2025-09-25 11:29:17,098 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置1关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:17,099 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:29:17,099 [test_38_set_encoder.py-->line:39]:test_joint:1
+INFO 2025-09-25 11:29:18,140 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置2关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:18,140 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:29:18,140 [test_38_set_encoder.py-->line:39]:test_joint:2
+INFO 2025-09-25 11:29:19,185 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置2关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:19,185 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:29:19,185 [test_38_set_encoder.py-->line:39]:test_joint:2
+INFO 2025-09-25 11:29:20,213 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置3关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:20,213 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:29:20,214 [test_38_set_encoder.py-->line:39]:test_joint:3
+INFO 2025-09-25 11:29:21,260 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置3关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:21,260 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:29:21,261 [test_38_set_encoder.py-->line:39]:test_joint:3
+INFO 2025-09-25 11:29:22,305 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置4关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:22,306 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:29:22,306 [test_38_set_encoder.py-->line:39]:test_joint:4
+INFO 2025-09-25 11:29:23,335 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置4关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:23,335 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:29:23,335 [test_38_set_encoder.py-->line:39]:test_joint:4
+INFO 2025-09-25 11:29:24,366 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置5关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:24,366 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:29:24,366 [test_38_set_encoder.py-->line:39]:test_joint:5
+INFO 2025-09-25 11:29:25,396 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置5关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:25,396 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:29:25,396 [test_38_set_encoder.py-->line:39]:test_joint:5
+INFO 2025-09-25 11:29:26,425 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置6关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:26,426 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:29:26,426 [test_38_set_encoder.py-->line:39]:test_joint:6
+INFO 2025-09-25 11:29:40,867 [test_38_set_encoder.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-09-25 11:29:41,894 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置1关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:41,895 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+INFO 2025-09-25 11:29:43,046 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置1关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:43,046 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+INFO 2025-09-25 11:29:44,076 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置2关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:44,076 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+INFO 2025-09-25 11:29:45,105 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置2关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:45,105 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+INFO 2025-09-25 11:29:46,152 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置3关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:46,152 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+INFO 2025-09-25 11:29:47,182 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置3关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:47,182 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+INFO 2025-09-25 11:29:48,217 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置4关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:48,217 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+INFO 2025-09-25 11:29:49,259 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置4关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 11:29:49,259 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+INFO 2025-09-25 11:30:10,397 [test_38_set_encoder.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-09-25 11:30:11,423 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置1关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 11:30:11,424 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:30:11,424 [test_38_set_encoder.py-->line:39]:test_joint:1
+DEBUG 2025-09-25 11:30:11,424 [test_38_set_encoder.py-->line:40]:test_encoder:4096
+DEBUG 2025-09-25 11:30:11,424 [test_38_set_encoder.py-->line:41]:test_speed:10
+DEBUG 2025-09-25 11:30:11,424 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 11:30:13,622 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置1关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 11:30:13,622 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:30:13,622 [test_38_set_encoder.py-->line:39]:test_joint:1
+DEBUG 2025-09-25 11:30:13,624 [test_38_set_encoder.py-->line:40]:test_encoder:0
+DEBUG 2025-09-25 11:30:13,624 [test_38_set_encoder.py-->line:41]:test_speed:20
+DEBUG 2025-09-25 11:30:13,624 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 11:30:15,710 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置2关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 11:30:15,710 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:30:15,710 [test_38_set_encoder.py-->line:39]:test_joint:2
+DEBUG 2025-09-25 11:30:15,710 [test_38_set_encoder.py-->line:40]:test_encoder:4096
+DEBUG 2025-09-25 11:30:15,710 [test_38_set_encoder.py-->line:41]:test_speed:30
+DEBUG 2025-09-25 11:30:15,710 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 11:30:17,789 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置2关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 11:30:17,789 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:30:17,789 [test_38_set_encoder.py-->line:39]:test_joint:2
+DEBUG 2025-09-25 11:30:17,789 [test_38_set_encoder.py-->line:40]:test_encoder:0
+DEBUG 2025-09-25 11:30:17,789 [test_38_set_encoder.py-->line:41]:test_speed:40
+DEBUG 2025-09-25 11:30:17,789 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 11:30:19,867 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置3关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 11:30:19,867 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:30:19,867 [test_38_set_encoder.py-->line:39]:test_joint:3
+DEBUG 2025-09-25 11:30:19,867 [test_38_set_encoder.py-->line:40]:test_encoder:4096
+DEBUG 2025-09-25 11:30:19,867 [test_38_set_encoder.py-->line:41]:test_speed:50
+DEBUG 2025-09-25 11:30:19,867 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 11:30:21,927 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置3关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 11:30:21,927 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:30:21,928 [test_38_set_encoder.py-->line:39]:test_joint:3
+DEBUG 2025-09-25 11:30:21,928 [test_38_set_encoder.py-->line:40]:test_encoder:0
+DEBUG 2025-09-25 11:30:21,928 [test_38_set_encoder.py-->line:41]:test_speed:60
+DEBUG 2025-09-25 11:30:21,928 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 11:30:52,885 [test_38_set_encoder.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-09-25 11:30:53,917 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置1关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 11:30:53,917 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:30:53,917 [test_38_set_encoder.py-->line:39]:test_joint:1
+DEBUG 2025-09-25 11:30:53,917 [test_38_set_encoder.py-->line:40]:test_encoder:4096
+DEBUG 2025-09-25 11:30:53,917 [test_38_set_encoder.py-->line:41]:test_speed:10
+DEBUG 2025-09-25 11:30:53,917 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 11:30:56,145 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置1关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 11:30:56,145 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:30:56,145 [test_38_set_encoder.py-->line:39]:test_joint:1
+DEBUG 2025-09-25 11:30:56,145 [test_38_set_encoder.py-->line:40]:test_encoder:0
+DEBUG 2025-09-25 11:30:56,145 [test_38_set_encoder.py-->line:41]:test_speed:20
+DEBUG 2025-09-25 11:30:56,145 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 11:30:58,235 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置2关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 11:30:58,235 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:30:58,237 [test_38_set_encoder.py-->line:39]:test_joint:2
+DEBUG 2025-09-25 11:30:58,237 [test_38_set_encoder.py-->line:40]:test_encoder:4096
+DEBUG 2025-09-25 11:30:58,237 [test_38_set_encoder.py-->line:41]:test_speed:30
+DEBUG 2025-09-25 11:30:58,237 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 11:31:00,318 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置2关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 11:31:00,318 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:31:00,318 [test_38_set_encoder.py-->line:39]:test_joint:2
+DEBUG 2025-09-25 11:31:00,318 [test_38_set_encoder.py-->line:40]:test_encoder:0
+DEBUG 2025-09-25 11:31:00,318 [test_38_set_encoder.py-->line:41]:test_speed:40
+DEBUG 2025-09-25 11:31:00,318 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 11:31:02,437 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置3关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 11:31:02,438 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:31:02,438 [test_38_set_encoder.py-->line:39]:test_joint:3
+DEBUG 2025-09-25 11:31:02,438 [test_38_set_encoder.py-->line:40]:test_encoder:4096
+DEBUG 2025-09-25 11:31:02,438 [test_38_set_encoder.py-->line:41]:test_speed:50
+DEBUG 2025-09-25 11:31:02,438 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 11:31:04,518 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置3关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 11:31:04,519 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 11:31:04,519 [test_38_set_encoder.py-->line:39]:test_joint:3
+DEBUG 2025-09-25 11:31:04,519 [test_38_set_encoder.py-->line:40]:test_encoder:0
+DEBUG 2025-09-25 11:31:04,519 [test_38_set_encoder.py-->line:41]:test_speed:60
+DEBUG 2025-09-25 11:31:04,519 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 11:31:08,178 [test_38_set_encoder.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-09-25 13:33:50,479 [test_38_set_encoder.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-09-25 13:33:54,686 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置1关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 13:33:54,686 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:33:54,686 [test_38_set_encoder.py-->line:39]:test_joint:1
+DEBUG 2025-09-25 13:33:54,686 [test_38_set_encoder.py-->line:40]:test_encoder:3947
+DEBUG 2025-09-25 13:33:54,686 [test_38_set_encoder.py-->line:41]:test_speed:10
+DEBUG 2025-09-25 13:33:54,686 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 13:34:02,475 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置1关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 13:34:02,475 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:34:02,475 [test_38_set_encoder.py-->line:39]:test_joint:1
+DEBUG 2025-09-25 13:34:02,475 [test_38_set_encoder.py-->line:40]:test_encoder:150
+DEBUG 2025-09-25 13:34:02,475 [test_38_set_encoder.py-->line:41]:test_speed:20
+DEBUG 2025-09-25 13:34:02,476 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 13:34:08,914 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置1关节负限位】测试通过
+INFO 2025-09-25 13:34:08,914 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置1关节负限位】测试完成《《《《《
+INFO 2025-09-25 13:34:15,992 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置2关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 13:34:15,992 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:34:15,992 [test_38_set_encoder.py-->line:39]:test_joint:2
+DEBUG 2025-09-25 13:34:15,992 [test_38_set_encoder.py-->line:40]:test_encoder:3574
+DEBUG 2025-09-25 13:34:15,992 [test_38_set_encoder.py-->line:41]:test_speed:30
+DEBUG 2025-09-25 13:34:15,992 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 13:34:19,695 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置2关节正限位】测试通过
+INFO 2025-09-25 13:34:19,695 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置2关节正限位】测试完成《《《《《
+INFO 2025-09-25 13:34:25,471 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置2关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 13:34:25,472 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:34:25,472 [test_38_set_encoder.py-->line:39]:test_joint:2
+DEBUG 2025-09-25 13:34:25,472 [test_38_set_encoder.py-->line:40]:test_encoder:523
+DEBUG 2025-09-25 13:34:25,472 [test_38_set_encoder.py-->line:41]:test_speed:40
+DEBUG 2025-09-25 13:34:25,472 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 13:34:28,514 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置2关节负限位】测试通过
+INFO 2025-09-25 13:34:28,514 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置2关节负限位】测试完成《《《《《
+INFO 2025-09-25 13:35:19,766 [test_38_set_encoder.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-09-25 13:35:20,799 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置1关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 13:35:20,799 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:35:20,799 [test_38_set_encoder.py-->line:39]:test_joint:1
+DEBUG 2025-09-25 13:35:20,800 [test_38_set_encoder.py-->line:40]:test_encoder:3947
+DEBUG 2025-09-25 13:35:20,800 [test_38_set_encoder.py-->line:41]:test_speed:10
+DEBUG 2025-09-25 13:35:20,800 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 13:35:27,855 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置1关节正限位】测试通过
+INFO 2025-09-25 13:35:27,855 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置1关节正限位】测试完成《《《《《
+INFO 2025-09-25 13:35:34,883 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置1关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 13:35:34,883 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:35:34,883 [test_38_set_encoder.py-->line:39]:test_joint:1
+DEBUG 2025-09-25 13:35:34,883 [test_38_set_encoder.py-->line:40]:test_encoder:150
+DEBUG 2025-09-25 13:35:34,883 [test_38_set_encoder.py-->line:41]:test_speed:20
+DEBUG 2025-09-25 13:35:34,883 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 13:35:41,315 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置1关节负限位】测试通过
+INFO 2025-09-25 13:35:41,316 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置1关节负限位】测试完成《《《《《
+INFO 2025-09-25 13:35:48,368 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置2关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 13:35:48,368 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:35:48,368 [test_38_set_encoder.py-->line:39]:test_joint:2
+DEBUG 2025-09-25 13:35:48,368 [test_38_set_encoder.py-->line:40]:test_encoder:3574
+DEBUG 2025-09-25 13:35:48,369 [test_38_set_encoder.py-->line:41]:test_speed:30
+DEBUG 2025-09-25 13:35:48,369 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 13:35:52,177 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置2关节正限位】测试通过
+INFO 2025-09-25 13:35:52,177 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置2关节正限位】测试完成《《《《《
+INFO 2025-09-25 13:35:57,601 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置2关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 13:35:57,602 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:35:57,602 [test_38_set_encoder.py-->line:39]:test_joint:2
+DEBUG 2025-09-25 13:35:57,602 [test_38_set_encoder.py-->line:40]:test_encoder:523
+DEBUG 2025-09-25 13:35:57,602 [test_38_set_encoder.py-->line:41]:test_speed:40
+DEBUG 2025-09-25 13:35:57,602 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 13:36:01,523 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置2关节负限位】测试通过
+INFO 2025-09-25 13:36:01,523 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置2关节负限位】测试完成《《《《《
+INFO 2025-09-25 13:36:07,302 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置3关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 13:36:07,303 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:36:07,303 [test_38_set_encoder.py-->line:39]:test_joint:3
+DEBUG 2025-09-25 13:36:07,303 [test_38_set_encoder.py-->line:40]:test_encoder:3743
+DEBUG 2025-09-25 13:36:07,303 [test_38_set_encoder.py-->line:41]:test_speed:50
+DEBUG 2025-09-25 13:36:07,303 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 13:36:10,095 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置3关节正限位】测试通过
+INFO 2025-09-25 13:36:10,095 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置3关节正限位】测试完成《《《《《
+INFO 2025-09-25 13:36:16,503 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置3关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 13:36:16,504 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:36:16,504 [test_38_set_encoder.py-->line:39]:test_joint:3
+DEBUG 2025-09-25 13:36:16,504 [test_38_set_encoder.py-->line:40]:test_encoder:353
+DEBUG 2025-09-25 13:36:16,504 [test_38_set_encoder.py-->line:41]:test_speed:60
+DEBUG 2025-09-25 13:36:16,504 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 13:36:19,060 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置3关节负限位】测试通过
+INFO 2025-09-25 13:36:19,060 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置3关节负限位】测试完成《《《《《
+INFO 2025-09-25 13:36:25,475 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置4关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 13:36:25,475 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:36:25,476 [test_38_set_encoder.py-->line:39]:test_joint:4
+DEBUG 2025-09-25 13:36:25,476 [test_38_set_encoder.py-->line:40]:test_encoder:3687
+DEBUG 2025-09-25 13:36:25,476 [test_38_set_encoder.py-->line:41]:test_speed:70
+DEBUG 2025-09-25 13:36:25,476 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 13:36:29,678 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置4关节正限位】测试通过
+INFO 2025-09-25 13:36:29,678 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置4关节正限位】测试完成《《《《《
+INFO 2025-09-25 13:36:35,717 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置4关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 13:36:35,717 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:36:35,717 [test_38_set_encoder.py-->line:39]:test_joint:4
+DEBUG 2025-09-25 13:36:35,717 [test_38_set_encoder.py-->line:40]:test_encoder:410
+DEBUG 2025-09-25 13:36:35,717 [test_38_set_encoder.py-->line:41]:test_speed:80
+DEBUG 2025-09-25 13:36:35,717 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 13:36:39,934 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置4关节负限位】测试通过
+INFO 2025-09-25 13:36:39,935 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置4关节负限位】测试完成《《《《《
+INFO 2025-09-25 13:36:45,977 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置5关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 13:36:45,977 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:36:45,977 [test_38_set_encoder.py-->line:39]:test_joint:5
+DEBUG 2025-09-25 13:36:45,977 [test_38_set_encoder.py-->line:40]:test_encoder:2225
+DEBUG 2025-09-25 13:36:45,977 [test_38_set_encoder.py-->line:41]:test_speed:90
+DEBUG 2025-09-25 13:36:45,977 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 13:36:47,032 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置5关节正限位】测试通过
+INFO 2025-09-25 13:36:47,032 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置5关节正限位】测试完成《《《《《
+INFO 2025-09-25 13:36:48,315 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置5关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 13:36:48,316 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:36:48,316 [test_38_set_encoder.py-->line:39]:test_joint:5
+DEBUG 2025-09-25 13:36:48,316 [test_38_set_encoder.py-->line:40]:test_encoder:184
+DEBUG 2025-09-25 13:36:48,316 [test_38_set_encoder.py-->line:41]:test_speed:100
+DEBUG 2025-09-25 13:36:48,316 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 13:36:50,516 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置6关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 13:36:50,516 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:36:50,516 [test_38_set_encoder.py-->line:39]:test_joint:6
+DEBUG 2025-09-25 13:36:50,516 [test_38_set_encoder.py-->line:40]:test_encoder:4082
+DEBUG 2025-09-25 13:36:50,516 [test_38_set_encoder.py-->line:41]:test_speed:10
+DEBUG 2025-09-25 13:36:50,516 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 13:36:57,941 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置6关节正限位】测试通过
+INFO 2025-09-25 13:36:57,941 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置6关节正限位】测试完成《《《《《
+INFO 2025-09-25 13:37:05,347 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置6关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 13:37:05,347 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:37:05,347 [test_38_set_encoder.py-->line:39]:test_joint:6
+DEBUG 2025-09-25 13:37:05,347 [test_38_set_encoder.py-->line:40]:test_encoder:14
+DEBUG 2025-09-25 13:37:05,347 [test_38_set_encoder.py-->line:41]:test_speed:20
+DEBUG 2025-09-25 13:37:05,348 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-09-25 13:37:11,896 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置6关节负限位】测试通过
+INFO 2025-09-25 13:37:11,897 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置6关节负限位】测试完成《《《《《
+INFO 2025-09-25 13:37:19,303 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置1关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 13:37:19,304 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:37:19,304 [test_38_set_encoder.py-->line:39]:test_joint:1
+DEBUG 2025-09-25 13:37:19,304 [test_38_set_encoder.py-->line:40]:test_encoder:3947
+DEBUG 2025-09-25 13:37:19,304 [test_38_set_encoder.py-->line:41]:test_speed:30
+DEBUG 2025-09-25 13:37:19,304 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-09-25 13:37:25,899 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置1关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 13:37:25,899 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:37:25,899 [test_38_set_encoder.py-->line:39]:test_joint:1
+DEBUG 2025-09-25 13:37:25,899 [test_38_set_encoder.py-->line:40]:test_encoder:150
+DEBUG 2025-09-25 13:37:25,899 [test_38_set_encoder.py-->line:41]:test_speed:40
+DEBUG 2025-09-25 13:37:25,899 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-09-25 13:37:38,434 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置2关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 13:37:38,434 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:37:38,434 [test_38_set_encoder.py-->line:39]:test_joint:2
+DEBUG 2025-09-25 13:37:38,434 [test_38_set_encoder.py-->line:40]:test_encoder:3574
+DEBUG 2025-09-25 13:37:38,434 [test_38_set_encoder.py-->line:41]:test_speed:50
+DEBUG 2025-09-25 13:37:38,434 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-09-25 13:37:50,950 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置2关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 13:37:50,950 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:37:50,950 [test_38_set_encoder.py-->line:39]:test_joint:2
+DEBUG 2025-09-25 13:37:50,950 [test_38_set_encoder.py-->line:40]:test_encoder:523
+DEBUG 2025-09-25 13:37:50,950 [test_38_set_encoder.py-->line:41]:test_speed:60
+DEBUG 2025-09-25 13:37:50,950 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-09-25 13:38:04,822 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置3关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 13:38:04,822 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:38:04,822 [test_38_set_encoder.py-->line:39]:test_joint:3
+DEBUG 2025-09-25 13:38:04,822 [test_38_set_encoder.py-->line:40]:test_encoder:3743
+DEBUG 2025-09-25 13:38:04,822 [test_38_set_encoder.py-->line:41]:test_speed:70
+DEBUG 2025-09-25 13:38:04,823 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-09-25 13:38:16,557 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置3关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 13:38:16,557 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:38:16,557 [test_38_set_encoder.py-->line:39]:test_joint:3
+DEBUG 2025-09-25 13:38:16,557 [test_38_set_encoder.py-->line:40]:test_encoder:353
+DEBUG 2025-09-25 13:38:16,558 [test_38_set_encoder.py-->line:41]:test_speed:80
+DEBUG 2025-09-25 13:38:16,558 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-09-25 13:38:24,002 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置4关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 13:38:24,003 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:38:24,003 [test_38_set_encoder.py-->line:39]:test_joint:4
+DEBUG 2025-09-25 13:38:24,003 [test_38_set_encoder.py-->line:40]:test_encoder:3687
+DEBUG 2025-09-25 13:38:24,003 [test_38_set_encoder.py-->line:41]:test_speed:90
+DEBUG 2025-09-25 13:38:24,003 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-09-25 13:38:41,573 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置4关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 13:38:41,573 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:38:41,573 [test_38_set_encoder.py-->line:39]:test_joint:4
+DEBUG 2025-09-25 13:38:41,573 [test_38_set_encoder.py-->line:40]:test_encoder:410
+DEBUG 2025-09-25 13:38:41,573 [test_38_set_encoder.py-->line:41]:test_speed:100
+DEBUG 2025-09-25 13:38:41,573 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-09-25 13:38:49,404 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置5关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 13:38:49,405 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:38:49,405 [test_38_set_encoder.py-->line:39]:test_joint:5
+DEBUG 2025-09-25 13:38:49,405 [test_38_set_encoder.py-->line:40]:test_encoder:2225
+DEBUG 2025-09-25 13:38:49,405 [test_38_set_encoder.py-->line:41]:test_speed:60
+DEBUG 2025-09-25 13:38:49,405 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-09-25 13:38:55,591 [test_38_set_encoder.py-->line:74]:✅ 用例【插补模式下设置5关节正限位】测试通过
+INFO 2025-09-25 13:38:55,591 [test_38_set_encoder.py-->line:75]:》》》》》用例【插补模式下设置5关节正限位】测试完成《《《《《
+INFO 2025-09-25 13:38:57,269 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置5关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 13:38:57,269 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:38:57,269 [test_38_set_encoder.py-->line:39]:test_joint:5
+DEBUG 2025-09-25 13:38:57,269 [test_38_set_encoder.py-->line:40]:test_encoder:184
+DEBUG 2025-09-25 13:38:57,269 [test_38_set_encoder.py-->line:41]:test_speed:60
+DEBUG 2025-09-25 13:38:57,269 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-09-25 13:38:59,383 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置6关节正限位】开始测试《《《《《
+DEBUG 2025-09-25 13:38:59,383 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:38:59,384 [test_38_set_encoder.py-->line:39]:test_joint:6
+DEBUG 2025-09-25 13:38:59,384 [test_38_set_encoder.py-->line:40]:test_encoder:4082
+DEBUG 2025-09-25 13:38:59,384 [test_38_set_encoder.py-->line:41]:test_speed:60
+DEBUG 2025-09-25 13:38:59,384 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-09-25 13:39:08,509 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置6关节负限位】开始测试《《《《《
+DEBUG 2025-09-25 13:39:08,509 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-09-25 13:39:08,509 [test_38_set_encoder.py-->line:39]:test_joint:6
+DEBUG 2025-09-25 13:39:08,509 [test_38_set_encoder.py-->line:40]:test_encoder:14
+DEBUG 2025-09-25 13:39:08,511 [test_38_set_encoder.py-->line:41]:test_speed:60
+DEBUG 2025-09-25 13:39:08,511 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-09-25 13:39:15,420 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-09-25 13:39:15,421 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-09-25 13:39:15,421 [test_38_set_encoder.py-->line:86]:test_joint: 7
+DEBUG 2025-09-25 13:39:15,421 [test_38_set_encoder.py-->line:87]:test_encoder: 0
+DEBUG 2025-09-25 13:39:15,421 [test_38_set_encoder.py-->line:88]:test_speed: 60
+INFO 2025-09-25 13:39:23,403 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-09-25 13:39:23,403 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-09-25 13:39:23,403 [test_38_set_encoder.py-->line:86]:test_joint: 0
+DEBUG 2025-09-25 13:39:23,403 [test_38_set_encoder.py-->line:87]:test_encoder: 0
+DEBUG 2025-09-25 13:39:23,403 [test_38_set_encoder.py-->line:88]:test_speed: 60
+INFO 2025-09-25 13:39:23,404 [test_38_set_encoder.py-->line:94]:✅ 用例【设置关节超限】测试通过
+INFO 2025-09-25 13:39:23,404 [test_38_set_encoder.py-->line:95]:》》》》》用例【设置关节超限】测试完成《《《《《
+INFO 2025-09-25 13:39:26,402 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2025-09-25 13:39:26,403 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-09-25 13:39:26,403 [test_38_set_encoder.py-->line:86]:test_joint: 1
+DEBUG 2025-09-25 13:39:26,403 [test_38_set_encoder.py-->line:87]:test_encoder: 20
+DEBUG 2025-09-25 13:39:26,403 [test_38_set_encoder.py-->line:88]:test_speed: 101
+INFO 2025-09-25 13:39:26,403 [test_38_set_encoder.py-->line:94]:✅ 用例【设置速度超限】测试通过
+INFO 2025-09-25 13:39:26,404 [test_38_set_encoder.py-->line:95]:》》》》》用例【设置速度超限】测试完成《《《《《
+INFO 2025-09-25 13:39:28,308 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2025-09-25 13:39:28,309 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-09-25 13:39:28,309 [test_38_set_encoder.py-->line:86]:test_joint: 1
+DEBUG 2025-09-25 13:39:28,309 [test_38_set_encoder.py-->line:87]:test_encoder: 30
+DEBUG 2025-09-25 13:39:28,309 [test_38_set_encoder.py-->line:88]:test_speed: 0
+INFO 2025-09-25 13:39:28,309 [test_38_set_encoder.py-->line:94]:✅ 用例【设置速度超限】测试通过
+INFO 2025-09-25 13:39:28,309 [test_38_set_encoder.py-->line:95]:》》》》》用例【设置速度超限】测试完成《《《《《
+INFO 2025-09-25 13:39:29,338 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置1关节正限位超限】开始测试《《《《《
+DEBUG 2025-09-25 13:39:29,338 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-09-25 13:39:29,338 [test_38_set_encoder.py-->line:86]:test_joint: 1
+DEBUG 2025-09-25 13:39:29,338 [test_38_set_encoder.py-->line:87]:test_encoder: 4097
+DEBUG 2025-09-25 13:39:29,338 [test_38_set_encoder.py-->line:88]:test_speed: 10
+INFO 2025-09-25 13:39:30,386 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置1关节负限位超限】开始测试《《《《《
+DEBUG 2025-09-25 13:39:30,386 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-09-25 13:39:30,386 [test_38_set_encoder.py-->line:86]:test_joint: 1
+DEBUG 2025-09-25 13:39:30,386 [test_38_set_encoder.py-->line:87]:test_encoder: -1
+DEBUG 2025-09-25 13:39:30,387 [test_38_set_encoder.py-->line:88]:test_speed: 20
+INFO 2025-09-25 13:39:31,429 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置2关节正限位超限】开始测试《《《《《
+DEBUG 2025-09-25 13:39:31,429 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-09-25 13:39:31,429 [test_38_set_encoder.py-->line:86]:test_joint: 2
+DEBUG 2025-09-25 13:39:31,429 [test_38_set_encoder.py-->line:87]:test_encoder: 4097
+DEBUG 2025-09-25 13:39:31,429 [test_38_set_encoder.py-->line:88]:test_speed: 30
+INFO 2025-09-25 13:39:32,472 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置2关节负限位超限】开始测试《《《《《
+DEBUG 2025-09-25 13:39:32,472 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-09-25 13:39:32,472 [test_38_set_encoder.py-->line:86]:test_joint: 2
+DEBUG 2025-09-25 13:39:32,472 [test_38_set_encoder.py-->line:87]:test_encoder: -1
+DEBUG 2025-09-25 13:39:32,472 [test_38_set_encoder.py-->line:88]:test_speed: 40
+INFO 2025-09-25 13:39:33,516 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置3关节正限位超限】开始测试《《《《《
+DEBUG 2025-09-25 13:39:33,517 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-09-25 13:39:33,517 [test_38_set_encoder.py-->line:86]:test_joint: 3
+DEBUG 2025-09-25 13:39:33,517 [test_38_set_encoder.py-->line:87]:test_encoder: 4097
+DEBUG 2025-09-25 13:39:33,517 [test_38_set_encoder.py-->line:88]:test_speed: 50
+INFO 2025-09-25 13:39:34,566 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置3关节负限位超限】开始测试《《《《《
+DEBUG 2025-09-25 13:39:34,566 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-09-25 13:39:34,566 [test_38_set_encoder.py-->line:86]:test_joint: 3
+DEBUG 2025-09-25 13:39:34,566 [test_38_set_encoder.py-->line:87]:test_encoder: -1
+DEBUG 2025-09-25 13:39:34,566 [test_38_set_encoder.py-->line:88]:test_speed: 60
+INFO 2025-09-25 13:39:35,625 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置4关节正限位超限】开始测试《《《《《
+DEBUG 2025-09-25 13:39:35,626 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-09-25 13:39:35,626 [test_38_set_encoder.py-->line:86]:test_joint: 4
+DEBUG 2025-09-25 13:39:35,626 [test_38_set_encoder.py-->line:87]:test_encoder: 4097
+DEBUG 2025-09-25 13:39:35,626 [test_38_set_encoder.py-->line:88]:test_speed: 70
+INFO 2025-09-25 13:39:36,672 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置4关节负限位超限】开始测试《《《《《
+DEBUG 2025-09-25 13:39:36,672 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-09-25 13:39:36,672 [test_38_set_encoder.py-->line:86]:test_joint: 4
+DEBUG 2025-09-25 13:39:36,672 [test_38_set_encoder.py-->line:87]:test_encoder: -1
+DEBUG 2025-09-25 13:39:36,672 [test_38_set_encoder.py-->line:88]:test_speed: 80
+INFO 2025-09-25 13:39:37,716 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置5关节正限位超限】开始测试《《《《《
+DEBUG 2025-09-25 13:39:37,716 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-09-25 13:39:37,717 [test_38_set_encoder.py-->line:86]:test_joint: 5
+DEBUG 2025-09-25 13:39:37,717 [test_38_set_encoder.py-->line:87]:test_encoder: 4097
+DEBUG 2025-09-25 13:39:37,717 [test_38_set_encoder.py-->line:88]:test_speed: 90
+INFO 2025-09-25 13:39:38,768 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置5关节负限位超限】开始测试《《《《《
+DEBUG 2025-09-25 13:39:38,768 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-09-25 13:39:38,768 [test_38_set_encoder.py-->line:86]:test_joint: 5
+DEBUG 2025-09-25 13:39:38,768 [test_38_set_encoder.py-->line:87]:test_encoder: -1
+DEBUG 2025-09-25 13:39:38,768 [test_38_set_encoder.py-->line:88]:test_speed: 100
+INFO 2025-09-25 13:39:39,820 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置6关节正限位超限】开始测试《《《《《
+DEBUG 2025-09-25 13:39:39,820 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-09-25 13:39:39,820 [test_38_set_encoder.py-->line:86]:test_joint: 6
+DEBUG 2025-09-25 13:39:39,820 [test_38_set_encoder.py-->line:87]:test_encoder: 4097
+DEBUG 2025-09-25 13:39:39,820 [test_38_set_encoder.py-->line:88]:test_speed: 10
+INFO 2025-09-25 13:39:42,825 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置6关节负限位超限】开始测试《《《《《
+DEBUG 2025-09-25 13:39:42,826 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-09-25 13:39:42,827 [test_38_set_encoder.py-->line:86]:test_joint: 6
+DEBUG 2025-09-25 13:39:42,827 [test_38_set_encoder.py-->line:87]:test_encoder: -1
+DEBUG 2025-09-25 13:39:42,827 [test_38_set_encoder.py-->line:88]:test_speed: 20
+INFO 2025-09-25 13:39:52,687 [test_38_set_encoder.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-09-25 13:48:31,911 [test_39_get_encoder.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-09-25 13:48:31,913 [test_39_get_encoder.py-->line:33]:》》》》》用例【正常获取一关节电位值】开始测试《《《《《
+DEBUG 2025-09-25 13:48:31,914 [test_39_get_encoder.py-->line:34]:test_api:get_encoder
+INFO 2025-09-25 13:48:32,180 [test_39_get_encoder.py-->line:33]:》》》》》用例【正常获取二关节电位值】开始测试《《《《《
+DEBUG 2025-09-25 13:48:32,181 [test_39_get_encoder.py-->line:34]:test_api:get_encoder
+INFO 2025-09-25 13:48:32,191 [test_39_get_encoder.py-->line:33]:》》》》》用例【正常获取三关节电位值】开始测试《《《《《
+DEBUG 2025-09-25 13:48:32,192 [test_39_get_encoder.py-->line:34]:test_api:get_encoder
+INFO 2025-09-25 13:48:32,202 [test_39_get_encoder.py-->line:33]:》》》》》用例【正常获取四关节电位值】开始测试《《《《《
+DEBUG 2025-09-25 13:48:32,203 [test_39_get_encoder.py-->line:34]:test_api:get_encoder
+INFO 2025-09-25 13:48:32,216 [test_39_get_encoder.py-->line:33]:》》》》》用例【正常获取五关节电位值】开始测试《《《《《
+DEBUG 2025-09-25 13:48:32,216 [test_39_get_encoder.py-->line:34]:test_api:get_encoder
+INFO 2025-09-25 13:48:32,228 [test_39_get_encoder.py-->line:33]:》》》》》用例【正常获取六关节电位值】开始测试《《《《《
+DEBUG 2025-09-25 13:48:32,228 [test_39_get_encoder.py-->line:34]:test_api:get_encoder
+INFO 2025-09-25 13:48:32,241 [test_39_get_encoder.py-->line:58]:》》》用例【获取关节电位值，关节超限】开始测试《《《
+INFO 2025-09-25 13:48:32,254 [test_39_get_encoder.py-->line:58]:》》》用例【获取关节电位值，关节超限】开始测试《《《
+INFO 2025-09-25 13:48:33,928 [test_39_get_encoder.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-09-25 13:48:52,957 [test_39_get_encoder.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-09-25 13:48:52,958 [test_39_get_encoder.py-->line:33]:》》》》》用例【正常获取一关节电位值】开始测试《《《《《
+DEBUG 2025-09-25 13:48:52,958 [test_39_get_encoder.py-->line:34]:test_api:get_encoder
+DEBUG 2025-09-25 13:48:52,958 [test_39_get_encoder.py-->line:35]:test_joint:1
+DEBUG 2025-09-25 13:48:52,972 [test_39_get_encoder.py-->line:39]:接口返回：2041
+INFO 2025-09-25 13:48:52,972 [test_39_get_encoder.py-->line:49]:✅ 用例【正常获取一关节电位值】测试通过
+INFO 2025-09-25 13:48:52,972 [test_39_get_encoder.py-->line:50]:》》》》》用例【正常获取一关节电位值】测试完成《《《《《
+INFO 2025-09-25 13:48:52,975 [test_39_get_encoder.py-->line:33]:》》》》》用例【正常获取二关节电位值】开始测试《《《《《
+DEBUG 2025-09-25 13:48:52,975 [test_39_get_encoder.py-->line:34]:test_api:get_encoder
+DEBUG 2025-09-25 13:48:52,975 [test_39_get_encoder.py-->line:35]:test_joint:2
+DEBUG 2025-09-25 13:48:52,987 [test_39_get_encoder.py-->line:39]:接口返回：2051
+INFO 2025-09-25 13:48:52,988 [test_39_get_encoder.py-->line:49]:✅ 用例【正常获取二关节电位值】测试通过
+INFO 2025-09-25 13:48:52,988 [test_39_get_encoder.py-->line:50]:》》》》》用例【正常获取二关节电位值】测试完成《《《《《
+INFO 2025-09-25 13:48:52,990 [test_39_get_encoder.py-->line:33]:》》》》》用例【正常获取三关节电位值】开始测试《《《《《
+DEBUG 2025-09-25 13:48:52,990 [test_39_get_encoder.py-->line:34]:test_api:get_encoder
+DEBUG 2025-09-25 13:48:52,990 [test_39_get_encoder.py-->line:35]:test_joint:3
+DEBUG 2025-09-25 13:48:53,004 [test_39_get_encoder.py-->line:39]:接口返回：2041
+INFO 2025-09-25 13:48:53,004 [test_39_get_encoder.py-->line:49]:✅ 用例【正常获取三关节电位值】测试通过
+INFO 2025-09-25 13:48:53,004 [test_39_get_encoder.py-->line:50]:》》》》》用例【正常获取三关节电位值】测试完成《《《《《
+INFO 2025-09-25 13:48:53,006 [test_39_get_encoder.py-->line:33]:》》》》》用例【正常获取四关节电位值】开始测试《《《《《
+DEBUG 2025-09-25 13:48:53,006 [test_39_get_encoder.py-->line:34]:test_api:get_encoder
+DEBUG 2025-09-25 13:48:53,007 [test_39_get_encoder.py-->line:35]:test_joint:4
+DEBUG 2025-09-25 13:48:53,021 [test_39_get_encoder.py-->line:39]:接口返回：2051
+INFO 2025-09-25 13:48:53,021 [test_39_get_encoder.py-->line:49]:✅ 用例【正常获取四关节电位值】测试通过
+INFO 2025-09-25 13:48:53,021 [test_39_get_encoder.py-->line:50]:》》》》》用例【正常获取四关节电位值】测试完成《《《《《
+INFO 2025-09-25 13:48:53,023 [test_39_get_encoder.py-->line:33]:》》》》》用例【正常获取五关节电位值】开始测试《《《《《
+DEBUG 2025-09-25 13:48:53,023 [test_39_get_encoder.py-->line:34]:test_api:get_encoder
+DEBUG 2025-09-25 13:48:53,023 [test_39_get_encoder.py-->line:35]:test_joint:5
+DEBUG 2025-09-25 13:48:53,037 [test_39_get_encoder.py-->line:39]:接口返回：2055
+INFO 2025-09-25 13:48:53,037 [test_39_get_encoder.py-->line:49]:✅ 用例【正常获取五关节电位值】测试通过
+INFO 2025-09-25 13:48:53,037 [test_39_get_encoder.py-->line:50]:》》》》》用例【正常获取五关节电位值】测试完成《《《《《
+INFO 2025-09-25 13:48:53,039 [test_39_get_encoder.py-->line:33]:》》》》》用例【正常获取六关节电位值】开始测试《《《《《
+DEBUG 2025-09-25 13:48:53,039 [test_39_get_encoder.py-->line:34]:test_api:get_encoder
+DEBUG 2025-09-25 13:48:53,039 [test_39_get_encoder.py-->line:35]:test_joint:6
+DEBUG 2025-09-25 13:48:53,054 [test_39_get_encoder.py-->line:39]:接口返回：2056
+INFO 2025-09-25 13:48:53,054 [test_39_get_encoder.py-->line:49]:✅ 用例【正常获取六关节电位值】测试通过
+INFO 2025-09-25 13:48:53,054 [test_39_get_encoder.py-->line:50]:》》》》》用例【正常获取六关节电位值】测试完成《《《《《
+INFO 2025-09-25 13:48:53,056 [test_39_get_encoder.py-->line:58]:》》》用例【获取关节电位值，关节超限】开始测试《《《
+DEBUG 2025-09-25 13:48:53,056 [test_39_get_encoder.py-->line:59]:接口: get_encoder，参数: 7
+INFO 2025-09-25 13:48:53,306 [test_39_get_encoder.py-->line:58]:》》》用例【获取关节电位值，关节超限】开始测试《《《
+DEBUG 2025-09-25 13:48:53,306 [test_39_get_encoder.py-->line:59]:接口: get_encoder，参数: 0
+INFO 2025-09-25 13:48:53,306 [test_39_get_encoder.py-->line:65]:✅ 用例【获取关节电位值，关节超限】异常测试通过
+INFO 2025-09-25 13:48:53,306 [test_39_get_encoder.py-->line:66]:》》》用例【获取关节电位值，关节超限】测试完成《《《
+INFO 2025-09-25 13:48:54,981 [test_39_get_encoder.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-09-25 16:19:07,434 [test_42_get_joint_max_angle.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-09-25 16:19:07,436 [test_42_get_joint_max_angle.py-->line:30]:》》》》》用例【获取1关节最大角度】开始测试《《《《《
+DEBUG 2025-09-25 16:19:07,436 [test_42_get_joint_max_angle.py-->line:31]:test_api:get_joint_max_angle
+DEBUG 2025-09-25 16:19:07,443 [test_42_get_joint_max_angle.py-->line:35]:接口返回：168.0
+INFO 2025-09-25 16:19:07,443 [test_42_get_joint_max_angle.py-->line:45]:✅ 用例【获取1关节最大角度】测试通过
+INFO 2025-09-25 16:19:07,443 [test_42_get_joint_max_angle.py-->line:46]:》》》》》用例【获取1关节最大角度】测试完成《《《《《
+INFO 2025-09-25 16:19:07,445 [test_42_get_joint_max_angle.py-->line:30]:》》》》》用例【获取2关节最大角度】开始测试《《《《《
+DEBUG 2025-09-25 16:19:07,445 [test_42_get_joint_max_angle.py-->line:31]:test_api:get_joint_max_angle
+DEBUG 2025-09-25 16:19:07,451 [test_42_get_joint_max_angle.py-->line:35]:接口返回：140.0
+INFO 2025-09-25 16:19:07,557 [test_42_get_joint_max_angle.py-->line:30]:》》》》》用例【获取3关节最大角度】开始测试《《《《《
+DEBUG 2025-09-25 16:19:07,557 [test_42_get_joint_max_angle.py-->line:31]:test_api:get_joint_max_angle
+DEBUG 2025-09-25 16:19:07,563 [test_42_get_joint_max_angle.py-->line:35]:接口返回：150.0
+INFO 2025-09-25 16:19:07,564 [test_42_get_joint_max_angle.py-->line:45]:✅ 用例【获取3关节最大角度】测试通过
+INFO 2025-09-25 16:19:07,564 [test_42_get_joint_max_angle.py-->line:46]:》》》》》用例【获取3关节最大角度】测试完成《《《《《
+INFO 2025-09-25 16:19:07,565 [test_42_get_joint_max_angle.py-->line:30]:》》》》》用例【获取4关节最大角度】开始测试《《《《《
+DEBUG 2025-09-25 16:19:07,565 [test_42_get_joint_max_angle.py-->line:31]:test_api:get_joint_max_angle
+DEBUG 2025-09-25 16:19:07,571 [test_42_get_joint_max_angle.py-->line:35]:接口返回：150.0
+INFO 2025-09-25 16:19:07,576 [test_42_get_joint_max_angle.py-->line:30]:》》》》》用例【获取5关节最大角度】开始测试《《《《《
+DEBUG 2025-09-25 16:19:07,576 [test_42_get_joint_max_angle.py-->line:31]:test_api:get_joint_max_angle
+DEBUG 2025-09-25 16:19:07,583 [test_42_get_joint_max_angle.py-->line:35]:接口返回：160.0
+INFO 2025-09-25 16:19:07,583 [test_42_get_joint_max_angle.py-->line:45]:✅ 用例【获取5关节最大角度】测试通过
+INFO 2025-09-25 16:19:07,583 [test_42_get_joint_max_angle.py-->line:46]:》》》》》用例【获取5关节最大角度】测试完成《《《《《
+INFO 2025-09-25 16:19:07,585 [test_42_get_joint_max_angle.py-->line:30]:》》》》》用例【获取6关节最大角度】开始测试《《《《《
+DEBUG 2025-09-25 16:19:07,585 [test_42_get_joint_max_angle.py-->line:31]:test_api:get_joint_max_angle
+DEBUG 2025-09-25 16:19:07,591 [test_42_get_joint_max_angle.py-->line:35]:接口返回：180.0
+INFO 2025-09-25 16:19:07,591 [test_42_get_joint_max_angle.py-->line:45]:✅ 用例【获取6关节最大角度】测试通过
+INFO 2025-09-25 16:19:07,591 [test_42_get_joint_max_angle.py-->line:46]:》》》》》用例【获取6关节最大角度】测试完成《《《《《
+INFO 2025-09-25 16:19:07,592 [test_42_get_joint_max_angle.py-->line:55]:》》》》》用例【获取关节超限】开始测试《《《《《
+DEBUG 2025-09-25 16:19:07,592 [test_42_get_joint_max_angle.py-->line:56]:test_api:get_joint_max_angle
+DEBUG 2025-09-25 16:19:07,592 [test_42_get_joint_max_angle.py-->line:57]:joint:0
+INFO 2025-09-25 16:19:07,592 [test_42_get_joint_max_angle.py-->line:63]:✅ 用例【获取关节超限】异常断言通过
+INFO 2025-09-25 16:19:07,592 [test_42_get_joint_max_angle.py-->line:64]:》》》用例【获取关节超限】测试完成《《《
+INFO 2025-09-25 16:19:07,593 [test_42_get_joint_max_angle.py-->line:55]:》》》》》用例【获取关节超限】开始测试《《《《《
+DEBUG 2025-09-25 16:19:07,593 [test_42_get_joint_max_angle.py-->line:56]:test_api:get_joint_max_angle
+DEBUG 2025-09-25 16:19:07,593 [test_42_get_joint_max_angle.py-->line:57]:joint:7
+INFO 2025-09-25 16:19:07,593 [test_42_get_joint_max_angle.py-->line:63]:✅ 用例【获取关节超限】异常断言通过
+INFO 2025-09-25 16:19:07,593 [test_42_get_joint_max_angle.py-->line:64]:》》》用例【获取关节超限】测试完成《《《
+INFO 2025-09-25 16:19:09,228 [test_42_get_joint_max_angle.py-->line:21]:环境清理完成，接口测试结束
+INFO 2025-09-25 16:20:00,109 [test_43_get_joint_min_angle.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-09-25 16:20:00,110 [test_43_get_joint_min_angle.py-->line:30]:》》》》》用例【获取1关节最小角度】开始测试《《《《《
+DEBUG 2025-09-25 16:20:00,110 [test_43_get_joint_min_angle.py-->line:31]:test_api:get_joint_min_angle
+DEBUG 2025-09-25 16:20:00,117 [test_43_get_joint_min_angle.py-->line:35]:接口返回：-168.0
+INFO 2025-09-25 16:20:00,118 [test_43_get_joint_min_angle.py-->line:45]:✅ 用例【获取1关节最小角度】测试通过
+INFO 2025-09-25 16:20:00,118 [test_43_get_joint_min_angle.py-->line:46]:》》》》》用例【获取1关节最小角度】测试完成《《《《《
+INFO 2025-09-25 16:20:00,119 [test_43_get_joint_min_angle.py-->line:30]:》》》》》用例【获取2关节最小角度】开始测试《《《《《
+DEBUG 2025-09-25 16:20:00,119 [test_43_get_joint_min_angle.py-->line:31]:test_api:get_joint_min_angle
+DEBUG 2025-09-25 16:20:00,125 [test_43_get_joint_min_angle.py-->line:35]:接口返回：-140.0
+INFO 2025-09-25 16:20:00,242 [test_43_get_joint_min_angle.py-->line:30]:》》》》》用例【获取3关节最小角度】开始测试《《《《《
+DEBUG 2025-09-25 16:20:00,242 [test_43_get_joint_min_angle.py-->line:31]:test_api:get_joint_min_angle
+DEBUG 2025-09-25 16:20:00,249 [test_43_get_joint_min_angle.py-->line:35]:接口返回：-150.0
+INFO 2025-09-25 16:20:00,250 [test_43_get_joint_min_angle.py-->line:45]:✅ 用例【获取3关节最小角度】测试通过
+INFO 2025-09-25 16:20:00,250 [test_43_get_joint_min_angle.py-->line:46]:》》》》》用例【获取3关节最小角度】测试完成《《《《《
+INFO 2025-09-25 16:20:00,251 [test_43_get_joint_min_angle.py-->line:30]:》》》》》用例【获取4关节最小角度】开始测试《《《《《
+DEBUG 2025-09-25 16:20:00,251 [test_43_get_joint_min_angle.py-->line:31]:test_api:get_joint_min_angle
+DEBUG 2025-09-25 16:20:00,257 [test_43_get_joint_min_angle.py-->line:35]:接口返回：-150.0
+INFO 2025-09-25 16:20:00,262 [test_43_get_joint_min_angle.py-->line:30]:》》》》》用例【获取5关节最小角度】开始测试《《《《《
+DEBUG 2025-09-25 16:20:00,263 [test_43_get_joint_min_angle.py-->line:31]:test_api:get_joint_min_angle
+DEBUG 2025-09-25 16:20:00,270 [test_43_get_joint_min_angle.py-->line:35]:接口返回：-155.0
+INFO 2025-09-25 16:20:00,270 [test_43_get_joint_min_angle.py-->line:45]:✅ 用例【获取5关节最小角度】测试通过
+INFO 2025-09-25 16:20:00,270 [test_43_get_joint_min_angle.py-->line:46]:》》》》》用例【获取5关节最小角度】测试完成《《《《《
+INFO 2025-09-25 16:20:00,271 [test_43_get_joint_min_angle.py-->line:30]:》》》》》用例【获取6关节最小角度】开始测试《《《《《
+DEBUG 2025-09-25 16:20:00,271 [test_43_get_joint_min_angle.py-->line:31]:test_api:get_joint_min_angle
+DEBUG 2025-09-25 16:20:00,277 [test_43_get_joint_min_angle.py-->line:35]:接口返回：-180.0
+INFO 2025-09-25 16:20:00,278 [test_43_get_joint_min_angle.py-->line:45]:✅ 用例【获取6关节最小角度】测试通过
+INFO 2025-09-25 16:20:00,278 [test_43_get_joint_min_angle.py-->line:46]:》》》》》用例【获取6关节最小角度】测试完成《《《《《
+INFO 2025-09-25 16:20:00,280 [test_43_get_joint_min_angle.py-->line:55]:》》》》》用例【获取关节超限】开始测试《《《《《
+DEBUG 2025-09-25 16:20:00,280 [test_43_get_joint_min_angle.py-->line:56]:test_api:get_joint_min_angle
+DEBUG 2025-09-25 16:20:00,280 [test_43_get_joint_min_angle.py-->line:57]:joint:0
+INFO 2025-09-25 16:20:00,280 [test_43_get_joint_min_angle.py-->line:63]:✅ 用例【获取关节超限】异常断言通过
+INFO 2025-09-25 16:20:00,280 [test_43_get_joint_min_angle.py-->line:64]:》》》用例【获取关节超限】测试完成《《《
+INFO 2025-09-25 16:20:00,281 [test_43_get_joint_min_angle.py-->line:55]:》》》》》用例【获取关节超限】开始测试《《《《《
+DEBUG 2025-09-25 16:20:00,281 [test_43_get_joint_min_angle.py-->line:56]:test_api:get_joint_min_angle
+DEBUG 2025-09-25 16:20:00,281 [test_43_get_joint_min_angle.py-->line:57]:joint:7
+INFO 2025-09-25 16:20:00,281 [test_43_get_joint_min_angle.py-->line:63]:✅ 用例【获取关节超限】异常断言通过
+INFO 2025-09-25 16:20:00,281 [test_43_get_joint_min_angle.py-->line:64]:》》》用例【获取关节超限】测试完成《《《
+INFO 2025-09-25 16:20:01,916 [test_43_get_joint_min_angle.py-->line:21]:环境清理完成，接口测试结束
+INFO 2025-09-25 16:33:48,228 [test_1_get_modify_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-09-25 16:33:48,230 [test_1_get_modify_version.py-->line:26]:》》》》》用例【正确获取固件modify版本号】开始测试《《《《《
+DEBUG 2025-09-25 16:33:48,230 [test_1_get_modify_version.py-->line:27]:test_api:get_modify_version
+DEBUG 2025-09-25 16:33:48,237 [test_1_get_modify_version.py-->line:31]:接口返回：7
+INFO 2025-09-25 16:33:48,385 [test_1_get_modify_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-09-25 16:34:02,014 [test_2_get_system_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-09-25 16:34:02,015 [test_2_get_system_version.py-->line:26]:》》》》》用例【正确获取固件版本号】开始测试《《《《《
+DEBUG 2025-09-25 16:34:02,015 [test_2_get_system_version.py-->line:27]:test_api:get_system_version
+DEBUG 2025-09-25 16:34:02,021 [test_2_get_system_version.py-->line:31]:接口返回：7.2
+INFO 2025-09-25 16:34:02,170 [test_2_get_system_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-09-25 18:08:04,346 [test_42_get_joint_max_angle.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-09-25 18:08:04,347 [test_42_get_joint_max_angle.py-->line:30]:》》》》》用例【获取1关节最大角度】开始测试《《《《《
+DEBUG 2025-09-25 18:08:04,348 [test_42_get_joint_max_angle.py-->line:31]:test_api:get_joint_max_angle
+DEBUG 2025-09-25 18:08:04,354 [test_42_get_joint_max_angle.py-->line:35]:接口返回：168.0
+INFO 2025-09-25 18:08:04,355 [test_42_get_joint_max_angle.py-->line:45]:✅ 用例【获取1关节最大角度】测试通过
+INFO 2025-09-25 18:08:04,355 [test_42_get_joint_max_angle.py-->line:46]:》》》》》用例【获取1关节最大角度】测试完成《《《《《
+INFO 2025-09-25 18:08:04,357 [test_42_get_joint_max_angle.py-->line:30]:》》》》》用例【获取2关节最大角度】开始测试《《《《《
+DEBUG 2025-09-25 18:08:04,357 [test_42_get_joint_max_angle.py-->line:31]:test_api:get_joint_max_angle
+DEBUG 2025-09-25 18:08:04,364 [test_42_get_joint_max_angle.py-->line:35]:接口返回：140.0
+INFO 2025-09-25 18:08:04,464 [test_42_get_joint_max_angle.py-->line:30]:》》》》》用例【获取3关节最大角度】开始测试《《《《《
+DEBUG 2025-09-25 18:08:04,464 [test_42_get_joint_max_angle.py-->line:31]:test_api:get_joint_max_angle
+DEBUG 2025-09-25 18:08:04,470 [test_42_get_joint_max_angle.py-->line:35]:接口返回：150.0
+INFO 2025-09-25 18:08:04,470 [test_42_get_joint_max_angle.py-->line:45]:✅ 用例【获取3关节最大角度】测试通过
+INFO 2025-09-25 18:08:04,470 [test_42_get_joint_max_angle.py-->line:46]:》》》》》用例【获取3关节最大角度】测试完成《《《《《
+INFO 2025-09-25 18:08:04,471 [test_42_get_joint_max_angle.py-->line:30]:》》》》》用例【获取4关节最大角度】开始测试《《《《《
+DEBUG 2025-09-25 18:08:04,471 [test_42_get_joint_max_angle.py-->line:31]:test_api:get_joint_max_angle
+DEBUG 2025-09-25 18:08:04,478 [test_42_get_joint_max_angle.py-->line:35]:接口返回：150.0
+INFO 2025-09-25 18:08:04,483 [test_42_get_joint_max_angle.py-->line:30]:》》》》》用例【获取5关节最大角度】开始测试《《《《《
+DEBUG 2025-09-25 18:08:04,483 [test_42_get_joint_max_angle.py-->line:31]:test_api:get_joint_max_angle
+DEBUG 2025-09-25 18:08:04,489 [test_42_get_joint_max_angle.py-->line:35]:接口返回：160.0
+INFO 2025-09-25 18:08:04,489 [test_42_get_joint_max_angle.py-->line:45]:✅ 用例【获取5关节最大角度】测试通过
+INFO 2025-09-25 18:08:04,489 [test_42_get_joint_max_angle.py-->line:46]:》》》》》用例【获取5关节最大角度】测试完成《《《《《
+INFO 2025-09-25 18:08:04,490 [test_42_get_joint_max_angle.py-->line:30]:》》》》》用例【获取6关节最大角度】开始测试《《《《《
+DEBUG 2025-09-25 18:08:04,490 [test_42_get_joint_max_angle.py-->line:31]:test_api:get_joint_max_angle
+DEBUG 2025-09-25 18:08:04,497 [test_42_get_joint_max_angle.py-->line:35]:接口返回：180.0
+INFO 2025-09-25 18:08:04,497 [test_42_get_joint_max_angle.py-->line:45]:✅ 用例【获取6关节最大角度】测试通过
+INFO 2025-09-25 18:08:04,497 [test_42_get_joint_max_angle.py-->line:46]:》》》》》用例【获取6关节最大角度】测试完成《《《《《
+INFO 2025-09-25 18:08:04,498 [test_42_get_joint_max_angle.py-->line:55]:》》》》》用例【获取关节超限】开始测试《《《《《
+DEBUG 2025-09-25 18:08:04,498 [test_42_get_joint_max_angle.py-->line:56]:test_api:get_joint_max_angle
+DEBUG 2025-09-25 18:08:04,498 [test_42_get_joint_max_angle.py-->line:57]:joint:0
+INFO 2025-09-25 18:08:04,499 [test_42_get_joint_max_angle.py-->line:63]:✅ 用例【获取关节超限】异常断言通过
+INFO 2025-09-25 18:08:04,499 [test_42_get_joint_max_angle.py-->line:64]:》》》用例【获取关节超限】测试完成《《《
+INFO 2025-09-25 18:08:04,499 [test_42_get_joint_max_angle.py-->line:55]:》》》》》用例【获取关节超限】开始测试《《《《《
+DEBUG 2025-09-25 18:08:04,500 [test_42_get_joint_max_angle.py-->line:56]:test_api:get_joint_max_angle
+DEBUG 2025-09-25 18:08:04,500 [test_42_get_joint_max_angle.py-->line:57]:joint:7
+INFO 2025-09-25 18:08:04,500 [test_42_get_joint_max_angle.py-->line:63]:✅ 用例【获取关节超限】异常断言通过
+INFO 2025-09-25 18:08:04,500 [test_42_get_joint_max_angle.py-->line:64]:》》》用例【获取关节超限】测试完成《《《
+INFO 2025-09-25 18:08:16,899 [test_42_get_joint_max_angle.py-->line:21]:环境清理完成，接口测试结束
+INFO 2025-09-25 18:14:24,745 [test_46_is_servo_enable.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-09-25 18:14:24,746 [test_46_is_servo_enable.py-->line:33]:》》》》》用例【获取1关节连接状态】开始测试《《《《《
+DEBUG 2025-09-25 18:14:24,746 [test_46_is_servo_enable.py-->line:34]:test_api:is_servo_enable
+DEBUG 2025-09-25 18:14:24,746 [test_46_is_servo_enable.py-->line:35]:test_joint:1
+DEBUG 2025-09-25 18:14:24,761 [test_46_is_servo_enable.py-->line:39]:接口返回：1
+INFO 2025-09-25 18:14:24,762 [test_46_is_servo_enable.py-->line:49]:✅ 用例【获取1关节连接状态】测试通过
+INFO 2025-09-25 18:14:24,762 [test_46_is_servo_enable.py-->line:50]:》》》》》用例【获取1关节连接状态】测试完成《《《《《
+INFO 2025-09-25 18:14:24,764 [test_46_is_servo_enable.py-->line:33]:》》》》》用例【获取2关节连接状态】开始测试《《《《《
+DEBUG 2025-09-25 18:14:24,764 [test_46_is_servo_enable.py-->line:34]:test_api:is_servo_enable
+DEBUG 2025-09-25 18:14:24,764 [test_46_is_servo_enable.py-->line:35]:test_joint:2
+DEBUG 2025-09-25 18:14:24,778 [test_46_is_servo_enable.py-->line:39]:接口返回：1
+INFO 2025-09-25 18:14:24,778 [test_46_is_servo_enable.py-->line:49]:✅ 用例【获取2关节连接状态】测试通过
+INFO 2025-09-25 18:14:24,778 [test_46_is_servo_enable.py-->line:50]:》》》》》用例【获取2关节连接状态】测试完成《《《《《
+INFO 2025-09-25 18:14:24,781 [test_46_is_servo_enable.py-->line:33]:》》》》》用例【获取3关节连接状态】开始测试《《《《《
+DEBUG 2025-09-25 18:14:24,781 [test_46_is_servo_enable.py-->line:34]:test_api:is_servo_enable
+DEBUG 2025-09-25 18:14:24,781 [test_46_is_servo_enable.py-->line:35]:test_joint:3
+DEBUG 2025-09-25 18:14:24,794 [test_46_is_servo_enable.py-->line:39]:接口返回：1
+INFO 2025-09-25 18:14:24,794 [test_46_is_servo_enable.py-->line:49]:✅ 用例【获取3关节连接状态】测试通过
+INFO 2025-09-25 18:14:24,794 [test_46_is_servo_enable.py-->line:50]:》》》》》用例【获取3关节连接状态】测试完成《《《《《
+INFO 2025-09-25 18:14:24,796 [test_46_is_servo_enable.py-->line:33]:》》》》》用例【获取4关节连接状态】开始测试《《《《《
+DEBUG 2025-09-25 18:14:24,796 [test_46_is_servo_enable.py-->line:34]:test_api:is_servo_enable
+DEBUG 2025-09-25 18:14:24,796 [test_46_is_servo_enable.py-->line:35]:test_joint:4
+DEBUG 2025-09-25 18:14:24,810 [test_46_is_servo_enable.py-->line:39]:接口返回：1
+INFO 2025-09-25 18:14:24,810 [test_46_is_servo_enable.py-->line:49]:✅ 用例【获取4关节连接状态】测试通过
+INFO 2025-09-25 18:14:24,810 [test_46_is_servo_enable.py-->line:50]:》》》》》用例【获取4关节连接状态】测试完成《《《《《
+INFO 2025-09-25 18:14:24,812 [test_46_is_servo_enable.py-->line:33]:》》》》》用例【获取5关节连接状态】开始测试《《《《《
+DEBUG 2025-09-25 18:14:24,812 [test_46_is_servo_enable.py-->line:34]:test_api:is_servo_enable
+DEBUG 2025-09-25 18:14:24,812 [test_46_is_servo_enable.py-->line:35]:test_joint:5
+DEBUG 2025-09-25 18:14:24,825 [test_46_is_servo_enable.py-->line:39]:接口返回：1
+INFO 2025-09-25 18:14:24,826 [test_46_is_servo_enable.py-->line:49]:✅ 用例【获取5关节连接状态】测试通过
+INFO 2025-09-25 18:14:24,826 [test_46_is_servo_enable.py-->line:50]:》》》》》用例【获取5关节连接状态】测试完成《《《《《
+INFO 2025-09-25 18:14:24,828 [test_46_is_servo_enable.py-->line:33]:》》》》》用例【获取6关节连接状态】开始测试《《《《《
+DEBUG 2025-09-25 18:14:24,828 [test_46_is_servo_enable.py-->line:34]:test_api:is_servo_enable
+DEBUG 2025-09-25 18:14:24,828 [test_46_is_servo_enable.py-->line:35]:test_joint:6
+DEBUG 2025-09-25 18:14:24,842 [test_46_is_servo_enable.py-->line:39]:接口返回：1
+INFO 2025-09-25 18:14:24,842 [test_46_is_servo_enable.py-->line:49]:✅ 用例【获取6关节连接状态】测试通过
+INFO 2025-09-25 18:14:24,842 [test_46_is_servo_enable.py-->line:50]:》》》》》用例【获取6关节连接状态】测试完成《《《《《
+INFO 2025-09-25 18:14:24,844 [test_46_is_servo_enable.py-->line:58]:》》》用例【获取关节超限】开始测试《《《
+DEBUG 2025-09-25 18:14:24,844 [test_46_is_servo_enable.py-->line:59]:接口: is_servo_enable，关节: 0
+INFO 2025-09-25 18:14:24,845 [test_46_is_servo_enable.py-->line:65]:✅ 用例【获取关节超限】异常测试通过
+INFO 2025-09-25 18:14:24,845 [test_46_is_servo_enable.py-->line:66]:》》》用例【获取关节超限】测试完成《《《
+INFO 2025-09-25 18:14:24,846 [test_46_is_servo_enable.py-->line:58]:》》》用例【获取关节超限】开始测试《《《
+DEBUG 2025-09-25 18:14:24,846 [test_46_is_servo_enable.py-->line:59]:接口: is_servo_enable，关节: 7
+INFO 2025-09-25 18:14:24,846 [test_46_is_servo_enable.py-->line:65]:✅ 用例【获取关节超限】异常测试通过
+INFO 2025-09-25 18:14:24,846 [test_46_is_servo_enable.py-->line:66]:》》》用例【获取关节超限】测试完成《《《
+INFO 2025-09-25 18:14:26,510 [test_46_is_servo_enable.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-09-25 18:17:08,050 [test_47_is_all_servo_enable.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-09-25 18:17:08,052 [test_47_is_all_servo_enable.py-->line:33]:》》》》》用例【正常全关节连接状态】开始测试《《《《《
+DEBUG 2025-09-25 18:17:08,052 [test_47_is_all_servo_enable.py-->line:34]:test_api:is_all_servo_enable
+DEBUG 2025-09-25 18:17:08,064 [test_47_is_all_servo_enable.py-->line:38]:接口返回：1
+INFO 2025-09-25 18:17:09,904 [test_47_is_all_servo_enable.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-09-25 18:17:45,259 [test_47_is_all_servo_enable.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-09-25 18:17:45,260 [test_47_is_all_servo_enable.py-->line:33]:》》》》》用例【正常全关节连接状态】开始测试《《《《《
+DEBUG 2025-09-25 18:17:45,260 [test_47_is_all_servo_enable.py-->line:34]:test_api:is_all_servo_enable
+DEBUG 2025-09-25 18:17:45,274 [test_47_is_all_servo_enable.py-->line:38]:接口返回：1
+INFO 2025-09-25 18:17:47,120 [test_47_is_all_servo_enable.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-09-25 18:18:09,095 [test_47_is_all_servo_enable.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-09-25 18:18:10,922 [test_47_is_all_servo_enable.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-09-25 18:18:21,010 [test_47_is_all_servo_enable.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-09-25 18:18:21,011 [test_47_is_all_servo_enable.py-->line:33]:》》》》》用例【正常全关节连接状态】开始测试《《《《《
+DEBUG 2025-09-25 18:18:21,011 [test_47_is_all_servo_enable.py-->line:34]:test_api:is_all_servo_enable
+DEBUG 2025-09-25 18:18:21,026 [test_47_is_all_servo_enable.py-->line:38]:接口返回：1
+INFO 2025-09-25 18:18:22,848 [test_47_is_all_servo_enable.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-09-25 18:18:41,934 [test_47_is_all_servo_enable.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-09-25 18:18:41,936 [test_47_is_all_servo_enable.py-->line:33]:》》》》》用例【正常全关节连接状态】开始测试《《《《《
+DEBUG 2025-09-25 18:18:41,936 [test_47_is_all_servo_enable.py-->line:34]:test_api:is_all_servo_enable
+DEBUG 2025-09-25 18:18:41,950 [test_47_is_all_servo_enable.py-->line:38]:接口返回：1
+INFO 2025-09-25 18:18:41,950 [test_47_is_all_servo_enable.py-->line:48]:✅ 用例【正常全关节连接状态】测试通过
+INFO 2025-09-25 18:18:41,950 [test_47_is_all_servo_enable.py-->line:49]:》》》》》用例【正常全关节连接状态】测试完成《《《《《
+INFO 2025-09-25 18:18:43,608 [test_47_is_all_servo_enable.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-09-25 18:31:55,441 [test_50_set_servo_calibration.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-09-25 18:31:55,442 [test_50_set_servo_calibration.py-->line:31]:》》》》》用例【设置一关节零位】开始测试《《《《《
+DEBUG 2025-09-25 18:31:55,442 [test_50_set_servo_calibration.py-->line:32]:test_api:set_servo_calibration
+DEBUG 2025-09-25 18:31:55,442 [test_50_set_servo_calibration.py-->line:33]:joint:1
+DEBUG 2025-09-25 18:31:57,194 [test_50_set_servo_calibration.py-->line:41]:接口返回：1
+INFO 2025-09-25 18:31:57,442 [test_50_set_servo_calibration.py-->line:31]:》》》》》用例【设置二关节零位】开始测试《《《《《
+DEBUG 2025-09-25 18:31:57,442 [test_50_set_servo_calibration.py-->line:32]:test_api:set_servo_calibration
+DEBUG 2025-09-25 18:31:57,442 [test_50_set_servo_calibration.py-->line:33]:joint:2
+DEBUG 2025-09-25 18:31:59,198 [test_50_set_servo_calibration.py-->line:41]:接口返回：1
+INFO 2025-09-25 18:31:59,225 [test_50_set_servo_calibration.py-->line:31]:》》》》》用例【设置三关节零位】开始测试《《《《《
+DEBUG 2025-09-25 18:31:59,225 [test_50_set_servo_calibration.py-->line:32]:test_api:set_servo_calibration
+DEBUG 2025-09-25 18:31:59,225 [test_50_set_servo_calibration.py-->line:33]:joint:3
+DEBUG 2025-09-25 18:32:00,975 [test_50_set_servo_calibration.py-->line:41]:接口返回：1
+INFO 2025-09-25 18:32:01,054 [test_50_set_servo_calibration.py-->line:31]:》》》》》用例【设置四关节零位】开始测试《《《《《
+DEBUG 2025-09-25 18:32:01,054 [test_50_set_servo_calibration.py-->line:32]:test_api:set_servo_calibration
+DEBUG 2025-09-25 18:32:01,054 [test_50_set_servo_calibration.py-->line:33]:joint:4
+DEBUG 2025-09-25 18:32:02,603 [test_50_set_servo_calibration.py-->line:41]:接口返回：1
+INFO 2025-09-25 18:32:02,627 [test_50_set_servo_calibration.py-->line:31]:》》》》》用例【设置五关节零位】开始测试《《《《《
+DEBUG 2025-09-25 18:32:02,627 [test_50_set_servo_calibration.py-->line:32]:test_api:set_servo_calibration
+DEBUG 2025-09-25 18:32:02,627 [test_50_set_servo_calibration.py-->line:33]:joint:5
+DEBUG 2025-09-25 18:32:04,164 [test_50_set_servo_calibration.py-->line:41]:接口返回：1
+INFO 2025-09-25 18:32:04,236 [test_50_set_servo_calibration.py-->line:31]:》》》》》用例【设置六关节零位】开始测试《《《《《
+DEBUG 2025-09-25 18:32:04,236 [test_50_set_servo_calibration.py-->line:32]:test_api:set_servo_calibration
+DEBUG 2025-09-25 18:32:04,236 [test_50_set_servo_calibration.py-->line:33]:joint:6
+DEBUG 2025-09-25 18:32:05,776 [test_50_set_servo_calibration.py-->line:41]:接口返回：1
+INFO 2025-09-25 18:32:05,847 [test_50_set_servo_calibration.py-->line:69]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-09-25 18:32:05,847 [test_50_set_servo_calibration.py-->line:70]:test_api:set_servo_calibration
+DEBUG 2025-09-25 18:32:05,847 [test_50_set_servo_calibration.py-->line:71]:joint:0
+INFO 2025-09-25 18:32:05,847 [test_50_set_servo_calibration.py-->line:77]:✅ 用例【设置关节超限】异常断言通过
+INFO 2025-09-25 18:32:05,848 [test_50_set_servo_calibration.py-->line:78]:》》》用例【设置关节超限】测试完成《《《
+INFO 2025-09-25 18:32:05,849 [test_50_set_servo_calibration.py-->line:69]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-09-25 18:32:05,849 [test_50_set_servo_calibration.py-->line:70]:test_api:set_servo_calibration
+DEBUG 2025-09-25 18:32:05,849 [test_50_set_servo_calibration.py-->line:71]:joint:7
+INFO 2025-09-25 18:32:05,849 [test_50_set_servo_calibration.py-->line:77]:✅ 用例【设置关节超限】异常断言通过
+INFO 2025-09-25 18:32:05,849 [test_50_set_servo_calibration.py-->line:78]:》》》用例【设置关节超限】测试完成《《《
+INFO 2025-09-25 18:32:07,487 [test_50_set_servo_calibration.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-09-25 18:32:44,687 [test_50_set_servo_calibration.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-09-25 18:32:44,689 [test_50_set_servo_calibration.py-->line:31]:》》》》》用例【设置一关节零位】开始测试《《《《《
+DEBUG 2025-09-25 18:32:44,689 [test_50_set_servo_calibration.py-->line:32]:test_api:set_servo_calibration
+DEBUG 2025-09-25 18:32:44,689 [test_50_set_servo_calibration.py-->line:33]:joint:1
+DEBUG 2025-09-25 18:32:46,229 [test_50_set_servo_calibration.py-->line:41]:接口返回：1
+INFO 2025-09-25 18:32:46,244 [test_50_set_servo_calibration.py-->line:59]:✅ 用例【设置一关节零位】测试通过
+INFO 2025-09-25 18:32:46,244 [test_50_set_servo_calibration.py-->line:60]:》》》》》用例【设置一关节零位】测试完成《《《《《
+INFO 2025-09-25 18:32:46,246 [test_50_set_servo_calibration.py-->line:31]:》》》》》用例【设置二关节零位】开始测试《《《《《
+DEBUG 2025-09-25 18:32:46,246 [test_50_set_servo_calibration.py-->line:32]:test_api:set_servo_calibration
+DEBUG 2025-09-25 18:32:46,246 [test_50_set_servo_calibration.py-->line:33]:joint:2
+DEBUG 2025-09-25 18:32:47,779 [test_50_set_servo_calibration.py-->line:41]:接口返回：1
+INFO 2025-09-25 18:32:47,793 [test_50_set_servo_calibration.py-->line:59]:✅ 用例【设置二关节零位】测试通过
+INFO 2025-09-25 18:32:47,793 [test_50_set_servo_calibration.py-->line:60]:》》》》》用例【设置二关节零位】测试完成《《《《《
+INFO 2025-09-25 18:32:47,795 [test_50_set_servo_calibration.py-->line:31]:》》》》》用例【设置三关节零位】开始测试《《《《《
+DEBUG 2025-09-25 18:32:47,795 [test_50_set_servo_calibration.py-->line:32]:test_api:set_servo_calibration
+DEBUG 2025-09-25 18:32:47,795 [test_50_set_servo_calibration.py-->line:33]:joint:3
+DEBUG 2025-09-25 18:32:49,331 [test_50_set_servo_calibration.py-->line:41]:接口返回：1
+INFO 2025-09-25 18:32:49,345 [test_50_set_servo_calibration.py-->line:59]:✅ 用例【设置三关节零位】测试通过
+INFO 2025-09-25 18:32:49,346 [test_50_set_servo_calibration.py-->line:60]:》》》》》用例【设置三关节零位】测试完成《《《《《
+INFO 2025-09-25 18:32:49,348 [test_50_set_servo_calibration.py-->line:31]:》》》》》用例【设置四关节零位】开始测试《《《《《
+DEBUG 2025-09-25 18:32:49,348 [test_50_set_servo_calibration.py-->line:32]:test_api:set_servo_calibration
+DEBUG 2025-09-25 18:32:49,348 [test_50_set_servo_calibration.py-->line:33]:joint:4
+DEBUG 2025-09-25 18:32:50,896 [test_50_set_servo_calibration.py-->line:41]:接口返回：1
+INFO 2025-09-25 18:32:50,956 [test_50_set_servo_calibration.py-->line:59]:✅ 用例【设置四关节零位】测试通过
+INFO 2025-09-25 18:32:50,956 [test_50_set_servo_calibration.py-->line:60]:》》》》》用例【设置四关节零位】测试完成《《《《《
+INFO 2025-09-25 18:32:50,958 [test_50_set_servo_calibration.py-->line:31]:》》》》》用例【设置五关节零位】开始测试《《《《《
+DEBUG 2025-09-25 18:32:50,958 [test_50_set_servo_calibration.py-->line:32]:test_api:set_servo_calibration
+DEBUG 2025-09-25 18:32:50,958 [test_50_set_servo_calibration.py-->line:33]:joint:5
+DEBUG 2025-09-25 18:32:52,491 [test_50_set_servo_calibration.py-->line:41]:接口返回：1
+INFO 2025-09-25 18:32:52,504 [test_50_set_servo_calibration.py-->line:59]:✅ 用例【设置五关节零位】测试通过
+INFO 2025-09-25 18:32:52,505 [test_50_set_servo_calibration.py-->line:60]:》》》》》用例【设置五关节零位】测试完成《《《《《
+INFO 2025-09-25 18:32:52,506 [test_50_set_servo_calibration.py-->line:31]:》》》》》用例【设置六关节零位】开始测试《《《《《
+DEBUG 2025-09-25 18:32:52,506 [test_50_set_servo_calibration.py-->line:32]:test_api:set_servo_calibration
+DEBUG 2025-09-25 18:32:52,506 [test_50_set_servo_calibration.py-->line:33]:joint:6
+DEBUG 2025-09-25 18:32:54,042 [test_50_set_servo_calibration.py-->line:41]:接口返回：1
+INFO 2025-09-25 18:32:54,057 [test_50_set_servo_calibration.py-->line:59]:✅ 用例【设置六关节零位】测试通过
+INFO 2025-09-25 18:32:54,057 [test_50_set_servo_calibration.py-->line:60]:》》》》》用例【设置六关节零位】测试完成《《《《《
+INFO 2025-09-25 18:32:54,058 [test_50_set_servo_calibration.py-->line:69]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-09-25 18:32:54,058 [test_50_set_servo_calibration.py-->line:70]:test_api:set_servo_calibration
+DEBUG 2025-09-25 18:32:54,058 [test_50_set_servo_calibration.py-->line:71]:joint:0
+INFO 2025-09-25 18:32:54,058 [test_50_set_servo_calibration.py-->line:77]:✅ 用例【设置关节超限】异常断言通过
+INFO 2025-09-25 18:32:54,058 [test_50_set_servo_calibration.py-->line:78]:》》》用例【设置关节超限】测试完成《《《
+INFO 2025-09-25 18:32:54,059 [test_50_set_servo_calibration.py-->line:69]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-09-25 18:32:54,059 [test_50_set_servo_calibration.py-->line:70]:test_api:set_servo_calibration
+DEBUG 2025-09-25 18:32:54,059 [test_50_set_servo_calibration.py-->line:71]:joint:7
+INFO 2025-09-25 18:32:54,059 [test_50_set_servo_calibration.py-->line:77]:✅ 用例【设置关节超限】异常断言通过
+INFO 2025-09-25 18:32:54,059 [test_50_set_servo_calibration.py-->line:78]:》》》用例【设置关节超限】测试完成《《《
+INFO 2025-09-25 18:32:55,698 [test_50_set_servo_calibration.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-09-25 18:37:41,807 [test_51_joint_break.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-09-25 18:37:41,809 [test_51_joint_break.py-->line:30]:》》》》》用例【设置一关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:37:41,809 [test_51_joint_break.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:37:41,809 [test_51_joint_break.py-->line:32]:joint:1
+INFO 2025-09-25 18:37:41,932 [test_51_joint_break.py-->line:30]:》》》》》用例【设置一关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:37:41,932 [test_51_joint_break.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:37:41,932 [test_51_joint_break.py-->line:32]:joint:1
+INFO 2025-09-25 18:37:41,942 [test_51_joint_break.py-->line:30]:》》》》》用例【设置二关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:37:41,942 [test_51_joint_break.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:37:41,942 [test_51_joint_break.py-->line:32]:joint:2
+INFO 2025-09-25 18:37:41,953 [test_51_joint_break.py-->line:30]:》》》》》用例【设置二关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:37:41,954 [test_51_joint_break.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:37:41,954 [test_51_joint_break.py-->line:32]:joint:2
+INFO 2025-09-25 18:37:41,963 [test_51_joint_break.py-->line:30]:》》》》》用例【设置三关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:37:41,963 [test_51_joint_break.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:37:41,963 [test_51_joint_break.py-->line:32]:joint:3
+INFO 2025-09-25 18:37:41,973 [test_51_joint_break.py-->line:30]:》》》》》用例【设置三关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:37:41,973 [test_51_joint_break.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:37:41,973 [test_51_joint_break.py-->line:32]:joint:3
+INFO 2025-09-25 18:37:41,983 [test_51_joint_break.py-->line:30]:》》》》》用例【设置四关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:37:41,984 [test_51_joint_break.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:37:41,984 [test_51_joint_break.py-->line:32]:joint:4
+INFO 2025-09-25 18:37:41,994 [test_51_joint_break.py-->line:30]:》》》》》用例【设置四关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:37:41,994 [test_51_joint_break.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:37:41,994 [test_51_joint_break.py-->line:32]:joint:4
+INFO 2025-09-25 18:37:42,004 [test_51_joint_break.py-->line:30]:》》》》》用例【设置五关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:37:42,004 [test_51_joint_break.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:37:42,004 [test_51_joint_break.py-->line:32]:joint:5
+INFO 2025-09-25 18:37:42,013 [test_51_joint_break.py-->line:30]:》》》》》用例【设置五关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:37:42,013 [test_51_joint_break.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:37:42,013 [test_51_joint_break.py-->line:32]:joint:5
+INFO 2025-09-25 18:37:42,023 [test_51_joint_break.py-->line:30]:》》》》》用例【设置六关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:37:42,023 [test_51_joint_break.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:37:42,023 [test_51_joint_break.py-->line:32]:joint:6
+INFO 2025-09-25 18:37:42,032 [test_51_joint_break.py-->line:30]:》》》》》用例【设置六关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:37:42,033 [test_51_joint_break.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:37:42,033 [test_51_joint_break.py-->line:32]:joint:6
+INFO 2025-09-25 18:37:42,047 [test_51_joint_break.py-->line:57]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-09-25 18:37:42,047 [test_51_joint_break.py-->line:58]:test_api:set_break
+DEBUG 2025-09-25 18:37:42,047 [test_51_joint_break.py-->line:59]:joint:0
+INFO 2025-09-25 18:37:42,060 [test_51_joint_break.py-->line:57]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-09-25 18:37:42,060 [test_51_joint_break.py-->line:58]:test_api:set_break
+DEBUG 2025-09-25 18:37:42,061 [test_51_joint_break.py-->line:59]:joint:7
+INFO 2025-09-25 18:37:42,072 [test_51_joint_break.py-->line:57]:》》》》》用例【设置开关状态超限】开始测试《《《《《
+DEBUG 2025-09-25 18:37:42,073 [test_51_joint_break.py-->line:58]:test_api:set_break
+DEBUG 2025-09-25 18:37:42,073 [test_51_joint_break.py-->line:59]:joint:1
+INFO 2025-09-25 18:37:42,085 [test_51_joint_break.py-->line:57]:》》》》》用例【设置开关状态超限】开始测试《《《《《
+DEBUG 2025-09-25 18:37:42,086 [test_51_joint_break.py-->line:58]:test_api:set_break
+DEBUG 2025-09-25 18:37:42,086 [test_51_joint_break.py-->line:59]:joint:2
+INFO 2025-09-25 18:37:43,746 [test_51_joint_break.py-->line:21]:环境清理完成，接口测试结束
+INFO 2025-09-25 18:38:37,034 [test_51_joint_brake.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-09-25 18:38:37,035 [test_51_joint_brake.py-->line:30]:》》》》》用例【设置一关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:38:37,035 [test_51_joint_brake.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:38:37,035 [test_51_joint_brake.py-->line:32]:joint:1
+INFO 2025-09-25 18:38:37,197 [test_51_joint_brake.py-->line:30]:》》》》》用例【设置一关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:38:37,197 [test_51_joint_brake.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:38:37,197 [test_51_joint_brake.py-->line:32]:joint:1
+INFO 2025-09-25 18:38:37,205 [test_51_joint_brake.py-->line:30]:》》》》》用例【设置二关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:38:37,205 [test_51_joint_brake.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:38:37,205 [test_51_joint_brake.py-->line:32]:joint:2
+INFO 2025-09-25 18:38:37,211 [test_51_joint_brake.py-->line:30]:》》》》》用例【设置二关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:38:37,211 [test_51_joint_brake.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:38:37,211 [test_51_joint_brake.py-->line:32]:joint:2
+INFO 2025-09-25 18:38:37,218 [test_51_joint_brake.py-->line:30]:》》》》》用例【设置三关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:38:37,218 [test_51_joint_brake.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:38:37,218 [test_51_joint_brake.py-->line:32]:joint:3
+INFO 2025-09-25 18:38:37,225 [test_51_joint_brake.py-->line:30]:》》》》》用例【设置三关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:38:37,225 [test_51_joint_brake.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:38:37,225 [test_51_joint_brake.py-->line:32]:joint:3
+INFO 2025-09-25 18:38:37,231 [test_51_joint_brake.py-->line:30]:》》》》》用例【设置四关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:38:37,231 [test_51_joint_brake.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:38:37,231 [test_51_joint_brake.py-->line:32]:joint:4
+INFO 2025-09-25 18:38:37,237 [test_51_joint_brake.py-->line:30]:》》》》》用例【设置四关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:38:37,237 [test_51_joint_brake.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:38:37,238 [test_51_joint_brake.py-->line:32]:joint:4
+INFO 2025-09-25 18:38:37,244 [test_51_joint_brake.py-->line:30]:》》》》》用例【设置五关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:38:37,244 [test_51_joint_brake.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:38:37,244 [test_51_joint_brake.py-->line:32]:joint:5
+INFO 2025-09-25 18:38:37,251 [test_51_joint_brake.py-->line:30]:》》》》》用例【设置五关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:38:37,251 [test_51_joint_brake.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:38:37,251 [test_51_joint_brake.py-->line:32]:joint:5
+INFO 2025-09-25 18:38:37,257 [test_51_joint_brake.py-->line:30]:》》》》》用例【设置六关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:38:37,257 [test_51_joint_brake.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:38:37,257 [test_51_joint_brake.py-->line:32]:joint:6
+INFO 2025-09-25 18:38:37,263 [test_51_joint_brake.py-->line:30]:》》》》》用例【设置六关节刹车开关】开始测试《《《《《
+DEBUG 2025-09-25 18:38:37,265 [test_51_joint_brake.py-->line:31]:test_api:set_break
+DEBUG 2025-09-25 18:38:37,265 [test_51_joint_brake.py-->line:32]:joint:6
+INFO 2025-09-25 18:38:37,273 [test_51_joint_brake.py-->line:57]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-09-25 18:38:37,273 [test_51_joint_brake.py-->line:58]:test_api:set_break
+DEBUG 2025-09-25 18:38:37,273 [test_51_joint_brake.py-->line:59]:joint:0
+INFO 2025-09-25 18:38:37,283 [test_51_joint_brake.py-->line:57]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-09-25 18:38:37,284 [test_51_joint_brake.py-->line:58]:test_api:set_break
+DEBUG 2025-09-25 18:38:37,284 [test_51_joint_brake.py-->line:59]:joint:7
+INFO 2025-09-25 18:38:37,290 [test_51_joint_brake.py-->line:57]:》》》》》用例【设置开关状态超限】开始测试《《《《《
+DEBUG 2025-09-25 18:38:37,291 [test_51_joint_brake.py-->line:58]:test_api:set_break
+DEBUG 2025-09-25 18:38:37,291 [test_51_joint_brake.py-->line:59]:joint:1
+INFO 2025-09-25 18:38:37,298 [test_51_joint_brake.py-->line:57]:》》》》》用例【设置开关状态超限】开始测试《《《《《
+DEBUG 2025-09-25 18:38:37,298 [test_51_joint_brake.py-->line:58]:test_api:set_break
+DEBUG 2025-09-25 18:38:37,298 [test_51_joint_brake.py-->line:59]:joint:2
+INFO 2025-09-25 18:38:38,946 [test_51_joint_brake.py-->line:21]:环境清理完成，接口测试结束
+INFO 2025-09-25 19:29:18,452 [test_52_release_servo.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-09-25 19:29:18,454 [test_52_release_servo.py-->line:33]:》》》》》用例【使1关节掉电】开始测试《《《《《
+DEBUG 2025-09-25 19:29:18,454 [test_52_release_servo.py-->line:34]:test_api:is_servo_enable
+DEBUG 2025-09-25 19:29:18,454 [test_52_release_servo.py-->line:35]:test_joint:1
+DEBUG 2025-09-25 19:29:18,468 [test_52_release_servo.py-->line:39]:接口返回：1
+INFO 2025-09-25 19:29:26,969 [test_52_release_servo.py-->line:55]:✅ 用例【使1关节掉电】测试通过
+INFO 2025-09-25 19:29:26,969 [test_52_release_servo.py-->line:56]:》》》》》用例【使1关节掉电】测试完成《《《《《
+INFO 2025-09-25 19:29:26,972 [test_52_release_servo.py-->line:33]:》》》》》用例【使2关节掉电】开始测试《《《《《
+DEBUG 2025-09-25 19:29:26,972 [test_52_release_servo.py-->line:34]:test_api:is_servo_enable
+DEBUG 2025-09-25 19:29:26,972 [test_52_release_servo.py-->line:35]:test_joint:2
+DEBUG 2025-09-25 19:29:26,983 [test_52_release_servo.py-->line:39]:接口返回：1
+INFO 2025-09-25 19:29:31,826 [test_52_release_servo.py-->line:55]:✅ 用例【使2关节掉电】测试通过
+INFO 2025-09-25 19:29:31,826 [test_52_release_servo.py-->line:56]:》》》》》用例【使2关节掉电】测试完成《《《《《
+INFO 2025-09-25 19:29:31,829 [test_52_release_servo.py-->line:33]:》》》》》用例【使3关节掉电】开始测试《《《《《
+DEBUG 2025-09-25 19:29:31,829 [test_52_release_servo.py-->line:34]:test_api:is_servo_enable
+DEBUG 2025-09-25 19:29:31,829 [test_52_release_servo.py-->line:35]:test_joint:3
+DEBUG 2025-09-25 19:29:31,841 [test_52_release_servo.py-->line:39]:接口返回：1
+INFO 2025-09-25 19:29:35,671 [test_52_release_servo.py-->line:55]:✅ 用例【使3关节掉电】测试通过
+INFO 2025-09-25 19:29:35,671 [test_52_release_servo.py-->line:56]:》》》》》用例【使3关节掉电】测试完成《《《《《
+INFO 2025-09-25 19:29:35,673 [test_52_release_servo.py-->line:33]:》》》》》用例【使4关节掉电】开始测试《《《《《
+DEBUG 2025-09-25 19:29:35,673 [test_52_release_servo.py-->line:34]:test_api:is_servo_enable
+DEBUG 2025-09-25 19:29:35,673 [test_52_release_servo.py-->line:35]:test_joint:4
+DEBUG 2025-09-25 19:29:35,685 [test_52_release_servo.py-->line:39]:接口返回：1
+INFO 2025-09-25 19:29:38,953 [test_52_release_servo.py-->line:55]:✅ 用例【使4关节掉电】测试通过
+INFO 2025-09-25 19:29:38,953 [test_52_release_servo.py-->line:56]:》》》》》用例【使4关节掉电】测试完成《《《《《
+INFO 2025-09-25 19:29:38,955 [test_52_release_servo.py-->line:33]:》》》》》用例【使5关节掉电】开始测试《《《《《
+DEBUG 2025-09-25 19:29:38,955 [test_52_release_servo.py-->line:34]:test_api:is_servo_enable
+DEBUG 2025-09-25 19:29:38,955 [test_52_release_servo.py-->line:35]:test_joint:5
+DEBUG 2025-09-25 19:29:38,966 [test_52_release_servo.py-->line:39]:接口返回：1
+INFO 2025-09-25 19:29:40,145 [test_52_release_servo.py-->line:55]:✅ 用例【使5关节掉电】测试通过
+INFO 2025-09-25 19:29:40,145 [test_52_release_servo.py-->line:56]:》》》》》用例【使5关节掉电】测试完成《《《《《
+INFO 2025-09-25 19:29:40,147 [test_52_release_servo.py-->line:33]:》》》》》用例【使6关节掉电】开始测试《《《《《
+DEBUG 2025-09-25 19:29:40,148 [test_52_release_servo.py-->line:34]:test_api:is_servo_enable
+DEBUG 2025-09-25 19:29:40,148 [test_52_release_servo.py-->line:35]:test_joint:6
+DEBUG 2025-09-25 19:29:40,160 [test_52_release_servo.py-->line:39]:接口返回：1
+INFO 2025-09-25 19:29:40,918 [test_52_release_servo.py-->line:55]:✅ 用例【使6关节掉电】测试通过
+INFO 2025-09-25 19:29:40,918 [test_52_release_servo.py-->line:56]:》》》》》用例【使6关节掉电】测试完成《《《《《
+INFO 2025-09-25 19:29:40,920 [test_52_release_servo.py-->line:64]:》》》用例【设置关节超限】开始测试《《《
+DEBUG 2025-09-25 19:29:40,920 [test_52_release_servo.py-->line:65]:接口: is_servo_enable，关节: 0
+INFO 2025-09-25 19:29:40,920 [test_52_release_servo.py-->line:71]:✅ 用例【设置关节超限】异常测试通过
+INFO 2025-09-25 19:29:40,920 [test_52_release_servo.py-->line:72]:》》》用例【设置关节超限】测试完成《《《
+INFO 2025-09-25 19:29:40,921 [test_52_release_servo.py-->line:64]:》》》用例【设置关节超限】开始测试《《《
+DEBUG 2025-09-25 19:29:40,921 [test_52_release_servo.py-->line:65]:接口: is_servo_enable，关节: 7
+INFO 2025-09-25 19:29:40,921 [test_52_release_servo.py-->line:71]:✅ 用例【设置关节超限】异常测试通过
+INFO 2025-09-25 19:29:40,921 [test_52_release_servo.py-->line:72]:》》》用例【设置关节超限】测试完成《《《
+INFO 2025-09-25 19:29:43,043 [test_52_release_servo.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-09-25 19:40:14,602 [test_53_focus_servo.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-09-25 19:40:14,604 [test_53_focus_servo.py-->line:32]:》》》》》用例【使1关节上电】开始测试《《《《《
+DEBUG 2025-09-25 19:40:14,604 [test_53_focus_servo.py-->line:33]:test_api:focus_servo
+DEBUG 2025-09-25 19:40:14,604 [test_53_focus_servo.py-->line:34]:test_joint:1
+DEBUG 2025-09-25 19:40:14,627 [test_53_focus_servo.py-->line:41]:接口返回：1
+INFO 2025-09-25 19:40:17,940 [test_53_focus_servo.py-->line:54]:✅ 用例【使1关节上电】测试通过
+INFO 2025-09-25 19:40:17,940 [test_53_focus_servo.py-->line:55]:》》》》》用例【使1关节上电】测试完成《《《《《
+INFO 2025-09-25 19:40:17,942 [test_53_focus_servo.py-->line:32]:》》》》》用例【使2关节上电】开始测试《《《《《
+DEBUG 2025-09-25 19:40:17,942 [test_53_focus_servo.py-->line:33]:test_api:focus_servo
+DEBUG 2025-09-25 19:40:17,942 [test_53_focus_servo.py-->line:34]:test_joint:2
+DEBUG 2025-09-25 19:40:17,965 [test_53_focus_servo.py-->line:41]:接口返回：1
+INFO 2025-09-25 19:40:20,745 [test_53_focus_servo.py-->line:54]:✅ 用例【使2关节上电】测试通过
+INFO 2025-09-25 19:40:20,746 [test_53_focus_servo.py-->line:55]:》》》》》用例【使2关节上电】测试完成《《《《《
+INFO 2025-09-25 19:40:20,748 [test_53_focus_servo.py-->line:32]:》》》》》用例【使3关节上电】开始测试《《《《《
+DEBUG 2025-09-25 19:40:20,748 [test_53_focus_servo.py-->line:33]:test_api:focus_servo
+DEBUG 2025-09-25 19:40:20,749 [test_53_focus_servo.py-->line:34]:test_joint:3
+DEBUG 2025-09-25 19:40:20,771 [test_53_focus_servo.py-->line:41]:接口返回：1
+INFO 2025-09-25 19:40:22,624 [test_53_focus_servo.py-->line:54]:✅ 用例【使3关节上电】测试通过
+INFO 2025-09-25 19:40:22,625 [test_53_focus_servo.py-->line:55]:》》》》》用例【使3关节上电】测试完成《《《《《
+INFO 2025-09-25 19:40:22,627 [test_53_focus_servo.py-->line:32]:》》》》》用例【使4关节上电】开始测试《《《《《
+DEBUG 2025-09-25 19:40:22,627 [test_53_focus_servo.py-->line:33]:test_api:focus_servo
+DEBUG 2025-09-25 19:40:22,627 [test_53_focus_servo.py-->line:34]:test_joint:4
+DEBUG 2025-09-25 19:40:22,652 [test_53_focus_servo.py-->line:41]:接口返回：1
+INFO 2025-09-25 19:40:24,072 [test_53_focus_servo.py-->line:54]:✅ 用例【使4关节上电】测试通过
+INFO 2025-09-25 19:40:24,072 [test_53_focus_servo.py-->line:55]:》》》》》用例【使4关节上电】测试完成《《《《《
+INFO 2025-09-25 19:40:24,074 [test_53_focus_servo.py-->line:32]:》》》》》用例【使5关节上电】开始测试《《《《《
+DEBUG 2025-09-25 19:40:24,074 [test_53_focus_servo.py-->line:33]:test_api:focus_servo
+DEBUG 2025-09-25 19:40:24,074 [test_53_focus_servo.py-->line:34]:test_joint:5
+DEBUG 2025-09-25 19:40:24,098 [test_53_focus_servo.py-->line:41]:接口返回：1
+INFO 2025-09-25 19:40:25,718 [test_53_focus_servo.py-->line:54]:✅ 用例【使5关节上电】测试通过
+INFO 2025-09-25 19:40:25,718 [test_53_focus_servo.py-->line:55]:》》》》》用例【使5关节上电】测试完成《《《《《
+INFO 2025-09-25 19:40:25,722 [test_53_focus_servo.py-->line:32]:》》》》》用例【使6关节上电】开始测试《《《《《
+DEBUG 2025-09-25 19:40:25,722 [test_53_focus_servo.py-->line:33]:test_api:focus_servo
+DEBUG 2025-09-25 19:40:25,722 [test_53_focus_servo.py-->line:34]:test_joint:6
+DEBUG 2025-09-25 19:40:25,745 [test_53_focus_servo.py-->line:41]:接口返回：1
+INFO 2025-09-25 19:40:27,311 [test_53_focus_servo.py-->line:54]:✅ 用例【使6关节上电】测试通过
+INFO 2025-09-25 19:40:27,312 [test_53_focus_servo.py-->line:55]:》》》》》用例【使6关节上电】测试完成《《《《《
+INFO 2025-09-25 19:40:27,315 [test_53_focus_servo.py-->line:63]:》》》用例【设置关节超限】开始测试《《《
+DEBUG 2025-09-25 19:40:27,315 [test_53_focus_servo.py-->line:64]:接口: focus_servo，关节: 0
+INFO 2025-09-25 19:40:27,315 [test_53_focus_servo.py-->line:70]:✅ 用例【设置关节超限】异常测试通过
+INFO 2025-09-25 19:40:27,315 [test_53_focus_servo.py-->line:71]:》》》用例【设置关节超限】测试完成《《《
+INFO 2025-09-25 19:40:27,317 [test_53_focus_servo.py-->line:63]:》》》用例【设置关节超限】开始测试《《《
+DEBUG 2025-09-25 19:40:27,317 [test_53_focus_servo.py-->line:64]:接口: focus_servo，关节: 7
+INFO 2025-09-25 19:40:27,317 [test_53_focus_servo.py-->line:70]:✅ 用例【设置关节超限】异常测试通过
+INFO 2025-09-25 19:40:27,317 [test_53_focus_servo.py-->line:71]:》》》用例【设置关节超限】测试完成《《《
+INFO 2025-09-25 19:40:28,981 [test_53_focus_servo.py-->line:22]:环境清理完成，接口测试结束
