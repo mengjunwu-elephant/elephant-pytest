@@ -2,7 +2,7 @@ import time
 
 import pytest
 import allure
-from pymycobot.error import MercuryDataException
+from pymycobot.error import MercuryDataException, MyCobotPro450DataException
 
 from common1.test_data_handler import get_test_data_from_excel
 from common1.assert_utils import assert_almost_equal
@@ -64,8 +64,8 @@ def test_set_pro_gripper_angle_exception(device, case):
     logger.debug(f"test_api: {case['api']}")
     logger.debug(f"test_value: {case['value']}")
 
-    with allure.step(f"断言设置接口抛出 MercuryDataException, value: {case['value']}"):
-        with pytest.raises(MercuryDataException):
+    with allure.step(f"断言设置接口抛出 MyCobotPro450DataException, value: {case['value']}"):
+        with pytest.raises(MyCobotPro450DataException):
             device.mc.set_pro_gripper_angle(case["value"])
 
     logger.info(f"✅ 用例【{case['title']}】异常断言成功")

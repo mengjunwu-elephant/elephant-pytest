@@ -28,8 +28,7 @@ def test_get_pro_gripper_status_0(device, case):
     logger.debug(f"test_api: {case['api']} | test_parameters: {case['parameter']}")
 
     with allure.step("让夹爪进行运动状态"):
-        device.mc.set_gripper_value(100, 5)
-        sleep(0.2)
+        device.mc.set_pro_gripper_angle(100)
 
     with allure.step("获取夹爪状态"):
         response = device.mc.get_pro_gripper_status()
@@ -85,7 +84,7 @@ def test_get_pro_gripper_status_2(device, case):
         input()
 
     with allure.step("设置夹爪关闭"):
-        device.mc.set_gripper_value(0, 100)
+        device.mc.set_pro_gripper_angle(0)
         sleep(3)
 
     with allure.step("获取夹爪状态"):

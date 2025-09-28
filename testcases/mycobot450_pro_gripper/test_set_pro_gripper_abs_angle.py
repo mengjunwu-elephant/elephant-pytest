@@ -3,7 +3,7 @@ import time
 import pytest
 import allure
 from time import sleep
-from pymycobot.error import MercuryDataException
+from pymycobot.error import MyCobotPro450DataException
 
 from common1.test_data_handler import get_test_data_from_excel
 from common1 import logger, assert_almost_equal
@@ -129,8 +129,8 @@ def test_out_limit(device, case):
     logger.debug(f"test_api: {case['api']}")
     logger.debug(f"test_value: {case['value']}")
 
-    with allure.step(f"断言触发 MercuryDataException, value: {case['value']}"):
-        with pytest.raises(MercuryDataException):
+    with allure.step(f"断言触发 MyCobotPro450DataException, value: {case['value']}"):
+        with pytest.raises(MyCobotPro450DataException):
             device.mc.set_pro_gripper_abs_angle(case["value"])
 
     logger.info(f"✅ 用例【{case['title']}】异常断言成功")

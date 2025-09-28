@@ -26,10 +26,10 @@ def device():
 def test_set_pro_gripper_open(device, case):
     logger.info(f"》》》用例【{case['title']}】开始测试《《《")
     logger.debug(f"test_api: {case['api']}")
-    logger.debug(f"test_parameters: {case.get('parameter', '')}")
 
     with allure.step("调用 set_pro_gripper_open 接口"):
         response = device.mc.set_pro_gripper_open()
+        time.sleep(3)
         allure.attach(str(response), "接口返回值", allure.attachment_type.TEXT)
 
     with allure.step("断言返回类型为 int"):

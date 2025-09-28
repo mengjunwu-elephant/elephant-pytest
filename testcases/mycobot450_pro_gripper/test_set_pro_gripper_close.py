@@ -30,6 +30,7 @@ def test_set_pro_gripper_close(device, case):
 
     with allure.step("调用 set_pro_gripper_close 接口"):
         response = device.mc.set_pro_gripper_close()
+        time.sleep(3)
         allure.attach(str(response), "接口返回值", allure.attachment_type.TEXT)
 
     with allure.step("断言返回类型为 int"):

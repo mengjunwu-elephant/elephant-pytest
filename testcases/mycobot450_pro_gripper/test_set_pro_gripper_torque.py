@@ -2,7 +2,7 @@ import time
 
 import pytest
 import allure
-from pymycobot.error import MercuryDataException
+from pymycobot.error import MercuryDataException, MyCobotPro450DataException
 
 from common1.test_data_handler import get_test_data_from_excel
 from common1 import logger
@@ -41,7 +41,7 @@ def test_set_pro_gripper_torque_normal(device, case):
         assert isinstance(set_res, int), f"类型错误，返回类型为 {type(set_res)}"
 
     with allure.step("断言设置返回值与期望相符"):
-        allure.attach(str(case['expect_date']),'期望值',allure.attachment_type.TEXT)
+        allure.attach(str(case['expect_data']),'期望值',allure.attachment_type.TEXT)
         allure.attach(str(set_res),'实际值',allure.attachment_type.TEXT)
         assert set_res == case["expect_data"], f"期望 {case['expect_data']}，实际 {set_res}"
 
@@ -62,8 +62,8 @@ def test_set_pro_gripper_torque_exception(device, case):
     logger.debug(f"test_api: {case['api']}")
     logger.debug(f"test_parameters: {case['parameter']}")
 
-    with allure.step(f"断言设置异常值时抛出 MercuryDataException，扭矩为{case['parameter']}"):
-        with pytest.raises(MercuryDataException):
+    with allure.step(f"断言设置异常值时抛出 MyCobotPro450DataException，扭矩为{case['parameter']}"):
+        with pytest.raises(MyCobotPro450DataException):
             device.mc.set_pro_gripper_torque(case["parameter"])
 
     logger.info(f"✅ 异常用例【{case['title']}】测试成功")

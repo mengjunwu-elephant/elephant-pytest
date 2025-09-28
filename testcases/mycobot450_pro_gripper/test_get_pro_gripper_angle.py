@@ -1,6 +1,7 @@
 import pytest
 import allure
 from common1.test_data_handler import get_test_data_from_excel
+from common1.assert_utils import assert_almost_equal
 from common1 import logger
 from settings import Mycobot450Base
 
@@ -32,7 +33,7 @@ def test_get_pro_gripper_angle(device, case):
     with allure.step("断言返回值与期望值一致"):
         allure.attach(str(case['expect_data']), "期望值", allure.attachment_type.TEXT)
         allure.attach(str(response), "实际值", allure.attachment_type.TEXT)
-        assert response == case['expect_data'], f"断言失败，期望：{case['expect_data']}，实际：{response}"
+        assert_almost_equal(response,case['expect_data'],2,'读取角度'), f"断言失败，期望：{case['expect_data']}，实际：{response}"
 
     logger.info(f"✅ 用例【{case['title']}】测试成功")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")

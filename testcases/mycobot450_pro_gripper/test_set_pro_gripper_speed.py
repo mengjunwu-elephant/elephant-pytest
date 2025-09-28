@@ -1,13 +1,13 @@
 import pytest
 import allure
-from pymycobot.error import MercuryDataException
+from pymycobot.error import MercuryDataException, MyCobotPro450DataException
 
 from common1.test_data_handler import get_test_data_from_excel
 from common1 import logger
 from settings import Mycobot450Base
 
 # 从 Excel 中提取测试数据
-cases = get_test_data_from_excel(Mycobot450Base.TEST_DATA_FILE, "set_pro_gripper_speed")
+cases = get_test_data_from_excel(Mycobot450Base.PRO_GRIPPER_TEST_DATA_FILE, "set_pro_gripper_speed")
 
 
 @pytest.fixture(scope="module")
@@ -51,8 +51,8 @@ def test_set_pro_gripper_speed_exception(device, case):
     logger.debug(f"test_api: {case['api']}")
     logger.debug(f"test_parameters: {case.get('parameter')}")
 
-    with allure.step(f"调用接口并断言抛出 MercuryDateException 异常,速度为{case['parameter']}"):
-        with pytest.raises(MercuryDataException):
+    with allure.step(f"调用接口并断言抛出 MyCobotPro450DataException 异常,速度为{case['parameter']}"):
+        with pytest.raises(MyCobotPro450DataException):
             device.mc.set_pro_gripper_speed(case["parameter"])
 
     logger.info(f"✅ 用例【{case['title']}】触发异常测试成功")
