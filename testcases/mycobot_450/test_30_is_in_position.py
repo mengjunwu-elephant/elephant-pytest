@@ -19,7 +19,7 @@ def device():
     yield dev
     dev.default_settings()
     dev.go_zero()
-    time.sleep(8)
+    dev.wait()
     logger.info("环境清理完成，接口测试结束")
 
 

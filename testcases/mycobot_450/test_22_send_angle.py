@@ -49,10 +49,10 @@ def test_send_angle0(device, case):
     with allure.step('设置2关节角度时，调整3关节姿态，防止碰撞'):
         if case["joint"] == 2 and case["angle"] == -120:
             device.mc.send_angle(3, 90, device.speed)
-            time.sleep(5)
+            device.wait()
         elif case["joint"] == 2 and case["angle"] == 120:
             device.mc.send_angle(3, -90, device.speed)
-            time.sleep(5)
+            device.wait()
         else:
             pass
 
@@ -103,16 +103,16 @@ def test_send_angle1(device, case):
     with allure.step('设置2关节角度时，调整3关节姿态，防止碰撞'):
         if case["joint"] == 2 and case["angle"] == -120:
             device.mc.send_angle(3, 90, device.speed)
-            time.sleep(5)
+            device.wait()
         elif case["joint"] == 2 and case["angle"] == 120:
             device.mc.send_angle(3, -90, device.speed)
-            time.sleep(5)
+            device.wait()
         else:
             pass
 
     with allure.step(f"调用 {case['api']} 接口"):
         set_res = device.mc.send_angle(case["joint"],case["angle"], case["speed"])
-        time.sleep(10)
+        device.wait()
         logger.debug(f"接口返回：{set_res}")
 
     with allure.step(f'调用 get_angle 接口'):

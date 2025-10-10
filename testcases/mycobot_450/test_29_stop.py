@@ -1,3 +1,5 @@
+import time
+
 import pytest
 import allure
 from pymycobot.error import MyCobotPro450DataException
@@ -16,7 +18,15 @@ def device():
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.default_settings()
+    dev.go_zero()
+    dev.wait()
     logger.info("环境清理完成，接口测试结束")
+
+@pytest.fixture(autouse=True)
+def reset_device(device):
+    yield
+    device.go_zero()
+    device.wait()
 
 @allure.feature("stop 接口测试")
 @allure.story("正常 stop 场景")
@@ -26,6 +36,10 @@ def test_stop_normal(device, case):
     expected = case["expect_data"]
     logger.info(f"》》》用例【{title}】开始测试《《《")
     logger.debug(f"接口: {case['api']}，参数: {case['parameter']}")
+
+    with allure.step('使机械臂运动'):
+        device.mc.send_angles(device.coords_init_angles,device.speed)
+        time.sleep(0.5)
 
     with allure.step("调用 stop 接口"):
         response = device.mc.stop(case["parameter"])

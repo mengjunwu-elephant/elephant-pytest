@@ -47,7 +47,7 @@ def test_set_joint_min_angle1(device, case):
             device.wait()
 
     with allure.step('调用 send_angle 接口,使机械臂运动到最小角度范围外'):
-        device.mc.send_angle(case["joint"],case["angle"]+5,device.speed)
+        device.mc.send_angle(case["joint"],case["angle"]-5,device.speed)
         device.wait()
 
     with allure.step('调用 get_angles 接口,获取当前角度'):

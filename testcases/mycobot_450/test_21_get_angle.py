@@ -41,7 +41,7 @@ def test_get_angle1(device, case):
 
     with allure.step('使机械臂运动到指定关节角度'):
         device.mc.send_angle(case['joint'], case['expect_data'],device.speed)
-        time.sleep(5)
+        device.wait()
 
     with allure.step(f"调用 {case['api']} 接口"):
         response = device.mc.get_angle(case['joint'])
@@ -53,7 +53,7 @@ def test_get_angle1(device, case):
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(response,eval(expected),tol=1,name='获取单关节角度'), f"用例【{title}】断言失败，期望 {expected},实际 {response}"
+        assert_almost_equal(response,expected,tol=1,name='获取单关节角度'), f"用例【{title}】断言失败，期望 {expected},实际 {response}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')

@@ -19,7 +19,7 @@ def device():
     yield dev
     dev.default_settings()
     dev.go_zero()
-    time.sleep(8)
+    dev.wait()
     logger.info("环境清理完成，接口测试结束")
 
 @pytest.fixture(autouse=True)
@@ -38,6 +38,7 @@ def test_pause_normal(device, case):
 
     with allure.step('使机械臂运动'):
         device.mc.send_angles(device.coords_init_angles,device.speed)
+        time.sleep(0.5)
 
     with allure.step(f"调用 {case['api']} 接口"):
         response = device.mc.pause(case["parameter"])

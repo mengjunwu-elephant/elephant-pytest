@@ -16,7 +16,7 @@ def device():
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.default_settings()
-    dev.go_zero()
+    # dev.go_zero()
     dev.wait()
     logger.info("环境清理完成，接口测试结束")
 
@@ -52,9 +52,9 @@ def test_is_moving_normal1(device, case):
     expected = case["expect_data"]
     logger.info(f"》》》用例【{title}】开始测试《《《")
     logger.debug(f"接口: {case['api']}，参数: {case['parameter']}")
-
+    sleep(5)
     with allure.step("使机械臂运动"):
-        device.mc.send_angles(device.coords_init_angles,device.speed)
+        device.mc.send_angles(device.coords_init_angles,device.speed,_async=True)
         sleep(1)
 
     with allure.step("获取运动状态"):

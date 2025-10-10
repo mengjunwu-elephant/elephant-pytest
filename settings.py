@@ -36,12 +36,11 @@ class Mycobot450Base:
     PRO_GRIPPER_TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/pro_gripper.xlsx')
 
     def __init__(self, ip='192.168.0.232'):
-        self.mc = Pro450Client(ip=ip)
+        self.mc = Pro450Client(ip=ip,debug=1)
 
     def default_settings(self):
         self.mc.set_fresh_mode(0)
         self.mc.set_debug_state(0)
-        self.mc.stop(1)
 
     def default_speed(self):
         self.mc.set_max_speed(0, 150)
@@ -60,6 +59,11 @@ class Mycobot450Base:
     def default_base_io_output(self):
         for i in range(12):
             self.mc.set_base_io_output(i+1,0)
+            time.sleep(0.2)
+
+    def default_digital_io_output(self):
+        for i in range(2):
+            self.mc.set_digital_output(i+1,0)
             time.sleep(0.2)
 
     def default_tool_reference(self):

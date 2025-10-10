@@ -19,8 +19,8 @@ def device():
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.default_settings()
-    # dev.go_zero()
-    # dev.wait()
+    dev.go_zero()
+    dev.wait()
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("获取关节电流")
@@ -57,7 +57,7 @@ def test_get_servo_currents2(device, case):
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
-
+    time.sleep(3)
     with allure.step(f"调用 send_angles 接口"):
         device.mc.send_angles([30, 30, 30, 30, 30, 30], case['speed'])
         time.sleep(0.2)

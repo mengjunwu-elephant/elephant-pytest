@@ -44,11 +44,11 @@ def test_send_coord0(device, case):
 
     with allure.step('使机械臂运动到坐标初始位置'):
         device.mc.send_angles(device.coords_init_angles,device.speed)
-        time.sleep(5)
+        device.wait()
 
     with allure.step(f"调用 {case['api']} 接口"):
         set_res = device.mc.send_coord(case["axis"],case["coord"],case["speed"])
-        time.sleep(10)
+        device.wait()
         logger.debug(f"接口返回：{set_res}")
 
     with allure.step(f'调用 get_coords 接口'):
@@ -92,11 +92,11 @@ def test_send_coord1(device, case):
 
     with allure.step('使机械臂运动到坐标初始位置'):
         device.mc.send_angles(device.coords_init_angles,device.speed)
-        time.sleep(5)
+        device.wait()
 
     with allure.step(f"调用 {case['api']} 接口"):
         set_res = device.mc.send_coord(case["axis"],case["coord"], case["speed"])
-        time.sleep(10)
+        device.wait()
         logger.debug(f"接口返回：{set_res}")
 
     with allure.step(f'调用 get_coords 接口'):

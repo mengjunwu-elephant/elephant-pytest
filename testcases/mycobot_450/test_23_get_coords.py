@@ -34,14 +34,17 @@ def test_get_coords1(device, case):
 
     with allure.step("使机械臂运动到坐标初始姿态"):
         device.mc.send_angles(device.coords_init_angles, device.speed)
-        time.sleep(5)
+        device.wait()
 
     with allure.step('使机械臂运动到指定全坐标'):
         device.mc.send_coords(eval(expected), device.speed)
-        time.sleep(10)
+        device.wait()
 
     with allure.step(f"调用 {case['api']} 接口"):
-        response = device.mc.get_coords()
+        if case['parameter'] is not None:
+            response = device.mc.get_coords(eval(case['parameter']))
+        else:
+            response = device.mc.get_coords()
         logger.debug(f"接口返回：{response}")
 
     with allure.step("断言返回值类型为 list"):

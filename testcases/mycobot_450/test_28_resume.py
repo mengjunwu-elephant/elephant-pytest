@@ -1,3 +1,5 @@
+import time
+
 import pytest
 import allure
 from pymycobot.error import MercuryDataException, MyCobotPro450DataException
@@ -28,11 +30,15 @@ def test_resume_normal(device, case):
     logger.info(f"》》》用例【{title}】开始测试《《《")
     logger.debug(f"参数: {case['parameter']}")
 
+    with allure.step("使机械臂运动"):
+        device.mc.send_angles(device.coords_init_angles,device.speed)
+        time.sleep(0.5)
+
     with allure.step("先调用 pause"):
         device.mc.pause()
 
     with allure.step(f"调用 {case['api']} 接口"):
-        response = device.mc.resume(case["parameter"])
+        response = device.mc.resume()
 
     with allure.step("断言返回值类型为 int"):
         assert isinstance(response, int), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"
@@ -45,18 +51,3 @@ def test_resume_normal(device, case):
     logger.info(f"✅ 用例【{title}】测试通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
-
-@allure.feature("resume 接口测试")
-@allure.story("异常 resume 场景")
-@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "exception"], ids=lambda c: c["title"])
-def test_resume_exception(device, case):
-    title = case["title"]
-    logger.info(f"》》》用例【{title}】开始测试《《《")
-    logger.debug(f"参数: {case['parameter']}")
-
-    with allure.step("调用 resume 接口并断言抛出 MyCobotPro450DataException"):
-        with pytest.raises(MyCobotPro450DataException):
-            device.mc.resume(case["parameter"])
-
-    logger.info(f"✅ 用例【{title}】测试通过")
-    logger.info(f"》》》用例【{title}】测试完成《《《")

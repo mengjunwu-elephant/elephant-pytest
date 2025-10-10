@@ -19,7 +19,7 @@ def device():
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.default_settings()
-    time.sleep(8)
+    dev.wait()
     dev.go_zero()
     dev.wait()
     logger.info("环境清理完成，接口测试结束")
@@ -39,7 +39,6 @@ def test_jog_rpy0(device, case):
 
     with allure.step(f'设置为插补模式'):
         device.mc.set_fresh_mode(0)
-        time.sleep(8)
         mode = '刷新' if device.mc.get_fresh_mode() else '插补'
         logger.debug(f'当前模式为{mode}')
 
@@ -80,7 +79,6 @@ def test_jog_rpy1(device, case):
     with allure.step(f'设置为刷新模式'):
 
         device.mc.set_fresh_mode(1)
-        time.sleep(8)
         mode = '刷新' if device.mc.get_fresh_mode() else '插补'
         logger.debug(f'当前模式为{mode}')
 
