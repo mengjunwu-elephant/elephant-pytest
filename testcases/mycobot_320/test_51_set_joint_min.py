@@ -45,7 +45,7 @@ def test_set_joint_min1(device, case):
         set_res = device.m.set_joint_min(joint, angle)
         time.sleep(0.1)
         get_res = device.m.get_joint_min_angle(joint)
-        logger.debug(f"接口返回：{set_res}")
+        logger.debug(f"set_res返回:{set_res},get_res返回:{get_res}")
 
     with allure.step("断言返回值类型为 int"):
         assert isinstance(set_res, int), f"返回类型错误,应为{type(expected_1)},实际为 {type(set_res)}"
