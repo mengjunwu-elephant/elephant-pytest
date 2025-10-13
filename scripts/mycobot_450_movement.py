@@ -22,20 +22,31 @@ joints = {
 # 速度设置
 speed = 50
 
+# 统计机械臂运动数据
+coords_attempts = 0
+coords_failed = 0
+angles_attempts = 0
+angles_failed = 0
+
 # 创建 Excel 工作簿
 wb = Workbook()
 ws = wb.active
 ws.title = "Joint Movements"
 ws.append(["Joint", "Negative Movement Time (s)", "Positive Movement Time (s)", "Negative Failures", "Positive Failures"])
 
-def get_current_time():
-    return time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime())
+def wait():
+    time.sleep(0.3)
+    while mc.is_moving():
+        time.sleep(0.1)
+    time.sleep(1)
 
 def move_to_limit(joint, angles, direction):
+    global angles_attempts,angles_failed
     """移动到极限位置并返回运动时间"""
     start_time = time.time()
     mc.send_angles(angles, speed)
-    print(f"{get_current_time()} {joint} 移动到{direction}极限...")
+    angles_attempts += 1
+    logger.debug(f" {joint} 移动到{direction}极限...")
     sleep(0.2)
 
     while mc.is_moving():
@@ -47,31 +58,71 @@ def move_to_limit(joint, angles, direction):
 
     if mc.is_in_position(angles):
         movement_time = round(end_time - start_time - 0.2, 3)  # 减去提前的0.2秒
-        print(f"{get_current_time()} {joint} {direction}运动总时间: {movement_time}秒")
+        logger.debug(f"{joint} {direction}运动总时间: {movement_time}秒")
     else:
-        movement_time = f"{get_current_time()} {joint} 未达到目标位置{angles}，当前角度为 {mc.get_angles()}"
-        print(movement_time)
+        movement_time = f" {joint} 未达到目标位置{angles}，当前角度为 {mc.get_angles()}"
+        logger.debug(movement_time)
+        angles_failed += 1
 
-    return movement_time
+    return movement_time,angles_attempts,angles_failed
 
+def coords_move():
+    global coords_attempts, coords_failed
+    coords_init_angles = [0, 30, -100, 40, 0.0, 0.0]
+
+    # 初始化位置
+    mc.send_angles(coords_init_angles, speed)
+    wait()
+    current = mc.get_coords()
+
+    for i,j in enumerate(current):
+        target_neg = current.copy()
+        target_pos = current.copy()
+
+        # 负向运动测试
+        target_neg[i] -= 20
+        mc.send_coords(target_neg, speed)
+        coords_attempts += 1
+        wait()
+        reached_pos = mc.get_coords()
+        if not mc.is_in_position(reached_pos,1):
+            coords_failed += 1
+            logger.debug(f"Axis {i + 1} 负向运动未到位 | 目标: {target_neg} 实际: {reached_pos}")
+
+        # 正向运动测试
+        target_pos[i] += 20
+        mc.send_coords(target_pos, 50)
+        coords_attempts += 1
+        wait()
+        reached_pos = mc.get_coords()
+        if not mc.is_in_position(reached_pos, 1):
+            coords_failed += 1
+            logger.debug(f"Axis {i + 1} 负向运动未到位 | 目标: {target_neg} 实际: {reached_pos}")
+
+    return coords_attempts, coords_failed
 
 def move():
+    global angles_failed, angles_attempts
     while True:
+        # 角度运动
         for joint, limits in joints.items():
-            print(f"{get_current_time()} 测试 {joint} 中...")
+            logger.info(f" 测试 {joint} 中...")
             min_angles = limits['min']
             max_angles = limits['max']
 
             # 移动到负向极限位置
-            neg_time = move_to_limit(joint, min_angles, "负向")
+            neg_time,angles_attempts,angles_failed = move_to_limit(joint, min_angles, "负向")
 
             # 移动到正向极限位置
-            pos_time = move_to_limit(joint, max_angles, "正向")
+            pos_time,angles_attempts,angles_failed = move_to_limit(joint, max_angles, "正向")
 
             # 将数据写入 Excel
             ws.append([joint, neg_time, pos_time])
         # 保存 Excel 文件
         wb.save(os.path.join(os.getcwd(), file_path, file_name))
+        # 坐标运动
+        coords_move()
+        print(f'角度发送次数:{angles_attempts} 角度失败次数:{angles_failed} 坐标发送次数:{coords_attempts} 坐标失败次数:{coords_failed}')
 
 lap = 0.1
 
@@ -81,17 +132,17 @@ def get():
         if mc.is_moving() == 1:
             count += 1
             r_a = mc.get_angles()
-            time.sleep(lap)
+            sleep(lap)
             r_c = mc.get_coords()
-            time.sleep(lap)
+            sleep(lap)
             servo_speed = mc.get_servo_speeds()
-            time.sleep(lap)
+            sleep(lap)
             current = mc.get_servo_currents()
-            time.sleep(lap)
+            sleep(lap)
             servo_status = mc.get_servo_status()
-            time.sleep(lap)
+            sleep(lap)
             robot_status = mc.get_robot_status()
-            time.sleep(lap)
+            sleep(lap)
             logger.info(f"当前角度{r_a}")
             logger.info(f"当前坐标{r_c}")
             logger.info(f"当前速度{servo_speed}")
@@ -127,6 +178,9 @@ def get():
         else:
             continue
 
+
+def get_current_time():
+    time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime())
 
 if __name__ == '__main__':
     mc.power_on()

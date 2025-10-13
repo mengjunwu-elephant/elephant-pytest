@@ -41,6 +41,7 @@ class Mycobot450Base:
     def default_settings(self):
         self.mc.set_fresh_mode(0)
         self.mc.set_debug_state(0)
+        self.mc.set_movement_type(1)
 
     def default_speed(self):
         self.mc.set_max_speed(0, 150)
@@ -69,6 +70,13 @@ class Mycobot450Base:
     def default_tool_reference(self):
         self.mc.set_tool_reference([0,0,0,0,0,0])
         self.mc.set_end_type(0)
+
+    def default_world_reference(self):
+        self.mc.set_world_reference([0,0,0,0,0,0])
+        self.mc.set_reference_frame(0)
+
+    def default_filter_len(self):
+        self.mc.set_filter_len(5,60)
 
     def go_zero(self):
         self.mc.send_angles(self.zero_angles, self.speed)

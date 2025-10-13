@@ -1,0 +1,59 @@
+import time
+import pytest
+import allure
+from pymycobot.error import MyCobotPro450DataException
+
+from common1 import logger
+from common1.test_data_handler import get_test_data_from_excel
+from settings import Mycobot450Base
+
+# 从 Excel 读取测试数据
+cases = get_test_data_from_excel(Mycobot450Base.TEST_DATA_FILE, "set_filter_len")
+
+
+@pytest.fixture(scope="module")
+def device():
+    """设备初始化和清理"""
+    dev = Mycobot450Base()
+    logger.info("初始化完成，接口测试开始")
+    yield dev
+    dev.default_filter_len()
+    logger.info("环境清理完成，接口测试结束")
+
+@allure.feature("设置滤波器参数")
+@allure.story("正确设置滤波器参数")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
+def test_set_filter_len1(device, case):
+    title = case["title"]
+    expected = case["expect_data"]
+
+    logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
+    logger.debug(f'test_api:{case["api"]}')
+    logger.debug(f'rank:{case["rank"]}')
+    logger.debug(f'value:{case["value"]}')
+
+    with allure.step(f"调用 {case['api']} 接口"):
+        set_res = device.mc.set_filter_len(case['rank'],case["value"])
+        time.sleep(1)
+        logger.debug(f"接口返回：{set_res}")
+
+    with allure.step('调用 get_filter_len 接口'):
+        get_res = device.mc.get_filter_len(case['rank'])
+        logger.debug(f"接口返回：{get_res}")
+
+    with allure.step("断言返回值类型为 int"):
+        assert isinstance(set_res, int), f"返回类型错误,应为{type(expected)},实际为 {type(set_res)}"
+
+    with allure.step("断言接口返回结果"):
+        allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(set_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert set_res == expected, f"用例【{title}】断言失败，期望 {expected},实际 {set_res}"
+
+    with allure.step("断言是否设置成功"):
+        allure.attach(str(case['value']), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(get_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert get_res == case['value'], f"用例【{title}】断言失败，期望 {case['value']},实际 {get_res}"
+
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
+
