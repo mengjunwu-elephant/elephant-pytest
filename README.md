@@ -50,3 +50,29 @@ allure --version
 pip install -r requirements.txt
 ```
 
+
+
+## **Windows系统Pytest测试框架部署指南**
+
+### **一、环境准备**
+
+1. **Python环境**
+
+   - 确保已安装Python 3.7+版本（推荐3.8+）
+
+   - 验证安装：`python --version`
+
+   - 建议使用虚拟环境（可选）：
+
+     `python -m venv venv .\venv\Scripts\activate `
+
+2. **JDK安装**
+
+   - 下载JDK 1.8+并配置环境变量
+   - 验证：`where java`
+
+### **三、Allure报告集成**
+
+1. **验证安装**
+
+   `allure --version `
