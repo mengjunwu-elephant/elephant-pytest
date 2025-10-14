@@ -1,4 +1,4 @@
-# Mercury-Pytest环境部署
+# Linux-Pytest环境部署
 
 ## 1.Java环境部署
 
