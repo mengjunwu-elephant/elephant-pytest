@@ -5,5 +5,5 @@ allure-report
 allure-results
 demo
 mycobot_320_123
-log
+log.log
 **/python_debug.log*
