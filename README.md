@@ -73,6 +73,5 @@ pip install -r requirements.txt
 
 ### **三、Allure报告集成**
 
-1. **验证安装**
-
-   `allure --version `
+1. allure下载地址：https://github.com/allure-framework/allure2/releases
+2. 验证安装`allure --version `
