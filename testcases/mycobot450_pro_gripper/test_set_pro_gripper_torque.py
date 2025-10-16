@@ -19,6 +19,7 @@ def device():
     yield dev
     dev.mc.set_pro_gripper_torque(100)
     time.sleep(3)
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 

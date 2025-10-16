@@ -14,6 +14,7 @@ def device():
     dev = Mycobot450Base()
     logger.info("初始化完成，接口测试开始")
     yield dev
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 @pytest.fixture(autouse=True)
@@ -59,7 +60,7 @@ def test_singular_point_error(device, case):
 
     with allure.step("机械臂运动至奇异点"):
         device.mc.send_angles(eval(case['target_angles']), device.speed)
-        sleep(3)
+        device.wait()
         device.mc.send_coord(case['axis'], case['target_coord'], device.speed)
         sleep(1)
         input("请观察机械臂末端是否变蓝，点击回车继续测试")

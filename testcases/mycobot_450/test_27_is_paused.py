@@ -18,7 +18,8 @@ def device():
     yield dev
     dev.default_settings()
     dev.go_zero()
-    time.sleep(3)
+    dev.wait()
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("is_paused 状态查询")

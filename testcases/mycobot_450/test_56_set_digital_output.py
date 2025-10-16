@@ -19,6 +19,7 @@ def device():
     input('请确认末端IO测试工具已连接,点击回车继续测试')
     yield dev
     dev.default_digital_io_output()
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("设置末端IO输出")

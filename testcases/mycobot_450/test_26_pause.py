@@ -20,6 +20,7 @@ def device():
     dev.default_settings()
     dev.go_zero()
     dev.wait()
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 @pytest.fixture(autouse=True)
@@ -35,6 +36,9 @@ def test_pause_normal(device, case):
     expected = case["expect_data"]
     logger.info(f"》》》用例【{title}】开始测试《《《")
     logger.debug(f"参数: {case['parameter']}")
+
+    with allure.step('机械臂切换至刷新模式'):
+        device.mc.set_fresh_mode(1)
 
     with allure.step('使机械臂运动'):
         device.mc.send_angles(device.coords_init_angles,device.speed)

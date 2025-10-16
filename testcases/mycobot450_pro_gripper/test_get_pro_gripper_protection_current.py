@@ -11,6 +11,7 @@ def device():
     dev = Mycobot450Base()
     logger.info("初始化完成，接口测试开始")
     yield dev
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 

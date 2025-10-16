@@ -16,6 +16,7 @@ def device():
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.mc.set_pro_gripper_speed(100)
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 

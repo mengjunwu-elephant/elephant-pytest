@@ -21,6 +21,7 @@ def device():
     dev.default_settings()
     # dev.go_zero()
     # dev.wait()
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("获取移动类型")
@@ -28,7 +29,7 @@ def device():
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
 def test_get_movement_type1(device, case):
     title = case["title"]
-    expected = eval(case["expect_data"])
+    expected = case["expect_data"]
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
@@ -37,8 +38,8 @@ def test_get_movement_type1(device, case):
         response = device.mc.get_movement_type()
         logger.debug(f"接口返回：{response}")
 
-    with allure.step("断言返回值类型为 list"):
-        assert isinstance(response, list), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"
+    with allure.step("断言返回值类型为 int"):
+        assert isinstance(response, int), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"
 
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)

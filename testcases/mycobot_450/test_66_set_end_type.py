@@ -18,6 +18,7 @@ def device():
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.default_settings()
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("设置末端坐标系")
@@ -64,7 +65,6 @@ def test_set_end_type_exception(device, case):
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
-    logger.debug(f'joint:{case["joint"]}')
 
     with allure.step(f"断言抛出 Mycobot450Exception,参数为{case['parameter']}"):
         with pytest.raises(MyCobotPro450DataException):

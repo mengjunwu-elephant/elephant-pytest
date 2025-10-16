@@ -21,6 +21,7 @@ def device():
     dev.default_settings()
     # dev.go_zero()
     # dev.wait()
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("获取滤波器参数")
@@ -28,7 +29,7 @@ def device():
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
 def test_get_filter_len1(device, case):
     title = case["title"]
-    expected = eval(case["expect_data"])
+    expected = case["expect_data"]
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')

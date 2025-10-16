@@ -16,8 +16,9 @@ def device():
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.default_settings()
-    # dev.go_zero()
+    dev.go_zero()
     dev.wait()
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("检查机械臂运动状态")
@@ -59,6 +60,7 @@ def test_is_moving_normal1(device, case):
 
     with allure.step("获取运动状态"):
         response = device.mc.is_moving()
+        device.wait()
 
     with allure.step("断言返回值类型为 int"):
         assert isinstance(response, int), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"

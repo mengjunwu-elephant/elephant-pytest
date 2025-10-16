@@ -8,7 +8,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # 产品名称
 CASES_DIR = {
     "1": "testcases/mycobot_450",
-    "2": "testcases/pro_gripper"
+    "2": "testcases/mycobot450_pro_gripper"
 }
 
 # 日志配置
@@ -25,7 +25,7 @@ REPORT_DIR = "allure-results"
 # mycobot450配置
 class Mycobot450Base:
     # 机械臂运动数据
-    speed = 10
+    speed = 50
     coords_init_angles =[0, 30, -100, -20, 0.0, 0.0] #坐标值：[149.9, -86.8, 298.4, 179.99, 0.0, -90.0]
     zero_angles = [0, 0, 0, 0, 0, 0]
     min_angles = [-165,-120,-158,-165,-165,-175]

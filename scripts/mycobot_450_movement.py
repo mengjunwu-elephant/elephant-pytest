@@ -85,9 +85,12 @@ def coords_move():
         coords_attempts += 1
         wait()
         reached_pos = mc.get_coords()
-        if not mc.is_in_position(reached_pos,1):
-            coords_failed += 1
-            logger.debug(f"Axis {i + 1} 负向运动未到位 | 目标: {target_neg} 实际: {reached_pos}")
+        try:
+            if not mc.is_in_position(reached_pos,1):
+                coords_failed += 1
+                logger.debug(f"Axis {i + 1} 负向运动未到位 | 目标: {target_neg} 实际: {reached_pos}")
+        except:
+            logger.debug('is_in_position 丢包')
 
         # 正向运动测试
         target_pos[i] += 20
@@ -95,9 +98,12 @@ def coords_move():
         coords_attempts += 1
         wait()
         reached_pos = mc.get_coords()
-        if not mc.is_in_position(reached_pos, 1):
-            coords_failed += 1
-            logger.debug(f"Axis {i + 1} 负向运动未到位 | 目标: {target_neg} 实际: {reached_pos}")
+        try:
+            if not mc.is_in_position(reached_pos, 1):
+                coords_failed += 1
+                logger.debug(f"Axis {i + 1} 负向运动未到位 | 目标: {target_neg} 实际: {reached_pos}")
+        except:
+            logger.debug('is_in_position 丢包')
 
     return coords_attempts, coords_failed
 
@@ -122,7 +128,7 @@ def move():
         wb.save(os.path.join(os.getcwd(), file_path, file_name))
         # 坐标运动
         coords_move()
-        print(f'角度发送次数:{angles_attempts} 角度失败次数:{angles_failed} 坐标发送次数:{coords_attempts} 坐标失败次数:{coords_failed}')
+        logger.debug(f'角度发送次数:{angles_attempts} 角度失败次数:{angles_failed} 坐标发送次数:{coords_attempts} 坐标失败次数:{coords_failed}')
 
 lap = 0.1
 
@@ -180,7 +186,8 @@ def get():
 
 
 def get_current_time():
-    time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime())
+    current_time = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime())
+    return current_time
 
 if __name__ == '__main__':
     mc.power_on()

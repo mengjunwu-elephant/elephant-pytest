@@ -21,6 +21,7 @@ def device():
     dev.default_world_reference()
     dev.go_zero()
     dev.wait()
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("设置世界坐标系")
@@ -59,7 +60,7 @@ def test_set_world_reference1(device, case):
     with allure.step("断言世界坐标系是否设置成功"):
         allure.attach(str(case['coords']), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(get_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert case['coords'] == get_res, f"用例【{title}】断言失败，期望 {case['coords']},实际 {get_res}"
+        assert eval(case['coords']) == get_res, f"用例【{title}】断言失败，期望 {case['coords']},实际 {get_res}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')

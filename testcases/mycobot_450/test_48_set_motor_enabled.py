@@ -20,6 +20,7 @@ def device():
     dev.default_settings()
     dev.go_zero()
     dev.wait()
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("设置机器人力矩状态")

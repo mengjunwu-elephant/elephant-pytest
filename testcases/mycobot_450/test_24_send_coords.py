@@ -21,6 +21,7 @@ def device():
     dev.default_settings()
     dev.go_zero()
     dev.wait()
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("设置全关节坐标")
@@ -89,11 +90,11 @@ def test_send_coords1(device, case):
 
     with allure.step("使机械臂运动到坐标初始姿态"):
         device.mc.send_angles(device.coords_init_angles,device.speed)
-        time.sleep(5)
+        device.wait()
 
     with allure.step(f"调用 {case['api']} 接口"):
         set_res = device.mc.send_coords(eval(case["coords"]), case["speed"])
-        time.sleep(5)
+        device.wait()
         logger.debug(f"接口返回：{set_res}")
 
     with allure.step(f'调用 get_coords 接口'):

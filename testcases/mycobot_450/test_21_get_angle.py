@@ -20,7 +20,8 @@ def device():
     yield dev
     dev.default_settings()
     dev.go_zero()
-    time.sleep(8)
+    dev.wait()
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 @pytest.fixture(autouse=True)

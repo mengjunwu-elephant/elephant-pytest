@@ -21,6 +21,7 @@ def device():
     dev.default_settings()
     dev.go_zero()
     dev.wait()
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("设置关节全角度")
@@ -80,6 +81,7 @@ def test_send_angles1(device, case):
 
     with allure.step(f'设置为刷新模式'):
         device.mc.set_fresh_mode(1)
+        time.sleep(10)
         mode = '刷新' if device.mc.get_fresh_mode() else '插补'
         logger.debug(f'当前模式为{mode}')
 

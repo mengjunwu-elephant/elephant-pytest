@@ -18,6 +18,7 @@ def device():
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.default_settings()
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("关节异常恢复")
