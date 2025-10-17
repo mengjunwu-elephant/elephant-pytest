@@ -36,6 +36,7 @@ def test_get_base_io_input1(device, case):
     with allure.step(f"调用 {case['api']} 接口"):
         response = device.mc.get_base_io_input(case["pin_no"])
         time.sleep(1)
+
         logger.debug(f"接口返回：{response}")
 
     with allure.step("断言返回值类型为 int"):

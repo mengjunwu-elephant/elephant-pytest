@@ -4,8 +4,11 @@ import threading
 from time import sleep
 from openpyxl import Workbook
 from pymycobot import Pro450Client
-from common1 import logger
+from log_handler import get_logger
 import random
+
+logger = get_logger('log', './log.log', debug=True)
+
 # 初始化机械臂
 mc = Pro450Client(debug=1)
 
@@ -73,7 +76,12 @@ def coords_move():
     # 初始化位置
     mc.send_angles(coords_init_angles, speed)
     wait()
-    current = mc.get_coords()
+
+    while 1:
+        current = mc.get_coords()
+        time.sleep(0.1)
+        if current not in [-1,None]:
+            break
 
     for i,j in enumerate(current):
         target_neg = current.copy()
@@ -94,14 +102,14 @@ def coords_move():
 
         # 正向运动测试
         target_pos[i] += 20
-        mc.send_coords(target_pos, 50)
+        mc.send_coords(target_pos, speed)
         coords_attempts += 1
         wait()
         reached_pos = mc.get_coords()
         try:
             if not mc.is_in_position(reached_pos, 1):
                 coords_failed += 1
-                logger.debug(f"Axis {i + 1} 负向运动未到位 | 目标: {target_neg} 实际: {reached_pos}")
+                logger.debug(f"Axis {i + 1} 正向运动未到位 | 目标: {target_pos} 实际: {reached_pos}")
         except:
             logger.debug('is_in_position 丢包')
 
@@ -126,7 +134,7 @@ def move():
             ws.append([joint, neg_time, pos_time])
         # 保存 Excel 文件
         wb.save(os.path.join(os.getcwd(), file_path, file_name))
-        # 坐标运动
+        # # 坐标运动
         coords_move()
         logger.debug(f'角度发送次数:{angles_attempts} 角度失败次数:{angles_failed} 坐标发送次数:{coords_attempts} 坐标失败次数:{coords_failed}')
 
@@ -182,6 +190,7 @@ def get():
             print("")
             time.sleep(lap)
         else:
+            time.sleep(0.05)
             continue
 
 
