@@ -59,7 +59,7 @@ def test_set_base_io_output1(device, case):
     with allure.step("断言底座IO状态"):
         allure.attach(str(case['state']), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(get_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert get_res == expected, f"用例【{title}】断言失败，期望 {case['state']},实际 {get_res}"
+        assert case['state'] == get_res, f"用例【{title}】断言失败，期望 {case['state']},实际 {get_res}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
