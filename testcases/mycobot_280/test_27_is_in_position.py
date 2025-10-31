@@ -70,9 +70,11 @@ def test_is_in_position_coords(device, case):
     with allure.step('使机械臂运动'):
         device.mc.send_angles(device.coords_init_angles, device.speed)
         device.wait()
+        time.sleep(2)
 
     with allure.step(f"调用 {case['api']} 接口查看坐标是否在点位"):
         response = device.mc.is_in_position(eval(param), mode)
+        logger.debug(f'当前坐标为：{device.mc.get_coords()}')
 
     with allure.step("断言返回值类型为 int"):
         assert isinstance(response, int), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"

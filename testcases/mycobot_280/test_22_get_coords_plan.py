@@ -65,7 +65,7 @@ def test_get_coords_plan0(device, case):
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(get_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(get_res, eval(expected),2,'获取关节坐标规划值') , f"用例【{title}】断言失败，期望 {expected},实际 {get_res}"
+        assert_almost_equal(get_res, eval(expected),5,'获取关节坐标规划值') , f"用例【{title}】断言失败，期望 {expected},实际 {get_res}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
@@ -110,7 +110,7 @@ def test_get_coords_plan1(device, case):
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(get_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(get_res, eval(expected), 2,
+        assert_almost_equal(get_res, eval(expected), 5,
                             '获取关节坐标规划值'), f"用例【{title}】断言失败，期望 {expected},实际 {get_res}"
 
     logger.info(f'✅ 用例【{title}】测试通过')

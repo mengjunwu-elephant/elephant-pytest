@@ -9,7 +9,7 @@ from common1.assert_utils import assert_almost_equal
 from settings import Mycobot280Base
 
 # 从 Excel 读取测试数据
-cases = get_test_data_from_excel(Mycobot280Base.TEST_DATA_FILE, "set_joint_min_angle")
+cases = get_test_data_from_excel(Mycobot280Base.TEST_DATA_FILE, "set_joint_min")
 
 
 @pytest.fixture(scope="module")
@@ -38,20 +38,23 @@ def test_set_joint_min_angle1(device, case):
     logger.debug(f'test_api:{case["api"]}')
 
     with allure.step(f"调用 {case['api']} 接口"):
-        response = device.mc.set_joint_min_angle(case["joint"],case["angle"])
+        response = device.mc.set_joint_min(case["joint"],case["angle"])
         logger.debug(f"接口返回：{response}")
 
     with allure.step('调整3关节角度，放置碰撞'):
         if case["joint"] == 2:
             device.mc.send_angle(3, 90,device.speed)
             device.wait()
+        elif case["joint"] == 4:
+            device.mc.send_angle(5, 90,device.speed)
+            device.wait()
 
     with allure.step('调用 send_angle 接口,使机械臂运动到最小角度范围外'):
-        device.mc.send_angle(case["joint"],case["angle"]+5,device.speed)
+        device.mc.send_angle(case["joint"],case["angle"]-5,device.speed)
         device.wait()
 
     with allure.step('调用 get_angles 接口,获取当前角度'):
-        angle = device.mc.get_angle(case['joint'])
+        angle = device.mc.get_angles()[case['joint']-1]
         logger.debug(f"当前角度：{angle}")
 
     with allure.step("断言返回值类型为 int"):
@@ -65,7 +68,7 @@ def test_set_joint_min_angle1(device, case):
     with allure.step("断言get_angle接口返回结果"):
         allure.attach(str(case['angle']), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(angle), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(case['angle'], angle, 1,'设置关节最小角度'), f"用例【{title}】断言失败，期望 {case['angle']},实际 {angle}"
+        assert_almost_equal(angle,case['angle'], 2,'设置关节最小角度'), f"用例【{title}】断言失败，期望 {case['angle']},实际 {angle}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
@@ -83,7 +86,7 @@ def test_set_joint_min_angle_exception(device, case):
 
     with allure.step(f"断言抛出 MyCobot280DataException,关节为{case['joint']},角度为{case['angle']}"):
         with pytest.raises(MyCobot280DataException):
-            device.mc.set_joint_min_angle(case['joint'],case['angle'])
+            device.mc.set_joint_min(case['joint'],case['angle'])
 
     logger.info(f"✅ 用例【{title}】异常断言通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")

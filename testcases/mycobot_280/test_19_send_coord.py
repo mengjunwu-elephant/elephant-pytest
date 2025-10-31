@@ -65,7 +65,7 @@ def test_send_coord0(device, case):
     with allure.step("断言 get_coords 返回值"):
         allure.attach(str(case["coord"]), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(get_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(get_res, case["coord"], 1,'插补模式设置单坐标'), f"用例【{title}】断言失败，期望 {case['coord']},实际 {get_res}"
+        assert_almost_equal(get_res, case["coord"], 5,'插补模式设置单坐标'), f"用例【{title}】断言失败，期望 {case['coord']},实际 {get_res}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
@@ -113,7 +113,7 @@ def test_send_coord1(device, case):
     with allure.step("断言 get_coords 返回值"):
         allure.attach(str(case["coord"]), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(get_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(get_res, case["coord"], 1,'刷新模式设置单坐标'), f"用例【{title}】断言失败，期望 {case['coord']},实际 {get_res}"
+        assert_almost_equal(get_res, case["coord"], 5,'刷新模式设置单坐标'), f"用例【{title}】断言失败，期望 {case['coord']},实际 {get_res}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')

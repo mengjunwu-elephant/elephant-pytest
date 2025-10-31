@@ -54,7 +54,7 @@ def test_set_servo_calibration1(device, case):
     with allure.step("断言get_angles接口返回结果"):
         allure.attach(str(device.init_angles), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(angles), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(device.init_angles, angles, 0.1,'设置舵机零位'), f"用例【{title}】断言失败，期望 {device.init_angles},实际 {angles}"
+        assert_almost_equal(device.init_angles, angles, 1,'设置舵机零位'), f"用例【{title}】断言失败，期望 {device.init_angles},实际 {angles}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')

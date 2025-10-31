@@ -32,7 +32,7 @@ def test_joint_brake1(device, case):
     logger.debug(f'joint:{case["joint"]}')
 
     with allure.step(f"调用 {case['api']} 接口"):
-        response = device.mc.joint_brake(case["joint"],case["parameter"])
+        response = device.mc.joint_brake(case["joint"])
         time.sleep(1)
         logger.debug(f"接口返回：{response}")
 
@@ -58,9 +58,9 @@ def test_joint_brake_exception(device, case):
     logger.debug(f'test_api:{case["api"]}')
     logger.debug(f'joint:{case["joint"]}')
 
-    with allure.step(f"断言抛出 MyCobot280DataException,关节为{case['joint']},参数为{case['parameter']}"):
+    with allure.step(f"断言抛出 MyCobot280DataException,关节为{case['joint']}"):
         with pytest.raises(MyCobot280DataException):
-            device.mc.joint_brake(case['joint'],case['parameter'])
+            device.mc.joint_brake(case['joint'])
 
     logger.info(f"✅ 用例【{title}】异常断言通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")

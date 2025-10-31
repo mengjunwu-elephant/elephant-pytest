@@ -3,7 +3,6 @@ import time
 
 from pymycobot import *
 
-from elegripper.elegripper import Gripper
 
 # 项目路径
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -46,7 +45,7 @@ class Mycobot280Base:
     # 测试数据配置
     TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mycobot_280.xlsx')
 
-    def __init__(self, port="com10", baudrate=115200):
+    def __init__(self, port="com12", baudrate=115200):
         self.mc = MyCobot280(port, baudrate=baudrate,debug=1)
 
     def default_settings(self):

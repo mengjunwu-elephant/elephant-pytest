@@ -28,7 +28,7 @@ def device():
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"], ids=lambda c: c["title"])
 def test_get_encoders(device, case):
     title = case["title"]
-    expected = case["expect_data"]
+    expected = eval(case["expect_data"])
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')

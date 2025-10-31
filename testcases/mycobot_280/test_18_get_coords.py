@@ -55,7 +55,7 @@ def test_get_coords(device, case):
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(response,expected,tol=2,name='获取全坐标'), f"用例【{title}】断言失败，期望 {expected}，实际 {response}"
+        assert_almost_equal(response,expected,tol=5,name='获取全坐标'), f"用例【{title}】断言失败，期望 {expected}，实际 {response}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')

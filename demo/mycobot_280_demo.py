@@ -1,16 +1,38 @@
+import time
 from time import sleep
 
 from pymycobot import MyCobot280
 
 
-mc = MyCobot280("COM10",debug=1)
+mc = MyCobot280("COM12",debug=1)
 # mc.send_angles()
 # mc.send_angles([50,50,50,50,50,50],20)
-# mc.send_angles([0,20,-90,-20,0,0],20)
-# sleep(1)
-# mc.joint_brake(3)
-mc.go_home()
-# angles = mc.get_angles_plan()
+# mc.release_all_servos()
+# while 1:
+#     print(mc.get_angles())
+#     time.sleep(1)
+# mc.set_encoder(1,3980,10)
+# sleep(5)
+# print(mc.get_encoder(5))
+# print(mc.get_angles())
+# mc.set_joint_min(1,150)
+# mc.set_joint_min(1,-168)
+# # print(mc.get_joint_min_angle(1))
+# print(mc.get_joint_max_angle(1))
+# print(mc.get_joint_min_angle(1))
+mc.set_fresh_mode(1)
+mc.send_angle(1,-160,10)
+sleep(2)
+mc.joint_brake(1)
+# mc.send_angles([0,20,-90,-20,0,0],50)
+# angles = mc.get_angles()
+# print(mc.is_in_position(angles, 0))
+
+# mc.send_coords([128.8, -62.2, 227.7, 178.42, -0.28, -90.08],50)
+# time.sleep(5)
+# coords = mc.get_coords()
+# print(coords)
+# print(mc.is_in_position(coords,1))
 # print(angles)
 # mc.send_angles(angles,20)
 # print(mc.get_angles())
