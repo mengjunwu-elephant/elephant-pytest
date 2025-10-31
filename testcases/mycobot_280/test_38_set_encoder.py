@@ -51,7 +51,7 @@ def test_set_encoder(device, case):
             device.wait()
         elif case['joint'] == 2 and case['encoder'] == 3574:
             device.mc.send_angle(3,90,50)
-        elif case['joint'] == 2 and case['encoder'] == 353:
+        elif case['joint'] == 2 and case['encoder'] == 506:
             device.mc.send_angle(3,-90,50)
 
     with allure.step("调用 set_encoder 接口"):

@@ -14133,3 +14133,270 @@ DEBUG 2025-10-31 11:35:28,071 [test_53_focus_servo.py-->line:64]:接口: focus_s
 INFO 2025-10-31 11:35:28,072 [test_53_focus_servo.py-->line:70]:✅ 用例【设置关节超限】异常测试通过
 INFO 2025-10-31 11:35:28,072 [test_53_focus_servo.py-->line:71]:》》》用例【设置关节超限】测试完成《《《
 INFO 2025-10-31 11:35:29,686 [test_53_focus_servo.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-10-31 15:17:11,514 [test_38_set_encoder.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-10-31 15:17:24,763 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置1关节正限位】开始测试《《《《《
+DEBUG 2025-10-31 15:17:24,763 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:17:24,763 [test_38_set_encoder.py-->line:39]:test_joint:1
+DEBUG 2025-10-31 15:17:24,763 [test_38_set_encoder.py-->line:40]:test_encoder:3947
+DEBUG 2025-10-31 15:17:24,763 [test_38_set_encoder.py-->line:41]:test_speed:10
+DEBUG 2025-10-31 15:17:24,763 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-10-31 15:17:32,330 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置1关节正限位】测试通过
+INFO 2025-10-31 15:17:32,330 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置1关节正限位】测试完成《《《《《
+INFO 2025-10-31 15:17:39,838 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置1关节负限位】开始测试《《《《《
+DEBUG 2025-10-31 15:17:39,838 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:17:39,838 [test_38_set_encoder.py-->line:39]:test_joint:1
+DEBUG 2025-10-31 15:17:39,838 [test_38_set_encoder.py-->line:40]:test_encoder:147
+DEBUG 2025-10-31 15:17:39,838 [test_38_set_encoder.py-->line:41]:test_speed:20
+DEBUG 2025-10-31 15:17:39,839 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-10-31 15:17:51,068 [test_38_set_encoder.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-10-31 15:17:58,594 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置1关节正限位】开始测试《《《《《
+DEBUG 2025-10-31 15:17:58,594 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:17:58,594 [test_38_set_encoder.py-->line:39]:test_joint:1
+DEBUG 2025-10-31 15:17:58,594 [test_38_set_encoder.py-->line:40]:test_encoder:3947
+DEBUG 2025-10-31 15:17:58,594 [test_38_set_encoder.py-->line:41]:test_speed:10
+DEBUG 2025-10-31 15:17:58,594 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-10-31 15:18:06,111 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置1关节正限位】测试通过
+INFO 2025-10-31 15:18:06,111 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置1关节正限位】测试完成《《《《《
+INFO 2025-10-31 15:18:13,621 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置1关节负限位】开始测试《《《《《
+DEBUG 2025-10-31 15:18:13,622 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:18:13,622 [test_38_set_encoder.py-->line:39]:test_joint:1
+DEBUG 2025-10-31 15:18:13,622 [test_38_set_encoder.py-->line:40]:test_encoder:147
+DEBUG 2025-10-31 15:18:13,622 [test_38_set_encoder.py-->line:41]:test_speed:20
+DEBUG 2025-10-31 15:18:13,622 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-10-31 15:18:20,516 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置1关节负限位】测试通过
+INFO 2025-10-31 15:18:20,516 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置1关节负限位】测试完成《《《《《
+INFO 2025-10-31 15:18:28,137 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置2关节正限位】开始测试《《《《《
+DEBUG 2025-10-31 15:18:28,138 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:18:28,138 [test_38_set_encoder.py-->line:39]:test_joint:2
+DEBUG 2025-10-31 15:18:28,138 [test_38_set_encoder.py-->line:40]:test_encoder:3574
+DEBUG 2025-10-31 15:18:28,138 [test_38_set_encoder.py-->line:41]:test_speed:30
+DEBUG 2025-10-31 15:18:28,138 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-10-31 15:18:32,633 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置2关节正限位】测试通过
+INFO 2025-10-31 15:18:32,633 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置2关节正限位】测试完成《《《《《
+INFO 2025-10-31 15:18:38,920 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置2关节负限位】开始测试《《《《《
+DEBUG 2025-10-31 15:18:38,921 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:18:38,921 [test_38_set_encoder.py-->line:39]:test_joint:2
+DEBUG 2025-10-31 15:18:38,921 [test_38_set_encoder.py-->line:40]:test_encoder:506
+DEBUG 2025-10-31 15:18:38,921 [test_38_set_encoder.py-->line:41]:test_speed:40
+DEBUG 2025-10-31 15:18:38,921 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-10-31 15:18:42,766 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置2关节负限位】测试通过
+INFO 2025-10-31 15:18:42,766 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置2关节负限位】测试完成《《《《《
+INFO 2025-10-31 15:18:49,045 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置3关节正限位】开始测试《《《《《
+DEBUG 2025-10-31 15:18:49,045 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:18:49,045 [test_38_set_encoder.py-->line:39]:test_joint:3
+DEBUG 2025-10-31 15:18:49,045 [test_38_set_encoder.py-->line:40]:test_encoder:3750
+DEBUG 2025-10-31 15:18:49,045 [test_38_set_encoder.py-->line:41]:test_speed:50
+DEBUG 2025-10-31 15:18:49,045 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-10-31 15:18:52,305 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置3关节正限位】测试通过
+INFO 2025-10-31 15:18:52,306 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置3关节正限位】测试完成《《《《《
+INFO 2025-10-31 15:18:59,194 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置3关节负限位】开始测试《《《《《
+DEBUG 2025-10-31 15:18:59,194 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:18:59,194 [test_38_set_encoder.py-->line:39]:test_joint:3
+DEBUG 2025-10-31 15:18:59,194 [test_38_set_encoder.py-->line:40]:test_encoder:344
+DEBUG 2025-10-31 15:18:59,194 [test_38_set_encoder.py-->line:41]:test_speed:60
+DEBUG 2025-10-31 15:18:59,194 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-10-31 15:19:02,201 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置3关节负限位】测试通过
+INFO 2025-10-31 15:19:02,201 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置3关节负限位】测试完成《《《《《
+INFO 2025-10-31 15:19:09,079 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置4关节正限位】开始测试《《《《《
+DEBUG 2025-10-31 15:19:09,080 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:19:09,080 [test_38_set_encoder.py-->line:39]:test_joint:4
+DEBUG 2025-10-31 15:19:09,080 [test_38_set_encoder.py-->line:40]:test_encoder:3705
+DEBUG 2025-10-31 15:19:09,080 [test_38_set_encoder.py-->line:41]:test_speed:70
+DEBUG 2025-10-31 15:19:09,080 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-10-31 15:19:17,850 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置4关节负限位】开始测试《《《《《
+DEBUG 2025-10-31 15:19:17,850 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:19:17,851 [test_38_set_encoder.py-->line:39]:test_joint:4
+DEBUG 2025-10-31 15:19:17,851 [test_38_set_encoder.py-->line:40]:test_encoder:390
+DEBUG 2025-10-31 15:19:17,851 [test_38_set_encoder.py-->line:41]:test_speed:80
+DEBUG 2025-10-31 15:19:17,851 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-10-31 15:19:26,492 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置5关节正限位】开始测试《《《《《
+DEBUG 2025-10-31 15:19:26,493 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:19:26,493 [test_38_set_encoder.py-->line:39]:test_joint:5
+DEBUG 2025-10-31 15:19:26,493 [test_38_set_encoder.py-->line:40]:test_encoder:3788
+DEBUG 2025-10-31 15:19:26,493 [test_38_set_encoder.py-->line:41]:test_speed:90
+DEBUG 2025-10-31 15:19:26,493 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-10-31 15:19:36,045 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置5关节负限位】开始测试《《《《《
+DEBUG 2025-10-31 15:19:36,046 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:19:36,046 [test_38_set_encoder.py-->line:39]:test_joint:5
+DEBUG 2025-10-31 15:19:36,046 [test_38_set_encoder.py-->line:40]:test_encoder:344
+DEBUG 2025-10-31 15:19:36,046 [test_38_set_encoder.py-->line:41]:test_speed:100
+DEBUG 2025-10-31 15:19:36,046 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-10-31 15:19:38,455 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置5关节负限位】测试通过
+INFO 2025-10-31 15:19:38,455 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置5关节负限位】测试完成《《《《《
+INFO 2025-10-31 15:19:45,229 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置6关节正限位】开始测试《《《《《
+DEBUG 2025-10-31 15:19:45,230 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:19:45,230 [test_38_set_encoder.py-->line:39]:test_joint:6
+DEBUG 2025-10-31 15:19:45,230 [test_38_set_encoder.py-->line:40]:test_encoder:6
+DEBUG 2025-10-31 15:19:45,230 [test_38_set_encoder.py-->line:41]:test_speed:10
+DEBUG 2025-10-31 15:19:45,230 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-10-31 15:19:53,226 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置6关节正限位】测试通过
+INFO 2025-10-31 15:19:53,226 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置6关节正限位】测试完成《《《《《
+INFO 2025-10-31 15:20:01,212 [test_38_set_encoder.py-->line:37]:》》》》》用例【刷新模式下设置6关节负限位】开始测试《《《《《
+DEBUG 2025-10-31 15:20:01,212 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:20:01,213 [test_38_set_encoder.py-->line:39]:test_joint:6
+DEBUG 2025-10-31 15:20:01,213 [test_38_set_encoder.py-->line:40]:test_encoder:4087
+DEBUG 2025-10-31 15:20:01,213 [test_38_set_encoder.py-->line:41]:test_speed:20
+DEBUG 2025-10-31 15:20:01,213 [test_38_set_encoder.py-->line:42]:test_fresh_mode:1
+INFO 2025-10-31 15:20:08,363 [test_38_set_encoder.py-->line:74]:✅ 用例【刷新模式下设置6关节负限位】测试通过
+INFO 2025-10-31 15:20:08,363 [test_38_set_encoder.py-->line:75]:》》》》》用例【刷新模式下设置6关节负限位】测试完成《《《《《
+INFO 2025-10-31 15:20:16,353 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置1关节正限位】开始测试《《《《《
+DEBUG 2025-10-31 15:20:16,354 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:20:16,354 [test_38_set_encoder.py-->line:39]:test_joint:1
+DEBUG 2025-10-31 15:20:16,354 [test_38_set_encoder.py-->line:40]:test_encoder:3947
+DEBUG 2025-10-31 15:20:16,354 [test_38_set_encoder.py-->line:41]:test_speed:30
+DEBUG 2025-10-31 15:20:16,354 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-10-31 15:20:30,223 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置1关节负限位】开始测试《《《《《
+DEBUG 2025-10-31 15:20:30,224 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:20:30,224 [test_38_set_encoder.py-->line:39]:test_joint:1
+DEBUG 2025-10-31 15:20:30,224 [test_38_set_encoder.py-->line:40]:test_encoder:147
+DEBUG 2025-10-31 15:20:30,224 [test_38_set_encoder.py-->line:41]:test_speed:40
+DEBUG 2025-10-31 15:20:30,224 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-10-31 15:20:44,137 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置2关节正限位】开始测试《《《《《
+DEBUG 2025-10-31 15:20:44,138 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:20:44,138 [test_38_set_encoder.py-->line:39]:test_joint:2
+DEBUG 2025-10-31 15:20:44,138 [test_38_set_encoder.py-->line:40]:test_encoder:3574
+DEBUG 2025-10-31 15:20:44,138 [test_38_set_encoder.py-->line:41]:test_speed:50
+DEBUG 2025-10-31 15:20:44,138 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-10-31 15:20:57,368 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置2关节负限位】开始测试《《《《《
+DEBUG 2025-10-31 15:20:57,369 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:20:57,369 [test_38_set_encoder.py-->line:39]:test_joint:2
+DEBUG 2025-10-31 15:20:57,369 [test_38_set_encoder.py-->line:40]:test_encoder:506
+DEBUG 2025-10-31 15:20:57,369 [test_38_set_encoder.py-->line:41]:test_speed:60
+DEBUG 2025-10-31 15:20:57,369 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-10-31 15:21:10,715 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置3关节正限位】开始测试《《《《《
+DEBUG 2025-10-31 15:21:10,715 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:21:10,715 [test_38_set_encoder.py-->line:39]:test_joint:3
+DEBUG 2025-10-31 15:21:10,715 [test_38_set_encoder.py-->line:40]:test_encoder:3750
+DEBUG 2025-10-31 15:21:10,715 [test_38_set_encoder.py-->line:41]:test_speed:70
+DEBUG 2025-10-31 15:21:10,715 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-10-31 15:21:23,486 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置3关节负限位】开始测试《《《《《
+DEBUG 2025-10-31 15:21:23,486 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:21:23,488 [test_38_set_encoder.py-->line:39]:test_joint:3
+DEBUG 2025-10-31 15:21:23,488 [test_38_set_encoder.py-->line:40]:test_encoder:344
+DEBUG 2025-10-31 15:21:23,488 [test_38_set_encoder.py-->line:41]:test_speed:80
+DEBUG 2025-10-31 15:21:23,488 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-10-31 15:21:25,037 [test_38_set_encoder.py-->line:74]:✅ 用例【插补模式下设置3关节负限位】测试通过
+INFO 2025-10-31 15:21:25,037 [test_38_set_encoder.py-->line:75]:》》》》》用例【插补模式下设置3关节负限位】测试完成《《《《《
+INFO 2025-10-31 15:21:36,218 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置4关节正限位】开始测试《《《《《
+DEBUG 2025-10-31 15:21:36,218 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:21:36,218 [test_38_set_encoder.py-->line:39]:test_joint:4
+DEBUG 2025-10-31 15:21:36,218 [test_38_set_encoder.py-->line:40]:test_encoder:3705
+DEBUG 2025-10-31 15:21:36,218 [test_38_set_encoder.py-->line:41]:test_speed:90
+DEBUG 2025-10-31 15:21:36,218 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-10-31 15:21:48,032 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置4关节负限位】开始测试《《《《《
+DEBUG 2025-10-31 15:21:48,032 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:21:48,032 [test_38_set_encoder.py-->line:39]:test_joint:4
+DEBUG 2025-10-31 15:21:48,032 [test_38_set_encoder.py-->line:40]:test_encoder:390
+DEBUG 2025-10-31 15:21:48,033 [test_38_set_encoder.py-->line:41]:test_speed:100
+DEBUG 2025-10-31 15:21:48,033 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-10-31 15:21:59,760 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置5关节正限位】开始测试《《《《《
+DEBUG 2025-10-31 15:21:59,761 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:21:59,761 [test_38_set_encoder.py-->line:39]:test_joint:5
+DEBUG 2025-10-31 15:21:59,761 [test_38_set_encoder.py-->line:40]:test_encoder:3788
+DEBUG 2025-10-31 15:21:59,761 [test_38_set_encoder.py-->line:41]:test_speed:60
+DEBUG 2025-10-31 15:21:59,761 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-10-31 15:22:12,731 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置5关节负限位】开始测试《《《《《
+DEBUG 2025-10-31 15:22:12,732 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:22:12,732 [test_38_set_encoder.py-->line:39]:test_joint:5
+DEBUG 2025-10-31 15:22:12,732 [test_38_set_encoder.py-->line:40]:test_encoder:344
+DEBUG 2025-10-31 15:22:12,732 [test_38_set_encoder.py-->line:41]:test_speed:60
+DEBUG 2025-10-31 15:22:12,732 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-10-31 15:22:25,570 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置6关节正限位】开始测试《《《《《
+DEBUG 2025-10-31 15:22:25,571 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:22:25,571 [test_38_set_encoder.py-->line:39]:test_joint:6
+DEBUG 2025-10-31 15:22:25,571 [test_38_set_encoder.py-->line:40]:test_encoder:6
+DEBUG 2025-10-31 15:22:25,571 [test_38_set_encoder.py-->line:41]:test_speed:60
+DEBUG 2025-10-31 15:22:25,571 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-10-31 15:22:40,280 [test_38_set_encoder.py-->line:37]:》》》》》用例【插补模式下设置6关节负限位】开始测试《《《《《
+DEBUG 2025-10-31 15:22:40,282 [test_38_set_encoder.py-->line:38]:test_api:set_encoder
+DEBUG 2025-10-31 15:22:40,282 [test_38_set_encoder.py-->line:39]:test_joint:6
+DEBUG 2025-10-31 15:22:40,282 [test_38_set_encoder.py-->line:40]:test_encoder:4087
+DEBUG 2025-10-31 15:22:40,282 [test_38_set_encoder.py-->line:41]:test_speed:60
+DEBUG 2025-10-31 15:22:40,282 [test_38_set_encoder.py-->line:42]:test_fresh_mode:0
+INFO 2025-10-31 15:22:48,812 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-10-31 15:22:48,812 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-10-31 15:22:48,812 [test_38_set_encoder.py-->line:86]:test_joint: 7
+DEBUG 2025-10-31 15:22:48,812 [test_38_set_encoder.py-->line:87]:test_encoder: 0
+DEBUG 2025-10-31 15:22:48,812 [test_38_set_encoder.py-->line:88]:test_speed: 60
+INFO 2025-10-31 15:22:54,988 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-10-31 15:22:54,988 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-10-31 15:22:54,988 [test_38_set_encoder.py-->line:86]:test_joint: 0
+DEBUG 2025-10-31 15:22:54,988 [test_38_set_encoder.py-->line:87]:test_encoder: 0
+DEBUG 2025-10-31 15:22:54,988 [test_38_set_encoder.py-->line:88]:test_speed: 60
+INFO 2025-10-31 15:22:54,988 [test_38_set_encoder.py-->line:94]:✅ 用例【设置关节超限】测试通过
+INFO 2025-10-31 15:22:54,988 [test_38_set_encoder.py-->line:95]:》》》》》用例【设置关节超限】测试完成《《《《《
+INFO 2025-10-31 15:22:56,524 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2025-10-31 15:22:56,524 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-10-31 15:22:56,524 [test_38_set_encoder.py-->line:86]:test_joint: 1
+DEBUG 2025-10-31 15:22:56,524 [test_38_set_encoder.py-->line:87]:test_encoder: 20
+DEBUG 2025-10-31 15:22:56,524 [test_38_set_encoder.py-->line:88]:test_speed: 101
+INFO 2025-10-31 15:22:56,524 [test_38_set_encoder.py-->line:94]:✅ 用例【设置速度超限】测试通过
+INFO 2025-10-31 15:22:56,524 [test_38_set_encoder.py-->line:95]:》》》》》用例【设置速度超限】测试完成《《《《《
+INFO 2025-10-31 15:22:58,056 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2025-10-31 15:22:58,057 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-10-31 15:22:58,057 [test_38_set_encoder.py-->line:86]:test_joint: 1
+DEBUG 2025-10-31 15:22:58,057 [test_38_set_encoder.py-->line:87]:test_encoder: 30
+DEBUG 2025-10-31 15:22:58,057 [test_38_set_encoder.py-->line:88]:test_speed: 0
+INFO 2025-10-31 15:22:58,057 [test_38_set_encoder.py-->line:94]:✅ 用例【设置速度超限】测试通过
+INFO 2025-10-31 15:22:58,058 [test_38_set_encoder.py-->line:95]:》》》》》用例【设置速度超限】测试完成《《《《《
+INFO 2025-10-31 15:22:59,595 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置1关节正限位超限】开始测试《《《《《
+DEBUG 2025-10-31 15:22:59,595 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-10-31 15:22:59,595 [test_38_set_encoder.py-->line:86]:test_joint: 1
+DEBUG 2025-10-31 15:22:59,595 [test_38_set_encoder.py-->line:87]:test_encoder: 4097
+DEBUG 2025-10-31 15:22:59,595 [test_38_set_encoder.py-->line:88]:test_speed: 10
+INFO 2025-10-31 15:23:01,146 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置1关节负限位超限】开始测试《《《《《
+DEBUG 2025-10-31 15:23:01,147 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-10-31 15:23:01,147 [test_38_set_encoder.py-->line:86]:test_joint: 1
+DEBUG 2025-10-31 15:23:01,147 [test_38_set_encoder.py-->line:87]:test_encoder: -1
+DEBUG 2025-10-31 15:23:01,147 [test_38_set_encoder.py-->line:88]:test_speed: 20
+INFO 2025-10-31 15:23:02,731 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置2关节正限位超限】开始测试《《《《《
+DEBUG 2025-10-31 15:23:02,731 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-10-31 15:23:02,731 [test_38_set_encoder.py-->line:86]:test_joint: 2
+DEBUG 2025-10-31 15:23:02,731 [test_38_set_encoder.py-->line:87]:test_encoder: 4097
+DEBUG 2025-10-31 15:23:02,731 [test_38_set_encoder.py-->line:88]:test_speed: 30
+INFO 2025-10-31 15:23:04,283 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置2关节负限位超限】开始测试《《《《《
+DEBUG 2025-10-31 15:23:04,284 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-10-31 15:23:04,284 [test_38_set_encoder.py-->line:86]:test_joint: 2
+DEBUG 2025-10-31 15:23:04,284 [test_38_set_encoder.py-->line:87]:test_encoder: -1
+DEBUG 2025-10-31 15:23:04,284 [test_38_set_encoder.py-->line:88]:test_speed: 40
+INFO 2025-10-31 15:23:06,050 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置3关节正限位超限】开始测试《《《《《
+DEBUG 2025-10-31 15:23:06,051 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-10-31 15:23:06,051 [test_38_set_encoder.py-->line:86]:test_joint: 3
+DEBUG 2025-10-31 15:23:06,051 [test_38_set_encoder.py-->line:87]:test_encoder: 4097
+DEBUG 2025-10-31 15:23:06,051 [test_38_set_encoder.py-->line:88]:test_speed: 50
+INFO 2025-10-31 15:23:07,595 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置3关节负限位超限】开始测试《《《《《
+DEBUG 2025-10-31 15:23:07,596 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-10-31 15:23:07,596 [test_38_set_encoder.py-->line:86]:test_joint: 3
+DEBUG 2025-10-31 15:23:07,596 [test_38_set_encoder.py-->line:87]:test_encoder: -1
+DEBUG 2025-10-31 15:23:07,596 [test_38_set_encoder.py-->line:88]:test_speed: 60
+INFO 2025-10-31 15:23:09,143 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置4关节正限位超限】开始测试《《《《《
+DEBUG 2025-10-31 15:23:09,145 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-10-31 15:23:09,145 [test_38_set_encoder.py-->line:86]:test_joint: 4
+DEBUG 2025-10-31 15:23:09,145 [test_38_set_encoder.py-->line:87]:test_encoder: 4097
+DEBUG 2025-10-31 15:23:09,145 [test_38_set_encoder.py-->line:88]:test_speed: 70
+INFO 2025-10-31 15:23:10,692 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置4关节负限位超限】开始测试《《《《《
+DEBUG 2025-10-31 15:23:10,692 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-10-31 15:23:10,692 [test_38_set_encoder.py-->line:86]:test_joint: 4
+DEBUG 2025-10-31 15:23:10,692 [test_38_set_encoder.py-->line:87]:test_encoder: -1
+DEBUG 2025-10-31 15:23:10,692 [test_38_set_encoder.py-->line:88]:test_speed: 80
+INFO 2025-10-31 15:23:12,239 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置5关节正限位超限】开始测试《《《《《
+DEBUG 2025-10-31 15:23:12,239 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-10-31 15:23:12,239 [test_38_set_encoder.py-->line:86]:test_joint: 5
+DEBUG 2025-10-31 15:23:12,239 [test_38_set_encoder.py-->line:87]:test_encoder: 4097
+DEBUG 2025-10-31 15:23:12,239 [test_38_set_encoder.py-->line:88]:test_speed: 90
+INFO 2025-10-31 15:23:13,785 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置5关节负限位超限】开始测试《《《《《
+DEBUG 2025-10-31 15:23:13,785 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-10-31 15:23:13,785 [test_38_set_encoder.py-->line:86]:test_joint: 5
+DEBUG 2025-10-31 15:23:13,786 [test_38_set_encoder.py-->line:87]:test_encoder: -1
+DEBUG 2025-10-31 15:23:13,786 [test_38_set_encoder.py-->line:88]:test_speed: 100
+INFO 2025-10-31 15:23:15,336 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置6关节正限位超限】开始测试《《《《《
+DEBUG 2025-10-31 15:23:15,337 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-10-31 15:23:15,337 [test_38_set_encoder.py-->line:86]:test_joint: 6
+DEBUG 2025-10-31 15:23:15,337 [test_38_set_encoder.py-->line:87]:test_encoder: 4097
+DEBUG 2025-10-31 15:23:15,337 [test_38_set_encoder.py-->line:88]:test_speed: 10
+INFO 2025-10-31 15:23:28,764 [test_38_set_encoder.py-->line:82]:》》》》》用例【设置6关节负限位超限】开始测试《《《《《
+DEBUG 2025-10-31 15:23:28,765 [test_38_set_encoder.py-->line:85]:test_api: set_encoder
+DEBUG 2025-10-31 15:23:28,765 [test_38_set_encoder.py-->line:86]:test_joint: 6
+DEBUG 2025-10-31 15:23:28,765 [test_38_set_encoder.py-->line:87]:test_encoder: -1
+DEBUG 2025-10-31 15:23:28,765 [test_38_set_encoder.py-->line:88]:test_speed: 20
+INFO 2025-10-31 15:23:30,427 [test_38_set_encoder.py-->line:23]:环境清理完成，接口测试结束
