@@ -1,22 +1,30 @@
 import time
 from time import sleep
 
-from pymycobot import MyCobot280
+from pymycobot import MyCobot280,MyArmC
 
 
-mc = MyCobot280("COM12",debug=1)
+mc = MyCobot280("COM5",debug=1)
+# mb = MyArmC("COM3",debug=1)
 # mc.send_angles()
 # mc.send_angles([50,50,50,50,50,50],20)
+# print(mb.get_joints_angle())
+# print(mb.get_robot_firmware_version())
 # mc.release_all_servos()
+# mc.go_home()
+mc.set_joint_max(1,160)
+mc.send_angle(1,165,10)
+print(mc.get_joint_max_angle(1))
+print(mc.get_angles())
 # while 1:
 #     print(mc.get_angles())
 #     time.sleep(1)
-mc.send_angle(5,-90,50)
-mc.set_encoder(4,3700,10)
+# mc.send_angle(5,-90,50)
+# mc.set_encoder(4,3700,10)
 # mc.send_angle(4,0,100)
 # sleep(5)
-print(mc.get_encoder(4))
-print(mc.get_angles())
+# print(mc.get_encoder(4))
+# print(mc.get_angles())
 # mc.set_joint_min(1,150)
 # mc.set_joint_min(1,-168)
 # # print(mc.get_joint_min_angle(1))

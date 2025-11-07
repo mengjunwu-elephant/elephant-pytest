@@ -14400,3 +14400,1683 @@ DEBUG 2025-10-31 15:23:28,765 [test_38_set_encoder.py-->line:86]:test_joint: 6
 DEBUG 2025-10-31 15:23:28,765 [test_38_set_encoder.py-->line:87]:test_encoder: -1
 DEBUG 2025-10-31 15:23:28,765 [test_38_set_encoder.py-->line:88]:test_speed: 20
 INFO 2025-10-31 15:23:30,427 [test_38_set_encoder.py-->line:23]:环境清理完成，接口测试结束
+INFO 2025-11-05 16:31:00,238 [test_44_set_joint_max.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-11-05 16:31:00,240 [test_44_set_joint_max.py-->line:37]:》》》》》用例【设置一关节最大角度】开始测试《《《《《
+DEBUG 2025-11-05 16:31:00,240 [test_44_set_joint_max.py-->line:38]:test_api:set_joint_max
+DEBUG 2025-11-05 16:31:00,271 [test_44_set_joint_max.py-->line:42]:接口返回：1
+DEBUG 2025-11-05 16:31:01,813 [test_44_set_joint_max.py-->line:55]:当前角度：-0.35
+INFO 2025-11-05 16:31:03,495 [test_44_set_joint_max.py-->line:37]:》》》》》用例【设置二关节最大角度】开始测试《《《《《
+DEBUG 2025-11-05 16:31:03,495 [test_44_set_joint_max.py-->line:38]:test_api:set_joint_max
+DEBUG 2025-11-05 16:31:03,502 [test_44_set_joint_max.py-->line:42]:接口返回：1
+DEBUG 2025-11-05 16:31:07,598 [test_44_set_joint_max.py-->line:55]:当前角度：-0.08
+INFO 2025-11-05 16:31:12,250 [test_44_set_joint_max.py-->line:37]:》》》》》用例【设置三关节最大角度】开始测试《《《《《
+DEBUG 2025-11-05 16:31:12,250 [test_44_set_joint_max.py-->line:38]:test_api:set_joint_max
+DEBUG 2025-11-05 16:31:12,256 [test_44_set_joint_max.py-->line:42]:接口返回：1
+DEBUG 2025-11-05 16:31:13,807 [test_44_set_joint_max.py-->line:55]:当前角度：-0.35
+INFO 2025-11-05 16:31:15,352 [test_44_set_joint_max.py-->line:37]:》》》》》用例【设置四关节最大角度】开始测试《《《《《
+DEBUG 2025-11-05 16:31:15,352 [test_44_set_joint_max.py-->line:38]:test_api:set_joint_max
+DEBUG 2025-11-05 16:31:15,359 [test_44_set_joint_max.py-->line:42]:接口返回：1
+DEBUG 2025-11-05 16:31:16,912 [test_44_set_joint_max.py-->line:55]:当前角度：-0.7
+INFO 2025-11-05 16:31:18,447 [test_44_set_joint_max.py-->line:37]:》》》》》用例【设置五关节最大角度】开始测试《《《《《
+DEBUG 2025-11-05 16:31:18,447 [test_44_set_joint_max.py-->line:38]:test_api:set_joint_max
+DEBUG 2025-11-05 16:31:18,454 [test_44_set_joint_max.py-->line:42]:接口返回：1
+DEBUG 2025-11-05 16:31:20,007 [test_44_set_joint_max.py-->line:55]:当前角度：-1.75
+INFO 2025-11-05 16:31:21,540 [test_44_set_joint_max.py-->line:37]:》》》》》用例【设置六关节最大角度】开始测试《《《《《
+DEBUG 2025-11-05 16:31:21,540 [test_44_set_joint_max.py-->line:38]:test_api:set_joint_max
+DEBUG 2025-11-05 16:31:21,547 [test_44_set_joint_max.py-->line:42]:接口返回：1
+DEBUG 2025-11-05 16:31:23,111 [test_44_set_joint_max.py-->line:55]:当前角度：-0.7
+INFO 2025-11-05 16:31:24,660 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-11-05 16:31:24,660 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:31:24,660 [test_44_set_joint_max.py-->line:82]:joint:0
+INFO 2025-11-05 16:31:24,660 [test_44_set_joint_max.py-->line:88]:✅ 用例【设置关节超限】异常断言通过
+INFO 2025-11-05 16:31:24,660 [test_44_set_joint_max.py-->line:89]:》》》用例【设置关节超限】测试完成《《《
+INFO 2025-11-05 16:31:26,188 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-11-05 16:31:26,188 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:31:26,188 [test_44_set_joint_max.py-->line:82]:joint:7
+INFO 2025-11-05 16:31:26,190 [test_44_set_joint_max.py-->line:88]:✅ 用例【设置关节超限】异常断言通过
+INFO 2025-11-05 16:31:26,190 [test_44_set_joint_max.py-->line:89]:》》》用例【设置关节超限】测试完成《《《
+INFO 2025-11-05 16:31:27,719 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置1关节角度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:31:27,720 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:31:27,720 [test_44_set_joint_max.py-->line:82]:joint:1
+INFO 2025-11-05 16:31:27,720 [test_44_set_joint_max.py-->line:88]:✅ 用例【设置1关节角度超限】异常断言通过
+INFO 2025-11-05 16:31:27,720 [test_44_set_joint_max.py-->line:89]:》》》用例【设置1关节角度超限】测试完成《《《
+INFO 2025-11-05 16:31:29,253 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置2关节角度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:31:29,253 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:31:29,253 [test_44_set_joint_max.py-->line:82]:joint:2
+INFO 2025-11-05 16:31:30,811 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置3关节角度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:31:30,813 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:31:30,813 [test_44_set_joint_max.py-->line:82]:joint:3
+INFO 2025-11-05 16:31:30,813 [test_44_set_joint_max.py-->line:88]:✅ 用例【设置3关节角度超限】异常断言通过
+INFO 2025-11-05 16:31:30,813 [test_44_set_joint_max.py-->line:89]:》》》用例【设置3关节角度超限】测试完成《《《
+INFO 2025-11-05 16:31:32,346 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置4关节角度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:31:32,346 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:31:32,346 [test_44_set_joint_max.py-->line:82]:joint:4
+INFO 2025-11-05 16:31:33,894 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置5关节角度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:31:33,894 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:31:33,894 [test_44_set_joint_max.py-->line:82]:joint:5
+INFO 2025-11-05 16:31:33,895 [test_44_set_joint_max.py-->line:88]:✅ 用例【设置5关节角度超限】异常断言通过
+INFO 2025-11-05 16:31:33,895 [test_44_set_joint_max.py-->line:89]:》》》用例【设置5关节角度超限】测试完成《《《
+INFO 2025-11-05 16:31:35,434 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置6关节角度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:31:35,434 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:31:35,434 [test_44_set_joint_max.py-->line:82]:joint:6
+INFO 2025-11-05 16:31:35,434 [test_44_set_joint_max.py-->line:88]:✅ 用例【设置6关节角度超限】异常断言通过
+INFO 2025-11-05 16:31:35,434 [test_44_set_joint_max.py-->line:89]:》》》用例【设置6关节角度超限】测试完成《《《
+INFO 2025-11-05 16:31:38,276 [test_44_set_joint_max.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-11-05 16:32:01,177 [test_1_get_modify_version.py-->line:14]:初始化完成，接口测试开始
+INFO 2025-11-05 16:32:01,179 [test_1_get_modify_version.py-->line:26]:》》》》》用例【正确获取固件modify版本号】开始测试《《《《《
+DEBUG 2025-11-05 16:32:01,179 [test_1_get_modify_version.py-->line:27]:test_api:get_modify_version
+DEBUG 2025-11-05 16:32:01,203 [test_1_get_modify_version.py-->line:31]:接口返回：4
+INFO 2025-11-05 16:32:01,366 [test_1_get_modify_version.py-->line:17]:环境清理完成，接口测试结束
+INFO 2025-11-05 16:35:33,561 [test_44_set_joint_max.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-11-05 16:35:33,563 [test_44_set_joint_max.py-->line:37]:》》》》》用例【设置一关节最大角度】开始测试《《《《《
+DEBUG 2025-11-05 16:35:33,564 [test_44_set_joint_max.py-->line:38]:test_api:set_joint_max
+DEBUG 2025-11-05 16:35:33,590 [test_44_set_joint_max.py-->line:42]:接口返回：1
+DEBUG 2025-11-05 16:35:35,138 [test_44_set_joint_max.py-->line:55]:当前角度：-0.35
+INFO 2025-11-05 16:35:42,416 [test_44_set_joint_max.py-->line:37]:》》》》》用例【设置二关节最大角度】开始测试《《《《《
+DEBUG 2025-11-05 16:35:42,417 [test_44_set_joint_max.py-->line:38]:test_api:set_joint_max
+DEBUG 2025-11-05 16:35:42,424 [test_44_set_joint_max.py-->line:42]:接口返回：1
+DEBUG 2025-11-05 16:35:46,518 [test_44_set_joint_max.py-->line:55]:当前角度：-0.43
+INFO 2025-11-05 16:35:51,190 [test_44_set_joint_max.py-->line:37]:》》》》》用例【设置三关节最大角度】开始测试《《《《《
+DEBUG 2025-11-05 16:35:51,190 [test_44_set_joint_max.py-->line:38]:test_api:set_joint_max
+DEBUG 2025-11-05 16:35:51,198 [test_44_set_joint_max.py-->line:42]:接口返回：1
+DEBUG 2025-11-05 16:35:52,747 [test_44_set_joint_max.py-->line:55]:当前角度：-0.35
+INFO 2025-11-05 16:35:54,295 [test_44_set_joint_max.py-->line:37]:》》》》》用例【设置四关节最大角度】开始测试《《《《《
+DEBUG 2025-11-05 16:35:54,295 [test_44_set_joint_max.py-->line:38]:test_api:set_joint_max
+DEBUG 2025-11-05 16:35:54,301 [test_44_set_joint_max.py-->line:42]:接口返回：1
+DEBUG 2025-11-05 16:35:55,851 [test_44_set_joint_max.py-->line:55]:当前角度：-0.7
+INFO 2025-11-05 16:35:57,399 [test_44_set_joint_max.py-->line:37]:》》》》》用例【设置五关节最大角度】开始测试《《《《《
+DEBUG 2025-11-05 16:35:57,399 [test_44_set_joint_max.py-->line:38]:test_api:set_joint_max
+DEBUG 2025-11-05 16:35:57,407 [test_44_set_joint_max.py-->line:42]:接口返回：1
+DEBUG 2025-11-05 16:35:58,968 [test_44_set_joint_max.py-->line:55]:当前角度：-1.05
+INFO 2025-11-05 16:36:00,503 [test_44_set_joint_max.py-->line:37]:》》》》》用例【设置六关节最大角度】开始测试《《《《《
+DEBUG 2025-11-05 16:36:00,503 [test_44_set_joint_max.py-->line:38]:test_api:set_joint_max
+DEBUG 2025-11-05 16:36:00,510 [test_44_set_joint_max.py-->line:42]:接口返回：1
+DEBUG 2025-11-05 16:36:02,071 [test_44_set_joint_max.py-->line:55]:当前角度：0.61
+INFO 2025-11-05 16:36:03,633 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-11-05 16:36:03,633 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:36:03,633 [test_44_set_joint_max.py-->line:82]:joint:0
+INFO 2025-11-05 16:36:03,633 [test_44_set_joint_max.py-->line:88]:✅ 用例【设置关节超限】异常断言通过
+INFO 2025-11-05 16:36:03,633 [test_44_set_joint_max.py-->line:89]:》》》用例【设置关节超限】测试完成《《《
+INFO 2025-11-05 16:36:05,173 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-11-05 16:36:05,173 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:36:05,174 [test_44_set_joint_max.py-->line:82]:joint:7
+INFO 2025-11-05 16:36:05,174 [test_44_set_joint_max.py-->line:88]:✅ 用例【设置关节超限】异常断言通过
+INFO 2025-11-05 16:36:05,174 [test_44_set_joint_max.py-->line:89]:》》》用例【设置关节超限】测试完成《《《
+INFO 2025-11-05 16:36:06,704 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置1关节角度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:36:06,704 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:36:06,705 [test_44_set_joint_max.py-->line:82]:joint:1
+INFO 2025-11-05 16:36:06,705 [test_44_set_joint_max.py-->line:88]:✅ 用例【设置1关节角度超限】异常断言通过
+INFO 2025-11-05 16:36:06,705 [test_44_set_joint_max.py-->line:89]:》》》用例【设置1关节角度超限】测试完成《《《
+INFO 2025-11-05 16:36:08,233 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置2关节角度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:36:08,233 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:36:08,234 [test_44_set_joint_max.py-->line:82]:joint:2
+INFO 2025-11-05 16:36:09,780 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置3关节角度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:36:09,780 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:36:09,781 [test_44_set_joint_max.py-->line:82]:joint:3
+INFO 2025-11-05 16:36:09,781 [test_44_set_joint_max.py-->line:88]:✅ 用例【设置3关节角度超限】异常断言通过
+INFO 2025-11-05 16:36:09,781 [test_44_set_joint_max.py-->line:89]:》》》用例【设置3关节角度超限】测试完成《《《
+INFO 2025-11-05 16:36:11,309 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置4关节角度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:36:11,309 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:36:11,309 [test_44_set_joint_max.py-->line:82]:joint:4
+INFO 2025-11-05 16:36:12,866 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置5关节角度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:36:12,866 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:36:12,866 [test_44_set_joint_max.py-->line:82]:joint:5
+INFO 2025-11-05 16:36:12,866 [test_44_set_joint_max.py-->line:88]:✅ 用例【设置5关节角度超限】异常断言通过
+INFO 2025-11-05 16:36:12,866 [test_44_set_joint_max.py-->line:89]:》》》用例【设置5关节角度超限】测试完成《《《
+INFO 2025-11-05 16:36:14,398 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置6关节角度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:36:14,399 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:36:14,399 [test_44_set_joint_max.py-->line:82]:joint:6
+INFO 2025-11-05 16:36:14,399 [test_44_set_joint_max.py-->line:88]:✅ 用例【设置6关节角度超限】异常断言通过
+INFO 2025-11-05 16:36:14,399 [test_44_set_joint_max.py-->line:89]:》》》用例【设置6关节角度超限】测试完成《《《
+INFO 2025-11-05 16:36:17,249 [test_44_set_joint_max.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-11-05 16:37:37,708 [test_44_set_joint_max.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-11-05 16:37:37,709 [test_44_set_joint_max.py-->line:37]:》》》》》用例【设置一关节最大角度】开始测试《《《《《
+DEBUG 2025-11-05 16:37:37,709 [test_44_set_joint_max.py-->line:38]:test_api:set_joint_max
+DEBUG 2025-11-05 16:37:37,743 [test_44_set_joint_max.py-->line:42]:接口返回：1
+DEBUG 2025-11-05 16:37:39,300 [test_44_set_joint_max.py-->line:55]:当前角度：-0.26
+INFO 2025-11-05 16:37:40,914 [test_44_set_joint_max.py-->line:37]:》》》》》用例【设置二关节最大角度】开始测试《《《《《
+DEBUG 2025-11-05 16:37:40,914 [test_44_set_joint_max.py-->line:38]:test_api:set_joint_max
+DEBUG 2025-11-05 16:37:40,922 [test_44_set_joint_max.py-->line:42]:接口返回：1
+DEBUG 2025-11-05 16:37:45,005 [test_44_set_joint_max.py-->line:55]:当前角度：-0.43
+INFO 2025-11-05 16:37:49,676 [test_44_set_joint_max.py-->line:37]:》》》》》用例【设置三关节最大角度】开始测试《《《《《
+DEBUG 2025-11-05 16:37:49,676 [test_44_set_joint_max.py-->line:38]:test_api:set_joint_max
+DEBUG 2025-11-05 16:37:49,683 [test_44_set_joint_max.py-->line:42]:接口返回：1
+DEBUG 2025-11-05 16:37:51,220 [test_44_set_joint_max.py-->line:55]:当前角度：-0.35
+INFO 2025-11-05 16:37:52,768 [test_44_set_joint_max.py-->line:37]:》》》》》用例【设置四关节最大角度】开始测试《《《《《
+DEBUG 2025-11-05 16:37:52,769 [test_44_set_joint_max.py-->line:38]:test_api:set_joint_max
+DEBUG 2025-11-05 16:37:52,776 [test_44_set_joint_max.py-->line:42]:接口返回：1
+DEBUG 2025-11-05 16:37:54,340 [test_44_set_joint_max.py-->line:55]:当前角度：-0.7
+INFO 2025-11-05 16:37:55,889 [test_44_set_joint_max.py-->line:37]:》》》》》用例【设置五关节最大角度】开始测试《《《《《
+DEBUG 2025-11-05 16:37:55,890 [test_44_set_joint_max.py-->line:38]:test_api:set_joint_max
+DEBUG 2025-11-05 16:37:55,896 [test_44_set_joint_max.py-->line:42]:接口返回：1
+DEBUG 2025-11-05 16:37:57,446 [test_44_set_joint_max.py-->line:55]:当前角度：-1.05
+INFO 2025-11-05 16:37:59,008 [test_44_set_joint_max.py-->line:37]:》》》》》用例【设置六关节最大角度】开始测试《《《《《
+DEBUG 2025-11-05 16:37:59,008 [test_44_set_joint_max.py-->line:38]:test_api:set_joint_max
+DEBUG 2025-11-05 16:37:59,015 [test_44_set_joint_max.py-->line:42]:接口返回：1
+DEBUG 2025-11-05 16:38:00,552 [test_44_set_joint_max.py-->line:55]:当前角度：0.61
+INFO 2025-11-05 16:38:02,084 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-11-05 16:38:02,084 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:38:02,084 [test_44_set_joint_max.py-->line:82]:joint:0
+INFO 2025-11-05 16:38:02,084 [test_44_set_joint_max.py-->line:88]:✅ 用例【设置关节超限】异常断言通过
+INFO 2025-11-05 16:38:02,085 [test_44_set_joint_max.py-->line:89]:》》》用例【设置关节超限】测试完成《《《
+INFO 2025-11-05 16:38:03,624 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-11-05 16:38:03,624 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:38:03,624 [test_44_set_joint_max.py-->line:82]:joint:7
+INFO 2025-11-05 16:38:03,624 [test_44_set_joint_max.py-->line:88]:✅ 用例【设置关节超限】异常断言通过
+INFO 2025-11-05 16:38:03,624 [test_44_set_joint_max.py-->line:89]:》》》用例【设置关节超限】测试完成《《《
+INFO 2025-11-05 16:38:05,165 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置1关节角度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:38:05,165 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:38:05,165 [test_44_set_joint_max.py-->line:82]:joint:1
+INFO 2025-11-05 16:38:05,165 [test_44_set_joint_max.py-->line:88]:✅ 用例【设置1关节角度超限】异常断言通过
+INFO 2025-11-05 16:38:05,165 [test_44_set_joint_max.py-->line:89]:》》》用例【设置1关节角度超限】测试完成《《《
+INFO 2025-11-05 16:38:06,707 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置2关节角度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:38:06,707 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:38:06,707 [test_44_set_joint_max.py-->line:82]:joint:2
+INFO 2025-11-05 16:38:08,248 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置3关节角度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:38:08,248 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:38:08,248 [test_44_set_joint_max.py-->line:82]:joint:3
+INFO 2025-11-05 16:38:08,248 [test_44_set_joint_max.py-->line:88]:✅ 用例【设置3关节角度超限】异常断言通过
+INFO 2025-11-05 16:38:08,249 [test_44_set_joint_max.py-->line:89]:》》》用例【设置3关节角度超限】测试完成《《《
+INFO 2025-11-05 16:38:09,785 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置4关节角度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:38:09,785 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:38:09,786 [test_44_set_joint_max.py-->line:82]:joint:4
+INFO 2025-11-05 16:38:11,333 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置5关节角度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:38:11,333 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:38:11,333 [test_44_set_joint_max.py-->line:82]:joint:5
+INFO 2025-11-05 16:38:11,333 [test_44_set_joint_max.py-->line:88]:✅ 用例【设置5关节角度超限】异常断言通过
+INFO 2025-11-05 16:38:11,333 [test_44_set_joint_max.py-->line:89]:》》》用例【设置5关节角度超限】测试完成《《《
+INFO 2025-11-05 16:38:12,875 [test_44_set_joint_max.py-->line:80]:》》》》》用例【设置6关节角度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:38:12,875 [test_44_set_joint_max.py-->line:81]:test_api:set_joint_max
+DEBUG 2025-11-05 16:38:12,875 [test_44_set_joint_max.py-->line:82]:joint:6
+INFO 2025-11-05 16:38:12,875 [test_44_set_joint_max.py-->line:88]:✅ 用例【设置6关节角度超限】异常断言通过
+INFO 2025-11-05 16:38:12,875 [test_44_set_joint_max.py-->line:89]:》》》用例【设置6关节角度超限】测试完成《《《
+INFO 2025-11-05 16:38:15,722 [test_44_set_joint_max.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-11-05 16:38:48,514 [test_32_jog_increment_angle.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-11-05 16:38:48,516 [test_32_jog_increment_angle.py-->line:37]:》》》》》用例【插补模式下，使一关节增量-30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:38:48,516 [test_32_jog_increment_angle.py-->line:38]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:38:48,517 [test_32_jog_increment_angle.py-->line:39]:joint:1
+DEBUG 2025-11-05 16:38:48,517 [test_32_jog_increment_angle.py-->line:40]:increment:-30
+DEBUG 2025-11-05 16:38:48,517 [test_32_jog_increment_angle.py-->line:41]:speed:30
+DEBUG 2025-11-05 16:38:48,586 [test_32_jog_increment_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 16:38:50,655 [test_32_jog_increment_angle.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 16:38:50,670 [test_32_jog_increment_angle.py-->line:55]:接口返回：-29.53
+INFO 2025-11-05 16:38:50,670 [test_32_jog_increment_angle.py-->line:70]:✅ 用例【插补模式下，使一关节增量-30度运动】测试通过
+INFO 2025-11-05 16:38:50,670 [test_32_jog_increment_angle.py-->line:71]:》》》》》用例【插补模式下，使一关节增量-30度运动】测试完成《《《《《
+INFO 2025-11-05 16:38:53,837 [test_32_jog_increment_angle.py-->line:37]:》》》》》用例【插补模式下，使一关节增量30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:38:53,837 [test_32_jog_increment_angle.py-->line:38]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:38:53,837 [test_32_jog_increment_angle.py-->line:39]:joint:1
+DEBUG 2025-11-05 16:38:53,837 [test_32_jog_increment_angle.py-->line:40]:increment:30
+DEBUG 2025-11-05 16:38:53,837 [test_32_jog_increment_angle.py-->line:41]:speed:50
+DEBUG 2025-11-05 16:38:53,850 [test_32_jog_increment_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 16:38:55,709 [test_32_jog_increment_angle.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 16:38:55,725 [test_32_jog_increment_angle.py-->line:55]:接口返回：28.65
+INFO 2025-11-05 16:38:55,725 [test_32_jog_increment_angle.py-->line:70]:✅ 用例【插补模式下，使一关节增量30度运动】测试通过
+INFO 2025-11-05 16:38:55,725 [test_32_jog_increment_angle.py-->line:71]:》》》》》用例【插补模式下，使一关节增量30度运动】测试完成《《《《《
+INFO 2025-11-05 16:38:58,904 [test_32_jog_increment_angle.py-->line:37]:》》》》》用例【插补模式下，使二关节增量-30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:38:58,904 [test_32_jog_increment_angle.py-->line:38]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:38:58,904 [test_32_jog_increment_angle.py-->line:39]:joint:2
+DEBUG 2025-11-05 16:38:58,904 [test_32_jog_increment_angle.py-->line:40]:increment:-30
+DEBUG 2025-11-05 16:38:58,904 [test_32_jog_increment_angle.py-->line:41]:speed:70
+DEBUG 2025-11-05 16:38:58,917 [test_32_jog_increment_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 16:39:00,882 [test_32_jog_increment_angle.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 16:39:00,898 [test_32_jog_increment_angle.py-->line:55]:接口返回：-30.84
+INFO 2025-11-05 16:39:00,898 [test_32_jog_increment_angle.py-->line:70]:✅ 用例【插补模式下，使二关节增量-30度运动】测试通过
+INFO 2025-11-05 16:39:00,898 [test_32_jog_increment_angle.py-->line:71]:》》》》》用例【插补模式下，使二关节增量-30度运动】测试完成《《《《《
+INFO 2025-11-05 16:39:04,059 [test_32_jog_increment_angle.py-->line:37]:》》》》》用例【插补模式下，使二关节增量30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:39:04,059 [test_32_jog_increment_angle.py-->line:38]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:39:04,059 [test_32_jog_increment_angle.py-->line:39]:joint:2
+DEBUG 2025-11-05 16:39:04,059 [test_32_jog_increment_angle.py-->line:40]:increment:30
+DEBUG 2025-11-05 16:39:04,059 [test_32_jog_increment_angle.py-->line:41]:speed:20
+DEBUG 2025-11-05 16:39:04,071 [test_32_jog_increment_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 16:39:06,374 [test_32_jog_increment_angle.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 16:39:06,391 [test_32_jog_increment_angle.py-->line:55]:接口返回：30.14
+INFO 2025-11-05 16:39:06,391 [test_32_jog_increment_angle.py-->line:70]:✅ 用例【插补模式下，使二关节增量30度运动】测试通过
+INFO 2025-11-05 16:39:06,391 [test_32_jog_increment_angle.py-->line:71]:》》》》》用例【插补模式下，使二关节增量30度运动】测试完成《《《《《
+INFO 2025-11-05 16:39:09,558 [test_32_jog_increment_angle.py-->line:37]:》》》》》用例【插补模式下，使三关节增量-30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:39:09,558 [test_32_jog_increment_angle.py-->line:38]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:39:09,558 [test_32_jog_increment_angle.py-->line:39]:joint:3
+DEBUG 2025-11-05 16:39:09,558 [test_32_jog_increment_angle.py-->line:40]:increment:-30
+DEBUG 2025-11-05 16:39:09,558 [test_32_jog_increment_angle.py-->line:41]:speed:30
+DEBUG 2025-11-05 16:39:09,571 [test_32_jog_increment_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 16:39:11,532 [test_32_jog_increment_angle.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 16:39:11,547 [test_32_jog_increment_angle.py-->line:55]:接口返回：-30.23
+INFO 2025-11-05 16:39:11,547 [test_32_jog_increment_angle.py-->line:70]:✅ 用例【插补模式下，使三关节增量-30度运动】测试通过
+INFO 2025-11-05 16:39:11,547 [test_32_jog_increment_angle.py-->line:71]:》》》》》用例【插补模式下，使三关节增量-30度运动】测试完成《《《《《
+INFO 2025-11-05 16:39:14,838 [test_32_jog_increment_angle.py-->line:37]:》》》》》用例【插补模式下，使三关节增量30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:39:14,838 [test_32_jog_increment_angle.py-->line:38]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:39:14,838 [test_32_jog_increment_angle.py-->line:39]:joint:3
+DEBUG 2025-11-05 16:39:14,838 [test_32_jog_increment_angle.py-->line:40]:increment:30
+DEBUG 2025-11-05 16:39:14,839 [test_32_jog_increment_angle.py-->line:41]:speed:30
+DEBUG 2025-11-05 16:39:14,851 [test_32_jog_increment_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 16:39:16,819 [test_32_jog_increment_angle.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 16:39:16,834 [test_32_jog_increment_angle.py-->line:55]:接口返回：29.17
+INFO 2025-11-05 16:39:16,834 [test_32_jog_increment_angle.py-->line:70]:✅ 用例【插补模式下，使三关节增量30度运动】测试通过
+INFO 2025-11-05 16:39:16,834 [test_32_jog_increment_angle.py-->line:71]:》》》》》用例【插补模式下，使三关节增量30度运动】测试完成《《《《《
+INFO 2025-11-05 16:39:20,002 [test_32_jog_increment_angle.py-->line:37]:》》》》》用例【插补模式下，使四关节增量-30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:39:20,002 [test_32_jog_increment_angle.py-->line:38]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:39:20,002 [test_32_jog_increment_angle.py-->line:39]:joint:4
+DEBUG 2025-11-05 16:39:20,002 [test_32_jog_increment_angle.py-->line:40]:increment:-30
+DEBUG 2025-11-05 16:39:20,002 [test_32_jog_increment_angle.py-->line:41]:speed:40
+DEBUG 2025-11-05 16:39:20,014 [test_32_jog_increment_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 16:39:21,980 [test_32_jog_increment_angle.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 16:39:21,994 [test_32_jog_increment_angle.py-->line:55]:接口返回：-31.46
+INFO 2025-11-05 16:39:21,994 [test_32_jog_increment_angle.py-->line:70]:✅ 用例【插补模式下，使四关节增量-30度运动】测试通过
+INFO 2025-11-05 16:39:21,994 [test_32_jog_increment_angle.py-->line:71]:》》》》》用例【插补模式下，使四关节增量-30度运动】测试完成《《《《《
+INFO 2025-11-05 16:39:25,282 [test_32_jog_increment_angle.py-->line:37]:》》》》》用例【插补模式下，使四关节增量30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:39:25,282 [test_32_jog_increment_angle.py-->line:38]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:39:25,282 [test_32_jog_increment_angle.py-->line:39]:joint:4
+DEBUG 2025-11-05 16:39:25,283 [test_32_jog_increment_angle.py-->line:40]:increment:30
+DEBUG 2025-11-05 16:39:25,283 [test_32_jog_increment_angle.py-->line:41]:speed:40
+DEBUG 2025-11-05 16:39:25,293 [test_32_jog_increment_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 16:39:27,261 [test_32_jog_increment_angle.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 16:39:27,275 [test_32_jog_increment_angle.py-->line:55]:接口返回：30.05
+INFO 2025-11-05 16:39:27,275 [test_32_jog_increment_angle.py-->line:70]:✅ 用例【插补模式下，使四关节增量30度运动】测试通过
+INFO 2025-11-05 16:39:27,275 [test_32_jog_increment_angle.py-->line:71]:》》》》》用例【插补模式下，使四关节增量30度运动】测试完成《《《《《
+INFO 2025-11-05 16:39:30,445 [test_32_jog_increment_angle.py-->line:37]:》》》》》用例【插补模式下，使五关节增量-30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:39:30,446 [test_32_jog_increment_angle.py-->line:38]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:39:30,446 [test_32_jog_increment_angle.py-->line:39]:joint:5
+DEBUG 2025-11-05 16:39:30,446 [test_32_jog_increment_angle.py-->line:40]:increment:-30
+DEBUG 2025-11-05 16:39:30,446 [test_32_jog_increment_angle.py-->line:41]:speed:50
+DEBUG 2025-11-05 16:39:30,456 [test_32_jog_increment_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 16:39:32,319 [test_32_jog_increment_angle.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 16:39:32,332 [test_32_jog_increment_angle.py-->line:55]:接口返回：-30.67
+INFO 2025-11-05 16:39:32,333 [test_32_jog_increment_angle.py-->line:70]:✅ 用例【插补模式下，使五关节增量-30度运动】测试通过
+INFO 2025-11-05 16:39:32,333 [test_32_jog_increment_angle.py-->line:71]:》》》》》用例【插补模式下，使五关节增量-30度运动】测试完成《《《《《
+INFO 2025-11-05 16:39:35,196 [test_32_jog_increment_angle.py-->line:37]:》》》》》用例【插补模式下，使五关节增量30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:39:35,196 [test_32_jog_increment_angle.py-->line:38]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:39:35,196 [test_32_jog_increment_angle.py-->line:39]:joint:5
+DEBUG 2025-11-05 16:39:35,196 [test_32_jog_increment_angle.py-->line:40]:increment:30
+DEBUG 2025-11-05 16:39:35,196 [test_32_jog_increment_angle.py-->line:41]:speed:50
+DEBUG 2025-11-05 16:39:35,208 [test_32_jog_increment_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 16:39:37,176 [test_32_jog_increment_angle.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 16:39:37,190 [test_32_jog_increment_angle.py-->line:55]:接口返回：24.34
+INFO 2025-11-05 16:39:40,347 [test_32_jog_increment_angle.py-->line:37]:》》》》》用例【插补模式下，使六关节增量-30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:39:40,347 [test_32_jog_increment_angle.py-->line:38]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:39:40,347 [test_32_jog_increment_angle.py-->line:39]:joint:6
+DEBUG 2025-11-05 16:39:40,347 [test_32_jog_increment_angle.py-->line:40]:increment:-30
+DEBUG 2025-11-05 16:39:40,347 [test_32_jog_increment_angle.py-->line:41]:speed:60
+DEBUG 2025-11-05 16:39:40,360 [test_32_jog_increment_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 16:39:42,221 [test_32_jog_increment_angle.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 16:39:42,235 [test_32_jog_increment_angle.py-->line:55]:接口返回：-28.74
+INFO 2025-11-05 16:39:42,235 [test_32_jog_increment_angle.py-->line:70]:✅ 用例【插补模式下，使六关节增量-30度运动】测试通过
+INFO 2025-11-05 16:39:42,235 [test_32_jog_increment_angle.py-->line:71]:》》》》》用例【插补模式下，使六关节增量-30度运动】测试完成《《《《《
+INFO 2025-11-05 16:39:45,412 [test_32_jog_increment_angle.py-->line:37]:》》》》》用例【插补模式下，使六关节增量30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:39:45,412 [test_32_jog_increment_angle.py-->line:38]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:39:45,412 [test_32_jog_increment_angle.py-->line:39]:joint:6
+DEBUG 2025-11-05 16:39:45,413 [test_32_jog_increment_angle.py-->line:40]:increment:30
+DEBUG 2025-11-05 16:39:45,413 [test_32_jog_increment_angle.py-->line:41]:speed:60
+DEBUG 2025-11-05 16:39:45,426 [test_32_jog_increment_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 16:39:47,286 [test_32_jog_increment_angle.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 16:39:47,300 [test_32_jog_increment_angle.py-->line:55]:接口返回：28.65
+INFO 2025-11-05 16:39:47,300 [test_32_jog_increment_angle.py-->line:70]:✅ 用例【插补模式下，使六关节增量30度运动】测试通过
+INFO 2025-11-05 16:39:47,300 [test_32_jog_increment_angle.py-->line:71]:》》》》》用例【插补模式下，使六关节增量30度运动】测试完成《《《《《
+INFO 2025-11-05 16:39:50,479 [test_32_jog_increment_angle.py-->line:81]:》》》》》用例【刷新模式下，使一关节增量-30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:39:50,479 [test_32_jog_increment_angle.py-->line:82]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:39:50,479 [test_32_jog_increment_angle.py-->line:83]:joint:1
+DEBUG 2025-11-05 16:39:50,479 [test_32_jog_increment_angle.py-->line:84]:increment:-30
+DEBUG 2025-11-05 16:39:50,479 [test_32_jog_increment_angle.py-->line:85]:speed:20
+DEBUG 2025-11-05 16:39:50,498 [test_32_jog_increment_angle.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 16:39:52,958 [test_32_jog_increment_angle.py-->line:95]:接口返回：1
+DEBUG 2025-11-05 16:39:52,972 [test_32_jog_increment_angle.py-->line:99]:接口返回：-28.38
+INFO 2025-11-05 16:39:52,972 [test_32_jog_increment_angle.py-->line:114]:✅ 用例【刷新模式下，使一关节增量-30度运动】测试通过
+INFO 2025-11-05 16:39:52,974 [test_32_jog_increment_angle.py-->line:115]:》》》》》用例【刷新模式下，使一关节增量-30度运动】测试完成《《《《《
+INFO 2025-11-05 16:39:55,261 [test_32_jog_increment_angle.py-->line:81]:》》》》》用例【刷新模式下，使一关节增量30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:39:55,261 [test_32_jog_increment_angle.py-->line:82]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:39:55,261 [test_32_jog_increment_angle.py-->line:83]:joint:1
+DEBUG 2025-11-05 16:39:55,261 [test_32_jog_increment_angle.py-->line:84]:increment:30
+DEBUG 2025-11-05 16:39:55,261 [test_32_jog_increment_angle.py-->line:85]:speed:50
+DEBUG 2025-11-05 16:39:55,272 [test_32_jog_increment_angle.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 16:39:57,220 [test_32_jog_increment_angle.py-->line:95]:接口返回：1
+DEBUG 2025-11-05 16:39:57,235 [test_32_jog_increment_angle.py-->line:99]:接口返回：28.65
+INFO 2025-11-05 16:39:57,235 [test_32_jog_increment_angle.py-->line:114]:✅ 用例【刷新模式下，使一关节增量30度运动】测试通过
+INFO 2025-11-05 16:39:57,235 [test_32_jog_increment_angle.py-->line:115]:》》》》》用例【刷新模式下，使一关节增量30度运动】测试完成《《《《《
+INFO 2025-11-05 16:39:59,646 [test_32_jog_increment_angle.py-->line:81]:》》》》》用例【刷新模式下，使二关节增量-30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:39:59,646 [test_32_jog_increment_angle.py-->line:82]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:39:59,647 [test_32_jog_increment_angle.py-->line:83]:joint:2
+DEBUG 2025-11-05 16:39:59,647 [test_32_jog_increment_angle.py-->line:84]:increment:-30
+DEBUG 2025-11-05 16:39:59,647 [test_32_jog_increment_angle.py-->line:85]:speed:20
+DEBUG 2025-11-05 16:39:59,659 [test_32_jog_increment_angle.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 16:40:02,057 [test_32_jog_increment_angle.py-->line:95]:接口返回：1
+DEBUG 2025-11-05 16:40:02,071 [test_32_jog_increment_angle.py-->line:99]:接口返回：-30.49
+INFO 2025-11-05 16:40:02,072 [test_32_jog_increment_angle.py-->line:114]:✅ 用例【刷新模式下，使二关节增量-30度运动】测试通过
+INFO 2025-11-05 16:40:02,072 [test_32_jog_increment_angle.py-->line:115]:》》》》》用例【刷新模式下，使二关节增量-30度运动】测试完成《《《《《
+INFO 2025-11-05 16:40:04,484 [test_32_jog_increment_angle.py-->line:81]:》》》》》用例【刷新模式下，使二关节增量30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:40:04,484 [test_32_jog_increment_angle.py-->line:82]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:40:04,485 [test_32_jog_increment_angle.py-->line:83]:joint:2
+DEBUG 2025-11-05 16:40:04,485 [test_32_jog_increment_angle.py-->line:84]:increment:30
+DEBUG 2025-11-05 16:40:04,485 [test_32_jog_increment_angle.py-->line:85]:speed:20
+DEBUG 2025-11-05 16:40:04,497 [test_32_jog_increment_angle.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 16:40:06,839 [test_32_jog_increment_angle.py-->line:95]:接口返回：1
+DEBUG 2025-11-05 16:40:06,854 [test_32_jog_increment_angle.py-->line:99]:接口返回：30.23
+INFO 2025-11-05 16:40:06,854 [test_32_jog_increment_angle.py-->line:114]:✅ 用例【刷新模式下，使二关节增量30度运动】测试通过
+INFO 2025-11-05 16:40:06,854 [test_32_jog_increment_angle.py-->line:115]:》》》》》用例【刷新模式下，使二关节增量30度运动】测试完成《《《《《
+INFO 2025-11-05 16:40:09,274 [test_32_jog_increment_angle.py-->line:81]:》》》》》用例【刷新模式下，使三关节增量-30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:40:09,274 [test_32_jog_increment_angle.py-->line:82]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:40:09,274 [test_32_jog_increment_angle.py-->line:83]:joint:3
+DEBUG 2025-11-05 16:40:09,274 [test_32_jog_increment_angle.py-->line:84]:increment:-30
+DEBUG 2025-11-05 16:40:09,275 [test_32_jog_increment_angle.py-->line:85]:speed:30
+DEBUG 2025-11-05 16:40:09,287 [test_32_jog_increment_angle.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 16:40:11,414 [test_32_jog_increment_angle.py-->line:95]:接口返回：1
+DEBUG 2025-11-05 16:40:11,428 [test_32_jog_increment_angle.py-->line:99]:接口返回：-29.88
+INFO 2025-11-05 16:40:11,429 [test_32_jog_increment_angle.py-->line:114]:✅ 用例【刷新模式下，使三关节增量-30度运动】测试通过
+INFO 2025-11-05 16:40:11,429 [test_32_jog_increment_angle.py-->line:115]:》》》》》用例【刷新模式下，使三关节增量-30度运动】测试完成《《《《《
+INFO 2025-11-05 16:40:13,851 [test_32_jog_increment_angle.py-->line:81]:》》》》》用例【刷新模式下，使三关节增量30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:40:13,851 [test_32_jog_increment_angle.py-->line:82]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:40:13,851 [test_32_jog_increment_angle.py-->line:83]:joint:3
+DEBUG 2025-11-05 16:40:13,851 [test_32_jog_increment_angle.py-->line:84]:increment:30
+DEBUG 2025-11-05 16:40:13,851 [test_32_jog_increment_angle.py-->line:85]:speed:30
+DEBUG 2025-11-05 16:40:13,864 [test_32_jog_increment_angle.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 16:40:15,961 [test_32_jog_increment_angle.py-->line:95]:接口返回：1
+DEBUG 2025-11-05 16:40:15,975 [test_32_jog_increment_angle.py-->line:99]:接口返回：29.44
+INFO 2025-11-05 16:40:15,975 [test_32_jog_increment_angle.py-->line:114]:✅ 用例【刷新模式下，使三关节增量30度运动】测试通过
+INFO 2025-11-05 16:40:15,976 [test_32_jog_increment_angle.py-->line:115]:》》》》》用例【刷新模式下，使三关节增量30度运动】测试完成《《《《《
+INFO 2025-11-05 16:40:18,254 [test_32_jog_increment_angle.py-->line:81]:》》》》》用例【刷新模式下，使四关节增量-30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:40:18,255 [test_32_jog_increment_angle.py-->line:82]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:40:18,255 [test_32_jog_increment_angle.py-->line:83]:joint:4
+DEBUG 2025-11-05 16:40:18,255 [test_32_jog_increment_angle.py-->line:84]:increment:-30
+DEBUG 2025-11-05 16:40:18,255 [test_32_jog_increment_angle.py-->line:85]:speed:40
+DEBUG 2025-11-05 16:40:18,267 [test_32_jog_increment_angle.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 16:40:19,840 [test_32_jog_increment_angle.py-->line:95]:接口返回：1
+DEBUG 2025-11-05 16:40:19,856 [test_32_jog_increment_angle.py-->line:99]:接口返回：-31.46
+INFO 2025-11-05 16:40:19,856 [test_32_jog_increment_angle.py-->line:114]:✅ 用例【刷新模式下，使四关节增量-30度运动】测试通过
+INFO 2025-11-05 16:40:19,856 [test_32_jog_increment_angle.py-->line:115]:》》》》》用例【刷新模式下，使四关节增量-30度运动】测试完成《《《《《
+INFO 2025-11-05 16:40:22,137 [test_32_jog_increment_angle.py-->line:81]:》》》》》用例【刷新模式下，使四关节增量30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:40:22,138 [test_32_jog_increment_angle.py-->line:82]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:40:22,138 [test_32_jog_increment_angle.py-->line:83]:joint:4
+DEBUG 2025-11-05 16:40:22,138 [test_32_jog_increment_angle.py-->line:84]:increment:30
+DEBUG 2025-11-05 16:40:22,138 [test_32_jog_increment_angle.py-->line:85]:speed:40
+DEBUG 2025-11-05 16:40:22,150 [test_32_jog_increment_angle.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 16:40:24,132 [test_32_jog_increment_angle.py-->line:95]:接口返回：1
+DEBUG 2025-11-05 16:40:24,147 [test_32_jog_increment_angle.py-->line:99]:接口返回：30.05
+INFO 2025-11-05 16:40:24,147 [test_32_jog_increment_angle.py-->line:114]:✅ 用例【刷新模式下，使四关节增量30度运动】测试通过
+INFO 2025-11-05 16:40:24,147 [test_32_jog_increment_angle.py-->line:115]:》》》》》用例【刷新模式下，使四关节增量30度运动】测试完成《《《《《
+INFO 2025-11-05 16:40:26,432 [test_32_jog_increment_angle.py-->line:81]:》》》》》用例【刷新模式下，使五关节增量-30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:40:26,432 [test_32_jog_increment_angle.py-->line:82]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:40:26,432 [test_32_jog_increment_angle.py-->line:83]:joint:5
+DEBUG 2025-11-05 16:40:26,432 [test_32_jog_increment_angle.py-->line:84]:increment:-30
+DEBUG 2025-11-05 16:40:26,432 [test_32_jog_increment_angle.py-->line:85]:speed:50
+DEBUG 2025-11-05 16:40:26,444 [test_32_jog_increment_angle.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 16:40:28,396 [test_32_jog_increment_angle.py-->line:95]:接口返回：1
+DEBUG 2025-11-05 16:40:28,412 [test_32_jog_increment_angle.py-->line:99]:接口返回：-29.0
+INFO 2025-11-05 16:40:28,412 [test_32_jog_increment_angle.py-->line:114]:✅ 用例【刷新模式下，使五关节增量-30度运动】测试通过
+INFO 2025-11-05 16:40:28,413 [test_32_jog_increment_angle.py-->line:115]:》》》》》用例【刷新模式下，使五关节增量-30度运动】测试完成《《《《《
+INFO 2025-11-05 16:40:30,694 [test_32_jog_increment_angle.py-->line:81]:》》》》》用例【刷新模式下，使五关节增量30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:40:30,694 [test_32_jog_increment_angle.py-->line:82]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:40:30,694 [test_32_jog_increment_angle.py-->line:83]:joint:5
+DEBUG 2025-11-05 16:40:30,694 [test_32_jog_increment_angle.py-->line:84]:increment:30
+DEBUG 2025-11-05 16:40:30,694 [test_32_jog_increment_angle.py-->line:85]:speed:50
+DEBUG 2025-11-05 16:40:30,705 [test_32_jog_increment_angle.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 16:40:32,289 [test_32_jog_increment_angle.py-->line:95]:接口返回：1
+DEBUG 2025-11-05 16:40:32,306 [test_32_jog_increment_angle.py-->line:99]:接口返回：24.87
+INFO 2025-11-05 16:40:34,601 [test_32_jog_increment_angle.py-->line:81]:》》》》》用例【刷新模式下，使六关节增量-30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:40:34,601 [test_32_jog_increment_angle.py-->line:82]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:40:34,601 [test_32_jog_increment_angle.py-->line:83]:joint:6
+DEBUG 2025-11-05 16:40:34,601 [test_32_jog_increment_angle.py-->line:84]:increment:-30
+DEBUG 2025-11-05 16:40:34,602 [test_32_jog_increment_angle.py-->line:85]:speed:100
+DEBUG 2025-11-05 16:40:34,613 [test_32_jog_increment_angle.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 16:40:36,576 [test_32_jog_increment_angle.py-->line:95]:接口返回：1
+DEBUG 2025-11-05 16:40:36,591 [test_32_jog_increment_angle.py-->line:99]:接口返回：-28.65
+INFO 2025-11-05 16:40:36,591 [test_32_jog_increment_angle.py-->line:114]:✅ 用例【刷新模式下，使六关节增量-30度运动】测试通过
+INFO 2025-11-05 16:40:36,591 [test_32_jog_increment_angle.py-->line:115]:》》》》》用例【刷新模式下，使六关节增量-30度运动】测试完成《《《《《
+INFO 2025-11-05 16:40:38,876 [test_32_jog_increment_angle.py-->line:81]:》》》》》用例【刷新模式下，使六关节增量30度运动】开始测试《《《《《
+DEBUG 2025-11-05 16:40:38,877 [test_32_jog_increment_angle.py-->line:82]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:40:38,877 [test_32_jog_increment_angle.py-->line:83]:joint:6
+DEBUG 2025-11-05 16:40:38,877 [test_32_jog_increment_angle.py-->line:84]:increment:30
+DEBUG 2025-11-05 16:40:38,877 [test_32_jog_increment_angle.py-->line:85]:speed:100
+DEBUG 2025-11-05 16:40:38,888 [test_32_jog_increment_angle.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 16:40:40,839 [test_32_jog_increment_angle.py-->line:95]:接口返回：1
+DEBUG 2025-11-05 16:40:40,853 [test_32_jog_increment_angle.py-->line:99]:接口返回：28.65
+INFO 2025-11-05 16:40:40,854 [test_32_jog_increment_angle.py-->line:114]:✅ 用例【刷新模式下，使六关节增量30度运动】测试通过
+INFO 2025-11-05 16:40:40,854 [test_32_jog_increment_angle.py-->line:115]:》》》》》用例【刷新模式下，使六关节增量30度运动】测试完成《《《《《
+INFO 2025-11-05 16:40:43,141 [test_32_jog_increment_angle.py-->line:124]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:40:43,141 [test_32_jog_increment_angle.py-->line:125]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:40:43,141 [test_32_jog_increment_angle.py-->line:126]:joint:3
+DEBUG 2025-11-05 16:40:43,141 [test_32_jog_increment_angle.py-->line:127]:increment:-30
+DEBUG 2025-11-05 16:40:43,141 [test_32_jog_increment_angle.py-->line:128]:speed:0
+INFO 2025-11-05 16:40:43,141 [test_32_jog_increment_angle.py-->line:134]:✅ 用例【设置速度超限】异常断言通过
+INFO 2025-11-05 16:40:43,141 [test_32_jog_increment_angle.py-->line:135]:》》》用例【设置速度超限】测试完成《《《
+INFO 2025-11-05 16:40:44,670 [test_32_jog_increment_angle.py-->line:124]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2025-11-05 16:40:44,670 [test_32_jog_increment_angle.py-->line:125]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:40:44,670 [test_32_jog_increment_angle.py-->line:126]:joint:4
+DEBUG 2025-11-05 16:40:44,670 [test_32_jog_increment_angle.py-->line:127]:increment:30
+DEBUG 2025-11-05 16:40:44,670 [test_32_jog_increment_angle.py-->line:128]:speed:101
+INFO 2025-11-05 16:40:44,670 [test_32_jog_increment_angle.py-->line:134]:✅ 用例【设置速度超限】异常断言通过
+INFO 2025-11-05 16:40:44,670 [test_32_jog_increment_angle.py-->line:135]:》》》用例【设置速度超限】测试完成《《《
+INFO 2025-11-05 16:40:46,204 [test_32_jog_increment_angle.py-->line:124]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-11-05 16:40:46,204 [test_32_jog_increment_angle.py-->line:125]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:40:46,204 [test_32_jog_increment_angle.py-->line:126]:joint:0
+DEBUG 2025-11-05 16:40:46,204 [test_32_jog_increment_angle.py-->line:127]:increment:-30
+DEBUG 2025-11-05 16:40:46,204 [test_32_jog_increment_angle.py-->line:128]:speed:50
+INFO 2025-11-05 16:40:46,204 [test_32_jog_increment_angle.py-->line:134]:✅ 用例【设置关节超限】异常断言通过
+INFO 2025-11-05 16:40:46,204 [test_32_jog_increment_angle.py-->line:135]:》》》用例【设置关节超限】测试完成《《《
+INFO 2025-11-05 16:40:47,729 [test_32_jog_increment_angle.py-->line:124]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-11-05 16:40:47,729 [test_32_jog_increment_angle.py-->line:125]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:40:47,729 [test_32_jog_increment_angle.py-->line:126]:joint:7
+DEBUG 2025-11-05 16:40:47,729 [test_32_jog_increment_angle.py-->line:127]:increment:30
+DEBUG 2025-11-05 16:40:47,729 [test_32_jog_increment_angle.py-->line:128]:speed:50
+INFO 2025-11-05 16:40:47,729 [test_32_jog_increment_angle.py-->line:134]:✅ 用例【设置关节超限】异常断言通过
+INFO 2025-11-05 16:40:47,729 [test_32_jog_increment_angle.py-->line:135]:》》》用例【设置关节超限】测试完成《《《
+INFO 2025-11-05 16:40:49,257 [test_32_jog_increment_angle.py-->line:124]:》》》》》用例【设置1关节增量超限】开始测试《《《《《
+DEBUG 2025-11-05 16:40:49,257 [test_32_jog_increment_angle.py-->line:125]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:40:49,257 [test_32_jog_increment_angle.py-->line:126]:joint:1
+DEBUG 2025-11-05 16:40:49,257 [test_32_jog_increment_angle.py-->line:127]:increment:336
+DEBUG 2025-11-05 16:40:49,257 [test_32_jog_increment_angle.py-->line:128]:speed:50
+INFO 2025-11-05 16:40:50,848 [test_32_jog_increment_angle.py-->line:124]:》》》》》用例【设置1关节增量超限】开始测试《《《《《
+DEBUG 2025-11-05 16:40:50,848 [test_32_jog_increment_angle.py-->line:125]:test_api:jog_increment_angle
+DEBUG 2025-11-05 16:40:50,848 [test_32_jog_increment_angle.py-->line:126]:joint:1
+DEBUG 2025-11-05 16:40:50,849 [test_32_jog_increment_angle.py-->line:127]:increment:-336
+DEBUG 2025-11-05 16:40:50,849 [test_32_jog_increment_angle.py-->line:128]:speed:50
+INFO 2025-11-05 16:40:54,050 [test_32_jog_increment_angle.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-11-05 17:19:08,853 [test_31_jog_coord.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-11-05 17:19:08,856 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使x轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:19:08,856 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:19:08,856 [test_31_jog_coord.py-->line:33]:axis:1
+DEBUG 2025-11-05 17:19:08,856 [test_31_jog_coord.py-->line:34]:position:0
+DEBUG 2025-11-05 17:19:08,857 [test_31_jog_coord.py-->line:35]:speed:30
+DEBUG 2025-11-05 17:19:08,927 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:19:14,518 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:19:14,518 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使x轴运动到负限位】测试通过
+INFO 2025-11-05 17:19:14,518 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使x轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:19:14,521 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使x轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:19:14,521 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:19:14,521 [test_31_jog_coord.py-->line:33]:axis:1
+DEBUG 2025-11-05 17:19:14,521 [test_31_jog_coord.py-->line:34]:position:1
+DEBUG 2025-11-05 17:19:14,521 [test_31_jog_coord.py-->line:35]:speed:50
+DEBUG 2025-11-05 17:19:14,535 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:19:19,659 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:19:19,660 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使x轴运动到正限位】测试通过
+INFO 2025-11-05 17:19:19,660 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使x轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:19:19,664 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使y轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:19:19,665 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:19:19,665 [test_31_jog_coord.py-->line:33]:axis:2
+DEBUG 2025-11-05 17:19:19,665 [test_31_jog_coord.py-->line:34]:position:0
+DEBUG 2025-11-05 17:19:19,665 [test_31_jog_coord.py-->line:35]:speed:70
+DEBUG 2025-11-05 17:19:19,681 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:19:25,407 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:19:25,408 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使y轴运动到负限位】测试通过
+INFO 2025-11-05 17:19:25,408 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使y轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:19:25,413 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使y轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:19:25,414 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:19:25,414 [test_31_jog_coord.py-->line:33]:axis:2
+DEBUG 2025-11-05 17:19:25,414 [test_31_jog_coord.py-->line:34]:position:1
+DEBUG 2025-11-05 17:19:25,414 [test_31_jog_coord.py-->line:35]:speed:20
+DEBUG 2025-11-05 17:19:25,431 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:19:30,221 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:19:30,225 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使y轴运动到正限位】测试通过
+INFO 2025-11-05 17:19:30,226 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使y轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:19:30,236 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使z轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:19:30,237 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:19:30,238 [test_31_jog_coord.py-->line:33]:axis:3
+DEBUG 2025-11-05 17:19:30,238 [test_31_jog_coord.py-->line:34]:position:1
+DEBUG 2025-11-05 17:19:30,238 [test_31_jog_coord.py-->line:35]:speed:30
+DEBUG 2025-11-05 17:19:30,256 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:19:42,130 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:19:42,131 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使z轴运动到正限位】测试通过
+INFO 2025-11-05 17:19:42,131 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使z轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:19:42,137 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使rx轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:19:42,137 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:19:42,137 [test_31_jog_coord.py-->line:33]:axis:4
+DEBUG 2025-11-05 17:19:42,138 [test_31_jog_coord.py-->line:34]:position:0
+DEBUG 2025-11-05 17:19:42,138 [test_31_jog_coord.py-->line:35]:speed:40
+DEBUG 2025-11-05 17:19:42,154 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:19:49,403 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:19:49,403 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使rx轴运动到负限位】测试通过
+INFO 2025-11-05 17:19:49,404 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使rx轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:19:49,415 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使rx轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:19:49,415 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:19:49,415 [test_31_jog_coord.py-->line:33]:axis:4
+DEBUG 2025-11-05 17:19:49,415 [test_31_jog_coord.py-->line:34]:position:1
+DEBUG 2025-11-05 17:19:49,415 [test_31_jog_coord.py-->line:35]:speed:40
+DEBUG 2025-11-05 17:19:49,431 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:20:00,243 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:20:00,243 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使rx轴运动到正限位】测试通过
+INFO 2025-11-05 17:20:00,243 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使rx轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:20:00,246 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使ry轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:20:00,246 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:20:00,246 [test_31_jog_coord.py-->line:33]:axis:5
+DEBUG 2025-11-05 17:20:00,247 [test_31_jog_coord.py-->line:34]:position:0
+DEBUG 2025-11-05 17:20:00,247 [test_31_jog_coord.py-->line:35]:speed:50
+DEBUG 2025-11-05 17:20:00,258 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:20:11,320 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:20:11,320 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使ry轴运动到负限位】测试通过
+INFO 2025-11-05 17:20:11,320 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使ry轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:20:11,322 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使ry轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:20:11,322 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:20:11,322 [test_31_jog_coord.py-->line:33]:axis:5
+DEBUG 2025-11-05 17:20:11,322 [test_31_jog_coord.py-->line:34]:position:1
+DEBUG 2025-11-05 17:20:11,322 [test_31_jog_coord.py-->line:35]:speed:50
+DEBUG 2025-11-05 17:20:11,334 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:20:19,528 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:20:19,528 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使ry轴运动到正限位】测试通过
+INFO 2025-11-05 17:20:19,528 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使ry轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:20:19,531 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使rz轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:20:19,531 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:20:19,531 [test_31_jog_coord.py-->line:33]:axis:6
+DEBUG 2025-11-05 17:20:19,531 [test_31_jog_coord.py-->line:34]:position:0
+DEBUG 2025-11-05 17:20:19,531 [test_31_jog_coord.py-->line:35]:speed:60
+DEBUG 2025-11-05 17:20:19,770 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:20:28,776 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:20:28,776 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使rz轴运动到负限位】测试通过
+INFO 2025-11-05 17:20:28,776 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使rz轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:20:28,779 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使rz轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:20:28,779 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:20:28,779 [test_31_jog_coord.py-->line:33]:axis:6
+DEBUG 2025-11-05 17:20:28,779 [test_31_jog_coord.py-->line:34]:position:1
+DEBUG 2025-11-05 17:20:28,779 [test_31_jog_coord.py-->line:35]:speed:60
+DEBUG 2025-11-05 17:20:28,792 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:20:37,888 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:20:37,888 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使rz轴运动到正限位】测试通过
+INFO 2025-11-05 17:20:37,888 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使rz轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:20:37,891 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使x轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:20:37,891 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:20:37,891 [test_31_jog_coord.py-->line:72]:axis:1
+DEBUG 2025-11-05 17:20:37,891 [test_31_jog_coord.py-->line:73]:position:0
+DEBUG 2025-11-05 17:20:37,891 [test_31_jog_coord.py-->line:74]:speed:20
+DEBUG 2025-11-05 17:20:37,911 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:20:43,457 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:20:43,457 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使x轴运动到负限位】测试通过
+INFO 2025-11-05 17:20:43,457 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使x轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:20:43,461 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使x轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:20:43,461 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:20:43,461 [test_31_jog_coord.py-->line:72]:axis:1
+DEBUG 2025-11-05 17:20:43,461 [test_31_jog_coord.py-->line:73]:position:1
+DEBUG 2025-11-05 17:20:43,462 [test_31_jog_coord.py-->line:74]:speed:50
+DEBUG 2025-11-05 17:20:43,475 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:20:48,593 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:20:48,593 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使x轴运动到正限位】测试通过
+INFO 2025-11-05 17:20:48,593 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使x轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:20:48,595 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使y轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:20:48,596 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:20:48,596 [test_31_jog_coord.py-->line:72]:axis:2
+DEBUG 2025-11-05 17:20:48,596 [test_31_jog_coord.py-->line:73]:position:0
+DEBUG 2025-11-05 17:20:48,596 [test_31_jog_coord.py-->line:74]:speed:20
+DEBUG 2025-11-05 17:20:48,608 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:20:55,121 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:20:55,122 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使y轴运动到负限位】测试通过
+INFO 2025-11-05 17:20:55,122 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使y轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:20:55,125 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使y轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:20:55,126 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:20:55,126 [test_31_jog_coord.py-->line:72]:axis:2
+DEBUG 2025-11-05 17:20:55,126 [test_31_jog_coord.py-->line:73]:position:1
+DEBUG 2025-11-05 17:20:55,126 [test_31_jog_coord.py-->line:74]:speed:20
+DEBUG 2025-11-05 17:20:55,141 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:21:07,681 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:21:07,681 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使y轴运动到正限位】测试通过
+INFO 2025-11-05 17:21:07,681 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使y轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:21:07,684 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使z轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:21:07,684 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:21:07,684 [test_31_jog_coord.py-->line:72]:axis:3
+DEBUG 2025-11-05 17:21:07,684 [test_31_jog_coord.py-->line:73]:position:1
+DEBUG 2025-11-05 17:21:07,684 [test_31_jog_coord.py-->line:74]:speed:30
+DEBUG 2025-11-05 17:21:07,697 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:21:13,705 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:21:13,706 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使z轴运动到正限位】测试通过
+INFO 2025-11-05 17:21:13,706 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使z轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:21:13,711 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使rx轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:21:13,712 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:21:13,712 [test_31_jog_coord.py-->line:72]:axis:4
+DEBUG 2025-11-05 17:21:13,712 [test_31_jog_coord.py-->line:73]:position:0
+DEBUG 2025-11-05 17:21:13,712 [test_31_jog_coord.py-->line:74]:speed:40
+DEBUG 2025-11-05 17:21:13,727 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:21:19,057 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:21:19,057 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使rx轴运动到负限位】测试通过
+INFO 2025-11-05 17:21:19,057 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使rx轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:21:19,060 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使rx轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:21:19,060 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:21:19,060 [test_31_jog_coord.py-->line:72]:axis:4
+DEBUG 2025-11-05 17:21:19,060 [test_31_jog_coord.py-->line:73]:position:1
+DEBUG 2025-11-05 17:21:19,060 [test_31_jog_coord.py-->line:74]:speed:40
+DEBUG 2025-11-05 17:21:19,076 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:21:26,556 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:21:26,556 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使rx轴运动到正限位】测试通过
+INFO 2025-11-05 17:21:26,556 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使rx轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:21:26,560 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使ry轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:21:26,560 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:21:26,560 [test_31_jog_coord.py-->line:72]:axis:5
+DEBUG 2025-11-05 17:21:26,560 [test_31_jog_coord.py-->line:73]:position:0
+DEBUG 2025-11-05 17:21:26,560 [test_31_jog_coord.py-->line:74]:speed:50
+DEBUG 2025-11-05 17:21:26,574 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:21:40,498 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:21:40,498 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使ry轴运动到负限位】测试通过
+INFO 2025-11-05 17:21:40,498 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使ry轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:21:40,501 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使ry轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:21:40,502 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:21:40,502 [test_31_jog_coord.py-->line:72]:axis:5
+DEBUG 2025-11-05 17:21:40,502 [test_31_jog_coord.py-->line:73]:position:1
+DEBUG 2025-11-05 17:21:40,502 [test_31_jog_coord.py-->line:74]:speed:50
+DEBUG 2025-11-05 17:21:40,515 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:21:44,888 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:21:44,888 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使ry轴运动到正限位】测试通过
+INFO 2025-11-05 17:21:44,888 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使ry轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:21:44,891 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使rz轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:21:44,892 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:21:44,892 [test_31_jog_coord.py-->line:72]:axis:6
+DEBUG 2025-11-05 17:21:44,892 [test_31_jog_coord.py-->line:73]:position:0
+DEBUG 2025-11-05 17:21:44,892 [test_31_jog_coord.py-->line:74]:speed:100
+DEBUG 2025-11-05 17:21:44,905 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:21:56,033 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:21:56,033 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使rz轴运动到负限位】测试通过
+INFO 2025-11-05 17:21:56,033 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使rz轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:21:56,037 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使rz轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:21:56,037 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:21:56,037 [test_31_jog_coord.py-->line:72]:axis:6
+DEBUG 2025-11-05 17:21:56,037 [test_31_jog_coord.py-->line:73]:position:1
+DEBUG 2025-11-05 17:21:56,037 [test_31_jog_coord.py-->line:74]:speed:100
+DEBUG 2025-11-05 17:21:56,050 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:22:02,962 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:22:02,962 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使rz轴运动到正限位】测试通过
+INFO 2025-11-05 17:22:02,962 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使rz轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:22:02,966 [test_31_jog_coord.py-->line:108]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2025-11-05 17:22:02,966 [test_31_jog_coord.py-->line:109]:test_api:jog_coord
+DEBUG 2025-11-05 17:22:02,966 [test_31_jog_coord.py-->line:110]:axis:3
+DEBUG 2025-11-05 17:22:02,966 [test_31_jog_coord.py-->line:111]:position:0
+DEBUG 2025-11-05 17:22:02,966 [test_31_jog_coord.py-->line:112]:speed:0
+INFO 2025-11-05 17:22:02,967 [test_31_jog_coord.py-->line:118]:✅ 用例【设置速度超限】异常断言通过
+INFO 2025-11-05 17:22:02,967 [test_31_jog_coord.py-->line:119]:》》》用例【设置速度超限】测试完成《《《
+INFO 2025-11-05 17:22:02,969 [test_31_jog_coord.py-->line:108]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2025-11-05 17:22:02,969 [test_31_jog_coord.py-->line:109]:test_api:jog_coord
+DEBUG 2025-11-05 17:22:02,969 [test_31_jog_coord.py-->line:110]:axis:4
+DEBUG 2025-11-05 17:22:02,969 [test_31_jog_coord.py-->line:111]:position:1
+DEBUG 2025-11-05 17:22:02,969 [test_31_jog_coord.py-->line:112]:speed:101
+INFO 2025-11-05 17:22:02,970 [test_31_jog_coord.py-->line:118]:✅ 用例【设置速度超限】异常断言通过
+INFO 2025-11-05 17:22:02,970 [test_31_jog_coord.py-->line:119]:》》》用例【设置速度超限】测试完成《《《
+INFO 2025-11-05 17:22:02,971 [test_31_jog_coord.py-->line:108]:》》》》》用例【设置坐标轴超限】开始测试《《《《《
+DEBUG 2025-11-05 17:22:02,971 [test_31_jog_coord.py-->line:109]:test_api:jog_coord
+DEBUG 2025-11-05 17:22:02,971 [test_31_jog_coord.py-->line:110]:axis:0
+DEBUG 2025-11-05 17:22:02,971 [test_31_jog_coord.py-->line:111]:position:0
+DEBUG 2025-11-05 17:22:02,971 [test_31_jog_coord.py-->line:112]:speed:50
+INFO 2025-11-05 17:22:03,097 [test_31_jog_coord.py-->line:108]:》》》》》用例【设置坐标轴超限】开始测试《《《《《
+DEBUG 2025-11-05 17:22:03,097 [test_31_jog_coord.py-->line:109]:test_api:jog_coord
+DEBUG 2025-11-05 17:22:03,097 [test_31_jog_coord.py-->line:110]:axis:7
+DEBUG 2025-11-05 17:22:03,097 [test_31_jog_coord.py-->line:111]:position:1
+DEBUG 2025-11-05 17:22:03,098 [test_31_jog_coord.py-->line:112]:speed:50
+INFO 2025-11-05 17:22:03,765 [test_31_jog_coord.py-->line:108]:》》》》》用例【设置方向超限】开始测试《《《《《
+DEBUG 2025-11-05 17:22:03,765 [test_31_jog_coord.py-->line:109]:test_api:jog_coord
+DEBUG 2025-11-05 17:22:03,765 [test_31_jog_coord.py-->line:110]:axis:3
+DEBUG 2025-11-05 17:22:03,765 [test_31_jog_coord.py-->line:111]:position:2
+DEBUG 2025-11-05 17:22:03,765 [test_31_jog_coord.py-->line:112]:speed:50
+INFO 2025-11-05 17:22:03,765 [test_31_jog_coord.py-->line:118]:✅ 用例【设置方向超限】异常断言通过
+INFO 2025-11-05 17:22:03,765 [test_31_jog_coord.py-->line:119]:》》》用例【设置方向超限】测试完成《《《
+INFO 2025-11-05 17:22:03,766 [test_31_jog_coord.py-->line:108]:》》》》》用例【设置方向超限】开始测试《《《《《
+DEBUG 2025-11-05 17:22:03,766 [test_31_jog_coord.py-->line:109]:test_api:jog_coord
+DEBUG 2025-11-05 17:22:03,766 [test_31_jog_coord.py-->line:110]:axis:4
+DEBUG 2025-11-05 17:22:03,766 [test_31_jog_coord.py-->line:111]:position:-1
+DEBUG 2025-11-05 17:22:03,766 [test_31_jog_coord.py-->line:112]:speed:50
+INFO 2025-11-05 17:22:03,766 [test_31_jog_coord.py-->line:118]:✅ 用例【设置方向超限】异常断言通过
+INFO 2025-11-05 17:22:03,766 [test_31_jog_coord.py-->line:119]:》》》用例【设置方向超限】测试完成《《《
+INFO 2025-11-05 17:22:07,070 [test_31_jog_coord.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-11-05 17:35:04,023 [test_30_jog_rpy.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-11-05 17:35:04,025 [test_30_jog_rpy.py-->line:31]:》》》》》用例【插补模式下，x轴进行rpy运动（负向）】开始测试《《《《《
+DEBUG 2025-11-05 17:35:04,025 [test_30_jog_rpy.py-->line:32]:test_api:jog_rpy
+DEBUG 2025-11-05 17:35:04,025 [test_30_jog_rpy.py-->line:33]:axis:1
+DEBUG 2025-11-05 17:35:04,025 [test_30_jog_rpy.py-->line:34]:position:0
+DEBUG 2025-11-05 17:35:04,025 [test_30_jog_rpy.py-->line:35]:speed:30
+DEBUG 2025-11-05 17:35:05,051 [test_30_jog_rpy.py-->line:41]:当前模式为插补
+DEBUG 2025-11-05 17:35:18,582 [test_30_jog_rpy.py-->line:50]:接口返回：1
+INFO 2025-11-05 17:35:18,582 [test_30_jog_rpy.py-->line:60]:✅ 用例【插补模式下，x轴进行rpy运动（负向）】测试通过
+INFO 2025-11-05 17:35:18,582 [test_30_jog_rpy.py-->line:61]:》》》》》用例【插补模式下，x轴进行rpy运动（负向）】测试完成《《《《《
+INFO 2025-11-05 17:35:18,586 [test_30_jog_rpy.py-->line:31]:》》》》》用例【插补模式下，x轴进行rpy运动（正向）】开始测试《《《《《
+DEBUG 2025-11-05 17:35:18,586 [test_30_jog_rpy.py-->line:32]:test_api:jog_rpy
+DEBUG 2025-11-05 17:35:18,586 [test_30_jog_rpy.py-->line:33]:axis:1
+DEBUG 2025-11-05 17:35:18,587 [test_30_jog_rpy.py-->line:34]:position:1
+DEBUG 2025-11-05 17:35:18,587 [test_30_jog_rpy.py-->line:35]:speed:50
+DEBUG 2025-11-05 17:35:19,600 [test_30_jog_rpy.py-->line:41]:当前模式为插补
+DEBUG 2025-11-05 17:35:29,196 [test_30_jog_rpy.py-->line:50]:接口返回：1
+INFO 2025-11-05 17:35:29,196 [test_30_jog_rpy.py-->line:60]:✅ 用例【插补模式下，x轴进行rpy运动（正向）】测试通过
+INFO 2025-11-05 17:35:29,196 [test_30_jog_rpy.py-->line:61]:》》》》》用例【插补模式下，x轴进行rpy运动（正向）】测试完成《《《《《
+INFO 2025-11-05 17:35:29,199 [test_30_jog_rpy.py-->line:31]:》》》》》用例【插补模式下，y轴进行rpy运动（负向）】开始测试《《《《《
+DEBUG 2025-11-05 17:35:29,199 [test_30_jog_rpy.py-->line:32]:test_api:jog_rpy
+DEBUG 2025-11-05 17:35:29,199 [test_30_jog_rpy.py-->line:33]:axis:2
+DEBUG 2025-11-05 17:35:29,199 [test_30_jog_rpy.py-->line:34]:position:0
+DEBUG 2025-11-05 17:35:29,199 [test_30_jog_rpy.py-->line:35]:speed:70
+DEBUG 2025-11-05 17:35:30,214 [test_30_jog_rpy.py-->line:41]:当前模式为插补
+DEBUG 2025-11-05 17:35:38,177 [test_30_jog_rpy.py-->line:50]:接口返回：1
+INFO 2025-11-05 17:35:38,177 [test_30_jog_rpy.py-->line:60]:✅ 用例【插补模式下，y轴进行rpy运动（负向）】测试通过
+INFO 2025-11-05 17:35:38,178 [test_30_jog_rpy.py-->line:61]:》》》》》用例【插补模式下，y轴进行rpy运动（负向）】测试完成《《《《《
+INFO 2025-11-05 17:35:38,181 [test_30_jog_rpy.py-->line:31]:》》》》》用例【插补模式下，y轴进行rpy运动（正向）】开始测试《《《《《
+DEBUG 2025-11-05 17:35:38,181 [test_30_jog_rpy.py-->line:32]:test_api:jog_rpy
+DEBUG 2025-11-05 17:35:38,181 [test_30_jog_rpy.py-->line:33]:axis:2
+DEBUG 2025-11-05 17:35:38,181 [test_30_jog_rpy.py-->line:34]:position:1
+DEBUG 2025-11-05 17:35:38,181 [test_30_jog_rpy.py-->line:35]:speed:20
+DEBUG 2025-11-05 17:35:39,198 [test_30_jog_rpy.py-->line:41]:当前模式为插补
+DEBUG 2025-11-05 17:35:48,787 [test_30_jog_rpy.py-->line:50]:接口返回：1
+INFO 2025-11-05 17:35:48,787 [test_30_jog_rpy.py-->line:60]:✅ 用例【插补模式下，y轴进行rpy运动（正向）】测试通过
+INFO 2025-11-05 17:35:48,787 [test_30_jog_rpy.py-->line:61]:》》》》》用例【插补模式下，y轴进行rpy运动（正向）】测试完成《《《《《
+INFO 2025-11-05 17:35:48,790 [test_30_jog_rpy.py-->line:31]:》》》》》用例【插补模式下，z轴进行rpy运动（负向）】开始测试《《《《《
+DEBUG 2025-11-05 17:35:48,790 [test_30_jog_rpy.py-->line:32]:test_api:jog_rpy
+DEBUG 2025-11-05 17:35:48,790 [test_30_jog_rpy.py-->line:33]:axis:3
+DEBUG 2025-11-05 17:35:48,790 [test_30_jog_rpy.py-->line:34]:position:0
+DEBUG 2025-11-05 17:35:48,790 [test_30_jog_rpy.py-->line:35]:speed:30
+DEBUG 2025-11-05 17:35:49,806 [test_30_jog_rpy.py-->line:41]:当前模式为插补
+DEBUG 2025-11-05 17:35:54,596 [test_30_jog_rpy.py-->line:50]:接口返回：1
+INFO 2025-11-05 17:35:54,596 [test_30_jog_rpy.py-->line:60]:✅ 用例【插补模式下，z轴进行rpy运动（负向）】测试通过
+INFO 2025-11-05 17:35:54,596 [test_30_jog_rpy.py-->line:61]:》》》》》用例【插补模式下，z轴进行rpy运动（负向）】测试完成《《《《《
+INFO 2025-11-05 17:35:54,599 [test_30_jog_rpy.py-->line:31]:》》》》》用例【插补模式下，z轴进行rpy运动（正向）】开始测试《《《《《
+DEBUG 2025-11-05 17:35:54,599 [test_30_jog_rpy.py-->line:32]:test_api:jog_rpy
+DEBUG 2025-11-05 17:35:54,599 [test_30_jog_rpy.py-->line:33]:axis:3
+DEBUG 2025-11-05 17:35:54,599 [test_30_jog_rpy.py-->line:34]:position:1
+DEBUG 2025-11-05 17:35:54,601 [test_30_jog_rpy.py-->line:35]:speed:30
+DEBUG 2025-11-05 17:35:55,616 [test_30_jog_rpy.py-->line:41]:当前模式为插补
+DEBUG 2025-11-05 17:36:11,032 [test_30_jog_rpy.py-->line:50]:接口返回：1
+INFO 2025-11-05 17:36:11,032 [test_30_jog_rpy.py-->line:60]:✅ 用例【插补模式下，z轴进行rpy运动（正向）】测试通过
+INFO 2025-11-05 17:36:11,032 [test_30_jog_rpy.py-->line:61]:》》》》》用例【插补模式下，z轴进行rpy运动（正向）】测试完成《《《《《
+INFO 2025-11-05 17:36:11,034 [test_30_jog_rpy.py-->line:71]:》》》》》用例【刷新模式下，x轴进行rpy运动（负向）】开始测试《《《《《
+DEBUG 2025-11-05 17:36:11,035 [test_30_jog_rpy.py-->line:72]:test_api:jog_rpy
+DEBUG 2025-11-05 17:36:11,035 [test_30_jog_rpy.py-->line:73]:axis:1
+DEBUG 2025-11-05 17:36:11,035 [test_30_jog_rpy.py-->line:74]:position:0
+DEBUG 2025-11-05 17:36:11,035 [test_30_jog_rpy.py-->line:75]:speed:20
+DEBUG 2025-11-05 17:36:12,065 [test_30_jog_rpy.py-->line:81]:当前模式为刷新
+DEBUG 2025-11-05 17:36:15,428 [test_30_jog_rpy.py-->line:90]:接口返回：1
+INFO 2025-11-05 17:36:15,428 [test_30_jog_rpy.py-->line:100]:✅ 用例【刷新模式下，x轴进行rpy运动（负向）】测试通过
+INFO 2025-11-05 17:36:15,428 [test_30_jog_rpy.py-->line:101]:》》》》》用例【刷新模式下，x轴进行rpy运动（负向）】测试完成《《《《《
+INFO 2025-11-05 17:36:15,431 [test_30_jog_rpy.py-->line:71]:》》》》》用例【刷新模式下，x轴进行rpy运动（正向）】开始测试《《《《《
+DEBUG 2025-11-05 17:36:15,431 [test_30_jog_rpy.py-->line:72]:test_api:jog_rpy
+DEBUG 2025-11-05 17:36:15,431 [test_30_jog_rpy.py-->line:73]:axis:1
+DEBUG 2025-11-05 17:36:15,432 [test_30_jog_rpy.py-->line:74]:position:1
+DEBUG 2025-11-05 17:36:15,432 [test_30_jog_rpy.py-->line:75]:speed:50
+DEBUG 2025-11-05 17:36:16,443 [test_30_jog_rpy.py-->line:81]:当前模式为刷新
+DEBUG 2025-11-05 17:36:20,870 [test_30_jog_rpy.py-->line:90]:接口返回：1
+INFO 2025-11-05 17:36:20,870 [test_30_jog_rpy.py-->line:100]:✅ 用例【刷新模式下，x轴进行rpy运动（正向）】测试通过
+INFO 2025-11-05 17:36:20,870 [test_30_jog_rpy.py-->line:101]:》》》》》用例【刷新模式下，x轴进行rpy运动（正向）】测试完成《《《《《
+INFO 2025-11-05 17:36:20,874 [test_30_jog_rpy.py-->line:71]:》》》》》用例【刷新模式下，y轴进行rpy运动（负向）】开始测试《《《《《
+DEBUG 2025-11-05 17:36:20,874 [test_30_jog_rpy.py-->line:72]:test_api:jog_rpy
+DEBUG 2025-11-05 17:36:20,874 [test_30_jog_rpy.py-->line:73]:axis:2
+DEBUG 2025-11-05 17:36:20,874 [test_30_jog_rpy.py-->line:74]:position:0
+DEBUG 2025-11-05 17:36:20,874 [test_30_jog_rpy.py-->line:75]:speed:20
+DEBUG 2025-11-05 17:36:21,892 [test_30_jog_rpy.py-->line:81]:当前模式为刷新
+DEBUG 2025-11-05 17:36:29,908 [test_30_jog_rpy.py-->line:90]:接口返回：1
+INFO 2025-11-05 17:36:29,908 [test_30_jog_rpy.py-->line:100]:✅ 用例【刷新模式下，y轴进行rpy运动（负向）】测试通过
+INFO 2025-11-05 17:36:29,908 [test_30_jog_rpy.py-->line:101]:》》》》》用例【刷新模式下，y轴进行rpy运动（负向）】测试完成《《《《《
+INFO 2025-11-05 17:36:29,912 [test_30_jog_rpy.py-->line:71]:》》》》》用例【刷新模式下，y轴进行rpy运动（正向）】开始测试《《《《《
+DEBUG 2025-11-05 17:36:29,912 [test_30_jog_rpy.py-->line:72]:test_api:jog_rpy
+DEBUG 2025-11-05 17:36:29,912 [test_30_jog_rpy.py-->line:73]:axis:2
+DEBUG 2025-11-05 17:36:29,912 [test_30_jog_rpy.py-->line:74]:position:1
+DEBUG 2025-11-05 17:36:29,912 [test_30_jog_rpy.py-->line:75]:speed:20
+DEBUG 2025-11-05 17:36:30,925 [test_30_jog_rpy.py-->line:81]:当前模式为刷新
+DEBUG 2025-11-05 17:36:35,356 [test_30_jog_rpy.py-->line:90]:接口返回：1
+INFO 2025-11-05 17:36:35,356 [test_30_jog_rpy.py-->line:100]:✅ 用例【刷新模式下，y轴进行rpy运动（正向）】测试通过
+INFO 2025-11-05 17:36:35,356 [test_30_jog_rpy.py-->line:101]:》》》》》用例【刷新模式下，y轴进行rpy运动（正向）】测试完成《《《《《
+INFO 2025-11-05 17:36:35,359 [test_30_jog_rpy.py-->line:71]:》》》》》用例【刷新模式下，z轴进行rpy运动（负向）】开始测试《《《《《
+DEBUG 2025-11-05 17:36:35,360 [test_30_jog_rpy.py-->line:72]:test_api:jog_rpy
+DEBUG 2025-11-05 17:36:35,360 [test_30_jog_rpy.py-->line:73]:axis:3
+DEBUG 2025-11-05 17:36:35,360 [test_30_jog_rpy.py-->line:74]:position:0
+DEBUG 2025-11-05 17:36:35,360 [test_30_jog_rpy.py-->line:75]:speed:30
+DEBUG 2025-11-05 17:36:36,374 [test_30_jog_rpy.py-->line:81]:当前模式为刷新
+DEBUG 2025-11-05 17:36:41,179 [test_30_jog_rpy.py-->line:90]:接口返回：1
+INFO 2025-11-05 17:36:41,180 [test_30_jog_rpy.py-->line:100]:✅ 用例【刷新模式下，z轴进行rpy运动（负向）】测试通过
+INFO 2025-11-05 17:36:41,180 [test_30_jog_rpy.py-->line:101]:》》》》》用例【刷新模式下，z轴进行rpy运动（负向）】测试完成《《《《《
+INFO 2025-11-05 17:36:41,183 [test_30_jog_rpy.py-->line:71]:》》》》》用例【刷新模式下，z轴进行rpy运动（正向）】开始测试《《《《《
+DEBUG 2025-11-05 17:36:41,183 [test_30_jog_rpy.py-->line:72]:test_api:jog_rpy
+DEBUG 2025-11-05 17:36:41,183 [test_30_jog_rpy.py-->line:73]:axis:3
+DEBUG 2025-11-05 17:36:41,183 [test_30_jog_rpy.py-->line:74]:position:1
+DEBUG 2025-11-05 17:36:41,183 [test_30_jog_rpy.py-->line:75]:speed:30
+DEBUG 2025-11-05 17:36:42,198 [test_30_jog_rpy.py-->line:81]:当前模式为刷新
+DEBUG 2025-11-05 17:36:47,871 [test_30_jog_rpy.py-->line:90]:接口返回：1
+INFO 2025-11-05 17:36:47,871 [test_30_jog_rpy.py-->line:100]:✅ 用例【刷新模式下，z轴进行rpy运动（正向）】测试通过
+INFO 2025-11-05 17:36:47,871 [test_30_jog_rpy.py-->line:101]:》》》》》用例【刷新模式下，z轴进行rpy运动（正向）】测试完成《《《《《
+INFO 2025-11-05 17:36:47,875 [test_30_jog_rpy.py-->line:110]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2025-11-05 17:36:47,875 [test_30_jog_rpy.py-->line:111]:test_api:jog_rpy
+DEBUG 2025-11-05 17:36:47,875 [test_30_jog_rpy.py-->line:112]:axis:3
+DEBUG 2025-11-05 17:36:47,875 [test_30_jog_rpy.py-->line:113]:position:0
+DEBUG 2025-11-05 17:36:47,875 [test_30_jog_rpy.py-->line:114]:speed:0
+INFO 2025-11-05 17:36:47,875 [test_30_jog_rpy.py-->line:120]:✅ 用例【设置速度超限】异常断言通过
+INFO 2025-11-05 17:36:47,875 [test_30_jog_rpy.py-->line:121]:》》》用例【设置速度超限】测试完成《《《
+INFO 2025-11-05 17:36:47,877 [test_30_jog_rpy.py-->line:110]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2025-11-05 17:36:47,877 [test_30_jog_rpy.py-->line:111]:test_api:jog_rpy
+DEBUG 2025-11-05 17:36:47,877 [test_30_jog_rpy.py-->line:112]:axis:4
+DEBUG 2025-11-05 17:36:47,877 [test_30_jog_rpy.py-->line:113]:position:1
+DEBUG 2025-11-05 17:36:47,877 [test_30_jog_rpy.py-->line:114]:speed:101
+INFO 2025-11-05 17:36:47,878 [test_30_jog_rpy.py-->line:120]:✅ 用例【设置速度超限】异常断言通过
+INFO 2025-11-05 17:36:47,878 [test_30_jog_rpy.py-->line:121]:》》》用例【设置速度超限】测试完成《《《
+INFO 2025-11-05 17:36:47,879 [test_30_jog_rpy.py-->line:110]:》》》》》用例【设置坐标系超限】开始测试《《《《《
+DEBUG 2025-11-05 17:36:47,879 [test_30_jog_rpy.py-->line:111]:test_api:jog_rpy
+DEBUG 2025-11-05 17:36:47,879 [test_30_jog_rpy.py-->line:112]:axis:0
+DEBUG 2025-11-05 17:36:47,879 [test_30_jog_rpy.py-->line:113]:position:0
+DEBUG 2025-11-05 17:36:47,879 [test_30_jog_rpy.py-->line:114]:speed:50
+INFO 2025-11-05 17:36:47,879 [test_30_jog_rpy.py-->line:120]:✅ 用例【设置坐标系超限】异常断言通过
+INFO 2025-11-05 17:36:47,879 [test_30_jog_rpy.py-->line:121]:》》》用例【设置坐标系超限】测试完成《《《
+INFO 2025-11-05 17:36:47,880 [test_30_jog_rpy.py-->line:110]:》》》》》用例【设置坐标系超限】开始测试《《《《《
+DEBUG 2025-11-05 17:36:47,880 [test_30_jog_rpy.py-->line:111]:test_api:jog_rpy
+DEBUG 2025-11-05 17:36:47,881 [test_30_jog_rpy.py-->line:112]:axis:4
+DEBUG 2025-11-05 17:36:47,881 [test_30_jog_rpy.py-->line:113]:position:1
+DEBUG 2025-11-05 17:36:47,881 [test_30_jog_rpy.py-->line:114]:speed:50
+INFO 2025-11-05 17:36:47,881 [test_30_jog_rpy.py-->line:120]:✅ 用例【设置坐标系超限】异常断言通过
+INFO 2025-11-05 17:36:47,881 [test_30_jog_rpy.py-->line:121]:》》》用例【设置坐标系超限】测试完成《《《
+INFO 2025-11-05 17:36:47,882 [test_30_jog_rpy.py-->line:110]:》》》》》用例【设置方向超限】开始测试《《《《《
+DEBUG 2025-11-05 17:36:47,882 [test_30_jog_rpy.py-->line:111]:test_api:jog_rpy
+DEBUG 2025-11-05 17:36:47,882 [test_30_jog_rpy.py-->line:112]:axis:3
+DEBUG 2025-11-05 17:36:47,882 [test_30_jog_rpy.py-->line:113]:position:2
+DEBUG 2025-11-05 17:36:47,882 [test_30_jog_rpy.py-->line:114]:speed:50
+INFO 2025-11-05 17:36:47,882 [test_30_jog_rpy.py-->line:120]:✅ 用例【设置方向超限】异常断言通过
+INFO 2025-11-05 17:36:47,882 [test_30_jog_rpy.py-->line:121]:》》》用例【设置方向超限】测试完成《《《
+INFO 2025-11-05 17:36:47,883 [test_30_jog_rpy.py-->line:110]:》》》》》用例【设置方向超限】开始测试《《《《《
+DEBUG 2025-11-05 17:36:47,883 [test_30_jog_rpy.py-->line:111]:test_api:jog_rpy
+DEBUG 2025-11-05 17:36:47,883 [test_30_jog_rpy.py-->line:112]:axis:4
+DEBUG 2025-11-05 17:36:47,883 [test_30_jog_rpy.py-->line:113]:position:-1
+DEBUG 2025-11-05 17:36:47,883 [test_30_jog_rpy.py-->line:114]:speed:50
+INFO 2025-11-05 17:36:47,883 [test_30_jog_rpy.py-->line:120]:✅ 用例【设置方向超限】异常断言通过
+INFO 2025-11-05 17:36:47,883 [test_30_jog_rpy.py-->line:121]:》》》用例【设置方向超限】测试完成《《《
+INFO 2025-11-05 17:36:55,196 [test_30_jog_rpy.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-11-05 17:43:37,025 [test_31_jog_coord.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-11-05 17:43:37,026 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使x轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:43:37,026 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:43:37,026 [test_31_jog_coord.py-->line:33]:axis:1
+DEBUG 2025-11-05 17:43:37,026 [test_31_jog_coord.py-->line:34]:position:0
+DEBUG 2025-11-05 17:43:37,026 [test_31_jog_coord.py-->line:35]:speed:30
+DEBUG 2025-11-05 17:43:37,036 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:43:42,718 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:43:42,718 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使x轴运动到负限位】测试通过
+INFO 2025-11-05 17:43:42,718 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使x轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:43:42,720 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使x轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:43:42,720 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:43:42,720 [test_31_jog_coord.py-->line:33]:axis:1
+DEBUG 2025-11-05 17:43:42,720 [test_31_jog_coord.py-->line:34]:position:1
+DEBUG 2025-11-05 17:43:42,720 [test_31_jog_coord.py-->line:35]:speed:50
+DEBUG 2025-11-05 17:43:42,731 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:43:47,769 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:43:47,769 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使x轴运动到正限位】测试通过
+INFO 2025-11-05 17:43:47,769 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使x轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:43:47,773 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使y轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:43:47,773 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:43:47,773 [test_31_jog_coord.py-->line:33]:axis:2
+DEBUG 2025-11-05 17:43:47,773 [test_31_jog_coord.py-->line:34]:position:0
+DEBUG 2025-11-05 17:43:47,773 [test_31_jog_coord.py-->line:35]:speed:70
+DEBUG 2025-11-05 17:43:47,783 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:43:53,466 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:43:53,466 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使y轴运动到负限位】测试通过
+INFO 2025-11-05 17:43:53,466 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使y轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:43:53,470 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使y轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:43:53,470 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:43:53,470 [test_31_jog_coord.py-->line:33]:axis:2
+DEBUG 2025-11-05 17:43:53,470 [test_31_jog_coord.py-->line:34]:position:1
+DEBUG 2025-11-05 17:43:53,470 [test_31_jog_coord.py-->line:35]:speed:20
+DEBUG 2025-11-05 17:43:53,481 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:43:59,049 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:43:59,049 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使y轴运动到正限位】测试通过
+INFO 2025-11-05 17:43:59,049 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使y轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:43:59,052 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使z轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:43:59,052 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:43:59,053 [test_31_jog_coord.py-->line:33]:axis:3
+DEBUG 2025-11-05 17:43:59,053 [test_31_jog_coord.py-->line:34]:position:1
+DEBUG 2025-11-05 17:43:59,053 [test_31_jog_coord.py-->line:35]:speed:30
+DEBUG 2025-11-05 17:43:59,277 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:44:09,965 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:44:09,965 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使z轴运动到正限位】测试通过
+INFO 2025-11-05 17:44:09,965 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使z轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:44:09,968 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使rx轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:44:09,968 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:44:09,968 [test_31_jog_coord.py-->line:33]:axis:4
+DEBUG 2025-11-05 17:44:09,968 [test_31_jog_coord.py-->line:34]:position:0
+DEBUG 2025-11-05 17:44:09,968 [test_31_jog_coord.py-->line:35]:speed:40
+DEBUG 2025-11-05 17:44:09,979 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:44:17,494 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:44:17,494 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使rx轴运动到负限位】测试通过
+INFO 2025-11-05 17:44:17,494 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使rx轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:44:17,498 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使rx轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:44:17,498 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:44:17,498 [test_31_jog_coord.py-->line:33]:axis:4
+DEBUG 2025-11-05 17:44:17,498 [test_31_jog_coord.py-->line:34]:position:1
+DEBUG 2025-11-05 17:44:17,498 [test_31_jog_coord.py-->line:35]:speed:40
+DEBUG 2025-11-05 17:44:17,508 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:44:28,384 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:44:28,384 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使rx轴运动到正限位】测试通过
+INFO 2025-11-05 17:44:28,384 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使rx轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:44:28,387 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使ry轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:44:28,388 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:44:28,388 [test_31_jog_coord.py-->line:33]:axis:5
+DEBUG 2025-11-05 17:44:28,388 [test_31_jog_coord.py-->line:34]:position:0
+DEBUG 2025-11-05 17:44:28,388 [test_31_jog_coord.py-->line:35]:speed:50
+DEBUG 2025-11-05 17:44:28,397 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:44:37,023 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:44:37,023 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使ry轴运动到负限位】测试通过
+INFO 2025-11-05 17:44:37,023 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使ry轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:44:37,026 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使ry轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:44:37,026 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:44:37,026 [test_31_jog_coord.py-->line:33]:axis:5
+DEBUG 2025-11-05 17:44:37,026 [test_31_jog_coord.py-->line:34]:position:1
+DEBUG 2025-11-05 17:44:37,026 [test_31_jog_coord.py-->line:35]:speed:50
+DEBUG 2025-11-05 17:44:37,260 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:44:47,416 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:44:47,416 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使ry轴运动到正限位】测试通过
+INFO 2025-11-05 17:44:47,416 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使ry轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:44:47,419 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使rz轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:44:47,419 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:44:47,420 [test_31_jog_coord.py-->line:33]:axis:6
+DEBUG 2025-11-05 17:44:47,420 [test_31_jog_coord.py-->line:34]:position:0
+DEBUG 2025-11-05 17:44:47,420 [test_31_jog_coord.py-->line:35]:speed:60
+DEBUG 2025-11-05 17:44:47,431 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:44:55,954 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:44:55,954 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使rz轴运动到负限位】测试通过
+INFO 2025-11-05 17:44:55,954 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使rz轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:44:55,957 [test_31_jog_coord.py-->line:31]:》》》》》用例【插补模式下，使rz轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:44:55,957 [test_31_jog_coord.py-->line:32]:test_api:jog_coord
+DEBUG 2025-11-05 17:44:55,957 [test_31_jog_coord.py-->line:33]:axis:6
+DEBUG 2025-11-05 17:44:55,958 [test_31_jog_coord.py-->line:34]:position:1
+DEBUG 2025-11-05 17:44:55,958 [test_31_jog_coord.py-->line:35]:speed:60
+DEBUG 2025-11-05 17:44:55,968 [test_31_jog_coord.py-->line:40]:当前模式为插补
+DEBUG 2025-11-05 17:45:05,040 [test_31_jog_coord.py-->line:49]:接口返回：1
+INFO 2025-11-05 17:45:05,040 [test_31_jog_coord.py-->line:59]:✅ 用例【插补模式下，使rz轴运动到正限位】测试通过
+INFO 2025-11-05 17:45:05,040 [test_31_jog_coord.py-->line:60]:》》》》》用例【插补模式下，使rz轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:45:05,044 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使x轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:45:05,044 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:45:05,044 [test_31_jog_coord.py-->line:72]:axis:1
+DEBUG 2025-11-05 17:45:05,044 [test_31_jog_coord.py-->line:73]:position:0
+DEBUG 2025-11-05 17:45:05,044 [test_31_jog_coord.py-->line:74]:speed:20
+DEBUG 2025-11-05 17:45:05,063 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:45:09,382 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:45:09,382 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使x轴运动到负限位】测试通过
+INFO 2025-11-05 17:45:09,382 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使x轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:45:09,385 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使x轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:45:09,385 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:45:09,385 [test_31_jog_coord.py-->line:72]:axis:1
+DEBUG 2025-11-05 17:45:09,385 [test_31_jog_coord.py-->line:73]:position:1
+DEBUG 2025-11-05 17:45:09,385 [test_31_jog_coord.py-->line:74]:speed:50
+DEBUG 2025-11-05 17:45:09,396 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:45:13,323 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:45:13,323 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使x轴运动到正限位】测试通过
+INFO 2025-11-05 17:45:13,323 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使x轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:45:13,326 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使y轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:45:13,326 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:45:13,326 [test_31_jog_coord.py-->line:72]:axis:2
+DEBUG 2025-11-05 17:45:13,326 [test_31_jog_coord.py-->line:73]:position:0
+DEBUG 2025-11-05 17:45:13,326 [test_31_jog_coord.py-->line:74]:speed:20
+DEBUG 2025-11-05 17:45:13,337 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:45:17,311 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:45:17,311 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使y轴运动到负限位】测试通过
+INFO 2025-11-05 17:45:17,311 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使y轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:45:17,314 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使y轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:45:17,314 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:45:17,314 [test_31_jog_coord.py-->line:72]:axis:2
+DEBUG 2025-11-05 17:45:17,314 [test_31_jog_coord.py-->line:73]:position:1
+DEBUG 2025-11-05 17:45:17,315 [test_31_jog_coord.py-->line:74]:speed:20
+DEBUG 2025-11-05 17:45:17,756 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:45:32,531 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:45:32,531 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使y轴运动到正限位】测试通过
+INFO 2025-11-05 17:45:32,531 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使y轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:45:32,534 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使z轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:45:32,535 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:45:32,535 [test_31_jog_coord.py-->line:72]:axis:3
+DEBUG 2025-11-05 17:45:32,535 [test_31_jog_coord.py-->line:73]:position:1
+DEBUG 2025-11-05 17:45:32,535 [test_31_jog_coord.py-->line:74]:speed:30
+DEBUG 2025-11-05 17:45:32,546 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:45:36,519 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:45:36,520 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使z轴运动到正限位】测试通过
+INFO 2025-11-05 17:45:36,520 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使z轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:45:36,523 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使rx轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:45:36,523 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:45:36,523 [test_31_jog_coord.py-->line:72]:axis:4
+DEBUG 2025-11-05 17:45:36,523 [test_31_jog_coord.py-->line:73]:position:0
+DEBUG 2025-11-05 17:45:36,524 [test_31_jog_coord.py-->line:74]:speed:40
+DEBUG 2025-11-05 17:45:36,533 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:45:44,819 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:45:44,819 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使rx轴运动到负限位】测试通过
+INFO 2025-11-05 17:45:44,820 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使rx轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:45:44,821 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使rx轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:45:44,821 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:45:44,821 [test_31_jog_coord.py-->line:72]:axis:4
+DEBUG 2025-11-05 17:45:44,821 [test_31_jog_coord.py-->line:73]:position:1
+DEBUG 2025-11-05 17:45:44,821 [test_31_jog_coord.py-->line:74]:speed:40
+DEBUG 2025-11-05 17:45:44,831 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:45:55,671 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:45:55,671 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使rx轴运动到正限位】测试通过
+INFO 2025-11-05 17:45:55,671 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使rx轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:45:55,674 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使ry轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:45:55,676 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:45:55,676 [test_31_jog_coord.py-->line:72]:axis:5
+DEBUG 2025-11-05 17:45:55,676 [test_31_jog_coord.py-->line:73]:position:0
+DEBUG 2025-11-05 17:45:55,676 [test_31_jog_coord.py-->line:74]:speed:50
+DEBUG 2025-11-05 17:45:55,684 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:46:06,635 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:46:06,635 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使ry轴运动到负限位】测试通过
+INFO 2025-11-05 17:46:06,635 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使ry轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:46:06,638 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使ry轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:46:06,638 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:46:06,638 [test_31_jog_coord.py-->line:72]:axis:5
+DEBUG 2025-11-05 17:46:06,638 [test_31_jog_coord.py-->line:73]:position:1
+DEBUG 2025-11-05 17:46:06,638 [test_31_jog_coord.py-->line:74]:speed:50
+DEBUG 2025-11-05 17:46:06,649 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:46:14,577 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:46:14,577 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使ry轴运动到正限位】测试通过
+INFO 2025-11-05 17:46:14,577 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使ry轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:46:14,581 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使rz轴运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 17:46:14,581 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:46:14,581 [test_31_jog_coord.py-->line:72]:axis:6
+DEBUG 2025-11-05 17:46:14,581 [test_31_jog_coord.py-->line:73]:position:0
+DEBUG 2025-11-05 17:46:14,581 [test_31_jog_coord.py-->line:74]:speed:100
+DEBUG 2025-11-05 17:46:14,816 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:46:24,055 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:46:24,055 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使rz轴运动到负限位】测试通过
+INFO 2025-11-05 17:46:24,055 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使rz轴运动到负限位】测试完成《《《《《
+INFO 2025-11-05 17:46:24,058 [test_31_jog_coord.py-->line:70]:》》》》》用例【刷新模式下，使rz轴运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 17:46:24,058 [test_31_jog_coord.py-->line:71]:test_api:jog_coord
+DEBUG 2025-11-05 17:46:24,058 [test_31_jog_coord.py-->line:72]:axis:6
+DEBUG 2025-11-05 17:46:24,058 [test_31_jog_coord.py-->line:73]:position:1
+DEBUG 2025-11-05 17:46:24,058 [test_31_jog_coord.py-->line:74]:speed:100
+DEBUG 2025-11-05 17:46:24,068 [test_31_jog_coord.py-->line:79]:当前模式为刷新
+DEBUG 2025-11-05 17:46:30,941 [test_31_jog_coord.py-->line:88]:接口返回：1
+INFO 2025-11-05 17:46:30,941 [test_31_jog_coord.py-->line:98]:✅ 用例【刷新模式下，使rz轴运动到正限位】测试通过
+INFO 2025-11-05 17:46:30,941 [test_31_jog_coord.py-->line:99]:》》》》》用例【刷新模式下，使rz轴运动到正限位】测试完成《《《《《
+INFO 2025-11-05 17:46:30,944 [test_31_jog_coord.py-->line:108]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2025-11-05 17:46:30,944 [test_31_jog_coord.py-->line:109]:test_api:jog_coord
+DEBUG 2025-11-05 17:46:30,944 [test_31_jog_coord.py-->line:110]:axis:3
+DEBUG 2025-11-05 17:46:30,944 [test_31_jog_coord.py-->line:111]:position:0
+DEBUG 2025-11-05 17:46:30,944 [test_31_jog_coord.py-->line:112]:speed:0
+INFO 2025-11-05 17:46:30,944 [test_31_jog_coord.py-->line:118]:✅ 用例【设置速度超限】异常断言通过
+INFO 2025-11-05 17:46:30,944 [test_31_jog_coord.py-->line:119]:》》》用例【设置速度超限】测试完成《《《
+INFO 2025-11-05 17:46:30,945 [test_31_jog_coord.py-->line:108]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2025-11-05 17:46:30,945 [test_31_jog_coord.py-->line:109]:test_api:jog_coord
+DEBUG 2025-11-05 17:46:30,946 [test_31_jog_coord.py-->line:110]:axis:4
+DEBUG 2025-11-05 17:46:30,946 [test_31_jog_coord.py-->line:111]:position:1
+DEBUG 2025-11-05 17:46:30,946 [test_31_jog_coord.py-->line:112]:speed:101
+INFO 2025-11-05 17:46:30,946 [test_31_jog_coord.py-->line:118]:✅ 用例【设置速度超限】异常断言通过
+INFO 2025-11-05 17:46:30,946 [test_31_jog_coord.py-->line:119]:》》》用例【设置速度超限】测试完成《《《
+INFO 2025-11-05 17:46:30,947 [test_31_jog_coord.py-->line:108]:》》》》》用例【设置坐标轴超限】开始测试《《《《《
+DEBUG 2025-11-05 17:46:30,947 [test_31_jog_coord.py-->line:109]:test_api:jog_coord
+DEBUG 2025-11-05 17:46:30,947 [test_31_jog_coord.py-->line:110]:axis:0
+DEBUG 2025-11-05 17:46:30,947 [test_31_jog_coord.py-->line:111]:position:0
+DEBUG 2025-11-05 17:46:30,947 [test_31_jog_coord.py-->line:112]:speed:50
+INFO 2025-11-05 17:46:30,947 [test_31_jog_coord.py-->line:118]:✅ 用例【设置坐标轴超限】异常断言通过
+INFO 2025-11-05 17:46:30,947 [test_31_jog_coord.py-->line:119]:》》》用例【设置坐标轴超限】测试完成《《《
+INFO 2025-11-05 17:46:30,947 [test_31_jog_coord.py-->line:108]:》》》》》用例【设置坐标轴超限】开始测试《《《《《
+DEBUG 2025-11-05 17:46:30,948 [test_31_jog_coord.py-->line:109]:test_api:jog_coord
+DEBUG 2025-11-05 17:46:30,948 [test_31_jog_coord.py-->line:110]:axis:7
+DEBUG 2025-11-05 17:46:30,948 [test_31_jog_coord.py-->line:111]:position:1
+DEBUG 2025-11-05 17:46:30,948 [test_31_jog_coord.py-->line:112]:speed:50
+INFO 2025-11-05 17:46:30,948 [test_31_jog_coord.py-->line:118]:✅ 用例【设置坐标轴超限】异常断言通过
+INFO 2025-11-05 17:46:30,948 [test_31_jog_coord.py-->line:119]:》》》用例【设置坐标轴超限】测试完成《《《
+INFO 2025-11-05 17:46:30,949 [test_31_jog_coord.py-->line:108]:》》》》》用例【设置方向超限】开始测试《《《《《
+DEBUG 2025-11-05 17:46:30,949 [test_31_jog_coord.py-->line:109]:test_api:jog_coord
+DEBUG 2025-11-05 17:46:30,949 [test_31_jog_coord.py-->line:110]:axis:3
+DEBUG 2025-11-05 17:46:30,949 [test_31_jog_coord.py-->line:111]:position:2
+DEBUG 2025-11-05 17:46:30,949 [test_31_jog_coord.py-->line:112]:speed:50
+INFO 2025-11-05 17:46:30,949 [test_31_jog_coord.py-->line:118]:✅ 用例【设置方向超限】异常断言通过
+INFO 2025-11-05 17:46:30,949 [test_31_jog_coord.py-->line:119]:》》》用例【设置方向超限】测试完成《《《
+INFO 2025-11-05 17:46:30,950 [test_31_jog_coord.py-->line:108]:》》》》》用例【设置方向超限】开始测试《《《《《
+DEBUG 2025-11-05 17:46:30,950 [test_31_jog_coord.py-->line:109]:test_api:jog_coord
+DEBUG 2025-11-05 17:46:30,950 [test_31_jog_coord.py-->line:110]:axis:4
+DEBUG 2025-11-05 17:46:30,950 [test_31_jog_coord.py-->line:111]:position:-1
+DEBUG 2025-11-05 17:46:30,950 [test_31_jog_coord.py-->line:112]:speed:50
+INFO 2025-11-05 17:46:30,950 [test_31_jog_coord.py-->line:118]:✅ 用例【设置方向超限】异常断言通过
+INFO 2025-11-05 17:46:30,950 [test_31_jog_coord.py-->line:119]:》》》用例【设置方向超限】测试完成《《《
+INFO 2025-11-05 17:46:34,108 [test_31_jog_coord.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-11-05 18:11:48,806 [test_29_jog_angle.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-11-05 18:11:48,807 [test_29_jog_angle.py-->line:37]:》》》》》用例【插补模式下，使一关节运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 18:11:48,807 [test_29_jog_angle.py-->line:38]:test_api:jog_angle
+DEBUG 2025-11-05 18:11:48,807 [test_29_jog_angle.py-->line:39]:joint:1
+DEBUG 2025-11-05 18:11:48,807 [test_29_jog_angle.py-->line:40]:position:0
+DEBUG 2025-11-05 18:11:48,807 [test_29_jog_angle.py-->line:41]:speed:30
+DEBUG 2025-11-05 18:11:48,817 [test_29_jog_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 18:11:53,510 [test_29_jog_angle.py-->line:64]:接口返回：1
+DEBUG 2025-11-05 18:11:53,525 [test_29_jog_angle.py-->line:68]:接口返回：-166.99
+INFO 2025-11-05 18:11:53,525 [test_29_jog_angle.py-->line:83]:✅ 用例【插补模式下，使一关节运动到负限位】测试通过
+INFO 2025-11-05 18:11:53,525 [test_29_jog_angle.py-->line:84]:》》》》》用例【插补模式下，使一关节运动到负限位】测试完成《《《《《
+INFO 2025-11-05 18:11:59,742 [test_29_jog_angle.py-->line:37]:》》》》》用例【插补模式下，使一关节运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 18:11:59,742 [test_29_jog_angle.py-->line:38]:test_api:jog_angle
+DEBUG 2025-11-05 18:11:59,743 [test_29_jog_angle.py-->line:39]:joint:1
+DEBUG 2025-11-05 18:11:59,743 [test_29_jog_angle.py-->line:40]:position:1
+DEBUG 2025-11-05 18:11:59,743 [test_29_jog_angle.py-->line:41]:speed:50
+DEBUG 2025-11-05 18:12:00,400 [test_29_jog_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 18:12:08,480 [test_29_jog_angle.py-->line:64]:接口返回：1
+DEBUG 2025-11-05 18:12:08,495 [test_29_jog_angle.py-->line:68]:接口返回：166.9
+INFO 2025-11-05 18:12:08,495 [test_29_jog_angle.py-->line:83]:✅ 用例【插补模式下，使一关节运动到正限位】测试通过
+INFO 2025-11-05 18:12:08,495 [test_29_jog_angle.py-->line:84]:》》》》》用例【插补模式下，使一关节运动到正限位】测试完成《《《《《
+INFO 2025-11-05 18:12:16,031 [test_29_jog_angle.py-->line:37]:》》》》》用例【插补模式下，使二关节运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 18:12:16,032 [test_29_jog_angle.py-->line:38]:test_api:jog_angle
+DEBUG 2025-11-05 18:12:16,032 [test_29_jog_angle.py-->line:39]:joint:2
+DEBUG 2025-11-05 18:12:16,032 [test_29_jog_angle.py-->line:40]:position:0
+DEBUG 2025-11-05 18:12:16,032 [test_29_jog_angle.py-->line:41]:speed:70
+DEBUG 2025-11-05 18:12:16,042 [test_29_jog_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 18:12:25,972 [test_29_jog_angle.py-->line:64]:接口返回：1
+DEBUG 2025-11-05 18:12:25,985 [test_29_jog_angle.py-->line:68]:接口返回：-140.44
+INFO 2025-11-05 18:12:36,618 [test_29_jog_angle.py-->line:37]:》》》》》用例【插补模式下，使二关节运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 18:12:36,618 [test_29_jog_angle.py-->line:38]:test_api:jog_angle
+DEBUG 2025-11-05 18:12:36,618 [test_29_jog_angle.py-->line:39]:joint:2
+DEBUG 2025-11-05 18:12:36,618 [test_29_jog_angle.py-->line:40]:position:1
+DEBUG 2025-11-05 18:12:36,618 [test_29_jog_angle.py-->line:41]:speed:20
+DEBUG 2025-11-05 18:12:36,628 [test_29_jog_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 18:12:46,228 [test_29_jog_angle.py-->line:64]:接口返回：1
+DEBUG 2025-11-05 18:12:46,241 [test_29_jog_angle.py-->line:68]:接口返回：139.3
+INFO 2025-11-05 18:12:56,771 [test_29_jog_angle.py-->line:37]:》》》》》用例【插补模式下，使三关节运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 18:12:56,771 [test_29_jog_angle.py-->line:38]:test_api:jog_angle
+DEBUG 2025-11-05 18:12:56,771 [test_29_jog_angle.py-->line:39]:joint:3
+DEBUG 2025-11-05 18:12:56,771 [test_29_jog_angle.py-->line:40]:position:0
+DEBUG 2025-11-05 18:12:56,772 [test_29_jog_angle.py-->line:41]:speed:30
+DEBUG 2025-11-05 18:12:56,782 [test_29_jog_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 18:13:02,030 [test_29_jog_angle.py-->line:64]:接口返回：1
+DEBUG 2025-11-05 18:13:02,043 [test_29_jog_angle.py-->line:68]:接口返回：-149.67
+INFO 2025-11-05 18:13:02,043 [test_29_jog_angle.py-->line:83]:✅ 用例【插补模式下，使三关节运动到负限位】测试通过
+INFO 2025-11-05 18:13:02,044 [test_29_jog_angle.py-->line:84]:》》》》》用例【插补模式下，使三关节运动到负限位】测试完成《《《《《
+INFO 2025-11-05 18:13:13,279 [test_29_jog_angle.py-->line:37]:》》》》》用例【插补模式下，使三关节运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 18:13:13,279 [test_29_jog_angle.py-->line:38]:test_api:jog_angle
+DEBUG 2025-11-05 18:13:13,280 [test_29_jog_angle.py-->line:39]:joint:3
+DEBUG 2025-11-05 18:13:13,280 [test_29_jog_angle.py-->line:40]:position:1
+DEBUG 2025-11-05 18:13:13,280 [test_29_jog_angle.py-->line:41]:speed:30
+DEBUG 2025-11-05 18:13:13,292 [test_29_jog_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 18:13:18,532 [test_29_jog_angle.py-->line:64]:接口返回：1
+DEBUG 2025-11-05 18:13:18,545 [test_29_jog_angle.py-->line:68]:接口返回：149.67
+INFO 2025-11-05 18:13:18,546 [test_29_jog_angle.py-->line:83]:✅ 用例【插补模式下，使三关节运动到正限位】测试通过
+INFO 2025-11-05 18:13:18,546 [test_29_jog_angle.py-->line:84]:》》》》》用例【插补模式下，使三关节运动到正限位】测试完成《《《《《
+INFO 2025-11-05 18:13:21,167 [test_29_jog_angle.py-->line:37]:》》》》》用例【插补模式下，使四关节运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 18:13:21,167 [test_29_jog_angle.py-->line:38]:test_api:jog_angle
+DEBUG 2025-11-05 18:13:21,167 [test_29_jog_angle.py-->line:39]:joint:4
+DEBUG 2025-11-05 18:13:21,167 [test_29_jog_angle.py-->line:40]:position:0
+DEBUG 2025-11-05 18:13:21,167 [test_29_jog_angle.py-->line:41]:speed:40
+DEBUG 2025-11-05 18:13:21,178 [test_29_jog_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 18:13:35,276 [test_29_jog_angle.py-->line:64]:接口返回：1
+DEBUG 2025-11-05 18:13:35,290 [test_29_jog_angle.py-->line:68]:接口返回：-148.71
+INFO 2025-11-05 18:13:39,354 [test_29_jog_angle.py-->line:37]:》》》》》用例【插补模式下，使四关节运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 18:13:39,354 [test_29_jog_angle.py-->line:38]:test_api:jog_angle
+DEBUG 2025-11-05 18:13:39,355 [test_29_jog_angle.py-->line:39]:joint:4
+DEBUG 2025-11-05 18:13:39,355 [test_29_jog_angle.py-->line:40]:position:1
+DEBUG 2025-11-05 18:13:39,355 [test_29_jog_angle.py-->line:41]:speed:40
+DEBUG 2025-11-05 18:13:39,364 [test_29_jog_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 18:13:52,787 [test_29_jog_angle.py-->line:64]:接口返回：1
+DEBUG 2025-11-05 18:13:52,799 [test_29_jog_angle.py-->line:68]:接口返回：150.29
+INFO 2025-11-05 18:13:59,802 [test_29_jog_angle.py-->line:37]:》》》》》用例【插补模式下，使五关节运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 18:13:59,802 [test_29_jog_angle.py-->line:38]:test_api:jog_angle
+DEBUG 2025-11-05 18:13:59,802 [test_29_jog_angle.py-->line:39]:joint:5
+DEBUG 2025-11-05 18:13:59,802 [test_29_jog_angle.py-->line:40]:position:0
+DEBUG 2025-11-05 18:13:59,802 [test_29_jog_angle.py-->line:41]:speed:50
+DEBUG 2025-11-05 18:14:00,039 [test_29_jog_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 18:14:06,806 [test_29_jog_angle.py-->line:64]:接口返回：1
+DEBUG 2025-11-05 18:14:06,819 [test_29_jog_angle.py-->line:68]:接口返回：-153.19
+INFO 2025-11-05 18:14:06,820 [test_29_jog_angle.py-->line:83]:✅ 用例【插补模式下，使五关节运动到负限位】测试通过
+INFO 2025-11-05 18:14:06,820 [test_29_jog_angle.py-->line:84]:》》》》》用例【插补模式下，使五关节运动到负限位】测试完成《《《《《
+INFO 2025-11-05 18:14:18,404 [test_29_jog_angle.py-->line:37]:》》》》》用例【插补模式下，使五关节运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 18:14:18,404 [test_29_jog_angle.py-->line:38]:test_api:jog_angle
+DEBUG 2025-11-05 18:14:18,404 [test_29_jog_angle.py-->line:39]:joint:5
+DEBUG 2025-11-05 18:14:18,404 [test_29_jog_angle.py-->line:40]:position:1
+DEBUG 2025-11-05 18:14:18,404 [test_29_jog_angle.py-->line:41]:speed:50
+DEBUG 2025-11-05 18:14:18,415 [test_29_jog_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 18:14:22,458 [test_29_jog_angle.py-->line:64]:接口返回：1
+DEBUG 2025-11-05 18:14:22,472 [test_29_jog_angle.py-->line:68]:接口返回：125.33
+INFO 2025-11-05 18:14:27,407 [test_29_jog_angle.py-->line:37]:》》》》》用例【插补模式下，使六关节运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 18:14:27,407 [test_29_jog_angle.py-->line:38]:test_api:jog_angle
+DEBUG 2025-11-05 18:14:27,407 [test_29_jog_angle.py-->line:39]:joint:6
+DEBUG 2025-11-05 18:14:27,408 [test_29_jog_angle.py-->line:40]:position:0
+DEBUG 2025-11-05 18:14:27,408 [test_29_jog_angle.py-->line:41]:speed:60
+DEBUG 2025-11-05 18:14:28,500 [test_29_jog_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 18:14:34,714 [test_29_jog_angle.py-->line:64]:接口返回：1
+DEBUG 2025-11-05 18:14:34,730 [test_29_jog_angle.py-->line:68]:接口返回：-87.27
+INFO 2025-11-05 18:14:39,871 [test_29_jog_angle.py-->line:37]:》》》》》用例【插补模式下，使六关节运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 18:14:39,872 [test_29_jog_angle.py-->line:38]:test_api:jog_angle
+DEBUG 2025-11-05 18:14:39,872 [test_29_jog_angle.py-->line:39]:joint:6
+DEBUG 2025-11-05 18:14:39,872 [test_29_jog_angle.py-->line:40]:position:1
+DEBUG 2025-11-05 18:14:39,872 [test_29_jog_angle.py-->line:41]:speed:60
+DEBUG 2025-11-05 18:14:39,882 [test_29_jog_angle.py-->line:46]:当前模式为插补
+DEBUG 2025-11-05 18:14:51,333 [test_29_jog_angle.py-->line:64]:接口返回：1
+DEBUG 2025-11-05 18:14:51,348 [test_29_jog_angle.py-->line:68]:接口返回：179.29
+INFO 2025-11-05 18:14:51,348 [test_29_jog_angle.py-->line:83]:✅ 用例【插补模式下，使六关节运动到正限位】测试通过
+INFO 2025-11-05 18:14:51,349 [test_29_jog_angle.py-->line:84]:》》》》》用例【插补模式下，使六关节运动到正限位】测试完成《《《《《
+INFO 2025-11-05 18:14:59,639 [test_29_jog_angle.py-->line:94]:》》》》》用例【刷新模式下，使一关节运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 18:14:59,639 [test_29_jog_angle.py-->line:95]:test_api:jog_angle
+DEBUG 2025-11-05 18:14:59,639 [test_29_jog_angle.py-->line:96]:joint:1
+DEBUG 2025-11-05 18:14:59,639 [test_29_jog_angle.py-->line:97]:position:0
+DEBUG 2025-11-05 18:14:59,639 [test_29_jog_angle.py-->line:98]:speed:20
+DEBUG 2025-11-05 18:14:59,657 [test_29_jog_angle.py-->line:103]:当前模式为刷新
+DEBUG 2025-11-05 18:15:01,232 [test_29_jog_angle.py-->line:121]:接口返回：1
+DEBUG 2025-11-05 18:15:01,246 [test_29_jog_angle.py-->line:125]:接口返回：0.87
+INFO 2025-11-05 18:15:17,512 [test_29_jog_angle.py-->line:94]:》》》》》用例【刷新模式下，使一关节运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 18:15:17,512 [test_29_jog_angle.py-->line:95]:test_api:jog_angle
+DEBUG 2025-11-05 18:15:17,512 [test_29_jog_angle.py-->line:96]:joint:1
+DEBUG 2025-11-05 18:15:17,512 [test_29_jog_angle.py-->line:97]:position:1
+DEBUG 2025-11-05 18:15:17,512 [test_29_jog_angle.py-->line:98]:speed:50
+DEBUG 2025-11-05 18:15:17,522 [test_29_jog_angle.py-->line:103]:当前模式为刷新
+DEBUG 2025-11-05 18:15:21,732 [test_29_jog_angle.py-->line:121]:接口返回：1
+DEBUG 2025-11-05 18:15:21,744 [test_29_jog_angle.py-->line:125]:接口返回：166.9
+INFO 2025-11-05 18:15:21,744 [test_29_jog_angle.py-->line:140]:✅ 用例【刷新模式下，使一关节运动到正限位】测试通过
+INFO 2025-11-05 18:15:21,744 [test_29_jog_angle.py-->line:141]:》》》》》用例【刷新模式下，使一关节运动到正限位】测试完成《《《《《
+INFO 2025-11-05 18:15:29,375 [test_29_jog_angle.py-->line:94]:》》》》》用例【刷新模式下，使二关节运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 18:15:29,375 [test_29_jog_angle.py-->line:95]:test_api:jog_angle
+DEBUG 2025-11-05 18:15:29,375 [test_29_jog_angle.py-->line:96]:joint:2
+DEBUG 2025-11-05 18:15:29,376 [test_29_jog_angle.py-->line:97]:position:0
+DEBUG 2025-11-05 18:15:29,376 [test_29_jog_angle.py-->line:98]:speed:20
+DEBUG 2025-11-05 18:15:29,386 [test_29_jog_angle.py-->line:103]:当前模式为刷新
+DEBUG 2025-11-05 18:15:38,557 [test_29_jog_angle.py-->line:121]:接口返回：1
+DEBUG 2025-11-05 18:15:38,570 [test_29_jog_angle.py-->line:125]:接口返回：-140.44
+INFO 2025-11-05 18:15:45,139 [test_29_jog_angle.py-->line:94]:》》》》》用例【刷新模式下，使二关节运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 18:15:45,139 [test_29_jog_angle.py-->line:95]:test_api:jog_angle
+DEBUG 2025-11-05 18:15:45,139 [test_29_jog_angle.py-->line:96]:joint:2
+DEBUG 2025-11-05 18:15:45,139 [test_29_jog_angle.py-->line:97]:position:1
+DEBUG 2025-11-05 18:15:45,139 [test_29_jog_angle.py-->line:98]:speed:20
+DEBUG 2025-11-05 18:15:45,149 [test_29_jog_angle.py-->line:103]:当前模式为刷新
+DEBUG 2025-11-05 18:15:50,580 [test_29_jog_angle.py-->line:121]:接口返回：1
+INFO 2025-11-05 18:15:54,080 [test_29_jog_angle.py-->line:94]:》》》》》用例【刷新模式下，使三关节运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 18:15:54,080 [test_29_jog_angle.py-->line:95]:test_api:jog_angle
+DEBUG 2025-11-05 18:15:54,080 [test_29_jog_angle.py-->line:96]:joint:3
+DEBUG 2025-11-05 18:15:54,080 [test_29_jog_angle.py-->line:97]:position:0
+DEBUG 2025-11-05 18:15:54,080 [test_29_jog_angle.py-->line:98]:speed:30
+DEBUG 2025-11-05 18:15:54,526 [test_29_jog_angle.py-->line:103]:当前模式为刷新
+DEBUG 2025-11-05 18:15:57,745 [test_29_jog_angle.py-->line:121]:接口返回：1
+DEBUG 2025-11-05 18:15:57,759 [test_29_jog_angle.py-->line:125]:接口返回：-149.58
+INFO 2025-11-05 18:15:57,760 [test_29_jog_angle.py-->line:140]:✅ 用例【刷新模式下，使三关节运动到负限位】测试通过
+INFO 2025-11-05 18:15:57,760 [test_29_jog_angle.py-->line:141]:》》》》》用例【刷新模式下，使三关节运动到负限位】测试完成《《《《《
+INFO 2025-11-05 18:16:04,648 [test_29_jog_angle.py-->line:94]:》》》》》用例【刷新模式下，使三关节运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 18:16:04,648 [test_29_jog_angle.py-->line:95]:test_api:jog_angle
+DEBUG 2025-11-05 18:16:04,648 [test_29_jog_angle.py-->line:96]:joint:3
+DEBUG 2025-11-05 18:16:04,648 [test_29_jog_angle.py-->line:97]:position:1
+DEBUG 2025-11-05 18:16:04,648 [test_29_jog_angle.py-->line:98]:speed:30
+DEBUG 2025-11-05 18:16:04,658 [test_29_jog_angle.py-->line:103]:当前模式为刷新
+DEBUG 2025-11-05 18:16:09,999 [test_29_jog_angle.py-->line:121]:接口返回：1
+DEBUG 2025-11-05 18:16:10,012 [test_29_jog_angle.py-->line:125]:接口返回：149.67
+INFO 2025-11-05 18:16:10,013 [test_29_jog_angle.py-->line:140]:✅ 用例【刷新模式下，使三关节运动到正限位】测试通过
+INFO 2025-11-05 18:16:10,013 [test_29_jog_angle.py-->line:141]:》》》》》用例【刷新模式下，使三关节运动到正限位】测试完成《《《《《
+INFO 2025-11-05 18:16:16,907 [test_29_jog_angle.py-->line:94]:》》》》》用例【刷新模式下，使四关节运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 18:16:16,907 [test_29_jog_angle.py-->line:95]:test_api:jog_angle
+DEBUG 2025-11-05 18:16:16,907 [test_29_jog_angle.py-->line:96]:joint:4
+DEBUG 2025-11-05 18:16:16,907 [test_29_jog_angle.py-->line:97]:position:0
+DEBUG 2025-11-05 18:16:16,907 [test_29_jog_angle.py-->line:98]:speed:40
+DEBUG 2025-11-05 18:16:16,918 [test_29_jog_angle.py-->line:103]:当前模式为刷新
+DEBUG 2025-11-05 18:16:23,756 [test_29_jog_angle.py-->line:121]:接口返回：1
+DEBUG 2025-11-05 18:16:23,769 [test_29_jog_angle.py-->line:125]:接口返回：-149.15
+INFO 2025-11-05 18:16:30,551 [test_29_jog_angle.py-->line:94]:》》》》》用例【刷新模式下，使四关节运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 18:16:30,551 [test_29_jog_angle.py-->line:95]:test_api:jog_angle
+DEBUG 2025-11-05 18:16:30,552 [test_29_jog_angle.py-->line:96]:joint:4
+DEBUG 2025-11-05 18:16:30,552 [test_29_jog_angle.py-->line:97]:position:1
+DEBUG 2025-11-05 18:16:30,552 [test_29_jog_angle.py-->line:98]:speed:40
+DEBUG 2025-11-05 18:16:30,561 [test_29_jog_angle.py-->line:103]:当前模式为刷新
+DEBUG 2025-11-05 18:16:37,414 [test_29_jog_angle.py-->line:121]:接口返回：1
+DEBUG 2025-11-05 18:16:37,426 [test_29_jog_angle.py-->line:125]:接口返回：150.38
+INFO 2025-11-05 18:16:44,283 [test_29_jog_angle.py-->line:94]:》》》》》用例【刷新模式下，使五关节运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 18:16:44,283 [test_29_jog_angle.py-->line:95]:test_api:jog_angle
+DEBUG 2025-11-05 18:16:44,283 [test_29_jog_angle.py-->line:96]:joint:5
+DEBUG 2025-11-05 18:16:44,283 [test_29_jog_angle.py-->line:97]:position:0
+DEBUG 2025-11-05 18:16:44,283 [test_29_jog_angle.py-->line:98]:speed:50
+DEBUG 2025-11-05 18:16:44,294 [test_29_jog_angle.py-->line:103]:当前模式为刷新
+DEBUG 2025-11-05 18:16:48,252 [test_29_jog_angle.py-->line:121]:接口返回：1
+DEBUG 2025-11-05 18:16:48,266 [test_29_jog_angle.py-->line:125]:接口返回：-153.63
+INFO 2025-11-05 18:16:48,266 [test_29_jog_angle.py-->line:140]:✅ 用例【刷新模式下，使五关节运动到负限位】测试通过
+INFO 2025-11-05 18:16:48,267 [test_29_jog_angle.py-->line:141]:》》》》》用例【刷新模式下，使五关节运动到负限位】测试完成《《《《《
+INFO 2025-11-05 18:16:55,298 [test_29_jog_angle.py-->line:94]:》》》》》用例【刷新模式下，使五关节运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 18:16:55,298 [test_29_jog_angle.py-->line:95]:test_api:jog_angle
+DEBUG 2025-11-05 18:16:55,298 [test_29_jog_angle.py-->line:96]:joint:5
+DEBUG 2025-11-05 18:16:55,298 [test_29_jog_angle.py-->line:97]:position:1
+DEBUG 2025-11-05 18:16:55,298 [test_29_jog_angle.py-->line:98]:speed:50
+DEBUG 2025-11-05 18:16:55,308 [test_29_jog_angle.py-->line:103]:当前模式为刷新
+DEBUG 2025-11-05 18:16:59,405 [test_29_jog_angle.py-->line:121]:接口返回：1
+DEBUG 2025-11-05 18:16:59,419 [test_29_jog_angle.py-->line:125]:接口返回：151.25
+INFO 2025-11-05 18:17:06,585 [test_29_jog_angle.py-->line:94]:》》》》》用例【刷新模式下，使六关节运动到负限位】开始测试《《《《《
+DEBUG 2025-11-05 18:17:06,585 [test_29_jog_angle.py-->line:95]:test_api:jog_angle
+DEBUG 2025-11-05 18:17:06,585 [test_29_jog_angle.py-->line:96]:joint:6
+DEBUG 2025-11-05 18:17:06,585 [test_29_jog_angle.py-->line:97]:position:0
+DEBUG 2025-11-05 18:17:06,585 [test_29_jog_angle.py-->line:98]:speed:100
+DEBUG 2025-11-05 18:17:06,596 [test_29_jog_angle.py-->line:103]:当前模式为刷新
+DEBUG 2025-11-05 18:17:08,173 [test_29_jog_angle.py-->line:121]:接口返回：1
+DEBUG 2025-11-05 18:17:08,187 [test_29_jog_angle.py-->line:125]:接口返回：-146.16
+INFO 2025-11-05 18:17:16,471 [test_29_jog_angle.py-->line:94]:》》》》》用例【刷新模式下，使六关节运动到正限位】开始测试《《《《《
+DEBUG 2025-11-05 18:17:16,472 [test_29_jog_angle.py-->line:95]:test_api:jog_angle
+DEBUG 2025-11-05 18:17:16,472 [test_29_jog_angle.py-->line:96]:joint:6
+DEBUG 2025-11-05 18:17:16,472 [test_29_jog_angle.py-->line:97]:position:1
+DEBUG 2025-11-05 18:17:16,473 [test_29_jog_angle.py-->line:98]:speed:100
+DEBUG 2025-11-05 18:17:16,482 [test_29_jog_angle.py-->line:103]:当前模式为刷新
+DEBUG 2025-11-05 18:17:19,616 [test_29_jog_angle.py-->line:121]:接口返回：1
+DEBUG 2025-11-05 18:17:19,630 [test_29_jog_angle.py-->line:125]:接口返回：179.38
+INFO 2025-11-05 18:17:19,630 [test_29_jog_angle.py-->line:140]:✅ 用例【刷新模式下，使六关节运动到正限位】测试通过
+INFO 2025-11-05 18:17:19,630 [test_29_jog_angle.py-->line:141]:》》》》》用例【刷新模式下，使六关节运动到正限位】测试完成《《《《《
+INFO 2025-11-05 18:17:27,528 [test_29_jog_angle.py-->line:150]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2025-11-05 18:17:27,529 [test_29_jog_angle.py-->line:151]:test_api:jog_angle
+DEBUG 2025-11-05 18:17:27,529 [test_29_jog_angle.py-->line:152]:joint:3
+DEBUG 2025-11-05 18:17:27,529 [test_29_jog_angle.py-->line:153]:position:0
+DEBUG 2025-11-05 18:17:27,529 [test_29_jog_angle.py-->line:154]:speed:0
+INFO 2025-11-05 18:17:27,529 [test_29_jog_angle.py-->line:160]:✅ 用例【设置速度超限】异常断言通过
+INFO 2025-11-05 18:17:27,529 [test_29_jog_angle.py-->line:161]:》》》用例【设置速度超限】测试完成《《《
+INFO 2025-11-05 18:17:29,055 [test_29_jog_angle.py-->line:150]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2025-11-05 18:17:29,055 [test_29_jog_angle.py-->line:151]:test_api:jog_angle
+DEBUG 2025-11-05 18:17:29,055 [test_29_jog_angle.py-->line:152]:joint:4
+DEBUG 2025-11-05 18:17:29,055 [test_29_jog_angle.py-->line:153]:position:1
+DEBUG 2025-11-05 18:17:29,055 [test_29_jog_angle.py-->line:154]:speed:101
+INFO 2025-11-05 18:17:29,055 [test_29_jog_angle.py-->line:160]:✅ 用例【设置速度超限】异常断言通过
+INFO 2025-11-05 18:17:29,055 [test_29_jog_angle.py-->line:161]:》》》用例【设置速度超限】测试完成《《《
+INFO 2025-11-05 18:17:30,589 [test_29_jog_angle.py-->line:150]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-11-05 18:17:30,589 [test_29_jog_angle.py-->line:151]:test_api:jog_angle
+DEBUG 2025-11-05 18:17:30,589 [test_29_jog_angle.py-->line:152]:joint:0
+DEBUG 2025-11-05 18:17:30,589 [test_29_jog_angle.py-->line:153]:position:0
+DEBUG 2025-11-05 18:17:30,589 [test_29_jog_angle.py-->line:154]:speed:50
+INFO 2025-11-05 18:17:30,589 [test_29_jog_angle.py-->line:160]:✅ 用例【设置关节超限】异常断言通过
+INFO 2025-11-05 18:17:30,591 [test_29_jog_angle.py-->line:161]:》》》用例【设置关节超限】测试完成《《《
+INFO 2025-11-05 18:17:32,119 [test_29_jog_angle.py-->line:150]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2025-11-05 18:17:32,119 [test_29_jog_angle.py-->line:151]:test_api:jog_angle
+DEBUG 2025-11-05 18:17:32,119 [test_29_jog_angle.py-->line:152]:joint:7
+DEBUG 2025-11-05 18:17:32,119 [test_29_jog_angle.py-->line:153]:position:1
+DEBUG 2025-11-05 18:17:32,119 [test_29_jog_angle.py-->line:154]:speed:50
+INFO 2025-11-05 18:17:32,120 [test_29_jog_angle.py-->line:160]:✅ 用例【设置关节超限】异常断言通过
+INFO 2025-11-05 18:17:32,120 [test_29_jog_angle.py-->line:161]:》》》用例【设置关节超限】测试完成《《《
+INFO 2025-11-05 18:17:33,652 [test_29_jog_angle.py-->line:150]:》》》》》用例【设置方向超限】开始测试《《《《《
+DEBUG 2025-11-05 18:17:33,653 [test_29_jog_angle.py-->line:151]:test_api:jog_angle
+DEBUG 2025-11-05 18:17:33,653 [test_29_jog_angle.py-->line:152]:joint:3
+DEBUG 2025-11-05 18:17:33,653 [test_29_jog_angle.py-->line:153]:position:2
+DEBUG 2025-11-05 18:17:33,653 [test_29_jog_angle.py-->line:154]:speed:50
+INFO 2025-11-05 18:17:33,653 [test_29_jog_angle.py-->line:160]:✅ 用例【设置方向超限】异常断言通过
+INFO 2025-11-05 18:17:33,653 [test_29_jog_angle.py-->line:161]:》》》用例【设置方向超限】测试完成《《《
+INFO 2025-11-05 18:17:35,185 [test_29_jog_angle.py-->line:150]:》》》》》用例【设置方向超限】开始测试《《《《《
+DEBUG 2025-11-05 18:17:35,186 [test_29_jog_angle.py-->line:151]:test_api:jog_angle
+DEBUG 2025-11-05 18:17:35,186 [test_29_jog_angle.py-->line:152]:joint:4
+DEBUG 2025-11-05 18:17:35,186 [test_29_jog_angle.py-->line:153]:position:-1
+DEBUG 2025-11-05 18:17:35,186 [test_29_jog_angle.py-->line:154]:speed:50
+INFO 2025-11-05 18:17:35,186 [test_29_jog_angle.py-->line:160]:✅ 用例【设置方向超限】异常断言通过
+INFO 2025-11-05 18:17:35,186 [test_29_jog_angle.py-->line:161]:》》》用例【设置方向超限】测试完成《《《
+INFO 2025-11-05 18:17:38,329 [test_29_jog_angle.py-->line:22]:环境清理完成，接口测试结束
+INFO 2025-11-05 18:27:41,771 [test_27_is_in_position.py-->line:18]:初始化完成，接口测试开始
+INFO 2025-11-05 18:27:43,300 [test_27_is_in_position.py-->line:37]:》》》用例【是否到达指定点位（角度）】开始测试《《《
+DEBUG 2025-11-05 18:27:43,300 [test_27_is_in_position.py-->line:38]:接口: is_in_position，参数: [0,20,-90,-20,0,0]，模式: 0
+INFO 2025-11-05 18:27:46,042 [test_27_is_in_position.py-->line:55]:✅ 用例【是否到达指定点位（角度）】测试通过
+INFO 2025-11-05 18:27:46,042 [test_27_is_in_position.py-->line:56]:》》》用例【是否到达指定点位（角度）】测试完成《《《
+INFO 2025-11-05 18:27:53,250 [test_27_is_in_position.py-->line:37]:》》》用例【是否到达指定点位（角度）】开始测试《《《
+DEBUG 2025-11-05 18:27:53,251 [test_27_is_in_position.py-->line:38]:接口: is_in_position，参数: [0,23,-90,-20,0,0]，模式: 0
+INFO 2025-11-05 18:27:55,993 [test_27_is_in_position.py-->line:55]:✅ 用例【是否到达指定点位（角度）】测试通过
+INFO 2025-11-05 18:27:55,993 [test_27_is_in_position.py-->line:56]:》》》用例【是否到达指定点位（角度）】测试完成《《《
+INFO 2025-11-05 18:28:03,206 [test_27_is_in_position.py-->line:67]:》》》用例【是否到达指定点位（坐标）】开始测试《《《
+DEBUG 2025-11-05 18:28:03,207 [test_27_is_in_position.py-->line:68]:接口: is_in_position，参数: [128.8, -62.2, 227.7, 178.42, -0.28, -90.08]，模式: 1
+DEBUG 2025-11-05 18:28:07,886 [test_27_is_in_position.py-->line:77]:当前坐标为：[128.5, -61.5, 226.7, 178.05, 1.12, -90.21]
+INFO 2025-11-05 18:28:15,239 [test_27_is_in_position.py-->line:67]:》》》用例【是否到达指定点位（坐标）】开始测试《《《
+DEBUG 2025-11-05 18:28:15,239 [test_27_is_in_position.py-->line:68]:接口: is_in_position，参数: [128.8, -68, 227.7, 178.42, -0.28, -90.08]，模式: 1
+DEBUG 2025-11-05 18:28:20,011 [test_27_is_in_position.py-->line:77]:当前坐标为：[128.8, -60.9, 226.7, 178.05, 1.12, -89.95]
+INFO 2025-11-05 18:28:20,011 [test_27_is_in_position.py-->line:87]:✅ 用例【是否到达指定点位（坐标）】测试通过
+INFO 2025-11-05 18:28:20,011 [test_27_is_in_position.py-->line:88]:》》》用例【是否到达指定点位（坐标）】测试完成《《《
+INFO 2025-11-05 18:28:22,642 [test_27_is_in_position.py-->line:98]:》》》用例【输入参数超限】开始测试《《《
+DEBUG 2025-11-05 18:28:22,643 [test_27_is_in_position.py-->line:99]:接口: is_in_position，参数: [0, 30, -100, -20, 0.0, 0.0]，模式: 2
+INFO 2025-11-05 18:28:22,643 [test_27_is_in_position.py-->line:105]:✅ 用例【输入参数超限】异常测试通过
+INFO 2025-11-05 18:28:22,643 [test_27_is_in_position.py-->line:106]:》》》用例【输入参数超限】测试完成《《《
+INFO 2025-11-05 18:28:24,933 [test_27_is_in_position.py-->line:98]:》》》用例【输入参数超限】开始测试《《《
+DEBUG 2025-11-05 18:28:24,934 [test_27_is_in_position.py-->line:99]:接口: is_in_position，参数: [149.9, -86.8, 298.4, 179.99, 0.0, -90.0]，模式: -1
+INFO 2025-11-05 18:28:24,934 [test_27_is_in_position.py-->line:105]:✅ 用例【输入参数超限】异常测试通过
+INFO 2025-11-05 18:28:24,934 [test_27_is_in_position.py-->line:106]:》》》用例【输入参数超限】测试完成《《《
+INFO 2025-11-05 18:28:27,289 [test_27_is_in_position.py-->line:21]:环境清理完成，接口测试结束
+INFO 2025-11-05 19:00:17,084 [test_19_send_coord.py-->line:19]:初始化完成，接口测试开始
+INFO 2025-11-05 19:00:17,086 [test_19_send_coord.py-->line:33]:》》》》》用例【插补模式下，运动x轴（正向）】开始测试《《《《《
+DEBUG 2025-11-05 19:00:17,086 [test_19_send_coord.py-->line:34]:test_api:send_coord
+DEBUG 2025-11-05 19:00:17,086 [test_19_send_coord.py-->line:35]:axis:1
+DEBUG 2025-11-05 19:00:17,086 [test_19_send_coord.py-->line:36]:coord:200
+DEBUG 2025-11-05 19:00:17,086 [test_19_send_coord.py-->line:37]:speed:20
+DEBUG 2025-11-05 19:00:17,097 [test_19_send_coord.py-->line:42]:当前模式为插补
+DEBUG 2025-11-05 19:00:23,213 [test_19_send_coord.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 19:00:23,227 [test_19_send_coord.py-->line:55]:接口返回：200.3
+INFO 2025-11-05 19:00:23,228 [test_19_send_coord.py-->line:70]:✅ 用例【插补模式下，运动x轴（正向）】测试通过
+INFO 2025-11-05 19:00:23,228 [test_19_send_coord.py-->line:71]:》》》》》用例【插补模式下，运动x轴（正向）】测试完成《《《《《
+INFO 2025-11-05 19:00:23,231 [test_19_send_coord.py-->line:33]:》》》》》用例【插补模式下，运动x轴（反向）】开始测试《《《《《
+DEBUG 2025-11-05 19:00:23,232 [test_19_send_coord.py-->line:34]:test_api:send_coord
+DEBUG 2025-11-05 19:00:23,232 [test_19_send_coord.py-->line:35]:axis:1
+DEBUG 2025-11-05 19:00:23,232 [test_19_send_coord.py-->line:36]:coord:100
+DEBUG 2025-11-05 19:00:23,232 [test_19_send_coord.py-->line:37]:speed:50
+DEBUG 2025-11-05 19:00:23,242 [test_19_send_coord.py-->line:42]:当前模式为插补
+DEBUG 2025-11-05 19:00:27,189 [test_19_send_coord.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 19:00:27,203 [test_19_send_coord.py-->line:55]:接口返回：100.9
+INFO 2025-11-05 19:00:27,203 [test_19_send_coord.py-->line:70]:✅ 用例【插补模式下，运动x轴（反向）】测试通过
+INFO 2025-11-05 19:00:27,203 [test_19_send_coord.py-->line:71]:》》》》》用例【插补模式下，运动x轴（反向）】测试完成《《《《《
+INFO 2025-11-05 19:00:27,205 [test_19_send_coord.py-->line:33]:》》》》》用例【插补模式下，运动y轴（正向）】开始测试《《《《《
+DEBUG 2025-11-05 19:00:27,207 [test_19_send_coord.py-->line:34]:test_api:send_coord
+DEBUG 2025-11-05 19:00:27,207 [test_19_send_coord.py-->line:35]:axis:2
+DEBUG 2025-11-05 19:00:27,207 [test_19_send_coord.py-->line:36]:coord:-30
+DEBUG 2025-11-05 19:00:27,207 [test_19_send_coord.py-->line:37]:speed:20
+DEBUG 2025-11-05 19:00:27,218 [test_19_send_coord.py-->line:42]:当前模式为插补
+DEBUG 2025-11-05 19:00:31,253 [test_19_send_coord.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 19:00:31,267 [test_19_send_coord.py-->line:55]:接口返回：-30.6
+INFO 2025-11-05 19:00:31,268 [test_19_send_coord.py-->line:70]:✅ 用例【插补模式下，运动y轴（正向）】测试通过
+INFO 2025-11-05 19:00:31,268 [test_19_send_coord.py-->line:71]:》》》》》用例【插补模式下，运动y轴（正向）】测试完成《《《《《
+INFO 2025-11-05 19:00:31,270 [test_19_send_coord.py-->line:33]:》》》》》用例【插补模式下，运动y轴（反向）】开始测试《《《《《
+DEBUG 2025-11-05 19:00:31,270 [test_19_send_coord.py-->line:34]:test_api:send_coord
+DEBUG 2025-11-05 19:00:31,270 [test_19_send_coord.py-->line:35]:axis:2
+DEBUG 2025-11-05 19:00:31,270 [test_19_send_coord.py-->line:36]:coord:-150
+DEBUG 2025-11-05 19:00:31,270 [test_19_send_coord.py-->line:37]:speed:20
+DEBUG 2025-11-05 19:00:31,281 [test_19_send_coord.py-->line:42]:当前模式为插补
+DEBUG 2025-11-05 19:00:36,969 [test_19_send_coord.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 19:00:36,982 [test_19_send_coord.py-->line:55]:接口返回：-146.8
+INFO 2025-11-05 19:00:36,983 [test_19_send_coord.py-->line:70]:✅ 用例【插补模式下，运动y轴（反向）】测试通过
+INFO 2025-11-05 19:00:36,983 [test_19_send_coord.py-->line:71]:》》》》》用例【插补模式下，运动y轴（反向）】测试完成《《《《《
+INFO 2025-11-05 19:00:36,985 [test_19_send_coord.py-->line:33]:》》》》》用例【插补模式下，运动z轴（正向）】开始测试《《《《《
+DEBUG 2025-11-05 19:00:36,985 [test_19_send_coord.py-->line:34]:test_api:send_coord
+DEBUG 2025-11-05 19:00:36,985 [test_19_send_coord.py-->line:35]:axis:3
+DEBUG 2025-11-05 19:00:36,985 [test_19_send_coord.py-->line:36]:coord:250
+DEBUG 2025-11-05 19:00:36,985 [test_19_send_coord.py-->line:37]:speed:100
+DEBUG 2025-11-05 19:00:36,996 [test_19_send_coord.py-->line:42]:当前模式为插补
+DEBUG 2025-11-05 19:00:40,385 [test_19_send_coord.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 19:00:40,399 [test_19_send_coord.py-->line:55]:接口返回：247.2
+INFO 2025-11-05 19:00:40,399 [test_19_send_coord.py-->line:70]:✅ 用例【插补模式下，运动z轴（正向）】测试通过
+INFO 2025-11-05 19:00:40,399 [test_19_send_coord.py-->line:71]:》》》》》用例【插补模式下，运动z轴（正向）】测试完成《《《《《
+INFO 2025-11-05 19:00:40,401 [test_19_send_coord.py-->line:33]:》》》》》用例【插补模式下，运动z轴（反向）】开始测试《《《《《
+DEBUG 2025-11-05 19:00:40,402 [test_19_send_coord.py-->line:34]:test_api:send_coord
+DEBUG 2025-11-05 19:00:40,402 [test_19_send_coord.py-->line:35]:axis:3
+DEBUG 2025-11-05 19:00:40,402 [test_19_send_coord.py-->line:36]:coord:150
+DEBUG 2025-11-05 19:00:40,402 [test_19_send_coord.py-->line:37]:speed:30
+DEBUG 2025-11-05 19:00:40,413 [test_19_send_coord.py-->line:42]:当前模式为插补
+DEBUG 2025-11-05 19:00:45,986 [test_19_send_coord.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 19:00:46,000 [test_19_send_coord.py-->line:55]:接口返回：150.0
+INFO 2025-11-05 19:00:46,000 [test_19_send_coord.py-->line:70]:✅ 用例【插补模式下，运动z轴（反向）】测试通过
+INFO 2025-11-05 19:00:46,000 [test_19_send_coord.py-->line:71]:》》》》》用例【插补模式下，运动z轴（反向）】测试完成《《《《《
+INFO 2025-11-05 19:00:46,002 [test_19_send_coord.py-->line:33]:》》》》》用例【插补模式下，运动rx轴（正向）】开始测试《《《《《
+DEBUG 2025-11-05 19:00:46,003 [test_19_send_coord.py-->line:34]:test_api:send_coord
+DEBUG 2025-11-05 19:00:46,003 [test_19_send_coord.py-->line:35]:axis:4
+DEBUG 2025-11-05 19:00:46,003 [test_19_send_coord.py-->line:36]:coord:-160
+DEBUG 2025-11-05 19:00:46,003 [test_19_send_coord.py-->line:37]:speed:40
+DEBUG 2025-11-05 19:00:46,012 [test_19_send_coord.py-->line:42]:当前模式为插补
+DEBUG 2025-11-05 19:00:51,260 [test_19_send_coord.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 19:00:51,272 [test_19_send_coord.py-->line:55]:接口返回：-161.61
+INFO 2025-11-05 19:00:51,272 [test_19_send_coord.py-->line:70]:✅ 用例【插补模式下，运动rx轴（正向）】测试通过
+INFO 2025-11-05 19:00:51,272 [test_19_send_coord.py-->line:71]:》》》》》用例【插补模式下，运动rx轴（正向）】测试完成《《《《《
+INFO 2025-11-05 19:00:51,275 [test_19_send_coord.py-->line:33]:》》》》》用例【插补模式下，运动rx轴（反向）】开始测试《《《《《
+DEBUG 2025-11-05 19:00:51,275 [test_19_send_coord.py-->line:34]:test_api:send_coord
+DEBUG 2025-11-05 19:00:51,275 [test_19_send_coord.py-->line:35]:axis:4
+DEBUG 2025-11-05 19:00:51,275 [test_19_send_coord.py-->line:36]:coord:150
+DEBUG 2025-11-05 19:00:51,275 [test_19_send_coord.py-->line:37]:speed:40
+DEBUG 2025-11-05 19:00:51,285 [test_19_send_coord.py-->line:42]:当前模式为插补
+DEBUG 2025-11-05 19:00:57,075 [test_19_send_coord.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 19:00:57,088 [test_19_send_coord.py-->line:55]:接口返回：148.71
+INFO 2025-11-05 19:00:57,089 [test_19_send_coord.py-->line:70]:✅ 用例【插补模式下，运动rx轴（反向）】测试通过
+INFO 2025-11-05 19:00:57,089 [test_19_send_coord.py-->line:71]:》》》》》用例【插补模式下，运动rx轴（反向）】测试完成《《《《《
+INFO 2025-11-05 19:00:57,091 [test_19_send_coord.py-->line:33]:》》》》》用例【插补模式下，运动ry轴（正向）】开始测试《《《《《
+DEBUG 2025-11-05 19:00:57,091 [test_19_send_coord.py-->line:34]:test_api:send_coord
+DEBUG 2025-11-05 19:00:57,091 [test_19_send_coord.py-->line:35]:axis:5
+DEBUG 2025-11-05 19:00:57,091 [test_19_send_coord.py-->line:36]:coord:30
+DEBUG 2025-11-05 19:00:57,091 [test_19_send_coord.py-->line:37]:speed:50
+DEBUG 2025-11-05 19:00:57,101 [test_19_send_coord.py-->line:42]:当前模式为插补
+DEBUG 2025-11-05 19:01:02,559 [test_19_send_coord.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 19:01:02,572 [test_19_send_coord.py-->line:55]:接口返回：29.19
+INFO 2025-11-05 19:01:02,572 [test_19_send_coord.py-->line:70]:✅ 用例【插补模式下，运动ry轴（正向）】测试通过
+INFO 2025-11-05 19:01:02,572 [test_19_send_coord.py-->line:71]:》》》》》用例【插补模式下，运动ry轴（正向）】测试完成《《《《《
+INFO 2025-11-05 19:01:02,575 [test_19_send_coord.py-->line:33]:》》》》》用例【插补模式下，运动ry轴（反向）】开始测试《《《《《
+DEBUG 2025-11-05 19:01:02,575 [test_19_send_coord.py-->line:34]:test_api:send_coord
+DEBUG 2025-11-05 19:01:02,576 [test_19_send_coord.py-->line:35]:axis:5
+DEBUG 2025-11-05 19:01:02,576 [test_19_send_coord.py-->line:36]:coord:-30
+DEBUG 2025-11-05 19:01:02,576 [test_19_send_coord.py-->line:37]:speed:50
+DEBUG 2025-11-05 19:01:02,584 [test_19_send_coord.py-->line:42]:当前模式为插补
+DEBUG 2025-11-05 19:01:07,719 [test_19_send_coord.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 19:01:07,732 [test_19_send_coord.py-->line:55]:接口返回：-28.75
+INFO 2025-11-05 19:01:07,732 [test_19_send_coord.py-->line:70]:✅ 用例【插补模式下，运动ry轴（反向）】测试通过
+INFO 2025-11-05 19:01:07,732 [test_19_send_coord.py-->line:71]:》》》》》用例【插补模式下，运动ry轴（反向）】测试完成《《《《《
+INFO 2025-11-05 19:01:07,733 [test_19_send_coord.py-->line:33]:》》》》》用例【插补模式下，运动rz轴（正向）】开始测试《《《《《
+DEBUG 2025-11-05 19:01:07,733 [test_19_send_coord.py-->line:34]:test_api:send_coord
+DEBUG 2025-11-05 19:01:07,734 [test_19_send_coord.py-->line:35]:axis:6
+DEBUG 2025-11-05 19:01:07,734 [test_19_send_coord.py-->line:36]:coord:-40
+DEBUG 2025-11-05 19:01:07,734 [test_19_send_coord.py-->line:37]:speed:60
+DEBUG 2025-11-05 19:01:07,744 [test_19_send_coord.py-->line:42]:当前模式为插补
+DEBUG 2025-11-05 19:01:13,763 [test_19_send_coord.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 19:01:13,776 [test_19_send_coord.py-->line:55]:接口返回：-40.16
+INFO 2025-11-05 19:01:13,776 [test_19_send_coord.py-->line:70]:✅ 用例【插补模式下，运动rz轴（正向）】测试通过
+INFO 2025-11-05 19:01:13,777 [test_19_send_coord.py-->line:71]:》》》》》用例【插补模式下，运动rz轴（正向）】测试完成《《《《《
+INFO 2025-11-05 19:01:13,780 [test_19_send_coord.py-->line:33]:》》》》》用例【插补模式下，运动rz轴（反向）】开始测试《《《《《
+DEBUG 2025-11-05 19:01:13,780 [test_19_send_coord.py-->line:34]:test_api:send_coord
+DEBUG 2025-11-05 19:01:13,780 [test_19_send_coord.py-->line:35]:axis:6
+DEBUG 2025-11-05 19:01:13,780 [test_19_send_coord.py-->line:36]:coord:-14
+DEBUG 2025-11-05 19:01:13,780 [test_19_send_coord.py-->line:37]:speed:60
+DEBUG 2025-11-05 19:01:13,790 [test_19_send_coord.py-->line:42]:当前模式为插补
+DEBUG 2025-11-05 19:01:21,544 [test_19_send_coord.py-->line:51]:接口返回：1
+DEBUG 2025-11-05 19:01:21,559 [test_19_send_coord.py-->line:55]:接口返回：-14.15
+INFO 2025-11-05 19:01:21,560 [test_19_send_coord.py-->line:70]:✅ 用例【插补模式下，运动rz轴（反向）】测试通过
+INFO 2025-11-05 19:01:21,560 [test_19_send_coord.py-->line:71]:》》》》》用例【插补模式下，运动rz轴（反向）】测试完成《《《《《
+INFO 2025-11-05 19:01:21,563 [test_19_send_coord.py-->line:81]:》》》》》用例【刷新模式下，运动x轴（正向）】开始测试《《《《《
+DEBUG 2025-11-05 19:01:21,564 [test_19_send_coord.py-->line:82]:test_api:send_coord
+DEBUG 2025-11-05 19:01:21,564 [test_19_send_coord.py-->line:83]:axis:1
+DEBUG 2025-11-05 19:01:21,564 [test_19_send_coord.py-->line:84]:coord:200
+DEBUG 2025-11-05 19:01:21,564 [test_19_send_coord.py-->line:85]:speed:20
+DEBUG 2025-11-05 19:01:21,581 [test_19_send_coord.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 19:01:26,419 [test_19_send_coord.py-->line:99]:接口返回：1
+DEBUG 2025-11-05 19:01:26,432 [test_19_send_coord.py-->line:103]:接口返回：200.2
+INFO 2025-11-05 19:01:26,433 [test_19_send_coord.py-->line:118]:✅ 用例【刷新模式下，运动x轴（正向）】测试通过
+INFO 2025-11-05 19:01:26,433 [test_19_send_coord.py-->line:119]:》》》》》用例【刷新模式下，运动x轴（正向）】测试完成《《《《《
+INFO 2025-11-05 19:01:26,435 [test_19_send_coord.py-->line:81]:》》》》》用例【刷新模式下，运动x轴（反向）】开始测试《《《《《
+DEBUG 2025-11-05 19:01:26,436 [test_19_send_coord.py-->line:82]:test_api:send_coord
+DEBUG 2025-11-05 19:01:26,436 [test_19_send_coord.py-->line:83]:axis:1
+DEBUG 2025-11-05 19:01:26,436 [test_19_send_coord.py-->line:84]:coord:100
+DEBUG 2025-11-05 19:01:26,436 [test_19_send_coord.py-->line:85]:speed:50
+DEBUG 2025-11-05 19:01:26,446 [test_19_send_coord.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 19:01:29,773 [test_19_send_coord.py-->line:99]:接口返回：1
+DEBUG 2025-11-05 19:01:29,787 [test_19_send_coord.py-->line:103]:接口返回：100.9
+INFO 2025-11-05 19:01:29,787 [test_19_send_coord.py-->line:118]:✅ 用例【刷新模式下，运动x轴（反向）】测试通过
+INFO 2025-11-05 19:01:29,787 [test_19_send_coord.py-->line:119]:》》》》》用例【刷新模式下，运动x轴（反向）】测试完成《《《《《
+INFO 2025-11-05 19:01:29,789 [test_19_send_coord.py-->line:81]:》》》》》用例【刷新模式下，运动y轴（正向）】开始测试《《《《《
+DEBUG 2025-11-05 19:01:29,789 [test_19_send_coord.py-->line:82]:test_api:send_coord
+DEBUG 2025-11-05 19:01:29,789 [test_19_send_coord.py-->line:83]:axis:2
+DEBUG 2025-11-05 19:01:29,789 [test_19_send_coord.py-->line:84]:coord:-30
+DEBUG 2025-11-05 19:01:29,789 [test_19_send_coord.py-->line:85]:speed:20
+DEBUG 2025-11-05 19:01:29,800 [test_19_send_coord.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 19:01:33,109 [test_19_send_coord.py-->line:99]:接口返回：1
+DEBUG 2025-11-05 19:01:33,123 [test_19_send_coord.py-->line:103]:接口返回：-32.2
+INFO 2025-11-05 19:01:33,124 [test_19_send_coord.py-->line:118]:✅ 用例【刷新模式下，运动y轴（正向）】测试通过
+INFO 2025-11-05 19:01:33,124 [test_19_send_coord.py-->line:119]:》》》》》用例【刷新模式下，运动y轴（正向）】测试完成《《《《《
+INFO 2025-11-05 19:01:33,127 [test_19_send_coord.py-->line:81]:》》》》》用例【刷新模式下，运动y轴（反向）】开始测试《《《《《
+DEBUG 2025-11-05 19:01:33,127 [test_19_send_coord.py-->line:82]:test_api:send_coord
+DEBUG 2025-11-05 19:01:33,127 [test_19_send_coord.py-->line:83]:axis:2
+DEBUG 2025-11-05 19:01:33,127 [test_19_send_coord.py-->line:84]:coord:-150
+DEBUG 2025-11-05 19:01:33,127 [test_19_send_coord.py-->line:85]:speed:20
+DEBUG 2025-11-05 19:01:33,137 [test_19_send_coord.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 19:01:36,946 [test_19_send_coord.py-->line:99]:接口返回：1
+DEBUG 2025-11-05 19:01:36,960 [test_19_send_coord.py-->line:103]:接口返回：-147.7
+INFO 2025-11-05 19:01:36,961 [test_19_send_coord.py-->line:118]:✅ 用例【刷新模式下，运动y轴（反向）】测试通过
+INFO 2025-11-05 19:01:36,961 [test_19_send_coord.py-->line:119]:》》》》》用例【刷新模式下，运动y轴（反向）】测试完成《《《《《
+INFO 2025-11-05 19:01:36,963 [test_19_send_coord.py-->line:81]:》》》》》用例【刷新模式下，运动z轴（正向）】开始测试《《《《《
+DEBUG 2025-11-05 19:01:36,963 [test_19_send_coord.py-->line:82]:test_api:send_coord
+DEBUG 2025-11-05 19:01:36,963 [test_19_send_coord.py-->line:83]:axis:3
+DEBUG 2025-11-05 19:01:36,963 [test_19_send_coord.py-->line:84]:coord:250
+DEBUG 2025-11-05 19:01:36,963 [test_19_send_coord.py-->line:85]:speed:30
+DEBUG 2025-11-05 19:01:36,973 [test_19_send_coord.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 19:01:40,411 [test_19_send_coord.py-->line:99]:接口返回：1
+DEBUG 2025-11-05 19:01:40,425 [test_19_send_coord.py-->line:103]:接口返回：247.0
+INFO 2025-11-05 19:01:40,426 [test_19_send_coord.py-->line:118]:✅ 用例【刷新模式下，运动z轴（正向）】测试通过
+INFO 2025-11-05 19:01:40,426 [test_19_send_coord.py-->line:119]:》》》》》用例【刷新模式下，运动z轴（正向）】测试完成《《《《《
+INFO 2025-11-05 19:01:40,428 [test_19_send_coord.py-->line:81]:》》》》》用例【刷新模式下，运动z轴（反向）】开始测试《《《《《
+DEBUG 2025-11-05 19:01:40,428 [test_19_send_coord.py-->line:82]:test_api:send_coord
+DEBUG 2025-11-05 19:01:40,428 [test_19_send_coord.py-->line:83]:axis:3
+DEBUG 2025-11-05 19:01:40,429 [test_19_send_coord.py-->line:84]:coord:150
+DEBUG 2025-11-05 19:01:40,429 [test_19_send_coord.py-->line:85]:speed:30
+DEBUG 2025-11-05 19:01:40,439 [test_19_send_coord.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 19:01:44,376 [test_19_send_coord.py-->line:99]:接口返回：1
+DEBUG 2025-11-05 19:01:44,389 [test_19_send_coord.py-->line:103]:接口返回：149.3
+INFO 2025-11-05 19:01:44,390 [test_19_send_coord.py-->line:118]:✅ 用例【刷新模式下，运动z轴（反向）】测试通过
+INFO 2025-11-05 19:01:44,390 [test_19_send_coord.py-->line:119]:》》》》》用例【刷新模式下，运动z轴（反向）】测试完成《《《《《
+INFO 2025-11-05 19:01:44,392 [test_19_send_coord.py-->line:81]:》》》》》用例【刷新模式下，运动rx轴（正向）】开始测试《《《《《
+DEBUG 2025-11-05 19:01:44,393 [test_19_send_coord.py-->line:82]:test_api:send_coord
+DEBUG 2025-11-05 19:01:44,393 [test_19_send_coord.py-->line:83]:axis:4
+DEBUG 2025-11-05 19:01:44,393 [test_19_send_coord.py-->line:84]:coord:-160
+DEBUG 2025-11-05 19:01:44,393 [test_19_send_coord.py-->line:85]:speed:40
+DEBUG 2025-11-05 19:01:44,403 [test_19_send_coord.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 19:01:48,225 [test_19_send_coord.py-->line:99]:接口返回：1
+DEBUG 2025-11-05 19:01:48,238 [test_19_send_coord.py-->line:103]:接口返回：-161.46
+INFO 2025-11-05 19:01:48,238 [test_19_send_coord.py-->line:118]:✅ 用例【刷新模式下，运动rx轴（正向）】测试通过
+INFO 2025-11-05 19:01:48,239 [test_19_send_coord.py-->line:119]:》》》》》用例【刷新模式下，运动rx轴（正向）】测试完成《《《《《
+INFO 2025-11-05 19:01:48,240 [test_19_send_coord.py-->line:81]:》》》》》用例【刷新模式下，运动rx轴（反向）】开始测试《《《《《
+DEBUG 2025-11-05 19:01:48,240 [test_19_send_coord.py-->line:82]:test_api:send_coord
+DEBUG 2025-11-05 19:01:48,240 [test_19_send_coord.py-->line:83]:axis:4
+DEBUG 2025-11-05 19:01:48,240 [test_19_send_coord.py-->line:84]:coord:150
+DEBUG 2025-11-05 19:01:48,240 [test_19_send_coord.py-->line:85]:speed:40
+DEBUG 2025-11-05 19:01:48,251 [test_19_send_coord.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 19:01:52,069 [test_19_send_coord.py-->line:99]:接口返回：1
+DEBUG 2025-11-05 19:01:52,083 [test_19_send_coord.py-->line:103]:接口返回：148.35
+INFO 2025-11-05 19:01:52,083 [test_19_send_coord.py-->line:118]:✅ 用例【刷新模式下，运动rx轴（反向）】测试通过
+INFO 2025-11-05 19:01:52,083 [test_19_send_coord.py-->line:119]:》》》》》用例【刷新模式下，运动rx轴（反向）】测试完成《《《《《
+INFO 2025-11-05 19:01:52,085 [test_19_send_coord.py-->line:81]:》》》》》用例【刷新模式下，运动ry轴（正向）】开始测试《《《《《
+DEBUG 2025-11-05 19:01:52,085 [test_19_send_coord.py-->line:82]:test_api:send_coord
+DEBUG 2025-11-05 19:01:52,085 [test_19_send_coord.py-->line:83]:axis:5
+DEBUG 2025-11-05 19:01:52,085 [test_19_send_coord.py-->line:84]:coord:30
+DEBUG 2025-11-05 19:01:52,087 [test_19_send_coord.py-->line:85]:speed:50
+DEBUG 2025-11-05 19:01:52,097 [test_19_send_coord.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 19:01:55,784 [test_19_send_coord.py-->line:99]:接口返回：1
+DEBUG 2025-11-05 19:01:55,798 [test_19_send_coord.py-->line:103]:接口返回：29.29
+INFO 2025-11-05 19:01:55,798 [test_19_send_coord.py-->line:118]:✅ 用例【刷新模式下，运动ry轴（正向）】测试通过
+INFO 2025-11-05 19:01:55,798 [test_19_send_coord.py-->line:119]:》》》》》用例【刷新模式下，运动ry轴（正向）】测试完成《《《《《
+INFO 2025-11-05 19:01:55,801 [test_19_send_coord.py-->line:81]:》》》》》用例【刷新模式下，运动ry轴（反向）】开始测试《《《《《
+DEBUG 2025-11-05 19:01:55,801 [test_19_send_coord.py-->line:82]:test_api:send_coord
+DEBUG 2025-11-05 19:01:55,801 [test_19_send_coord.py-->line:83]:axis:5
+DEBUG 2025-11-05 19:01:55,801 [test_19_send_coord.py-->line:84]:coord:-30
+DEBUG 2025-11-05 19:01:55,801 [test_19_send_coord.py-->line:85]:speed:50
+DEBUG 2025-11-05 19:01:55,811 [test_19_send_coord.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 19:01:59,116 [test_19_send_coord.py-->line:99]:接口返回：1
+DEBUG 2025-11-05 19:01:59,130 [test_19_send_coord.py-->line:103]:接口返回：-29.1
+INFO 2025-11-05 19:01:59,130 [test_19_send_coord.py-->line:118]:✅ 用例【刷新模式下，运动ry轴（反向）】测试通过
+INFO 2025-11-05 19:01:59,130 [test_19_send_coord.py-->line:119]:》》》》》用例【刷新模式下，运动ry轴（反向）】测试完成《《《《《
+INFO 2025-11-05 19:01:59,133 [test_19_send_coord.py-->line:81]:》》》》》用例【刷新模式下，运动rz轴（正向）】开始测试《《《《《
+DEBUG 2025-11-05 19:01:59,133 [test_19_send_coord.py-->line:82]:test_api:send_coord
+DEBUG 2025-11-05 19:01:59,134 [test_19_send_coord.py-->line:83]:axis:6
+DEBUG 2025-11-05 19:01:59,134 [test_19_send_coord.py-->line:84]:coord:-40
+DEBUG 2025-11-05 19:01:59,134 [test_19_send_coord.py-->line:85]:speed:100
+DEBUG 2025-11-05 19:01:59,142 [test_19_send_coord.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 19:02:02,589 [test_19_send_coord.py-->line:99]:接口返回：1
+DEBUG 2025-11-05 19:02:02,602 [test_19_send_coord.py-->line:103]:接口返回：-39.99
+INFO 2025-11-05 19:02:02,602 [test_19_send_coord.py-->line:118]:✅ 用例【刷新模式下，运动rz轴（正向）】测试通过
+INFO 2025-11-05 19:02:02,602 [test_19_send_coord.py-->line:119]:》》》》》用例【刷新模式下，运动rz轴（正向）】测试完成《《《《《
+INFO 2025-11-05 19:02:02,604 [test_19_send_coord.py-->line:81]:》》》》》用例【刷新模式下，运动rz轴（反向）】开始测试《《《《《
+DEBUG 2025-11-05 19:02:02,604 [test_19_send_coord.py-->line:82]:test_api:send_coord
+DEBUG 2025-11-05 19:02:02,604 [test_19_send_coord.py-->line:83]:axis:6
+DEBUG 2025-11-05 19:02:02,604 [test_19_send_coord.py-->line:84]:coord:-14
+DEBUG 2025-11-05 19:02:02,604 [test_19_send_coord.py-->line:85]:speed:100
+DEBUG 2025-11-05 19:02:02,615 [test_19_send_coord.py-->line:90]:当前模式为刷新
+DEBUG 2025-11-05 19:02:06,426 [test_19_send_coord.py-->line:99]:接口返回：1
+DEBUG 2025-11-05 19:02:06,440 [test_19_send_coord.py-->line:103]:接口返回：-13.97
+INFO 2025-11-05 19:02:06,441 [test_19_send_coord.py-->line:118]:✅ 用例【刷新模式下，运动rz轴（反向）】测试通过
+INFO 2025-11-05 19:02:06,441 [test_19_send_coord.py-->line:119]:》》》》》用例【刷新模式下，运动rz轴（反向）】测试完成《《《《《
+INFO 2025-11-05 19:02:06,443 [test_19_send_coord.py-->line:128]:》》》》》用例【坐标超限，x轴】开始测试《《《《《
+DEBUG 2025-11-05 19:02:06,444 [test_19_send_coord.py-->line:129]:test_api:send_coord
+DEBUG 2025-11-05 19:02:06,444 [test_19_send_coord.py-->line:130]:axis:1
+DEBUG 2025-11-05 19:02:06,444 [test_19_send_coord.py-->line:131]:coord:-282
+DEBUG 2025-11-05 19:02:06,444 [test_19_send_coord.py-->line:132]:speed:30
+INFO 2025-11-05 19:02:06,444 [test_19_send_coord.py-->line:138]:✅ 用例【坐标超限，x轴】异常断言通过
+INFO 2025-11-05 19:02:06,444 [test_19_send_coord.py-->line:139]:》》》用例【坐标超限，x轴】测试完成《《《
+INFO 2025-11-05 19:02:06,446 [test_19_send_coord.py-->line:128]:》》》》》用例【坐标超限，x轴】开始测试《《《《《
+DEBUG 2025-11-05 19:02:06,446 [test_19_send_coord.py-->line:129]:test_api:send_coord
+DEBUG 2025-11-05 19:02:06,446 [test_19_send_coord.py-->line:130]:axis:1
+DEBUG 2025-11-05 19:02:06,446 [test_19_send_coord.py-->line:131]:coord:282
+DEBUG 2025-11-05 19:02:06,446 [test_19_send_coord.py-->line:132]:speed:30
+INFO 2025-11-05 19:02:06,447 [test_19_send_coord.py-->line:138]:✅ 用例【坐标超限，x轴】异常断言通过
+INFO 2025-11-05 19:02:06,447 [test_19_send_coord.py-->line:139]:》》》用例【坐标超限，x轴】测试完成《《《
+INFO 2025-11-05 19:02:06,448 [test_19_send_coord.py-->line:128]:》》》》》用例【坐标超限，Y轴】开始测试《《《《《
+DEBUG 2025-11-05 19:02:06,448 [test_19_send_coord.py-->line:129]:test_api:send_coord
+DEBUG 2025-11-05 19:02:06,448 [test_19_send_coord.py-->line:130]:axis:2
+DEBUG 2025-11-05 19:02:06,448 [test_19_send_coord.py-->line:131]:coord:-282
+DEBUG 2025-11-05 19:02:06,448 [test_19_send_coord.py-->line:132]:speed:30
+INFO 2025-11-05 19:02:06,449 [test_19_send_coord.py-->line:138]:✅ 用例【坐标超限，Y轴】异常断言通过
+INFO 2025-11-05 19:02:06,449 [test_19_send_coord.py-->line:139]:》》》用例【坐标超限，Y轴】测试完成《《《
+INFO 2025-11-05 19:02:06,450 [test_19_send_coord.py-->line:128]:》》》》》用例【坐标超限，Y轴】开始测试《《《《《
+DEBUG 2025-11-05 19:02:06,450 [test_19_send_coord.py-->line:129]:test_api:send_coord
+DEBUG 2025-11-05 19:02:06,450 [test_19_send_coord.py-->line:130]:axis:2
+DEBUG 2025-11-05 19:02:06,450 [test_19_send_coord.py-->line:131]:coord:282
+DEBUG 2025-11-05 19:02:06,450 [test_19_send_coord.py-->line:132]:speed:30
+INFO 2025-11-05 19:02:06,450 [test_19_send_coord.py-->line:138]:✅ 用例【坐标超限，Y轴】异常断言通过
+INFO 2025-11-05 19:02:06,450 [test_19_send_coord.py-->line:139]:》》》用例【坐标超限，Y轴】测试完成《《《
+INFO 2025-11-05 19:02:06,451 [test_19_send_coord.py-->line:128]:》》》》》用例【坐标超限，Z轴】开始测试《《《《《
+DEBUG 2025-11-05 19:02:06,451 [test_19_send_coord.py-->line:129]:test_api:send_coord
+DEBUG 2025-11-05 19:02:06,451 [test_19_send_coord.py-->line:130]:axis:3
+DEBUG 2025-11-05 19:02:06,451 [test_19_send_coord.py-->line:131]:coord:-71
+DEBUG 2025-11-05 19:02:06,451 [test_19_send_coord.py-->line:132]:speed:40
+INFO 2025-11-05 19:02:06,451 [test_19_send_coord.py-->line:138]:✅ 用例【坐标超限，Z轴】异常断言通过
+INFO 2025-11-05 19:02:06,451 [test_19_send_coord.py-->line:139]:》》》用例【坐标超限，Z轴】测试完成《《《
+INFO 2025-11-05 19:02:06,452 [test_19_send_coord.py-->line:128]:》》》》》用例【坐标超限，Z轴】开始测试《《《《《
+DEBUG 2025-11-05 19:02:06,452 [test_19_send_coord.py-->line:129]:test_api:send_coord
+DEBUG 2025-11-05 19:02:06,452 [test_19_send_coord.py-->line:130]:axis:3
+DEBUG 2025-11-05 19:02:06,452 [test_19_send_coord.py-->line:131]:coord:413
+DEBUG 2025-11-05 19:02:06,452 [test_19_send_coord.py-->line:132]:speed:40
+INFO 2025-11-05 19:02:06,452 [test_19_send_coord.py-->line:138]:✅ 用例【坐标超限，Z轴】异常断言通过
+INFO 2025-11-05 19:02:06,452 [test_19_send_coord.py-->line:139]:》》》用例【坐标超限，Z轴】测试完成《《《
+INFO 2025-11-05 19:02:06,453 [test_19_send_coord.py-->line:128]:》》》》》用例【速度超限】开始测试《《《《《
+DEBUG 2025-11-05 19:02:06,453 [test_19_send_coord.py-->line:129]:test_api:send_coord
+DEBUG 2025-11-05 19:02:06,453 [test_19_send_coord.py-->line:130]:axis:3
+DEBUG 2025-11-05 19:02:06,453 [test_19_send_coord.py-->line:131]:coord:250
+DEBUG 2025-11-05 19:02:06,453 [test_19_send_coord.py-->line:132]:speed:0
+INFO 2025-11-05 19:02:06,453 [test_19_send_coord.py-->line:138]:✅ 用例【速度超限】异常断言通过
+INFO 2025-11-05 19:02:06,453 [test_19_send_coord.py-->line:139]:》》》用例【速度超限】测试完成《《《
+INFO 2025-11-05 19:02:06,453 [test_19_send_coord.py-->line:128]:》》》》》用例【速度超限】开始测试《《《《《
+DEBUG 2025-11-05 19:02:06,454 [test_19_send_coord.py-->line:129]:test_api:send_coord
+DEBUG 2025-11-05 19:02:06,454 [test_19_send_coord.py-->line:130]:axis:3
+DEBUG 2025-11-05 19:02:06,454 [test_19_send_coord.py-->line:131]:coord:250
+DEBUG 2025-11-05 19:02:06,454 [test_19_send_coord.py-->line:132]:speed:101
+INFO 2025-11-05 19:02:06,454 [test_19_send_coord.py-->line:138]:✅ 用例【速度超限】异常断言通过
+INFO 2025-11-05 19:02:06,454 [test_19_send_coord.py-->line:139]:》》》用例【速度超限】测试完成《《《
+INFO 2025-11-05 19:02:13,782 [test_19_send_coord.py-->line:23]:环境清理完成，接口测试结束
