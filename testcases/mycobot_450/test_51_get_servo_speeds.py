@@ -21,7 +21,7 @@ def device():
     dev.default_settings()
     dev.go_zero()
     dev.wait()
-    dev.mc.close()
+    #dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("获取关节运行速度")
@@ -61,7 +61,7 @@ def test_get_servo_speeds2(device, case):
 
     with allure.step(f"调用 send_angles 接口"):
         device.mc.send_angles([30, 30, 30, 30, 30, 30], case['speed'])
-        time.sleep(0.2)
+        time.sleep(0.1)
 
     with allure.step(f"调用 {case['api']} 接口"):
         response = device.mc.get_servo_speeds()

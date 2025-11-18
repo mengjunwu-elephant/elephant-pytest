@@ -36,7 +36,7 @@ class Mycobot450Base:
     PRO_GRIPPER_TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/pro_gripper.xlsx')
 
     def __init__(self, ip='192.168.0.232'):
-        self.mc = Pro450Client(ip=ip,debug=1)
+        self.mc = Pro450Client(ip=ip,debug=True)
 
     def default_settings(self):
         self.mc.set_fresh_mode(0)

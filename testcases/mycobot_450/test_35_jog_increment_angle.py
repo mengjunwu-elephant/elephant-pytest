@@ -21,7 +21,7 @@ def device():
     dev.default_settings()
     dev.go_zero()
     dev.wait()
-    dev.mc.close()
+    #dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 @pytest.fixture(autouse=True)

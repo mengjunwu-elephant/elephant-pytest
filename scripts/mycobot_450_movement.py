@@ -20,9 +20,6 @@ joints = {
     'j6': {'min': [0,30,0,0,0,-175], 'max': [0,-20,0,0,0,175]},
 }
 
-# 速度设置
-speed = 50
-
 # 统计机械臂运动数据
 coords_attempts = 0
 coords_failed = 0
@@ -114,7 +111,10 @@ def coords_move():
     return coords_attempts, coords_failed
 
 def move():
-    global angles_failed, angles_attempts
+    global angles_failed, angles_attempts,speed
+    # 速度设置
+    speed = random.randint(1, 100)
+
     while True:
         # 角度运动
         for joint, limits in joints.items():
@@ -161,23 +161,23 @@ def get():
             logger.info(f"当前电流{current}")
             logger.info(f"当前舵机状态{servo_status}")
             logger.info(f"当前机器状态{robot_status}")
-            if r_a is not None:
+            if r_a not in [-1,None]:
                 print(f"angles{r_a}")
             else:
                 a += 1
-            if r_c is not None:
+            if r_c not in [-1,None]:
                 print(f"coords{r_c}")
             else:
                 c += 1
-            if servo_speed is not None:
+            if servo_speed not in [-1,None]:
                 print(f"speed{servo_speed}")
             else:
                 sp += 1
-            if current is not None:
+            if current not in [-1,None]:
                 print(f"current{current}")
             else:
                 cu += 1
-            if servo_status is not None:
+            if servo_status not in [-1,None]:
                 print(f"servo_statue{servo_status}")
             else:
                 se_sta += 1
@@ -199,9 +199,8 @@ def get_current_time():
 if __name__ == '__main__':
     mc.power_on()
     # 设置不同模式测试机械臂运动状态
-    mc.set_fresh_mode(0)
+    mc.set_fresh_mode(1)
     mode = '刷新' if mc.get_fresh_mode() else '插补'
-
     # 日志文件路径，名称
     file_path = "test_report"
     file_name = f"{get_current_time()}_450_joint_movement_times({mode}).xlsx"

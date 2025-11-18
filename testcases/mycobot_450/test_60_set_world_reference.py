@@ -21,7 +21,7 @@ def device():
     dev.default_world_reference()
     dev.go_zero()
     dev.wait()
-    dev.mc.close()
+    #dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("设置世界坐标系")

@@ -81,7 +81,7 @@ def test_send_angles1(device, case):
 
     with allure.step(f'设置为刷新模式'):
         device.mc.set_fresh_mode(1)
-        time.sleep(10)
+        device.wait()
         mode = '刷新' if device.mc.get_fresh_mode() else '插补'
         logger.debug(f'当前模式为{mode}')
 
