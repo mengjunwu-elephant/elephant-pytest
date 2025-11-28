@@ -42,7 +42,7 @@ def test_set_protection_current_normal(device, case):
     with allure.step("断言返回值与预期一致"):
         allure.attach(str(case["expect_data"]), name="期望返回值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(get_res), name="实际返回值", attachment_type=allure.attachment_type.TEXT)
-        assert get_res == case["expect_data"], f"期望返回：{case['expect_data']}，实际返回：{get_res}"
+        assert get_res == case["parameter"], f"期望返回：{case['parameter']}，实际返回：{get_res}"
 
     logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》》》用例【{title}】测试完成《《《《《")

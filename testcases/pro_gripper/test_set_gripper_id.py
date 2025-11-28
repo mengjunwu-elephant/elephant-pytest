@@ -20,7 +20,7 @@ def device():
 
 @allure.feature("设置夹爪 ID")
 @allure.story("正常用例")
-@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") != "exception"], ids=lambda c: c["title"])
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"], ids=lambda c: c["title"])
 def test_set_gripper_id_normal(device, case):
     title = case["title"]
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')

@@ -30,8 +30,8 @@ def test_get_firmware_version(device, case):
         response = device.m.get_firmware_version()
         logger.debug(f"接口返回值：{response}")
 
-    with allure.step("断言返回值类型为 int"):
-        assert isinstance(response, int), f"返回类型错误，期望 int，实际为 {type(response)}"
+    with allure.step("断言返回值类型为 float"):
+        assert isinstance(response, float), f"返回类型错误，期望 int，实际为 {type(response)}"
         logger.debug("请求类型断言成功")
 
     with allure.step("断言返回结果与期望一致"):

@@ -43,7 +43,7 @@ def test_set_gripper_p_normal(device, case):
 
     with allure.step("断言读取返回值与预期一致"):
         allure.attach(str(case["expect_data"]), name="设置接口期望返回值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(case['value']), name="读取接口期望返回值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(case['parameter']), name="读取接口期望返回值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(set_res, name='设置接口实际返回值', attachment_type=allure.attachment_type.TEXT)
         allure.attach(get_res, name='读取接口实际返回值', attachment_type=allure.attachment_type.TEXT)
         assert set_res == case["expect_data"], f"期望返回：{case['expect_data']}，实际返回：{set_res}"

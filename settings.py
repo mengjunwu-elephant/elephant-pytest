@@ -37,7 +37,7 @@ class ProGripperBase:
     # 测试数据配置
     TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/pro_gripper.xlsx')
 
-    def __init__(self, port="com35", baudrate=1000000):
+    def __init__(self, port="com5", baudrate=115200):
         self.m = Gripper(port, baudrate=baudrate)
 
     def go_zero(self):

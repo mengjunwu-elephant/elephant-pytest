@@ -27,7 +27,7 @@ def test_get_queue_count(device, case):
         logger.debug(f'test_parameters: {case.get("parameter", "")}')
 
     with allure.step("调用接口 get_queue_count 获取队列数量"):
-        response = device.m.get_queue_count()
+        response = device.m.get_gripper_queue_count()
         logger.debug(f"接口返回结果：{response}")
 
     with allure.step("断言返回值类型为 int"):

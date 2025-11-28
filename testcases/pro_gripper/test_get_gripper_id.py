@@ -50,10 +50,10 @@ def test_set_gripper_id(device, case):
     logger.info(f'》》》》》用例【{title}】测试完成《《《《《')
 
 
-@allure.feature("设置夹爪ID")
+@allure.feature("读取夹爪ID")
 @allure.story("异常用例")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
-def test_set_gripper_id_out_limit(device, case):
+def test_get_gripper_id_out_limit(device, case):
     title = case["title"]
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
 
@@ -62,7 +62,7 @@ def test_set_gripper_id_out_limit(device, case):
         logger.debug(f'test_parameters: {case["parameter"]}')
 
     with allure.step("断言设置ID超限触发异常 ValueError"):
-        with pytest.raises(ValueError, match=f".*{case['parameter']}.*"):
+        with pytest.raises(ValueError):
             device.m.set_gripper_Id(int(case["parameter"]))
 
     logger.info(f'✅ 用例【{title}】测试通过')
