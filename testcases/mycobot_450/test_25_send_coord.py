@@ -21,56 +21,56 @@ def device():
     dev.default_settings()
     dev.go_zero()
     dev.wait()
-    #dev.mc.close()
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
-#
-# @allure.feature("设置单坐标")
-# @allure.story("插补模式设置单坐标")
-# @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
-# def test_send_coord0(device, case):
-#     title = case["title"]
-#     expected = case["expect_data"]
-#
-#     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
-#     logger.debug(f'test_api:{case["api"]}')
-#     logger.debug(f'axis:{case["axis"]}')
-#     logger.debug(f'coord:{case["coord"]}')
-#     logger.debug(f'speed:{case["speed"]}')
-#
-#     with allure.step(f'设置为插补模式'):
-#         device.mc.set_fresh_mode(0)
-#         mode = '刷新' if device.mc.get_fresh_mode() else '插补'
-#         logger.debug(f'当前模式为{mode}')
-#
-#     with allure.step('使机械臂运动到坐标初始位置'):
-#         device.mc.send_angles(device.coords_init_angles,device.speed)
-#         device.wait()
-#
-#     with allure.step(f"调用 {case['api']} 接口"):
-#         set_res = device.mc.send_coord(case["axis"],case["coord"],case["speed"])
-#         device.wait()
-#         logger.debug(f"接口返回：{set_res}")
-#
-#     with allure.step(f'调用 get_coords 接口'):
-#         get_res = device.mc.get_coords()[case["axis"]-1]
-#         logger.debug(f"接口返回：{get_res}")
-#
-#     with allure.step("断言返回值类型为 int"):
-#         assert isinstance(set_res, int), f"返回类型错误,应为{type(expected)},实际为 {type(set_res)}"
-#
-#     with allure.step("断言接口返回结果"):
-#         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
-#         allure.attach(str(set_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
-#         assert set_res == expected, f"用例【{title}】断言失败，期望 {expected},实际 {set_res}"
-#
-#     with allure.step("断言 get_coords 返回值"):
-#         allure.attach(str(case["coord"]), name="期望值", attachment_type=allure.attachment_type.TEXT)
-#         allure.attach(str(get_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
-#         assert_almost_equal(get_res, case["coord"], 1,'插补模式设置单坐标'), f"用例【{title}】断言失败，期望 {case['coord']},实际 {get_res}"
-#
-#     logger.info(f'✅ 用例【{title}】测试通过')
-#     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
+
+@allure.feature("设置单坐标")
+@allure.story("插补模式设置单坐标")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
+def test_send_coord0(device, case):
+    title = case["title"]
+    expected = case["expect_data"]
+
+    logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
+    logger.debug(f'test_api:{case["api"]}')
+    logger.debug(f'axis:{case["axis"]}')
+    logger.debug(f'coord:{case["coord"]}')
+    logger.debug(f'speed:{case["speed"]}')
+
+    with allure.step(f'设置为插补模式'):
+        device.mc.set_fresh_mode(0)
+        mode = '刷新' if device.mc.get_fresh_mode() else '插补'
+        logger.debug(f'当前模式为{mode}')
+
+    with allure.step('使机械臂运动到坐标初始位置'):
+        device.mc.send_angles(device.coords_init_angles,device.speed)
+        device.wait()
+
+    with allure.step(f"调用 {case['api']} 接口"):
+        set_res = device.mc.send_coord(case["axis"],case["coord"],case["speed"])
+        device.wait()
+        logger.debug(f"接口返回：{set_res}")
+
+    with allure.step(f'调用 get_coords 接口'):
+        get_res = device.mc.get_coords()[case["axis"]-1]
+        logger.debug(f"接口返回：{get_res}")
+
+    with allure.step("断言返回值类型为 int"):
+        assert isinstance(set_res, int), f"返回类型错误,应为{type(expected)},实际为 {type(set_res)}"
+
+    with allure.step("断言接口返回结果"):
+        allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(set_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert set_res == expected, f"用例【{title}】断言失败，期望 {expected},实际 {set_res}"
+
+    with allure.step("断言 get_coords 返回值"):
+        allure.attach(str(case["coord"]), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(get_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert_almost_equal(get_res, case["coord"], 1,'插补模式设置单坐标'), f"用例【{title}】断言失败，期望 {case['coord']},实际 {get_res}"
+
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
 
 
 @allure.feature("设置单坐标")

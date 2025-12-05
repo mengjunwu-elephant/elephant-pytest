@@ -28,7 +28,7 @@ def measure_time(func, *args, times=1000):
         # mc.power_off()
         res_time = round((end_time - start_time) * 1000, 3)
         print(f'****** 第{i}次函数运行时间为 {res_time} 毫秒, 运行结果为 {result} ******')
-
+        # time.sleep(0.1)
         # 统计丢包和错误
         if result in (-1, -2, None):
             packet_losses += 1
@@ -68,7 +68,8 @@ def measure_time(func, *args, times=1000):
 
 
 if __name__ == '__main__':
-    stats = measure_time(mc.get_angles)
+    mc.set_fresh_mode(0)
+    stats = measure_time(mc.get_system_version)
 
 
     print("\n========= 统计结果 =========")

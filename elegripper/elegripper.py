@@ -738,6 +738,7 @@ class Gripper(Command):
                 self.cmd_list[i] = tmp[i - 5]
             cmd = bytes(self.cmd_list)
             return self.__send_cmd(cmd)
+        return None
 
     def get_gripper_vir_pos(self):
         """Get the virtual position value of the servo

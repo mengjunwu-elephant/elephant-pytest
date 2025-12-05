@@ -48,10 +48,10 @@ def test_send_angle0(device, case):
         logger.debug(f'当前模式为{mode}')
 
     with allure.step('设置2关节角度时，调整3关节姿态，防止碰撞'):
-        if case["joint"] == 2 and case["angle"] == -120:
+        if case["joint"] == 2 and case["angle"] == -114:
             device.mc.send_angle(3, 90, device.speed)
             device.wait()
-        elif case["joint"] == 2 and case["angle"] == 120:
+        elif case["joint"] == 2 and case["angle"] == 114:
             device.mc.send_angle(3, -90, device.speed)
             device.wait()
         else:
@@ -102,10 +102,10 @@ def test_send_angle1(device, case):
         logger.debug(f'当前模式为{mode}')
 
     with allure.step('设置2关节角度时，调整3关节姿态，防止碰撞'):
-        if case["joint"] == 2 and case["angle"] == -120:
+        if case["joint"] == 2 and case["angle"] == -114:
             device.mc.send_angle(3, 90, device.speed)
             device.wait()
-        elif case["joint"] == 2 and case["angle"] == 120:
+        elif case["joint"] == 2 and case["angle"] == 114:
             device.mc.send_angle(3, -90, device.speed)
             device.wait()
         else:

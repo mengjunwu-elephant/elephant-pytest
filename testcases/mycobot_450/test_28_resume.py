@@ -20,7 +20,7 @@ def device():
     dev.default_settings()
     dev.go_zero()
     dev.wait()
-    #dev.mc.close()
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 
@@ -34,7 +34,7 @@ def test_resume_normal(device, case):
     logger.debug(f"参数: {case['parameter']}")
 
     with allure.step("使机械臂运动"):
-        device.mc.send_angles(device.coords_init_angles,device.speed)
+        device.mc.send_angles(device.coords_init_angles,device.speed,_async=True)
         time.sleep(0.5)
 
     with allure.step("先调用 pause"):
