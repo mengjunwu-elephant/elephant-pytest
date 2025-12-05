@@ -4,8 +4,7 @@ import os
 
 if __name__ == '__main__':
     product_name = input("请输入数字选择需要测试的产品:\n"
-                         "1: mycobot_450\n"
-                         "2: mycobot450_pro_gripper\n"
+                         "1: UltraArm_P1\n"
                          )
 
     # 获取对应用例路径
