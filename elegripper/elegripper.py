@@ -117,18 +117,17 @@ class Gripper(Command):
         """
         with self.lock:
             send_data = cmd + self.__crc16_modbus(cmd)
-            print(send_data.hex())
+            # print(send_data.hex())
             self.ser.write(send_data)
             self.ser.flush()
-            # time.sleep(0.04)
+            time.sleep(0.04)
             recv_data = self.ser.read(11)
             if not recv_data:
                 raise TimeoutError("Reading data timeout")
-            print(recv_data.hex())
+            # print(recv_data.hex())
             if len(recv_data) == 11:
                 data = recv_data[0:9]
                 crc_data = recv_data[9:]
-                print(self.__crc16_modbus(data),crc_data)
                 if self.__crc16_modbus(data) == crc_data:
                     response = data + crc_data
                     if is_special_interface:
@@ -738,7 +737,6 @@ class Gripper(Command):
                 self.cmd_list[i] = tmp[i - 5]
             cmd = bytes(self.cmd_list)
             return self.__send_cmd(cmd)
-        return None
 
     def get_gripper_vir_pos(self):
         """Get the virtual position value of the servo
@@ -818,6 +816,23 @@ class Gripper(Command):
             self.cmd_list[i] = tmp[i - 5]
         cmd = bytes(self.cmd_list)
         return self.__send_cmd(cmd,is_special_interface=True)
+
+    def set_modbus(self, value):
+        """Set the gripper modbus
+
+        Args:
+            value (int): The value range is 0-1
+
+        Returns:
+            Response results:0 represents failure, 1 represents success
+        """
+        if self.check_value(value, 0, 1):
+            self.cmd_list[4] = 6
+            tmp = self.__byte_deal(47, value)
+            for i in range(5, 9):
+                self.cmd_list[i] = tmp[i - 5]
+            cmd = bytes(self.cmd_list)
+            return self.__send_cmd(cmd)
 
     def close(self):
         self.ser.close()

@@ -39,7 +39,7 @@ class Gripper(Command):
         self.port = port
         self.baudrate = baudrate
         self.ser = serial.Serial(port, baudrate,
-                                 timeout=5)  # timeout is the timeout period, the default value is 5 seconds
+                                 timeout=0.25)  # timeout is the timeout period, the default value is 5 seconds
         self.cmd_list[0] = id
 
     def check_value(self, value, lower, upper, index=1):
@@ -101,26 +101,45 @@ class Gripper(Command):
                     crc >>= 1
         return crc.to_bytes(2, byteorder='little')
 
-    def __send_cmd(self, cmd, resp_len=None):
+    def __send_cmd(self, cmd, is_special_interface=False):
+        """Processing Messages
+
+        Args:
+            cmd(byte) : Message
+
+        Raises:
+            TimeoutError: Reply timeout
+
+        Returns:
+            Response Reply,If the data length is incorrect, -1 is returned; if the CRC check is incorrect, -2 is returned.
+        """
+
         with self.lock:
             send_data = cmd + self.__crc16_modbus(cmd)
-            print("SEND:", send_data.hex())
+            # print(send_data.hex())
+            self.ser.write(send_data)
+            self.ser.flush()
+            # time.sleep(0.04)
+            recv_data = self.ser.read(8)
+            # print(recv_data)
+            if not recv_data:
+                raise TimeoutError("Reading data timeout")
+            # print(recv_data.hex())
+            if len(recv_data) == 8:
+                data = recv_data[0:6]
+                crc_data = recv_data[6:]
+                if self.__crc16_modbus(data) == crc_data:
+                    response = data + crc_data
+                    if is_special_interface:
+                        result = int(response.hex()[8:10], 16)
+                    else:
+                        result = int(response.hex()[8:12], 16)
+                    return result
+                else:
+                    return -2
+            else:
+                return -1
 
-            # 发包
-            self.sock.sendall(send_data)
-
-            # 尝试读取任意回包（不限制长度）
-            try:
-                resp = self.sock.recv(1024)
-            except socket.timeout:
-                raise TimeoutError("socket receive timeout")
-
-            print("RAW RECV:", resp.hex() if resp else "NO DATA")
-
-            if not resp:
-                raise TimeoutError("No response from device")
-
-            return resp
 
     def set_gripper_value(self, value, speed=100):
         """Setting the gripper position
@@ -793,8 +812,27 @@ class Gripper(Command):
         """
         if self.check_value(value, 0, 100):
             self.cmd_list[1] = 6
-        tmp = self.__byte_deal(46, value)
-        for i in range(2, 6):
-            self.cmd_list[i] = tmp[i - 2]
-        cmd = bytes(self.cmd_list)
-        return self.__send_cmd(cmd,is_special_interface=True)
+            tmp = self.__byte_deal(46, value)
+            for i in range(2, 6):
+                self.cmd_list[i] = tmp[i - 2]
+            cmd = bytes(self.cmd_list)
+            return self.__send_cmd(cmd,is_special_interface=True)
+
+    def set_modbus(self, value):
+        """Set the gripper clamping current
+
+        Args:
+            value (int): The value range is 100-300
+
+        Returns:
+            Response results:0 represents failure, 1 represents success
+        """
+        if self.check_value(value, 0, 1):
+            self.cmd_list[1] = 6
+            tmp = self.__byte_deal(47, value)
+            for i in range(2, 6):
+                self.cmd_list[i] = tmp[i - 2]
+            cmd = bytes(self.cmd_list)
+            return self.__send_cmd(cmd)
+    def close(self):
+        self.ser.close()
