@@ -24,7 +24,7 @@ def device():
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("设置机器人力矩状态")
-@allure.story("正确设置机器人力矩状态")
+@allure.story("插补正确设置机器人力矩状态")
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
 def test_set_motor_enabled1(device, case):
     title = case["title"]
@@ -35,8 +35,59 @@ def test_set_motor_enabled1(device, case):
     logger.debug(f'joint:{case["joint"]}')
     logger.debug(f'mode:{case["mode"]}')
 
+    with allure.step(f'设置为插补模式'):
+        device.mc.set_fresh_mode(0)
+        mode = '刷新' if device.mc.get_fresh_mode() else '插补'
+        logger.debug(f'当前模式为{mode}')
+
     with allure.step(f"调用 {case['api']} 接口"):
         response = device.mc.set_motor_enabled(case["joint"],case["mode"])
+        time.sleep(1)
+        logger.debug(f"接口返回：{response}")
+
+    with allure.step('判断使能状态是否生效'):
+        if case["mode"] == 1:
+            result = input(f'当前使能关节为{case["joint"]},请手动检查机械臂是否可以正常掰动，输入0测试失败')
+            if result == '0':
+                assert False, f"用例【{title}】测试失败，期望机械臂可以正常掰动，实际机械臂无法掰动"
+        elif case["mode"] == 0:
+            result1 = input(f'当前掉使能关节为{case["joint"]}请手动检查机械臂是否可以正常掰动，输入0测试失败')
+            if result1 == '0':
+                assert False, f"用例【{title}】测试失败，期望机械臂可以正常掰动，实际机械臂无法掰动"
+        else:
+            pass
+
+    with allure.step("断言返回值类型为 int"):
+        assert isinstance(response, int), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"
+
+    with allure.step("断言接口返回结果"):
+        allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert response == expected, f"用例【{title}】断言失败，期望 {expected},实际 {response}"
+
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
+
+
+@allure.feature("设置机器人力矩状态")
+@allure.story("刷新模式正确设置机器人力矩状态")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal1"], ids=lambda c: c["title"])
+def test_set_motor_enabled2(device, case):
+    title = case["title"]
+    expected = case["expect_data"]
+
+    logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
+    logger.debug(f'test_api:{case["api"]}')
+    logger.debug(f'joint:{case["joint"]}')
+    logger.debug(f'mode:{case["mode"]}')
+
+    with allure.step(f'设置为刷新模式'):
+        device.mc.set_fresh_mode(1)
+        mode = '刷新' if device.mc.get_fresh_mode() else '插补'
+        logger.debug(f'当前模式为{mode}')
+
+    with allure.step(f"调用 {case['api']} 接口"):
+        response = device.mc.set_motor_enabled(case["joint"], case["mode"])
         time.sleep(1)
         logger.debug(f"接口返回：{response}")
 

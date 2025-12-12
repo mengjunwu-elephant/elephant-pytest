@@ -15,7 +15,9 @@ def device():
     """设备初始化和清理"""
     dev = Mycobot450Base()
     logger.info("初始化完成，接口测试开始")
+    dev.mc.set_free_move_mode(1)
     yield dev
+    dev.mc.set_free_move_mode(0)
     dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
@@ -34,7 +36,6 @@ def test_over_limit_return_zero(device, case):
 
     with allure.step(f'调用 {case["api"]} 接口'):
         response = device.mc.over_limit_return_zero()
-        time.sleep(3)
         logger.debug(f"接口返回：{response}")
 
     with allure.step("断言返回值类型为 int"):

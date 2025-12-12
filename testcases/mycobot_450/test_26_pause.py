@@ -37,16 +37,13 @@ def test_pause_normal(device, case):
     logger.info(f"》》》用例【{title}】开始测试《《《")
     logger.debug(f"参数: {case['parameter']}")
 
-    with allure.step('机械臂切换至刷新模式'):
-        device.mc.set_fresh_mode(1)
-
     with allure.step('使机械臂运动'):
-        device.mc.send_angles(device.coords_init_angles,device.speed,_async=True)
+        device.mc.jog_angle(1,1,device.speed)
         time.sleep(0.5)
 
     with allure.step(f"调用 {case['api']} 接口"):
         response = device.mc.pause(case["parameter"])
-
+        time.sleep(1)
     with allure.step('恢复运动'):
         device.mc.resume()
 

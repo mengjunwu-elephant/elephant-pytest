@@ -41,7 +41,7 @@ def gripper_loop():
 
 if __name__ == "__main__":
     mc.set_fresh_mode(0)
-    mc.set_collision_mode(0)
+    # mc.set_collision_mode(0)
 
     thread1 = threading.Thread(target=random_move_loop)
     thread2 = threading.Thread(target=gripper_loop)

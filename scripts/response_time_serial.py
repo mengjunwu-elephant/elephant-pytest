@@ -122,6 +122,6 @@ def calculate_time_diff(log_data):
 
 # 主函数
 if __name__ == "__main__":
-    log_file_path = r"C:\Users\Elephant\Desktop\elephant_software\SaveWindows2025_12_4_14-39-30.TXT" # 日志文件路径
+    log_file_path = r"C:\Users\Elephant\Desktop\elephant_software\SaveWindows2025_12_12_11-28-06.TXT" # 日志文件路径
     log_data = read_log_file(log_file_path)
     calculate_time_diff(log_data)

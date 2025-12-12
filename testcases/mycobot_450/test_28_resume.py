@@ -35,10 +35,11 @@ def test_resume_normal(device, case):
 
     with allure.step("使机械臂运动"):
         device.mc.send_angles(device.coords_init_angles,device.speed,_async=True)
-        time.sleep(0.5)
+        time.sleep(1)
 
     with allure.step("先调用 pause"):
         device.mc.pause()
+        time.sleep(1)
 
     with allure.step(f"调用 {case['api']} 接口"):
         response = device.mc.resume()
