@@ -45,6 +45,7 @@ MAX_CONSECUTIVE_ERROR = 10  # 最大连续错误次数
 def wait():
     time.sleep(0.3)
     while mc.is_moving():
+        logger.info('当前机械臂运动状态: {}'.format(mc.is_moving()))
         time.sleep(0.1)
     time.sleep(1)
 
@@ -65,6 +66,7 @@ def move_to_limit(joint, angles, direction):
     sleep(0.2)
 
     while mc.is_moving():
+        logger.info('当前机械臂运动状态: {}'.format(mc.is_moving()))
         sleep(0.3)
         # 检查是否应该停止
         if stop_threads.is_set():

@@ -4,14 +4,14 @@ import pytest
 import allure
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
-from settings import Mycobot450Base
-from pymycobot.error import MyCobotPro450DataException
+from settings import UltraArmP1Base
+from pymycobot.error import UltraArmDataException
 
-cases = get_test_data_from_excel(Mycobot450Base.TEST_DATA_FILE, "get_error_information")
+cases = get_test_data_from_excel(UltraArmP1Base.TEST_DATA_FILE, "get_error_information")
 
 @pytest.fixture(scope="module")
 def device():
-    dev = Mycobot450Base()
+    dev = UltraArmP1Base()
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.mc.close()

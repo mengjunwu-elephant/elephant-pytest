@@ -21,11 +21,11 @@ LOG_CONFIG = {
 
 REPORT_DIR = "allure-results"
 
-# UltraArm P1配置
+# UltraArm_P1 配置
 class UltraArmP1Base:
     # 机械臂运动数据
-    speed = 50
-    zero_angles = [0, 0, 0, 0, 0, 0]
+    speed = 3000
+    zero_angles = [0, 0, 0, 0]
     min_angles = [-162,-114,-154,-162,-162,-165]
     max_angles = [162,114,154,162,162,165]
 
@@ -34,3 +34,6 @@ class UltraArmP1Base:
 
     def __init__(self):
         self.mc = UltraArmP1()
+
+    def go_zero(self):
+        self.mc.set_angles(self.zero_angles, self.speed)
