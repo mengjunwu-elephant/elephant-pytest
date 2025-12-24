@@ -2,9 +2,9 @@ import time
 from time import sleep
 import statistics
 
-from pymycobot import Pro450Client
+from pymycobot import UltraArmP1
 
-mc = Pro450Client(debug=1)
+mc = UltraArmP1('com15',1000000,debug=1)
 sleep(2)
 
 def measure_time(func, *args, times=1000):
@@ -25,7 +25,7 @@ def measure_time(func, *args, times=1000):
         start_time = time.time()
         result = func(*args)
         end_time = time.time()
-        # mc.power_off()
+
         res_time = round((end_time - start_time) * 1000, 3)
         print(f'****** 第{i}次函数运行时间为 {res_time} 毫秒, 运行结果为 {result} ******')
         # time.sleep(0.1)
@@ -68,9 +68,7 @@ def measure_time(func, *args, times=1000):
 
 
 if __name__ == '__main__':
-    mc.set_fresh_mode(0)
-    # mc.set_pro_gripper_init()
-    stats = measure_time(mc.get_angles)
+    stats = measure_time(mc.set_joint_enable)
 
 
     print("\n========= 统计结果 =========")

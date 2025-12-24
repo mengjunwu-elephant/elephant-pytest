@@ -2,7 +2,7 @@ import time
 
 import pytest
 import allure
-from pymycobot.error import UltraArmDataException
+from pymycobot.error import ultraArmP1DataException
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
@@ -17,8 +17,7 @@ def device():
     dev = UltraArmP1Base()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.default_settings()
-    dev.go_zero()
+    dev.mc.go_home()
     dev.wait()
     dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
@@ -26,7 +25,7 @@ def device():
 @pytest.fixture(autouse=True)
 def reset_device(device):
     yield
-    device.go_zero()
+    device.mc.go_home()
     device.wait()
 
 @allure.feature("stop 接口测试")
@@ -65,8 +64,8 @@ def test_stop_exception(device, case):
     logger.info(f"》》》用例【{title}】开始测试《《《")
     logger.debug(f"接口: {case['api']}，参数: {case['parameter']}")
 
-    with allure.step("调用 stop 接口并断言抛出 UltraArmDataException"):
-        with pytest.raises(UltraArmDataException):
+    with allure.step("调用 stop 接口并断言抛出 ultraArmP1DataException"):
+        with pytest.raises(ultraArmP1DataException):
             device.mc.stop(case["parameter"])
 
     logger.info(f"✅ 用例【{title}】测试通过")

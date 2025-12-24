@@ -5,7 +5,7 @@ import allure
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
 from settings import UltraArmP1Base
-from pymycobot.error import UltraArmDataException
+from pymycobot.error import ultraArmP1DataException
 
 cases = get_test_data_from_excel(UltraArmP1Base.TEST_DATA_FILE, "get_error_information")
 

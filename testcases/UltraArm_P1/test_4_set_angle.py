@@ -1,7 +1,7 @@
 import time
 import pytest
 import allure
-from pymycobot.error import UltraArmDataException
+from pymycobot.error import ultraArmP1DataException
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
@@ -24,7 +24,7 @@ def device():
 @pytest.fixture(autouse=True)
 def reset_device(device):
     yield
-    device.go_zero()
+    device.mc.go_home()
 
 @allure.feature("设置单关节角度")
 @allure.story("设置单关节角度")
@@ -42,10 +42,11 @@ def test_set_angle0(device, case):
 
     with allure.step(f"调用 {case['api']} 接口"):
         set_res = device.mc.set_angle(case["joint"],case["angle"],case["speed"])
+        device.wait()
         logger.debug(f"接口返回：{set_res}")
 
-    with allure.step(f'调用 get_angles 接口'):
-        get_res = device.mc.get_angles()[case["joint"]-1]
+    with allure.step(f'调用 get_angles_info 接口'):
+        get_res = device.mc.get_angles_info()[case["joint"]-1]
         logger.debug(f"接口返回：{get_res}")
 
     with allure.step("断言返回值类型为 int"):
@@ -56,7 +57,7 @@ def test_set_angle0(device, case):
         allure.attach(str(set_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
         assert set_res == expected, f"用例【{title}】断言失败，期望 {expected},实际 {set_res}"
 
-    with allure.step("断言 get_angle 返回值"):
+    with allure.step("断言 get_angle_info 返回值"):
         allure.attach(str(case["angle"]), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(get_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
         assert_almost_equal(get_res, case["angle"], 1,'设置单关节角度'), f"用例【{title}】断言失败，期望 {case['angle']},实际 {get_res}"
@@ -77,9 +78,10 @@ def test_set_angle_exception(device, case):
     logger.debug(f'angle:{case["angle"]}')
     logger.debug(f'speed:{case["speed"]}')
 
-    with allure.step(f"断言抛出 UltraArmDataException,关节为{case['joint']},角度为{case['angle']}, 速度为{case['speed']}"):
-        with pytest.raises(UltraArmDataException):
+    with allure.step(f"断言抛出 ultraArmP1DataException,关节为{case['joint']},角度为{case['angle']}, 速度为{case['speed']}"):
+        with pytest.raises(ultraArmP1DataException):
             device.mc.set_angle(case["joint"],case["angle"], case["speed"])
+            device.wait()
 
     logger.info(f"✅ 用例【{title}】异常断言通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")

@@ -1,7 +1,7 @@
 import time
 import pytest
 import allure
-from pymycobot.error import UltraArmDataException
+from pymycobot.error import ultraArmP1DataException
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
@@ -133,8 +133,8 @@ def test_send_coord_exception(device, case):
     logger.debug(f'coord:{case["coord"]}')
     logger.debug(f'speed:{case["speed"]}')
 
-    with allure.step(f"断言抛出 UltraArmDataException,笛卡尔积坐标系为{case['axis']},坐标值为{case['coord']}, 速度为{case['speed']}"):
-        with pytest.raises(UltraArmDataException):
+    with allure.step(f"断言抛出 ultraArmP1DataException,笛卡尔积坐标系为{case['axis']},坐标值为{case['coord']}, 速度为{case['speed']}"):
+        with pytest.raises(ultraArmP1DataException):
             device.mc.send_coord(case["axis"],case["coord"], case["speed"])
 
     logger.info(f"✅ 用例【{title}】异常断言通过")

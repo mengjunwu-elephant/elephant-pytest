@@ -1,7 +1,7 @@
 import time
 import pytest
 import allure
-from pymycobot.error import UltraArmDataException
+from pymycobot.error import ultraArmP1DataException
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
@@ -61,8 +61,8 @@ def test_get_base_io_input_exception(device, case):
     logger.debug(f'test_api:{case["api"]}')
     logger.debug(f'pin_no:{case["pin_no"]}')
 
-    with allure.step(f"断言抛出 UltraArmDataException,引脚为{case['pin_no']}"):
-        with pytest.raises(UltraArmDataException):
+    with allure.step(f"断言抛出 ultraArmP1DataException,引脚为{case['pin_no']}"):
+        with pytest.raises(ultraArmP1DataException):
             device.mc.get_base_io_input(case['pin_no'])
 
     logger.info(f"✅ 用例【{title}】异常断言通过")

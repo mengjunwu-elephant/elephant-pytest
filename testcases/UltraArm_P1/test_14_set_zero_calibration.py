@@ -1,7 +1,7 @@
 import time
 import pytest
 import allure
-from pymycobot.error import UltraArmDataException
+from pymycobot.error import ultraArmP1DataException
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
@@ -70,8 +70,8 @@ def test_set_zero_calibration_exception(device, case):
     logger.debug(f'test_api:{case["api"]}')
     logger.debug(f'joint:{case["joint"]}')
 
-    with allure.step(f"断言抛出 UltraArmDataException,关节为{case['joint']}"):
-        with pytest.raises(UltraArmDataException):
+    with allure.step(f"断言抛出 ultraArmP1DataException,关节为{case['joint']}"):
+        with pytest.raises(ultraArmP1DataException):
             device.mc.set_zero_calibration(case['joint'])
 
     logger.info(f"✅ 用例【{title}】异常断言通过")

@@ -24,16 +24,23 @@ REPORT_DIR = "allure-results"
 # UltraArm_P1 配置
 class UltraArmP1Base:
     # 机械臂运动数据
-    speed = 3000
+    speed = 5000
     zero_angles = [0, 0, 0, 0]
     min_angles = [-162,-114,-154,-162,-162,-165]
     max_angles = [162,114,154,162,162,165]
 
     # 测试数据配置
     TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/UltraArm_P1.xlsx')
+    ATTACHMENTS_TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/UltraArm_P1_Attachments.xlsx')
 
     def __init__(self):
-        self.mc = UltraArmP1()
+        self.mc = UltraArmP1('com15',1000000,debug=1)
 
     def go_zero(self):
         self.mc.set_angles(self.zero_angles, self.speed)
+
+    def wait(self):
+        time.sleep(0.3)
+        while self.mc.get_run_status():
+            time.sleep(0.1)
+        time.sleep(0.3)

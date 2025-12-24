@@ -7,4 +7,4 @@ demo
 mycobot_320_123
 **/log.log
 **/python_debug.log*
-scripts/test_report
+scripts/test_report/*

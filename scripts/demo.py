@@ -38,8 +38,8 @@ stop_threads = threading.Event()
 last_angles = None  # 存储上一次的角度值
 consecutive_same_count = 0  # 连续相同角度计数
 consecutive_error_count = 0  # 连续错误角度计数
-MAX_CONSECUTIVE_SAME = 10  # 最大连续相同次数
-MAX_CONSECUTIVE_ERROR = 10  # 最大连续错误次数
+MAX_CONSECUTIVE_SAME = 100  # 最大连续相同次数
+MAX_CONSECUTIVE_ERROR = 100  # 最大连续错误次数
 
 
 def wait():

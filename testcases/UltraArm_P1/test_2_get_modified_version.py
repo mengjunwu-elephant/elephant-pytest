@@ -7,7 +7,7 @@ from common1.test_data_handler import get_test_data_from_excel
 from settings import UltraArmP1Base
 
 # 从 Excel 读取测试数据
-cases = get_test_data_from_excel(UltraArmP1Base.TEST_DATA_FILE, "get_modified_version")
+cases = get_test_data_from_excel(UltraArmP1Base.TEST_DATA_FILE, "get_modify_version")
 
 
 @pytest.fixture(scope="module")
@@ -22,15 +22,15 @@ def device():
 @allure.feature("固件版本获取")
 @allure.story("获取修正固件版本")
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
-def test_get_modified_version1(device, case):
+def test_get_modify_version1(device, case):
     title = case["title"]
     expected = case["expect_data"]
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
 
-    with allure.step("调用 get_atom_version 接口"):
-        response = device.mc.get_modified_version()
+    with allure.step("调用 get_modify_version 接口"):
+        response = device.mc.get_modify_version()
         logger.debug(f"接口返回：{response}")
 
     with allure.step("断言返回值类型为 int"):

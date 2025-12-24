@@ -1,7 +1,7 @@
 import time
 import pytest
 import allure
-from pymycobot.error import UltraArmDataException
+from pymycobot.error import ultraArmP1DataException
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
@@ -74,8 +74,8 @@ def test_jog_increment_coord_exception(device, case):
     logger.debug(f'increment:{case["increment"]}')
     logger.debug(f'speed:{case["speed"]}')
 
-    with allure.step(f"断言抛出 UltraArmDataException,关节为{case['axis']},增量为{case['increment']}, 速度为{case['speed']}"):
-        with pytest.raises(UltraArmDataException):
+    with allure.step(f"断言抛出 ultraArmP1DataException,关节为{case['axis']},增量为{case['increment']}, 速度为{case['speed']}"):
+        with pytest.raises(ultraArmP1DataException):
             device.mc.jog_increment_coord(case["axis"],case["increment"], case["speed"])
 
     logger.info(f"✅ 用例【{title}】异常断言通过")

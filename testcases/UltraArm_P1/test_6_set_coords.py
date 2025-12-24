@@ -1,7 +1,7 @@
 import time
 import pytest
 import allure
-from pymycobot.error import UltraArmDataException
+from pymycobot.error import ultraArmP1DataException
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
@@ -69,8 +69,8 @@ def test_set_coords_exception(device, case):
     logger.debug(f'coords:{case["coords"]}')
     logger.debug(f'speed:{case["speed"]}')
 
-    with allure.step(f"断言抛出 UltraArmDataException,角度为{case['coords']}, 速度为{case['speed']}"):
-        with pytest.raises(UltraArmDataException):
+    with allure.step(f"断言抛出 ultraArmP1DataException,角度为{case['coords']}, 速度为{case['speed']}"):
+        with pytest.raises(ultraArmP1DataException):
             device.mc.set_coords(eval(case["coords"]), case["speed"])
 
     logger.info(f"✅ 用例【{title}】异常断言通过")
