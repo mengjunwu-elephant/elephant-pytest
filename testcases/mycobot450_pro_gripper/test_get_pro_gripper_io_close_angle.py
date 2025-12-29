@@ -19,6 +19,7 @@ def device():
 @allure.story("正常用例")
 @pytest.mark.parametrize("case", cases, ids=lambda c: c["title"])
 def test_get_close_angle(device, case):
+
     title = case["title"]
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
 

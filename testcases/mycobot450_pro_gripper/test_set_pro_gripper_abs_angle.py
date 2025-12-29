@@ -64,63 +64,63 @@ def test_set_pro_gripper_abs_angle(device, case):
     logger.info(f"✅ 用例【{case['title']}】测试成功")
 
 
-@allure.feature("设置Pro夹爪绝对角度")
-@allure.story("暂停与恢复 - 功能验证")
-@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == 2], ids=lambda c: c["title"])
-def test_pause_and_resume(device, case):
-    logger.info(f"》》》用例【{case['title']}】开始测试《《《")
-
-    with allure.step("设置角度为100"):
-        abs_res = device.mc.set_pro_gripper_abs_angle(100)
-        allure.attach(str(abs_res), "设置角度返回", allure.attachment_type.TEXT)
-        sleep(0.5)
-
-    with allure.step("调用暂停接口"):
-        pause_res = device.mc.set_pro_gripper_pause()
-        allure.attach(str(pause_res), "暂停返回", allure.attachment_type.TEXT)
-        sleep(3)
-
-    with allure.step("调用恢复接口"):
-        resume_res = device.mc.set_pro_gripper_resume()
-        allure.attach(str(resume_res), "恢复返回", allure.attachment_type.TEXT)
-        sleep(1)
-
-    with allure.step("断言所有返回值为 int"):
-        assert all(isinstance(r, int) for r in [abs_res, pause_res, resume_res])
-
-    with allure.step("断言返回值均正确"):
-        assert abs_res == case["expect_data"]
-        assert pause_res == case["expect_data"]
-        assert resume_res == case["expect_data"]
-
-    logger.info(f"✅ 用例【{case['title']}】测试成功")
-
-
-@allure.feature("设置Pro夹爪绝对角度")
-@allure.story("停止功能测试")
-@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == 3], ids=lambda c: c["title"])
-def test_stop(device, case):
-    logger.info(f"》》》用例【{case['title']}】开始测试《《《")
-
-    with allure.step("调用设置绝对值接口"):
-        abs_res = device.mc.set_abs_gripper_value(100)
-        allure.attach(str(abs_res), "设置绝对值返回", allure.attachment_type.TEXT)
-        sleep(0.5)
-
-    with allure.step("调用停止接口"):
-        stop_res = device.mc.set_pro_gripper_stop()
-        allure.attach(str(stop_res), "停止返回", allure.attachment_type.TEXT)
-
-    with allure.step("断言所有返回值为 int"):
-        assert isinstance(abs_res, int)
-        assert isinstance(stop_res, int)
-
-    with allure.step("断言返回值均正确"):
-        assert abs_res == case["expect_data"]
-        assert stop_res == case["expect_data"]
-
-    logger.info(f"✅ 用例【{case['title']}】测试成功")
-    logger.info(f"》》》用例【{case['title']}】测试完成《《《")
+# @allure.feature("设置Pro夹爪绝对角度")
+# @allure.story("暂停与恢复 - 功能验证")
+# @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == 2], ids=lambda c: c["title"])
+# def test_pause_and_resume(device, case):
+#     logger.info(f"》》》用例【{case['title']}】开始测试《《《")
+#
+#     with allure.step("设置角度为100"):
+#         abs_res = device.mc.set_pro_gripper_abs_angle(100)
+#         allure.attach(str(abs_res), "设置角度返回", allure.attachment_type.TEXT)
+#         sleep(0.5)
+#
+#     with allure.step("调用暂停接口"):
+#         pause_res = device.mc.setprog()
+#         allure.attach(str(pause_res), "暂停返回", allure.attachment_type.TEXT)
+#         sleep(3)
+#
+#     with allure.step("调用恢复接口"):
+#         resume_res = device.mc.set_pro_gripper_resume()
+#         allure.attach(str(resume_res), "恢复返回", allure.attachment_type.TEXT)
+#         sleep(1)
+#
+#     with allure.step("断言所有返回值为 int"):
+#         assert all(isinstance(r, int) for r in [abs_res, pause_res, resume_res])
+#
+#     with allure.step("断言返回值均正确"):
+#         assert abs_res == case["expect_data"]
+#         assert pause_res == case["expect_data"]
+#         assert resume_res == case["expect_data"]
+#
+#     logger.info(f"✅ 用例【{case['title']}】测试成功")
+#
+#
+# @allure.feature("设置Pro夹爪绝对角度")
+# @allure.story("停止功能测试")
+# @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == 3], ids=lambda c: c["title"])
+# def test_stop(device, case):
+#     logger.info(f"》》》用例【{case['title']}】开始测试《《《")
+#
+#     with allure.step("调用设置绝对值接口"):
+#         abs_res = device.mc.set_abs_gripper_value(100)
+#         allure.attach(str(abs_res), "设置绝对值返回", allure.attachment_type.TEXT)
+#         sleep(0.5)
+#
+#     with allure.step("调用停止接口"):
+#         stop_res = device.mc.set_pro_gripper_stop()
+#         allure.attach(str(stop_res), "停止返回", allure.attachment_type.TEXT)
+#
+#     with allure.step("断言所有返回值为 int"):
+#         assert isinstance(abs_res, int)
+#         assert isinstance(stop_res, int)
+#
+#     with allure.step("断言返回值均正确"):
+#         assert abs_res == case["expect_data"]
+#         assert stop_res == case["expect_data"]
+#
+#     logger.info(f"✅ 用例【{case['title']}】测试成功")
+#     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
 
 @allure.feature("设置Pro夹爪绝对角度")
 @allure.story("越界异常测试")

@@ -42,7 +42,7 @@ def test_set_joint_min_angle1(device, case):
         response = device.mc.set_joint_min_angle(case["joint"],case["angle"])
         logger.debug(f"接口返回：{response}")
 
-    with allure.step('调整3关节角度，放置碰撞'):
+    with allure.step('调整3关节角度，防止碰撞'):
         if case["joint"] == 2:
             device.mc.send_angle(3, 90,device.speed)
             device.wait()

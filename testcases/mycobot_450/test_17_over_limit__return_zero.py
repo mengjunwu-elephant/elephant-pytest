@@ -18,6 +18,7 @@ def device():
     dev.mc.set_free_move_mode(1)
     yield dev
     dev.mc.set_free_move_mode(0)
+    dev.mc.clear_error_information()
     dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 

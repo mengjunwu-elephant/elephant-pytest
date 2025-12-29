@@ -28,8 +28,8 @@ class Mycobot450Base:
     speed = 50
     coords_init_angles =[0, 30, -100, -20, 0.0, 0.0] #坐标值：[149.9, -86.8, 298.4, 179.99, 0.0, -90.0]
     zero_angles = [0, 0, 0, 0, 0, 0]
-    min_angles = [-162,-114,-154,-162,-162,-165]
-    max_angles = [162,114,154,162,162,165]
+    min_angles = [-162,-125,-154,-162,-162,-165]
+    max_angles = [162,125,154,162,162,165]
 
     # 测试数据配置
     TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mycobot_450.xlsx')
