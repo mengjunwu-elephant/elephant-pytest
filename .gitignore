@@ -7,3 +7,5 @@ demo
 mycobot_320_123
 log
 MyHand
+python_debug.log**
+scripts/test_report/**
