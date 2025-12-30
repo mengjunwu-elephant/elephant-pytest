@@ -37,10 +37,10 @@ def test_get_atom_modify_version_power_on(device, case):
         logger.debug(f"左臂响应：{l_response}")
         logger.debug(f"右臂响应：{r_response}")
 
-    with allure.step("左臂断言响应数据类型为 float"):
-        assert isinstance(l_response, float), f"左臂返回值类型错误，应为 float，实际为 {type(l_response)}"
-    with allure.step("右臂断言响应数据类型为 float"):
-        assert isinstance(r_response, float), f"右臂返回值类型错误，应为 float，实际为 {type(r_response)}"
+    with allure.step("左臂断言响应数据类型为 int"):
+        assert isinstance(l_response, int), f"左臂返回值类型错误，应为 int，实际为 {type(l_response)}"
+    with allure.step("右臂断言响应数据类型为 int"):
+        assert isinstance(r_response, int), f"右臂返回值类型错误，应为 int，实际为 {type(r_response)}"
 
     with allure.step("左臂断言响应结果"):
         allure.attach(str(case['l_expect_data']), name="左臂期望值", attachment_type=allure.attachment_type.TEXT)
