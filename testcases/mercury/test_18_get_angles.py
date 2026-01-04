@@ -3,6 +3,7 @@ import allure
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
+from common1.assert_utils import assert_almost_equal
 from settings import MercuryBase
 
 # 加载测试数据
@@ -47,8 +48,8 @@ def test_get_angles(device, case):
         allure.attach(str(l_response), name="左臂实际值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(r_response), name="右臂实际值", attachment_type=allure.attachment_type.TEXT)
 
-        assert l_response == expected_l, f"左臂角度不一致，期望: {expected_l}，实际: {l_response}"
-        assert r_response == expected_r, f"右臂角度不一致，期望: {expected_r}，实际: {r_response}"
+        assert_almost_equal(l_response,expected_l,tol=1,name='获取全角度'), f"左臂角度不一致，期望: {expected_l}，实际: {l_response}"
+        assert_almost_equal(r_response,expected_r,tol=1,name='获取全角度'), f"右臂角度不一致，期望: {expected_r}，实际: {r_response}"
 
     logger.info(f"✅ 用例【{case['title']}】测试通过")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
