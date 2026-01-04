@@ -128,10 +128,6 @@ def test_send_angles_right(device, case):
 
     with allure.step('调用 get_angles 接口'):
         r_get_res = device.mr.get_angles()
-        if len(angles) == 10:
-            r_get_res.append(device.mr.get_angle(11))
-            r_get_res.append(device.mr.get_angle(12))
-            r_get_res.append(device.mr.get_angle(13))
         logger.info(f'右臂实际读取返回值：{r_get_res}')
 
     with allure.step("断言返回值类型为 int"):
