@@ -1,3 +1,5 @@
+import time
+
 import pytest
 import allure
 from pymycobot.error import MercuryDataException
@@ -48,6 +50,7 @@ def test_send_angle_normal(device, case):
         device.wait()
         logger.info(f"左臂实际设置返回值：{l_response}")
         logger.info(f"右臂实际设置返回值：{r_response}")
+        time.sleep(1)
 
     with allure.step('调用 get_angle 接口'):
         l_get_res = device.ml.get_angle(joint)
