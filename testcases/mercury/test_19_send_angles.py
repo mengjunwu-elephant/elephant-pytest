@@ -38,6 +38,7 @@ def test_send_angles_normal(device, case):
 
     with allure.step("发送 send_angles 指令到左右臂"):
         l_response = device.ml.send_angles(angles, speed,_async=True)
+        device.wait()
         r_response = device.mr.send_angles(angles, speed,_async=True)
         device.wait()
         logger.info(f"左臂实际设置返回值：{l_response}")
