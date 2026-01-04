@@ -37,6 +37,7 @@ def test_send_angles_normal(device, case):
     with allure.step("发送 send_angles 指令到左右臂"):
         l_response = device.ml.send_angles(angles, speed,_async=True)
         r_response = device.mr.send_angles(angles, speed,_async=True)
+        device.wait()
 
     with allure.step("断言返回值类型为 int"):
         assert isinstance(l_response, int), f"左臂返回类型错误: {type(l_response)}"
@@ -65,6 +66,7 @@ def test_send_angles_left(device, case):
 
     with allure.step("发送 send_angles 指令到左臂"):
         l_response = device.ml.send_angles(angles, speed)
+        device.wait()
 
     with allure.step('调用 get_angles 接口'):
         l_get_res = device.ml.get_angles()
@@ -96,6 +98,7 @@ def test_send_angles_right(device, case):
 
     with allure.step("发送 send_angles 指令到右臂"):
         r_response = device.mr.send_angles(angles, speed)
+        device.wait()
 
     with allure.step('调用 get_angles 接口'):
         r_get_res = device.mr.get_angles()

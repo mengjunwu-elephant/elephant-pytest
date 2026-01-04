@@ -1,4 +1,5 @@
 import os
+import time
 
 from pymycobot import *
 
@@ -67,6 +68,12 @@ class MercuryBase:
         self.ml.power_off()
         self.ml.power_on()
         self.mr.power_on()
+
+    def wait(self):
+        time.sleep(0.3)
+        while self.ml.is_moving() or self.mr.is_moving():
+            time.sleep(0.1)
+        time.sleep(0.3)
 
     def power_on_only(self):
         self.mr.power_off()
