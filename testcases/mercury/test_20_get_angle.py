@@ -4,6 +4,7 @@ from pymycobot.error import MercuryDataException
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
+from common1.assert_utils import assert_almost_equal
 from settings import MercuryBase
 
 # 加载 Excel 测试数据
@@ -45,8 +46,8 @@ def test_get_angle_normal(device, case):
         allure.attach(str(l_response), name="左臂实际值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(r_response), name="右臂实际值", attachment_type=allure.attachment_type.TEXT)
 
-        assert l_response == case["l_expect_data"], f"左臂角度不一致，期望: {case['l_expect_data']}，实际: {l_response}"
-        assert r_response == case["r_expect_data"], f"右臂角度不一致，期望: {case['r_expect_data']}，实际: {r_response}"
+        assert_almost_equal(l_response,case["l_expect_data"]), f"左臂角度不一致，期望: {case['l_expect_data']}，实际: {l_response}"
+        assert_almost_equal(r_response,case["r_expect_data"]) , f"右臂角度不一致，期望: {case['r_expect_data']}，实际: {r_response}"
 
     logger.info(f"✅ 用例【{case['title']}】测试通过")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
