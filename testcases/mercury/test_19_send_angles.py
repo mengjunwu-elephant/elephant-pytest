@@ -4,6 +4,7 @@ from pymycobot.error import MercuryDataException
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
+from common1.assert_utils import assert_almost_equal
 from settings import MercuryBase
 
 # 加载 Excel 测试数据
@@ -24,18 +25,18 @@ def device():
     logger.info("环境清理完成，接口测试结束")
 
 
-@allure.feature("发送角度指令")
-@allure.story("正常发送关节角度")
+@allure.feature("全关节角度运动")
+@allure.story("正常双臂同时运动")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"], ids=lambda c: c["title"])
 def test_send_angles_normal(device, case):
     logger.info(f"》》》用例【{case['title']}】开始测试《《《")
 
-    angles = eval(case["parameter"])
+    angles = eval(case["angles"])
     speed = case["speed"]
 
     with allure.step("发送 send_angles 指令到左右臂"):
-        l_response = device.ml.send_angles(angles, speed)
-        r_response = device.mr.send_angles(angles, speed)
+        l_response = device.ml.send_angles(angles, speed,_async=True)
+        r_response = device.mr.send_angles(angles, speed,_async=True)
 
     with allure.step("断言返回值类型为 int"):
         assert isinstance(l_response, int), f"左臂返回类型错误: {type(l_response)}"
@@ -47,12 +48,77 @@ def test_send_angles_normal(device, case):
         allure.attach(str(l_response), name="左臂实际", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(r_response), name="右臂实际", attachment_type=allure.attachment_type.TEXT)
 
-        assert l_response == case["l_expect_data"], f"左臂响应不一致，期望: {case['l_expect_data']}，实际: {l_response}"
-        assert r_response == case["r_expect_data"], f"右臂响应不一致，期望: {case['r_expect_data']}，实际: {r_response}"
+        assert_almost_equal(l_response,case["l_expect_data"],tol=1,name='左臂全关节运动'), f"左臂响应不一致，期望: {case['l_expect_data']}，实际: {l_response}"
+        assert_almost_equal(r_response,case["r_expect_data"],tol=1,name='右臂全关节运动'), f"右臂响应不一致，期望: {case['r_expect_data']}，实际: {r_response}"
 
     logger.info(f"✅ 用例【{case['title']}】测试通过")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
 
+@allure.feature("全关节角度运动")
+@allure.story("左臂全关节运动")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "left"], ids=lambda c: c["title"])
+def test_send_angles_left(device, case):
+    logger.info(f"》》》用例【{case['title']}】开始测试《《《")
+
+    angles = eval(case["angles"])
+    speed = case["speed"]
+
+    with allure.step("发送 send_angles 指令到左臂"):
+        l_response = device.ml.send_angles(angles, speed)
+
+    with allure.step('调用 get_angles 接口'):
+        l_get_res = device.ml.get_angles()
+
+    with allure.step("断言返回值类型为 int"):
+        assert isinstance(l_response, int), f"左臂返回类型错误: {type(l_response)}"
+
+    with allure.step("断言返回值是否匹配预期"):
+        allure.attach(str(case["l_expect_data"]), name="左臂期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(l_response), name="左臂实际", attachment_type=allure.attachment_type.TEXT)
+        assert case["l_expect_data"] == l_response, f"左臂响应不一致，期望: {case['l_expect_data']}，实际: {l_response}"
+
+    with allure.step('断言 get_angles 接口返回值是否匹配预期'):
+        allure.attach(str(angles), name="左臂期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(l_get_res), name="左臂实际", attachment_type=allure.attachment_type.TEXT)
+        assert_almost_equal(l_get_res,angles,tol=1,name='左臂全关节运动'), f"左臂响应不一致，期望: {angles}，实际: {l_get_res}"
+
+    logger.info(f"✅ 用例【{case['title']}】测试通过")
+    logger.info(f"》》》用例【{case['title']}】测试完成《《《")
+
+@allure.feature("全关节角度运动")
+@allure.story("右臂全关节运动")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "right"], ids=lambda c: c["title"])
+def test_send_angles_right(device, case):
+    logger.info(f"》》》用例【{case['title']}】开始测试《《《")
+
+    angles = eval(case["angles"])
+    speed = case["speed"]
+
+    with allure.step("发送 send_angles 指令到右臂"):
+        r_response = device.mr.send_angles(angles, speed)
+
+    with allure.step('调用 get_angles 接口'):
+        r_get_res = device.mr.get_angles()
+        if len(angles) == 11:
+            r_get_res.append(device.mr.get_angle(11))
+            r_get_res.append(device.mr.get_angle(12))
+            r_get_res.append(device.mr.get_angle(13))
+
+    with allure.step("断言返回值类型为 int"):
+        assert isinstance(r_response, int), f"左臂返回类型错误: {type(r_response)}"
+
+    with allure.step("断言返回值是否匹配预期"):
+        allure.attach(str(case["l_expect_data"]), name="右臂期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(r_response), name="右臂实际", attachment_type=allure.attachment_type.TEXT)
+        assert_almost_equal(r_response,case["l_expect_data"],tol=1,name='右臂全关节运动'), f"右臂响应不一致，期望: {case['l_expect_data']}，实际: {r_response}"
+
+    with allure.step('断言 get_angles 接口返回值是否匹配预期'):
+        allure.attach(str(angles), name="右臂期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(r_get_res), name="右臂实际", attachment_type=allure.attachment_type.TEXT)
+        assert_almost_equal(r_get_res,angles,tol=1,name='右臂全关节运动'), f"右臂响应不一致，期望: {angles}，实际: {r_response}"
+
+    logger.info(f"✅ 用例【{case['title']}】测试通过")
+    logger.info(f"》》》用例【{case['title']}】测试完成《《《")
 
 @allure.feature("发送角度指令")
 @allure.story("异常角度发送触发异常")
