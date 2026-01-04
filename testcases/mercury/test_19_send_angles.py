@@ -129,7 +129,7 @@ def test_send_angles_right(device, case):
 def test_send_angles_exception(device, case):
     logger.info(f"》》》用例【{case['title']}】开始测试《《《")
 
-    angles = eval(case["parameter"])
+    angles = eval(case["angles"])
     speed = case["speed"]
 
     with allure.step("尝试发送非法角度并期望抛出 MercuryDataException"):
