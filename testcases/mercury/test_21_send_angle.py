@@ -35,7 +35,7 @@ def reset_device(device):
 def test_send_angle_normal(device, case):
     logger.info(f"》》》用例【{case['title']}】开始测试《《《")
     joint = case["joint"]
-    angle = eval(case["angle"])
+    angle = case["angle"]
     speed = case["speed"]
     logger.info(f'发送关节参数{joint}')
     logger.info(f'发送角度参数{angle}')
@@ -85,7 +85,7 @@ def test_send_angle_normal(device, case):
 def test_send_angle_left(device, case):
     logger.info(f"》》》用例【{case['title']}】开始测试《《《")
     joint = case["joint"]
-    angle = eval(case["angle"])
+    angle = case["angle"]
     speed = case["speed"]
     logger.info(f'发送关节参数{joint}')
     logger.info(f'发送角度参数：{angle}')
@@ -122,7 +122,7 @@ def test_send_angle_left(device, case):
 def test_send_angle_right(device, case):
     logger.info(f"》》》用例【{case['title']}】开始测试《《《")
     joint = case["joint"]
-    angle = eval(case["angle"])
+    angle = case["angle"]
     speed = case["speed"]
     logger.info(f'发送关节参数{joint}')
     logger.info(f'发送角度参数：{angle}')
@@ -159,7 +159,7 @@ def test_send_angle_right(device, case):
 def test_send_angle_exception(device, case):
     logger.info(f"》》》用例【{case['title']}】开始测试《《《")
     joint = case['joint']
-    angle = eval(case["angle"])
+    angle = case["angle"]
     speed = case["speed"]
     logger.info(f'发送角度参数：{angle}')
     logger.info(f'速度参数：{speed}')
