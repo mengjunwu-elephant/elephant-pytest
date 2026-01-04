@@ -139,7 +139,7 @@ def test_send_angles_right(device, case):
     with allure.step("断言返回值是否匹配预期"):
         allure.attach(str(case["r_expect_data"]), name="右臂期望", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(r_response), name="右臂实际", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(r_response,case["r_expect_data"],tol=1,name='右臂全关节运动'), f"右臂响应不一致，期望: {case['r_expect_data']}，实际: {r_response}"
+        assert r_response == case["r_expect_data"], f"右臂响应不一致，期望: {case['r_expect_data']}，实际: {r_response}"
 
     with allure.step('断言 get_angles 接口返回值是否匹配预期'):
         allure.attach(str(angles), name="右臂期望", attachment_type=allure.attachment_type.TEXT)
