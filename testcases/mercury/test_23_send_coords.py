@@ -40,10 +40,12 @@ def test_send_coords(device, case):
 
     with allure.step("左臂发送坐标"):
         l_response = device.ml.send_coords(param, speed)
+        device.wait()
         logger.debug(f"左臂返回值：{l_response}")
 
     with allure.step("右臂发送坐标"):
         r_response = device.mr.send_coords(param, speed)
+        device.wait()
         logger.debug(f"右臂返回值：{r_response}")
 
     with allure.step("获取双臂坐标"):
@@ -59,12 +61,12 @@ def test_send_coords(device, case):
         assert r_response == case["r_expect_data"], f"右臂期望值：{case['r_expect_data']}，实际值：{r_response}"
 
     with allure.step('断言 get_coords 接口返回值是否匹配预期'):
-        allure.attach(str(case['l_expect_data']), name="左臂期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(case['parameters']), name="左臂期望", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(l_get_res), name="左臂实际", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(case['r_expect_data']), name="右臂期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(case['parameters']), name="右臂期望", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(r_get_res), name="右臂实际", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(l_get_res,eval(case['l_expect_data']),tol=3,name='左臂发送全坐标'), f"左臂响应不一致，期望: {case['l_expect_data']}，实际: {l_get_res}"
-        assert_almost_equal(r_get_res,eval(case['r_expect_data']),tol=3,name='右臂发送全坐标'), f"右臂响应不一致，期望: {case['r_expect_data']}，实际: {r_get_res}"
+        assert_almost_equal(l_get_res,eval(case['parameters']),tol=3,name='左臂发送全坐标'), f"左臂响应不一致，期望: {case['parameters']}，实际: {l_get_res}"
+        assert_almost_equal(r_get_res,eval(case['parameters']),tol=3,name='右臂发送全坐标'), f"右臂响应不一致，期望: {case['parameters']}，实际: {r_get_res}"
 
     logger.info(f"✅ 用例【{case['title']}】测试通过")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
