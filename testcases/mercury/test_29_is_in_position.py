@@ -38,6 +38,12 @@ def test_is_in_position_normal(device, case):
         device.ml.send_angles(device.coords_init_angles,device.speed)
         device.mr.send_angles(device.coords_init_angles,device.speed)
         device.wait()
+        if mode == 1:
+            logger.info(f'当前左臂坐标为{device.ml.get_coords()}')
+            logger.info(f'当前右臂坐标为{device.mr.get_coords()}')
+        elif mode == 2:
+            logger.info(f'当前左臂坐标为{device.ml.get_base_coords()}')
+            logger.info(f'当前右臂坐标为{device.mr.get_base_coords()}')
 
     with allure.step("调用 is_in_position 接口进行 is_in_position 测试"):
         if case["test_type"] == "normal":
