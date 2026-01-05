@@ -18,7 +18,6 @@ def device():
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.go_zero()
-    dev.wait()
     dev.mr.power_off()
     dev.ml.power_off()
     dev.close()
