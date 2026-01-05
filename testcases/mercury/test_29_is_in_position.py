@@ -49,12 +49,22 @@ def test_is_in_position_normal(device, case):
             r_response = device.mr.is_in_position(param, mode)
 
     with allure.step("断言返回类型为 int"):
-        assert isinstance(l_response, int), f"左臂返回类型错误: {type(l_response)}"
-        assert isinstance(r_response, int), f"右臂返回类型错误: {type(r_response)}"
+        if case["test_type"] == "normal":
+            assert isinstance(l_response, int), f"左臂返回类型错误: {type(l_response)}"
+            assert isinstance(r_response, int), f"右臂返回类型错误: {type(r_response)}"
+        elif case["test_type"] == "left":
+            assert isinstance(l_response, int), f"左臂返回类型错误: {type(l_response)}"
+        elif case["test_type"] == "right":
+            assert isinstance(r_response, int), f"右臂返回类型错误: {type(r_response)}"
 
     with allure.step("断言返回值是否符合预期"):
-        assert l_response == case["l_expect_data"], f"左臂期望值 {case['l_expect_data']}，实际为 {l_response}"
-        assert r_response == case["r_expect_data"], f"右臂期望值 {case['r_expect_data']}，实际为 {r_response}"
+        if case["test_type"] == "normal":
+            assert l_response == case["l_expect_data"], f"左臂期望值 {case['l_expect_data']}，实际为 {l_response}"
+            assert r_response == case["r_expect_data"], f"右臂期望值 {case['r_expect_data']}，实际为 {r_response}"
+        elif case["test_type"] == "left":
+            assert l_response == case["l_expect_data"], f"左臂期望值 {case['l_expect_data']}，实际为 {l_response}"
+        elif case["test_type"] == "right":
+            assert r_response == case["r_expect_data"], f"右臂期望值 {case['r_expect_data']}，实际为 {r_response}"
 
     logger.info(f"✅ 用例【{title}】测试通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")
