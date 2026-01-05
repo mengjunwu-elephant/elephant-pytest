@@ -57,9 +57,7 @@ class MercuryBase:
 
     def go_zero(self):
         self.ml.send_angles(self.init_angles, self.speed)
-        self.wait()
         self.mr.send_angles(self.init_angles, self.speed)
-        self.wait()
         self.mr.send_angle(11,0,self.speed)
         self.mr.send_angle(12,0,self.speed)
         self.mr.send_angle(13,0,self.speed)

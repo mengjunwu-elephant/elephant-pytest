@@ -48,7 +48,7 @@ def test_resume_normal(device, case):
         device.ml.pause()
         device.mr.pause()
 
-    time.sleep(0.5)
+    time.sleep(0.5)     
     with allure.step("调用 resume 接口"):
         l_response = device.ml.resume(case["parameter"])
         r_response = device.mr.resume(case["parameter"])
