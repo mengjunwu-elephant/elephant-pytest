@@ -69,8 +69,8 @@ def test_is_moving_after_stop(device, case):
     logger.debug(f"接口: {case['api']}，参数: {case['parameter']}")
 
     with allure.step("先调用 stop 停止运动"):
-        device.ml.stop()
-        device.mr.stop()
+        device.ml.stop(1)
+        device.mr.stop(1)
         sleep(0.5)
 
     with allure.step("检测左右臂是否仍在运动"):
