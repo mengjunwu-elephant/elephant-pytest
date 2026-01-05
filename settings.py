@@ -49,7 +49,7 @@ class MercuryBase:
 
     def __init__(self, left_port="/dev/left_arm", right_port="/dev/right_arm"):
         self.ml = Mercury(left_port,save_serial_log=1)
-        self.mr = Mercury(right_port,save_serial_log=1)
+        self.mr = Mercury(right_port,save_serial_log=1,debug=1)
 
     def close(self):
         self.ml.close()
