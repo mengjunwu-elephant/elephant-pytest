@@ -26,10 +26,10 @@ def device():
 
 
 @allure.feature("is_in_position 接口测试")
-@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] in ("angle", "coords", "base_coords")], ids=lambda c: c["title"])
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] in ["normal","left","right"]], ids=lambda c: c["title"])
 def test_is_in_position_normal(device, case):
     title = case["title"]
-    param = case["parameter"]
+    param = eval(case["parameter"])
     mode = case["mode"]
 
     logger.info(f"》》》用例【{title}】开始测试《《《")
@@ -41,8 +41,13 @@ def test_is_in_position_normal(device, case):
         device.wait()
 
     with allure.step("调用 is_in_position 接口进行 is_in_position 测试"):
-        l_response = device.ml.is_in_position(param, mode)
-        r_response = device.mr.is_in_position(param, mode)
+        if case["test_type"] == "normal":
+            l_response = device.ml.is_in_position(param, mode)
+            r_response = device.mr.is_in_position(param, mode)
+        elif case["test_type"] == "left":
+            l_response = device.ml.is_in_position(param, mode)
+        elif case["test_type"] == "right":
+            r_response = device.mr.is_in_position(param, mode)
 
     with allure.step("断言返回类型为 int"):
         assert isinstance(l_response, int), f"左臂返回类型错误: {type(l_response)}"
