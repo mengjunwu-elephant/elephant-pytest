@@ -44,7 +44,7 @@ def test_is_moving_normal(device, case):
     logger.info(f"》》》用例【{title}】开始测试《《《")
     logger.debug(f"接口: {case['api']}，参数: {case['parameter']}")
 
-    time.sleep(0.1)
+    time.sleep(1)
     with allure.step("获取左右臂运动状态"):
         l_response = device.ml.is_moving()
         r_response = device.mr.is_moving()
