@@ -1,3 +1,5 @@
+import time
+
 import pytest
 import allure
 
@@ -39,6 +41,7 @@ def test_is_paused_after_pause(device, case):
     title = case["title"]
     logger.info(f"》》》用例【{title}】开始测试《《《")
 
+    time.sleep(0.3)
     with allure.step("先调用 pause 进行暂停"):
         device.ml.pause()
         device.mr.pause()

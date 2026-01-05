@@ -1,3 +1,5 @@
+import time
+
 import pytest
 import allure
 from pymycobot.error import MercuryDataException
@@ -41,10 +43,12 @@ def test_resume_normal(device, case):
     logger.info(f"》》》用例【{title}】开始测试《《《")
     logger.debug(f"参数: {case['parameter']}")
 
+    time.sleep(0.5)
     with allure.step("先调用 pause"):
         device.ml.pause()
         device.mr.pause()
 
+    time.sleep(0.5)
     with allure.step("调用 resume 接口"):
         l_response = device.ml.resume(case["parameter"])
         r_response = device.mr.resume(case["parameter"])

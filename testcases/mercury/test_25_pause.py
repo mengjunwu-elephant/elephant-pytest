@@ -1,3 +1,5 @@
+import time
+
 import pytest
 import allure
 from pymycobot.error import MercuryDataException
@@ -41,6 +43,7 @@ def test_pause_normal(device, case):
     logger.info(f"》》》用例【{title}】开始测试《《《")
     logger.debug(f"参数: {case['parameter']}")
 
+    time.sleep(0.3)
     with allure.step("调用左臂 pause"):
         l_response = device.ml.pause(case["parameter"])
 
