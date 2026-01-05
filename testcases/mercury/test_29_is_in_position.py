@@ -17,6 +17,8 @@ def device():
     dev.mr.power_on()
     logger.info("初始化完成，接口测试开始")
     yield dev
+    dev.go_zero()
+    dev.wait()
     dev.mr.power_off()
     dev.ml.power_off()
     dev.close()
@@ -32,6 +34,11 @@ def test_is_in_position_normal(device, case):
 
     logger.info(f"》》》用例【{title}】开始测试《《《")
     logger.debug(f"接口: {case['api']}，参数: {param}，模式: {mode}")
+
+    with allure.step('使机械臂运动到初始点位'):
+        device.ml.send_angles(device.coords_init_angles,device.speed)
+        device.mr.send_angles(device.coords_init_angles,device.speed)
+        device.wait()
 
     with allure.step("调用 is_in_position 接口进行 is_in_position 测试"):
         l_response = device.ml.is_in_position(param, mode)
