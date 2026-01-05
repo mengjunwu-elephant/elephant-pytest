@@ -68,7 +68,7 @@ def test_is_moving_after_stop(device, case):
     with allure.step("先调用 stop 停止运动"):
         device.ml.stop()
         device.mr.stop()
-        sleep(2)
+        sleep(0.5)
 
     with allure.step("检测左右臂是否仍在运动"):
         l_response = device.ml.is_moving()
