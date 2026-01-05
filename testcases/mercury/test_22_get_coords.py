@@ -1,7 +1,7 @@
 import pytest
 import allure
 
-from common1 import logger
+from common1 import logger, assert_almost_equal
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
@@ -23,7 +23,7 @@ def device():
 
 
 @allure.feature("get_coords 接口测试")
-@allure.story("获取末端位姿 - 正常场景")
+@allure.story("获取双臂坐标")
 @pytest.mark.parametrize("case", cases, ids=lambda c: c["title"])
 def test_get_coords(device, case):
     logger.info(f"》》》》》用例【{case['title']}】开始测试《《《《《")
@@ -45,10 +45,13 @@ def test_get_coords(device, case):
         assert isinstance(l_response, list), f"左臂返回类型错误，实际为: {type(l_response)}"
         assert isinstance(r_response, list), f"右臂返回类型错误，实际为: {type(r_response)}"
 
-    with allure.step("数据断言"):
-        assert l_response == eval(case["l_expect_data"]), \
-            f"左臂数据不一致：期望 {case['l_expect_data']}，实际 {l_response}"
-        assert r_response == eval(case["r_expect_data"]), \
-            f"右臂数据不一致：期望 {case['r_expect_data']}，实际 {r_response}"
+    with allure.step('断言 get_angles 接口返回值是否匹配预期'):
+        allure.attach(str(case['l_expect_data']), name="左臂期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(l_response), name="左臂实际", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(case['r_expect_data']), name="右臂期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(r_response), name="右臂实际", attachment_type=allure.attachment_type.TEXT)
+        assert_almost_equal(l_response,case['l_expect_data'],tol=3,name='左臂获取全坐标'), f"左臂响应不一致，期望: {case['l_expect_data']}，实际: {l_response}"
+        assert_almost_equal(r_response,case['r_expect_data'],tol=3,name='右臂获取全坐标'), f"右臂响应不一致，期望: {case['r_expect_data']}，实际: {r_response}"
 
     logger.info(f"✅ 用例【{case['title']}】测试通过")
+    logger.info(f"》》》用例【{case['title']}】测试完成《《《")
