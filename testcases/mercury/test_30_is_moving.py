@@ -33,7 +33,7 @@ def reset_device(device):
     device.init_coords()
     yield
     device.go_zero()
-    sleep(5)
+    sleep(8)
 
 
 @allure.feature("is_moving 接口测试")
