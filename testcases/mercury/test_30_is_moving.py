@@ -60,29 +60,29 @@ def test_is_moving_normal(device, case):
     logger.info(f"✅ 用例【{title}】测试通过")
 
 
-# @allure.feature("is_moving 接口测试")
-# @allure.story("调用 stop 后状态检测")
-# @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal1"], ids=lambda c: c["title"])
-# def test_is_moving_after_stop(device, case):
-#     title = case["title"]
-#     logger.info(f"》》》用例【{title}】开始测试《《《")
-#     logger.debug(f"接口: {case['api']}，参数: {case['parameter']}")
-#
-#     with allure.step("先调用 stop 停止运动"):
-#         device.ml.stop()
-#         device.mr.stop()
-#         sleep(0.5)
-#
-#     with allure.step("检测左右臂是否仍在运动"):
-#         l_response = device.ml.is_moving()
-#         r_response = device.mr.is_moving()
-#
-#     with allure.step("断言返回类型为 int"):
-#         assert isinstance(l_response, int), f"左臂类型错误: {type(l_response)}"
-#         assert isinstance(r_response, int), f"右臂类型错误: {type(r_response)}"
-#
-#     with allure.step("断言返回结果与期望一致"):
-#         assert l_response == case["l_expect_data"], f"左臂期望 {case['l_expect_data']}，实际 {l_response}"
-#         assert r_response == case["r_expect_data"], f"右臂期望 {case['r_expect_data']}，实际 {r_response}"
-#
-#     logger.info(f"✅ 用例【{title}】测试通过")
+@allure.feature("is_moving 接口测试")
+@allure.story("调用 stop 后状态检测")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal1"], ids=lambda c: c["title"])
+def test_is_moving_after_stop(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"接口: {case['api']}，参数: {case['parameter']}")
+
+    with allure.step("先调用 stop 停止运动"):
+        device.ml.stop()
+        device.mr.stop()
+        sleep(0.5)
+
+    with allure.step("检测左右臂是否仍在运动"):
+        l_response = device.ml.is_moving()
+        r_response = device.mr.is_moving()
+
+    with allure.step("断言返回类型为 int"):
+        assert isinstance(l_response, int), f"左臂类型错误: {type(l_response)}"
+        assert isinstance(r_response, int), f"右臂类型错误: {type(r_response)}"
+
+    with allure.step("断言返回结果与期望一致"):
+        assert l_response == case["l_expect_data"], f"左臂期望 {case['l_expect_data']}，实际 {l_response}"
+        assert r_response == case["r_expect_data"], f"右臂期望 {case['r_expect_data']}，实际 {r_response}"
+
+    logger.info(f"✅ 用例【{title}】测试通过")
