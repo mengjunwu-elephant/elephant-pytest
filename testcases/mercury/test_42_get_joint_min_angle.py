@@ -29,7 +29,7 @@ def restore_zero(device):
     # 每个测试用例后恢复零点
     yield
     device.go_zero()
-    sleep(3)
+    device.wait()
 
 
 @allure.feature("获取关节最小角度")
@@ -49,8 +49,9 @@ def test_get_joint_min_angle_normal(device, case):
 
     with allure.step("移动至最小角度"):
         device.ml.send_angle(joint_id, l_expect, device.speed)
+        device.wait()
         device.mr.send_angle(joint_id, r_expect, device.speed)
-        sleep(3)
+        device.wait()
 
     with allure.step("判断机械臂是否到达设定位置"):
         l_curr = device.ml.get_angle(joint_id)
