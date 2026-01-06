@@ -52,9 +52,9 @@ def test_jog_increment_angle_left(device, case):
         assert l_response == case["l_expect_data"], f"左臂返回值不符，期望：{case['l_expect_data']}，实际：{l_response}"
 
     with allure.step("断言get_angle接口返回值"):
-        allure.attach(str(case["l_expect_data"]), name="左臂get_angle期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(device.init_angles[case['joint']-1]+case["parameter"]), name="左臂get_angle期望", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(l_get_res), name="左臂get_angle实际", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(l_get_res,device.init_angles[case['joint']-1]+case["l_expect_data"], 1), f"左臂期望：{device.init_angles[case['joint']]+case['l_get_expect_data']}，实际：{l_get_res}"
+        assert_almost_equal(l_get_res,device.init_angles[case['joint']-1]+case["parameter"], 1), f"左臂期望：{device.init_angles[case['joint']-1]+case['parameter']}，实际：{l_get_res}"
 
     logger.info(f"✅ 用例【{title}】左臂测试通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")
@@ -85,10 +85,10 @@ def test_jog_increment_angle_right(device, case):
         assert r_response == case["r_expect_data"], f"右臂返回值不符，期望：{case['r_expect_data']}，实际：{r_response}"
 
     with allure.step("断言get_angle接口返回值"):
-        allure.attach(str(case["r_expect_data"]), name="左臂get_angle期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(case["parameter"]), name="左臂get_angle期望", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(r_get_res), name="左臂get_angle实际", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(r_get_res,device.init_angles[case['joint']-1] + case["r_expect_data"],
-                            1), f"左臂期望：{device.init_angles[case['joint']] + case['r_expect_data']}，实际：{r_get_res}"
+        assert_almost_equal(r_get_res,device.init_angles[case['joint']-1] + case['parameter'],
+                            1), f"左臂期望：{device.init_angles[case['joint']-1] + case['parameter']}，实际：{r_get_res}"
     logger.info(f"✅ 用例【{title}】右臂测试通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
