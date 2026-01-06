@@ -51,10 +51,15 @@ def test_jog_rpy_normal(device, case):
         assert isinstance(r_response, int), f"右臂响应类型应为 int，实际为 {type(r_response)}"
 
     with allure.step("断言响应值正确"):
+        allure.attach(str(case["l_expect_data"]), name="左臂期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(l_response), name="左臂实际", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(case["r_expect_data"]), name="右臂期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(r_response), name="右臂实际", attachment_type=allure.attachment_type.TEXT)
         assert l_response == case["l_expect_data"], f"左臂期望 {case['l_expect_data']}，实际 {l_response}"
         assert r_response == case["r_expect_data"], f"右臂期望 {case['r_expect_data']}，实际 {r_response}"
 
-    logger.info(f"✅ 用例【{title}】测试成功")
+    logger.info(f"✅ 用例【{case['title']}】测试通过")
+    logger.info(f"》》》用例【{case['title']}】测试完成《《《")
 
 
 @allure.feature("jog_rpy 接口测试")
