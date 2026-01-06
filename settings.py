@@ -73,7 +73,6 @@ class MercuryBase:
 
     def wait(self, timeout=30.0):
         """等待机械臂停止运动"""
-        time.sleep(0.3)
         from common1 import logger
 
         start_time = time.time()
@@ -94,9 +93,6 @@ class MercuryBase:
                 logger.info(f'等待机械臂停止... 已等待{elapsed:.1f}秒 | 左臂:{left_status} | 右臂:{right_status}')
                 last_log_time = current_time
 
-            time.sleep(0.1)
-
-        time.sleep(0.3)
         logger.info('机械臂运动完成')
 
     def power_on_only(self):
