@@ -75,6 +75,7 @@ class MercuryBase:
     def wait(self):
         time.sleep(0.3)
         while self.ml.is_moving() or self.mr.is_moving():
+            print(1)
             time.sleep(0.1)
         time.sleep(0.3)
 
