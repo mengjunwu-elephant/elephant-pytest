@@ -1,7 +1,7 @@
 import pytest
 import allure
 from pymycobot.error import MercuryDataException
-from common1 import logger
+from common1 import logger, assert_almost_equal
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
@@ -37,14 +37,24 @@ def test_jog_increment_angle_left(device, case):
 
     with allure.step("调用左臂 jog_increment_angle 接口"):
         l_response = device.ml.jog_increment_angle(case["joint"], case["parameter"], case["speed"])
+        device.wait()
 
-    with allure.step("断言返回类型和返回值"):
+    with allure.step("调用get_angle接口"):
+        l_get_res = device.ml.get_angle(case["joint"])
+        logger.info(f"左臂get_angle接口返回值：{l_get_res}")
+
+    with allure.step("断言返回类型"):
         assert isinstance(l_response, int), f"左臂返回类型应为 int，实际为 {type(l_response)}"
 
-    with allure.step("断言是否到达增量角度"):
+    with allure.step("断言返回值"):
         allure.attach(str(case["l_expect_data"]), name="左臂期望", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(l_response), name="左臂实际", attachment_type=allure.attachment_type.TEXT)
         assert l_response == case["l_expect_data"], f"左臂返回值不符，期望：{case['l_expect_data']}，实际：{l_response}"
+
+    with allure.step("断言get_angle接口返回值"):
+        allure.attach(str(case["l_expect_data"]), name="左臂get_angle期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(l_get_res), name="左臂get_angle实际", attachment_type=allure.attachment_type.TEXT)
+        assert_almost_equal(device.init_angles[case['joint']]+case["l_expect_data"], l_get_res, 1), f"左臂期望：{device.init_angles[case['joint']]+case['l_get_expect_data']}，实际：{l_get_res}"
 
     logger.info(f"✅ 用例【{title}】左臂测试通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")
@@ -60,15 +70,25 @@ def test_jog_increment_angle_right(device, case):
 
     with allure.step("调用右臂 jog_increment_angle 接口"):
         r_response = device.mr.jog_increment_angle(case["joint"], case["parameter"], case["speed"])
+        device.wait()
+
+    with allure.step("调用get_angle接口"):
+        r_get_res = device.mr.get_angle(case["joint"])
+        logger.info(f"右臂get_angle接口返回值：{r_get_res}")
 
     with allure.step("断言返回类型和返回值"):
         assert isinstance(r_response, int), f"右臂返回类型应为 int，实际为 {type(r_response)}"
 
-    with allure.step("断言是否到达增量角度"):
+    with allure.step("断言返回值"):
         allure.attach(str(case["r_expect_data"]), name="右臂期望", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(r_response), name="右臂实际", attachment_type=allure.attachment_type.TEXT)
         assert r_response == case["r_expect_data"], f"右臂返回值不符，期望：{case['r_expect_data']}，实际：{r_response}"
 
+    with allure.step("断言get_angle接口返回值"):
+        allure.attach(str(case["r_expect_data"]), name="左臂get_angle期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(r_get_res), name="左臂get_angle实际", attachment_type=allure.attachment_type.TEXT)
+        assert_almost_equal(device.init_angles[case['joint']] + case["r_expect_data"], r_get_res,
+                            1), f"左臂期望：{device.init_angles[case['joint']] + case['r_expect_data']}，实际：{r_get_res}"
     logger.info(f"✅ 用例【{title}】右臂测试通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
