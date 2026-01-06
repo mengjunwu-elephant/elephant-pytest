@@ -40,6 +40,10 @@ def test_jog_increment_angle_left(device, case):
 
     with allure.step("断言返回类型和返回值"):
         assert isinstance(l_response, int), f"左臂返回类型应为 int，实际为 {type(l_response)}"
+
+    with allure.step("断言是否到达增量角度"):
+        allure.attach(str(case["l_expect_data"]), name="左臂期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(l_response), name="左臂实际", attachment_type=allure.attachment_type.TEXT)
         assert l_response == case["l_expect_data"], f"左臂返回值不符，期望：{case['l_expect_data']}，实际：{l_response}"
 
     logger.info(f"✅ 用例【{title}】左臂测试通过")
@@ -59,6 +63,10 @@ def test_jog_increment_angle_right(device, case):
 
     with allure.step("断言返回类型和返回值"):
         assert isinstance(r_response, int), f"右臂返回类型应为 int，实际为 {type(r_response)}"
+
+    with allure.step("断言是否到达增量角度"):
+        allure.attach(str(case["r_expect_data"]), name="右臂期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(r_response), name="右臂实际", attachment_type=allure.attachment_type.TEXT)
         assert r_response == case["r_expect_data"], f"右臂返回值不符，期望：{case['r_expect_data']}，实际：{r_response}"
 
     logger.info(f"✅ 用例【{title}】右臂测试通过")
