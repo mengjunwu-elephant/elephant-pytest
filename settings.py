@@ -1,6 +1,5 @@
 import os
 import time
-from common1 import logger
 from pymycobot import *
 
 
@@ -75,7 +74,7 @@ class MercuryBase:
     def wait(self):
         """等待机械臂停止运动"""
         time.sleep(0.3)
-
+        from common1 import logger
         wait_count = 0
         while self.ml.is_moving() or self.mr.is_moving():
             time.sleep(0.1)
