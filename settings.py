@@ -73,11 +73,20 @@ class MercuryBase:
         self.mr.power_on()
 
     def wait(self):
+        """等待机械臂停止运动"""
         time.sleep(0.3)
+
+        wait_count = 0
         while self.ml.is_moving() or self.mr.is_moving():
             time.sleep(0.1)
-            logger.info('----机械臂正在运动----')
+            wait_count += 1
+
+            # 每10次检查（1秒）记录一次日志，避免日志刷屏
+            if wait_count % 10 == 0:
+                logger.info(f'机械臂正在运动... 已等待{wait_count * 0.1:.1f}秒')
+
         time.sleep(0.3)
+        logger.info('机械臂运动完成')
 
     def power_on_only(self):
         self.mr.power_off()
