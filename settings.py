@@ -73,7 +73,7 @@ class MercuryBase:
 
     def wait(self, timeout=30.0):
         """等待机械臂停止运动"""
-        time.sleep(0.3)
+        time.sleep(1)
         from common1 import logger
 
         start_time = time.time()
