@@ -79,8 +79,8 @@ def test_jog_angle_right(device, case):
     with allure.step("判断是否到达软件限位（右臂）"):
         current_angle = device.mr.get_angle(joint)
         target = device.angles_min[joint - 1] if param == 0 else device.angles_max[joint - 1]
-        allure.attach(str(target), name="左臂期望", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(current_angle), name="左臂实际", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(target), name="右臂期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(current_angle), name="右臂实际", attachment_type=allure.attachment_type.TEXT)
         assert_almost_equal(target, current_angle, tol=1,name='右臂jog角度运动'), f"左臂响应不一致，期望: {target}，实际: {current_angle}"
 
     with allure.step("断言响应结果正确（右臂）"):
