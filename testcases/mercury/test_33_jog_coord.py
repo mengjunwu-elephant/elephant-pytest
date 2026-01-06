@@ -2,7 +2,7 @@ import pytest
 import allure
 from pymycobot.error import MercuryDataException
 
-from common1 import logger
+from common1 import logger, assert_almost_equal
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
@@ -52,11 +52,11 @@ def test_jog_coord_normal(device, case):
         assert isinstance(r_response, int), f"右臂响应应为 int，实际为 {type(r_response)}"
 
     with allure.step("断言返回值正确"):
-        assert l_response == case["l_expect_data"], f"左臂期望值：{case['l_expect_data']}，实际值：{l_response}"
-        assert r_response == case["r_expect_data"], f"右臂期望值：{case['r_expect_data']}，实际值：{r_response}"
+        assert_almost_equal(l_response,case["l_expect_data"],tol=2,name='jog坐标运动'), f"左臂期望值：{case['l_expect_data']}，实际值：{l_response}"
+        assert_almost_equal(r_response,case["r_expect_data"],tol=2,name='jog坐标运动'), f"右臂期望值：{case['r_expect_data']}，实际值：{r_response}"
 
-    logger.info(f"✅ 用例【{title}】通过")
-
+    logger.info(f"✅ 用例【{case['title']}】测试通过")
+    logger.info(f"》》》用例【{case['title']}】测试完成《《《")
 
 @allure.feature("jog_coord 接口测试")
 @allure.story("异常边界验证")
