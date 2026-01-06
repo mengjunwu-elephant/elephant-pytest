@@ -1,6 +1,6 @@
 import os
 import time
-
+from common1 import logger
 from pymycobot import *
 
 
@@ -75,8 +75,8 @@ class MercuryBase:
     def wait(self):
         time.sleep(0.3)
         while self.ml.is_moving() or self.mr.is_moving():
-            print(1)
             time.sleep(0.1)
+            logger.info('----机械臂正在运动----')
         time.sleep(0.3)
 
     def power_on_only(self):
