@@ -76,10 +76,19 @@ class MercuryBase:
         time.sleep(0.3)
         from common1 import logger
         wait_count = 0
-        while self.ml.is_moving() or self.mr.is_moving():
+        # 等待左臂
+        while self.ml.is_moving():
             time.sleep(0.1)
+            logger.info('等待左机械臂停止...')
             wait_count += 1
-
+            # 每10次检查（1秒）记录一次日志，避免日志刷屏
+            if wait_count % 10 == 0:
+                logger.info(f'机械臂正在运动... 已等待{wait_count * 0.1:.1f}秒')
+        # 等待右臂
+        while self.mr.is_moving():
+            time.sleep(0.1)
+            logger.info('等待右机械臂停止...')
+            wait_count += 1
             # 每10次检查（1秒）记录一次日志，避免日志刷屏
             if wait_count % 10 == 0:
                 logger.info(f'机械臂正在运动... 已等待{wait_count * 0.1:.1f}秒')
