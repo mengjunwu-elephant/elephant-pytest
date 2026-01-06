@@ -3,7 +3,7 @@ import allure
 from time import sleep
 from pymycobot.error import MercuryDataException
 
-from common1 import logger
+from common1 import logger, assert_almost_equal
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
@@ -55,11 +55,8 @@ def test_get_joint_min_angle_normal(device, case):
     with allure.step("判断机械臂是否到达设定位置"):
         l_curr = device.ml.get_angle(joint_id)
         r_curr = device.mr.get_angle(joint_id)
-        l_ok = device.is_in_position(l_expect, l_curr)
-        r_ok = device.is_in_position(r_expect, r_curr)
-
-        assert l_ok == 1, f"左臂 {joint_id} 未到达预期位置：目标={l_expect}, 当前={l_curr}"
-        assert r_ok == 1, f"右臂 {joint_id} 未到达预期位置：目标={r_expect}, 当前={r_curr}"
+        assert_almost_equal(l_curr, l_expect, 1), f"左臂未到达设定位置：预期={l_expect}, 实际={l_curr}"
+        assert_almost_equal(r_curr, r_expect, 1), f"右臂未到达设定位置：预期={r_expect}, 实际={r_curr}"
 
     with allure.step("返回值断言"):
         assert isinstance(l_response, float), f"左臂返回类型错误：{type(l_response)}"

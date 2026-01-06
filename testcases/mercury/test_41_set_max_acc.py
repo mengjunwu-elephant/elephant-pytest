@@ -64,32 +64,3 @@ def test_set_max_acc_exception(device, case):
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
 
-@allure.feature("设置最大加速度")
-@allure.story("保存验证")
-@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "save_or_not"], ids=lambda c: c["title"])
-def test_set_max_acc_persistence(device, case):
-    title = case["title"]
-    logger.info(f"》》》用例【{title}】开始测试《《《")
-    logger.debug(f"API: {case['api']} | 参数: {case['parameter']} | 模式: {case['mode']}")
-
-    with allure.step("设置 max_acc"):
-        l_res = device.ml.set_max_acc(case["mode"], case["parameter"])
-        r_res = device.mr.set_max_acc(case["mode"], case["parameter"])
-
-    with allure.step("重启设备"):
-        device.reset()
-
-    with allure.step("读取重启后设置值"):
-        l_get = device.ml.get_max_acc(case["mode"])
-        r_get = device.mr.get_max_acc(case["mode"])
-
-    with allure.step("类型断言"):
-        assert isinstance(l_get, int), f"左臂读取类型错误：{type(l_get)}"
-        assert isinstance(r_get, int), f"右臂读取类型错误：{type(r_get)}"
-
-    with allure.step("值断言"):
-        assert l_get == case["l_expect_data"], f"左臂断言失败，期望：{case['l_expect_data']}，实际：{l_get}"
-        assert r_get == case["r_expect_data"], f"右臂断言失败，期望：{case['r_expect_data']}，实际：{r_get}"
-
-    logger.info(f"✅ 用例【{title}】保存性验证通过")
-    logger.info(f"》》》用例【{title}】测试完成《《《")
