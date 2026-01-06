@@ -29,35 +29,35 @@ def reset_arm(device):
     device.go_zero()
 
 
-# @allure.feature("jog_angle 接口测试")
-# @allure.story("正常用例 - 左臂")
-# @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
-# def test_jog_angle_left(device, case):
-#     joint = case["joint"]
-#     param = case["parameter"]
-#     speed = case["speed"]
-#     title = case["title"]
-#
-#     logger.info(f"》》》开始用例【{title}】《《《")
-#     logger.debug(f"joint={joint}, param={param}, speed={speed}")
-#
-#     with allure.step("发送 jog_angle 指令（左臂）"):
-#         response = device.ml.jog_angle(joint, param, speed)
-#         device.wait()
-#
-#     with allure.step("判断是否到达软件限位（左臂）"):
-#         current_angle = device.ml.get_angle(joint)
-#         target = device.angles_min[joint - 1] if param == 0 else device.angles_max[joint - 1]
-#         allure.attach(str(target), name="左臂期望", attachment_type=allure.attachment_type.TEXT)
-#         allure.attach(str(current_angle), name="左臂实际", attachment_type=allure.attachment_type.TEXT)
-#         assert_almost_equal(target,current_angle,tol=1,name='左臂jog角度运动'),f"左臂响应不一致，期望: {target}，实际: {current_angle}"
-#
-#     with allure.step("断言响应结果正确（左臂）"):
-#         assert isinstance(response, int), f"返回值类型错误: {type(response)}"
-#         assert response == case["l_expect_data"], f"期望值: {case['l_expect_data']}, 实际值: {response}"
-#
-#     logger.info(f"✅ 用例【{case['title']}】测试通过")
-#     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
+@allure.feature("jog_angle 接口测试")
+@allure.story("正常用例 - 左臂")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
+def test_jog_angle_left(device, case):
+    joint = case["joint"]
+    param = case["parameter"]
+    speed = case["speed"]
+    title = case["title"]
+
+    logger.info(f"》》》开始用例【{title}】《《《")
+    logger.debug(f"joint={joint}, param={param}, speed={speed}")
+
+    with allure.step("发送 jog_angle 指令（左臂）"):
+        response = device.ml.jog_angle(joint, param, speed)
+        device.wait()
+
+    with allure.step("判断是否到达软件限位（左臂）"):
+        current_angle = device.ml.get_angle(joint)
+        target = device.angles_min[joint - 1] if param == 0 else device.angles_max[joint - 1]
+        allure.attach(str(target), name="左臂期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(current_angle), name="左臂实际", attachment_type=allure.attachment_type.TEXT)
+        assert_almost_equal(target,current_angle,tol=1,name='左臂jog角度运动'),f"左臂响应不一致，期望: {target}，实际: {current_angle}"
+
+    with allure.step("断言响应结果正确（左臂）"):
+        assert isinstance(response, int), f"返回值类型错误: {type(response)}"
+        assert response == case["l_expect_data"], f"期望值: {case['l_expect_data']}, 实际值: {response}"
+
+    logger.info(f"✅ 用例【{case['title']}】测试通过")
+    logger.info(f"》》》用例【{case['title']}】测试完成《《《")
 
 
 @allure.feature("jog_angle 接口测试")

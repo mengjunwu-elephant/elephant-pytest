@@ -71,12 +71,30 @@ class MercuryBase:
         self.ml.power_on()
         self.mr.power_on()
 
-    def wait(self):
+    def wait(self, timeout=30.0):
         """等待机械臂停止运动"""
-        time.sleep(0.2)
-        while self.mr.is_moving():
-            time.sleep(0.1)
         time.sleep(0.3)
+        from common1 import logger
+
+        start_time = time.time()
+        last_log_time = start_time
+        logger.info(f'当前左臂运动状态为{self.ml.is_moving()}，当前右臂运动状态为{self.mr.is_moving()}')
+        while self.ml.is_moving() or self.mr.is_moving():
+            # 超时检查
+            if time.time() - start_time > timeout:
+                logger.error(f'机械臂运动超时（{timeout}秒）')
+                raise TimeoutError(f'机械臂运动超时')
+            # 每秒记录一次状态
+            current_time = time.time()
+            if current_time - last_log_time >= 1.0:
+                elapsed = current_time - start_time
+                left_status = "运动中" if self.ml.is_moving() else "已停止"
+                right_status = "运动中" if self.mr.is_moving() else "已停止"
+                logger.info(f'等待机械臂停止... 已等待{elapsed:.1f}秒 | 左臂:{left_status} | 右臂:{right_status}')
+                last_log_time = current_time
+
+        time.sleep(0.3)
+        logger.info('机械臂运动完成')
 
     def power_on_only(self):
         self.mr.power_off()
