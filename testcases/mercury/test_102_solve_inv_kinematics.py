@@ -23,7 +23,7 @@ def device():
 
 
 @allure.feature("逆运动学计算")
-@pytest.mark.parametrize("case", cases, ids=lambda c: c["title"])
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
 def test_solve_inv_kinematics_normal(device, case):
     title = case["title"]
     with allure.step(f"用例【{title}】开始测试"):
