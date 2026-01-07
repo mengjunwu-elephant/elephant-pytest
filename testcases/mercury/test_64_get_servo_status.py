@@ -42,8 +42,8 @@ def test_get_servo_status_normal(device, case):
         assert isinstance(r_response, list), f"右臂返回类型错误：{type(r_response)}"
 
     with allure.step("断言返回结果与期望值一致"):
-        assert r_response == case["r_expect_data"], f"右臂期望={case['r_expect_data']}，实际={r_response}"
-        assert l_response == case["l_expect_data"], f"左臂期望={case['l_expect_data']}，实际={l_response}"
+        assert r_response == eval(case["r_expect_data"]), f"右臂期望={case['r_expect_data']}，实际={r_response}"
+        assert l_response == eval(case["l_expect_data"]), f"左臂期望={case['l_expect_data']}，实际={l_response}"
 
     logger.info(f"✅ 用例【{title}】测试通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")

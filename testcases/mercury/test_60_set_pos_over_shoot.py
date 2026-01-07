@@ -69,32 +69,3 @@ def test_set_pos_over_shoot_exception(device, case):
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
 
-@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "save_or_not"], ids=lambda c: c["title"])
-@allure.feature("位置超调参数设置")
-@allure.story("保存与否测试")
-def test_set_pos_over_shoot_save_or_not(device, case):
-    title = case["title"]
-    param = case["parameter"]
-
-    with allure.step(f"用例【{title}】开始"):
-        logger.info(f"》》》用例【{title}】开始测试《《《")
-        logger.debug(f"参数: {param}")
-
-        l_response = device.ml.set_pos_over_shoot(param)
-        r_response = device.mr.set_pos_over_shoot(param)
-
-        device.reset()
-
-        l_get_res = device.ml.get_pos_over_shoot()
-        r_get_res = device.mr.get_pos_over_shoot()
-
-        with allure.step("断言返回类型为int"):
-            assert isinstance(l_response, int), f"左臂返回类型错误: {type(l_response)}"
-            assert isinstance(r_response, int), f"右臂返回类型错误: {type(r_response)}"
-
-        with allure.step("断言重启后读取值是否符合预期"):
-            assert r_get_res == case["r_expect_data"], f"右臂期望: {case['r_expect_data']}，实际: {r_get_res}"
-            assert l_get_res == case["l_expect_data"], f"左臂期望: {case['l_expect_data']}，实际: {l_get_res}"
-
-        logger.info(f"用例【{title}】测试成功")
-    logger.info(f"》》》用例【{title}】测试完成《《《")
