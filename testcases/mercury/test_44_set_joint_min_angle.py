@@ -54,7 +54,7 @@ def test_set_joint_min_angle_normal(device, case):
         l_curr = device.ml.get_angle(joint_id)
         r_curr = device.mr.get_angle(joint_id)
         assert_almost_equal(l_curr, param, 1), f"左臂未到达软件限位：期望={param}, 实际={l_curr}"
-        assert_almost_equal(r_curr,param,tol=1,name="右臂未到达软件限位：期望={param}, 实际={r_curr}")
+        assert_almost_equal(r_curr, param, 1), f"右臂未到达软件限位：期望={param}, 实际={r_curr}"
 
     with allure.step("断言返回类型和数据正确"):
         assert isinstance(l_response, int), f"左臂返回类型错误：{type(l_response)}"
