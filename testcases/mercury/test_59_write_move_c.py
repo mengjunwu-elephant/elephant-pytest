@@ -27,6 +27,7 @@ def reset_coords(device):
     # 每个用例后自动重置坐标
     yield
     device.init_coords()
+    device.wait()
 
 
 @allure.feature("轨迹接口")
