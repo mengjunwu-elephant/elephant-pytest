@@ -44,10 +44,12 @@ def test_write_move_c(device, case):
 
         with allure.step("调用右臂 write_move_c 接口"):
             r_response = device.mr.write_move_c(transpoint, endpoint, speed)
+            device.wait()
             logger.debug(f"右臂响应: {r_response}")
 
         with allure.step("调用左臂 write_move_c 接口"):
             l_response = device.ml.write_move_c(transpoint, endpoint, speed)
+            device.wait()
             logger.debug(f"左臂响应: {l_response}")
 
         with allure.step("断言返回值类型"):
