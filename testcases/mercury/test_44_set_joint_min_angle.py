@@ -45,11 +45,10 @@ def test_set_joint_min_angle_normal(device, case):
     with allure.step("设置最小角度 + 执行运动指令"):
         l_response = device.ml.set_joint_min_angle(joint_id,param)
         device.ml.send_angle(joint_id, param-5, device.speed)
-
+        device.wait()
         r_response = device.mr.set_joint_min_angle(joint_id,param)
         device.mr.send_angle(joint_id, param-5, device.speed)
-
-        sleep(3)
+        device.wait()
 
     with allure.step("判断是否到达软件限位"):
         l_curr = device.ml.get_angle(joint_id)
