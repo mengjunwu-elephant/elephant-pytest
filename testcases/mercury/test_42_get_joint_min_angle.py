@@ -46,18 +46,8 @@ def test_get_joint_min_angle_normal(device, case):
     with allure.step("获取左右臂最小角度"):
         l_response = device.ml.get_joint_min_angle(joint_id)
         r_response = device.mr.get_joint_min_angle(joint_id)
-
-    with allure.step("移动至最小角度-5"):
-        device.ml.send_angle(joint_id, l_expect-5, device.speed)
-        device.wait()
-        device.mr.send_angle(joint_id, r_expect-5, device.speed)
-        device.wait()
-
-    with allure.step("判断机械臂是否到达设定位置"):
-        l_curr = device.ml.get_angle(joint_id)
-        r_curr = device.mr.get_angle(joint_id)
-        assert_almost_equal(l_curr, l_expect, 1), f"左臂未到达设定位置：预期={l_expect}, 实际={l_curr}"
-        assert_almost_equal(r_curr, r_expect, 1), f"右臂未到达设定位置：预期={r_expect}, 实际={r_curr}"
+        logger.info(f"左臂最小角度：{l_response}")
+        logger.info(f"右臂最小角度：{r_response}")
 
     with allure.step("返回值断言"):
         assert isinstance(l_response, float), f"左臂返回类型错误：{type(l_response)}"

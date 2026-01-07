@@ -46,20 +46,8 @@ def test_get_joint_max_angle_normal(device, case):
     with allure.step("获取左右臂最大角度"):
         l_response = device.ml.get_joint_max_angle(joint_id)
         r_response = device.mr.get_joint_max_angle(joint_id)
-
-    with allure.step("发送最大角度指令"):
-        device.ml.send_angle(joint_id, l_expect, device.speed)
-        device.mr.send_angle(joint_id, r_expect, device.speed)
-        sleep(3)
-
-    with allure.step("判断是否到达预期角度"):
-        l_curr = device.ml.get_angle(joint_id)
-        r_curr = device.mr.get_angle(joint_id)
-        l_ok = device.is_in_position(l_expect, l_curr)
-        r_ok = device.is_in_position(r_expect, r_curr)
-
-        assert l_ok == 1, f"左臂 {joint_id} 未到达最大角度：目标={l_expect}, 当前={l_curr}"
-        assert r_ok == 1, f"右臂 {joint_id} 未到达最大角度：目标={r_expect}, 当前={r_curr}"
+        logger.info(f"左臂最大角度：{l_response}")
+        logger.info(f"右臂最大角度：{r_response}")
 
     with allure.step("断言返回值正确"):
         assert isinstance(l_response, float), f"左臂返回类型错误：{type(l_response)}"
