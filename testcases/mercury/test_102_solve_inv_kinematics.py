@@ -23,7 +23,8 @@ def device():
 
 
 @allure.feature("逆运动学计算")
-@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
+@allure.story("正常场景")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"], ids=lambda c: c["title"])
 def test_solve_inv_kinematics_normal(device, case):
     title = case["title"]
     with allure.step(f"用例【{title}】开始测试"):
@@ -45,10 +46,12 @@ def test_solve_inv_kinematics_normal(device, case):
         with allure.step("断言右臂值"):
             assert r_response == case["r_expect_data"], f"右臂期望：{case['r_expect_data']}，实际：{r_response}"
 
-        logger.info(f"✅ 用例【{title}】测试通过")
+        logger.info(f"✅ 用例【{title}】测试成功")
+        logger.info(f"》》》用例【{title}】测试完成《《《")
 
 
 @allure.feature("逆运动学计算-异常场景")
+@allure.story("异常场景")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
 def test_solve_inv_kinematics_exception(device, case):
     title = case["title"]
