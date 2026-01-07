@@ -38,9 +38,9 @@ def test_get_base_coords(device, case):
     with allure.step("获取右臂基座坐标"):
         r_response = device.mr.get_base_coords()
 
-    with allure.step("断言返回类型为int"):
-        assert isinstance(l_response, int), f"左臂返回类型错误：{type(l_response)}"
-        assert isinstance(r_response, int), f"右臂返回类型错误：{type(r_response)}"
+    with allure.step("断言返回类型为list"):
+        assert isinstance(l_response, list), f"左臂返回类型错误：{type(l_response)}"
+        assert isinstance(r_response, list), f"右臂返回类型错误：{type(r_response)}"
 
     with allure.step("断言返回结果与期望值一致"):
         # Excel中的字符串数据转成列表/元组
