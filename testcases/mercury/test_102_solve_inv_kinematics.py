@@ -32,11 +32,13 @@ def test_solve_inv_kinematics_normal(device, case):
 
         l_response = device.ml.solve_inv_kinematics(eval(case["parameter"]), eval(case["parameter_1"]))
         r_response = device.mr.solve_inv_kinematics(eval(case["parameter"]), eval(case["parameter_1"]))
+        logger.info(f'左臂返回结果{l_response}')
+        logger.info(f'右臂返回结果{r_response}')
 
         with allure.step("断言左臂返回类型"):
-            assert isinstance(l_response, int), f"左臂返回类型应为int，实际为：{type(l_response)}"
+            assert isinstance(l_response, list), f"左臂返回类型应为int，实际为：{type(l_response)}"
         with allure.step("断言右臂返回类型"):
-            assert isinstance(r_response, int), f"右臂返回类型应为int，实际为：{type(r_response)}"
+            assert isinstance(r_response, list), f"右臂返回类型应为int，实际为：{type(r_response)}"
 
         with allure.step("断言左臂值"):
             assert l_response == case["l_expect_data"], f"左臂期望：{case['l_expect_data']}，实际：{l_response}"
