@@ -30,8 +30,8 @@ def test_solve_inv_kinematics_normal(device, case):
         logger.debug(f"API: {case['api']}")
         logger.debug(f"参数: {case['parameter']}, {case['parameter_1']}")
 
-        l_response = device.ml.solve_inv_kinematics(case["parameter"], case["parameter_1"])
-        r_response = device.mr.solve_inv_kinematics(case["parameter"], case["parameter_1"])
+        l_response = device.ml.solve_inv_kinematics(eval(case["parameter"]), eval(case["parameter_1"]))
+        r_response = device.mr.solve_inv_kinematics(eval(case["parameter"]), eval(case["parameter_1"]))
 
         with allure.step("断言左臂返回类型"):
             assert isinstance(l_response, int), f"左臂返回类型应为int，实际为：{type(l_response)}"
