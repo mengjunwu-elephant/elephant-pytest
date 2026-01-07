@@ -42,8 +42,8 @@ def test_set_joint_max_angle_normal(device, case):
     logger.info(f"》》》用例【{title}】开始测试《《《")
 
     with allure.step("设置最大角度 + 执行运动指令"):
-        l_response = device.ml.set_joint_max_angle(param)
-        r_response = device.mr.set_joint_max_angle(param)
+        l_response = device.ml.set_joint_max_angle(joint_id,param)
+        r_response = device.mr.set_joint_max_angle(joint_id,param)
 
         device.ml.send_angle(joint_id, param+5, device.speed)
         device.mr.send_angle(joint_id, param+5, device.speed)
