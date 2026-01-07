@@ -47,10 +47,10 @@ def test_get_joint_min_angle_normal(device, case):
         l_response = device.ml.get_joint_min_angle(joint_id)
         r_response = device.mr.get_joint_min_angle(joint_id)
 
-    with allure.step("移动至最小角度"):
-        device.ml.send_angle(joint_id, l_expect, device.speed)
+    with allure.step("移动至最小角度-5"):
+        device.ml.send_angle(joint_id, l_expect-5, device.speed)
         device.wait()
-        device.mr.send_angle(joint_id, r_expect, device.speed)
+        device.mr.send_angle(joint_id, r_expect-5, device.speed)
         device.wait()
 
     with allure.step("判断机械臂是否到达设定位置"):
