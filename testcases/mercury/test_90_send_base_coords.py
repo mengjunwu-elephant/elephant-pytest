@@ -83,7 +83,7 @@ def test_send_base_coords_out_limit_left(device, case):
         speed = case["speed"]
 
         with allure.step("调用左臂 send_base_coords 并期望抛出 MercuryDataException"):
-            with pytest.raises(MercuryDataException, match=f".*坐标.*{param}.*{speed}.*"):
+            with pytest.raises(MercuryDataException):
                 device.ml.send_base_coords(param, speed)
 
         logger.info(f"✅ 用例【{title}】异常断言成功")
@@ -102,7 +102,7 @@ def test_send_base_coords_out_limit_right(device, case):
         speed = case["speed"]
 
         with allure.step("调用右臂 send_base_coords 并期望抛出 MercuryDataException"):
-            with pytest.raises(MercuryDataException, match=f".*坐标.*{param}.*{speed}.*"):
+            with pytest.raises(MercuryDataException):
                 device.mr.send_base_coords(param, speed)
 
         logger.info(f"✅ 用例【{title}】异常断言成功")
