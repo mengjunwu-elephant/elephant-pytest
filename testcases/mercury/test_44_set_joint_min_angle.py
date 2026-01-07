@@ -18,6 +18,7 @@ def device():
     dev.mr.power_on()
     logger.info("初始化完成，接口测试开始")
     yield dev
+    dev.set_default_joint_min_angle()
     dev.mr.power_off()
     dev.ml.power_off()
     dev.close()

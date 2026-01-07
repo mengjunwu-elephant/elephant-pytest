@@ -116,7 +116,17 @@ class MercuryBase:
         self.ml.set_pos_over_shoot(50)
         self.mr.set_pos_over_shoot(50)
 
+    def set_default_joint_min_angle(self):
+        for i in range(6):
+            self.ml.set_joint_min_angle(i+1,self.angles_min[i])
+            self.mr.set_joint_min_angle(i+1,self.angles_min[i])
 
+    def set_default_joint_max_angle(self):
+        for i in range(6):
+            self.ml.set_joint_max_angle(i+1,self.angles_max[i])
+            self.mr.set_joint_max_angle(i+1,self.angles_max[i])
+
+    # 三指默认参数
     def set_default_p(self):
         for i in range(6):
             self.ml.set_hand_gripper_p(i + 1, 100)
