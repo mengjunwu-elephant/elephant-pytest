@@ -329,23 +329,23 @@ def get():
             logging.info(f"当前电流{current}")
             logging.info(f"当前舵机状态{servo_status}")
             logging.info(f"当前机器状态{robot_status}")
-            if r_a is not None:
+            if r_a is not None or -1:
                 print(f"angles{r_a}")
             else:
                 a += 1
-            if r_c is not None:
+            if r_c is not None or -1:
                 print(f"coords{r_c}")
             else:
                 c += 1
-            if speed is not None:
+            if speed is not None or -1:
                 print(f"speed{speed}")
             else:
                 sp += 1
-            if current is not None:
+            if current is not None or -1:
                 print(f"current{current}")
             else:
                 cu += 1
-            if servo_status is not None:
+            if servo_status is not None or -1:
                 print(f"servo_statue{servo_status}")
             else:
                 se_sta += 1

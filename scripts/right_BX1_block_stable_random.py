@@ -127,15 +127,16 @@ def stable_coord_coords():
             else:
                 continue
             time.sleep(0.003)
-        for i in range(3):
-            cords_now[i] += 50
-            m.send_coord(i + 1, cords_now[i], age_sp)
-            wait_until(cords_now, 1)
-            # wait_until_not_moving()
-            cords_now[i] -= 50
-            m.send_coords(cords_now, age_sp)
-            wait_until(cords_now, 1)
-            # wait_until_not_moving()
+        if cords_now is not None:
+            for i in range(3):
+                cords_now[i] += 50
+                m.send_coord(i + 1, cords_now[i], age_sp)
+                wait_until(cords_now, 1)
+                # wait_until_not_moving()
+                cords_now[i] -= 50
+                m.send_coords(cords_now, age_sp)
+                wait_until(cords_now, 1)
+                # wait_until_not_moving()
 
 
 def random_coord_ra_move():
@@ -150,17 +151,18 @@ def random_coord_ra_move():
         else:
             continue
         time.sleep(0.003)
-    for r in range(10):
-        for i in range(3):
-            cords_now[i] += 50
-            # print(f"应运动到{cords_now}")
-            m.send_coord(i + 1, cords_now[i], age_sp)
-            # wait_until(a, 0)
-            wait_until_not_moving()
-            cords_now[i] -= 50
-            m.send_coords(cords_now, age_sp)
-            # wait_until(a, 0)
-            wait_until_not_moving()
+    if cords_now is not None:
+        for r in range(10):
+            for i in range(3):
+                cords_now[i] += 50
+                # print(f"应运动到{cords_now}")
+                m.send_coord(i + 1, cords_now[i], age_sp)
+                # wait_until(a, 0)
+                wait_until_not_moving()
+                cords_now[i] -= 50
+                m.send_coords(cords_now, age_sp)
+                # wait_until(a, 0)
+                wait_until_not_moving()
     m.send_angles(random_co_an, age_sp)
     # wait_until(a, 0)
     wait_until_not_moving()
@@ -357,19 +359,19 @@ def get():
             logging.info(f"当前电流{current}")
             # logging.info(f"当前舵机状态{servo_status}")
             logging.info(f"当前机器状态{robot_status}")
-            if r_a is not None:
+            if r_a is not None or -1:
                 print(f"angles{r_a}")
             else:
                 a += 1
-            if r_c is not None:
+            if r_c is not None or -1:
                 print(f"coords{r_c}")
             else:
                 c += 1
-            if speed is not None:
+            if speed is not None or -1:
                 print(f"speed{speed}")
             else:
                 sp += 1
-            if current is not None:
+            if current is not None or -1:
                 print(f"current{current}")
             else:
                 cu += 1
