@@ -72,13 +72,14 @@ def test_set_joint_min_angle_normal(device, case):
 def test_set_joint_min_angle_exception(device, case):
     title = case['title']
     param = case['parameter']
+    joint = case["id"]
 
     logger.info(f"》》》用例【{title}】开始测试《《《")
 
     with allure.step("断言左右臂均抛出 MercuryDataException"):
         with pytest.raises(MercuryDataException):
-            device.ml.set_joint_min_angle(param)
-            device.mr.set_joint_min_angle(param)
+            device.ml.set_joint_min_angle(joint,param)
+            device.mr.set_joint_min_angle(joint,param)
 
     logger.info(f"✅ 异常用例【{title}】通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")
