@@ -46,7 +46,7 @@ def test_set_joint_max_angle_left(device, case):
         l_response = device.ml.set_joint_max_angle(joint_id,param)
 
         device.ml.send_angle(joint_id, param+5, device.speed)
-        sleep(3)
+        device.wait()
 
     with allure.step("判断是否到达目标角度"):
         l_curr = device.ml.get_angle(joint_id)
@@ -72,7 +72,7 @@ def test_set_joint_max_angle_right(device, case):
     with allure.step("设置最大角度 + 执行运动指令"):
         r_response = device.mr.set_joint_max_angle(joint_id,param)
         device.mr.send_angle(joint_id, param+5, device.speed)
-        sleep(3)
+        device.wait()
 
     with allure.step("判断是否到达目标角度"):
         r_curr = device.mr.get_angle(joint_id)
