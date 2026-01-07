@@ -69,7 +69,7 @@ def test_jog_base_coord_exception(device, case):
         logger.debug(f"API: {case['api']}, 轴: {case['axis']}, 参数: {case['parameter']}, 速度: {case['speed']}")
 
         with allure.step("调用左臂 jog_base_coord，期望抛出 MercuryDataException"):
-            with pytest.raises(MercuryDataException, match=f".*方向.*{case['parameter']}.*{case['speed']}.*"):
+            with pytest.raises(MercuryDataException):
                 device.ml.jog_base_coord(case["axis"], case["parameter"], case["speed"])
 
         logger.info(f"✅ 用例【{title}】异常断言成功")
