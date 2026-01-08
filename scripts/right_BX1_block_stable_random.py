@@ -393,7 +393,6 @@ def get():
 if __name__ == '__main__':
     m = Mercury('/dev/right_arm', debug=False)
 
-    #################################a_thread = threading.Thread(target=move)
     a_thread = threading.Thread(target=move)
     b_thread = threading.Thread(target=get)
 
