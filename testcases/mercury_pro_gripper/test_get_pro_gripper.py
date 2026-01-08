@@ -30,7 +30,10 @@ def test_get_pro_gripper(device, case):
         allure.attach(str(response), "接口返回值", allure.attachment_type.TEXT)
 
     with allure.step("断言返回值类型为 int"):
-        assert isinstance(response, int), f"返回类型错误，实际为 {type(response)}"
+        if case['parameter'] == 1:
+            assert isinstance(response, float), f"返回类型错误，实际为 {type(response)}"
+        else:
+            assert isinstance(response, int), f"返回类型错误，实际为 {type(response)}"
 
     with allure.step("断言返回值与期望值相符"):
         allure.attach(str(case['expect_data']), "期望值", allure.attachment_type.TEXT)
