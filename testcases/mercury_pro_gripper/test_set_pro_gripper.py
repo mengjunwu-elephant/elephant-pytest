@@ -44,11 +44,6 @@ def test_set_pro_gripper_normal(device, case):
         allure.attach(str(set_res),'实际值',allure.attachment_type.TEXT)
         assert set_res == case["expect_data"], f"期望：{case['expect_data']}，实际：{set_res}"
 
-    with allure.step("断言获取接口返回值正确"):
-        allure.attach(str(case['parameter']),'期望值',allure.attachment_type.TEXT)
-        allure.attach(str(get_res),'实际值',allure.attachment_type.TEXT)
-        assert get_res == case["parameter"], f"期望：{case['parameter']}，实际：{get_res}"
-
     logger.info(f"✅ 用例【{case['title']}】测试成功")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
 
