@@ -7,7 +7,7 @@ from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
 # 获取 Excel 用例数据
-cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "get_hand_gripper_default_speed")
+cases = get_test_data_from_excel(MercuryBase.MY_HAND_TEST_DATA_FILE, "get_hand_gripper_default_speed")
 
 
 @pytest.fixture(scope="module")
