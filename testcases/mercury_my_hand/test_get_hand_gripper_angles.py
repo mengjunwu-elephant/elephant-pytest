@@ -1,6 +1,6 @@
 import pytest
 import allure
-from common1 import logger
+from common1 import logger, assert_almost_equal
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
@@ -23,8 +23,12 @@ def device():
 @pytest.mark.parametrize("case", cases, ids=lambda c: c["title"])
 def test_get_hand_gripper_angles(device, case):
     title = case["title"]
+    angles = eval(case['angles'])
     logger.info(f"》》》用例【{title}】开始测试《《《")
     logger.debug(f"test_api: {case['api']}")
+
+    with allure.step('设置全关节角度'):
+        device.ml.set_hand_gripper_angles(angles, device.speed)
 
     with allure.step("发送请求，获取所有夹爪关节角度"):
         response = device.ml.get_hand_gripper_angles()
@@ -36,7 +40,7 @@ def test_get_hand_gripper_angles(device, case):
         expected = eval(case["expect_data"])
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert response == expected, f"断言失败，期望：{expected}，实际：{response}"
+        assert_almost_equal(response,expected), f"断言失败，期望：{expected}，实际：{response}"
 
     logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")

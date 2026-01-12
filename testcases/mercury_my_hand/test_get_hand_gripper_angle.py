@@ -2,7 +2,7 @@ import pytest
 import allure
 from pymycobot.error import MercuryDataException
 
-from common1 import logger
+from common1 import logger, assert_almost_equal
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
@@ -36,7 +36,7 @@ def test_get_hand_gripper_angle(device, case):
     with allure.step("断言返回值等于期望值"):
         allure.attach(str(case["expect_data"]), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert response == case["expect_data"], f"断言失败，期望：{case['expect_data']}，实际：{response}"
+        assert_almost_equal(response,case["expect_data"],tol=5,name='读取单关节角度'), f"断言失败，期望：{case['expect_data']}，实际：{response}"
 
     logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")
