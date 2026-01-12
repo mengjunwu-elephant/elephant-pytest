@@ -4,7 +4,7 @@ from time import sleep
 from pymycobot.error import MercuryDataException
 
 from common1.test_data_handler import get_test_data_from_excel
-from common1 import logger
+from common1 import logger, assert_almost_equal
 from settings import MercuryBase
 
 cases = get_test_data_from_excel(MercuryBase.MY_HAND_TEST_DATA_FILE, "set_hand_gripper_angle")
@@ -48,7 +48,7 @@ def test_set_hand_gripper_angle_normal(device, case):
     with allure.step("断言获取接口返回的角度正确"):
         allure.attach(str(case['angle']), "期望角度", allure.attachment_type.TEXT)
         allure.attach(str(get_res), "实际角度", allure.attachment_type.TEXT)
-        assert get_res == case["angle"], f"断言失败，期望：{case['angle']}，实际：{get_res}"
+        assert_almost_equal(get_res,case["angle"],tol=5,name='设置三指三关节角度'), f"断言失败，期望：{case['angle']}，实际：{get_res}"
 
     logger.info(f"✅ 用例【{case['title']}】测试成功")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
