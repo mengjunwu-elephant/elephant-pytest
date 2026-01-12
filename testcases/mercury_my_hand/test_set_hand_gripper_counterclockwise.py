@@ -6,7 +6,7 @@ from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
-cases = get_test_data_from_excel(MercuryBase.MY_HAND_TEST_DATA_FILE, "set_hand_gripper_counterclockwise")
+cases = get_test_data_from_excel(MercuryBase.MY_HAND_TEST_DATA_FILE, "set_hand_gripper_cww")
 
 @pytest.fixture(scope="module")
 def device():
