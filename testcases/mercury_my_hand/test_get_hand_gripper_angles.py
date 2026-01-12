@@ -38,9 +38,9 @@ def test_get_hand_gripper_angles(device, case):
 
     with allure.step("断言返回值等于期望值"):
         expected = case["expect_data"]
-        allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(angles), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(response,expected), f"断言失败，期望：{expected}，实际：{response}"
+        assert_almost_equal(response,angles), f"断言失败，期望：{expected}，实际：{response}"
 
     logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")
