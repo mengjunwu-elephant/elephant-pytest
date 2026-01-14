@@ -31,6 +31,10 @@ class Mycobot450Base:
     min_angles = [-162,-125,-154,-162,-162,-165]
     max_angles = [162,125,154,162,162,165]
 
+    collision_threshold = [100, 100, 100, 100, 100, 100]
+    torque_comp = [0, 0, 0, 10, 30, 30]
+    fusion_parameters = [150,1000,100,4000]
+
     # 测试数据配置
     TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mycobot_450.xlsx')
     PRO_GRIPPER_TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/pro_gripper.xlsx')
@@ -75,8 +79,20 @@ class Mycobot450Base:
         self.mc.set_world_reference([0,0,0,0,0,0])
         self.mc.set_reference_frame(0)
 
+    def default_collision_threshold(self):
+        for i,j in enumerate(self.collision_threshold):
+            self.mc.set_collision_threshold(i+1,j)
+
+    def default_torque_comp(self):
+        for i,j in enumerate(self.torque_comp):
+            self.mc.set_torque_comp(i+1,0,j)
+
     def default_filter_len(self):
         self.mc.set_filter_len(5,60)
+
+    def default_fusion_parameters(self):
+        for i,j in enumerate(self.fusion_parameters):
+            self.mc.set_fusion_parameters(i+1,j)
 
     def go_zero(self):
         self.mc.send_angles(self.zero_angles, self.speed)

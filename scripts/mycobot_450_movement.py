@@ -42,11 +42,69 @@ MAX_CONSECUTIVE_SAME = 10  # 最大连续相同次数
 MAX_CONSECUTIVE_ERROR = 10  # 最大连续错误次数
 
 
-def wait():
-    time.sleep(0.3)
-    while mc.is_moving():
-        time.sleep(0.1)
-    time.sleep(1)
+def wait(initial_delay=0.3, poll_interval=0.1, stabilization_delay=0.5, timeout=10.0):
+    """
+    等待机械臂停止运动，具有超时保护和日志功能
+
+    参数:
+    - initial_delay: 初始等待时间(秒)，默认0.3秒
+    - poll_interval: 轮询间隔(秒)，默认0.1秒
+    - stabilization_delay: 稳定等待时间(秒)，默认0.5秒
+    - timeout: 超时时间(秒)，默认10.0秒
+
+    返回:
+    - bool: True表示正常停止，False表示超时或异常
+    """
+    try:
+        # 1. 初始等待
+        logger.debug(f"开始等待机械臂停止，初始等待 {initial_delay:.1f} 秒")
+        if initial_delay > 0:
+            time.sleep(initial_delay)
+
+        # 3. 轮询等待机械臂停止，带超时保护
+        start_time = time.time()
+        elapsed_time = 0
+        poll_count = 0
+
+        logger.info("开始轮询机械臂运动状态...")
+
+        while mc.is_moving():
+            elapsed_time = time.time() - start_time
+            poll_count += 1
+
+            # 检查是否超时
+            if elapsed_time > timeout:
+                logger.warning(f"等待机械臂停止超时！已等待 {elapsed_time:.1f} 秒")
+                logger.warning(f"轮询次数: {poll_count}，轮询间隔: {poll_interval}秒")
+                return False
+
+            # 定期记录等待状态
+            if poll_count % 10 == 0:  # 每10次轮询记录一次
+                logger.info(f"等待中... 已等待 {elapsed_time:.1f} 秒，轮询次数: {poll_count}")
+
+            time.sleep(poll_interval)
+
+        # 4. 计算总等待时间
+        total_wait_time = time.time() - start_time + initial_delay
+        logger.info(f"机械臂已停止运动，总等待时间: {total_wait_time:.2f} 秒")
+        logger.info(f"总轮询次数: {poll_count}")
+
+        # 5. 稳定等待
+        logger.debug(f"稳定等待 {stabilization_delay:.1f} 秒")
+        if stabilization_delay > 0:
+            time.sleep(stabilization_delay)
+
+        # 6. 最终状态确认
+        if mc.is_moving():
+            logger.warning("稳定等待后机械臂仍在运动")
+            return False
+
+        logger.info("机械臂完全停止，等待完成")
+        return True
+
+    except Exception as e:
+        logger.error(f"等待过程中发生未知错误: {e}")
+        return False
 
 
 def move_to_limit(joint, angles, direction):

@@ -8,7 +8,7 @@ from common1.test_data_handler import get_test_data_from_excel
 from settings import Mycobot450Base
 
 # 从 Excel 读取测试数据
-cases = get_test_data_from_excel(Mycobot450Base.TEST_DATA_FILE, "set_fusion_parameters")
+cases = get_test_data_from_excel(Mycobot450Base.TEST_DATA_FILE, "set_tool_serial_timeout")
 
 
 @pytest.fixture(scope="module")
@@ -17,29 +17,27 @@ def device():
     dev = Mycobot450Base()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.default_filter_len()
+    dev.mc.set_tool_serial_timeout(10000)    #恢复默认超时时间
     dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
-@allure.feature("设置速度融合规划参数")
-@allure.story("正确设置速度融合规划参数")
+@allure.feature("设置末端485超时时间")
+@allure.story("正确设置末端485超时时间")
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
-def test_set_fusion_parameters1(device, case):
+def test_set_tool_serial_timeout1(device, case):
     title = case["title"]
     expected = case["expect_data"]
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
-    logger.debug(f'rank:{case["rank"]}')
-    logger.debug(f'value:{case["value"]}')
 
     with allure.step(f"调用 {case['api']} 接口"):
-        set_res = device.mc.set_fusion_parameters(case['rank'],case["value"])
+        set_res = device.mc.set_tool_serial_timeout(case["parameter"])
         time.sleep(1)
         logger.debug(f"接口返回：{set_res}")
 
-    with allure.step('调用 get_filter_len 接口'):
-        get_res = device.mc.get_filter_len(case['rank'])
+    with allure.step('调用 get_tool_config 接口'):
+        get_res = device.mc.get_tool_config()[1]
         logger.debug(f"接口返回：{get_res}")
 
     with allure.step("断言返回值类型为 int"):
@@ -51,10 +49,26 @@ def test_set_fusion_parameters1(device, case):
         assert set_res == expected, f"用例【{title}】断言失败，期望 {expected},实际 {set_res}"
 
     with allure.step("断言是否设置成功"):
-        allure.attach(str(case['value']), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(case['parameter']), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(get_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert get_res == case['value'], f"用例【{title}】断言失败，期望 {case['value']},实际 {get_res}"
+        assert get_res == case['parameter'], f"用例【{title}】断言失败，期望 {case['parameter']},实际 {get_res}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
 
+@allure.feature("设置末端485超时时间")
+@allure.story("超限参数验证")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
+def test_set_tool_serial_timeout_exception(device, case):
+    title = case["title"]
+    expected = case["expect_data"]
+
+    logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
+    logger.debug(f'test_api:{case["api"]}')
+
+    with allure.step(f"断言抛出 Mycobot450Exception,参数为{case['parameter']}"):
+        with pytest.raises(MyCobotPro450DataException):
+            device.mc.set_tool_serial_timeout(case['parameter'])
+
+    logger.info(f"✅ 用例【{title}】异常断言通过")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
