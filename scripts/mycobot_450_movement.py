@@ -42,7 +42,7 @@ MAX_CONSECUTIVE_SAME = 10  # 最大连续相同次数
 MAX_CONSECUTIVE_ERROR = 10  # 最大连续错误次数
 
 
-def wait(initial_delay=0.3, poll_interval=0.1, stabilization_delay=0.5, timeout=10.0):
+def wait(initial_delay=0.3, poll_interval=0.1, stabilization_delay=0.5, timeout=300.0):
     """
     等待机械臂停止运动，具有超时保护和日志功能
 
@@ -121,17 +121,16 @@ def move_to_limit(joint, angles, direction):
     angles_attempts += 1
     logger.debug(f" {joint} 移动到{direction}极限...")
     sleep(0.2)
-
-    while mc.is_moving():
-        sleep(0.3)
-        # 检查是否应该停止
+    # 使用wait函数等待机械臂停止（带超时和停止检查）
+    if not wait(initial_delay=0.2, timeout=15.0):
         if stop_threads.is_set():
-            logger.info(f"运动中被停止")
+            logger.info(f"等待过程中收到停止信号")
             return "stopped", angles_attempts, angles_failed
-
+        else:
+            logger.warning(f"{joint} {direction}运动超时")
+            angles_failed += 1
+            return "timeout", angles_attempts, angles_failed
     end_time = time.time()
-    if mc.get_fresh_mode() == 1:
-        sleep(0.5)  # 刷新模式停留
 
     if mc.is_in_position(angles):
         movement_time = round(end_time - start_time - 0.2, 3)  # 减去提前的0.2秒
@@ -181,6 +180,7 @@ def coords_move():
 
         # 负向运动测试
         target_neg[i] -= 20
+        logger.info(f'当前正在进行{i}轴坐标负向运动.....')
         mc.send_coords(target_neg, speed)
         coords_attempts += 1
         wait()
@@ -199,6 +199,7 @@ def coords_move():
 
         # 正向运动测试
         target_pos[i] += 20
+        logger.info(f'当前正在进行{i}轴坐标正向运动.....')
         mc.send_coords(target_pos, speed)
         coords_attempts += 1
         wait()
@@ -221,17 +222,19 @@ def coords_move():
 def move():
     global angles_failed, angles_attempts, speed
 
-    # 速度设置
-    speed = random.randint(1, 100)
+    # 每个关节的超时计时器
+    joint_start_time = None
+    joint_timeout = 30.0  # 单个关节最大测试时间
 
     while not stop_threads.is_set():
-        # 检查是否应该停止
-        if stop_threads.is_set():
-            logger.info("move线程收到停止信号，退出循环")
-            break
+        # 速度设置
+        speed = random.randint(1, 100)
 
         # 角度运动
         for joint, limits in joints.items():
+            # 设置关节测试开始时间
+            joint_start_time = time.time()
+
             # 检查是否应该停止
             if stop_threads.is_set():
                 logger.info("move线程收到停止信号，退出关节循环")
@@ -244,12 +247,22 @@ def move():
             # 移动到负向极限位置
             neg_time, angles_attempts, angles_failed = move_to_limit(joint, min_angles, "负向")
 
+            # 检查超时
+            if time.time() - joint_start_time > joint_timeout:
+                logger.warning(f"{joint}测试超时，跳过")
+                break
+
             # 检查是否应该停止
             if stop_threads.is_set():
                 break
 
             # 移动到正向极限位置
             pos_time, angles_attempts, angles_failed = move_to_limit(joint, max_angles, "正向")
+
+            # 检查超时
+            if time.time() - joint_start_time > joint_timeout:
+                logger.warning(f"{joint}测试超时，跳过")
+                break
 
             # 检查是否应该停止
             if stop_threads.is_set():
@@ -267,14 +280,13 @@ def move():
         wb.save(os.path.join(os.getcwd(), file_path, file_name))
 
         # 坐标运动
-        coords_move()
+        # coords_move()
 
         logger.debug(
             f'角度发送次数:{angles_attempts} 角度失败次数:{angles_failed} 坐标发送次数:{coords_attempts} 坐标失败次数:{coords_failed}')
 
         # 短暂休息，避免过于频繁
         time.sleep(0.1)
-
 
 lap = 0.1
 
@@ -300,6 +312,7 @@ def get():
 
                 # 检查是否与上次角度相同
                 if last_angles is not None and r_a == last_angles:
+                    time.sleep(1)
                     consecutive_same_count += 1
                     logger.warning(f"连续相同角度: {r_a}, 连续次数: {consecutive_same_count}")
                 else:
