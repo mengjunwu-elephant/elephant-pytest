@@ -47,7 +47,7 @@ def test_get_robot_status_power_on(device, case):
     with allure.step("右臂断言返回结果"):
         allure.attach(str(case["r_expect_data"]),name= "右臂期望值",attachment_type= allure.attachment_type.TEXT)
         allure.attach(str(r_response),name= "右臂实际值",attachment_type= allure.attachment_type.TEXT)
-        assert eval(r_response) == eval(case["r_expect_data"]), f"右臂断言失败，期望：{case['r_expect_data']}，实际：{r_response}"
+        assert r_response == eval(case["r_expect_data"]), f"右臂断言失败，期望：{case['r_expect_data']}，实际：{r_response}"
 
     logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")
@@ -83,7 +83,7 @@ def test_get_robot_status_power_on_only(device, case):
     with allure.step("右臂断言返回结果"):
         allure.attach(str(case["r_expect_data"]),name= "右臂期望值",attachment_type= allure.attachment_type.TEXT)
         allure.attach(str(r_response),name= "右臂实际值",attachment_type= allure.attachment_type.TEXT)
-        assert eval(r_response) == eval(case["r_expect_data"]), f"右臂断言失败，期望：{case['r_expect_data']}，实际：{r_response}"
+        assert r_response == eval(case["r_expect_data"]), f"右臂断言失败，期望：{case['r_expect_data']}，实际：{r_response}"
 
     logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")
