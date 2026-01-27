@@ -81,10 +81,11 @@ def test_send_coords_out_limit_left(device, case):
     speed = case["speed"]
 
     logger.info(f"》》》》》用例【{case['title']}】开始测试（左臂）《《《《《")
-    with allure.step("左臂发送非法坐标，断言抛出 MercuryDataException"):
+    with allure.step("左臂发送非法坐标，断言抛出 MercuryDataException") as exc_info:
         with pytest.raises(MercuryDataException):
             device.ml.send_coords(param, speed)
 
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"✅ 用例【{case['title']}】左臂异常验证成功")
 
 
@@ -97,8 +98,9 @@ def test_send_coords_out_limit_right(device, case):
     speed = case["speed"]
 
     logger.info(f"》》》》》用例【{case['title']}】开始测试（右臂）《《《《《")
-    with allure.step("右臂发送非法坐标，断言抛出 MercuryDataException"):
+    with allure.step("右臂发送非法坐标，断言抛出 MercuryDataException") as exc_info:
         with pytest.raises(MercuryDataException):
             device.mr.send_coords(param, speed)
 
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"✅ 用例【{case['title']}】右臂异常验证成功")

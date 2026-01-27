@@ -56,11 +56,11 @@ def test_set_max_acc_exception(device, case):
     logger.debug(f"API: {case['api']} | 参数: {case['parameter']} | 模式: {case['mode']}")
 
     with allure.step("断言抛出 MercuryDataException"):
-        with pytest.raises(MercuryDataException):
+        with pytest.raises(MercuryDataException) as exc_info:
             device.ml.set_max_acc(case["mode"], case["parameter"])
             device.mr.set_max_acc(case["mode"], case["parameter"])
 
-    logger.info(f"✅ 用例【{title}】异常断言通过")
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
 

@@ -106,8 +106,8 @@ def test_jog_increment_angle_out_limit(device, case):
             device.ml.jog_increment_angle(case["joint"], case["parameter"], case["speed"])
 
     with allure.step("调用右臂 jog_increment_angle 异常接口"):
-        with pytest.raises(MercuryDataException):
+        with pytest.raises(MercuryDataException) as exc_info:
             device.mr.jog_increment_angle(case["joint"], case["parameter"], case["speed"])
 
-    logger.info(f"✅ 用例【{title}】异常场景测试通过")
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

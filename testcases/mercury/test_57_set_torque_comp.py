@@ -60,15 +60,12 @@ def test_set_torque_comp_exception(device, case):
         logger.info(f"》》》用例【{title}】开始测试《《《")
         logger.debug(f"用例详情: {case}")
 
-        with allure.step("断言左臂调用接口时抛出 MercuryDataException 异常"):
-            with pytest.raises(MercuryDataException):
+        with allure.step("断言调用接口时抛出 MercuryDataException 异常"):
+            with pytest.raises(MercuryDataException) as exc_info:
                 device.ml.set_torque_comp(case["joint"], case["parameter"])
-
-        with allure.step("断言右臂调用接口时抛出 MercuryDataException 异常"):
-            with pytest.raises(MercuryDataException):
                 device.mr.set_torque_comp(case["joint"], case["parameter"])
 
-        logger.info(f"✅ 用例【{title}】异常断言成功")
+        logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
 

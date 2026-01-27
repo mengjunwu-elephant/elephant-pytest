@@ -35,6 +35,7 @@ def setup_env(device):
     device.reset()
 
 
+
 @allure.feature("resume 接口测试")
 @allure.story("正常 resume 场景")
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
@@ -73,10 +74,10 @@ def test_resume_exception(device, case):
     logger.info(f"》》》用例【{title}】开始测试《《《")
     logger.debug(f"参数: {case['parameter']}")
 
-    with allure.step("调用 resume 接口并断言抛出 MercuryDataException"):
+    with allure.step("调用 resume 接口并断言抛出 MercuryDataException")as exc_info:
         with pytest.raises(MercuryDataException):
             device.ml.resume(case["parameter"])
             device.mr.resume(case["parameter"])
 
-    logger.info(f"✅ 用例【{title}】测试通过")
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

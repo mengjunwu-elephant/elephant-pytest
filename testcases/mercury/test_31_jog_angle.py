@@ -103,9 +103,10 @@ def test_jog_angle_exception(device, case):
     logger.info(f"》》》开始异常用例【{title}】《《《")
     logger.debug(f"joint={joint}, param={param}, speed={speed}")
 
-    with allure.step("发送非法 jog_angle 指令，期待触发 MercuryDataException"):
+    with allure.step("发送非法 jog_angle 指令，期待触发 MercuryDataException") as exc_info:
         with pytest.raises(MercuryDataException):
             device.ml.jog_angle(joint, param, speed)
             device.mr.jog_angle(joint, param, speed)
 
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"✅ 异常用例【{title}】触发成功")

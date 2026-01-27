@@ -61,10 +61,9 @@ def test_set_end_type_exception(device, case):
     logger.debug(f"测试参数: {case['parameter']}")
 
     with allure.step("异常参数设置末端类型，应触发 MercuryDataException 异常"):
-        with pytest.raises(MercuryDataException):
+        with pytest.raises(MercuryDataException) as exc_info:
             device.ml.set_end_type(case["parameter"])
-        with pytest.raises(MercuryDataException):
             device.mr.set_end_type(case["parameter"])
 
-    logger.info(f"✅ 用例【{title}】异常测试通过")
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

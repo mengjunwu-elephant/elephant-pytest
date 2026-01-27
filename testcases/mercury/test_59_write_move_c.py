@@ -83,8 +83,8 @@ def test_write_move_c_exception(device, case):
                 device.ml.write_move_c(transpoint, endpoint, speed)
 
         with allure.step("断言右臂调用接口时抛出 MercuryDataException 异常"):
-            with pytest.raises(MercuryDataException):
+            with pytest.raises(MercuryDataException) as exc_info:
                 device.mr.write_move_c(transpoint, endpoint, speed)
 
-        logger.info(f"✅ 用例【{title}】异常断言成功")
+        logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

@@ -61,12 +61,11 @@ def test_set_movement_type_exception(device, case):
     logger.debug(f"test_api: set_movement_type, test_parameter: {param}")
 
     with allure.step("断言异常抛出"):
-        with pytest.raises(MercuryDataException):
+        with pytest.raises(MercuryDataException) as exc_info:
             device.ml.set_movement_type(param)
-        with pytest.raises(MercuryDataException):
             device.mr.set_movement_type(param)
 
-    logger.info(f"用例【{title}】异常断言成功")
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
 

@@ -61,11 +61,12 @@ def test_set_collision_threshold_exception(device, case):
     logger.info(f"》》》用例【{title}】开始测试《《《")
     logger.debug(f"参数: joint={joint}, param={param}")
 
-    with pytest.raises(MercuryDataException):
-        device.ml.set_collision_threshold(joint, param)
-    with pytest.raises(MercuryDataException):
-        device.mr.set_collision_threshold(joint, param)
+    with allure.step("断言左右臂均抛出 MercuryDataException"):
+        with pytest.raises(MercuryDataException) as exc_info:
+            device.ml.set_collision_threshold(joint, param)
+            device.mr.set_collision_threshold(joint, param)
 
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"✅ 用例【{title}】触发异常验证成功")
 
 

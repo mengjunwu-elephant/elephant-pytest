@@ -69,9 +69,9 @@ def test_get_joint_min_angle_exception(device, case):
     logger.info(f"》》》用例【{title}】开始测试《《《")
 
     with allure.step("断言抛出 MercuryDataException"):
-        with pytest.raises(MercuryDataException):
+        with pytest.raises(MercuryDataException) as exc_info:
             device.ml.get_joint_min_angle(joint_id)
             device.mr.get_joint_min_angle(joint_id)
 
-    logger.info(f"✅ 用例【{title}】异常断言通过")
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")
