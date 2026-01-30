@@ -47,6 +47,10 @@ allure --version
 3.1打开终端，cd进入elephant-pytest目录下，执行命令
 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
-
+## 4.python环境变量配置
+4.1打开终端，运行以下指令
+```
+export PYTHONPATH="/home/elephant/Desktop/elephant-pytest:$PYTHONPATH"
+```
