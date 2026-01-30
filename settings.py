@@ -7,8 +7,8 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # 产品名称
 CASES_DIR = {
-    "1": "testcases/mycobot_450",
-    "2": "testcases/mycobot450_pro_gripper"
+    "1": "testcases/mercury_e1",
+    "2": "testcases/mercury_e1_pro_gripper"
 }
 
 # 日志配置
@@ -22,25 +22,25 @@ LOG_CONFIG = {
 
 REPORT_DIR = "allure-results"
 
-# mycobot450配置
-class Mycobot450Base:
+# MercuryE1配置
+class MercuryE1Base:
     # 机械臂运动数据
     speed = 50
     coords_init_angles =[0, 30, -100, -20, 0.0, 0.0] #坐标值：[149.9, -86.8, 298.4, 179.99, 0.0, -90.0]
-    zero_angles = [0, 0, 0, 0, 0, 0]
-    min_angles = [-162,-125,-154,-162,-162,-165]
-    max_angles = [162,125,154,162,162,165]
+    zero_angles = [0, 0, 0, 0, 0, 0, 0]
+    min_angles = [-155,-55,-160,-135,-160,-100,-135]
+    max_angles = [155,105,160,18,160,117,135]
 
-    collision_threshold = [100, 100, 100, 100, 100, 100]
-    torque_comp = [0, 0, 0, 10, 30, 30]
-    fusion_parameters = [150,1000,100,4000]
+    # collision_threshold = [100, 100, 100, 100, 100, 100]
+    # torque_comp = [0, 0, 0, 10, 30, 30]
+    # fusion_parameters = [150,1000,100,4000]
 
     # 测试数据配置
-    TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mycobot_450.xlsx')
+    TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mercury_e1.xlsx')
     PRO_GRIPPER_TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/pro_gripper.xlsx')
 
-    def __init__(self, ip='192.168.0.232'):
-        self.mc = Pro450Client(ip=ip,debug=True)
+    def __init__(self, port='com5'):
+        self.mc = MercuryE1(port=port,debug=True)
 
     def default_settings(self):
         self.mc.set_fresh_mode(0)

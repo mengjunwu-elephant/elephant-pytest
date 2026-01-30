@@ -69,7 +69,7 @@ def measure_time(func, *args, times=1000):
 
 if __name__ == '__main__':
     mc.set_fresh_mode(0)
-    stats = measure_time(mc.get_angles)
+    stats = measure_time(mc.get_pro_gripper_angle)
 
 
     print("\n========= 统计结果 =========")
