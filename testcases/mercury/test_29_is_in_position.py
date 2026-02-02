@@ -87,8 +87,8 @@ def test_is_in_position_exception(device, case):
     logger.info(f"》》》用例【{title}】开始测试《《《")
     logger.debug(f"接口: {case['api']}，参数: {param}，模式: {mode}")
 
-    with allure.step("断言抛出 MercuryDataException") as exc_info:
-        with pytest.raises(MercuryDataException):
+    with allure.step("断言抛出 MercuryDataException"):
+        with pytest.raises(MercuryDataException) as exc_info:
             device.ml.is_in_position(param, mode)
             device.mr.is_in_position(param, mode)
 
