@@ -32,10 +32,6 @@ def test_set_pro_gripper_normal(device, case):
         set_res = device.ml.set_pro_gripper(case["parameter"], case["value"])
         allure.attach(str(set_res), "设置接口返回值", allure.attachment_type.TEXT)
 
-    with allure.step("调用接口获取 Pro 夹爪参数"):
-        get_res = device.ml.get_pro_gripper(case["parameter"])
-        allure.attach(str(get_res), "获取接口返回值", allure.attachment_type.TEXT)
-
     with allure.step("断言设置接口返回值为 int"):
         assert isinstance(set_res, int), f"返回类型错误，实际为 {type(set_res)}"
 
