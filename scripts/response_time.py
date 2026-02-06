@@ -69,7 +69,9 @@ def measure_time(func, *args, times=1000):
 
 if __name__ == '__main__':
     mc.set_fresh_mode(0)
-    stats = measure_time(mc.get_angles)
+    mc.set_tool_serial_baud_rate(1000000)
+    print(mc.get_tool_config())
+    stats = measure_time(mc.get_pro_gripper_firmware_version)
 
 
     print("\n========= 统计结果 =========")
