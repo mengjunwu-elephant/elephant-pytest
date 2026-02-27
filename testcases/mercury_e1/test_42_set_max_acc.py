@@ -56,6 +56,7 @@ def test_set_max_acc_exception(device, case):
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
     logger.debug(f'mode:{case["mode"]}')
+    logger.debug(f'parameter:{case["parameter"]}')
 
     with allure.step(f"断言抛出 MercuryE1DataException,模式为{case['mode']},参数为{case['parameter']}"):
         with pytest.raises(MercuryE1DataException):

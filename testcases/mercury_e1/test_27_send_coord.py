@@ -24,7 +24,6 @@ def device():
     dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
-
 @allure.feature("设置单坐标")
 @allure.story("插补模式设置单坐标")
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
@@ -79,15 +78,18 @@ def test_send_coord0(device, case):
 def test_send_coord1(device, case):
     title = case["title"]
     expected = case["expect_data"]
+    fresh_speed_mode = case["fresh_speed_mode"]
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
     logger.debug(f'axis:{case["axis"]}')
     logger.debug(f'coord:{case["coord"]}')
     logger.debug(f'speed:{case["speed"]}')
+    logger.debug(f'fresh_speed_mode:{fresh_speed_mode}')
 
-    with allure.step(f'设置为刷新模式'):
+    with allure.step(f'设置刷新模式,速度模式'):
         device.mc.set_fresh_mode(1)
+        device.mc.set_fresh_speed_mode(fresh_speed_mode)
         mode = '刷新' if device.mc.get_fresh_mode() else '插补'
         logger.debug(f'当前模式为{mode}')
 

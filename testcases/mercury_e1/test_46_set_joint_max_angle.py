@@ -46,6 +46,9 @@ def test_set_joint_max_angle1(device, case):
         if case["joint"] == 2:
             device.mc.send_angle(3, -90,device.speed)
             device.wait()
+    with allure.step('调用 get_joint_max_angle 接口,获取当前关节最大角度'):
+        current_max_angle = device.mc.get_joint_max_angle(case['joint'])
+        logger.debug(f"当前关节最大角度：{current_max_angle}")
 
     with allure.step('调用 send_angle 接口,使机械臂运动到最大角度范围外'):
         device.mc.send_angle(case["joint"],case["angle"]+5,device.speed)
@@ -62,6 +65,10 @@ def test_set_joint_max_angle1(device, case):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
         assert response == expected, f"用例【{title}】断言失败，期望 {expected},实际 {response}"
+    with allure.step('断言get_joint_max_angle返回值'):
+        allure.attach(str(case['angle']), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(current_max_angle), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert_almost_equal(current_max_angle, case['angle'], 1,'读取设置后关节最大角度'), f"用例【{title}】断言失败，期望 {case['angle']},实际 {current_max_angle}"
 
     with allure.step("断言get_angle接口返回结果"):
         allure.attach(str(case['angle']), name="期望值", attachment_type=allure.attachment_type.TEXT)
@@ -77,10 +84,12 @@ def test_set_joint_max_angle1(device, case):
 def test_set_joint_max_angle_exception(device, case):
     title = case["title"]
     expected = case["expect_data"]
+    angle = case["angle"]
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
     logger.debug(f'joint:{case["joint"]}')
+    logger.debug(f'angle:{angle}')
 
     with allure.step(f"断言抛出 MercuryE1DataException,关节为{case['joint']},角度为{case['angle']}"):
         with pytest.raises(MercuryE1DataException):

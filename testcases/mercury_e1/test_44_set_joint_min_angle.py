@@ -46,6 +46,9 @@ def test_set_joint_min_angle1(device, case):
         if case["joint"] == 2:
             device.mc.send_angle(3, 90,device.speed)
             device.wait()
+    with allure.step('调用 get_joint_min_angle 接口,获取当前最小角度'):
+        current_min_angle = device.mc.get_joint_min_angle(case['joint'])
+        logger.debug(f"当前最小角度：{current_min_angle}")
 
     with allure.step('调用 send_angle 接口,使机械臂运动到最小角度范围外'):
         device.mc.send_angle(case["joint"],case["angle"]-5,device.speed)
@@ -63,10 +66,15 @@ def test_set_joint_min_angle1(device, case):
         allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
         assert response == expected, f"用例【{title}】断言失败，期望 {expected},实际 {response}"
 
+    with allure.step("断言get_joint_min_angle接口返回结果"):
+        allure.attach(str(case['angle']), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(current_min_angle), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert_almost_equal(current_min_angle, case['angle'], 1,'读取设置后关节最小角度'), f"用例【{title}】断言失败，期望 {case['angle']},实际 {current_min_angle}"
+
     with allure.step("断言get_angle接口返回结果"):
         allure.attach(str(case['angle']), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(angle), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(case['angle'], angle, 1,'设置关节最小角度'), f"用例【{title}】断言失败，期望 {case['angle']},实际 {angle}"
+        assert_almost_equal(angle, case['angle'], 1,'设置关节最小角度'), f"用例【{title}】断言失败，期望 {case['angle']},实际 {angle}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')

@@ -3,7 +3,7 @@ __pycache__/
 **/__pycache__/
 allure-report
 allure-results
-demo
+demo/
 mycobot_320_123
 **/log.log*
 **/python_debug.log*

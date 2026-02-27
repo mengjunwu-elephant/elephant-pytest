@@ -26,7 +26,7 @@ REPORT_DIR = "allure-results"
 class MercuryE1Base:
     # 机械臂运动数据
     speed = 50
-    coords_init_angles =[0, 30, -100, -20, 0.0, 0.0] #坐标值：[149.9, -86.8, 298.4, 179.99, 0.0, -90.0]
+    coords_init_angles = [0, -10, 0, -90, 0, -90, 0] #坐标值：[212.6, -0.1, 418.1, -179.99, 9.99, 179.96]
     zero_angles = [0, 0, 0, 0, 0, 0, 0]
     min_angles = [-155,-55,-160,-135,-160,-100,-135]
     max_angles = [155,105,160,18,160,117,135]
@@ -39,7 +39,7 @@ class MercuryE1Base:
     TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mercury_e1.xlsx')
     PRO_GRIPPER_TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/pro_gripper.xlsx')
 
-    def __init__(self, port='com5'):
+    def __init__(self, port='com3'):
         self.mc = MercuryE1(port=port,debug=True)
 
     def default_settings(self):

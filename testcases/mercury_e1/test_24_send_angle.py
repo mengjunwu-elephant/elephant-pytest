@@ -89,15 +89,18 @@ def test_send_angle0(device, case):
 def test_send_angle1(device, case):
     title = case["title"]
     expected = case["expect_data"]
+    fresh_speed_mode = case["fresh_speed_mode"]
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
     logger.debug(f'joint:{case["joint"]}')
     logger.debug(f'angle:{case["angle"]}')
     logger.debug(f'speed:{case["speed"]}')
+    logger.debug(f'fresh_speed_mode:{case["fresh_speed_mode"]}')
 
-    with allure.step(f'设置为刷新模式'):
+    with allure.step(f'设置刷新模式,速度模式'):
         device.mc.set_fresh_mode(1)
+        device.mc.set_fresh_speed_mode(fresh_speed_mode)
         mode = '刷新' if device.mc.get_fresh_mode() else '插补'
         logger.debug(f'当前模式为{mode}')
 

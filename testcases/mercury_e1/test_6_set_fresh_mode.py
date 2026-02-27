@@ -48,7 +48,7 @@ def test_set_fresh_mode1(device, case):
 
     with allure.step("断言设置成功后读取结果"):
         allure.attach(str(case['mode']), name="期望值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(device.mc.get_fresh_mode()), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(get_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
         assert get_res == case['mode'], f"用例【{title}】断言失败，期望 {case['mode']},实际 {get_res}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
