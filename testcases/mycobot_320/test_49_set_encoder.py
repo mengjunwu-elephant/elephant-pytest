@@ -12,6 +12,7 @@ cases = get_test_data_from_excel(Mycobot320Base.TEST_DATA_FILE, "set_encoder")
 
 normal_cases = [case for case in cases if case.get("test_type") == "normal"]
 exception_cases = [case for case in cases if case.get("test_type") == "exception"]
+exception_cases1 = [case for case in cases if case.get("test_type") == "exception_1"]
 
 @pytest.fixture(scope="module")
 def device():
@@ -80,7 +81,7 @@ def test_set_encoder2(device, case):
     logger.debug(f'encoder:{case["encoder"]}')
     logger.debug(f'speed:{case["speed"]}')
 
-    with pytest.raises(MyCobot320DataException, match=".*"):
+    with pytest.raises(ValueError, match=".*"):
         device.m.set_encoder(joint, encoder, speed)
 
     with allure.step(f'清除机械臂错误'):
@@ -89,3 +90,26 @@ def test_set_encoder2(device, case):
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
 
+@allure.feature("设置单关节电位值")
+@allure.story("异常用例")
+@pytest.mark.parametrize("case", exception_cases1, ids=[case["title"] for case in exception_cases1])
+def test_set_encoder3(device, case):
+    title = case["title"]
+    joint = case["joint"]
+    encoder = case["encoder"]
+    speed = case["speed"]
+
+    logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
+    logger.debug(f'test_api:{case["api"]}')
+    logger.debug(f'joint:{case["joint"]}')
+    logger.debug(f'encoder:{case["encoder"]}')
+    logger.debug(f'speed:{case["speed"]}')
+
+    with pytest.raises(MyCobot320DataException, match=".*"):
+        device.m.set_encoder(joint, encoder, speed)
+
+    with allure.step(f'清除机械臂错误'):
+        device.m.clear_error_information()
+
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')

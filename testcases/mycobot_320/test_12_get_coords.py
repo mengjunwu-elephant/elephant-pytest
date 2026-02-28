@@ -31,19 +31,11 @@ def test_get_coords1(device, case):
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
 
-    device.m.send_angles([0,0,-90,0,90,0],device.speed)
-    time.sleep(0.5)
-    while True:
-        if device.m.is_moving() == 0:
-            break
-    time.sleep(2)
+    device.m.send_angles(device.angles_init,device.speed)
+    device.wait()
+    device.m.send_coords(eval(expected), device.speed)
+    device.wait()
 
-    device.m.send_coords([-3.6, -154.2, 523.8, -90.0, 0.79, 170], device.speed)
-    time.sleep(0.5)
-    while True:
-        if device.m.is_moving() == 0:
-            break
-    time.sleep(2)
 
     with allure.step("调用 get_coords 接口"):
         response = device.m.get_coords()

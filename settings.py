@@ -13,7 +13,7 @@ CASES_DIR = {
     "4": "testcases/pro_gripper",
     "5": "testcases/my_hand",
     "6": "testcases/mycobot280",
-    "7": "testcases/mycobot_320_123"
+    "7": "testcases/mycobot_320"
 }
 
 # 日志配置
@@ -40,8 +40,9 @@ class Mycobot320Base:
 
     # 测试数据配置
     TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mycobot_320.xlsx')
+    GRIPPER_TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mycobot_320_gripper.xlsx')
 
-    def __init__(self, port="com26", baudrate=115200):
+    def __init__(self, port="com3", baudrate=115200):
         self.m = MyCobot320(port, baudrate=baudrate)
 
     def range_comparison(self, expect_data, value, name='值'):
@@ -110,13 +111,13 @@ class Mycobot320Base:
         time.sleep(0.5)
 
     def min_limit(self):
-        min_limit = [-168, -135, -145, -148, -168, -180]
+        min_limit = [-168, -135, -145, -145, -168, -180]
         for i in range(1,7):
             self.m.set_joint_min(i, min_limit[i-1])
             time.sleep(0.1)
 
     def max_limit(self):
-        max_limit = [168, 135, 145, 148, 168, 180]
+        max_limit = [168, 135, 145, 145, 168, 180]
         for i in range(1,7):
             self.m.set_joint_max(i, max_limit[i-1])
             time.sleep(0.1)

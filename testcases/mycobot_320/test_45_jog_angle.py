@@ -116,7 +116,7 @@ def test_jog_angle3(device, case):
     logger.debug(f'direction:{case["direction"]}')
     logger.debug(f'speed:{case["speed"]}')
 
-    with pytest.raises(ValueError, match=".*"):
+    with pytest.raises(MyCobot320DataException, match=".*"):
         device.m.jog_angle(joint, direction, speed)
 
     with allure.step(f'清除机械臂错误'):

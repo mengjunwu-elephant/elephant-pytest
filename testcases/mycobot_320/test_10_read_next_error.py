@@ -47,13 +47,13 @@ def test_read_next_error1(device, case):
     device.m.power_on()
     time.sleep(0.5)
 
-    with allure.step("断言返回值类型为 int"):
-        assert isinstance(response, int), f"返回类型错误,应为{type(expected)}，实际为 {type(response)}"
+    with allure.step("断言返回值类型为 list"):
+        assert isinstance(response, list), f"返回类型错误,应为{type(expected)}，实际为 {type(response)}"
 
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert response == expected, f"用例【{title}】断言失败，期望 {eval(expected)}，实际 {response}"
+        assert response == eval(expected), f"用例【{title}】断言失败，期望 {eval(expected)}，实际 {response}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')

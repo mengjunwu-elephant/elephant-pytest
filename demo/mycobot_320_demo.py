@@ -2,26 +2,13 @@ import time
 
 from pymycobot import MyCobot320
 
-m = MyCobot320("COM26")
+m = MyCobot320("COM3",debug=1)
 
-# m.power_off()
-
-# print(m.is_in_position([0, 0, 0, 0, 0, 0],1))
-# m.power_on()
-# print(m.get_fresh_mode())
-
-# m.jog_angle(2,0,-1)
+# print(m.get_coords())
+# m.send_angles([0,0,-90,0,90,0],50)
 # input()
-# m.stop()
-# m.send_angles([0, 10, -100, 0, -90, 0], 50)
-#
-# m.set_encoder(1,1000,10)
-# m.set_encoders([1000, 1000, 1000, 1000, 1000, 1000], 1000)
-# time.sleep(0.5)
-# while True:
-#     print(m.is_moving())
-#     time.sleep(0.1)
+# m.send_coords([254.9, -148.0, 155.4, 174.12, -0.49, -105.69],50)
 
-m.get_angles()
+# print(m.get_system_version(),m.get_basic_version(),m.get_atom_version())
 
-
+print(m.get_pro_gripper_angle())

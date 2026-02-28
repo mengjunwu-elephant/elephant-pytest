@@ -20,6 +20,7 @@ def device():
     logger.info("初始化完成，接口测试开始")
     dev.m.power_on()
     yield dev
+    dev.m.power_on()
     dev.m.close()
     logger.info("环境清理完成，接口测试结束")
 

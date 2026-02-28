@@ -20,15 +20,15 @@ def device():
     dev = Mycobot320Base()
     logger.info("初始化完成，接口测试开始")
 
-    dev.m.send_angles([45, 45, -90, 45, 90, 90],dev.speed)
+    dev.m.send_angles([90, 0, 90, 0, 0, 0],dev.speed)
     time.sleep(0.5)
     while True:
         if dev.m.is_moving() == 0:
             break
     time.sleep(0.5)
     input('请确认已连接IO测试工具,按回车键继续')
-
     yield dev
+    input('请确认已断开IO测试工具,按回车键继续')
     dev.m.close()
     logger.info("环境清理完成，接口测试结束")
 
@@ -73,7 +73,7 @@ def test_get_digital_input2(device, case):
     logger.debug(f'test_api:{case["api"]}')
     logger.debug(f'test_id:{case["joint"]}')
 
-    with pytest.raises(ValueError, match=".*"):
+    with pytest.raises(MyCobot320DataException, match=".*"):
         device.m.get_digital_input(joint)
 
     logger.info(f'✅ 用例【{title}】测试通过')

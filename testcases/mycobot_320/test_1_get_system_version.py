@@ -68,8 +68,8 @@ def test_get_system_version2(device, case):
     time.sleep(0.5)
     device.m.power_on()
 
-    with allure.step("断言返回值类型为 int"):
-        assert isinstance(response, int), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"
+    with allure.step("断言返回值类型为 float"):
+        assert isinstance(response, float), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"
 
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
