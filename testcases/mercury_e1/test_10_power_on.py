@@ -9,6 +9,7 @@ cases = get_test_data_from_excel(MercuryE1Base.TEST_DATA_FILE, "power_on")
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryE1Base()
+    input(print(f'请注意即将放松机械臂，按回车键继续测试'))
     dev.mc.power_off()
     logger.info("初始化完成，接口测试开始")
     yield dev
@@ -23,10 +24,13 @@ def test_power_on_normal(device, case):
     title = case["title"]
     logger.info(f"》》》用例【{title}】开始测试《《《")
 
-    input(print("请确认末端颜色是否变绿，按回车键继续测试"))
-
     with allure.step("执行上电指令"):
         response = device.mc.power_on()
+
+    with allure.step("判断上电末端颜色是否变绿"):
+        result = input(print("请观察上电末端颜色是否变绿，变绿输入1未变绿输入0，按回车键继续测试"))
+        assert result == '1', f"断言失败，上电末端颜色未变绿"
+
 
     with allure.step("断言返回类型"):
         assert isinstance(response, int), f"左臂返回类型错误：{type(response)}"

@@ -39,7 +39,7 @@ class MercuryE1Base:
     TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mercury_e1.xlsx')
     PRO_GRIPPER_TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/pro_gripper.xlsx')
 
-    def __init__(self, port='com3'):
+    def __init__(self, port='com11'):
         self.mc = MercuryE1(port=port,debug=True)
 
     def default_settings(self):

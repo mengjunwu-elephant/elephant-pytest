@@ -29,11 +29,15 @@ def test_power_off_normal(device, case):
 
     logger.debug(f'test_api:{case["api"]}')
 
-    input(print("请确认末端显示是否关闭，按回车键继续测试"))
+    input(print("请注意机械臂即将下电，按回车键继续测试"))
 
     with allure.step("执行下电"):
         response = device.mc.power_off()
         time.sleep(2)
+
+    with allure.step("判断下电末端显示是否关闭"):
+        result = input(print("请观察下电末端显示是否关闭，关闭输入1未关闭输入0，按回车键继续测试"))
+        assert result == '1', f"断言失败，下电末端显示未关闭"
 
     with allure.step("断言返回类型"):
         assert isinstance(response, int), f"返回类型错误：{type(response)}"
