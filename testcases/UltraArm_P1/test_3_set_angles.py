@@ -42,8 +42,8 @@ def test_set_angles0(device, case):
         get_res = device.mc.get_angles_info()
         logger.debug(f"接口返回：{get_res}")
 
-    with allure.step("断言返回值类型为 int"):
-        assert isinstance(set_res, int), f"返回类型错误,应为{type(expected)},实际为 {type(set_res)}"
+    with allure.step("断言返回值类型为 str"):
+        assert isinstance(set_res, str), f"返回类型错误,应为{type(expected)},实际为 {type(set_res)}"
 
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
