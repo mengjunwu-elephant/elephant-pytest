@@ -28,7 +28,7 @@ LOG_CONFIG = {
 
 REPORT_DIR = "allure-results"
 
-# 水星x1七轴配置
+# 水星A1七轴配置
 class MercuryBase:
     # 机械臂运动数据
     speed = 50
@@ -46,30 +46,21 @@ class MercuryBase:
     PRO_GRIPPER_TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mercury_pro_gripper.xlsx')
     MY_HAND_TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mercury_my_hand.xlsx')
 
-    def __init__(self, left_port="/dev/left_arm", right_port="/dev/right_arm"):
+    def __init__(self, left_port="/dev/ttyAMA1"):
         self.ml = Mercury(left_port,save_serial_log=1)
-        self.mr = Mercury(right_port,save_serial_log=1,debug=1)
 
     def close(self):
         self.ml.close()
-        self.mr.close()
 
     def go_zero(self):
         self.ml.send_angles(self.init_angles, self.speed)
-        self.mr.send_angles(self.init_angles, self.speed)
-        self.mr.send_angle(11,0,self.speed)
-        self.mr.send_angle(12,0,self.speed)
-        self.mr.send_angle(13,0,self.speed)
 
     def init_coords(self):
         self.ml.send_angles(self.coords_init_angles, self.speed)
-        self.mr.send_angles(self.coords_init_angles, self.speed)
 
     def reset(self):
-        self.mr.power_off()
         self.ml.power_off()
         self.ml.power_on()
-        self.mr.power_on()
 
     def wait(self, timeout=30.0):
         """等待机械臂停止运动"""
@@ -78,8 +69,8 @@ class MercuryBase:
 
         start_time = time.time()
         last_log_time = start_time
-        logger.info(f'当前左臂运动状态为{self.ml.is_moving()}，当前右臂运动状态为{self.mr.is_moving()}')
-        while self.ml.is_moving() or self.mr.is_moving():
+        logger.info(f'当前左臂运动状态为{self.ml.is_moving()}')
+        while self.ml.is_moving():
             # 超时检查
             if time.time() - start_time > timeout:
                 logger.error(f'机械臂运动超时（{timeout}秒）')
@@ -89,42 +80,34 @@ class MercuryBase:
             if current_time - last_log_time >= 1.0:
                 elapsed = current_time - start_time
                 left_status = "运动中" if self.ml.is_moving() else "已停止"
-                right_status = "运动中" if self.mr.is_moving() else "已停止"
-                logger.info(f'等待机械臂停止... 已等待{elapsed:.1f}秒 | 左臂:{left_status} | 右臂:{right_status}')
+                logger.info(f'等待机械臂停止... 已等待{elapsed:.1f}秒 | 左臂:{left_status} |')
                 last_log_time = current_time
 
         time.sleep(0.3)
         logger.info('机械臂运动完成')
 
     def power_on_only(self):
-        self.mr.power_off()
         self.ml.power_off()
         self.ml.power_on_only()
-        self.mr.power_on_only()
 
     def power_off(self):
-        self.mr.power_off()
         self.ml.power_off()
 
     def set_default_torque_comp(self):
         torque_comp = [0,0,0,0,10,30,30]
         for i,c in enumerate(torque_comp):
             self.ml.set_torque_comp(i+1,c)
-            self.mr.set_torque_comp(i+1,c)
 
     def set_default_pos_over_shoot(self):
         self.ml.set_pos_over_shoot(50)
-        self.mr.set_pos_over_shoot(50)
 
     def set_default_joint_min_angle(self):
         for i in range(6):
             self.ml.set_joint_min_angle(i+1,self.angles_min[i])
-            self.mr.set_joint_min_angle(i+1,self.angles_min[i])
 
     def set_default_joint_max_angle(self):
         for i in range(6):
             self.ml.set_joint_max_angle(i+1,self.angles_max[i])
-            self.mr.set_joint_max_angle(i+1,self.angles_max[i])
 
     # 三指默认参数
     def set_default_p(self):
