@@ -60,8 +60,8 @@ def test_get_servo_speeds2(device, case):
     logger.debug(f'test_api:{case["api"]}')
 
     with allure.step(f"调用 send_angles 接口"):
-        device.mc.send_angles([30, 30, 30, 10, 30, 30, 30], case['speed'])
-        time.sleep(0.1)
+        device.mc.send_angles([30, 30, 30, 10, 30, 30, 30], case['speed'],True)
+        time.sleep(1)
 
     with allure.step(f"调用 {case['api']} 接口"):
         response = device.mc.get_servo_speeds()

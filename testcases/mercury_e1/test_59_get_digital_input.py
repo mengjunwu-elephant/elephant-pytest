@@ -33,6 +33,11 @@ def test_get_digital_input1(device, case):
     logger.debug(f'test_api:{case["api"]}')
     logger.debug(f'pin_no:{case["pin_no"]}')
 
+    with allure.step(f"调用 set_digital_output 接口"):
+        response = device.mc.set_digital_output(case["pin_no"],case['state'])
+        time.sleep(1)
+        logger.debug(f"set_digital_output接口返回：{response}")
+
     with allure.step(f"调用 {case['api']} 接口"):
         response = device.mc.get_digital_input(case["pin_no"])
         time.sleep(1)

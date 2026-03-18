@@ -65,8 +65,6 @@ def test_clear_error_information_no_error(device, case):
 
     with allure.step("断言返回类型为 int"):
         assert isinstance(response, int), f"左臂返回类型错误：{type(response)}"
-    with allure.step("右臂断言返回类型为 int"):
-        assert isinstance(response, int), f"右臂返回类型错误：{type(response)}"
 
     with allure.step("断言返回结果"):
         allure.attach(str(case["expect_data"]),name= "期望值",attachment_type= allure.attachment_type.TEXT)
