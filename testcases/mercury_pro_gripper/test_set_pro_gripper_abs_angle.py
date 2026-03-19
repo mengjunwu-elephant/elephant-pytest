@@ -9,23 +9,20 @@ from settings import MercuryBase
 
 cases = get_test_data_from_excel(MercuryBase.PRO_GRIPPER_TEST_DATA_FILE, "set_pro_gripper_abs_angle")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
     logger.info("初始化完成，接口测试开始")
     yield dev
     sleep(3)
-    dev.ml.close()
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @pytest.fixture(autouse=True)
 def reset_gripper(device):
     yield
-    device.ml.set_pro_gripper_abs_angle(0)
+    device.mc.set_pro_gripper_abs_angle(0)
     sleep(3)
-
 
 @allure.feature("设置Pro夹爪绝对角度")
 @allure.story("设置角度 - 正常用例")
@@ -36,7 +33,7 @@ def test_set_pro_gripper_abs_angle(device, case):
     logger.debug(f"test_value: {case['value']}")
 
     with allure.step("调用设置接口"):
-        response = device.ml.set_pro_gripper_abs_angle(case["value"])
+        response = device.mc.set_pro_gripper_abs_angle(case["value"])
         allure.attach(str(response), "设置返回值", allure.attachment_type.TEXT)
         sleep(3)
 
@@ -48,7 +45,6 @@ def test_set_pro_gripper_abs_angle(device, case):
 
     logger.info(f"✅ 用例【{case['title']}】测试成功")
 
-
 @allure.feature("设置Pro夹爪绝对角度")
 @allure.story("暂停与恢复 - 功能验证")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == 2], ids=lambda c: c["title"])
@@ -56,17 +52,17 @@ def test_pause_and_resume(device, case):
     logger.info(f"》》》用例【{case['title']}】开始测试《《《")
 
     with allure.step("设置角度为100"):
-        abs_res = device.ml.set_pro_gripper_abs_angle(100)
+        abs_res = device.mc.set_pro_gripper_abs_angle(100)
         allure.attach(str(abs_res), "设置角度返回", allure.attachment_type.TEXT)
         sleep(0.5)
 
     with allure.step("调用暂停接口"):
-        pause_res = device.ml.set_pro_gripper_pause()
+        pause_res = device.mc.set_pro_gripper_pause()
         allure.attach(str(pause_res), "暂停返回", allure.attachment_type.TEXT)
         sleep(3)
 
     with allure.step("调用恢复接口"):
-        resume_res = device.ml.set_pro_gripper_resume()
+        resume_res = device.mc.set_pro_gripper_resume()
         allure.attach(str(resume_res), "恢复返回", allure.attachment_type.TEXT)
         sleep(1)
 
@@ -80,7 +76,6 @@ def test_pause_and_resume(device, case):
 
     logger.info(f"✅ 用例【{case['title']}】测试成功")
 
-
 @allure.feature("设置Pro夹爪绝对角度")
 @allure.story("停止功能测试")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == 3], ids=lambda c: c["title"])
@@ -88,12 +83,12 @@ def test_stop(device, case):
     logger.info(f"》》》用例【{case['title']}】开始测试《《《")
 
     with allure.step("调用设置绝对值接口"):
-        abs_res = device.ml.set_abs_gripper_value(100)
+        abs_res = device.mc.set_abs_gripper_value(100)
         allure.attach(str(abs_res), "设置绝对值返回", allure.attachment_type.TEXT)
         sleep(0.5)
 
     with allure.step("调用停止接口"):
-        stop_res = device.ml.set_pro_gripper_stop()
+        stop_res = device.mc.set_pro_gripper_stop()
         allure.attach(str(stop_res), "停止返回", allure.attachment_type.TEXT)
 
     with allure.step("断言所有返回值为 int"):
@@ -117,7 +112,7 @@ def test_out_limit(device, case):
 
     with allure.step(f"断言触发 MercuryDataException, value: {case['value']}"):
         with pytest.raises(MercuryDataException):
-            device.ml.set_pro_gripper_abs_angle(case["value"])
+            device.mc.set_pro_gripper_abs_angle(case["value"])
 
     logger.info(f"✅ 用例【{case['title']}】异常断言成功")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")

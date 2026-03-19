@@ -25,7 +25,7 @@ def test_set_hand_gripper_enabled_normal(device, case):
     logger.debug(f"test_parameters: {case['parameter']}")
 
     with allure.step("调用接口设置夹爪使能"):
-        set_res = device.ml.set_hand_gripper_enabled(case["parameter"])
+        set_res = device.mc.set_hand_gripper_enabled(case["parameter"])
 
     with allure.step("断言返回类型为int"):
         assert isinstance(set_res, int), f"返回类型错误，实际类型为 {type(set_res)}"
@@ -48,7 +48,7 @@ def test_set_hand_gripper_enabled_exception(device, case):
 
     with allure.step(f"调用接口，期望触发 MercuryDataException 异常, 参数为 {case['parameter']}"):
         with pytest.raises(MercuryDataException):
-            device.ml.set_hand_gripper_enabled(case["parameter"])
+            device.mc.set_hand_gripper_enabled(case["parameter"])
 
     logger.info(f"✅ 用例【{case['title']}】测试成功")
     logger.info(f"》》》》》用例【{case['title']}】测试完成《《《《《")

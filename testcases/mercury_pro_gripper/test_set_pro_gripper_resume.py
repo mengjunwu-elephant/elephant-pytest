@@ -8,15 +8,13 @@ from settings import MercuryBase
 # 从 Excel 中提取测试数据
 cases = get_test_data_from_excel(MercuryBase.PRO_GRIPPER_TEST_DATA_FILE, "set_pro_gripper_resume")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.ml.close()
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("设置Pro夹爪恢复动作")
 @allure.story("夹爪恢复 resume 功能验证")
@@ -27,7 +25,7 @@ def test_set_pro_gripper_resume(device, case):
     logger.debug(f"test_parameters: {case.get('parameter', '')}")
 
     with allure.step("调用 set_pro_gripper_resume 接口"):
-        response = device.ml.set_pro_gripper_resume()
+        response = device.mc.set_pro_gripper_resume()
         allure.attach(str(response), "恢复接口返回值", allure.attachment_type.TEXT)
 
     with allure.step("断言返回类型为 int"):

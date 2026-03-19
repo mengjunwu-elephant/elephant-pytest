@@ -9,17 +9,15 @@ from settings import MercuryBase
 # 读取 Excel 数据
 cases = get_test_data_from_excel(MercuryBase.MY_HAND_TEST_DATA_FILE, "set_hand_gripper_id")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
     logger.info("初始化完成，接口测试开始")
     yield dev
     # 清理恢复默认ID值
-    dev.ml.set_hand_gripper_id(14, gripper_id=10)  # 如果接口有两个参数，确认这里没问题
+    dev.mc.set_hand_gripper_id(14, gripper_id=10)  # 如果接口有两个参数，确认这里没问题
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("设置夹爪ID")
 @allure.story("正常用例")
@@ -31,10 +29,10 @@ def test_set_hand_gripper_id_normal(device, case):
     logger.debug(f"test_parameters: {case['parameter']}")
 
     with allure.step("发送请求，设置夹爪ID"):
-        set_res = device.ml.set_hand_gripper_id(case["parameter"])
+        set_res = device.mc.set_hand_gripper_id(case["parameter"])
 
     with allure.step("获取当前夹爪ID"):
-        get_res = device.ml.get_hand_gripper_id()
+        get_res = device.mc.get_hand_gripper_id()
 
     with allure.step("断言返回类型为 int"):
         assert isinstance(set_res, int), f"返回类型错误，期望 int，实际为 {type(set_res)}"
@@ -52,7 +50,6 @@ def test_set_hand_gripper_id_normal(device, case):
     logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
-
 @allure.feature("设置夹爪ID")
 @allure.story("异常用例")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
@@ -64,7 +61,7 @@ def test_set_hand_gripper_id_exception(device, case):
 
     with allure.step(f"尝试传入非法 ID 值，预期抛出 MercuryDataException, ID为 {case['parameter']}"):
         with pytest.raises(MercuryDataException):
-            device.ml.set_hand_gripper_id(case["parameter"])
+            device.mc.set_hand_gripper_id(case["parameter"])
 
     logger.info(f"✅ 用例【{title}】异常断言成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")

@@ -10,16 +10,14 @@ from settings import MercuryBase
 # 加载测试数据
 cases = get_test_data_from_excel(MercuryBase.PRO_GRIPPER_TEST_DATA_FILE, "set_pro_gripper_angle")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.ml.set_pro_gripper_angle(0)
-    dev.ml.close()
+    dev.mc.set_pro_gripper_angle(0)
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("设置Pro夹爪角度")
 @allure.story("正常用例")
@@ -30,11 +28,11 @@ def test_set_pro_gripper_angle_normal(device, case):
     logger.debug(f"test_value: {case['value']}")
 
     with allure.step("调用设置接口"):
-        set_res = device.ml.set_pro_gripper_angle(case["value"])
+        set_res = device.mc.set_pro_gripper_angle(case["value"])
         allure.attach(str(set_res), "设置接口返回值", allure.attachment_type.TEXT)
 
     with allure.step("调用获取接口"):
-        get_res = device.ml.get_pro_gripper_angle()
+        get_res = device.mc.get_pro_gripper_angle()
         allure.attach(str(get_res), "获取接口返回值", allure.attachment_type.TEXT)
 
     with allure.step("断言设置接口返回值类型为 int"):
@@ -63,7 +61,7 @@ def test_set_pro_gripper_angle_exception(device, case):
 
     with allure.step(f"断言设置接口抛出 MercuryDataException, value: {case['value']}"):
         with pytest.raises(MercuryDataException):
-            device.ml.set_pro_gripper_angle(case["value"])
+            device.mc.set_pro_gripper_angle(case["value"])
 
     logger.info(f"✅ 用例【{case['title']}】异常断言成功")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")

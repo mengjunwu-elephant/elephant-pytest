@@ -9,7 +9,6 @@ from settings import MercuryBase
 # 从Excel中提取数据
 cases = get_test_data_from_excel(MercuryBase.PRO_GRIPPER_TEST_DATA_FILE, "set_pro_gripper")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
@@ -17,7 +16,6 @@ def device():
     yield dev
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("设置Pro夹爪参数")
 @allure.story("正常用例")
@@ -29,7 +27,7 @@ def test_set_pro_gripper_normal(device, case):
     logger.debug(f"test_value: {case['value']}")
 
     with allure.step("调用接口设置 Pro 夹爪参数"):
-        set_res = device.ml.set_pro_gripper(case["parameter"], case["value"])
+        set_res = device.mc.set_pro_gripper(case["parameter"], case["value"])
         allure.attach(str(set_res), "设置接口返回值", allure.attachment_type.TEXT)
 
     with allure.step("断言设置接口返回值为 int"):
@@ -43,7 +41,6 @@ def test_set_pro_gripper_normal(device, case):
     logger.info(f"✅ 用例【{case['title']}】测试成功")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
 
-
 @allure.feature("设置Pro夹爪参数")
 @allure.story("异常用例")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
@@ -55,7 +52,7 @@ def test_set_pro_gripper_exception(device, case):
 
     with allure.step(f"断言设置 Pro 夹爪参数时抛出 MercuryDataException,address为{case['parameter']},value为{case['value']}"):
         with pytest.raises(MercuryDataException):
-            device.ml.set_pro_gripper(case["parameter"], case["value"])
+            device.mc.set_pro_gripper(case["parameter"], case["value"])
 
     logger.info(f"✅ 用例【{case['title']}】异常断言成功")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")

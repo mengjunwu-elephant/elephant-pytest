@@ -9,7 +9,6 @@ from settings import MercuryBase
 # 从Excel中提取数据
 cases = get_test_data_from_excel(MercuryBase.MY_HAND_TEST_DATA_FILE, "get_hand_gripper_d")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
@@ -17,7 +16,6 @@ def device():
     yield dev
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("获取单关节D值")
 @allure.story("正常用例")
@@ -29,7 +27,7 @@ def test_get_hand_gripper_d_normal(device, case):
     logger.debug(f"test_joint: {case['joint']}")
 
     with allure.step("发送请求，获取指定 joint 的 D 值"):
-        response = device.ml.get_hand_gripper_d(case["joint"])
+        response = device.mc.get_hand_gripper_d(case["joint"])
 
     with allure.step("断言返回类型为 int"):
         assert isinstance(response, int), f"返回类型错误，期望 int，实际为 {type(response)}"
@@ -42,7 +40,6 @@ def test_get_hand_gripper_d_normal(device, case):
     logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
-
 @allure.feature("获取单关节D值")
 @allure.story("异常用例")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
@@ -54,7 +51,7 @@ def test_get_hand_gripper_d_exception(device, case):
 
     with allure.step(f"尝试传入非法 joint 值，预期抛出 MercuryDataException,关节为{case['joint']}"):
         with pytest.raises(MercuryDataException):
-            device.ml.get_hand_gripper_d(case["joint"])
+            device.mc.get_hand_gripper_d(case["joint"])
 
     logger.info(f"✅ 异常断言成功，用例【{title}】测试通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")

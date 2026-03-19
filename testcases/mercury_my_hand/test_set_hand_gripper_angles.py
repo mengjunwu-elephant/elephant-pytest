@@ -15,7 +15,7 @@ def device():
     logger.info("初始化完成，接口测试开始")
     yield dev
     # 测试结束复位夹爪角度
-    dev.ml.set_hand_gripper_angles([0, 0, 0, 0, 0, 0], dev.speed)
+    dev.mc.set_hand_gripper_angles([0, 0, 0, 0, 0, 0], dev.speed)
     dev.close()
     logger.info("环境清理完成，接口测试结束")
 
@@ -31,11 +31,11 @@ def test_set_hand_gripper_angles_normal(device, case):
     angles = eval(case["angles"])
 
     with allure.step("调用接口设置多个夹爪角度"):
-        set_res = device.ml.set_hand_gripper_angles(angles, case["speed"])
+        set_res = device.mc.set_hand_gripper_angles(angles, case["speed"])
         sleep(3)
 
     with allure.step("调用接口获取多个夹爪角度"):
-        get_res = device.ml.get_hand_gripper_angles()
+        get_res = device.mc.get_hand_gripper_angles()
 
     with allure.step("断言设置接口返回类型为 int"):
         assert isinstance(set_res, int), f"返回类型错误，实际类型为 {type(set_res)}"
@@ -66,7 +66,7 @@ def test_set_hand_gripper_angles_exception(device, case):
 
     with allure.step(f"调用接口，预期抛出 MercuryDataException,角度为{angles},速度为{case['speed']}"):
         with pytest.raises(MercuryDataException, match=f".*"):
-            device.ml.set_hand_gripper_angles(angles, case["speed"])
+            device.mc.set_hand_gripper_angles(angles, case["speed"])
 
     logger.info(f"✅ 用例【{case['title']}】测试成功")
     logger.info(f"》》》》》用例【{case['title']}】测试完成《《《《《")

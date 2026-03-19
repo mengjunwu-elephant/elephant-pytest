@@ -7,16 +7,14 @@ from settings import MercuryBase
 # 读取测试数据
 cases = get_test_data_from_excel(MercuryBase.MY_HAND_TEST_DATA_FILE, "get_hand_gripper_angles")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
-    dev.ml.set_hand_gripper_angles([0, 0, 0, 0, 0, 0], dev.speed)
+    dev.mc.set_hand_gripper_angles([0, 0, 0, 0, 0, 0], dev.speed)
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("获取全关节角度")
 @allure.story("获取所有夹爪关节角度")
@@ -28,10 +26,10 @@ def test_get_hand_gripper_angles(device, case):
     logger.debug(f"test_api: {case['api']}")
 
     with allure.step('设置全关节角度'):
-        device.ml.set_hand_gripper_angles(angles, device.speed)
+        device.mc.set_hand_gripper_angles(angles, device.speed)
 
     with allure.step("发送请求，获取所有夹爪关节角度"):
-        response = device.ml.get_hand_gripper_angles()
+        response = device.mc.get_hand_gripper_angles()
 
     with allure.step("断言返回类型为 list"):
         assert isinstance(response, list), f"返回类型错误，期望 list，实际为 {type(response)}"

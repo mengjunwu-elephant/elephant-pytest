@@ -8,26 +8,21 @@ from settings import MercuryBase
 
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "jog_coord")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
-    dev.ml.power_on()
-    dev.mr.power_on()
+    dev.mc.power_on()
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.go_zero()
-    dev.mr.power_off()
-    dev.ml.power_off()
+    dev.mc.power_off()
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @pytest.fixture(autouse=True)
 def reset_coords(device):
     device.init_coords()
     yield
-
 
 @allure.feature("jog_coord 接口测试")
 @allure.story("正常功能验证")
@@ -41,19 +36,13 @@ def test_jog_coord_normal(device, case):
     logger.info(f"》》》开始用例【{title}】《《《")
     logger.debug(f"Axis: {axis}, Param: {param}, Speed: {speed}")
 
-    with allure.step("发送 jog_coord 指令（左臂）"):
-        l_response = device.ml.jog_coord(axis, param, speed)
-
-    with allure.step("发送 jog_coord 指令（右臂）"):
-        r_response = device.mr.jog_coord(axis, param, speed)
-
+    with allure.step("发送 jog_coord 指令（机械臂）"):
+        response = device.mc.jog_coord(axis, param, speed)
     with allure.step("断言响应类型"):
-        assert isinstance(l_response, int), f"左臂响应应为 int，实际为 {type(l_response)}"
-        assert isinstance(r_response, int), f"右臂响应应为 int，实际为 {type(r_response)}"
+        assert isinstance(response, int), f"机械臂响应应为 int，实际为 {type(response)}"
 
     with allure.step("断言返回值正确"):
-        assert_almost_equal(l_response,case["l_expect_data"],tol=2,name='jog坐标运动'), f"左臂期望值：{case['l_expect_data']}，实际值：{l_response}"
-        assert_almost_equal(r_response,case["r_expect_data"],tol=2,name='jog坐标运动'), f"右臂期望值：{case['r_expect_data']}，实际值：{r_response}"
+        assert_almost_equal(response,case["l_expect_data"],tol=2,name='jog坐标运动'), f"机械臂期望值：{case['l_expect_data']}，实际值：{response}"
 
     logger.info(f"✅ 用例【{case['title']}】测试通过")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
@@ -72,7 +61,7 @@ def test_jog_coord_exception(device, case):
 
     with allure.step("发送异常 jog_coord 指令并断言抛出 MercuryDataException") as exc_info:
         with pytest.raises(MercuryDataException):
-            device.ml.jog_coord(axis, param, speed)
+            device.mc.jog_coord(axis, param, speed)
 
     logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"✅ 异常用例【{title}】触发成功")

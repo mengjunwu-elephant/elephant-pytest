@@ -11,21 +11,17 @@ cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "set_end_type")
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
-    dev.ml.power_on()
-    dev.mr.power_on()
+    dev.mc.power_on()
     logger.info("初始化完成，接口测试开始")
     yield dev
     # 测试结束复位
-    dev.ml.set_end_type(0)
-    dev.mr.set_end_type(0)
-    dev.mr.power_off()
-    dev.ml.power_off()
+    dev.mc.set_end_type(0)
+    dev.mc.power_off()
     dev.close()
     logger.info("环境清理完成，接口测试结束")
 
-
 @allure.feature("设置末端类型")
-@allure.story("正常用例 - 设置左右臂末端类型")
+@allure.story("正常用例 - 设置机械臂末端类型")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"], ids=lambda c: c["title"])
 def test_set_end_type_normal(device, case):
     title = case["title"]
@@ -33,23 +29,16 @@ def test_set_end_type_normal(device, case):
     logger.debug(f"测试API: {case['api']}")
     logger.debug(f"测试参数: {case['parameter']}")
 
-    with allure.step("设置左臂末端类型"):
-        l_response = device.ml.set_end_type(case["parameter"])
-
-    with allure.step("设置右臂末端类型"):
-        r_response = device.mr.set_end_type(case["parameter"])
-
+    with allure.step("设置机械臂末端类型"):
+        response = device.mc.set_end_type(case["parameter"])
     with allure.step("断言返回类型为int"):
-        assert isinstance(l_response, int), f"左臂返回类型错误：{type(l_response)}"
-        assert isinstance(r_response, int), f"右臂返回类型错误：{type(r_response)}"
+        assert isinstance(response, int), f"机械臂返回类型错误：{type(response)}"
 
     with allure.step("断言返回结果与期望值一致"):
-        assert l_response == case["l_expect_data"], f"左臂期望={case['l_expect_data']}，实际={l_response}"
-        assert r_response == case["r_expect_data"], f"右臂期望={case['r_expect_data']}，实际={r_response}"
+        assert response == case["l_expect_data"], f"机械臂期望={case['l_expect_data']}，实际={response}"
 
     logger.info(f"✅ 用例【{title}】测试通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")
-
 
 @allure.feature("设置末端类型")
 @allure.story("异常用例 - 设置末端类型异常输入")
@@ -62,8 +51,7 @@ def test_set_end_type_exception(device, case):
 
     with allure.step("异常参数设置末端类型，应触发 MercuryDataException 异常"):
         with pytest.raises(MercuryDataException) as exc_info:
-            device.ml.set_end_type(case["parameter"])
-            device.mr.set_end_type(case["parameter"])
+            device.mc.set_end_type(case["parameter"])
 
     logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

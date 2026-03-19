@@ -7,17 +7,15 @@ from settings import MercuryBase
 # 获取全部测试用例数据
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "get_atom_modify_version")
 
-
 @pytest.fixture(scope="module")
 def device():
     """设备初始化：机械臂上电"""
     dev = MercuryBase()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.ml.power_off()
+    dev.mc.power_off()
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("获取Atom更正版本号")
 @allure.story("上电 - 获取Atom更正版本号")
@@ -31,21 +29,20 @@ def test_get_atom_modify_version_power_on(device, case):
     device.reset()
 
     with allure.step("机械臂发送请求"):
-        l_response = device.ml.get_atom_modify_version()
-        logger.debug(f"机械臂响应：{l_response}")
+        response = device.mc.get_atom_modify_version()
+        logger.debug(f"机械臂响应：{response}")
 
     with allure.step("机械臂断言响应数据类型为 int"):
-        assert isinstance(l_response, int), f"机械臂返回值类型错误，应为 int，实际为 {type(l_response)}"
+        assert isinstance(response, int), f"机械臂返回值类型错误，应为 int，实际为 {type(response)}"
 
     with allure.step("机械臂断言响应结果"):
         allure.attach(str(case['l_expect_data']), name="机械臂期望值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(l_response), name="机械臂实际值", attachment_type=allure.attachment_type.TEXT)
-        assert l_response == case['l_expect_data'], f"机械臂断言失败：期望 {case['l_expect_data']}，实际 {l_response}"
+        allure.attach(str(response), name="机械臂实际值", attachment_type=allure.attachment_type.TEXT)
+        assert response == case['l_expect_data'], f"机械臂断言失败：期望 {case['l_expect_data']}，实际 {response}"
 
     logger.info(f"✅ 用例【{title}】测试通过")
     device.reset()
     logger.info(f"》》》用例【{title}】测试完成《《《")
-
 
 @allure.feature("获取Atom更正版本号")
 @allure.story("仅上电 - 获取Atom更正版本号")
@@ -58,20 +55,19 @@ def test_get_atom_modify_version_power_on_only(device, case):
     logger.debug(f"test_parameter: {case['parameter']}")
 
     with allure.step("发送请求"):
-        l_response = device.ml.get_atom_modify_version()
+        response = device.mc.get_atom_modify_version()
 
     with allure.step("机械臂断言响应为 None"):
-        assert l_response is None, f"机械臂返回值应为 None，实际为 {l_response}"
+        assert response is None, f"机械臂返回值应为 None，实际为 {response}"
 
     with allure.step("机械臂断言响应结果"):
         allure.attach(str(case['l_expect_data']), name="机械臂期望值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(l_response), name="机械臂实际值", attachment_type=allure.attachment_type.TEXT)
-        assert l_response == case['l_expect_data'],f'机械臂断言失败：期望 {case["l_expect_data"]}，实际 {l_response}'
+        allure.attach(str(response), name="机械臂实际值", attachment_type=allure.attachment_type.TEXT)
+        assert response == case['l_expect_data'],f'机械臂断言失败：期望 {case["l_expect_data"]}，实际 {response}'
 
     logger.info(f"✅ 用例【{title}】测试通过")
     device.reset()
     logger.info(f"》》》用例【{title}】测试完成《《《")
-
 
 @allure.feature("获取Atom更正版本号")
 @allure.story("断电 - 获取Atom更正版本号")
@@ -84,15 +80,15 @@ def test_get_atom_modify_version_power_off(device, case):
     logger.debug(f"test_parameter: {case['parameter']}")
 
     with allure.step("发送请求"):
-        l_response = device.ml.get_atom_modify_version()
+        response = device.mc.get_atom_modify_version()
 
     with allure.step("机械臂断言响应为 None"):
-        assert l_response is None, f"机械臂返回值应为 None，实际为 {l_response}"
+        assert response is None, f"机械臂返回值应为 None，实际为 {response}"
 
     with allure.step("断言响应结果"):
         allure.attach(str(case['l_expect_data']), name="机械臂期望值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(l_response), name="机械臂实际值", attachment_type=allure.attachment_type.TEXT)
-        assert l_response == case['l_expect_data'],f'机械臂断言失败：期望 {case["l_expect_data"]}，实际 {l_response}'
+        allure.attach(str(response), name="机械臂实际值", attachment_type=allure.attachment_type.TEXT)
+        assert response == case['l_expect_data'],f'机械臂断言失败：期望 {case["l_expect_data"]}，实际 {response}'
 
     logger.info(f"✅ 用例【{title}】测试通过")
     device.reset()

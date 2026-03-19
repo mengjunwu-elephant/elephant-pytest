@@ -14,7 +14,6 @@ def device():
     dev.close()
     logger.info("环境清理完成，接口测试结束")
 
-
 @allure.feature("获取主版本号")
 @allure.story("查询固件主版本号")
 @pytest.mark.parametrize("case", cases, ids=lambda c: c["title"])
@@ -25,7 +24,7 @@ def test_get_hand_firmware_major_version(device, case):
     logger.debug(f"test_parameter: {case['parameter']}")
 
     with allure.step("发送请求，获取固件主版本号"):
-        response = device.ml.get_hand_firmware_major_version()
+        response = device.mc.get_hand_firmware_major_version()
 
     with allure.step("断言返回类型为 float"):
         assert isinstance(response, float), f"返回类型错误，期望 float，实际为 {type(response)}"

@@ -9,14 +9,12 @@ cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "is_power_on")
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
-    # 初始化先左臂上电，后右臂上电
-    dev.ml.power_on()
-    dev.mr.power_on()
+    # 初始化先机械臂上电，后机械臂上电
+    dev.mc.power_on()
     logger.info("初始化完成，接口测试开始")
     yield dev
     # 测试结束，依次下电并关闭设备
-    dev.ml.power_off()
-    dev.mr.power_off()
+    dev.mc.power_off()
     dev.close()
     logger.info("环境清理完成，接口测试结束")
 
@@ -35,25 +33,14 @@ def test_power_on(device, case):
     logger.debug(f'test_api: {case["api"]}')
     logger.debug(f'test_parameter: {case["parameter"]}')
 
-    with allure.step("左臂查询上电状态"):
-        l_response = device.ml.is_power_on()
-    with allure.step("右臂查询上电状态"):
-        r_response = device.mr.is_power_on()
-
-    with allure.step("左臂断言返回类型"):
-        assert isinstance(l_response, int), f"左臂返回类型错误：{type(l_response)}"
-    with allure.step("右臂断言返回类型"):
-        assert isinstance(r_response, int), f"右臂返回类型错误：{type(r_response)}"
-
-    with allure.step("左臂断言返回结果"):
-        allure.attach(str(case['l_expect_data']),name= "左臂期望值",attachment_type= allure.attachment_type.TEXT)
-        allure.attach(str(l_response),name= "左臂实际值",attachment_type= allure.attachment_type.TEXT)
-        assert l_response == case["l_expect_data"], f"左臂结果断言失败，期望：{case['l_expect_data']}，实际：{l_response}"
-    with allure.step("右臂断言返回结果"):
-        allure.attach(str(case['r_expect_data']),name= "右臂期望值",attachment_type= allure.attachment_type.TEXT)
-        allure.attach(str(r_response),name= "右臂实际值",attachment_type= allure.attachment_type.TEXT)
-        assert r_response == case["r_expect_data"], f"右臂结果断言失败，期望：{case['r_expect_data']}，实际：{r_response}"
-
+    with allure.step("机械臂查询上电状态"):
+        response = device.mc.is_power_on()
+    with allure.step("机械臂断言返回类型"):
+        assert isinstance(response, int), f"机械臂返回类型错误：{type(response)}"
+    with allure.step("机械臂断言返回结果"):
+        allure.attach(str(case['l_expect_data']),name= "机械臂期望值",attachment_type= allure.attachment_type.TEXT)
+        allure.attach(str(response),name= "机械臂实际值",attachment_type= allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂结果断言失败，期望：{case['l_expect_data']}，实际：{response}"
     logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
@@ -69,25 +56,14 @@ def test_power_off(device, case):
 
     device.power_off()  # 全部下电
 
-    with allure.step("左臂查询上电状态"):
-        l_response = device.ml.is_power_on()
-    with allure.step("右臂查询上电状态"):
-        r_response = device.mr.is_power_on()
-
-    with allure.step("左臂断言返回类型"):
-        assert isinstance(l_response, int), f"左臂返回类型错误：{type(l_response)}"
-    with allure.step("右臂断言返回类型"):
-        assert isinstance(r_response, int), f"右臂返回类型错误：{type(r_response)}"
-
-    with allure.step("左臂断言返回结果"):
-        allure.attach(str(case['l_expect_data']),name='左臂期望值',attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(l_response),name='左臂实际值',attachment_type=allure.attachment_type.TEXT)
-        assert l_response == case["l_expect_data"], f"左臂结果断言失败，期望：{case['l_expect_data']}，实际：{l_response}"
-    with allure.step("右臂断言返回结果"):
-        allure.attach(str(case['r_expect_data']),name='右臂期望值',attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(r_response),name='右臂实际值',attachment_type=allure.attachment_type.TEXT)
-        assert r_response == case["r_expect_data"], f"右臂结果断言失败，期望：{case['r_expect_data']}，实际：{r_response}"
-
+    with allure.step("机械臂查询上电状态"):
+        response = device.mc.is_power_on()
+    with allure.step("机械臂断言返回类型"):
+        assert isinstance(response, int), f"机械臂返回类型错误：{type(response)}"
+    with allure.step("机械臂断言返回结果"):
+        allure.attach(str(case['l_expect_data']),name='机械臂期望值',attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response),name='机械臂实际值',attachment_type=allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂结果断言失败，期望：{case['l_expect_data']}，实际：{response}"
     logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
@@ -103,25 +79,14 @@ def test_power_on_only(device, case):
 
     device.power_on_only()  # 仅上电
 
-    with allure.step("左臂查询上电状态"):
-        l_response = device.ml.is_power_on()
-    with allure.step("右臂查询上电状态"):
-        r_response = device.mr.is_power_on()
-
-    with allure.step("左臂断言返回类型"):
-        assert isinstance(l_response, int), f"左臂返回类型错误：{type(l_response)}"
-    with allure.step("右臂断言返回类型"):
-        assert isinstance(r_response, int), f"右臂返回类型错误：{type(r_response)}"
-
-    with allure.step("左臂断言返回结果"):
-        allure.attach(str(case['l_expect_data']),name='左臂期望值',attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(l_response),name='左臂实际值',attachment_type=allure.attachment_type.TEXT)
-        assert l_response == case["l_expect_data"], f"左臂结果断言失败，期望：{case['l_expect_data']}，实际：{l_response}"
-    with allure.step("右臂断言返回结果"):
-        allure.attach(str(case['r_expect_data']),name='右臂期望值',attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(r_response),name='右臂实际值',attachment_type=allure.attachment_type.TEXT)
-        assert r_response == case["r_expect_data"], f"右臂结果断言失败，期望：{case['r_expect_data']}，实际：{r_response}"
-
+    with allure.step("机械臂查询上电状态"):
+        response = device.mc.is_power_on()
+    with allure.step("机械臂断言返回类型"):
+        assert isinstance(response, int), f"机械臂返回类型错误：{type(response)}"
+    with allure.step("机械臂断言返回结果"):
+        allure.attach(str(case['l_expect_data']),name='机械臂期望值',attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response),name='机械臂实际值',attachment_type=allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂结果断言失败，期望：{case['l_expect_data']}，实际：{response}"
     logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
@@ -136,24 +101,15 @@ def test_emergency(device, case):
     logger.debug(f'test_parameter: {case["parameter"]}')
 
     input(print("请按下急停，点击回车后继续测试"))
-    device.ml.power_on()
-    device.mr.power_on()
+    device.mc.power_on()
 
-    with allure.step("左臂查询上电状态"):
-        l_response = device.ml.is_power_on()
-    with allure.step("右臂查询上电状态"):
-        r_response = device.mr.is_power_on()
-
+    with allure.step("机械臂查询上电状态"):
+        response = device.mc.is_power_on()
     input(print("请松开急停，点击回车后继续测试"))
 
-    with allure.step("左臂断言返回结果"):
-        allure.attach(str(case['l_expect_data']),name='左臂期望值',attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(l_response),name='左臂实际值',attachment_type=allure.attachment_type.TEXT)
-        assert l_response == case["l_expect_data"], f"左臂结果断言失败，期望：{case['l_expect_data']}，实际：{l_response}"
-    with allure.step("右臂断言返回结果"):
-        allure.attach(str(case['r_expect_data']),name='右臂期望值',attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(r_response),name='右臂实际值',attachment_type=allure.attachment_type.TEXT)
-        assert r_response == case["r_expect_data"], f"右臂结果断言失败，期望：{case['r_expect_data']}，实际：{r_response}"
-
+    with allure.step("机械臂断言返回结果"):
+        allure.attach(str(case['l_expect_data']),name='机械臂期望值',attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response),name='机械臂实际值',attachment_type=allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂结果断言失败，期望：{case['l_expect_data']}，实际：{response}"
     logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")

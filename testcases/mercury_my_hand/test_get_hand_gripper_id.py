@@ -25,7 +25,7 @@ def test_get_hand_gripper_id(device, case):
     logger.debug(f"test_parameters: {case.get('parameter', None)}")
 
     with allure.step("调用 get_hand_gripper_id 接口"):
-        response = device.ml.get_hand_gripper_id()
+        response = device.mc.get_hand_gripper_id()
 
     with allure.step("校验返回类型是否为 int"):
         assert isinstance(response, int), f"返回类型错误，实际为 {type(response)}"

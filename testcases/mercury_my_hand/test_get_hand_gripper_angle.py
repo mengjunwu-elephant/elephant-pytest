@@ -11,12 +11,11 @@ cases = get_test_data_from_excel(MercuryBase.MY_HAND_TEST_DATA_FILE, "get_hand_g
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
-    dev.ml.set_hand_gripper_angles([0, 0, 0, 0, 0, 0], dev.speed)
+    dev.mc.set_hand_gripper_angles([0, 0, 0, 0, 0, 0], dev.speed)
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("获取单关节角度")
 @allure.story("查询单个夹爪角度 - 正常用例")
@@ -28,7 +27,7 @@ def test_get_hand_gripper_angle(device, case):
     logger.debug(f"test_joint: {case['joint']}")
 
     with allure.step("发送请求，获取指定夹爪关节角度"):
-        response = device.ml.get_hand_gripper_angle(case["joint"])
+        response = device.mc.get_hand_gripper_angle(case["joint"])
 
     with allure.step("断言返回类型为 int"):
         assert isinstance(response, int), f"返回类型错误，期望 int，实际为 {type(response)}"
@@ -41,7 +40,6 @@ def test_get_hand_gripper_angle(device, case):
     logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
-
 @allure.feature("获取单关节角度")
 @allure.story("查询单个夹爪角度 - 异常用例")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
@@ -53,7 +51,7 @@ def test_get_hand_gripper_angle_exception(device, case):
 
     with allure.step(f"尝试传入异常参数，期望抛出 MercuryDataException,关节为{case['joint']}"):
         with pytest.raises(MercuryDataException):
-            device.ml.get_hand_gripper_angle(case["joint"])
+            device.mc.get_hand_gripper_angle(case["joint"])
 
     logger.info(f"✅ 用例【{title}】异常断言成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")

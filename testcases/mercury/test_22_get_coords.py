@@ -8,19 +8,15 @@ from settings import MercuryBase
 # 获取测试数据
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "get_coords")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
-    dev.ml.power_on()
-    dev.mr.power_on()
+    dev.mc.power_on()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.mr.power_off()
-    dev.ml.power_off()
+    dev.mc.power_off()
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("get_coords 接口测试")
 @allure.story("获取双臂坐标")
@@ -33,25 +29,16 @@ def test_get_coords(device, case):
         logger.debug("test_api: {}".format(case["api"]))
         logger.debug("test_parameter: {}".format(case["parameter"]))
 
-    with allure.step("左臂请求发送"):
-        l_response = device.ml.get_coords(eval(case['parameter']))
-        logger.debug(f"左臂返回值: {l_response}")
-
-    with allure.step("右臂请求发送"):
-        r_response = device.mr.get_coords(eval(case['parameter']))
-        logger.debug(f"右臂返回值: {r_response}")
-
+    with allure.step("机械臂请求发送"):
+        response = device.mc.get_coords(eval(case['parameter']))
+        logger.debug(f"机械臂返回值: {response}")
     with allure.step("类型断言"):
-        assert isinstance(l_response, list), f"左臂返回类型错误，实际为: {type(l_response)}"
-        assert isinstance(r_response, list), f"右臂返回类型错误，实际为: {type(r_response)}"
+        assert isinstance(response, list), f"机械臂返回类型错误，实际为: {type(response)}"
 
     with allure.step('断言 get_angles 接口返回值是否匹配预期'):
-        allure.attach(str(case['l_expect_data']), name="左臂期望", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(l_response), name="左臂实际", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(case['r_expect_data']), name="右臂期望", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(r_response), name="右臂实际", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(l_response,eval(case['l_expect_data']),tol=3,name='左臂获取全坐标'), f"左臂响应不一致，期望: {case['l_expect_data']}，实际: {l_response}"
-        assert_almost_equal(r_response,eval(case['r_expect_data']),tol=3,name='右臂获取全坐标'), f"右臂响应不一致，期望: {case['r_expect_data']}，实际: {r_response}"
+        allure.attach(str(case['l_expect_data']), name="机械臂期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response), name="机械臂实际", attachment_type=allure.attachment_type.TEXT)
+        assert_almost_equal(response,eval(case['l_expect_data']),tol=3,name='机械臂获取全坐标'), f"机械臂响应不一致，期望: {case['l_expect_data']}，实际: {response}"
 
     logger.info(f"✅ 用例【{case['title']}】测试通过")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")

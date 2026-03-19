@@ -7,7 +7,6 @@ from settings import MercuryBase
 # 从 Excel 中提取测试数据
 cases = get_test_data_from_excel(MercuryBase.PRO_GRIPPER_TEST_DATA_FILE, "set_pro_gripper_calibration")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
@@ -15,7 +14,6 @@ def device():
     yield dev
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("设置Pro夹爪校准")
 @allure.story("校准接口返回值验证")
@@ -26,7 +24,7 @@ def test_set_pro_gripper_calibration(device, case):
     logger.debug(f"test_parameters: {case.get('parameter', '')}")
 
     with allure.step("调用 set_pro_gripper_calibration 接口"):
-        response = device.ml.set_pro_gripper_calibration()
+        response = device.mc.set_pro_gripper_calibration()
         allure.attach(str(response), "接口返回值", allure.attachment_type.TEXT)
 
     with allure.step("断言返回类型为 int"):

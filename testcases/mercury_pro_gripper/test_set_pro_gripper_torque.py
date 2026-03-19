@@ -9,16 +9,14 @@ from settings import MercuryBase
 # 提取测试数据
 cases = get_test_data_from_excel(MercuryBase.PRO_GRIPPER_TEST_DATA_FILE, "set_pro_gripper_torque")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.ml.set_pro_gripper_torque(100)
-    dev.ml.close()
+    dev.mc.set_pro_gripper_torque(100)
+    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("设置Pro夹爪扭矩 - 正常值")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"], ids=lambda c: c["title"])
@@ -28,11 +26,11 @@ def test_set_pro_gripper_torque_normal(device, case):
     logger.debug(f"test_parameters: {case['parameter']}")
 
     with allure.step("调用 set_pro_gripper_torque 设置值"):
-        set_res = device.ml.set_pro_gripper_torque(case["parameter"])
+        set_res = device.mc.set_pro_gripper_torque(case["parameter"])
         allure.attach(str(set_res), "设置返回值", allure.attachment_type.TEXT)
 
     with allure.step("调用 get_pro_gripper_torque 获取当前值"):
-        get_res = device.ml.get_pro_gripper_torque()
+        get_res = device.mc.get_pro_gripper_torque()
         allure.attach(str(get_res), "当前扭矩值", allure.attachment_type.TEXT)
 
     with allure.step("断言返回值类型为 int"):
@@ -51,7 +49,6 @@ def test_set_pro_gripper_torque_normal(device, case):
     logger.info(f"✅ 用例【{case['title']}】测试成功")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
 
-
 @allure.feature("设置Pro夹爪扭矩")
 @allure.story("异常用例")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
@@ -62,7 +59,7 @@ def test_set_pro_gripper_torque_exception(device, case):
 
     with allure.step(f"断言设置异常值时抛出 MercuryDataException，扭矩为{case['parameter']}"):
         with pytest.raises(MercuryDataException):
-            device.ml.set_pro_gripper_torque(case["parameter"])
+            device.mc.set_pro_gripper_torque(case["parameter"])
 
     logger.info(f"✅ 异常用例【{case['title']}】测试成功")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")

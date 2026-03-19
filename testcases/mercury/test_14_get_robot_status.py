@@ -6,19 +6,15 @@ from settings import MercuryBase
 
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "get_robot_status")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
-    dev.ml.power_on()
-    dev.mr.power_on()
+    dev.mc.power_on()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.mr.power_off()
-    dev.ml.power_off()
+    dev.mc.power_off()
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("机器人状态查询接口")
 @allure.story("上电状态查询")
@@ -29,29 +25,16 @@ def test_get_robot_status_power_on(device, case):
     logger.debug(f"test_api: {case['api']}")
     logger.debug(f"test_parameter: {case['parameter']}")
 
-    with allure.step("查询左臂状态"):
-        l_response = device.ml.get_robot_status()
-
-    with allure.step("查询右臂状态"):
-        r_response = device.mr.get_robot_status()
-
-    with allure.step("左臂断言返回类型为 list"):
-        assert isinstance(l_response, list), f"左臂返回类型错误：{type(l_response)}"
-    with allure.step("右臂断言返回类型为 list"):
-        assert isinstance(r_response, list), f"右臂返回类型错误：{type(r_response)}"
-
-    with allure.step("左臂断言返回结果"):
-        allure.attach(str(case["l_expect_data"]),name= "左臂期望值",attachment_type= allure.attachment_type.TEXT)
-        allure.attach(str(l_response),name= "左臂实际值",attachment_type= allure.attachment_type.TEXT)
-        assert l_response == eval(case["l_expect_data"]), f"左臂断言失败，期望：{case['l_expect_data']}，实际：{l_response}"
-    with allure.step("右臂断言返回结果"):
-        allure.attach(str(case["r_expect_data"]),name= "右臂期望值",attachment_type= allure.attachment_type.TEXT)
-        allure.attach(str(r_response),name= "右臂实际值",attachment_type= allure.attachment_type.TEXT)
-        assert r_response == eval(case["r_expect_data"]), f"右臂断言失败，期望：{case['r_expect_data']}，实际：{r_response}"
-
+    with allure.step("查询机械臂状态"):
+        response = device.mc.get_robot_status()
+    with allure.step("机械臂断言返回类型为 list"):
+        assert isinstance(response, list), f"机械臂返回类型错误：{type(response)}"
+    with allure.step("机械臂断言返回结果"):
+        allure.attach(str(case["l_expect_data"]),name= "机械臂期望值",attachment_type= allure.attachment_type.TEXT)
+        allure.attach(str(response),name= "机械臂实际值",attachment_type= allure.attachment_type.TEXT)
+        assert response == eval(case["l_expect_data"]), f"机械臂断言失败，期望：{case['l_expect_data']}，实际：{response}"
     logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")
-
 
 @allure.feature("机器人状态查询接口")
 @allure.story("仅上电状态查询")
@@ -65,25 +48,13 @@ def test_get_robot_status_power_on_only(device, case):
     with allure.step("设置机械臂为仅上电模式"):
         device.power_on_only()
 
-    with allure.step("查询左臂状态"):
-        l_response = device.ml.get_robot_status()
-
-    with allure.step("查询右臂状态"):
-        r_response = device.mr.get_robot_status()
-
-    with allure.step("左臂断言返回类型为 list"):
-        assert isinstance(l_response, list), f"左臂返回类型错误：{type(l_response)}"
-    with allure.step("右臂断言返回类型为 list"):
-        assert isinstance(r_response, list), f"右臂返回类型错误：{type(r_response)}"
-
-    with allure.step("左臂断言返回结果"):
-        allure.attach(str(case["l_expect_data"]),name= "左臂期望值",attachment_type= allure.attachment_type.TEXT)
-        allure.attach(str(l_response),name= "左臂实际值",attachment_type= allure.attachment_type.TEXT)
-        assert l_response == eval(case["l_expect_data"]), f"左臂断言失败，期望：{case['l_expect_data']}，实际：{l_response}"
-    with allure.step("右臂断言返回结果"):
-        allure.attach(str(case["r_expect_data"]),name= "右臂期望值",attachment_type= allure.attachment_type.TEXT)
-        allure.attach(str(r_response),name= "右臂实际值",attachment_type= allure.attachment_type.TEXT)
-        assert r_response == eval(case["r_expect_data"]), f"右臂断言失败，期望：{case['r_expect_data']}，实际：{r_response}"
-
+    with allure.step("查询机械臂状态"):
+        response = device.mc.get_robot_status()
+    with allure.step("机械臂断言返回类型为 list"):
+        assert isinstance(response, list), f"机械臂返回类型错误：{type(response)}"
+    with allure.step("机械臂断言返回结果"):
+        allure.attach(str(case["l_expect_data"]),name= "机械臂期望值",attachment_type= allure.attachment_type.TEXT)
+        allure.attach(str(response),name= "机械臂实际值",attachment_type= allure.attachment_type.TEXT)
+        assert response == eval(case["l_expect_data"]), f"机械臂断言失败，期望：{case['l_expect_data']}，实际：{response}"
     logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")

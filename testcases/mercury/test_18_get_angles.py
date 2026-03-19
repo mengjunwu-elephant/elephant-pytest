@@ -9,19 +9,15 @@ from settings import MercuryBase
 # 加载测试数据
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "get_angles")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
-    dev.ml.power_on()
-    dev.mr.power_on()
+    dev.mc.power_on()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.mr.power_off()
-    dev.ml.power_off()
+    dev.mc.power_off()
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("获取角度信息")
 @allure.story("正常获取当前关节角度")
@@ -29,27 +25,17 @@ def device():
 def test_get_angles(device, case):
     logger.info(f"》》》用例【{case['title']}】开始测试《《《")
 
-    with allure.step("左臂调用 get_angles 接口获取当前角度"):
-        l_response = device.ml.get_angles()
-    with allure.step("右臂调用 get_angles 接口获取当前角度"):
-        r_response = device.mr.get_angles()
-
-    with allure.step("左臂断言返回类型为 list"):
-        assert isinstance(l_response, list), f"左臂响应类型错误: {type(l_response)}"
-    with allure.step("右臂断言返回类型为 list"):
-        assert isinstance(r_response, list), f"右臂响应类型错误: {type(r_response)}"
-
+    with allure.step("机械臂调用 get_angles 接口获取当前角度"):
+        response = device.mc.get_angles()
+    with allure.step("机械臂断言返回类型为 list"):
+        assert isinstance(response, list), f"机械臂响应类型错误: {type(response)}"
     with allure.step("断言角度值是否符合预期"):
-        expected_l = eval(case["l_expect_data"])
-        expected_r = eval(case["r_expect_data"])
+        expected = eval(case["l_expect_data"])
 
-        allure.attach(str(expected_l), name="左臂期望值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(expected_r), name="右臂期望值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(l_response), name="左臂实际值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(r_response), name="右臂实际值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(expected), name="机械臂期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response), name="机械臂实际值", attachment_type=allure.attachment_type.TEXT)
 
-        assert_almost_equal(l_response,expected_l,tol=1,name='获取全角度'), f"左臂角度不一致，期望: {expected_l}，实际: {l_response}"
-        assert_almost_equal(r_response,expected_r,tol=1,name='获取全角度'), f"右臂角度不一致，期望: {expected_r}，实际: {r_response}"
+        assert_almost_equal(response,expected,tol=1,name='获取全角度'), f"机械臂角度不一致，期望: {expected}，实际: {response}"
 
     logger.info(f"✅ 用例【{case['title']}】测试通过")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
