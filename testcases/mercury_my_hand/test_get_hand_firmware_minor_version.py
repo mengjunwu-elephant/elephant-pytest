@@ -7,7 +7,6 @@ from settings import MercuryBase
 # 从 Excel 读取测试数据
 cases = get_test_data_from_excel(MercuryBase.MY_HAND_TEST_DATA_FILE, "get_hand_firmware_minor_version")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
@@ -15,7 +14,6 @@ def device():
     yield dev
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("获取次版本号")
 @allure.story("查询固件次版本号")
@@ -27,7 +25,7 @@ def test_get_hand_firmware_minor_version(device, case):
     logger.debug(f"test_parameter: {case['parameter']}")
 
     with allure.step("发送请求，获取固件次版本号"):
-        response = device.ml.get_hand_firmware_minor_version()
+        response = device.mc.get_hand_firmware_minor_version()
 
     with allure.step("断言返回类型为 int"):
         assert isinstance(response, int), f"返回类型错误，期望 int，实际为 {type(response)}"

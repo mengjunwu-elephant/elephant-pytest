@@ -54,3 +54,14 @@ pip3 install -r requirements.txt
 ```
 export PYTHONPATH="/home/elephant/Desktop/elephant-pytest:$PYTHONPATH"
 ```
+
+## 5. 测试框架说明（与 mycobot_450 分支对齐）
+
+- **`pytest.ini`**：`pythonpath = .`（减少 `ModuleNotFoundError: common1`）；markers：`hardware` / `slow` / `smoke` / `regression`；`testcases/` 下用例由 **`conftest.py`** 自动打 **`hardware`**（CI 可用 `pytest -m "not hardware"`）。
+- **`conftest.py`**：`mercury_left_port`（session）、默认 **`device`**（仅连接与 `close`，**不自动上电**）。各用例文件内的 **`device` fixture 会覆盖** 根配置。
+- **`settings.MercuryBase`（Mercury A1 单臂）**：
+  - pymycobot 实例字段为 **`self.mc`**（已从 X1 双臂的 `ml`/`mr` 全量改为单实例 `mc`）。
+  - 串口：**`MERCURY_PORT`** 或兼容旧名 **`MERCURY_LEFT_PORT`**，默认 **`/dev/ttyAMA1`**（Windows 可设为 `COM3`）。
+  - 串口日志：`MERCURY_SAVE_SERIAL_LOG`（默认 `1`）。
+  - 等待停止超时：`MERCURY_MOVE_TIMEOUT_SEC`（默认 `120`，`wait()` 未传 `timeout` 时使用）。
+- **Excel**：`common1/test_data_handler.get_test_data_from_excel` 支持 `required_columns`、空行跳过、sheet 校验；约定见 **`docs/EXCEL_TEST_DATA.md`**。

@@ -8,12 +8,10 @@ from settings import MercuryBase
 
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "write_move_c")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
-    dev.ml.power_on()
-    dev.mr.power_on()
+    dev.mc.power_on()
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.go_zero()
@@ -21,14 +19,12 @@ def device():
     dev.close()
     logger.info("环境清理完成，接口测试结束")
 
-
 @pytest.fixture(autouse=True)
 def reset_coords(device):
     # 每个用例后自动重置坐标
     yield
     device.init_coords()
     device.wait()
-
 
 @allure.feature("轨迹接口")
 @allure.story("正常写入轨迹点")
@@ -43,27 +39,23 @@ def test_write_move_c(device, case):
         endpoint = eval(case["endpoint"])
         speed = case["speed"]
 
-        with allure.step("调用右臂 write_move_c 接口"):
-            r_response = device.mr.write_move_c(transpoint, endpoint, speed)
+        with allure.step("调用机械臂 write_move_c 接口"):
             device.wait()
-            logger.debug(f"右臂响应: {r_response}")
 
-        with allure.step("调用左臂 write_move_c 接口"):
-            l_response = device.ml.write_move_c(transpoint, endpoint, speed)
+        with allure.step("调用机械臂 write_move_c 接口"):
+            response = device.mc.write_move_c(transpoint, endpoint, speed)
             device.wait()
-            logger.debug(f"左臂响应: {l_response}")
+            logger.debug(f"机械臂响应: {response}")
 
         with allure.step("断言返回值类型"):
-            assert isinstance(l_response, int), f"左臂返回类型应为 int，实际为 {type(l_response)}"
-            assert isinstance(r_response, int), f"右臂返回类型应为 int，实际为 {type(r_response)}"
+            assert isinstance(response, int), f"机械臂返回类型应为 int，实际为 {type(response)}"
 
         with allure.step("断言返回结果是否符合预期"):
-            expected_l = case["l_expect_data"]
-            assert l_response == expected_l, f"左臂期望: {expected_l}, 实际: {l_response}"
+            expected = case["l_expect_data"]
+            assert response == expected, f"机械臂期望: {expected}, 实际: {response}"
 
         logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")
-
 
 @allure.feature("轨迹接口")
 @allure.story("异常参数测试")
@@ -78,13 +70,13 @@ def test_write_move_c_exception(device, case):
         endpoint = eval(case["endpoint"])
         speed = case["speed"]
 
-        with allure.step("断言左臂调用接口时抛出 MercuryDataException 异常"):
+        with allure.step("断言机械臂调用接口时抛出 MercuryDataException 异常"):
             with pytest.raises(MercuryDataException):
-                device.ml.write_move_c(transpoint, endpoint, speed)
+                device.mc.write_move_c(transpoint, endpoint, speed)
 
-        with allure.step("断言右臂调用接口时抛出 MercuryDataException 异常"):
+        with allure.step("断言机械臂调用接口时抛出 MercuryDataException 异常"):
             with pytest.raises(MercuryDataException) as exc_info:
-                device.mr.write_move_c(transpoint, endpoint, speed)
+                device.mc.write_move_c(transpoint, endpoint, speed)
 
         logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

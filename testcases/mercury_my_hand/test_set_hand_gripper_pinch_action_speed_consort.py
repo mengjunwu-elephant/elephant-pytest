@@ -10,17 +10,15 @@ from settings import MercuryBase
 # 从Excel中提取数据
 cases = get_test_data_from_excel(MercuryBase.MY_HAND_TEST_DATA_FILE, "set_hand_gripper_pose")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
     logger.info("初始化完成，接口测试开始")
     yield dev
     # 恢复默认状态
-    dev.ml.set_hand_gripper_pinch_action_speed_consort(0, 5)
+    dev.mc.set_hand_gripper_pinch_action_speed_consort(0, 5)
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("设置夹爪捏合动作")
 @allure.story("正常用例")
@@ -34,7 +32,7 @@ def test_set_hand_gripper_pinch_action_speed_consort_normal(device, case):
     logger.debug(f"test_is_free: {case['is_free']}")
 
     with allure.step("发送请求，设置夹爪捏合动作速度协同参数"):
-        set_res = device.ml.set_hand_gripper_pinch_action_speed_consort(case["pose"], case["rank"], case["is_free"])
+        set_res = device.mc.set_hand_gripper_pinch_action_speed_consort(case["pose"], case["rank"], case["is_free"])
 
     with allure.step("断言返回类型为 int"):
         assert isinstance(set_res, int), f"返回类型错误，期望 int，实际为 {type(set_res)}"
@@ -50,7 +48,6 @@ def test_set_hand_gripper_pinch_action_speed_consort_normal(device, case):
     # 等待动作完成，不能小于5秒
     sleep(5)
 
-
 @allure.feature("设置夹爪捏合动作速度协同参数")
 @allure.story("异常用例")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
@@ -62,7 +59,7 @@ def test_set_hand_gripper_pinch_action_speed_consort_exception(device, case):
 
     with allure.step(f"尝试传入非法参数，预期抛出 MercuryDataException,动作为{case['pose']},范围为{case['rank']},是否自由模式为{case['is_free']}"):
         with pytest.raises(MercuryDataException):
-            device.ml.set_hand_gripper_pinch_action_speed_consort(case["pose"], case["rank"], case["is_free"])
+            device.mc.set_hand_gripper_pinch_action_speed_consort(case["pose"], case["rank"], case["is_free"])
 
     logger.info(f"✅ 用例【{title}】异常断言成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")

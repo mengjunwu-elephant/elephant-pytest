@@ -9,16 +9,14 @@ from settings import MercuryBase
 
 cases = get_test_data_from_excel(MercuryBase.MY_HAND_TEST_DATA_FILE, "get_hand_gripper_status")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.ml.set_hand_gripper_angles([0, 0, 0, 0, 0, 0], dev.speed)
+    dev.mc.set_hand_gripper_angles([0, 0, 0, 0, 0, 0], dev.speed)
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("获取夹爪状态")
 @allure.story("夹爪状态-静止")
@@ -29,10 +27,10 @@ def test_get_hand_gripper_status_0(device, case):
     logger.debug(f"test_parameters: {case['parameter']}")
 
     with allure.step("设置夹爪角度到静止状态"):
-        device.ml.set_hand_gripper_angles([10, 60, 10, 10, 10, 10], 5)
+        device.mc.set_hand_gripper_angles([10, 60, 10, 10, 10, 10], 5)
 
     with allure.step("调用 get_hand_gripper_status 获取状态"):
-        response = device.ml.get_hand_gripper_status()
+        response = device.mc.get_hand_gripper_status()
 
     with allure.step("断言返回类型为 int"):
         assert isinstance(response, int), f"返回类型错误，实际为 {type(response)}"
@@ -44,7 +42,6 @@ def test_get_hand_gripper_status_0(device, case):
 
     logger.info(f"✅ 用例【{case['title']}】测试成功")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
-
 
 @allure.feature("获取夹爪状态")
 @allure.story("夹爪状态-运动")
@@ -58,7 +55,7 @@ def test_get_hand_gripper_status_1(device, case):
         time.sleep(5)
 
     with allure.step("调用 get_hand_gripper_status 获取状态"):
-        response = device.ml.get_hand_gripper_status()
+        response = device.mc.get_hand_gripper_status()
 
     with allure.step("断言返回类型为 int"):
         assert isinstance(response, int), f"返回类型错误，实际为 {type(response)}"
@@ -70,7 +67,6 @@ def test_get_hand_gripper_status_1(device, case):
 
     logger.info(f"✅ 用例【{case['title']}】测试成功")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
-
 
 @allure.feature("获取夹爪状态")
 @allure.story("夹爪状态-夹持到物体")
@@ -83,11 +79,11 @@ def test_get_hand_gripper_status_2(device, case):
     input("请放置物体到夹爪中间后，按回车继续...")
 
     with allure.step("设置夹爪角度夹持物体"):
-        device.ml.set_hand_gripper_angles([30, 70, 70, 90, 70, 70], 100)
+        device.mc.set_hand_gripper_angles([30, 70, 70, 90, 70, 70], 100)
         time.sleep(3)
 
     with allure.step("调用 get_hand_gripper_status 获取状态"):
-        response = device.ml.get_hand_gripper_status()
+        response = device.mc.get_hand_gripper_status()
 
     with allure.step("断言返回类型为 int"):
         assert isinstance(response, int), f"返回类型错误，实际为 {type(response)}"
@@ -100,7 +96,6 @@ def test_get_hand_gripper_status_2(device, case):
     logger.info(f"✅ 用例【{case['title']}】测试成功")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
 
-
 @allure.feature("获取夹爪状态")
 @allure.story("夹爪状态-夹持到物体后掉落")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == 3], ids=lambda c: c["title"])
@@ -112,7 +107,7 @@ def test_get_hand_gripper_status_3(device, case):
     input("请取下夹爪夹取的物体后，按回车继续...")
 
     with allure.step("调用 get_hand_gripper_status 获取状态"):
-        response = device.ml.get_hand_gripper_status()
+        response = device.mc.get_hand_gripper_status()
 
     with allure.step("断言返回类型为 int"):
         assert isinstance(response, int), f"返回类型错误，实际为 {type(response)}"

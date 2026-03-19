@@ -23,7 +23,7 @@ def test_get_pro_gripper_torque(device, case):
     logger.debug(f"test_parameters: {case['parameter']}")
 
     with allure.step("调用接口获取夹爪扭矩"):
-        response = device.ml.get_pro_gripper_torque()
+        response = device.mc.get_pro_gripper_torque()
         logger.debug(f"接口返回值: {response}")
         allure.attach(str(response), "接口返回值", allure.attachment_type.TEXT)
 

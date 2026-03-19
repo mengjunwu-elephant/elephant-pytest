@@ -11,29 +11,23 @@ from settings import MercuryBase
 # 从Excel中提取数据
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "pause")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
-    dev.ml.power_on()
-    dev.mr.power_on()
+    dev.mc.power_on()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.mr.power_off()
-    dev.ml.power_off()
+    dev.mc.power_off()
     dev.close()
     logger.info("环境清理完成，接口测试结束")
 
-
 @pytest.fixture(autouse=True)
 def setup_and_teardown(device):
-    device.ml.set_limit_switch(2, 0)
-    device.mr.set_limit_switch(2, 0)
+    device.mc.set_limit_switch(2, 0)
     device.init_coords()
     yield
     device.go_zero()
     device.reset()
-
 
 @allure.feature("Pause 暂停功能")
 @allure.story("正常参数调用")
@@ -44,23 +38,16 @@ def test_pause_normal(device, case):
     logger.debug(f"参数: {case['parameter']}")
 
     time.sleep(0.3)
-    with allure.step("调用左臂 pause"):
-        l_response = device.ml.pause(case["parameter"])
-
-    with allure.step("调用右臂 pause"):
-        r_response = device.mr.pause(case["parameter"])
-
+    with allure.step("调用机械臂 pause"):
+        response = device.mc.pause(case["parameter"])
     with allure.step("断言返回类型"):
-        assert isinstance(l_response, int), f"左臂返回类型错误: {type(l_response)}"
-        assert isinstance(r_response, int), f"右臂返回类型错误: {type(r_response)}"
+        assert isinstance(response, int), f"机械臂返回类型错误: {type(response)}"
 
     with allure.step("断言期望结果"):
-        assert l_response == case["l_expect_data"], f"左臂结果不一致: {l_response}"
-        assert r_response == case["r_expect_data"], f"右臂结果不一致: {r_response}"
+        assert response == case["l_expect_data"], f"机械臂结果不一致: {response}"
 
     logger.info(f"✅ 用例【{title}】测试通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")
-
 
 @allure.feature("Pause 暂停功能")
 @allure.story("异常参数调用")
@@ -70,13 +57,13 @@ def test_pause_exception(device, case):
     logger.info(f"》》》用例【{title}】开始测试《《《")
     logger.debug(f"参数: {case['parameter']}")
 
-    with allure.step("验证左臂异常参数抛出 MercuryDataException"):
+    with allure.step("验证机械臂异常参数抛出 MercuryDataException"):
         with pytest.raises(MercuryDataException):
-            device.ml.pause(case["parameter"])
+            device.mc.pause(case["parameter"])
 
-    with allure.step("验证右臂异常参数抛出 MercuryDataException"):
+    with allure.step("验证机械臂异常参数抛出 MercuryDataException"):
         with pytest.raises(MercuryDataException)as exc_info:
-            device.mr.pause(case["parameter"])
+            device.mc.pause(case["parameter"])
 
     logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

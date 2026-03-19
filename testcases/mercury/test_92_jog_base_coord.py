@@ -8,20 +8,16 @@ from settings import MercuryBase
 
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "jog_base_coord")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
-    dev.ml.power_on()
-    dev.mr.power_on()
+    dev.mc.power_on()
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.go_zero()
-    dev.mr.power_off()
-    dev.ml.power_off()
+    dev.mc.power_off()
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"], ids=lambda c: c["title"])
 @allure.feature("Jog 基础坐标")
@@ -34,29 +30,15 @@ def test_jog_base_coord(device, case):
 
         logger.debug(f"API: {case['api']}, 轴: {case['axis']}, 参数: {case['parameter']}, 速度: {case['speed']}")
 
-        with allure.step("调用左臂 jog_base_coord"):
-            l_response = device.ml.jog_base_coord(case["axis"], case["parameter"], case["speed"])
-            logger.debug(f"左臂响应: {l_response}")
-
-        with allure.step("调用右臂 jog_base_coord"):
-            r_response = device.mr.jog_base_coord(case["axis"], case["parameter"], case["speed"])
-            logger.debug(f"右臂响应: {r_response}")
-
-        with allure.step("断言左臂返回类型为int"):
-            assert isinstance(l_response, int), f"左臂返回类型错误，实际类型: {type(l_response)}"
-
-        with allure.step("断言右臂返回类型为int"):
-            assert isinstance(r_response, int), f"右臂返回类型错误，实际类型: {type(r_response)}"
-
-        with allure.step("断言左臂返回值"):
-            assert l_response == case['l_expect_data'], f"左臂期望={case['l_expect_data']}，实际={l_response}"
-
-        with allure.step("断言右臂返回值"):
-            assert r_response == case['r_expect_data'], f"右臂期望={case['r_expect_data']}，实际={r_response}"
-
+        with allure.step("调用机械臂 jog_base_coord"):
+            response = device.mc.jog_base_coord(case["axis"], case["parameter"], case["speed"])
+            logger.debug(f"机械臂响应: {response}")
+        with allure.step("断言机械臂返回类型为int"):
+            assert isinstance(response, int), f"机械臂返回类型错误，实际类型: {type(response)}"
+        with allure.step("断言机械臂返回值"):
+            assert response == case['l_expect_data'], f"机械臂期望={case['l_expect_data']}，实际={response}"
         logger.info(f"✅ 用例【{title}】测试成功")
         logger.info(f"》》》用例【{title}】测试完成《《《")
-
 
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
 @allure.feature("Jog 基础坐标")
@@ -68,9 +50,9 @@ def test_jog_base_coord_exception(device, case):
         device.init_coords()
         logger.debug(f"API: {case['api']}, 轴: {case['axis']}, 参数: {case['parameter']}, 速度: {case['speed']}")
 
-        with allure.step("调用左臂 jog_base_coord，期望抛出 MercuryDataException"):
+        with allure.step("调用机械臂 jog_base_coord，期望抛出 MercuryDataException"):
             with pytest.raises(MercuryDataException) as exc_info:
-                device.ml.jog_base_coord(case["axis"], case["parameter"], case["speed"])
+                device.mc.jog_base_coord(case["axis"], case["parameter"], case["speed"])
 
         logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
         logger.info(f"》》》用例【{title}】测试完成《《《")

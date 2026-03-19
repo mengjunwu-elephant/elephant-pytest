@@ -23,7 +23,7 @@ def test_get_pro_gripper_angle(device, case):
     logger.debug(f"test_parameters: {case['parameter']}")
 
     with allure.step("调用接口获取夹爪角度"):
-        response = device.ml.get_pro_gripper_angle()
+        response = device.mc.get_pro_gripper_angle()
         logger.debug(f"接口返回值: {response}")
         allure.attach(str(response), "接口返回值", allure.attachment_type.TEXT)
 

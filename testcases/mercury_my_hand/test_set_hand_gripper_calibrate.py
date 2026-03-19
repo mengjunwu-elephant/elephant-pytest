@@ -13,7 +13,7 @@ cases = get_test_data_from_excel(MercuryBase.MY_HAND_TEST_DATA_FILE, "set_hand_g
 def device():
     dev = MercuryBase()
     # 放大1关节零位运动范围
-    dev.ml.set_hand_gripper_angle(4, 100)
+    dev.mc.set_hand_gripper_angle(4, 100)
     sleep(1)
     logger.info("初始化完成，接口测试开始")
     yield dev
@@ -29,7 +29,7 @@ def test_set_hand_gripper_calibrate_normal(device, case):
     logger.debug(f"test_joint: {case['joint']}")
 
     with allure.step("调用接口设置夹爪校准"):
-        set_res = device.ml.set_hand_gripper_calibrate(case["joint"])
+        set_res = device.mc.set_hand_gripper_calibrate(case["joint"])
         sleep(3)
 
     with allure.step("断言返回类型为 int"):
@@ -53,7 +53,7 @@ def test_set_hand_gripper_calibrate_exception(device, case):
 
     with allure.step(f"调用接口，预期抛出 MercuryDataException,关节为{case['joint']}"):
         with pytest.raises(MercuryDataException, match=f".*"):
-            device.ml.set_hand_gripper_calibrate(case['joint'])
+            device.mc.set_hand_gripper_calibrate(case['joint'])
 
     logger.info(f"✅ 用例【{case['title']}】测试成功")
     logger.info(f"》》》》》用例【{case['title']}】测试完成《《《《《")

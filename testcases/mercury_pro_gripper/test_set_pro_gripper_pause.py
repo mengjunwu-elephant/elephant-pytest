@@ -9,17 +9,15 @@ from settings import MercuryBase
 # 从 Excel 中提取测试数据
 cases = get_test_data_from_excel(MercuryBase.PRO_GRIPPER_TEST_DATA_FILE, "set_pro_gripper_pause")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.ml.set_pro_gripper_resume()
-    dev.ml.set_pro_gripper_angle(0)
+    dev.mc.set_pro_gripper_resume()
+    dev.mc.set_pro_gripper_angle(0)
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("设置Pro夹爪暂停")
 @allure.story("夹爪暂停功能验证")
@@ -30,11 +28,11 @@ def test_set_pro_gripper_pause(device, case):
     logger.debug(f"test_parameters: {case.get('parameter', '')}")
 
     with allure.step("调用 set_pro_gripper_angle(100)"):
-        device.ml.set_pro_gripper_angle(100)
+        device.mc.set_pro_gripper_angle(100)
         sleep(0.2)
 
     with allure.step("调用 set_pro_gripper_pause 接口"):
-        response = device.ml.set_pro_gripper_pause()
+        response = device.mc.set_pro_gripper_pause()
         allure.attach(str(response), "暂停接口返回值", allure.attachment_type.TEXT)
 
     with allure.step("断言返回类型为 int"):

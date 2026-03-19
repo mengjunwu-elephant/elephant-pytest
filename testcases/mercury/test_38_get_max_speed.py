@@ -9,19 +9,15 @@ from settings import MercuryBase
 # 读取测试数据
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "get_max_speed")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
-    dev.ml.power_on()
-    dev.mr.power_on()
+    dev.mc.power_on()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.mr.power_off()
-    dev.ml.power_off()
+    dev.mc.power_off()
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("获取最大速度")
 @allure.story("正常参数")
@@ -33,20 +29,16 @@ def test_get_max_speed_normal(device, case):
     logger.debug(f"参数: {case['parameter']}")
 
     with allure.step("发送 get_max_speed 指令"):
-        l_response = device.ml.get_max_speed(case["parameter"])
-        r_response = device.mr.get_max_speed(case["parameter"])
+        response = device.mc.get_max_speed(case["parameter"])
 
     with allure.step("断言返回类型"):
-        assert isinstance(l_response, int), f"左臂返回类型应为 int，实际为 {type(l_response)}"
-        assert isinstance(r_response, int), f"右臂返回类型应为 int，实际为 {type(r_response)}"
+        assert isinstance(response, int), f"机械臂返回类型应为 int，实际为 {type(response)}"
 
     with allure.step("断言返回值"):
-        assert l_response == case["l_expect_data"], f"左臂返回值不符，期望：{case['l_expect_data']}，实际：{l_response}"
-        assert r_response == case["r_expect_data"], f"右臂返回值不符，期望：{case['r_expect_data']}，实际：{r_response}"
+        assert response == case["l_expect_data"], f"机械臂返回值不符，期望：{case['l_expect_data']}，实际：{response}"
 
     logger.info(f"✅ 用例【{title}】测试通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")
-
 
 @allure.feature("获取最大速度")
 @allure.story("异常参数")
@@ -59,8 +51,7 @@ def test_get_max_speed_exception(device, case):
 
     with allure.step("断言抛出 MercuryDataException 异常"):
         with pytest.raises(MercuryDataException,match=".*"):
-            device.ml.get_max_speed(case["parameter"])
-            device.mr.get_max_speed(case["parameter"])
+            device.mc.get_max_speed(case["parameter"])
 
     logger.info(f"✅ 用例【{title}】测试通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")

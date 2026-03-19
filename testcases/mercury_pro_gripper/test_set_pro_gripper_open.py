@@ -7,16 +7,14 @@ from settings import MercuryBase
 # 从 Excel 中提取测试数据
 cases = get_test_data_from_excel(MercuryBase.PRO_GRIPPER_TEST_DATA_FILE, "set_pro_gripper_open")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.ml.set_pro_gripper_close()
+    dev.mc.set_pro_gripper_close()
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("设置Pro夹爪打开")
 @allure.story("夹爪打开功能验证")
@@ -27,7 +25,7 @@ def test_set_pro_gripper_open(device, case):
     logger.debug(f"test_parameters: {case.get('parameter', '')}")
 
     with allure.step("调用 set_pro_gripper_open 接口"):
-        response = device.ml.set_pro_gripper_open()
+        response = device.mc.set_pro_gripper_open()
         allure.attach(str(response), "接口返回值", allure.attachment_type.TEXT)
 
     with allure.step("断言返回类型为 int"):

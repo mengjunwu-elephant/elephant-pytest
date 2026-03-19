@@ -7,14 +7,16 @@ from settings import MercuryBase
 # 获取全部测试用例数据
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "get_system_version")
 
+pytestmark = pytest.mark.smoke
+
 @pytest.fixture(scope="module")
 def device():
     """设备初始化和清理：机械臂先上电"""
     dev = MercuryBase()
-    dev.ml.power_on()
+    dev.mc.power_on()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.ml.power_off()
+    dev.mc.power_off()
     dev.close()
     logger.info("环境清理完成，接口测试结束")
 
@@ -28,21 +30,20 @@ def test_get_system_version_power_on(device, case):
     logger.debug(f"test_parameters: {case['parameters']}")
 
     with allure.step("机械臂发送请求"):
-        l_response = device.ml.get_system_version()
-        logger.debug(f"机械臂响应：{l_response}")
+        response = device.mc.get_system_version()
+        logger.debug(f"机械臂响应：{response}")
 
     with allure.step("机械臂断言响应数据类型"):
-        assert isinstance(l_response, float), f"机械臂返回值类型错误：应为 float,实际返回{type(l_response)}"
+        assert isinstance(response, float), f"机械臂返回值类型错误：应为 float,实际返回{type(response)}"
 
     with allure.step("机械臂断言响应结果"):
         allure.attach(str(case['l_expect_data']), name="机械臂期望值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(l_response), name="机械臂实际值", attachment_type=allure.attachment_type.TEXT)
-        assert l_response == case['l_expect_data'], f"用例【{title}】断言失败，期望 {case['l_expect_data']}，实际 {l_response}"
+        allure.attach(str(response), name="机械臂实际值", attachment_type=allure.attachment_type.TEXT)
+        assert response == case['l_expect_data'], f"用例【{title}】断言失败，期望 {case['l_expect_data']}，实际 {response}"
 
     logger.info(f"✅ 用例【{title}】测试通过")
     device.reset()
     logger.info(f"》》》用例【{title}】测试完成《《《")
-
 
 @allure.feature("获取固件版本号")
 @allure.story("仅上电 - 获取固件版本号")
@@ -55,21 +56,20 @@ def test_get_system_version_power_on_only(device, case):
     logger.debug(f"test_parameters: {case['parameters']}")
 
     with allure.step("发送请求"):
-        l_response = device.ml.get_system_version()
+        response = device.mc.get_system_version()
 
     with allure.step("机械臂断言响应数据类型"):
-        assert isinstance(l_response, float), f"机械臂返回值类型错误：应为 float,实际返回{type(l_response)}"
+        assert isinstance(response, float), f"机械臂返回值类型错误：应为 float,实际返回{type(response)}"
 
     with allure.step("机械臂断言响应结果"):
         allure.attach(str(case['l_expect_data']), name="机械臂期望值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(l_response), name="机械臂实际值", attachment_type=allure.attachment_type.TEXT)
-        assert l_response == case[
-            'l_expect_data'], f"用例【{title}】断言失败，期望 {case['l_expect_data']}，实际 {l_response}"
+        allure.attach(str(response), name="机械臂实际值", attachment_type=allure.attachment_type.TEXT)
+        assert response == case[
+            'l_expect_data'], f"用例【{title}】断言失败，期望 {case['l_expect_data']}，实际 {response}"
 
     logger.info(f"✅ 用例【{title}】测试通过")
     device.reset()
     logger.info(f"》》》用例【{title}】测试完成《《《")
-
 
 @allure.feature("获取固件版本号")
 @allure.story("断电 - 获取固件版本号")
@@ -82,16 +82,16 @@ def test_get_system_version_power_off(device, case):
     logger.debug(f"test_parameters: {case['parameters']}")
 
     with allure.step("发送请求"):
-        l_response = device.ml.get_system_version()
+        response = device.mc.get_system_version()
 
     with allure.step("机械臂断言响应数据类型"):
-        assert isinstance(l_response, float), f"机械臂返回值类型错误：应为 float,实际返回{type(l_response)}"
+        assert isinstance(response, float), f"机械臂返回值类型错误：应为 float,实际返回{type(response)}"
 
     with allure.step("机械臂断言响应结果"):
         allure.attach(str(case['l_expect_data']), name="机械臂期望值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(l_response), name="机械臂实际值", attachment_type=allure.attachment_type.TEXT)
-        assert l_response == case[
-            'l_expect_data'], f"用例【{title}】断言失败，期望 {case['l_expect_data']}，实际 {l_response}"
+        allure.attach(str(response), name="机械臂实际值", attachment_type=allure.attachment_type.TEXT)
+        assert response == case[
+            'l_expect_data'], f"用例【{title}】断言失败，期望 {case['l_expect_data']}，实际 {response}"
 
     logger.info(f"✅ 用例【{title}】测试通过")
     device.reset()

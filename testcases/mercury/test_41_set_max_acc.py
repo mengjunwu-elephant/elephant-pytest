@@ -9,19 +9,15 @@ from settings import MercuryBase
 # 从Excel中读取测试数据
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "set_max_acc")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
-    dev.ml.power_on()
-    dev.mr.power_on()
+    dev.mc.power_on()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.mr.power_off()
-    dev.ml.power_off()
+    dev.mc.power_off()
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("设置最大加速度")
 @allure.story("正常设置验证")
@@ -32,20 +28,16 @@ def test_set_max_acc_normal(device, case):
     logger.debug(f"API: {case['api']} | 参数: {case['parameter']}")
 
     with allure.step("发送 set_max_acc 请求"):
-        l_res = device.ml.set_max_acc(case["mode"], case["parameter"])
-        r_res = device.mr.set_max_acc(case["mode"], case["parameter"])
+        res = device.mc.set_max_acc(case["mode"], case["parameter"])
 
     with allure.step("类型断言"):
-        assert isinstance(l_res, int), f"左臂返回类型应为 int，实际为 {type(l_res)}"
-        assert isinstance(r_res, int), f"右臂返回类型应为 int，实际为 {type(r_res)}"
+        assert isinstance(res, int), f"机械臂返回类型应为 int，实际为 {type(res)}"
 
     with allure.step("结果断言"):
-        assert l_res == case["l_expect_data"], f"左臂期望值：{case['l_expect_data']}，实际值：{l_res}"
-        assert r_res == case["r_expect_data"], f"右臂期望值：{case['r_expect_data']}，实际值：{r_res}"
+        assert res == case["l_expect_data"], f"机械臂期望值：{case['l_expect_data']}，实际值：{res}"
 
     logger.info(f"✅ 用例【{title}】测试通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")
-
 
 @allure.feature("设置最大加速度")
 @allure.story("异常参数验证")
@@ -57,10 +49,8 @@ def test_set_max_acc_exception(device, case):
 
     with allure.step("断言抛出 MercuryDataException"):
         with pytest.raises(MercuryDataException) as exc_info:
-            device.ml.set_max_acc(case["mode"], case["parameter"])
-            device.mr.set_max_acc(case["mode"], case["parameter"])
+            device.mc.set_max_acc(case["mode"], case["parameter"])
 
     logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")
-
 

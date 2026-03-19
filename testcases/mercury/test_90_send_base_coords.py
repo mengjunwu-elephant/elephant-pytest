@@ -11,8 +11,7 @@ cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "send_base_coords")
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
-    dev.ml.power_on()
-    dev.mr.power_on()
+    dev.mc.power_on()
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.go_zero()
@@ -20,10 +19,14 @@ def device():
     dev.close()
     logger.info("环境清理完成，接口测试结束")
 
-@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "left"], ids=lambda c: c["title"])
+@pytest.mark.parametrize(
+    "case",
+    [c for c in cases if c.get("test_type") in ("left", "right")],
+    ids=lambda c: c["title"],
+)
 @allure.feature("发送基础坐标")
-@allure.story("左臂正常用例")
-def test_send_base_coords_left(device, case):
+@allure.story("机械臂正常用例")
+def test_send_base_coords(device, case):
     title = case["title"]
     with allure.step(f"开始用例【{title}】"):
         logger.info(f"》》》用例【{title}】开始测试《《《")
@@ -32,23 +35,27 @@ def test_send_base_coords_left(device, case):
         param = eval(case["parameter"])
         speed = case["speed"]
 
-        with allure.step("调用左臂 send_base_coords"):
-            l_response = device.ml.send_base_coords(param, speed)
-            logger.debug(f"左臂响应: {l_response}")
+        with allure.step("调用机械臂 send_base_coords"):
+            response = device.mc.send_base_coords(param, speed)
+            logger.debug(f"机械臂响应: {response}")
 
         with allure.step("断言返回类型为int"):
-            assert isinstance(l_response, int), f"左臂返回类型错误，实际类型: {type(l_response)}"
+            assert isinstance(response, int), f"机械臂返回类型错误，实际类型: {type(response)}"
 
         with allure.step("断言返回值与期望相等"):
-            assert l_response == case['l_expect_data'], f"左臂期望={case['l_expect_data']}，实际={l_response}"
+            assert response == case['l_expect_data'], f"机械臂期望={case['l_expect_data']}，实际={response}"
 
         logger.info(f"✅ 用例【{title}】测试成功")
         logger.info(f"》》》用例【{title}】测试完成《《《")
 
-@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "right"], ids=lambda c: c["title"])
+@pytest.mark.parametrize(
+    "case",
+    [c for c in cases if c.get("test_type") in ("exception_left", "exception_right")],
+    ids=lambda c: c["title"],
+)
 @allure.feature("发送基础坐标")
-@allure.story("右臂正常用例")
-def test_send_base_coords_right(device, case):
+@allure.story("机械臂异常用例")
+def test_send_base_coords_out_limit(device, case):
     title = case["title"]
     with allure.step(f"开始用例【{title}】"):
         logger.info(f"》》》用例【{title}】开始测试《《《")
@@ -57,53 +64,10 @@ def test_send_base_coords_right(device, case):
         param = eval(case["parameter"])
         speed = case["speed"]
 
-        with allure.step("调用右臂 send_base_coords"):
-            r_response = device.mr.send_base_coords(param, speed)
-            logger.debug(f"右臂响应: {r_response}")
-
-        with allure.step("断言返回类型为int"):
-            assert isinstance(r_response, int), f"右臂返回类型错误，实际类型: {type(r_response)}"
-
-        with allure.step("断言返回值与期望相等"):
-            assert r_response == case['r_expect_data'], f"右臂期望={case['r_expect_data']}，实际={r_response}"
-
-        logger.info(f"✅ 用例【{title}】测试成功")
-        logger.info(f"》》》用例【{title}】测试完成《《《")
-
-@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception_left"], ids=lambda c: c["title"])
-@allure.feature("发送基础坐标")
-@allure.story("左臂异常用例")
-def test_send_base_coords_out_limit_left(device, case):
-    title = case["title"]
-    with allure.step(f"开始用例【{title}】"):
-        logger.info(f"》》》用例【{title}】开始测试《《《")
-        device.init_coords()
-        logger.debug(f"API: {case['api']}, 参数: {case['parameter']}, 速度: {case['speed']}")
-        param = eval(case["parameter"])
-        speed = case["speed"]
-
-        with allure.step("调用左臂 send_base_coords 并期望抛出 MercuryDataException"):
-            with pytest.raises(MercuryDataException):
-                device.ml.send_base_coords(param, speed)
-
-        logger.info(f"✅ 用例【{title}】异常断言成功")
-        logger.info(f"》》》用例【{title}】测试完成《《《")
-
-@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception_right"], ids=lambda c: c["title"])
-@allure.feature("发送基础坐标")
-@allure.story("右臂异常用例")
-def test_send_base_coords_out_limit_right(device, case):
-    title = case["title"]
-    with allure.step(f"开始用例【{title}】"):
-        logger.info(f"》》》用例【{title}】开始测试《《《")
-        device.init_coords()
-        logger.debug(f"API: {case['api']}, 参数: {case['parameter']}, 速度: {case['speed']}")
-        param = eval(case["parameter"])
-        speed = case["speed"]
-
-        with allure.step("调用右臂 send_base_coords 并期望抛出 MercuryDataException"):
+        with allure.step("调用机械臂 send_base_coords 并期望抛出 MercuryDataException"):
             with pytest.raises(MercuryDataException) as exc_info:
-                device.mr.send_base_coords(param, speed)
+                device.mc.send_base_coords(param, speed)
 
         logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+        logger.info(f"✅ 用例【{title}】异常断言成功")
         logger.info(f"》》》用例【{title}】测试完成《《《")

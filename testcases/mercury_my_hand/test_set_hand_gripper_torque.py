@@ -8,7 +8,6 @@ from settings import MercuryBase
 
 cases = get_test_data_from_excel(MercuryBase.MY_HAND_TEST_DATA_FILE, "set_hand_gripper_torque")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
@@ -17,7 +16,6 @@ def device():
     dev.set_default_torque()
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("设置夹爪扭矩")
 @allure.story("正常用例")
@@ -30,10 +28,10 @@ def test_set_hand_gripper_torque_normal(device, case):
     logger.debug(f"test_parameter: {case['parameter']}")
 
     with allure.step("调用设置扭矩接口"):
-        set_res = device.ml.set_hand_gripper_torque(case["joint"], case["parameter"])
+        set_res = device.mc.set_hand_gripper_torque(case["joint"], case["parameter"])
 
     with allure.step("调用获取扭矩接口"):
-        get_res = device.ml.get_hand_gripper_torque(case["joint"])
+        get_res = device.mc.get_hand_gripper_torque(case["joint"])
 
     with allure.step("断言返回值类型为 int"):
         assert isinstance(set_res, int), f"返回类型错误，期望 int，实际为 {type(set_res)}"
@@ -43,7 +41,6 @@ def test_set_hand_gripper_torque_normal(device, case):
         allure.attach(str(set_res),name = '实际值',attachment_type=allure.attachment_type.TEXT)
         assert set_res == case["expect_data"], f"断言失败，期望：{case['expect_data']}，实际：{set_res}"
 
-
     with allure.step("断言获取的扭矩值与设置值一致"):
         allure.attach(str(case["parameter"]),name = '期望值',attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(get_res),name = '实际值',attachment_type=allure.attachment_type.TEXT)
@@ -51,7 +48,6 @@ def test_set_hand_gripper_torque_normal(device, case):
 
     logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")
-
 
 @allure.feature("设置夹爪扭矩")
 @allure.story("异常用例")
@@ -64,7 +60,7 @@ def test_set_hand_gripper_torque_exception(device, case):
 
     with allure.step(f"调用设置扭矩接口并断言异常抛出,关节为{case['joint']},扭矩为{case['parameter']}"):
         with pytest.raises(MercuryDataException):
-            device.ml.set_hand_gripper_torque(case["joint"], case["parameter"])
+            device.mc.set_hand_gripper_torque(case["joint"], case["parameter"])
 
     logger.info(f"✅ 用例【{title}】异常断言成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")

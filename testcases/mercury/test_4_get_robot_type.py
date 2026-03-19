@@ -7,18 +7,16 @@ from settings import MercuryBase
 # 读取Excel测试数据
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "get_robot_type")
 
-
 @pytest.fixture(scope="module")
 def device():
     """设备初始化：机械臂上电"""
     dev = MercuryBase()
-    dev.ml.power_on()
+    dev.mc.power_on()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.ml.power_off()
+    dev.mc.power_off()
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("获取机械臂类型")
 @allure.story("上电 - 获取机械臂类型")
@@ -31,15 +29,15 @@ def test_get_robot_type_power_on(device, case):
     device.reset()
 
     with allure.step("发送请求"):
-        l_response = device.ml.get_robot_type()
+        response = device.mc.get_robot_type()
 
     with allure.step("机械臂断言类型为 int"):
-        assert isinstance(l_response, int), f"机械臂响应类型错误，应为 int，实际为 {type(l_response)}"
+        assert isinstance(response, int), f"机械臂响应类型错误，应为 int，实际为 {type(response)}"
 
     with allure.step("机械臂断言结果值"):
         allure.attach(str(case['l_expect_data']), name="机械臂期望值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(l_response),name='机械臂实际值',attachment_type=allure.attachment_type.TEXT)
-        assert l_response == case["l_expect_data"], f"机械臂期望值 {case['l_expect_data']}，实际值 {l_response}"
+        allure.attach(str(response),name='机械臂实际值',attachment_type=allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂期望值 {case['l_expect_data']}，实际值 {response}"
 
     logger.info(f"✅ 用例【{title}】测试通过")
     device.reset()
@@ -56,15 +54,15 @@ def test_get_robot_type_power_on_only(device, case):
     logger.debug(f"test_parameters: {case['parameters']}")
 
     with allure.step("发送请求"):
-        l_response = device.ml.get_robot_type()
+        response = device.mc.get_robot_type()
 
     with allure.step("机械臂断言类型为 int"):
-        assert isinstance(l_response, int), f"机械臂响应类型错误，应为 int，实际为 {type(l_response)}"
+        assert isinstance(response, int), f"机械臂响应类型错误，应为 int，实际为 {type(response)}"
 
     with allure.step("机械臂断言结果值"):
         allure.attach(str(case['l_expect_data']), name="机械臂期望值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(l_response),name='机械臂实际值',attachment_type=allure.attachment_type.TEXT)
-        assert l_response == case["l_expect_data"], f"机械臂期望值 {case['l_expect_data']}，实际值 {l_response}"
+        allure.attach(str(response),name='机械臂实际值',attachment_type=allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂期望值 {case['l_expect_data']}，实际值 {response}"
 
     logger.info(f"✅ 用例【{title}】测试通过")
     device.reset()
@@ -81,15 +79,15 @@ def test_get_robot_type_power_off(device, case):
     logger.debug(f"test_parameters: {case['parameters']}")
 
     with allure.step("发送请求"):
-        l_response = device.ml.get_robot_type()
+        response = device.mc.get_robot_type()
 
     with allure.step("机械臂断言类型为 int"):
-        assert isinstance(l_response, int), f"机械臂响应类型错误，应为 int，实际为 {type(l_response)}"
+        assert isinstance(response, int), f"机械臂响应类型错误，应为 int，实际为 {type(response)}"
 
     with allure.step("机械臂断言结果值"):
         allure.attach(str(case['l_expect_data']), name="机械臂期望值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(l_response),name='机械臂实际值',attachment_type=allure.attachment_type.TEXT)
-        assert l_response == case["l_expect_data"], f"机械臂期望值 {case['l_expect_data']}，实际值 {l_response}"
+        allure.attach(str(response),name='机械臂实际值',attachment_type=allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂期望值 {case['l_expect_data']}，实际值 {response}"
 
     logger.info(f"✅ 用例【{title}】测试通过")
     device.reset()

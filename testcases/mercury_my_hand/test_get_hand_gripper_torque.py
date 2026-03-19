@@ -25,7 +25,7 @@ def test_get_hand_gripper_torque_normal(device, case):
     logger.debug(f"test_joint: {case['joint']}")
 
     with allure.step("调用接口获取夹爪扭矩"):
-        response = device.ml.get_hand_gripper_torque(case["joint"])
+        response = device.mc.get_hand_gripper_torque(case["joint"])
 
     with allure.step("断言返回类型为 int"):
         assert isinstance(response, int), f"返回类型错误，实际类型为 {type(response)}"
@@ -48,7 +48,7 @@ def test_get_hand_gripper_torque_exception(device, case):
 
     with allure.step(f"调用接口，预期抛出 MercuryDataException 异常,关节为{case['joint']}"):
         with pytest.raises(MercuryDataException):
-            device.ml.get_hand_gripper_torque(case['joint'])
+            device.mc.get_hand_gripper_torque(case['joint'])
 
     logger.info(f"✅ 用例【{case['title']}】异常断言成功")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")

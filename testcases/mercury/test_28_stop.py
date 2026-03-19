@@ -11,29 +11,23 @@ from settings import MercuryBase
 # 从Excel中提取数据
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "stop")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
-    dev.ml.power_on()
-    dev.mr.power_on()
+    dev.mc.power_on()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.mr.power_off()
-    dev.ml.power_off()
+    dev.mc.power_off()
     dev.close()
     logger.info("环境清理完成，接口测试结束")
 
-
 @pytest.fixture(autouse=True)
 def setup_env(device):
-    device.ml.set_limit_switch(2, 0)
-    device.mr.set_limit_switch(2, 0)
+    device.mc.set_limit_switch(2, 0)
     device.init_coords()
     yield
     device.go_zero()
     device.reset()
-
 
 @allure.feature("stop 接口测试")
 @allure.story("正常 stop 场景")
@@ -45,20 +39,16 @@ def test_stop_normal(device, case):
 
     time.sleep(0.3)
     with allure.step("调用 stop 接口"):
-        l_response = device.ml.stop(case["parameter"])
-        r_response = device.mr.stop(case["parameter"])
+        response = device.mc.stop(case["parameter"])
 
     with allure.step("断言返回类型为 int"):
-        assert isinstance(l_response, int), f"左臂返回类型错误: {type(l_response)}"
-        assert isinstance(r_response, int), f"右臂返回类型错误: {type(r_response)}"
+        assert isinstance(response, int), f"机械臂返回类型错误: {type(response)}"
 
     with allure.step("断言返回值是否正确"):
-        assert l_response == case["l_expect_data"], f"左臂返回值错误: {l_response}"
-        assert r_response == case["r_expect_data"], f"右臂返回值错误: {r_response}"
+        assert response == case["l_expect_data"], f"机械臂返回值错误: {response}"
 
     logger.info(f"✅ 用例【{title}】测试通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")
-
 
 @allure.feature("stop 接口测试")
 @allure.story("异常参数校验")
@@ -70,8 +60,7 @@ def test_stop_exception(device, case):
 
     with allure.step("调用 stop 接口并断言抛出 MercuryDataException") as exc_info:
         with pytest.raises(MercuryDataException):
-            device.ml.stop(case["parameter"])
-            device.mr.stop(case["parameter"])
+            device.mc.stop(case["parameter"])
 
     logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

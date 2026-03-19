@@ -12,7 +12,7 @@ def device():
     dev = MercuryBase()
     logger.info("初始化完成，接口测试开始")
     yield dev
-    dev.ml.set_pro_gripper_close()  # 回到零位
+    dev.mc.set_pro_gripper_close()  # 回到零位
     dev.close()
     logger.info("环境清理完成，接口测试结束")
 
@@ -29,11 +29,11 @@ def test_get_pro_gripper_status_0(device, case):
     logger.debug(f"test_api: {case['api']} | test_parameters: {case['parameter']}")
 
     with allure.step("设置夹爪参数为 (100, 5)"):
-        device.ml.set_gripper_value(100, 5)
+        device.mc.set_gripper_value(100, 5)
         sleep(0.2)
 
     with allure.step("获取夹爪状态"):
-        response = device.ml.get_pro_gripper_status()
+        response = device.mc.get_pro_gripper_status()
         logger.debug(f"接口返回值: {response}")
         allure.attach(str(response), "返回值", allure.attachment_type.TEXT)
 
@@ -59,7 +59,7 @@ def test_get_pro_gripper_status_1(device, case):
         sleep(5)
 
     with allure.step("获取夹爪状态"):
-        response = device.ml.get_pro_gripper_status()
+        response = device.mc.get_pro_gripper_status()
         logger.debug(f"接口返回值: {response}")
         allure.attach(str(response), "返回值", allure.attachment_type.TEXT)
 
@@ -86,11 +86,11 @@ def test_get_pro_gripper_status_2(device, case):
         input()
 
     with allure.step("设置夹爪参数为 (0, 100)"):
-        device.ml.set_gripper_value(0, 100)
+        device.mc.set_gripper_value(0, 100)
         sleep(3)
 
     with allure.step("获取夹爪状态"):
-        response = device.ml.get_pro_gripper_status()
+        response = device.mc.get_pro_gripper_status()
         logger.debug(f"接口返回值: {response}")
         allure.attach(str(response), "返回值", allure.attachment_type.TEXT)
 
@@ -117,7 +117,7 @@ def test_get_pro_gripper_status_3(device, case):
         input()
 
     with allure.step("获取夹爪状态"):
-        response = device.ml.get_pro_gripper_status()
+        response = device.mc.get_pro_gripper_status()
         logger.debug(f"接口返回值: {response}")
         allure.attach(str(response), "返回值", allure.attachment_type.TEXT)
 

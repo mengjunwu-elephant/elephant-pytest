@@ -7,26 +7,21 @@ from settings import MercuryBase
 
 cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "jog_rpy")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
-    dev.ml.power_on()
-    dev.mr.power_on()
+    dev.mc.power_on()
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.go_zero()
-    dev.mr.power_off()
-    dev.ml.power_off()
+    dev.mc.power_off()
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @pytest.fixture(autouse=True)
 def reset_coords(device):
     device.init_coords()
     yield
-
 
 @allure.feature("jog_rpy 接口测试")
 @allure.story("正常功能验证")
@@ -40,27 +35,18 @@ def test_jog_rpy_normal(device, case):
     logger.info(f"》》》开始用例【{title}】《《《")
     logger.debug(f"Axis: {axis}, Param: {param}, Speed: {speed}")
 
-    with allure.step("发送 jog_rpy 指令（左臂）"):
-        l_response = device.ml.jog_rpy(axis, param, speed)
-
-    with allure.step("发送 jog_rpy 指令（右臂）"):
-        r_response = device.mr.jog_rpy(axis, param, speed)
-
+    with allure.step("发送 jog_rpy 指令（机械臂）"):
+        response = device.mc.jog_rpy(axis, param, speed)
     with allure.step("校验返回类型"):
-        assert isinstance(l_response, int), f"左臂响应类型应为 int，实际为 {type(l_response)}"
-        assert isinstance(r_response, int), f"右臂响应类型应为 int，实际为 {type(r_response)}"
+        assert isinstance(response, int), f"机械臂响应类型应为 int，实际为 {type(response)}"
 
     with allure.step("断言响应值正确"):
-        allure.attach(str(case["l_expect_data"]), name="左臂期望", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(l_response), name="左臂实际", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(case["r_expect_data"]), name="右臂期望", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(r_response), name="右臂实际", attachment_type=allure.attachment_type.TEXT)
-        assert l_response == case["l_expect_data"], f"左臂期望 {case['l_expect_data']}，实际 {l_response}"
-        assert r_response == case["r_expect_data"], f"右臂期望 {case['r_expect_data']}，实际 {r_response}"
+        allure.attach(str(case["l_expect_data"]), name="机械臂期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response), name="机械臂实际", attachment_type=allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂期望 {case['l_expect_data']}，实际 {response}"
 
     logger.info(f"✅ 用例【{case['title']}】测试通过")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
-
 
 @allure.feature("jog_rpy 接口测试")
 @allure.story("异常边界验证")
@@ -76,7 +62,7 @@ def test_jog_rpy_exception(device, case):
 
     with allure.step("发送异常 jog_rpy 指令并捕获 MercuryDataException") as exc_info:
         with pytest.raises(MercuryDataException):
-            device.ml.jog_rpy(axis, param, speed)
+            device.mc.jog_rpy(axis, param, speed)
 
     logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"✅ 异常用例【{title}】触发成功")

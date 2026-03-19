@@ -27,9 +27,9 @@ def test_set_hand_gripper_i_normal(device, case):
     logger.debug(f"test_parameter: {case['parameter']}")
 
     with allure.step("调用 set_hand_gripper_i"):
-        set_res = device.ml.set_hand_gripper_i(case["joint"], case["parameter"])
+        set_res = device.mc.set_hand_gripper_i(case["joint"], case["parameter"])
     with allure.step("调用 get_hand_gripper_i 获取结果"):
-        get_res = device.ml.get_hand_gripper_i(case["joint"])
+        get_res = device.mc.get_hand_gripper_i(case["joint"])
 
     with allure.step("断言返回类型为 int"):
         assert isinstance(set_res, int), f"返回类型错误，实际类型为 {type(set_res)}"
@@ -58,7 +58,7 @@ def test_set_hand_gripper_i_exception(device, case):
 
     with allure.step(f"调用 set_hand_gripper_i，期望抛出 MercuryDataException,关节为{case['joint']}，I值为{case['parameter']}"):
         with pytest.raises(MercuryDataException):
-            device.ml.set_hand_gripper_i(case["joint"], case["parameter"])
+            device.mc.set_hand_gripper_i(case["joint"], case["parameter"])
 
     logger.info(f"✅ 用例【{case['title']}】测试成功")
     logger.info(f"》》》》》用例【{case['title']}】测试完成《《《《《")

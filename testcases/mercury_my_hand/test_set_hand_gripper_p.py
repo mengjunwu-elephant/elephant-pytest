@@ -9,7 +9,6 @@ from settings import MercuryBase
 # 从Excel中提取数据
 cases = get_test_data_from_excel(MercuryBase.MY_HAND_TEST_DATA_FILE, "set_hand_gripper_p")
 
-
 @pytest.fixture(scope="module")
 def device():
     dev = MercuryBase()
@@ -18,7 +17,6 @@ def device():
     dev.set_default_p()  # 恢复默认P参数
     dev.close()
     logger.info("环境清理完成，接口测试结束")
-
 
 @allure.feature("设置夹爪P参数")
 @allure.story("正常用例")
@@ -31,10 +29,10 @@ def test_set_hand_gripper_p_normal(device, case):
     logger.debug(f"test_parameter: {case['parameter']}")
 
     with allure.step("发送请求，设置夹爪指定 joint 的 P 参数"):
-        set_res = device.ml.set_hand_gripper_p(case["joint"], case["parameter"])
+        set_res = device.mc.set_hand_gripper_p(case["joint"], case["parameter"])
 
     with allure.step("获取夹爪指定 joint 的 P 参数"):
-        get_res = device.ml.get_hand_gripper_p(case["joint"])
+        get_res = device.mc.get_hand_gripper_p(case["joint"])
 
     with allure.step("断言返回类型为 int"):
         assert isinstance(set_res, int), f"返回类型错误，期望 int，实际为 {type(set_res)}"
@@ -52,7 +50,6 @@ def test_set_hand_gripper_p_normal(device, case):
     logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
-
 @allure.feature("设置夹爪P参数")
 @allure.story("异常用例")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
@@ -64,7 +61,7 @@ def test_set_hand_gripper_p_exception(device, case):
 
     with allure.step(f"尝试传入非法参数，预期抛出 MercuryDataException,关节为{case['joint']}，P值为{case['parameter']}"):
         with pytest.raises(MercuryDataException):
-            device.ml.set_hand_gripper_p(case["joint"], case["parameter"])
+            device.mc.set_hand_gripper_p(case["joint"], case["parameter"])
 
     logger.info(f"✅ 用例【{title}】异常断言成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")

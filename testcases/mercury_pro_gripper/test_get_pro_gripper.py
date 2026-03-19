@@ -25,7 +25,7 @@ def test_get_pro_gripper(device, case):
     logger.debug(f"test_parameters: {case['parameter']}")
 
     with allure.step("调用接口获取夹爪状态"):
-        response = device.ml.get_pro_gripper(case['parameter'])
+        response = device.mc.get_pro_gripper(case['parameter'])
         logger.debug(f"接口返回值: {response}")
         allure.attach(str(response), "接口返回值", allure.attachment_type.TEXT)
 
@@ -51,10 +51,9 @@ def test_get_pro_gripper_exception(device, case):
     logger.debug(f"test_api: {case['api']}")
     logger.debug(f"test_parameters: {case['parameter']}")
 
-
     with allure.step(f"断言设置 Pro 夹爪参数时抛出 MercuryDataException,address为{case['parameter']}"):
         with pytest.raises(MercuryDataException):
-            device.ml.get_pro_gripper(case["parameter"])
+            device.mc.get_pro_gripper(case["parameter"])
 
     logger.info(f"✅ 用例【{case['title']}】异常断言成功")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
