@@ -10,14 +10,6 @@ from settings import UltraArmP1Base
 cases = get_test_data_from_excel(UltraArmP1Base.ATTACHMENTS_TEST_DATA_FILE, "get_gripper_run_status")
 
 
-@pytest.fixture(scope="module")
-def device():
-    dev = UltraArmP1Base()
-    logger.info("初始化完成，接口测试开始")
-    yield dev
-    dev.mc.close()
-    logger.info("环境清理完成，接口测试结束")
-
 @allure.feature("检查夹爪运动状态")
 @allure.story("静止状态下运动状态查询")
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])

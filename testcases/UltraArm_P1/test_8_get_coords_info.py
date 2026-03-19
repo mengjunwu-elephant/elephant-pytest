@@ -11,15 +11,6 @@ from settings import UltraArmP1Base
 cases = get_test_data_from_excel(UltraArmP1Base.TEST_DATA_FILE, "get_coords_info")
 
 
-@pytest.fixture(scope="module")
-def device():
-    """设备初始化和清理"""
-    dev = UltraArmP1Base()
-    logger.info("初始化完成，接口测试开始")
-    yield dev
-    dev.mc.close()
-    logger.info("环境清理完成，接口测试结束")
-
 @allure.feature("读取全关节坐标")
 @allure.story("（读取全关节坐标")
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])

@@ -9,13 +9,6 @@ from pymycobot.error import ultraArmP1DataException
 
 cases = get_test_data_from_excel(UltraArmP1Base.TEST_DATA_FILE, "get_error_information")
 
-@pytest.fixture(scope="module")
-def device():
-    dev = UltraArmP1Base()
-    logger.info("初始化完成，接口测试开始")
-    yield dev
-    dev.mc.close()
-    logger.info("环境清理完成，接口测试结束")
 
 @pytest.fixture(autouse=True)
 def reset_device(device):

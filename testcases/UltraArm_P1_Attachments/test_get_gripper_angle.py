@@ -9,13 +9,6 @@ from settings import UltraArmP1Base
 
 cases = get_test_data_from_excel(UltraArmP1Base.ATTACHMENTS_TEST_DATA_FILE, "get_gripper_angle")
 
-@pytest.fixture(scope="module")
-def device():
-    dev = UltraArmP1Base()
-    logger.info("初始化完成，接口测试开始")
-    yield dev
-    dev.mc.close()
-    logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("获取Pro夹爪角度")
 @allure.story("正常用例")

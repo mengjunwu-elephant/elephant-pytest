@@ -14,7 +14,7 @@ cases = get_test_data_from_excel(UltraArmP1Base.TEST_DATA_FILE, "set_coord")
 
 @pytest.fixture(scope="module")
 def device():
-    """设备初始化和清理"""
+    """设备初始化和清理（teardown 回零位）"""
     dev = UltraArmP1Base()
     logger.info("初始化完成，接口测试开始")
     yield dev
