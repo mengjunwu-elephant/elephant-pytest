@@ -1,3 +1,4 @@
+# 使用本地源码时：在 pymycobot 目录 pip install -e . 后，可注释本行以免 pip 覆盖本地包
 pymycobot~=4.0.0
 allure-python-commons~=2.14.3
 openpyxl~=3.1.5

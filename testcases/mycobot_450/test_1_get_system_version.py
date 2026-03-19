@@ -9,14 +9,7 @@ from settings import Mycobot450Base
 # 从 Excel 读取测试数据
 cases = get_test_data_from_excel(Mycobot450Base.TEST_DATA_FILE, "get_system_version")
 
-@pytest.fixture(scope="module")
-def device():
-    """设备初始化和清理"""
-    dev = Mycobot450Base()
-    logger.info("初始化完成，接口测试开始")
-    yield dev
-    dev.mc.close()
-    logger.info("环境清理完成，接口测试结束")
+pytestmark = pytest.mark.smoke
 
 @allure.feature("固件版本获取")
 @allure.story("获取pico固件版本")

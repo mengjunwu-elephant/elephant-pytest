@@ -10,15 +10,6 @@ from settings import Mycobot450Base
 cases = get_test_data_from_excel(Mycobot450Base.TEST_DATA_FILE, "get_fresh_mode")
 
 
-@pytest.fixture(scope="module")
-def device():
-    """设备初始化和清理"""
-    dev = Mycobot450Base()
-    logger.info("初始化完成，接口测试开始")
-    yield dev
-    dev.mc.close()
-    logger.info("环境清理完成，接口测试结束")
-
 @allure.feature("获取运动模式")
 @allure.story("正确获取运动模式")
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
@@ -43,4 +34,3 @@ def test_get_fresh_mode(device, case):
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
-

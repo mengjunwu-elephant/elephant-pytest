@@ -1,9 +1,45 @@
 import os
 import time
+from typing import Optional
+
 from pymycobot import *
 
 # 项目路径
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# 默认控制器 IP（无环境变量时使用）
+DEFAULT_MYCOBOT450_IP = "192.168.0.232"
+
+
+def resolve_mycobot450_ip(explicit: Optional[str] = None) -> str:
+    """解析机械臂 IP：显式参数 > 环境变量 MYCOBOT450_IP / Mycobot450_IP > 默认常量。"""
+    if explicit is not None and str(explicit).strip() != "":
+        return str(explicit).strip()
+    return (
+        os.environ.get("MYCOBOT450_IP", "").strip()
+        or os.environ.get("Mycobot450_IP", "").strip()
+        or DEFAULT_MYCOBOT450_IP
+    )
+
+
+def _client_debug_from_env() -> bool:
+    """未设置 MYCOBOT450_DEBUG 时默认 True，与历史 Pro450Client(debug=True) 行为一致。"""
+    v = os.environ.get("MYCOBOT450_DEBUG", "").strip().lower()
+    if v in ("0", "false", "no"):
+        return False
+    if v in ("1", "true", "yes"):
+        return True
+    return True
+
+
+def _move_wait_timeout_sec() -> float:
+    raw = os.environ.get("MYCOBOT450_MOVE_TIMEOUT_SEC", "").strip()
+    if not raw:
+        return 120.0
+    try:
+        return max(1.0, float(raw))
+    except ValueError:
+        return 120.0
 
 # 产品名称
 CASES_DIR = {
@@ -39,8 +75,12 @@ class Mycobot450Base:
     TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/mycobot_450.xlsx')
     PRO_GRIPPER_TEST_DATA_FILE = os.path.join(BASE_DIR, r'test_data/pro_gripper.xlsx')
 
-    def __init__(self, ip='192.168.0.232'):
-        self.mc = Pro450Client(ip=ip,debug=True)
+    # is_moving 轮询最大等待（秒），可通过环境变量 MYCOBOT450_MOVE_TIMEOUT_SEC 覆盖
+    move_wait_timeout_sec: float = _move_wait_timeout_sec()
+
+    def __init__(self, ip: Optional[str] = None) -> None:
+        resolved = resolve_mycobot450_ip(ip)
+        self.mc = Pro450Client(ip=resolved, debug=_client_debug_from_env())
 
     def default_settings(self):
         self.mc.set_fresh_mode(0)
@@ -98,8 +138,14 @@ class Mycobot450Base:
         self.mc.send_angles(self.zero_angles, self.speed)
         time.sleep(2)
 
-    def wait(self):
+    def wait(self) -> None:
+        """等待运动结束；带超时，避免 is_moving 异常时死等。"""
+        deadline = time.monotonic() + float(self.move_wait_timeout_sec)
         time.sleep(0.3)
         while self.mc.is_moving():
+            if time.monotonic() > deadline:
+                raise TimeoutError(
+                    f"wait() 超时：{self.move_wait_timeout_sec}s 内 is_moving 仍为真"
+                )
             time.sleep(0.1)
         time.sleep(1)

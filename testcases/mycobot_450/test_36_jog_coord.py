@@ -11,6 +11,8 @@ from settings import Mycobot450Base
 # 从 Excel 读取测试数据
 cases = get_test_data_from_excel(Mycobot450Base.TEST_DATA_FILE, "jog_coord")
 
+pytestmark = pytest.mark.slow
+
 
 @pytest.fixture(scope="module")
 def device():

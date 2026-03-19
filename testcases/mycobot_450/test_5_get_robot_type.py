@@ -9,15 +9,8 @@ from settings import Mycobot450Base
 # 从 Excel 读取测试数据
 cases = get_test_data_from_excel(Mycobot450Base.TEST_DATA_FILE, "get_robot_type")
 
+pytestmark = pytest.mark.smoke
 
-@pytest.fixture(scope="module")
-def device():
-    """设备初始化和清理"""
-    dev = Mycobot450Base()
-    logger.info("初始化完成，接口测试开始")
-    yield dev
-    dev.mc.close()
-    logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("固件版本获取")
 @allure.story("获取机械臂型号")
@@ -43,4 +36,3 @@ def test_get_robot_type(device, case):
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
-

@@ -12,15 +12,6 @@ from settings import Mycobot450Base
 cases = get_test_data_from_excel(Mycobot450Base.TEST_DATA_FILE, "get_collision_mode")
 
 
-@pytest.fixture(scope="module")
-def device():
-    """设备初始化和清理"""
-    dev = Mycobot450Base()
-    logger.info("初始化完成，接口测试开始")
-    yield dev
-    dev.mc.close()
-    logger.info("环境清理完成，接口测试结束")
-
 @allure.feature("获取碰撞检测模式")
 @allure.story("正确获取碰撞检测模式")
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])

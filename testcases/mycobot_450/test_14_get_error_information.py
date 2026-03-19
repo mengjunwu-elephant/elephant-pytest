@@ -9,14 +9,6 @@ from pymycobot.error import MyCobotPro450DataException
 
 cases = get_test_data_from_excel(Mycobot450Base.TEST_DATA_FILE, "get_error_information")
 
-@pytest.fixture(scope="module")
-def device():
-    dev = Mycobot450Base()
-    logger.info("初始化完成，接口测试开始")
-    yield dev
-    dev.mc.close()
-    logger.info("环境清理完成，接口测试结束")
-
 @pytest.fixture(autouse=True)
 def reset_device(device):
     yield

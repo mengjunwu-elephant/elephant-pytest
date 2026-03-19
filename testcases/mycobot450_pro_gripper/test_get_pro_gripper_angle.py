@@ -7,14 +7,6 @@ from settings import Mycobot450Base
 
 cases = get_test_data_from_excel(Mycobot450Base.PRO_GRIPPER_TEST_DATA_FILE, "get_pro_gripper_angle")
 
-@pytest.fixture(scope="module")
-def device():
-    dev = Mycobot450Base()
-    logger.info("初始化完成，接口测试开始")
-    yield dev
-    dev.mc.close()
-    logger.info("环境清理完成，接口测试结束")
-
 @allure.feature("获取Pro夹爪角度")
 @allure.story("正常用例")
 @pytest.mark.parametrize("case", cases, ids=lambda c: c["title"])
