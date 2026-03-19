@@ -3,14 +3,16 @@ from settings import CASES_DIR,REPORT_DIR
 import os
 
 if __name__ == '__main__':
-    product_name = input("请输入数字选择需要测试的产品:\n"
-                         "1: UltraArm_P1\n"
-                         )
+    product_name = input(
+        "请输入数字选择需要测试的产品:\n"
+        "1: UltraArm_P1\n"
+        "2: UltraArm_P1_Attachments\n"
+    )
 
     # 获取对应用例路径
     case_path = CASES_DIR.get(product_name)
     if not case_path:
-        print("输入错误，请输入1-2之间的数字。")
+        print("输入错误，请输入 1 或 2。")
         exit(1)
 
     # # 生成报告文件名（带时间戳）

@@ -9,6 +9,8 @@ from settings import UltraArmP1Base
 # 从 Excel 读取测试数据
 cases = get_test_data_from_excel(UltraArmP1Base.TEST_DATA_FILE, "get_system_version")
 
+pytestmark = pytest.mark.smoke
+
 
 @allure.feature("固件版本获取")
 @allure.story("获取主控固件版本")

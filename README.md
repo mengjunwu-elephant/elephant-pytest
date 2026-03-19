@@ -1,19 +1,15 @@
 # elephant-pytest
 
-基于 `pytest + allure` 的机械臂（当前包含 `UltraArm_P1`）接口自动化测试项目。
+基于 **pytest + allure + Excel（openpyxl）** 的机械臂（当前 **UltraArm_P1**）接口自动化测试，框架对齐 **mycobot_450** 分支：`pythonpath`、`hardware` 自动打标、环境变量连接参数、`wait()` 超时、`get_test_data_from_excel` 校验增强。
 
 ## 环境要求
 
-- **操作系统**：Windows 10/11（当前仓库默认配置更偏向 Windows 串口环境）
+- **操作系统**：Windows 10/11（串口环境）
 - **Python**：建议 **3.10+**
-- **硬件**：已连接的对应机械臂/控制器（例如 `UltraArm_P1`）
-- **Allure 命令行工具**：用于生成与打开测试报告（`allure generate/open`）
+- **硬件**：已连接 UltraArm_P1
+- **Allure 命令行**：`allure generate/open`（可选）
 
 ## 快速开始
-
-### 1) 创建虚拟环境并安装依赖
-
-在项目根目录执行：
 
 ```bash
 python -m venv .venv
@@ -22,129 +18,73 @@ pip install -U pip
 pip install -r requirements.txt
 ```
 
-### 2) 配置串口与波特率（重要）
+## 环境变量（串口 / 调试 / 超时）
 
-`UltraArm_P1` 的连接参数在 `settings.py` 的 `UltraArmP1Base` 中：
+| 变量 | 说明 |
+|------|------|
+| `ULTRAARM_PORT` | 串口，默认 `com4`（与 `settings.DEFAULT_ULTRAARM_PORT` 一致） |
+| `ULTRAARM_BAUD` | 波特率，默认 `115200` |
+| `ULTRAARM_DEBUG` | `0`/`false`/`no` 关闭 debug，默认开启（等价历史 `debug=1`） |
+| `ULTRAARM_MOVE_TIMEOUT_SEC` | `wait()` 内 `get_run_status()` 轮询最大秒数，默认 `120` |
 
-- 串口号：默认 `com4`
-- 波特率：默认 `115200`
+无需改代码即可切换串口，例如 PowerShell：
 
-如果你的设备不是 `COM4`，请修改 `settings.py`：
+```powershell
+$env:ULTRAARM_PORT = "COM7"
+pytest -s testcases/UltraArm_P1 --collect-only
+```
 
-- `UltraArmP1Base.__init__` 中的 `UltraArmP1('com4',115200,debug=1)`
+## 运行测试
 
-### 3) 运行测试并生成 Allure 报告（推荐）
-
-本仓库提供了一个交互式入口 `main.py`，会：
-- 让你选择要测试的产品（目前 `1: UltraArm_P1`）
-- 执行 `pytest`
-- 输出 `allure-results/` 原始结果
-- 生成并自动打开 `allure-report/` 报告
-
-运行：
+### 交互入口（pytest + Allure）
 
 ```bash
 python main.py
 ```
 
-## 使用 pytest 直接运行
+可选产品：`1` = `UltraArm_P1`，`2` = `UltraArm_P1_Attachments`。
 
-你也可以不通过 `main.py`，直接运行 pytest。
-
-### 运行某个产品的全部用例
+### 直接使用 pytest
 
 ```bash
 pytest -s testcases/UltraArm_P1 --alluredir=allure-results
+pytest -s testcases/UltraArm_P1/test_1_get_system_version.py --alluredir=allure-results
 ```
 
-然后生成报告：
+### Marker（与 mycobot_450 一致）
 
-```bash
-allure generate allure-results -o allure-report --clean
-allure open allure-report
-```
+`pytest.ini` 注册：`hardware`、`slow`、`smoke`、`regression`。`testcases` 下用例**默认自动打 `hardware`**。
 
-### 运行单个用例文件
+- 无硬件 CI：`pytest testcases -m "not hardware"`
+- 冒烟示例：`pytest testcases -m "smoke and not slow"`
 
-```bash
-pytest -s testcases/UltraArm_P1/test_2_get_modified_version.py --alluredir=allure-results
-```
+## 框架说明
 
-### 只跑某条用例（按用例名筛选）
-
-```bash
-pytest -s testcases/UltraArm_P1 -k "get_system_version" --alluredir=allure-results
-```
-
-### 使用 marker 筛选（可选）
-
-`pytest.ini` 中已注册 `hw`、`smoke`、`regression`。若用例打上 `@pytest.mark.hw`，可在无硬件时跳过：`pytest -m "not hw"`。
-
-## 测试数据说明
-
-用例通常会从 Excel 读取测试数据，例如：
-- `test_data/UltraArm_P1.xlsx`
-
-用例代码里常见写法：
-- `get_test_data_from_excel(UltraArmP1Base.TEST_DATA_FILE, "<sheet_name>")`
-
-如果出现“找不到 sheet / 数据为空”，请检查：
-- Excel 文件路径是否存在
-- Sheet 名称是否与用例中传入的一致
+- **`conftest.py`**：`ultraarm_serial`（session）、`device`（module，默认仅 `mc.close()`）。模块内若需 **回零 / 夹爪复位 / IO 清理**，可**重新定义**同名 `device`（pytest 就近覆盖）。
+- **`settings.py`**：`UltraArmP1Base`、`default_base_io_output()`（按 `base_io_pin_count` 复位底座 IO，缺省 12，可按硬件改）。
+- **`docs/EXCEL_TEST_DATA.md`**：Excel 约定。
 
 ## 目录结构
 
-- `main.py`：交互式运行入口（执行 pytest + 生成/打开 Allure 报告）
-- `conftest.py`：全局 pytest 配置与共享 fixture（如 `device`），用例中无需重复定义
-- `settings.py`：项目配置（用例目录映射、日志、Allure 结果目录、设备连接参数等；串口/波特率可由环境变量覆盖）
-- `testcases/`：pytest 用例目录
-  - `UltraArm_P1/`：UltraArm_P1 相关用例
-  - `UltraArm_P1_Attachments/`：附件/扩展相关用例（如有）
-- `test_data/`：测试数据（Excel）
-- `common1/`：通用能力（日志、读取测试数据等）
-- `scripts/`：一些独立脚本/实验代码（不一定作为 pytest 用例执行）
-- `log/`：日志输出目录
+- `main.py`：交互选择产品并跑 pytest + Allure
+- `conftest.py`：全局 fixture、`hardware` 自动打标
+- `settings.py`：用例目录、日志、设备参数
+- `testcases/UltraArm_P1/`、`testcases/UltraArm_P1_Attachments/`
+- `test_data/`：Excel
+- `common1/`：日志、`test_data_handler` 等
 
-## Allure 安装提示（Windows）
+## PYTHONPATH / 导入
 
-本项目依赖 `allure` 命令行可执行文件。若你执行 `python main.py` 或 `allure generate` 报错提示找不到 `allure`，请先安装 Allure：
+根目录已配置 `pytest.ini` 的 `pythonpath = .`。若用「运行 Python 文件」直接跑脚本，请在项目根设置 `PYTHONPATH=.` 或使用 pytest 执行用例。
 
-- **使用 Scoop（推荐）**：
+## Allure（Windows）
 
 ```bash
 scoop install allure
+# 或 choco install allure
 ```
-
-- **使用 Chocolatey**：
-
-```bash
-choco install allure
-```
-
-安装后请确保在新终端中执行 `allure --version` 能正常输出版本号。
 
 ## 常见问题
 
-### 1) 串口打不开 / 连接失败
-
-- **确认串口号**：设备管理器里查看实际 `COMx`，并同步修改 `settings.py`
-- **串口被占用**：关闭其它串口工具（例如串口调试助手/上位机软件）
-- **权限问题**：以普通用户运行一般即可；若驱动/设备异常，请检查驱动安装
-
-### 2) 运行 pytest 没生成报告
-
-- 确认运行命令包含 `--alluredir=allure-results`
-- 确认 `allure-results/` 目录里有内容后再执行 `allure generate`
-
-### 3) 提示缺少依赖
-
-在已激活虚拟环境的前提下重新安装：
-
-```bash
-pip install -r requirements.txt
-```
-
-## 约定
-
-- 新增用例建议放在对应产品目录下：`testcases/<ProductName>/test_*.py`
-- 用例数据尽量维护在 `test_data/` 的 Excel 中，便于非研发同学协作维护
+- **串口占用**：关闭串口助手等再跑测试。
+- **无报告**：命令需带 `--alluredir=allure-results`，再 `allure generate`。
