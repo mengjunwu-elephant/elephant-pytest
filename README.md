@@ -30,6 +30,22 @@ pip install -e .
 
 ## 运行测试
 
+**推荐**：在项目根目录用 pytest 执行（勿对单个用例文件点「运行」用纯 `python` 跑，否则常出现 `No module named 'common1'`）：
+
+```bash
+cd <本仓库根目录>
+pytest testcases/mycobot_450/test_1_get_system_version.py -v
+```
+
+若必须在终端用 `python` 直接跑脚本，请先设置 **`PYTHONPATH` 为项目根目录**（PowerShell 示例）：
+
+```powershell
+$env:PYTHONPATH = (Get-Location).Path
+python testcases/mycobot_450/test_1_get_system_version.py   # 仍建议用 pytest
+```
+
+本仓库已提供根目录 `.env`（`PYTHONPATH=.`) 与 `.vscode/settings.json`，在 Cursor/VS Code 中新建终端或配合 `python.envFile` 可减少该类错误。
+
 ```bash
 # 全量（需真机）；生成 Allure 原始数据需已安装 allure-pytest
 pytest testcases --alluredir=allure-results
