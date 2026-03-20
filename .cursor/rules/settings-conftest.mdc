@@ -1,0 +1,19 @@
+---
+description: settings 环境变量、UltraArmP1Base 与 conftest fixture
+globs: settings.py,conftest.py,common1/**/*.py
+alwaysApply: false
+---
+
+# 配置与共享 fixture
+
+## `settings.py`
+- `resolve_ultraarm_port` / `resolve_ultraarm_baud`：显式参数 > 环境变量 > `DEFAULT_ULTRAARM_*`。
+- `UltraArmP1Base`：`self.mc = UltraArmP1(...)`；`go_zero`、`default_base_io_output`、`wait`（`ULTRAARM_MOVE_TIMEOUT_SEC`）为测试前后安全与同步关键路径。
+- `CASES_DIR`、`LOG_CONFIG`、`REPORT_DIR` 供 `main.py` 与日志使用。
+
+## `conftest.py`
+- `ultraarm_serial`（session）：解析并记录 port/baud。
+- `device`（module）：单连接，`yield` 后 `dev.mc.close()`；测试模块内可覆盖 `device`。
+- `pytest_collection_modifyitems`：路径含 `testcases` 的用例自动 `pytest.mark.hardware`。
+
+修改默认串口/超时优先改环境变量或 `settings` 常量，避免在用例里硬编码端口。

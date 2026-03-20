@@ -1,0 +1,27 @@
+---
+description: UltraArm pytest 用例结构、fixture、Allure 与标记约定
+globs: testcases/**/*.py
+alwaysApply: false
+---
+
+# pytest 用例（testcases）
+
+## 固定模式
+- 模块顶部：`cases = get_test_data_from_excel(文件常量, "sheet名")`，文件用 `UltraArmP1Base.TEST_DATA_FILE` 或 `ATTACHMENTS_TEST_DATA_FILE`。
+- 参数化：`@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])`；异常分支用 `test_type == "exception"` 或 `c.get("test_type") == "exception"`。
+- 设备：默认使用根目录 `conftest.py` 的 `device`；若需自定义清理，在同一测试模块内定义同名 `device` fixture 覆盖（如附件用例 teardown 里 `set_gripper_angle(0)` + `close()`）。
+
+## 调用与等待
+- 通过 `device.mc` 调用 pymycobot API；涉及运动后调用 `device.wait()`（内部带超时，见 `settings.UltraArmP1Base.wait`）。
+- 异常断言：本体常见 `ultraArmP1DataException`；附件可能还有 `MercuryDataException` 等，与现有同目录用例保持一致。
+
+## Allure 与日志
+- 类/故事：`@allure.feature` / `@allure.story`；步骤：`with allure.step(...)`。
+- 关键数据：`allure.attach(..., attachment_type=allure.attachment_type.TEXT)`；进度用 `common1.logger`（`info`/`debug`）。
+
+## 标记
+- 冒烟可加：`pytestmark = pytest.mark.smoke`（见 `test_1_get_system_version.py`）。
+- 勿手动重复打 `hardware`（`conftest.py` 已对 `testcases` 路径自动添加）。
+
+## 断言
+- 浮点/列表容差：仅使用 `assert_almost_equal(actual, expected, tol=..., name=...)`（签名四个参数）；额外说明用独立 `assert` 或 Allure 附件，不要误写成「函数调用逗号 + 字符串」的元组表达式。

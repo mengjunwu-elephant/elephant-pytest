@@ -1,0 +1,18 @@
+# elephant-pytest（UltraArm pymycobot 接口 pytest）
+
+## 项目角色
+基于 **pytest + Allure + Excel 参数化** 的硬件接口测试；被测对象为 `pymycobot` 的 `UltraArmP1`（`settings.UltraArmP1Base` 封装串口与 `wait()`）。
+
+## 运行与 CI
+- 交互选套件：`python main.py`（写入 `allure-results`，再 `allure generate/open`）。
+- 串口：`ULTRAARM_PORT`、`ULTRAARM_BAUD`；运动超时：`ULTRAARM_MOVE_TIMEOUT_SEC`；调试：`ULTRAARM_DEBUG`。
+- `testcases/` 下用例由 `conftest.py` 自动打 `@pytest.mark.hardware`；无硬件时：`pytest -m "not hardware"`。
+
+## 写用例时必读
+- 共享 fixture：`device`（模块级，`UltraArmP1Base`）、`ultraarm_serial`；附件类模块可本地覆盖 `device` 做 teardown（如夹爪回零）。
+- 数据：`get_test_data_from_excel` + `UltraArmP1Base.TEST_DATA_FILE` / `ATTACHMENTS_TEST_DATA_FILE`；Sheet 名与代码第二个参数一致；列含 `title`、`test_type`、`api`、`expect_data` 等。
+- 断言：`common1.assert_utils.assert_almost_equal`（角度/坐标容差）；日志用 `common1.logger`；步骤用 `allure.step`。
+- 详细约定见 `docs/EXCEL_TEST_DATA.md` 与 `.cursor/rules/`、`/.cursor/skills/`。
+
+## 语言
+解释与注释优先使用简体中文（与现有用例一致）。

@@ -1,0 +1,20 @@
+---
+description: Excel 测试数据路径、Sheet 与列约定（UltraArm_P1）
+globs: docs/**/*.md
+alwaysApply: false
+---
+
+# Excel 测试数据
+
+- **本体**：`test_data/UltraArm_P1.xlsx` → `UltraArmP1Base.TEST_DATA_FILE`
+- **附件**：`test_data/UltraArm_P1_Attachments.xlsx` → `UltraArmP1Base.ATTACHMENTS_TEST_DATA_FILE`
+
+## 格式
+- 第 1 行为列名，**禁止空列名**；全空行跳过。
+- **Sheet 名**必须与 `get_test_data_from_excel(path, "sheet_name")` 完全一致。
+- 常用列：`title`、`test_type`（`normal` / `exception`）、`api`、`expect_data`，以及各接口参数字段（如 `angles`、`speed`、`value`）；列表类参数在 Excel 中常以字符串形式再用 `eval()` 解析——新增列时保持与同目录已有用例一致。
+
+## 代码加载
+- 使用 `common1.test_data_handler.get_test_data_from_excel`；需要强校验列时传入 `required_columns=(...)`。
+
+完整说明见仓库内 `docs/EXCEL_TEST_DATA.md`。
