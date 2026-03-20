@@ -7,6 +7,8 @@ from pymycobot import *
 m = Mercury('/dev/ttyAMA1')
 mc = MyArmC('/dev/ttyACM0')
 
+angles_min = [-165, -50, -165, -165, -165, -75, -165]
+angles_max = [165, 120, 165, 1, 165, 255, 165]
 
 def control_arm():
     # 创建CSV文件并写入表头
@@ -29,9 +31,22 @@ def control_arm():
 
             # 转换为Mercury的关节角度
             mercury_list = [
-                arm_data[0], -arm_data[1] + 10, -arm_data[3],
-                             arm_data[2] - 90, arm_data[4], 135 + arm_data[5], arm_data[6] + 20
+                arm_data[0], arm_data[1] + 90, -arm_data[3],
+                             arm_data[2] - 80, arm_data[4] - 25, arm_data[5] + 90, arm_data[6] + 7
             ]
+
+            # mercury_list = [
+            #     arm_data[0], arm_data[1] + 77, -arm_data[3],
+            #                  arm_data[2] - 77, arm_data[4] - 30, arm_data[5] + 90, arm_data[6]
+            # ]
+
+            for i,j in enumerate(mercury_list):
+                print(angles_min[i],j,i)
+                if angles_min[i] > j:
+                    mercury_list[i] = angles_min[i]
+                if angles_max[i] < j:
+                    mercury_list[i] = angles_max[i]
+
             print(f'A1发送的角度: {mercury_list}')
 
             # 发送到Mercury
