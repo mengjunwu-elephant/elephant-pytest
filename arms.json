@@ -1,0 +1,48 @@
+{
+  "default_arm": "mycobot450",
+  "arms": {
+    "mycobot450": {
+      "label": "MyCobot Pro 450",
+      "default_ip": "192.168.0.232",
+      "device_profile": "pro450",
+      "testcase_roots": [
+        "testcases/mycobot_450",
+        "testcases/mycobot450_pro_gripper"
+      ]
+    },
+    "mercury_x1": {
+      "label": "Mercury X1 双臂",
+      "default_ip": "",
+      "device_profile": "mercury",
+      "testcase_roots": [
+        "testcases/mercury",
+        "testcases/mercury_pro_gripper",
+        "testcases/mercury_my_hand"
+      ]
+    },
+    "mercury_e1": {
+      "label": "Mercury E1",
+      "default_ip": "",
+      "device_profile": "mercury_e1",
+      "testcase_roots": [
+        "testcases/mercury_e1",
+        "testcases/mercury_e1_pro_gripper"
+      ]
+    },
+    "mycobot_280": {
+      "label": "MyCobot 280",
+      "default_ip": "",
+      "device_profile": "mycobot280",
+      "testcase_roots": ["testcases/mycobot_280"]
+    },
+    "ultraarm_p1": {
+      "label": "UltraArm P1",
+      "default_ip": "",
+      "device_profile": "ultraarm_p1",
+      "testcase_roots": [
+        "testcases/UltraArm_P1",
+        "testcases/UltraArm_P1_Attachments"
+      ]
+    }
+  }
+}
