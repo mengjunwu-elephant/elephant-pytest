@@ -188,3 +188,17 @@ def connection_env_var_for_arm(arm_id: str) -> Optional[str]:
         "mycobot280": "MYCOBOT280_PORT",
         "mercury": None,
     }.get(prof)
+
+
+def get_connection_mode(arm_id: str) -> str:
+    """arms.json 的 connection_mode，缺省时按 device_profile 推断：ip / serial / dual_serial。"""
+    entry = get_arm_entry(arm_id)
+    m = entry.get("connection_mode")
+    if m in ("ip", "serial", "dual_serial"):
+        return str(m)
+    prof = str(entry.get("device_profile", "")).strip()
+    if prof == "pro450":
+        return "ip"
+    if prof == "mercury":
+        return "dual_serial"
+    return "serial"

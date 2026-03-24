@@ -1,7 +1,9 @@
 {
+  "python.defaultInterpreterPath": "C:\\Users\\Elephant\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
   "python.analysis.extraPaths": ["${workspaceFolder}"],
   "terminal.integrated.env.windows": {
-    "PYTHONPATH": "${workspaceFolder}"
+    "PYTHONPATH": "${workspaceFolder}",
+    "PATH": "C:\\Users\\Elephant\\AppData\\Local\\Programs\\Python\\Python310;C:\\Users\\Elephant\\AppData\\Local\\Programs\\Python\\Python310\\Scripts;${env:PATH}"
   },
   "python.terminal.executeInFileDir": false,
   "python.envFile": "${workspaceFolder}/.env"

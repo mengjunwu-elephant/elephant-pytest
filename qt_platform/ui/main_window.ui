@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>780</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>elephant-pytest 测试平台</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_root">
+    <property name="spacing"><number>12</number></property>
+    <property name="leftMargin"><number>12</number></property>
+    <property name="topMargin"><number>12</number></property>
+    <property name="rightMargin"><number>12</number></property>
+    <property name="bottomMargin"><number>12</number></property>
+    <item>
+     <widget class="QWidget" name="left_panel">
+      <layout class="QVBoxLayout" name="verticalLayout_left">
+       <property name="spacing"><number>8</number></property>
+       <property name="leftMargin"><number>0</number></property>
+       <property name="topMargin"><number>0</number></property>
+       <property name="rightMargin"><number>0</number></property>
+       <property name="bottomMargin"><number>0</number></property>
+       <item>
+        <layout class="QFormLayout" name="formLayout_arm">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_arm">
+           <property name="text"><string>机械臂</string></property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="combo_arm"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_conn_title">
+         <property name="text"><string>连接（按产品线切换 IP / 串口）</string></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="conn_host">
+         <layout class="QVBoxLayout" name="verticalLayout_conn">
+          <property name="leftMargin"><number>0</number></property>
+          <property name="topMargin"><number>0</number></property>
+          <property name="rightMargin"><number>0</number></property>
+          <property name="bottomMargin"><number>0</number></property>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_connect">
+         <item>
+          <widget class="QPushButton" name="btn_connect">
+           <property name="text"><string>连接</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_disconnect">
+           <property name="text"><string>断开</string></property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_conn_status">
+         <property name="text"><string>状态：未连接</string></property>
+         <property name="wordWrap"><bool>true</bool></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_tests">
+         <property name="text"><string>单元测试按目录分组（如 450 本体 / 夹爪）；勾选后运行；test_type 对应该文件内 normal / exception</string></property>
+         <property name="wordWrap"><bool>true</bool></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QScrollArea" name="scroll_tests">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>1</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="tests_host">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>780</width>
+            <height>520</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_tests_host">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="leftMargin">
+            <number>2</number>
+           </property>
+           <property name="topMargin">
+            <number>2</number>
+           </property>
+           <property name="rightMargin">
+            <number>2</number>
+           </property>
+           <property name="bottomMargin">
+            <number>2</number>
+           </property>
+          </layout>
+         </widget>
+        </widget>
+        <property name="stretch"><number>1</number></property>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_run1">
+         <item>
+          <widget class="QPushButton" name="btn_check_all">
+           <property name="text"><string>全选</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_uncheck_all">
+           <property name="text"><string>全不选</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_run_selected">
+           <property name="enabled"><bool>false</bool></property>
+           <property name="text"><string>运行已选</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_run_all">
+           <property name="enabled"><bool>false</bool></property>
+           <property name="text"><string>运行全部（按各行 test_type）</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_stop">
+           <property name="enabled"><bool>false</bool></property>
+           <property name="text"><string>停止</string></property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_run2">
+         <item>
+          <widget class="QPushButton" name="btn_clear_allure">
+           <property name="text"><string>清空 Allure 原始结果</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_gen_report">
+           <property name="text"><string>生成测试报告（Allure HTML）</string></property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <property name="stretch"><number>1</number></property>
+    </item>
+    <item>
+     <widget class="QWidget" name="right_panel">
+      <property name="minimumSize">
+       <size>
+        <width>420</width>
+        <height>0</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_log_column">
+       <property name="spacing"><number>6</number></property>
+       <property name="leftMargin"><number>0</number></property>
+       <property name="topMargin"><number>0</number></property>
+       <property name="rightMargin"><number>0</number></property>
+       <property name="bottomMargin"><number>0</number></property>
+       <item>
+        <widget class="QLabel" name="label_log">
+         <property name="text"><string>运行日志</string></property>
+         <property name="styleSheet"><string>font-weight: 600; color: #334155;</string></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPlainTextEdit" name="log">
+         <property name="readOnly"><bool>true</bool></property>
+         <property name="maximumBlockCount"><number>12000</number></property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>1</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+        <property name="stretch"><number>1</number></property>
+       </item>
+      </layout>
+     </widget>
+     <property name="stretch"><number>0</number></property>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

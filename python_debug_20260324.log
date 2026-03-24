@@ -1,0 +1,8 @@
+2026-03-24 15:18:04.889 DEBU [pymycobot.common] _write: FE FE 03 02 0D D1 
+2026-03-24 15:18:04.902 DEBU [pymycobot.common] _read : FE FE 04 02 0C 98 7C
+2026-03-24 15:37:35.177 DEBU [pymycobot.common] _write: FE FE 03 02 0D D1 
+2026-03-24 15:37:35.190 DEBU [pymycobot.common] _read : FE FE 04 02 0C 98 7C
+2026-03-24 15:43:45.087 DEBU [pymycobot.common] _write: FE FE 03 02 0D D1 
+2026-03-24 15:43:45.110 DEBU [pymycobot.common] _read : FE FE 04 02 0C 98 7C
+2026-03-24 15:46:05.692 DEBU [pymycobot.common] _write: FE FE 03 02 0D D1 
+2026-03-24 15:46:05.704 DEBU [pymycobot.common] _read : FE FE 04 02 0C 98 7C

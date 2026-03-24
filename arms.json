@@ -3,6 +3,7 @@
   "arms": {
     "mycobot450": {
       "label": "MyCobot Pro 450",
+      "connection_mode": "ip",
       "default_ip": "192.168.0.232",
       "device_profile": "pro450",
       "testcase_roots": [
@@ -12,6 +13,7 @@
     },
     "mercury_x1": {
       "label": "Mercury X1 双臂",
+      "connection_mode": "dual_serial",
       "default_ip": "",
       "device_profile": "mercury",
       "testcase_roots": [
@@ -22,6 +24,7 @@
     },
     "mercury_e1": {
       "label": "Mercury E1",
+      "connection_mode": "serial",
       "default_ip": "",
       "device_profile": "mercury_e1",
       "testcase_roots": [
@@ -31,12 +34,14 @@
     },
     "mycobot_280": {
       "label": "MyCobot 280",
+      "connection_mode": "serial",
       "default_ip": "",
       "device_profile": "mycobot280",
       "testcase_roots": ["testcases/mycobot_280"]
     },
     "ultraarm_p1": {
       "label": "UltraArm P1",
+      "connection_mode": "serial",
       "default_ip": "",
       "device_profile": "ultraarm_p1",
       "testcase_roots": [
