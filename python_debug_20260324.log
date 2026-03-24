@@ -1,0 +1,29 @@
+2026-03-24 10:21:21.248 DEBU [pymycobot.common] _write: FE FE 03 11 C0 90 
+2026-03-24 10:21:21.263 DEBU [pymycobot.common] _read : FE FE 05 11 FF 01 E8 EC
+2026-03-24 10:21:21.264 DEBU [pymycobot.common] _write: FE FE 03 07 0E 11 
+2026-03-24 10:21:33.451 DEBU [pymycobot.common] _write: FE FE 03 11 C0 90 
+2026-03-24 10:21:36.509 DEBU [pymycobot.common] _write: FE FE 03 07 0E 11 
+2026-03-24 10:21:48.524 DEBU [pymycobot.common] _write: FE FE 03 11 C0 90 
+2026-03-24 10:21:51.609 DEBU [pymycobot.common] _write: FE FE 03 07 0E 11 
+2026-03-24 10:21:58.221 DEBU [pymycobot.common] _write: FE FE 03 11 C0 90 
+2026-03-24 10:22:01.309 DEBU [pymycobot.common] _write: FE FE 03 07 0E 11 
+2026-03-24 10:22:13.214 DEBU [pymycobot.common] _write: FE FE 03 07 0E 11 
+2026-03-24 10:57:38.683 DEBU [pymycobot.common] _write: FE FE 03 A2 75 D1 
+2026-03-24 10:57:38.698 DEBU [pymycobot.common] _read : FE FE 23 A2 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 F1 B9
+2026-03-24 11:03:13.230 DEBU [pymycobot.common] _write: FE FE 03 A2 75 D1 
+2026-03-24 11:03:13.242 DEBU [pymycobot.common] _read : FE FE 23 A2 00 00 00 00 00 00 00 00 00 11 00 11 00 11 00 11 00 11 00 00 00 00 00 00 00 00 00 00 00 00 00 00 47 CF
+2026-03-24 11:03:54.516 DEBU [pymycobot.common] _write: FE FE 04 E7 01 CD F7 
+2026-03-24 11:03:54.539 DEBU [pymycobot.common] _read : FE FE 05 E7 FF 01 DA 0C
+2026-03-24 11:03:55.545 DEBU [pymycobot.common] _write: FE FE 04 E7 02 CC B7 
+2026-03-24 11:03:55.562 DEBU [pymycobot.common] _read : FE FE 05 E7 FF 01 DA 0C
+2026-03-24 11:03:56.570 DEBU [pymycobot.common] _write: FE FE 04 E7 03 0C 76 
+2026-03-24 11:03:56.599 DEBU [pymycobot.common] _read : FE FE 05 E7 FF 01 DA 0C
+2026-03-24 11:03:57.609 DEBU [pymycobot.common] _write: FE FE 04 E7 04 CE 37 
+2026-03-24 11:03:57.629 DEBU [pymycobot.common] _read : FE FE 05 E7 FF 01 DA 0C
+2026-03-24 11:03:58.633 DEBU [pymycobot.common] _write: FE FE 04 E7 05 0E F6 
+2026-03-24 11:03:58.653 DEBU [pymycobot.common] _read : FE FE 05 E7 FF 01 DA 0C
+2026-03-24 11:03:58.768 DEBU [pymycobot.common] _read : FE FE 05 0C FF 01 EE 7C
+2026-03-24 11:03:59.657 DEBU [pymycobot.common] _write: FE FE 04 E7 06 0F B6 
+2026-03-24 11:03:59.676 DEBU [pymycobot.common] _read : FE FE 05 E7 FF 01 DA 0C
+2026-03-24 11:04:00.682 DEBU [pymycobot.common] _write: FE FE 03 A2 75 D1 
+2026-03-24 11:04:00.692 DEBU [pymycobot.common] _read : FE FE 23 A2 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 F1 B9
