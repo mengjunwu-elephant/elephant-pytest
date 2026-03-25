@@ -40,18 +40,29 @@ _UI_FILE = Path(__file__).resolve().parent / "ui" / "main_window.ui"
 ALLURE_RESULTS = _ROOT / "reports" / "qt_allure" / "allure-results"
 ALLURE_REPORT = _ROOT / "reports" / "qt_allure" / "allure-report"
 
+# 最近一次 pytest 对该 (文件, 测试项选择) 全部通过时，下拉框高亮
+_STYLE_COMBO_ALL_PASSED = """
+QComboBox {
+    background-color: #dcfce7;
+    border: 2px solid #22c55e;
+    border-radius: 6px;
+    padding: 4px 8px;
+    min-height: 22px;
+}
+"""
+
 # 与 arms.json 中 testcase_roots 最后一级目录对应，便于界面展示
 _TESTCASE_GROUP_LABELS: dict[str, str] = {
-    "mycobot_450": "450 本体",
-    "mycobot450_pro_gripper": "450 夹爪",
-    "mercury": "Mercury",
-    "mercury_pro_gripper": "Mercury 夹爪",
-    "mercury_my_hand": "Mercury 手掌",
+    "mycobot_450": "Mycobot Pro450",
+    "mycobot450_pro_gripper": "mycobot Pro 450 夹爪",
+    "mercury": "Mercury X1 双臂",
+    "mercury_pro_gripper": "Mercury X1 夹爪",
+    "mercury_my_hand": "Mercury X1 三指",
     "mercury_e1": "Mercury E1",
-    "mercury_e1_pro_gripper": "E1 夹爪",
-    "mycobot_280": "280",
+    "mercury_e1_pro_gripper": "Mercury E1 夹爪",
+    "mycobot_280": "Mycobot 280",
     "UltraArm_P1": "UltraArm P1",
-    "UltraArm_P1_Attachments": "P1 附件",
+    "UltraArm_P1_Attachments": "UltraArm P1 附件",
 }
 
 
@@ -219,7 +230,10 @@ class ElephantQtRunner(QMainWindow):
         self._session_right: str = ""
 
         self._pytest_proc: Optional[QProcess] = None
-        self._pytest_queue: list[tuple[str, Optional[str]]] = []
+        # (相对路径, pytest -k 表达式, 下拉当前 data：__ALL__ 或函数名)
+        self._pytest_queue: list[tuple[str, str, str]] = []
+        self._pytest_active: Optional[tuple[str, str]] = None
+        self._pass_state: dict[tuple[str, str], bool] = {}
 
         self._test_tables: list[tuple[QTableWidget, list[TestModuleRow]]] = []
         self._logged_missing_allure = False
@@ -255,11 +269,11 @@ class ElephantQtRunner(QMainWindow):
 
     def _configure_test_table(self, tbl: QTableWidget) -> None:
         tbl.setColumnCount(4)
-        tbl.setHorizontalHeaderLabels(["运行", "接口/表名", "test_type", "文件"])
+        tbl.setHorizontalHeaderLabels(["运行", "接口/表名", "测试项", "文件"])
         hh = tbl.horizontalHeader()
         hh.setSectionResizeMode(0, QHeaderView.ResizeMode.ResizeToContents)
         hh.setSectionResizeMode(1, QHeaderView.ResizeMode.Stretch)
-        hh.setSectionResizeMode(2, QHeaderView.ResizeMode.ResizeToContents)
+        hh.setSectionResizeMode(2, QHeaderView.ResizeMode.Stretch)
         hh.setSectionResizeMode(3, QHeaderView.ResizeMode.Stretch)
         tbl.setSelectionMode(QAbstractItemView.SelectionMode.NoSelection)
         tbl.setAlternatingRowColors(True)
@@ -267,6 +281,7 @@ class ElephantQtRunner(QMainWindow):
         tbl.setMinimumHeight(120)
 
     def _clear_tests_panel(self) -> None:
+        self._pass_state.clear()
         while self._tests_layout.count():
             item = self._tests_layout.takeAt(0)
             w = item.widget()
@@ -274,6 +289,32 @@ class ElephantQtRunner(QMainWindow):
                 w.setParent(None)
                 w.deleteLater()
         self._test_tables.clear()
+
+    def _find_row_by_rel(self, rel_path: str) -> Optional[TestModuleRow]:
+        for _, rows in self._test_tables:
+            for row in rows:
+                if row.rel_path == rel_path:
+                    return row
+        return None
+
+    def _apply_combo_pass_style(self, cb: QComboBox, rel_path: str) -> None:
+        choice = cb.currentData()
+        if not isinstance(choice, str) or not choice:
+            cb.setStyleSheet("")
+            return
+        if self._pass_state.get((rel_path, choice)) is True:
+            cb.setStyleSheet(_STYLE_COMBO_ALL_PASSED)
+        else:
+            cb.setStyleSheet("")
+
+    def _refresh_combo_style_for_rel(self, rel_path: str) -> None:
+        for tbl, rows in self._test_tables:
+            for r, row in enumerate(rows):
+                if row.rel_path != rel_path:
+                    continue
+                w = tbl.cellWidget(r, 2)
+                if isinstance(w, QComboBox):
+                    self._apply_combo_pass_style(w, rel_path)
 
     def _build_connection_stack(self) -> None:
         self.stack_conn = QStackedWidget()
@@ -362,12 +403,17 @@ class ElephantQtRunner(QMainWindow):
                 tbl.setItem(i, 0, ck)
                 tbl.setItem(i, 1, QTableWidgetItem(row.display_name))
                 cb = QComboBox()
-                if row.normal_funcs:
-                    cb.addItem("normal", "normal")
-                if row.exception_funcs:
-                    cb.addItem("exception", "exception")
+                if len(row.items) > 1:
+                    cb.addItem("全部（本文件）", "__ALL__")
+                for it in row.items:
+                    cb.addItem(it.label, it.func_name)
                 if cb.count() == 0:
                     cb.addItem("(无测试函数)", "")
+                rp = row.rel_path
+                cb.currentIndexChanged.connect(
+                    lambda _idx, c=cb, rel_p=rp: self._apply_combo_pass_style(c, rel_p),
+                )
+                self._apply_combo_pass_style(cb, rp)
                 tbl.setCellWidget(i, 2, cb)
                 tbl.setItem(i, 3, QTableWidgetItem(row.rel_path))
             v.addWidget(tbl)
@@ -485,8 +531,8 @@ class ElephantQtRunner(QMainWindow):
                 if it:
                     it.setCheckState(Qt.CheckState.Unchecked)
 
-    def _collect_tasks(self, all_rows: bool) -> list[tuple[str, Optional[str]]]:
-        tasks: list[tuple[str, Optional[str]]] = []
+    def _collect_tasks(self, all_rows: bool) -> list[tuple[str, str, str]]:
+        tasks: list[tuple[str, str, str]] = []
         for tbl, rows in self._test_tables:
             for r in range(tbl.rowCount()):
                 if not all_rows:
@@ -497,14 +543,14 @@ class ElephantQtRunner(QMainWindow):
                 w = tbl.cellWidget(r, 2)
                 if not isinstance(w, QComboBox):
                     continue
-                kind = w.currentData()
-                if kind not in ("normal", "exception"):
+                choice = w.currentData()
+                if not choice or not isinstance(choice, str):
                     continue
-                k_expr = row.pytest_k_for(kind)
+                k_expr = row.pytest_k_expr_for(choice)
                 if not k_expr:
-                    self._append_log(f"[跳过] {row.rel_path} 无 {kind} 用例")
+                    self._append_log(f"[跳过] {row.rel_path} 无有效测试项")
                     continue
-                tasks.append((row.rel_path, k_expr))
+                tasks.append((row.rel_path, k_expr, choice))
         return tasks
 
     def _on_run_selected(self) -> None:
@@ -512,7 +558,7 @@ class ElephantQtRunner(QMainWindow):
             return
         self._pytest_queue = self._collect_tasks(all_rows=False)
         if not self._pytest_queue:
-            QMessageBox.information(self, "运行", "请勾选至少一行有效测试（test_type 需为 normal/exception）。")
+            QMessageBox.information(self, "运行", "请勾选至少一行，并选择有效的测试项。")
             return
         self._start_next_pytest()
 
@@ -528,12 +574,31 @@ class ElephantQtRunner(QMainWindow):
     def _start_next_pytest(self) -> None:
         if not self._pytest_queue:
             self._pytest_proc = None
+            self._pytest_active = None
             self._append_log("\n[队列执行完毕]")
             self._update_run_enabled()
             self.btn_stop.setEnabled(False)
             return
 
-        rel, k_expr = self._pytest_queue.pop(0)
+        rel, k_expr, choice = self._pytest_queue.pop(0)
+        row_meta = self._find_row_by_rel(rel)
+        if row_meta is not None and row_meta.choice_uses_input(choice):
+            ans = QMessageBox.question(
+                self,
+                "需人工交互（input）",
+                "当前选择的测试代码中包含 input()，执行时会在控制台等待输入。\n\n"
+                "从本界面启动的子进程通常没有可用的交互式标准输入，用例容易卡住；"
+                "请优先在系统终端中复制日志里的完整命令执行，或确保测试机为 pytest 提供可用控制台。\n\n"
+                "将自动添加 pytest 参数 -s（不捕获输出），便于对照终端提示。\n\n"
+                "是否仍在本界面尝试运行本段？",
+                QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+                QMessageBox.StandardButton.No,
+            )
+            if ans != QMessageBox.StandardButton.Yes:
+                self._append_log(f"[跳过] {rel}（含 input()，已取消）")
+                self._start_next_pytest()
+                return
+
         aid = self.combo_arm.currentData()
         ALLURE_RESULTS.mkdir(parents=True, exist_ok=True)
 
@@ -544,6 +609,8 @@ class ElephantQtRunner(QMainWindow):
             "--tb=short",
             f"--elephant-arm={aid}",
         ]
+        if row_meta is not None and row_meta.choice_uses_input(choice):
+            args.append("-s")
         if _allure_pytest_available():
             args.append(f"--alluredir={ALLURE_RESULTS.as_posix()}")
         elif not self._logged_missing_allure:
@@ -553,6 +620,7 @@ class ElephantQtRunner(QMainWindow):
                 "请执行: pip install allure-pytest"
             )
         args.extend([rel, "-k", k_expr])
+        self._pytest_active = (rel, choice)
         self._pytest_proc = QProcess(self)
         self._pytest_proc.setProgram(sys.executable)
         self._pytest_proc.setArguments(args)
@@ -585,10 +653,18 @@ class ElephantQtRunner(QMainWindow):
 
     def _on_pytest_finished(self, code: int, status: QProcess.ExitStatus) -> None:
         self._append_log(f"\n[本段结束 exit={code} status={status}]")
+        active = self._pytest_active
+        self._pytest_active = None
+        if active is not None:
+            rel_path, choice = active
+            if status == QProcess.ExitStatus.NormalExit:
+                self._pass_state[(rel_path, choice)] = code == 0
+                self._refresh_combo_style_for_rel(rel_path)
         self._start_next_pytest()
 
     def _on_stop_pytest(self) -> None:
         self._pytest_queue.clear()
+        self._pytest_active = None
         if self._pytest_proc and self._pytest_proc.state() != QProcess.ProcessState.NotRunning:
             self._pytest_proc.kill()
         self._pytest_proc = None

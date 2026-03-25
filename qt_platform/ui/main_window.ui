@@ -77,7 +77,7 @@
        </item>
        <item>
         <widget class="QLabel" name="label_tests">
-         <property name="text"><string>单元测试按目录分组（如 450 本体 / 夹爪）；勾选后运行；test_type 对应该文件内 normal / exception</string></property>
+         <property name="text"><string>单元测试按目录分组；勾选后运行；「测试项」对应该文件内各用例（优先显示 Allure story 标题）</string></property>
          <property name="wordWrap"><bool>true</bool></property>
         </widget>
        </item>
@@ -152,7 +152,7 @@
          <item>
           <widget class="QPushButton" name="btn_run_all">
            <property name="enabled"><bool>false</bool></property>
-           <property name="text"><string>运行全部（按各行 test_type）</string></property>
+           <property name="text"><string>运行全部</string></property>
           </widget>
          </item>
          <item>
@@ -198,7 +198,7 @@
        <item>
         <widget class="QLabel" name="label_log">
          <property name="text"><string>运行日志</string></property>
-         <property name="styleSheet"><string>font-weight: 600; color: #334155;</string></property>
+         <property name="styleSheet"><string>font-weight: 600; color:rgb(7, 17, 31);</string></property>
         </widget>
        </item>
        <item>
