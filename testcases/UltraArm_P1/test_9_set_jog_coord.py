@@ -54,8 +54,8 @@ def test_jog_coord_exception(device, case):
     logger.debug(f'speed:{case["speed"]}')
 
     with allure.step(f"断言抛出 ultraArmP1DataException,笛卡尔坐标系为{case['axis']},方向为{case['position']}, 速度为{case['speed']}"):
-        with pytest.raises(ultraArmP1DataException):
+        with pytest.raises(ultraArmP1DataException) as exc:
             device.mc.set_jog_coord(case["axis"],case["position"], case["speed"])
 
-    logger.info(f"✅ 用例【{title}】异常断言通过")
+    logger.info(f"✅ 用例【{title}】异常断言通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

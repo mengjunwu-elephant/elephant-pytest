@@ -129,8 +129,8 @@ def test_send_coords_exception(device, case):
     logger.debug(f'speed:{case["speed"]}')
 
     with allure.step(f"断言抛出 Mycobot280Exception,角度为{case['coords']}, 速度为{case['speed']}"):
-        with pytest.raises(MyCobot280DataException):
+        with pytest.raises(MyCobot280DataException) as exc:
             device.mc.send_coords(eval(case["coords"]), case["speed"])
 
-    logger.info(f"✅ 用例【{title}】异常断言通过")
+    logger.info(f"✅ 用例【{title}】异常断言通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

@@ -53,8 +53,8 @@ def test_get_hand_gripper_d_exception(device, case):
     logger.debug(f"test_joint: {case['joint']}")
 
     with allure.step(f"尝试传入非法 joint 值，预期抛出 MercuryDataException,关节为{case['joint']}"):
-        with pytest.raises(MercuryDataException):
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.get_hand_gripper_d(case["joint"])
 
-    logger.info(f"✅ 异常断言成功，用例【{title}】测试通过")
+    logger.info(f"✅ 异常断言成功，用例【{title}】测试通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

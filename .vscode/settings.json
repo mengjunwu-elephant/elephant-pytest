@@ -6,5 +6,11 @@
     "PATH": "C:\\Users\\Elephant\\AppData\\Local\\Programs\\Python\\Python310;C:\\Users\\Elephant\\AppData\\Local\\Programs\\Python\\Python310\\Scripts;${env:PATH}"
   },
   "python.terminal.executeInFileDir": false,
-  "python.envFile": "${workspaceFolder}/.env"
+  "python.envFile": "${workspaceFolder}/.env",
+
+  "python.testing.cwd": "${workspaceFolder}",
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestPath": "pytest",
+  "python.testing.autoTestDiscoverOnSaveEnabled": true
 }

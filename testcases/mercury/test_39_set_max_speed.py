@@ -57,10 +57,10 @@ def test_set_max_speed_exception(device, case):
     logger.debug(f"参数: {case['parameter']}，模式: {case['mode']}")
 
     with allure.step("断言抛出 MercuryDataException"):
-        with pytest.raises(MercuryDataException,match=".*") as exc_info:
+        with pytest.raises(MercuryDataException,match=".*") as exc:
             device.ml.set_max_speed(case["mode"], case["parameter"])
             device.mr.set_max_speed(case["mode"], case["parameter"])
 
-    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")
 

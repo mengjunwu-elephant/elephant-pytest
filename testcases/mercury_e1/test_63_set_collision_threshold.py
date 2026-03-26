@@ -75,10 +75,10 @@ def test_set_collision_threshold_exception(device, case):
     logger.debug(f'threshold:{case["threshold"]}')
 
     with allure.step(f"断言抛出 MercuryE1DataException,关节为{joint}，阈值为{threshold}"):
-        with pytest.raises(MercuryE1DataException):
+        with pytest.raises(MercuryE1DataException) as exc:
             device.mc.set_collision_threshold(joint,threshold)
 
-    logger.info(f"✅ 用例【{title}】异常断言通过")
+    logger.info(f"✅ 用例【{title}】异常断言通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
 

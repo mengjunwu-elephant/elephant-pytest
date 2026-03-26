@@ -60,7 +60,7 @@ def test_set_fresh_mode_exception(device, case):
         logger.debug(f'test_parameters: {case["parameters"]}')
 
     with allure.step(f"调用 {case['api']} 异常场景接口，参数 parameter={case['parameters']}"):
-        with pytest.raises(MyCobot280DataException, match=".*"):
+        with pytest.raises(MyCobot280DataException, match=".*") as exc:
             device.mc.set_fresh_mode(case['parameters'])
 
     logger.info(f'✅ 用例【{title}】测试通过')

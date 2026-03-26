@@ -62,8 +62,8 @@ def test_set_pro_gripper_angle_exception(device, case):
     logger.debug(f"test_value: {case['value']}")
 
     with allure.step(f"断言设置接口抛出 MercuryDataException, value: {case['value']}"):
-        with pytest.raises(MercuryDataException):
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.set_pro_gripper_angle(case["value"])
 
-    logger.info(f"✅ 用例【{case['title']}】异常断言成功")
+    logger.info(f"✅ 用例【{case['title']}】异常断言成功,异常信息：{exc.value}")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")

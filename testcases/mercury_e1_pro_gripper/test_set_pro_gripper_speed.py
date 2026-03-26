@@ -53,7 +53,7 @@ def test_set_pro_gripper_speed_exception(device, case):
     logger.debug(f"test_parameters: {case.get('parameter')}")
 
     with allure.step(f"调用接口并断言抛出 MyCobotPro450DataException 异常,速度为{case['parameter']}"):
-        with pytest.raises(MyCobotPro450DataException):
+        with pytest.raises(MyCobotPro450DataException) as exc:
             device.mc.set_pro_gripper_speed(case["parameter"])
 
     logger.info(f"✅ 用例【{case['title']}】触发异常测试成功")

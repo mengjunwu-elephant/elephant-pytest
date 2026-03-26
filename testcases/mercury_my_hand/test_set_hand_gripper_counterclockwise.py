@@ -56,8 +56,8 @@ def test_set_hand_gripper_counterclockwise_exception(device, case):
     logger.debug(f"test_parameter:{case['parameter']}")
 
     with allure.step(f"调用接口，预期抛出 MercuryDataException,关节为{case['joint']}，逆时针可运行误差为{case['parameter']}"):
-        with pytest.raises(MercuryDataException, match=f".*"):
+        with pytest.raises(MercuryDataException, match=f".*") as exc:
             device.ml.set_hand_gripper_counterclockwise(case["joint"], case["parameter"])
 
-    logger.info(f"✅ 异常断言成功，用例【{case['title']}】测试成功")
+    logger.info(f"✅ 异常断言成功，用例【{case['title']}】测试成功,异常信息：{exc.value}")
     logger.info(f"》》》》》用例【{case['title']}】测试完成《《《《《")

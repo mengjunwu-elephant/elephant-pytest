@@ -60,8 +60,8 @@ def test_solve_inv_kinematics_exception(device, case):
         logger.debug(f"参数: {case['parameter']}, {case['parameter_1']}")
 
         with allure.step("断言抛出 MercuryDataException"):
-            with pytest.raises(MercuryDataException) as exc_info:
+            with pytest.raises(MercuryDataException) as exc:
                 device.ml.solve_inv_kinematics(case["parameter"], case["parameter_1"])
                 device.mr.solve_inv_kinematics(case["parameter"], case["parameter_1"])
-        logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+        logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc.value}")
         logger.info(f"✅ 异常用例【{title}】触发 MercuryDataException 成功")

@@ -88,9 +88,9 @@ def test_is_in_position_exception(device, case):
     logger.debug(f"接口: {case['api']}，参数: {param}，模式: {mode}")
 
     with allure.step("断言抛出 MercuryDataException"):
-        with pytest.raises(MercuryDataException) as exc_info:
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.is_in_position(param, mode)
             device.mr.is_in_position(param, mode)
 
-    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

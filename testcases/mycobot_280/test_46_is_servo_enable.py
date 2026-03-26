@@ -59,8 +59,8 @@ def test_is_servo_enable_exception(device, case):
     logger.debug(f"接口: {case['api']}，关节: {case['joint']}")
 
     with allure.step("断言抛出 MyCobot280DataException"):
-        with pytest.raises(MyCobot280DataException):
+        with pytest.raises(MyCobot280DataException) as exc:
             device.mc.is_servo_enable(case['joint'])
 
-    logger.info(f"✅ 用例【{title}】异常测试通过")
+    logger.info(f"✅ 用例【{title}】异常测试通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

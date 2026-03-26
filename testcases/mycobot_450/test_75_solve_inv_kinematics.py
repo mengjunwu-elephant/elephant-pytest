@@ -103,8 +103,8 @@ def test_solve_inv_kinematics_exception(device, case):
     logger.debug(f'test_current_angles:{current_angles}')
 
     with allure.step(f"断言抛出 Mycobot450Exception,目标坐标为{target_coords}，当前角度为{current_angles}"):
-        with pytest.raises(MyCobotPro450DataException):
+        with pytest.raises(MyCobotPro450DataException) as exc:
             device.mc.solve_inv_kinematics(target_coords, current_angles)
 
-    logger.info(f"✅ 用例【{title}】异常断言通过")
+    logger.info(f"✅ 用例【{title}】异常断言通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

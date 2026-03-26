@@ -71,12 +71,14 @@ def test_pause_exception(device, case):
     logger.debug(f"参数: {case['parameter']}")
 
     with allure.step("验证左臂异常参数抛出 MercuryDataException"):
-        with pytest.raises(MercuryDataException):
+        with pytest.raises(MercuryDataException) as exc_l:
             device.ml.pause(case["parameter"])
 
     with allure.step("验证右臂异常参数抛出 MercuryDataException"):
-        with pytest.raises(MercuryDataException)as exc_info:
+        with pytest.raises(MercuryDataException) as exc_r:
             device.mr.pause(case["parameter"])
 
-    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+    logger.info(
+        f"✅ 用例【{case['title']}】触发了预期异常: 左臂={exc_l.value!r} | 右臂={exc_r.value!r}"
+    )
     logger.info(f"》》》用例【{title}】测试完成《《《")

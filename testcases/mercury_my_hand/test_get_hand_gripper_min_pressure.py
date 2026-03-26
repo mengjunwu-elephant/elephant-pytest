@@ -50,8 +50,8 @@ def test_get_hand_gripper_min_pressure_exception(device, case):
     logger.debug(f"test_joint: {case['joint']}")
 
     with allure.step(f"调用接口并期待抛出 MercuryDataException,关节为{case['joint']}"):
-        with pytest.raises(MercuryDataException, match=f".*"):
+        with pytest.raises(MercuryDataException, match=f".*") as exc:
             device.ml.get_hand_gripper_min_pressure(case['joint'])
 
-    logger.info(f"✅ 用例【{case['title']}】异常断言成功")
+    logger.info(f"✅ 用例【{case['title']}】异常断言成功,异常信息：{exc.value}")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")

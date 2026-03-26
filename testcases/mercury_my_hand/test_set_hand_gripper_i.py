@@ -57,7 +57,7 @@ def test_set_hand_gripper_i_exception(device, case):
     logger.debug(f"test_parameters: {case['parameter']}")
 
     with allure.step(f"调用 set_hand_gripper_i，期望抛出 MercuryDataException,关节为{case['joint']}，I值为{case['parameter']}"):
-        with pytest.raises(MercuryDataException):
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.set_hand_gripper_i(case["joint"], case["parameter"])
 
     logger.info(f"✅ 用例【{case['title']}】测试成功")

@@ -64,8 +64,8 @@ def test_set_gripper_protect_current_exception(device, case):
     logger.debug(f"接口: {case['api']}，参数: {param}")
 
     with allure.step("断言抛出 MyCobot280DataException"):
-        with pytest.raises(MyCobot280DataException):
+        with pytest.raises(MyCobot280DataException) as exc:
             device.mc.set_gripper_protect_current(param)
 
-    logger.info(f"✅ 用例【{title}】异常测试通过")
+    logger.info(f"✅ 用例【{title}】异常测试通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

@@ -61,11 +61,11 @@ def test_set_torque_comp_exception(device, case):
         logger.debug(f"用例详情: {case}")
 
         with allure.step("断言调用接口时抛出 MercuryDataException 异常"):
-            with pytest.raises(MercuryDataException) as exc_info:
+            with pytest.raises(MercuryDataException) as exc:
                 device.ml.set_torque_comp(case["joint"], case["parameter"])
                 device.mr.set_torque_comp(case["joint"], case["parameter"])
 
-        logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+        logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
 

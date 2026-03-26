@@ -39,6 +39,15 @@ def get_test_data_from_excel(
         keys: list[Any] = []
         for i in range(1, column + 1):
             keys.append(sh.cell(1, i).value)
+        # Excel 常因格式/选中区域把 max_column 拉大，尾部若干列首格无表头；数据若也为空可安全截断
+        while keys and (
+            keys[-1] is None
+            or (isinstance(keys[-1], str) and keys[-1].strip() == "")
+        ):
+            keys.pop()
+        column = len(keys)
+        if column == 0:
+            raise ValueError("Excel 首行无任何列名")
         if any(k is None or (isinstance(k, str) and k.strip() == "") for k in keys):
             raise ValueError("Excel 首行存在空列名，请删除空列或填写表头")
 

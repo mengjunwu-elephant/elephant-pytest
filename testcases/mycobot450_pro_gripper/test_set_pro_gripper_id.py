@@ -62,7 +62,7 @@ def test_set_pro_gripper_id_exception(device, case):
         logger.debug(f'test_parameters: {case["parameter"]}')
 
     with allure.step("断言非法参数触发 MyCobotPro450DataException"):
-        with pytest.raises(MyCobotPro450DataException):
+        with pytest.raises(MyCobotPro450DataException) as exc:
             device.mc.set_pro_gripper_id(case["parameter"])
 
     logger.info(f'✅ 用例【{title}】测试通过')

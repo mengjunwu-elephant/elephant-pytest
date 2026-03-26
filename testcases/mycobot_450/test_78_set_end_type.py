@@ -67,8 +67,8 @@ def test_set_end_type_exception(device, case):
     logger.debug(f'test_api:{case["api"]}')
 
     with allure.step(f"断言抛出 Mycobot450Exception,参数为{case['parameter']}"):
-        with pytest.raises(MyCobotPro450DataException):
+        with pytest.raises(MyCobotPro450DataException) as exc:
             device.mc.set_end_type(case['parameter'])
 
-    logger.info(f"✅ 用例【{title}】异常断言通过")
+    logger.info(f"✅ 用例【{title}】异常断言通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

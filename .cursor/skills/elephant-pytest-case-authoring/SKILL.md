@@ -1,84 +1,121 @@
 ---
 name: elephant-pytest-case-authoring
 description: >-
-  Authors pymycobot hardware pytest cases in this repo: Excel-driven rows,
-  Mycobot450Base/MercuryBase/etc., allure steps, assert_utils. Use when adding
-  or refactoring tests under testcases/, editing xlsx-driven parametrize, or
-  when the user mentions Excel 用例、Allure、device fixture、接口测试.
+  Authors pymycobot hardware pytest cases for this repository: Excel-driven
+  parametrize, product-line Base classes, device fixture lifecycle, allure
+  steps, and assert_utils tolerance assertions. Use when adding or refactoring
+  tests under testcases/, editing xlsx sheets or ids, or when the user mentions
+  Excel 用例、Allure、fixture、接口测试、参数化、超限报错、pytest.raises、
+  logger.debug 参数、Mercury 双臂异常.
 ---
 
-# elephant-pytest 用例编写
+# elephant-pytest 用例编写（Excel 驱动）
 
-## 1. 选 Base 与客户端句柄
+## 触发条件
+- 用户提到：Excel 用例、参数化、Allure 报告、fixture 生命周期、接口测试。
+- 改动范围在：`testcases/**`、`common1/test_data_handler.py`、`settings.py` 中 `*Base.TEST_DATA_FILE`。
 
-| 用例目录（示例） | settings 类 | 主要客户端 | Excel（`TEST_DATA_FILE`） |
-|------------------|-------------|------------|-------------------------|
-| `testcases/mycobot_450`、`mycobot450_pro_gripper` | `Mycobot450Base` | `device.mc`（`Pro450Client`） | `test_data/mycobot_450.xlsx` 等 |
-| `testcases/mercury` 等双臂 | `MercuryBase` | `device.ml` / `device.mr`（`Mercury`） | `test_data/mercury.xlsx` |
-| `testcases/mercury_e1` | `MercuryE1Base` | `device.mc` | `test_data/mercury_e1.xlsx` |
-| `testcases/mycobot_280` | `Mycobot280Base` | `device.mc` | `test_data/mycobot_280.xlsx` |
-| `testcases/UltraArm_P1` | `UltraArmP1Base` | `device.mc` | `test_data/UltraArm_P1.xlsx` |
+## 步骤 1：先确认产品线上下文
+按目标目录选择 `settings` 基类与客户端句柄：
 
-夹爪/附件子目录可能使用 `PRO_GRIPPER_TEST_DATA_FILE`、`ATTACHMENTS_TEST_DATA_FILE` 等类属性，以 `settings` 中对应 `*Base` 为准。
+| 目录示例 | Base 类 | 客户端句柄 |
+|---|---|---|
+| `testcases/mycobot_450` | `Mycobot450Base` | `device.mc` |
+| `testcases/mercury` | `MercuryBase` | `device.ml` / `device.mr` |
+| `testcases/mercury_e1` | `MercuryE1Base` | `device.mc` |
+| `testcases/mycobot_280` | `Mycobot280Base` | `device.mc` |
+| `testcases/UltraArm_P1` | `UltraArmP1Base` | `device.mc` |
 
-## 2. Excel 数据接口
+附件/夹爪目录优先检查 `*Base` 上是否使用 `ATTACHMENTS_TEST_DATA_FILE` 或 `PRO_GRIPPER_TEST_DATA_FILE`。
 
-使用 `common1.test_data_handler.get_test_data_from_excel`：
+## 步骤 2：读取 Excel 数据
+统一使用 `get_test_data_from_excel`，并尽量声明必需列：
 
 ```python
+from typing import Any
 from common1.test_data_handler import get_test_data_from_excel
 from settings import Mycobot450Base
 
-cases = get_test_data_from_excel(
+cases: list[dict[str, Any]] = get_test_data_from_excel(
     Mycobot450Base.TEST_DATA_FILE,
-    "sheet_name",  # 与 xlsx 工作表名完全一致
-    required_columns=("title", "api", "expect_data"),  # 可选，缺列则 ValueError
+    "sheet_name",
+    required_columns=("title", "expect_data"),
 )
 ```
 
-返回 `list[dict[str, Any]]`，首行为列名；全空行跳过。常见列名因 sheet 而异（如 `test_type`、`mode`），以现有同接口用例为准。
-
-## 3. `device` fixture 模式
-
-- **Pro 450 目录**（如 `testcases/mycobot_450/conftest.py`）：`device` 依赖 `mycobot_ip`，内部 `build_device("mycobot450", mycobot_ip)`，teardown `dev.mc.close()`。
-- **其它产品线**：多数文件内 **module 级** `@pytest.fixture(scope="module") def device()`，自行 `MercuryBase()` / `Mycobot280Base()` 等，teardown 里 `close()` / `power_on()` / `default_settings()` 等按场景恢复。
-- 需要覆盖默认行为时，在**更近**的 conftest 或本模块重新定义同名 fixture。
-
-## 4. 推荐用例骨架
+## 步骤 3：构造测试骨架
+最小骨架保持一致（可按目录调整 Base 与 case 过滤）：
 
 ```python
-import pytest
 import allure
-from common1 import logger
+import pytest
+from typing import Any
+
 from common1.test_data_handler import get_test_data_from_excel
 from settings import Mycobot450Base
 
-cases = get_test_data_from_excel(Mycobot450Base.TEST_DATA_FILE, "api_sheet")
+cases: list[dict[str, Any]] = get_test_data_from_excel(
+    Mycobot450Base.TEST_DATA_FILE, "api_sheet"
+)
 
-@allure.feature("模块中文名")
-@allure.story("场景中文名")
-@pytest.mark.parametrize("case", cases, ids=[c["title"] for c in cases])
-def test_example(device, case):
-    with allure.step(f"步骤说明"):
+@allure.feature("模块")
+@allure.story("场景")
+@pytest.mark.parametrize("case", cases, ids=[str(c["title"]) for c in cases])
+def test_example(device: Any, case: dict[str, Any]) -> None:
+    with allure.step(f"执行: {case['title']}"):
         ...
-    logger.info("用例 %s 完成", case["title"])
 ```
 
-- 按 Excel 的 `test_type` 等拆成多个 `@pytest.mark.parametrize` 或列表推导过滤，与现有文件保持一致。
-- 异常路径：`with pytest.raises(具体异常类):`，异常类型以 pymycobot 与邻近用例为准。
+### 同文件风格一致（parametrize、logger，必守）
+新增或修改**同一测试文件**内的多条用例时，须与**该文件已有用例**对齐，避免混用多种写法：
+- **`@pytest.mark.parametrize`**：与兄弟用例相同形态。UltraArm P1 等存量多为**单行**：`@pytest.mark.parametrize("case", [c for c in cases if ...], ids=lambda c: c["title"])`；不要在同文件内一条单行、另一条无故拆成多行且 `ids` 改为 `str(c["title"])`。过滤 `test_type` 时若需容错空白，用 `(c.get("test_type") or "").strip() == "xxx"`，仍保持单行或整文件统一换行策略。
+- **`logger.debug`**：与 UltraArm P1 等存量一致时，用**逐项 f-string**，例如 `logger.debug(f'test_api:{case["api"]}')`、`logger.debug(f'axis:{case["axis"]}')`；**禁止**在同文件内对同类用例混用 `logger.debug("%s", case.get(...))` 与 f-string。Mercury 等已统一「整行 `用例详情: %s`」的目录可保持该目录内一致。
+- **测试函数签名**：若同文件其它 `def test_*` 未写返回注解与 `case: dict[str, Any]`，新增用例也不要单独引入不同风格（除非整文件一并升级为 typing）。
 
-## 5. 断言与 Allure
+## 步骤 4：fixture 生命周期
+- Pro 450 产品线优先复用目录 `conftest.py` 的 `device`（通常来自 `build_device(...)`）。
+- 若需要特殊 teardown（如夹爪复位/参数恢复），在更近作用域重定义同名 fixture，不要改全局 fixture 行为。
 
-- 浮点/列表容差：`common1.assert_utils.assert_almost_equal(actual, expected, tol=..., name="...")`（内部会 `allure.attach`）。
-- 简单相等：可 `allure.attach` 期望/实际字符串或 JSON，再 `assert`。
+## 步骤 5：断言与等待
+- 容差断言优先 `assert_utils.assert_almost_equal(...)`。
+- 运动等待必须走 `device.wait()` 或对应 `*Base.wait(timeout=...)`。
+- 禁止新增无限等待循环（如 `while is_moving(): pass`）。
 
-## 6. 运动等待
+## 步骤 6：超限 / 异常用例（`pytest.raises`，全产品线）
+- Excel `test_type == "exception"` 等：统一 `with pytest.raises(具体异常类) as exc:`。异常类与目录一致，例如：
+  - `UltraArm_P1`：`ultraArmP1DataException`
+  - `mercury` / `mercury_my_hand`：`MercuryDataException`
+  - `mercury_e1`：`MercuryE1DataException`
+  - `mycobot_450`：`MyCobotPro450DataException`
+  - `mycobot_280`：`MyCobot280DataException`
+- **`raises` 块结束后**记录 **`exc.value`**（与 log/实机报错对齐）：
 
-- Pro 450：`device.wait()` 使用 `move_wait_timeout_sec`（环境变量 `MYCOBOT450_MOVE_TIMEOUT_SEC`）。
-- Mercury：`MercuryBase.wait(timeout=30.0)` 等，双臂同时判断。
-- 新代码避免手写无限 `while self.mc.is_moving()`；若维护旧 280 用例，注意其 `wait()` 实现与产品线差异。
+```python
+with allure.step("断言抛出 ultraArmP1DataException"):
+    with pytest.raises(ultraArmP1DataException) as exc:
+        device.mc.some_api(...)
 
-## 7. 自检
+logger.info("✅ 异常断言通过,异常信息：%s", exc.value)
+```
 
-- 新增/修改用例后：`pytest path/to/test_file.py --collect-only`
-- 实机：`pytest path/to/test_file.py -m hardware`（`testcases` 下通常已自动带 `hardware`）
+- `exc` 为 `ExceptionInfo`；在 `with` 块**内部**不要依赖已稳定的 `exc.value`。
+- **Mercury 双臂、同一用例内连续两次** `pytest.raises`（先 `ml` 再 `mr`）时，勿复用同名 `exc` 覆盖左臂信息：使用 **`exc_l` / `exc_r`**，汇总一行 log，例如：
+  `触发了预期异常: 左臂={exc_l.value!r} | 右臂={exc_r.value!r}`。
+- 仓库已提供批量整理脚本（历史迁移用）：`scripts/codemod_pytest_raises_exc_logging.py`。
+
+## 步骤 7：参数日志（`logger.debug` 查漏补缺）
+- 每条用例在 `logger.info` 开始之后，对**本用例会参与 API 调用的字段**打 `logger.debug`（勿在 production 路径打印敏感信息）。
+- 推荐二选一（**以同文件存量为准，勿混用**，见上文「同文件风格一致」）：
+  - 逐项：`logger.debug(f'axis:{case["axis"]}')` 等形式（与 UltraArm P1 多数用例一致）；
+  - 整行排障：`logger.debug("用例详情: %s", case)`（Mercury 部分用例已采用）。
+- 若已从 `case` 解包到局部变量，至少 `logger.debug` 这些局部量，避免失败时 log 里看不到实际入参。
+
+## 反模式（避免）
+- 伪造未文档化 API 或异常类型。
+- Excel sheet 名与参数化 ids 不一致，导致报告难追踪。
+- 在单个 test 中混合多个接口流程，造成失败定位困难。
+- 双臂异常用例里两次 `raises` 共用一个 `exc`，导致日志只保留最后一次捕获的异常。
+
+## 自检清单
+- `pytest path/to/test_file.py --collect-only`
+- 若涉及实机行为：`pytest path/to/test_file.py -m hardware`

@@ -63,8 +63,8 @@ def test_set_hand_gripper_speed_exception(device, case):
     logger.debug(f"test_parameter: {case['parameter']}")
 
     with allure.step(f"传入非法参数，预期抛出 MercuryDataException,关节为{case['joint']},速度为case['parameter']"):
-        with pytest.raises(MercuryDataException):
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.set_hand_gripper_speed(case["joint"], case["parameter"])
 
-    logger.info(f"✅ 用例【{title}】异常断言成功")
+    logger.info(f"✅ 用例【{title}】异常断言成功,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

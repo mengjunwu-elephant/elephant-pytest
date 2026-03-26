@@ -65,7 +65,7 @@ def test_set_gripper_min_pressure_exception(device, case):
         logger.debug(f'test_parameters: {case["parameter"]}')
 
     with allure.step("断言非法值触发 MyCobotPro450DataException"):
-        with pytest.raises(MyCobotPro450DataException):
+        with pytest.raises(MyCobotPro450DataException) as exc:
             device.mc.set_pro_gripper_mini_pressure(case["parameter"])
 
     logger.info(f'✅ 用例【{title}】测试通过')

@@ -64,8 +64,8 @@ def test_set_hand_gripper_min_pressure_exception(device, case):
     logger.debug(f"test_parameters: {case['parameter']}")
 
     with allure.step(f"尝试传入非法参数，预期抛出 MercuryDataException,关节为case['joint'],最小启动力为{case['parameter']}"):
-        with pytest.raises(MercuryDataException):
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.set_hand_gripper_min_pressure(case["joint"], case["parameter"])
 
-    logger.info(f"✅ 用例【{title}】异常断言成功")
+    logger.info(f"✅ 用例【{title}】异常断言成功,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

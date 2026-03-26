@@ -65,7 +65,7 @@ def test_pause_exception(device, case):
     logger.debug(f"参数: {case['parameter']}")
 
     with allure.step("验证异常参数抛出 MyCobot280DataException"):
-        with pytest.raises(MyCobot280DataException):
+        with pytest.raises(MyCobot280DataException) as exc:
             device.mc.pause(case["parameter"])
 
     logger.info(f"✅ 用例【{title}】测试通过")

@@ -84,7 +84,7 @@ def test_send_angles_exception(device, case):
         logger.debug(f'test_speed: {case["speed"]}')
 
     with allure.step(f"调用 {case['api']} 异常场景接口,关节为{angles}, 速度为{case['speed']}"):
-        with pytest.raises(MyCobot280DataException, match=".*"):
+        with pytest.raises(MyCobot280DataException, match=".*") as exc:
             device.mc.send_angles(angles, case['speed'])
 
     logger.info(f'✅ 用例【{title}】测试通过')

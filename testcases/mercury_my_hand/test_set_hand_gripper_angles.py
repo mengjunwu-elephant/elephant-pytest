@@ -65,7 +65,7 @@ def test_set_hand_gripper_angles_exception(device, case):
     angles = eval(case["angles"])
 
     with allure.step(f"调用接口，预期抛出 MercuryDataException,角度为{angles},速度为{case['speed']}"):
-        with pytest.raises(MercuryDataException, match=f".*"):
+        with pytest.raises(MercuryDataException, match=f".*") as exc:
             device.ml.set_hand_gripper_angles(angles, case["speed"])
 
     logger.info(f"✅ 用例【{case['title']}】测试成功")

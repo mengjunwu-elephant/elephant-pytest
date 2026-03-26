@@ -65,8 +65,8 @@ def test_stop_exception(device, case):
     logger.debug(f"接口: {case['api']}，参数: {case['parameter']}")
 
     with allure.step("调用 stop 接口并断言抛出 ultraArmP1DataException"):
-        with pytest.raises(ultraArmP1DataException):
+        with pytest.raises(ultraArmP1DataException) as exc:
             device.mc.stop(case["parameter"])
 
-    logger.info(f"✅ 用例【{title}】测试通过")
+    logger.info(f"✅ 用例【{title}】异常断言通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

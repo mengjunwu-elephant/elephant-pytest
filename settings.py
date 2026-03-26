@@ -51,7 +51,7 @@ def _mycobot450_move_wait_timeout_sec() -> float:
 # UltraArm P1（串口）
 # ---------------------------------------------------------------------------
 DEFAULT_ULTRAARM_PORT = "com4"
-DEFAULT_ULTRAARM_BAUD = 115200
+DEFAULT_ULTRAARM_BAUD = 1000000
 
 
 def resolve_ultraarm_port(explicit: Optional[str] = None) -> str:

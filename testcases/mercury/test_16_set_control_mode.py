@@ -61,14 +61,16 @@ def test_set_control_mode_invalid(device, case):
     param = case['parameter']
 
     with allure.step("左臂设置控制模式超限"):
-        with pytest.raises(MercuryDataException, match=".*"):
+        with pytest.raises(MercuryDataException, match=".*") as exc_l:
             device.ml.set_control_mode(param)
 
     with allure.step("右臂设置控制模式超限"):
-        with pytest.raises(MercuryDataException, match=".*") as exc_info:
+        with pytest.raises(MercuryDataException, match=".*") as exc_r:
             device.mr.set_control_mode(param)
 
-    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+    logger.info(
+        f"✅ 用例【{case['title']}】触发了预期异常: 左臂={exc_l.value!r} | 右臂={exc_r.value!r}"
+    )
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
 
 @allure.feature("设置控制模式")

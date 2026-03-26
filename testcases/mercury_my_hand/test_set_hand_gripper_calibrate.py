@@ -52,7 +52,7 @@ def test_set_hand_gripper_calibrate_exception(device, case):
     logger.debug(f"test_joint: {case['joint']}")
 
     with allure.step(f"调用接口，预期抛出 MercuryDataException,关节为{case['joint']}"):
-        with pytest.raises(MercuryDataException, match=f".*"):
+        with pytest.raises(MercuryDataException, match=f".*") as exc:
             device.ml.set_hand_gripper_calibrate(case['joint'])
 
     logger.info(f"✅ 用例【{case['title']}】测试成功")

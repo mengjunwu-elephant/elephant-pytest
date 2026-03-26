@@ -79,7 +79,7 @@ def test_set_torque_comp_exception(device, case):
     logger.debug(f'comp_value:{case["comp_value"]}')
 
     with allure.step(f"断言抛出 MercuryE1DataException,关节为{joint}，力矩参数{torque_comp}，阻抗开关{comp_value}"):
-        with pytest.raises(MercuryE1DataException):
+        with pytest.raises(MercuryE1DataException) as exc:
             device.mc.set_torque_comp(joint, comp_value, torque_comp)
 
     logger.info(f'✅ 用例【{title}】测试通过')

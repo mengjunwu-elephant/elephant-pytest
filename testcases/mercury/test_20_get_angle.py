@@ -62,11 +62,11 @@ def test_get_angle_invalid(device, case):
     joint = case["joint"]
 
     with allure.step("断言非法 joint 索引抛出 MercuryDataException"):
-        with pytest.raises(MercuryDataException, match=".*") as exc_info:
+        with pytest.raises(MercuryDataException, match=".*") as exc:
             device.ml.get_angle(joint)
             device.mr.get_angle(joint)
 
     allure.attach(str(joint), name="非法关节索引", attachment_type=allure.attachment_type.TEXT)
 
-    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc.value}")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")

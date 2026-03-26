@@ -77,8 +77,8 @@ def test_set_base_io_output_exception(device, case):
     logger.debug(f'state:{case["state"]}')
 
     with allure.step(f"断言抛出 ultraArmP1DataException,引脚为{case['pin_no']}，状态为{case['state']}"):
-        with pytest.raises(ultraArmP1DataException):
+        with pytest.raises(ultraArmP1DataException) as exc:
             device.mc.set_base_io_output(case['pin_no'],case['state'])
 
-    logger.info(f"✅ 用例【{title}】异常断言通过")
+    logger.info(f"✅ 用例【{title}】异常断言通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

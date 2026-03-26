@@ -58,7 +58,7 @@ def test_get_max_speed_exception(device, case):
     logger.debug(f"参数: {case['parameter']}")
 
     with allure.step("断言抛出 MercuryDataException 异常"):
-        with pytest.raises(MercuryDataException,match=".*"):
+        with pytest.raises(MercuryDataException,match=".*") as exc:
             device.ml.get_max_speed(case["parameter"])
             device.mr.get_max_speed(case["parameter"])
 

@@ -85,12 +85,13 @@ def test_send_coord_left_exception(device, case):
     axis = case["axis"]
     param = case["parameter"]
     speed = case["speed"]
+    logger.debug(f"axis={axis}, parameter={param}, speed={speed}")
 
     with allure.step("发送非法坐标参数至左臂"):
-        with pytest.raises(MercuryDataException) as exc_info:
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.send_coord(axis, param, speed)
 
-    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc.value}")
     logger.info(f"✅ 左臂异常用例【{case['title']}】验证通过")
 
 
@@ -105,9 +106,10 @@ def test_send_coord_right_exception(device, case):
     axis = case["axis"]
     param = case["parameter"]
     speed = case["speed"]
+    logger.debug(f"axis={axis}, parameter={param}, speed={speed}")
 
     with allure.step("发送非法坐标参数至右臂"):
-        with pytest.raises(MercuryDataException) as exc_info:
+        with pytest.raises(MercuryDataException) as exc:
             device.mr.send_coord(axis, param, speed)
-    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc.value}")
     logger.info(f"✅ 右臂异常用例【{case['title']}】验证通过")

@@ -61,8 +61,8 @@ def test_set_hand_gripper_pinch_action_speed_consort_exception(device, case):
     logger.debug(f"test_pose: {case['pose']}")
 
     with allure.step(f"尝试传入非法参数，预期抛出 MercuryDataException,动作为{case['pose']},范围为{case['rank']},是否自由模式为{case['is_free']}"):
-        with pytest.raises(MercuryDataException):
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.set_hand_gripper_pinch_action_speed_consort(case["pose"], case["rank"], case["is_free"])
 
-    logger.info(f"✅ 用例【{title}】异常断言成功")
+    logger.info(f"✅ 用例【{title}】异常断言成功,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

@@ -68,10 +68,10 @@ def test_stop_exception(device, case):
     logger.info(f"》》》用例【{title}】开始测试《《《")
     logger.debug(f"接口: {case['api']}，参数: {case['parameter']}")
 
-    with allure.step("调用 stop 接口并断言抛出 MercuryDataException") as exc_info:
-        with pytest.raises(MercuryDataException):
+    with allure.step("调用 stop 接口并断言抛出 MercuryDataException") as exc:
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.stop(case["parameter"])
             device.mr.stop(case["parameter"])
 
-    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

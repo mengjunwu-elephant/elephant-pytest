@@ -70,9 +70,9 @@ def test_set_color_exception(device, case):
     logger.debug(f"测试API: set_color, 参数: r={r}, g={g}, b={b}")
 
     with allure.step("断言设置非法颜色值抛出 MercuryDataException"):
-        with pytest.raises(MercuryDataException) as exc_info:
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.set_color(r, g, b)
             device.mr.set_color(r, g, b)
 
-    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

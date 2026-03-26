@@ -66,8 +66,8 @@ def test_jog_increment_coord_exception(device, case):
     logger.debug(f'speed:{case["speed"]}')
 
     with allure.step(f"断言抛出 ultraArmP1DataException,关节为{case['axis']},增量为{case['increment']}, 速度为{case['speed']}"):
-        with pytest.raises(ultraArmP1DataException):
+        with pytest.raises(ultraArmP1DataException) as exc:
             device.mc.jog_increment_coord(case["axis"],case["increment"], case["speed"])
 
-    logger.info(f"✅ 用例【{title}】异常断言通过")
+    logger.info(f"✅ 用例【{title}】异常断言通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

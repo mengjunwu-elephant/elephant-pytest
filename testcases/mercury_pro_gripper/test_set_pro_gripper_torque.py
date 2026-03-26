@@ -61,7 +61,7 @@ def test_set_pro_gripper_torque_exception(device, case):
     logger.debug(f"test_parameters: {case['parameter']}")
 
     with allure.step(f"断言设置异常值时抛出 MercuryDataException，扭矩为{case['parameter']}"):
-        with pytest.raises(MercuryDataException):
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.set_pro_gripper_torque(case["parameter"])
 
     logger.info(f"✅ 异常用例【{case['title']}】测试成功")

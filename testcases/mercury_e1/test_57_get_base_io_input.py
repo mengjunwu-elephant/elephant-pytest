@@ -62,8 +62,8 @@ def test_get_base_io_input_exception(device, case):
     logger.debug(f'pin_no:{case["pin_no"]}')
 
     with allure.step(f"断言抛出 MercuryE1DataException,引脚为{case['pin_no']}"):
-        with pytest.raises(MercuryE1DataException):
+        with pytest.raises(MercuryE1DataException) as exc:
             device.mc.get_base_io_input(case['pin_no'])
 
-    logger.info(f"✅ 用例【{title}】异常断言通过")
+    logger.info(f"✅ 用例【{title}】异常断言通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

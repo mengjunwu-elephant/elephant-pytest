@@ -92,8 +92,8 @@ def test_set_joint_max_angle_exception(device, case):
     logger.debug(f'angle:{angle}')
 
     with allure.step(f"断言抛出 MercuryE1DataException,关节为{case['joint']},角度为{case['angle']}"):
-        with pytest.raises(MercuryE1DataException):
+        with pytest.raises(MercuryE1DataException) as exc:
             device.mc.set_joint_max_angle(case['joint'],case['angle'])
 
-    logger.info(f"✅ 用例【{title}】异常断言通过")
+    logger.info(f"✅ 用例【{title}】异常断言通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

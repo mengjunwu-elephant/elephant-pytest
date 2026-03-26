@@ -83,8 +83,8 @@ def test_set_joint_min_angle_exception(device, case):
     logger.debug(f'joint:{case["joint"]}')
 
     with allure.step(f"断言抛出 Mycobot450Exception,关节为{case['joint']},角度为{case['angle']}"):
-        with pytest.raises(MyCobotPro450DataException):
+        with pytest.raises(MyCobotPro450DataException) as exc:
             device.mc.set_joint_min_angle(case['joint'],case['angle'])
 
-    logger.info(f"✅ 用例【{title}】异常断言通过")
+    logger.info(f"✅ 用例【{title}】异常断言通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

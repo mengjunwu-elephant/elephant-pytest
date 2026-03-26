@@ -63,8 +63,8 @@ def test_set_hand_gripper_angle_exception(device, case):
     logger.debug(f"test_angle: {case['angle']}")
 
     with allure.step(f"调用接口设置夹爪角度，预期抛出 MercuryDataException,关节为{case['joint']}，角度为{case['angle']}"):
-        with pytest.raises(MercuryDataException):
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.set_hand_gripper_angle(case["joint"], case["angle"])
 
-    logger.info(f"✅ 用例【{case['title']}】异常断言成功")
+    logger.info(f"✅ 用例【{case['title']}】异常断言成功,异常信息：{exc.value}")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")

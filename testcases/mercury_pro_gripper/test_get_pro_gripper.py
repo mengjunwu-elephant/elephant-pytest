@@ -53,8 +53,8 @@ def test_get_pro_gripper_exception(device, case):
 
 
     with allure.step(f"断言设置 Pro 夹爪参数时抛出 MercuryDataException,address为{case['parameter']}"):
-        with pytest.raises(MercuryDataException):
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.get_pro_gripper(case["parameter"])
 
-    logger.info(f"✅ 用例【{case['title']}】异常断言成功")
+    logger.info(f"✅ 用例【{case['title']}】异常断言成功,异常信息：{exc.value}")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")

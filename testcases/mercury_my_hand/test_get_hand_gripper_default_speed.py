@@ -51,7 +51,7 @@ def test_get_hand_gripper_default_speed_exception(device, case):
     logger.debug(f"test_joint: {case['joint']}")
 
     with allure.step(f"校验非法参数是否抛出 MercuryDataException,关节为{case['joint']}"):
-        with pytest.raises(MercuryDataException):
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.get_hand_gripper_default_speed(case["joint"])
 
     logger.info(f"✅ 用例【{case['title']}】测试通过")

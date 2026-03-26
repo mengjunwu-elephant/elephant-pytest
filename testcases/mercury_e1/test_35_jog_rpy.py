@@ -117,8 +117,8 @@ def test_jog_rpy_exception(device, case):
     logger.debug(f'speed:{case["speed"]}')
 
     with allure.step(f"断言抛出 MercuryE1DataException,笛卡尔积坐标系为{case['axis']},方向为{case['position']}, 速度为{case['speed']}"):
-        with pytest.raises(MercuryE1DataException):
+        with pytest.raises(MercuryE1DataException) as exc:
             device.mc.jog_rpy(case["axis"],case["position"], case["speed"])
 
-    logger.info(f"✅ 用例【{title}】异常断言通过")
+    logger.info(f"✅ 用例【{title}】异常断言通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

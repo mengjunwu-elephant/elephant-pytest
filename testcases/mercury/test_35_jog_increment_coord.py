@@ -64,8 +64,8 @@ def test_jog_increment_coord_exception(device, case):
     logger.debug(f"API: {case['api']}, Axis: {case['axis']}, Parameter: {case['parameter']}, Speed: {case['speed']}")
 
     with allure.step("左臂发送 jog_increment_coord 异常请求，断言抛异常"):
-        with pytest.raises(MercuryDataException) as exc_info:
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.jog_increment_coord(case["axis"], case["parameter"], case["speed"])
 
-    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

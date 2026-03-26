@@ -78,7 +78,7 @@ def test_set_tool_serial_timeout_exception(device, case):
     logger.debug(f'value:{case["value"]}')
 
     with allure.step(f"断言抛出 Mycobot450Exception,参数为{case['rank']}，值为{case['value']}"):
-        with pytest.raises(MyCobotPro450DataException):
+        with pytest.raises(MyCobotPro450DataException) as exc:
             device.mc.set_fusion_parameters(case['rank'],case["value"])
 
     logger.info(f'✅ 用例【{title}】测试通过')

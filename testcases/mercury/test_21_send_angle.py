@@ -168,12 +168,12 @@ def test_send_angle_exception(device, case):
     logger.info(f'速度参数：{speed}')
 
     with allure.step("尝试发送非法角度并期望抛出 MercuryDataException"):
-        with pytest.raises(MercuryDataException, match=".*") as exc_info:
+        with pytest.raises(MercuryDataException, match=".*") as exc:
             if joint in [11,12,13]:
                 device.mr.send_angle(joint,angle, speed)
             else:
                 device.ml.send_angle(joint, angle, speed)
                 device.mr.send_angle(joint, angle, speed)
 
-    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc.value}")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")

@@ -64,8 +64,8 @@ def test_write_move_c_exception(device, case):
         speed = case["speed"]
 
         with allure.step("断言调用接口时抛出 MyCobotPro450DataException 异常"):
-            with pytest.raises(MyCobotPro450DataException):
+            with pytest.raises(MyCobotPro450DataException) as exc:
                 device.mc.write_move_c(transpoint, endpoint, speed)
 
-        logger.info(f"✅ 用例【{title}】异常断言成功")
+        logger.info(f"✅ 用例【{title}】异常断言成功,异常信息：{exc.value}")
         logger.info(f"》》》用例【{title}】测试完成《《《")

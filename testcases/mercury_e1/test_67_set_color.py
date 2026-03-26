@@ -59,8 +59,8 @@ def test_set_color_exception(device, case):
     logger.debug(f"测试API: set_color, 参数: r={r}, g={g}, b={b}")
 
     with allure.step("断言设置非法颜色值抛出 MercuryE1DataException"):
-        with pytest.raises(MercuryE1DataException):
+        with pytest.raises(MercuryE1DataException) as exc:
             device.mc.set_color(r, g, b)
 
-    logger.info(f"✅ 异常断言成功，用例【{title}】测试通过")
+    logger.info(f"✅ 异常断言成功，用例【{title}】测试通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

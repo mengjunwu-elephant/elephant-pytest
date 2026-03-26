@@ -128,8 +128,8 @@ def test_jog_increment_angle_exception(device, case):
     logger.debug(f'speed:{case["speed"]}')
 
     with allure.step(f"断言抛出 MyCobot280DataException,关节为{case['joint']},增量为{case['increment']}, 速度为{case['speed']}"):
-        with pytest.raises(MyCobot280DataException):
+        with pytest.raises(MyCobot280DataException) as exc:
             device.mc.jog_increment_angle(case["joint"],case["increment"], case["speed"])
 
-    logger.info(f"✅ 用例【{title}】异常断言通过")
+    logger.info(f"✅ 用例【{title}】异常断言通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

@@ -69,9 +69,9 @@ def test_get_joint_max_angle_exception(device, case):
     logger.info(f"》》》用例【{title}】开始测试《《《")
 
     with allure.step("断言非法 ID 抛出 MercuryDataException"):
-        with pytest.raises(MercuryDataException) as exc_info:
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.get_joint_max_angle(joint_id)
             device.mr.get_joint_max_angle(joint_id)
 
-    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

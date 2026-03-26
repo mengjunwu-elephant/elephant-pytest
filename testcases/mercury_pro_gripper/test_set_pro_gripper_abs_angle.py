@@ -116,8 +116,8 @@ def test_out_limit(device, case):
     logger.debug(f"test_value: {case['value']}")
 
     with allure.step(f"断言触发 MercuryDataException, value: {case['value']}"):
-        with pytest.raises(MercuryDataException):
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.set_pro_gripper_abs_angle(case["value"])
 
-    logger.info(f"✅ 用例【{case['title']}】异常断言成功")
+    logger.info(f"✅ 用例【{case['title']}】异常断言成功,异常信息：{exc.value}")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")

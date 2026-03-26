@@ -66,8 +66,8 @@ def test_set_gripper_angle_exception(device, case):
     logger.debug(f"test_value: {case['value']}")
 
     with allure.step(f"断言设置接口抛出 ultraArmP1DataException, value: {case['value']}"):
-        with pytest.raises(ultraArmP1DataException):
+        with pytest.raises(ultraArmP1DataException) as exc:
             device.mc.set_gripper_angle(case["value"],case['speed'])
 
-    logger.info(f"✅ 用例【{case['title']}】异常断言成功")
+    logger.info(f"✅ 用例【{case['title']}】异常断言成功,异常信息：{exc.value}")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")

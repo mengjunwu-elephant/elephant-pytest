@@ -53,7 +53,7 @@ def test_set_pro_gripper_speed_exception(device, case):
     logger.debug(f"test_parameters: {case.get('parameter')}")
 
     with allure.step(f"调用接口并断言抛出 MercuryDateException 异常,速度为{case['parameter']}"):
-        with pytest.raises(MercuryDataException):
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.set_pro_gripper_speed(case["parameter"])
 
     logger.info(f"✅ 用例【{case['title']}】触发异常测试成功")

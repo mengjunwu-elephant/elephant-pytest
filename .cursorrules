@@ -1,43 +1,44 @@
-# elephant-pytest — Cursor 项目规则
+# elephant-pytest Cursor 规则（优化版）
 
-## 项目定位
-- **pymycobot 机械臂自动化测试**：pytest + allure-pytest + openpyxl（Excel 驱动）；部分目录通过 `arm_registry` / `arms.json` 统一选臂与连接。
-- 说明文档：`README.md`、`docs/EXCEL_TEST_DATA.md`。
-- **用例范式与接口约定**（Excel、fixture、`get_test_data_from_excel` 等）：见仓库 `.cursor/skills/` 下 Skill，编写/改用例时优先遵循。
+## 一、项目目标
+- 本仓库是 **pymycobot 实机自动化测试工程**：`pytest` + `allure-pytest` + `openpyxl`（Excel 驱动）。
+- 与选臂/连接相关改动，统一走 `arm_registry.py` + `arms.json`，避免在测试文件里散落解析逻辑。
 
-## 语言与沟通
-- 对用户说明、注释、文档优先使用 **简体中文**。
+## 二、沟通与输出
+- 对用户解释、代码注释、文档说明优先使用 **简体中文**。
+- 修改后优先给出“改了什么 + 为什么改”两句式说明；涉及锁、内存、寄存器或硬件时明确风险边界。
 
-## 目录与职责
-| 路径 | 说明 |
-|------|------|
-| `testcases/*` | 各产品线用例；倾向单 API/场景单文件 `test_*.py` |
-| `common1/` | `logger`、`test_data_handler`、`assert_utils` 等 |
-| `settings.py` | 各产品线 `*Base`、Excel 路径、`resolve_*`、运动等待超时等 |
-| `arm_registry.py` + `arms.json` | 臂 ID、`device_profile`、默认 IP/串口、`build_device()`、`get_testcase_roots()` |
-| 根 `conftest.py` | **仅**：`--elephant-arm` / `--elephant-ip` 注册；`testcases` 下未显式标记的项自动加 `hardware` |
-| 子目录 `testcases/.../conftest.py` | 该产品线的 `device`、`mycobot_ip` 等（如 Pro 450 用 `build_device`） |
+## 三、目录职责（必须遵守）
+- `testcases/*`：按产品线组织测试，倾向单 API/单场景单文件 `test_*.py`。
+- `common1/`：通用能力（`logger`、`test_data_handler`、`assert_utils`）。
+- `settings.py`：各产品线 `*Base`、测试数据文件、超时与等待策略。
+- `arm_registry.py` + `arms.json`：臂注册、连接模式、构建设备、用例根路径。
+- 根 `conftest.py`：仅保留全局 pytest 会话逻辑（CLI 选项、marker 自动化），不放产品线 `device` 细节。
+- `testcases/<产品>/conftest.py`：该产品线的 `device` fixture 与资源生命周期。
 
-若某模块需要 **夹爪复位 / 参数恢复 / 特殊 teardown**，在该模块 **重新定义 `device`（或其它 fixture）** 覆盖上级 conftest。
+## 四、测试开发基线
+- 数据读取：优先 `get_test_data_from_excel(Base.TEST_DATA_FILE, sheet, required_columns=...)`。
+- 测试结构：`@pytest.mark.parametrize` + `allure.feature/story` + `allure.step`。
+- 断言策略：浮点与容差优先 `assert_utils.assert_almost_equal`；关键输入输出建议 `allure.attach`。
+- 新增公共函数或 fixture 建议补全类型提示（Type Hints）。
+- 严禁臆造 pymycobot API；以官方文档和本机已安装源码为准。
 
-## 用例编写约定
-- 数据：`cases = get_test_data_from_excel(Base.TEST_DATA_FILE, "sheet名")`，sheet 与 xlsx 一致；需要时用 `required_columns=` 校验表头。
-- 结构：`@pytest.mark.parametrize` + `@allure.feature` / `@allure.story` + `with allure.step`；关键对比可 `allure.attach`。
-- 标记：`pytest.ini` 已注册 `hardware`、`slow`、`smoke`；长运动/多等待倾向 `slow`，冒烟倾向 `smoke`。
-- **类型**：新代码对公共函数、fixture 返回值尽量加 **类型提示**。
-- **API 来源**：勿臆造 pymycobot 未文档化接口；以官方文档与本机安装的 pymycobot 源码为准。
+## 五、实机安全红线
+- 禁止无上限等待运动结束；统一使用各 `*Base.wait(...)` 的超时机制。
+- 禁止在同一台实机上随意并发多进程共连（如盲目使用 `pytest-xdist`）。
+- 禁止伪造硬件能力、固件行为、通信结果。
 
-## 环境与安全（实机）
-- Pro 450 IP：`--elephant-ip` > `MYCOBOT450_IP` / `Mycobot450_IP` > `arms.json` 中该臂 `default_ip` > `settings.DEFAULT_MYCOBOT450_IP`（见 `arm_registry.resolve_device_ip`）。
-- 选臂：`ELEPHANT_ARM` 或 `--elephant-arm`（值须为 `arms.json` 的 key）。
-- Debug / 超时：`MYCOBOT450_DEBUG`、`MYCOBOT450_MOVE_TIMEOUT_SEC` 等见 `README.md` / `settings.py`。
-- **禁止**无上限死等运动结束；Pro 450 / UltraArm P1 等应使用对应 `*Base.wait()`（带超时）；**禁止**在单台实机上轻率用 `pytest-xdist` 多进程共连同一臂。
-- 不伪造硬件或固件行为。
+## 六、连接与选臂优先级（Pro 450）
+- IP 解析：`--elephant-ip` > 环境变量 (`MYCOBOT450_IP` / `Mycobot450_IP`) > `arms.json.default_ip` > `settings.DEFAULT_MYCOBOT450_IP`。
+- 臂选择：`--elephant-arm` > `ELEPHANT_ARM` > `arms.json.default_arm`。
 
-## 依赖与报告
-- 本地：`pip install -e .` 时注意与 `requirements.txt` 中 PyPI 行冲突（见 README）。
-- Allure：安装 `allure-pytest`，运行加 `--alluredir=...`（如 `reports/qt_allure/allure-results`）。
+## 七、推荐验证动作
+- 改动 `settings.py`、任意 `conftest.py`、`arm_registry.py`、`arms.json` 后，先执行：
+  - `pytest testcases --collect-only`
+- 改动某产品线用例后，至少执行：
+  - `pytest path/to/test_file.py --collect-only`
 
-## AI 协助时的偏好
-- 小步修改：只动与需求直接相关的文件，避免无关大重构。
-- 改动 `settings.py`、根或子目录 `conftest.py`、`common1/test_data_handler.py` 后，建议执行 `pytest testcases --collect-only` 做快速校验。
+## 八、与 Skill 的分工
+- 具体“如何写 Excel 用例”请调用 `elephant-pytest-case-authoring`。
+- 具体“如何改选臂/会话解析”请调用 `elephant-pytest-registry-session`。
+- 规则文件只保留跨模块强约束，不重复 Skill 的细节步骤。

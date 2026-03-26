@@ -57,7 +57,7 @@ def test_set_open_angle_exception(device, case):
         logger.debug(f"参数: {case['parameter']}")
 
     with allure.step("尝试设置异常值并捕获 MyCobotPro450DataException"):
-        with pytest.raises(MyCobotPro450DataException):
+        with pytest.raises(MyCobotPro450DataException) as exc:
             device.mc.set_pro_gripper_io_close_angle(case["parameter"])
 
     logger.info(f"✅ 用例【{title}】测试成功")

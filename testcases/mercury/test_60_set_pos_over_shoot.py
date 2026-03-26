@@ -60,11 +60,11 @@ def test_set_pos_over_shoot_exception(device, case):
         logger.info(f"》》》用例【{title}】开始测试《《《")
         logger.debug(f"参数: {param}")
 
-        with pytest.raises(MercuryDataException) as exc_info:
+        with pytest.raises(MercuryDataException) as exc:
             device.ml.set_pos_over_shoot(param)
             device.mr.set_pos_over_shoot(param)
 
-        logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+        logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
 

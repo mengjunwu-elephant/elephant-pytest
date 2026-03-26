@@ -96,14 +96,16 @@ def test_out_limit(device, case):
     logger.debug(f"参数1: {case['parameter_1']}，参数2: {case['parameter_2']}")
 
     with allure.step(f"左臂调用 {case['api']} 异常场景接口，参数 parameter_1: {case['parameter_1']}，parameter_2: {case['parameter_2']}"):
-        with pytest.raises(MercuryDataException, match='.*'):
+        with pytest.raises(MercuryDataException, match='.*') as exc_l:
             device.ml.set_limit_switch(case["parameter_1"], case["parameter_2"])
 
     with allure.step(f"右臂调用 {case['api']} 异常场景接口，参数 parameter_1: {case['parameter_1']}，parameter_2: {case['parameter_2']}"):
-        with pytest.raises(MercuryDataException) as exc_info:
+        with pytest.raises(MercuryDataException) as exc_r:
             device.mr.set_limit_switch(case["parameter_1"], case["parameter_2"])
 
-    logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+    logger.info(
+        f"✅ 用例【{case['title']}】触发了预期异常: 左臂={exc_l.value!r} | 右臂={exc_r.value!r}"
+    )
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
 @allure.feature("限位开关设置")
