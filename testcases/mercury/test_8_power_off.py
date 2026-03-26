@@ -66,3 +66,30 @@ def test_power_off_emergency(device, case):
         assert response == case["l_expect_data"], f"机械臂结果断言失败，期望：{case['l_expect_data']}，实际：{response}"
     logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")
+
+@allure.feature("机械臂下电")
+@allure.story("仅上电和下电异常场景")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "logic"], ids=lambda c: c["title"])
+def test_power_off_normal_1(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+
+    logger.debug(f'test_api:{case["api"]}')
+    logger.debug(f'test_parameter:{case["parameter"]}')
+
+    if '仅上电时' in title:
+        device.mc.power_off()
+        device.mc.power_on_only()
+    elif '下电时' in title:
+        device.mc.power_on()
+        device.mc.power_off()
+
+    with allure.step("机械臂执行下电"):
+        response = device.mc.power_off()
+
+    with allure.step("机械臂断言返回结果"):
+        allure.attach(str(case["l_expect_data"]),name= "机械臂期望值",attachment_type= allure.attachment_type.TEXT)
+        allure.attach(str(response),name= "机械臂实际值",attachment_type= allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂结果断言失败，期望：{case['l_expect_data']}，实际：{response}"
+    logger.info(f"✅ 用例【{title}】测试成功")
+    logger.info(f"》》》用例【{title}】测试完成《《《")

@@ -23,7 +23,12 @@ def test_power_on_normal(device, case):
     title = case["title"]
     logger.info(f"》》》用例【{title}】开始测试《《《")
 
-    device.power_off()
+    if '1' in title:
+        device.mc.power_on()
+    elif '2' in title:
+        device.mc.power_on_only()
+    elif '3' in title:
+        device.mc.power_off()
 
     input(print("请确认末端颜色是否变绿，按回车键继续测试"))
 

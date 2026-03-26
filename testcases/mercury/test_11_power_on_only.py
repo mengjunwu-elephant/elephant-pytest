@@ -64,7 +64,7 @@ def test_emergency(device, case):
     input(print("请松开急停，按回车键继续测试"))
 
     with allure.step("机械臂请求结果类型断言"):
-        assert response is None, f"机械臂返回类型错误，期望None，实际{type(response)}"
+        assert isinstance(response, int), f"机械臂返回类型错误：{type(response)}"
     with allure.step("机械臂请求结果断言"):
         allure.attach(str(case['l_expect_data']),name= "机械臂期望值",attachment_type= allure.attachment_type.TEXT)
         allure.attach(str(response),name='机械臂实际值',attachment_type=allure.attachment_type.TEXT)

@@ -38,3 +38,59 @@ def test_get_collision_threshold(device, case):
     assert response == expected, f"机械臂期望值: {expected}, 实际值: {response}"
 
     logger.info(f"✅ 用例【{title}】测试成功")
+
+@allure.feature("碰撞阈值接口")
+@allure.story("仅上电调用 get_collision_threshold 接口")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "power_on_only"], ids=lambda c: c["title"])
+def test_power_on_only(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"用例信息: {case}")
+
+    with allure.step("机械臂仅上电"):
+        device.power_on_only()
+
+    with allure.step("发送获取碰撞阈值指令"):
+        response = device.mc.get_collision_threshold()
+
+    with allure.step("机械臂断言返回类型"):
+        assert response is None, f"机械臂返回类型错误，期望None，实际{type(response)}"
+
+    with allure.step("断言返回值是否匹配预期"):
+        allure.attach(str(case["l_expect_data"]), name="机械臂期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response), name="机械臂实际", attachment_type=allure.attachment_type.TEXT)
+        assert case["l_expect_data"] == response, f"机械臂响应不一致，期望: {case['l_expect_data']}，实际: {response}"
+
+    with allure.step("机械臂上电"):
+        device.power_on()
+
+    logger.info(f"✅ 用例【{title}】测试成功")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
+
+@allure.feature("碰撞阈值接口")
+@allure.story("下电调用 get_collision_threshold 接口")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "power_off"], ids=lambda c: c["title"])
+def test_power_off(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"用例信息: {case}")
+
+    with allure.step("机械臂下电"):
+        device.power_off()
+
+    with allure.step("发送获取碰撞阈值指令"):
+        response = device.mc.get_collision_threshold()
+
+    with allure.step("机械臂断言返回类型"):
+        assert response is None, f"机械臂返回类型错误，期望None，实际{type(response)}"
+
+    with allure.step("断言返回值是否匹配预期"):
+        allure.attach(str(case["l_expect_data"]), name="机械臂期望", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response), name="机械臂实际", attachment_type=allure.attachment_type.TEXT)
+        assert case["l_expect_data"] == response, f"机械臂响应不一致，期望: {case['l_expect_data']}，实际: {response}"
+
+    with allure.step("机械臂上电"):
+        device.power_on()
+
+    logger.info(f"✅ 用例【{title}】测试成功")
+    logger.info(f"》》》用例【{title}】测试完成《《《")

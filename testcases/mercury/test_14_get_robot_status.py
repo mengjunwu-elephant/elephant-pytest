@@ -29,6 +29,8 @@ def test_get_robot_status_power_on(device, case):
         response = device.mc.get_robot_status()
     with allure.step("机械臂断言返回类型为 list"):
         assert isinstance(response, list), f"机械臂返回类型错误：{type(response)}"
+    with allure.step("机械臂断言 list 长度"):
+        assert len(response) == case["list_len"], f"机械臂断言失败，期望：{case['l_expect_data']}，实际：{response}"
     with allure.step("机械臂断言返回结果"):
         allure.attach(str(case["l_expect_data"]),name= "机械臂期望值",attachment_type= allure.attachment_type.TEXT)
         allure.attach(str(response),name= "机械臂实际值",attachment_type= allure.attachment_type.TEXT)
@@ -52,6 +54,8 @@ def test_get_robot_status_power_on_only(device, case):
         response = device.mc.get_robot_status()
     with allure.step("机械臂断言返回类型为 list"):
         assert isinstance(response, list), f"机械臂返回类型错误：{type(response)}"
+    with allure.step("机械臂断言 list 长度"):
+        assert len(response) == case["list_len"], f"机械臂断言失败，期望：{case['l_expect_data']}，实际：{response}"
     with allure.step("机械臂断言返回结果"):
         allure.attach(str(case["l_expect_data"]),name= "机械臂期望值",attachment_type= allure.attachment_type.TEXT)
         allure.attach(str(response),name= "机械臂实际值",attachment_type= allure.attachment_type.TEXT)

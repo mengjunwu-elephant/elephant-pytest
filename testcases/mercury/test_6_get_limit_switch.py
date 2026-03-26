@@ -35,6 +35,8 @@ def test_get_limit_switch_power_on(device, case):
         assert isinstance(response, list), f"机械臂返回类型错误: {type(response)}"
     with allure.step("机械臂断言返回响应结果"):
         allure.attach(str(response), name="机械臂实际值", attachment_type=allure.attachment_type.TEXT)
+    with allure.step("机械臂断言返回列表长度为2"):
+        assert len(response) == case['list_len'], f"机械臂结果断言失败，期望：{case['l_expect_data']}，实际：{response}"
     with allure.step("机械臂断言返回响应结果"):
         allure.attach(str(case['l_expect_data']), name="机械臂期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(response), name="机械臂实际值", attachment_type=allure.attachment_type.TEXT)

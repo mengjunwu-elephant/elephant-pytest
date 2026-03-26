@@ -48,8 +48,7 @@ def test_send_angles_normal(device, case):
     with allure.step("断言返回值是否匹配预期"):
         allure.attach(str(case["l_expect_data"]), name="机械臂期望", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(response), name="机械臂实际", attachment_type=allure.attachment_type.TEXT)
-
-        assert_almost_equal(response,case["l_expect_data"],tol=1,name='机械臂全关节运动'), f"机械臂响应不一致，期望: {case['l_expect_data']}，实际: {response}"
+        assert case["l_expect_data"] == response, f"机械臂响应不一致，期望: {case['l_expect_data']}，实际: {response}"
 
     with allure.step('断言 get_angles 接口返回值是否匹配预期'):
         allure.attach(str(angles), name="机械臂期望", attachment_type=allure.attachment_type.TEXT)
@@ -116,3 +115,59 @@ def test_send_angles_exception(device, case):
 
     logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
     logger.info(f"》》》用例【{case['title']}】测试完成《《《")
+
+@allure.feature("全关节角度运动")
+@allure.story("仅上电全关节角度运动")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "power_on_only"], ids=lambda c: c["title"])
+def test_power_on_only(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+
+    angles = eval(case["angles"])
+    speed = case["speed"]
+    logger.info(f'发送角度参数：{angles}')
+    logger.info(f'速度参数：{speed}')
+
+    logger.debug(f'test_api: {case["api"]}')
+
+    with allure.step("机械臂仅上电"):
+        device.power_on_only()
+
+    with allure.step("机械臂全关节角度运动"):
+        response = device.mc.send_angles(angles, speed)
+    with allure.step("机械臂断言返回类型"):
+        assert isinstance(response, int), f"机械臂返回类型错误: {type(response)}"
+    with allure.step("机械臂断言返回结果"):
+        allure.attach(str(case["l_expect_data"]),name= "机械臂期望值",attachment_type= allure.attachment_type.TEXT)
+        allure.attach(str(response),name= "机械臂实际值",attachment_type= allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂断言失败，期望：{case['l_expect_data']}，实际：{response}"
+    logger.info(f"✅ 用例【{title}】测试成功")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
+
+@allure.feature("全关节角度运动")
+@allure.story("下电全关节角度运动")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "power_off"], ids=lambda c: c["title"])
+def test_power_off(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+
+    angles = eval(case["angles"])
+    speed = case["speed"]
+    logger.info(f'发送角度参数：{angles}')
+    logger.info(f'速度参数：{speed}')
+
+    logger.debug(f'test_api: {case["api"]}')
+
+    with allure.step("机械臂下电"):
+        device.power_off()
+
+    with allure.step("机械臂全关节角度运动"):
+        response = device.mc.send_angles(angles, speed)
+    with allure.step("机械臂断言返回类型"):
+        assert isinstance(response, int), f"机械臂返回类型错误: {type(response)}"
+    with allure.step("机械臂断言返回结果"):
+        allure.attach(str(case["l_expect_data"]),name= "机械臂期望值",attachment_type= allure.attachment_type.TEXT)
+        allure.attach(str(response),name= "机械臂实际值",attachment_type= allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂断言失败，期望：{case['l_expect_data']}，实际：{response}"
+    logger.info(f"✅ 用例【{title}】测试成功")
+    logger.info(f"》》》用例【{title}】测试完成《《《")

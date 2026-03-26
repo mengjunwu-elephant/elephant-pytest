@@ -57,7 +57,7 @@ def test_is_in_position_normal(device, case):
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "exception"], ids=lambda c: c["title"])
 def test_is_in_position_exception(device, case):
     title = case["title"]
-    param = case["parameter"]
+    param = eval(case["parameter"])
     mode = case["mode"]
 
     logger.info(f"》》》用例【{title}】开始测试《《《")
@@ -68,4 +68,62 @@ def test_is_in_position_exception(device, case):
             device.mc.is_in_position(param, mode)
 
     logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
+
+@allure.feature("is_in_position 接口测试")
+@allure.story("仅上电 is_in_position 场景")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "power_on_only"], ids=lambda c: c["title"])
+def test_power_on_only(device, case):
+    title = case["title"]
+    param = eval(case["parameter"])
+    mode = case["mode"]
+
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"接口: {case['api']}，参数: {param}，模式: {mode}")
+
+    with allure.step("机械臂仅上电"):
+        device.power_on_only()
+
+    with allure.step("调用 is_in_position 接口"):
+        response = device.mc.is_in_position(param, mode)
+    with allure.step("机械臂断言返回类型"):
+        assert response is None, f"机械臂返回类型错误，期望None，实际{type(response)}"
+    with allure.step("机械臂断言返回结果"):
+        allure.attach(str(case["l_expect_data"]),name= "机械臂期望值",attachment_type= allure.attachment_type.TEXT)
+        allure.attach(str(response),name= "机械臂实际值",attachment_type= allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂断言失败，期望：{case['l_expect_data']}，实际：{response}"
+
+    with allure.step("机械臂上电"):
+        device.power_on()
+
+    logger.info(f"✅ 用例【{title}】测试成功")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
+
+@allure.feature("is_in_position 接口测试")
+@allure.story("下电 is_in_position 场景")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "power_off"], ids=lambda c: c["title"])
+def test_power_off(device, case):
+    title = case["title"]
+    param = eval(case["parameter"])
+    mode = case["mode"]
+
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+    logger.debug(f"接口: {case['api']}，参数: {param}，模式: {mode}")
+
+    with allure.step("机械臂下电"):
+        device.power_off()
+
+    with allure.step("调用 is_in_position 接口"):
+        response = device.mc.is_in_position(param, mode)
+    with allure.step("机械臂断言返回类型"):
+        assert response is None, f"机械臂返回类型错误，期望None，实际{type(response)}"
+    with allure.step("机械臂断言返回结果"):
+        allure.attach(str(case["l_expect_data"]),name= "机械臂期望值",attachment_type= allure.attachment_type.TEXT)
+        allure.attach(str(response),name= "机械臂实际值",attachment_type= allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂断言失败，期望：{case['l_expect_data']}，实际：{response}"
+
+    with allure.step("机械臂上电"):
+        device.power_on()
+
+    logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")

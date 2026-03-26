@@ -147,7 +147,11 @@ class MercuryBase:
         self.mc.power_off()
         self.mc.power_on_only()
 
+    def power_on(self) -> None:
+        self.mc.power_on()
+
     def power_off(self) -> None:
+        self.mc.power_on()
         self.mc.power_off()
 
     def set_default_torque_comp(self) -> None:
@@ -165,6 +169,14 @@ class MercuryBase:
     def set_default_joint_max_angle(self) -> None:
         for i in range(6):
             self.mc.set_joint_max_angle(i + 1, self.angles_max[i])
+
+    def default_tool_reference(self):
+        self.mc.set_tool_reference([0,0,0,0,0,0])
+        self.mc.set_end_type(0)
+
+    def default_world_reference(self):
+        self.mc.set_world_reference([0,0,0,0,0,0])
+        self.mc.set_reference_frame(0)
 
     # 三指默认参数
     def set_default_p(self) -> None:
@@ -198,3 +210,4 @@ class MercuryBase:
     def set_default_speed(self) -> None:
         for i in range(6):
             self.mc.set_hand_gripper_speed(i + 1, 100)
+

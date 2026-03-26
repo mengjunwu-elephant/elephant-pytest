@@ -26,7 +26,9 @@ def setup_and_teardown(device):
     device.mc.set_limit_switch(2, 0)
     device.init_coords()
     yield
+    time.sleep(2)
     device.go_zero()
+    device.wait()
     device.reset()
 
 @allure.feature("Pause 暂停功能")
@@ -66,4 +68,58 @@ def test_pause_exception(device, case):
             device.mc.pause(case["parameter"])
 
     logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
+
+@allure.feature("Pause 暂停功能")
+@allure.story("仅上电暂停")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "power_on_only"], ids=lambda c: c["title"])
+def test_power_on_only(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+
+    logger.debug(f'test_api: {case["api"]}')
+
+    with allure.step("机械臂仅上电"):
+        device.power_on_only()
+
+    with allure.step("机械臂暂停"):
+        response = device.mc.pause(case["parameter"])
+    with allure.step("机械臂断言返回类型"):
+        assert response is None, f"机械臂返回类型错误，期望None，实际{type(response)}"
+    with allure.step("机械臂断言返回结果"):
+        allure.attach(str(case["l_expect_data"]),name= "机械臂期望值",attachment_type= allure.attachment_type.TEXT)
+        allure.attach(str(response),name= "机械臂实际值",attachment_type= allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂断言失败，期望：{case['l_expect_data']}，实际：{response}"
+
+    with allure.step("机械臂上电"):
+        device.power_on()
+
+    logger.info(f"✅ 用例【{title}】测试成功")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
+
+@allure.feature("Pause 暂停功能")
+@allure.story("下电暂停")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "power_off"], ids=lambda c: c["title"])
+def test_power_off(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+
+    logger.debug(f'test_api: {case["api"]}')
+
+    with allure.step("机械臂下电"):
+        device.power_off()
+
+    with allure.step("机械臂暂停"):
+        response = device.mc.pause(case["parameter"])
+    with allure.step("机械臂断言返回类型"):
+        assert response is None, f"机械臂返回类型错误，期望None，实际{type(response)}"
+    with allure.step("机械臂断言返回结果"):
+        allure.attach(str(case["l_expect_data"]),name= "机械臂期望值",attachment_type= allure.attachment_type.TEXT)
+        allure.attach(str(response),name= "机械臂实际值",attachment_type= allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂断言失败，期望：{case['l_expect_data']}，实际：{response}"
+
+    with allure.step("机械臂上电"):
+        device.power_on()
+
+    logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")

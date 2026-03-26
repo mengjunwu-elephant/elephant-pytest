@@ -25,7 +25,7 @@ def device():
 
 @allure.feature("超限回零接口")
 @allure.story("测试机械臂超限回零功能")
-@pytest.mark.parametrize("case", cases, ids=lambda c: c["title"])
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal"], ids=lambda c: c["title"])
 def test_over_limit_return_zero(device, case):
     title = case["title"]
     logger.info(f"》》》用例【{title}】开始测试《《《")
@@ -56,3 +56,52 @@ def test_over_limit_return_zero(device, case):
 
     logger.info(f"✅ 用例【{title}】测试通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")
+
+@allure.feature("超限回零接口")
+@allure.story("仅上电机械臂超限回零")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "power_on_only"], ids=lambda c: c["title"])
+def test_over_limit_return_zero_power_on_only(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+
+    logger.debug(f'test_api: {case["api"]}')
+    logger.debug(f'test_parameter: {case["parameter"]}')
+
+    with allure.step("机械臂仅上电"):
+        device.power_on_only()
+
+    with allure.step("机械臂获取错误信息"):
+        response = device.mc.over_limit_return_zero()
+    with allure.step("机械臂响应类型断言"):
+        assert isinstance(response, int), f"机械臂返回类型应为 int，实际为 {type(response)}"
+    with allure.step("机械臂断言返回结果"):
+        allure.attach(str(case["l_expect_data"]),name= "机械臂期望值",attachment_type= allure.attachment_type.TEXT)
+        allure.attach(str(response),name= "机械臂实际值",attachment_type= allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂断言失败，期望：{case['l_expect_data']}，实际：{response}"
+    logger.info(f"✅ 用例【{title}】测试成功")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
+
+@allure.feature("超限回零接口")
+@allure.story("下电机械臂超限回零")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "power_off"], ids=lambda c: c["title"])
+def test_over_limit_return_zero_power_off(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+
+    logger.debug(f'test_api: {case["api"]}')
+    logger.debug(f'test_parameter: {case["parameter"]}')
+
+    with allure.step("机械臂下电"):
+        device.power_off()
+
+    with allure.step("机械臂获取错误信息"):
+        response = device.mc.over_limit_return_zero()
+    with allure.step("机械臂响应类型断言"):
+        assert isinstance(response, int), f"机械臂返回类型应为 int，实际为 {type(response)}"
+    with allure.step("机械臂断言返回结果"):
+        allure.attach(str(case["l_expect_data"]),name= "机械臂期望值",attachment_type= allure.attachment_type.TEXT)
+        allure.attach(str(response),name= "机械臂实际值",attachment_type= allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂断言失败，期望：{case['l_expect_data']}，实际：{response}"
+    logger.info(f"✅ 用例【{title}】测试成功")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
+

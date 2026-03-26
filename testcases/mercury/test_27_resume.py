@@ -27,6 +27,7 @@ def setup_env(device):
     device.init_coords()
     yield
     device.go_zero()
+    device.wait()
     device.reset()
 
 @allure.feature("resume 接口测试")
@@ -62,9 +63,63 @@ def test_resume_exception(device, case):
     logger.info(f"》》》用例【{title}】开始测试《《《")
     logger.debug(f"参数: {case['parameter']}")
 
-    with allure.step("调用 resume 接口并断言抛出 MercuryDataException")as exc_info:
-        with pytest.raises(MercuryDataException):
+    with allure.step("调用 resume 接口并断言抛出 MercuryDataException"):
+        with pytest.raises(MercuryDataException)as exc_info:
             device.mc.resume(case["parameter"])
 
     logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
+
+@allure.feature("resume 接口测试")
+@allure.story("仅上电resume 场景")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "power_on_only"], ids=lambda c: c["title"])
+def test_power_on_only(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+
+    logger.debug(f'test_api: {case["api"]}')
+
+    with allure.step("机械臂仅上电"):
+        device.power_on_only()
+
+    with allure.step("调用 resume 接口"):
+        response = device.mc.resume(case["parameter"])
+    with allure.step("机械臂断言返回类型"):
+        assert response is None, f"机械臂返回类型错误，期望None，实际{type(response)}"
+    with allure.step("机械臂断言返回结果"):
+        allure.attach(str(case["l_expect_data"]),name= "机械臂期望值",attachment_type= allure.attachment_type.TEXT)
+        allure.attach(str(response),name= "机械臂实际值",attachment_type= allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂断言失败，期望：{case['l_expect_data']}，实际：{response}"
+
+    with allure.step("机械臂上电"):
+        device.power_on()
+
+    logger.info(f"✅ 用例【{title}】测试成功")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
+
+@allure.feature("resume 接口测试")
+@allure.story("下电resume 场景")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "power_off"], ids=lambda c: c["title"])
+def test_power_off(device, case):
+    title = case["title"]
+    logger.info(f"》》》用例【{title}】开始测试《《《")
+
+    logger.debug(f'test_api: {case["api"]}')
+
+    with allure.step("机械臂下电"):
+        device.power_off()
+
+    with allure.step("调用 resume 接口"):
+        response = device.mc.resume(case["parameter"])
+    with allure.step("机械臂断言返回类型"):
+        assert response is None, f"机械臂返回类型错误，期望None，实际{type(response)}"
+    with allure.step("机械臂断言返回结果"):
+        allure.attach(str(case["l_expect_data"]),name= "机械臂期望值",attachment_type= allure.attachment_type.TEXT)
+        allure.attach(str(response),name= "机械臂实际值",attachment_type= allure.attachment_type.TEXT)
+        assert response == case["l_expect_data"], f"机械臂断言失败，期望：{case['l_expect_data']}，实际：{response}"
+
+    with allure.step("机械臂上电"):
+        device.power_on()
+
+    logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")
