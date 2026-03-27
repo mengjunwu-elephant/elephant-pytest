@@ -6,8 +6,8 @@ from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
-# 从Excel中提取数据
-cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "servo_restore")
+# 从 Excel 读取测试数据
+cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "get_comm_error_counts")
 
 
 @pytest.fixture(scope="module")
@@ -18,13 +18,12 @@ def device():
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.power_off()
-    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
-@allure.feature("关节异常恢复")
-@allure.story("正确恢复各关节")
+@allure.feature("获取通讯异常次数")
+@allure.story("正确获取各关节通讯异常次数")
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
-def test_servo_restore1(device, case):
+def test_get_comm_error_counts1(device, case):
     title = case["title"]
     expected = case["l_expect_data"]
 
@@ -32,7 +31,7 @@ def test_servo_restore1(device, case):
     logger.debug(f'test_api:{case["api"]}')
 
     with allure.step(f"调用 {case['api']} 接口"):
-        response = device.mc.servo_restore(case["joint"])
+        response = device.mc.get_comm_error_counts(case['joint'], case['type'])
         logger.debug(f"接口返回：{response}")
 
     with allure.step("断言返回值类型为 int"):
@@ -47,10 +46,10 @@ def test_servo_restore1(device, case):
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
 
 
-@allure.feature("关节异常恢复")
-@allure.story("设置关节超限")
+@allure.feature("获取通讯异常次数")
+@allure.story("获取关节超限")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
-def test_servo_restore_exception(device, case):
+def test_get_comm_error_counts_exception(device, case):
     title = case["title"]
     expected = case["l_expect_data"]
 
@@ -60,13 +59,13 @@ def test_servo_restore_exception(device, case):
 
     with allure.step(f"断言抛出 MercuryDataException,关节为{case['joint']}"):
         with pytest.raises(MercuryDataException):
-            device.mc.servo_restore(case['joint'])
+            device.mc.get_comm_error_counts(case['joint'], case['type'])
 
     logger.info(f"✅ 用例【{title}】异常断言通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
 @allure.feature("关节异常恢复")
-@allure.story("仅上电调用 servo_restore 接口")
+@allure.story("仅上电调用 get_comm_error_counts 接口")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "power_on_only"], ids=lambda c: c["title"])
 def test_power_on_only(device, case):
     title = case["title"]
@@ -79,7 +78,7 @@ def test_power_on_only(device, case):
         device.power_on_only()
 
     with allure.step(f"调用 {case['api']} 接口"):
-        response = device.mc.servo_restore(case["joint"])
+        response = device.mc.get_comm_error_counts(case['joint'], case['type'])
         logger.debug(f"接口返回：{response}")
 
     with allure.step("机械臂断言返回类型"):
@@ -97,7 +96,7 @@ def test_power_on_only(device, case):
     logger.info(f"》》》用例【{title}】测试完成《《《")
 
 @allure.feature("关节异常恢复")
-@allure.story("下电调用 servo_restore 接口")
+@allure.story("下电调用 get_comm_error_counts 接口")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "power_off"], ids=lambda c: c["title"])
 def test_power_off(device, case):
     title = case["title"]
@@ -110,7 +109,7 @@ def test_power_off(device, case):
         device.power_off()
 
     with allure.step(f"调用 {case['api']} 接口"):
-        response = device.mc.servo_restore(case["joint"])
+        response = device.mc.get_comm_error_counts(case['joint'], case['type'])
         logger.debug(f"接口返回：{response}")
 
     with allure.step("机械臂断言返回类型"):

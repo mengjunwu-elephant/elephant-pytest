@@ -85389,3 +85389,2052 @@ DEBUG 2026-03-26 16:48:12,013 [test_84_get_reference_frame.py-->line:35]:接口�
 INFO 2026-03-26 16:48:12,014 [test_84_get_reference_frame.py-->line:45]:✅ 用例【获取基坐标系】测试通过
 INFO 2026-03-26 16:48:12,014 [test_84_get_reference_frame.py-->line:46]:》》》》》用例【获取基坐标系】测试完成《《《《《
 INFO 2026-03-26 16:48:14,132 [test_84_get_reference_frame.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 10:56:47,897 [test_75_servo_restore.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 10:56:47,899 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 10:56:47,900 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 10:56:48,012 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 10:56:48,013 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（1关节）】测试通过
+INFO 2026-03-27 10:56:48,013 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（1关节）】测试完成《《《《《
+INFO 2026-03-27 10:56:48,018 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 10:56:48,019 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 10:56:48,134 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 10:56:48,135 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（2关节）】测试通过
+INFO 2026-03-27 10:56:48,135 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（2关节）】测试完成《《《《《
+INFO 2026-03-27 10:56:48,140 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 10:56:48,140 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 10:56:48,256 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 10:56:48,256 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（3关节）】测试通过
+INFO 2026-03-27 10:56:48,257 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（3关节）】测试完成《《《《《
+INFO 2026-03-27 10:56:48,262 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 10:56:48,262 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 10:56:48,377 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 10:56:48,378 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（4关节）】测试通过
+INFO 2026-03-27 10:56:48,379 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（4关节）】测试完成《《《《《
+INFO 2026-03-27 10:56:48,384 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 10:56:48,384 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 10:56:48,497 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 10:56:48,498 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（5关节）】测试通过
+INFO 2026-03-27 10:56:48,499 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（5关节）】测试完成《《《《《
+INFO 2026-03-27 10:56:48,504 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 10:56:48,504 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 10:56:48,619 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 10:56:48,620 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（6关节）】测试通过
+INFO 2026-03-27 10:56:48,620 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（6关节）】测试完成《《《《《
+INFO 2026-03-27 10:56:48,625 [test_75_servo_restore.py-->line:57]:》》》》》用例【关节异常恢复，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 10:56:48,626 [test_75_servo_restore.py-->line:58]:test_api:servo_restore
+DEBUG 2026-03-27 10:56:48,626 [test_75_servo_restore.py-->line:59]:joint:7
+INFO 2026-03-27 10:56:48,925 [test_75_servo_restore.py-->line:57]:》》》》》用例【关节异常恢复，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 10:56:48,925 [test_75_servo_restore.py-->line:58]:test_api:servo_restore
+DEBUG 2026-03-27 10:56:48,925 [test_75_servo_restore.py-->line:59]:joint:0
+INFO 2026-03-27 10:56:48,927 [test_75_servo_restore.py-->line:65]:✅ 用例【关节异常恢复，关节超限】异常断言通过
+INFO 2026-03-27 10:56:48,927 [test_75_servo_restore.py-->line:66]:》》》用例【关节异常恢复，关节超限】测试完成《《《
+INFO 2026-03-27 10:56:48,932 [test_75_servo_restore.py-->line:75]:》》》》》用例【关节异常恢复（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 10:56:48,933 [test_75_servo_restore.py-->line:76]:test_api:servo_restore
+DEBUG 2026-03-27 10:56:55,053 [test_75_servo_restore.py-->line:83]:接口返回：1
+INFO 2026-03-27 10:56:55,073 [test_75_servo_restore.py-->line:106]:》》》》》用例【关节异常恢复（下电）】开始测试《《《《《
+DEBUG 2026-03-27 10:56:55,073 [test_75_servo_restore.py-->line:107]:test_api:servo_restore
+DEBUG 2026-03-27 10:57:07,189 [test_75_servo_restore.py-->line:114]:接口返回：1
+INFO 2026-03-27 10:57:19,209 [test_75_servo_restore.py-->line:22]:环境清理完成，接口测试结束
+INFO 2026-03-27 10:59:01,397 [test_75_servo_restore.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 10:59:01,399 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 10:59:01,399 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 10:59:01,514 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 10:59:01,515 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（1关节）】测试通过
+INFO 2026-03-27 10:59:01,515 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（1关节）】测试完成《《《《《
+INFO 2026-03-27 10:59:01,520 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 10:59:01,521 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 10:59:01,637 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 10:59:01,638 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（2关节）】测试通过
+INFO 2026-03-27 10:59:01,638 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（2关节）】测试完成《《《《《
+INFO 2026-03-27 10:59:01,643 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 10:59:01,643 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 10:59:01,758 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 10:59:01,759 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（3关节）】测试通过
+INFO 2026-03-27 10:59:01,760 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（3关节）】测试完成《《《《《
+INFO 2026-03-27 10:59:01,764 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 10:59:01,765 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 10:59:01,881 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 10:59:01,882 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（4关节）】测试通过
+INFO 2026-03-27 10:59:01,882 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（4关节）】测试完成《《《《《
+INFO 2026-03-27 10:59:01,887 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 10:59:01,887 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 10:59:02,002 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 10:59:02,003 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（5关节）】测试通过
+INFO 2026-03-27 10:59:02,003 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（5关节）】测试完成《《《《《
+INFO 2026-03-27 10:59:02,008 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 10:59:02,009 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 10:59:02,122 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 10:59:02,123 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（6关节）】测试通过
+INFO 2026-03-27 10:59:02,124 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（6关节）】测试完成《《《《《
+INFO 2026-03-27 10:59:02,129 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 10:59:02,129 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 10:59:02,243 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 10:59:02,243 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复，关节超限】测试通过
+INFO 2026-03-27 10:59:02,244 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复，关节超限】测试完成《《《《《
+INFO 2026-03-27 10:59:02,249 [test_75_servo_restore.py-->line:57]:》》》》》用例【关节异常恢复，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 10:59:02,249 [test_75_servo_restore.py-->line:58]:test_api:servo_restore
+DEBUG 2026-03-27 10:59:02,250 [test_75_servo_restore.py-->line:59]:joint:8
+INFO 2026-03-27 10:59:02,251 [test_75_servo_restore.py-->line:65]:✅ 用例【关节异常恢复，关节超限】异常断言通过
+INFO 2026-03-27 10:59:02,251 [test_75_servo_restore.py-->line:66]:》》》用例【关节异常恢复，关节超限】测试完成《《《
+INFO 2026-03-27 10:59:02,256 [test_75_servo_restore.py-->line:57]:》》》》》用例【关节异常恢复，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 10:59:02,256 [test_75_servo_restore.py-->line:58]:test_api:servo_restore
+DEBUG 2026-03-27 10:59:02,256 [test_75_servo_restore.py-->line:59]:joint:0
+INFO 2026-03-27 10:59:02,257 [test_75_servo_restore.py-->line:65]:✅ 用例【关节异常恢复，关节超限】异常断言通过
+INFO 2026-03-27 10:59:02,257 [test_75_servo_restore.py-->line:66]:》》》用例【关节异常恢复，关节超限】测试完成《《《
+INFO 2026-03-27 10:59:02,262 [test_75_servo_restore.py-->line:75]:》》》》》用例【关节异常恢复（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 10:59:02,262 [test_75_servo_restore.py-->line:76]:test_api:servo_restore
+DEBUG 2026-03-27 10:59:08,382 [test_75_servo_restore.py-->line:83]:接口返回：1
+INFO 2026-03-27 10:59:08,562 [test_75_servo_restore.py-->line:106]:》》》》》用例【关节异常恢复（下电）】开始测试《《《《《
+DEBUG 2026-03-27 10:59:08,562 [test_75_servo_restore.py-->line:107]:test_api:servo_restore
+DEBUG 2026-03-27 10:59:20,685 [test_75_servo_restore.py-->line:114]:接口返回：1
+INFO 2026-03-27 10:59:32,705 [test_75_servo_restore.py-->line:22]:环境清理完成，接口测试结束
+INFO 2026-03-27 11:01:48,422 [test_1_get_system_version.py-->line:17]:初始化完成，接口测试开始
+INFO 2026-03-27 11:01:48,425 [test_1_get_system_version.py-->line:28]:》》》用例【正确获取固件版本号】开始测试《《《
+DEBUG 2026-03-27 11:01:48,426 [test_1_get_system_version.py-->line:29]:test_api: get_system_version
+DEBUG 2026-03-27 11:01:48,426 [test_1_get_system_version.py-->line:30]:test_parameters: None
+DEBUG 2026-03-27 11:01:48,578 [test_1_get_system_version.py-->line:34]:机械臂响应：None
+INFO 2026-03-27 11:01:54,767 [test_1_get_system_version.py-->line:54]:》》》用例【仅上电获取固件版本号】开始测试《《《
+DEBUG 2026-03-27 11:01:54,767 [test_1_get_system_version.py-->line:55]:test_api: get_system_version
+DEBUG 2026-03-27 11:01:54,768 [test_1_get_system_version.py-->line:56]:test_parameters: None
+INFO 2026-03-27 11:02:06,939 [test_1_get_system_version.py-->line:80]:》》》用例【断电获取固件版本号】开始测试《《《
+DEBUG 2026-03-27 11:02:06,940 [test_1_get_system_version.py-->line:81]:test_api: get_system_version
+DEBUG 2026-03-27 11:02:06,940 [test_1_get_system_version.py-->line:82]:test_parameters: None
+INFO 2026-03-27 11:02:10,107 [test_1_get_system_version.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 11:12:02,300 [test_1_get_system_version.py-->line:17]:初始化完成，接口测试开始
+INFO 2026-03-27 11:12:02,302 [test_1_get_system_version.py-->line:28]:》》》用例【正确获取固件版本号】开始测试《《《
+DEBUG 2026-03-27 11:12:02,303 [test_1_get_system_version.py-->line:29]:test_api: get_system_version
+DEBUG 2026-03-27 11:12:02,303 [test_1_get_system_version.py-->line:30]:test_parameters: None
+DEBUG 2026-03-27 11:12:02,315 [test_1_get_system_version.py-->line:34]:机械臂响应：1.1
+INFO 2026-03-27 11:12:02,316 [test_1_get_system_version.py-->line:44]:✅ 用例【正确获取固件版本号】测试通过
+INFO 2026-03-27 11:12:09,788 [test_1_get_system_version.py-->line:46]:》》》用例【正确获取固件版本号】测试完成《《《
+INFO 2026-03-27 11:12:13,919 [test_1_get_system_version.py-->line:54]:》》》用例【仅上电获取固件版本号】开始测试《《《
+DEBUG 2026-03-27 11:12:13,920 [test_1_get_system_version.py-->line:55]:test_api: get_system_version
+DEBUG 2026-03-27 11:12:13,920 [test_1_get_system_version.py-->line:56]:test_parameters: None
+INFO 2026-03-27 11:12:13,929 [test_1_get_system_version.py-->line:70]:✅ 用例【仅上电获取固件版本号】测试通过
+INFO 2026-03-27 11:12:20,283 [test_1_get_system_version.py-->line:72]:》》》用例【仅上电获取固件版本号】测试完成《《《
+INFO 2026-03-27 11:12:23,456 [test_1_get_system_version.py-->line:80]:》》》用例【断电获取固件版本号】开始测试《《《
+DEBUG 2026-03-27 11:12:23,457 [test_1_get_system_version.py-->line:81]:test_api: get_system_version
+DEBUG 2026-03-27 11:12:23,457 [test_1_get_system_version.py-->line:82]:test_parameters: None
+INFO 2026-03-27 11:12:23,468 [test_1_get_system_version.py-->line:96]:✅ 用例【断电获取固件版本号】测试通过
+INFO 2026-03-27 11:12:31,820 [test_1_get_system_version.py-->line:98]:》》》用例【断电获取固件版本号】测试完成《《《
+INFO 2026-03-27 11:12:33,937 [test_1_get_system_version.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 11:12:48,649 [test_75_servo_restore.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 11:12:48,652 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:12:48,652 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 11:12:48,771 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 11:12:48,771 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（1关节）】测试通过
+INFO 2026-03-27 11:12:48,772 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（1关节）】测试完成《《《《《
+INFO 2026-03-27 11:12:48,777 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:12:48,778 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 11:12:48,893 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 11:12:48,894 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（2关节）】测试通过
+INFO 2026-03-27 11:12:48,894 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（2关节）】测试完成《《《《《
+INFO 2026-03-27 11:12:48,899 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:12:48,900 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 11:12:49,020 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 11:12:49,021 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（3关节）】测试通过
+INFO 2026-03-27 11:12:49,021 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（3关节）】测试完成《《《《《
+INFO 2026-03-27 11:12:49,026 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:12:49,027 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 11:12:49,139 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 11:12:49,139 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（4关节）】测试通过
+INFO 2026-03-27 11:12:49,140 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（4关节）】测试完成《《《《《
+INFO 2026-03-27 11:12:49,144 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:12:49,145 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 11:12:49,260 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 11:12:49,261 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（5关节）】测试通过
+INFO 2026-03-27 11:12:49,262 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（5关节）】测试完成《《《《《
+INFO 2026-03-27 11:12:49,267 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:12:49,267 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 11:12:49,384 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 11:12:49,385 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（6关节）】测试通过
+INFO 2026-03-27 11:12:49,386 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（6关节）】测试完成《《《《《
+INFO 2026-03-27 11:12:49,390 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 11:12:49,391 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 11:12:49,503 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 11:12:49,503 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复，关节超限】测试通过
+INFO 2026-03-27 11:12:49,504 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复，关节超限】测试完成《《《《《
+INFO 2026-03-27 11:12:49,508 [test_75_servo_restore.py-->line:57]:》》》》》用例【关节异常恢复，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 11:12:49,509 [test_75_servo_restore.py-->line:58]:test_api:servo_restore
+DEBUG 2026-03-27 11:12:49,509 [test_75_servo_restore.py-->line:59]:joint:8
+INFO 2026-03-27 11:12:49,510 [test_75_servo_restore.py-->line:65]:✅ 用例【关节异常恢复，关节超限】异常断言通过
+INFO 2026-03-27 11:12:49,510 [test_75_servo_restore.py-->line:66]:》》》用例【关节异常恢复，关节超限】测试完成《《《
+INFO 2026-03-27 11:12:49,515 [test_75_servo_restore.py-->line:57]:》》》》》用例【关节异常恢复，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 11:12:49,516 [test_75_servo_restore.py-->line:58]:test_api:servo_restore
+DEBUG 2026-03-27 11:12:49,516 [test_75_servo_restore.py-->line:59]:joint:0
+INFO 2026-03-27 11:12:49,517 [test_75_servo_restore.py-->line:65]:✅ 用例【关节异常恢复，关节超限】异常断言通过
+INFO 2026-03-27 11:12:49,517 [test_75_servo_restore.py-->line:66]:》》》用例【关节异常恢复，关节超限】测试完成《《《
+INFO 2026-03-27 11:12:49,521 [test_75_servo_restore.py-->line:75]:》》》》》用例【关节异常恢复（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 11:12:49,522 [test_75_servo_restore.py-->line:76]:test_api:servo_restore
+DEBUG 2026-03-27 11:12:53,946 [test_75_servo_restore.py-->line:83]:接口返回：None
+INFO 2026-03-27 11:12:54,119 [test_75_servo_restore.py-->line:106]:》》》》》用例【关节异常恢复（下电）】开始测试《《《《《
+DEBUG 2026-03-27 11:12:54,119 [test_75_servo_restore.py-->line:107]:test_api:servo_restore
+DEBUG 2026-03-27 11:12:59,891 [test_75_servo_restore.py-->line:114]:接口返回：None
+INFO 2026-03-27 11:13:07,385 [test_75_servo_restore.py-->line:22]:环境清理完成，接口测试结束
+INFO 2026-03-27 11:15:55,665 [test_75_servo_restore.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 11:15:55,667 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:15:55,667 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 11:15:55,787 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 11:15:55,788 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（1关节）】测试通过
+INFO 2026-03-27 11:15:55,788 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（1关节）】测试完成《《《《《
+INFO 2026-03-27 11:15:55,793 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:15:55,794 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 11:15:55,908 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 11:15:55,908 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（2关节）】测试通过
+INFO 2026-03-27 11:15:55,909 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（2关节）】测试完成《《《《《
+INFO 2026-03-27 11:15:55,914 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:15:55,914 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 11:15:56,029 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 11:15:56,030 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（3关节）】测试通过
+INFO 2026-03-27 11:15:56,030 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（3关节）】测试完成《《《《《
+INFO 2026-03-27 11:15:56,035 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:15:56,036 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 11:15:56,151 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 11:15:56,151 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（4关节）】测试通过
+INFO 2026-03-27 11:15:56,152 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（4关节）】测试完成《《《《《
+INFO 2026-03-27 11:15:56,156 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:15:56,157 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 11:15:56,273 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 11:15:56,274 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（5关节）】测试通过
+INFO 2026-03-27 11:15:56,274 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（5关节）】测试完成《《《《《
+INFO 2026-03-27 11:15:56,279 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:15:56,280 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 11:15:56,393 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 11:15:56,394 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复（6关节）】测试通过
+INFO 2026-03-27 11:15:56,395 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复（6关节）】测试完成《《《《《
+INFO 2026-03-27 11:15:56,399 [test_75_servo_restore.py-->line:31]:》》》》》用例【关节异常恢复，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 11:15:56,400 [test_75_servo_restore.py-->line:32]:test_api:servo_restore
+DEBUG 2026-03-27 11:15:56,515 [test_75_servo_restore.py-->line:36]:接口返回：1
+INFO 2026-03-27 11:15:56,515 [test_75_servo_restore.py-->line:46]:✅ 用例【关节异常恢复，关节超限】测试通过
+INFO 2026-03-27 11:15:56,516 [test_75_servo_restore.py-->line:47]:》》》》》用例【关节异常恢复，关节超限】测试完成《《《《《
+INFO 2026-03-27 11:15:56,520 [test_75_servo_restore.py-->line:57]:》》》》》用例【关节异常恢复，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 11:15:56,521 [test_75_servo_restore.py-->line:58]:test_api:servo_restore
+DEBUG 2026-03-27 11:15:56,521 [test_75_servo_restore.py-->line:59]:joint:8
+INFO 2026-03-27 11:15:56,522 [test_75_servo_restore.py-->line:65]:✅ 用例【关节异常恢复，关节超限】异常断言通过
+INFO 2026-03-27 11:15:56,523 [test_75_servo_restore.py-->line:66]:》》》用例【关节异常恢复，关节超限】测试完成《《《
+INFO 2026-03-27 11:15:56,527 [test_75_servo_restore.py-->line:57]:》》》》》用例【关节异常恢复，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 11:15:56,527 [test_75_servo_restore.py-->line:58]:test_api:servo_restore
+DEBUG 2026-03-27 11:15:56,528 [test_75_servo_restore.py-->line:59]:joint:0
+INFO 2026-03-27 11:15:56,528 [test_75_servo_restore.py-->line:65]:✅ 用例【关节异常恢复，关节超限】异常断言通过
+INFO 2026-03-27 11:15:56,529 [test_75_servo_restore.py-->line:66]:》》》用例【关节异常恢复，关节超限】测试完成《《《
+INFO 2026-03-27 11:15:56,533 [test_75_servo_restore.py-->line:75]:》》》》》用例【关节异常恢复（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 11:15:56,533 [test_75_servo_restore.py-->line:76]:test_api:servo_restore
+DEBUG 2026-03-27 11:16:00,961 [test_75_servo_restore.py-->line:83]:接口返回：None
+INFO 2026-03-27 11:16:04,312 [test_75_servo_restore.py-->line:96]:✅ 用例【关节异常恢复（仅上电）】测试成功
+INFO 2026-03-27 11:16:04,313 [test_75_servo_restore.py-->line:97]:》》》用例【关节异常恢复（仅上电）】测试完成《《《
+INFO 2026-03-27 11:16:04,318 [test_75_servo_restore.py-->line:106]:》》》》》用例【关节异常恢复（下电）】开始测试《《《《《
+DEBUG 2026-03-27 11:16:04,318 [test_75_servo_restore.py-->line:107]:test_api:servo_restore
+DEBUG 2026-03-27 11:16:07,784 [test_75_servo_restore.py-->line:114]:接口返回：None
+INFO 2026-03-27 11:16:13,142 [test_75_servo_restore.py-->line:127]:✅ 用例【关节异常恢复（下电）】测试成功
+INFO 2026-03-27 11:16:13,142 [test_75_servo_restore.py-->line:128]:》》》用例【关节异常恢复（下电）】测试完成《《《
+INFO 2026-03-27 11:16:16,304 [test_75_servo_restore.py-->line:22]:环境清理完成，接口测试结束
+INFO 2026-03-27 11:24:34,453 [test_76_get_comm_error_counts.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 11:24:38,046 [test_76_get_comm_error_counts.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 11:25:09,034 [test_76_get_comm_error_counts.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 11:25:09,036 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:25:09,036 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+INFO 2026-03-27 11:25:09,205 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:25:09,205 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+INFO 2026-03-27 11:25:09,224 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:25:09,225 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+INFO 2026-03-27 11:25:09,245 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:25:09,246 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+INFO 2026-03-27 11:25:09,268 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:25:09,270 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+INFO 2026-03-27 11:25:09,354 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:25:09,355 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+INFO 2026-03-27 11:25:09,375 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:25:09,375 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+INFO 2026-03-27 11:25:09,395 [test_76_get_comm_error_counts.py-->line:56]:》》》》》用例【获取通讯异常次数，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 11:25:09,395 [test_76_get_comm_error_counts.py-->line:57]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:25:09,396 [test_76_get_comm_error_counts.py-->line:58]:joint:8
+INFO 2026-03-27 11:25:09,426 [test_76_get_comm_error_counts.py-->line:56]:》》》》》用例【获取通讯异常次数，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 11:25:09,427 [test_76_get_comm_error_counts.py-->line:57]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:25:09,427 [test_76_get_comm_error_counts.py-->line:58]:joint:0
+INFO 2026-03-27 11:25:09,446 [test_76_get_comm_error_counts.py-->line:74]:》》》》》用例【获取通讯异常次数（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 11:25:09,446 [test_76_get_comm_error_counts.py-->line:75]:test_api:get_comm_error_counts
+INFO 2026-03-27 11:25:13,592 [test_76_get_comm_error_counts.py-->line:105]:》》》》》用例【获取通讯异常次数（下电）】开始测试《《《《《
+DEBUG 2026-03-27 11:25:13,592 [test_76_get_comm_error_counts.py-->line:106]:test_api:get_comm_error_counts
+INFO 2026-03-27 11:25:26,538 [test_76_get_comm_error_counts.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 11:34:35,502 [test_76_get_comm_error_counts.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 11:34:35,504 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:35,504 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:35,518 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:35,696 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:35,697 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:35,712 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:35,731 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:35,732 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:35,746 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:35,765 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:35,765 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:35,780 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:35,799 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:35,800 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:35,813 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:35,833 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:35,833 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:35,846 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:35,865 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:35,866 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:35,878 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:35,897 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:35,898 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:35,911 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:35,930 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:35,930 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:35,944 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:35,963 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:35,963 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:35,976 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:35,996 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:35,996 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,010 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:36,032 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,032 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,044 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:36,064 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,065 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,077 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:36,100 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,100 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,109 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:36,128 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,129 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,143 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:36,162 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,163 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,175 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:36,194 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,195 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,208 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:36,229 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,229 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,242 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:36,262 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,263 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,274 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:36,295 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,295 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,307 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:36,327 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,327 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,340 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:36,360 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,360 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,372 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:36,392 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,392 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,406 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:36,427 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,427 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,438 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:36,458 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,458 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,472 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:36,492 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,492 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,504 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:36,524 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,524 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,538 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:36,558 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,558 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,571 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:34:36,591 [test_76_get_comm_error_counts.py-->line:56]:》》》》》用例【获取通讯异常次数，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,592 [test_76_get_comm_error_counts.py-->line:57]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,592 [test_76_get_comm_error_counts.py-->line:58]:joint:8
+INFO 2026-03-27 11:34:36,593 [test_76_get_comm_error_counts.py-->line:64]:✅ 用例【获取通讯异常次数，关节超限】异常断言通过
+INFO 2026-03-27 11:34:36,594 [test_76_get_comm_error_counts.py-->line:65]:》》》用例【获取通讯异常次数，关节超限】测试完成《《《
+INFO 2026-03-27 11:34:36,598 [test_76_get_comm_error_counts.py-->line:56]:》》》》》用例【获取通讯异常次数，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,599 [test_76_get_comm_error_counts.py-->line:57]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,599 [test_76_get_comm_error_counts.py-->line:58]:joint:0
+INFO 2026-03-27 11:34:36,600 [test_76_get_comm_error_counts.py-->line:64]:✅ 用例【获取通讯异常次数，关节超限】异常断言通过
+INFO 2026-03-27 11:34:36,600 [test_76_get_comm_error_counts.py-->line:65]:》》》用例【获取通讯异常次数，关节超限】测试完成《《《
+INFO 2026-03-27 11:34:36,604 [test_76_get_comm_error_counts.py-->line:56]:》》》》》用例【获取通讯异常次数，type超限】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,605 [test_76_get_comm_error_counts.py-->line:57]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,605 [test_76_get_comm_error_counts.py-->line:58]:joint:1
+INFO 2026-03-27 11:34:36,606 [test_76_get_comm_error_counts.py-->line:64]:✅ 用例【获取通讯异常次数，type超限】异常断言通过
+INFO 2026-03-27 11:34:36,606 [test_76_get_comm_error_counts.py-->line:65]:》》》用例【获取通讯异常次数，type超限】测试完成《《《
+INFO 2026-03-27 11:34:36,611 [test_76_get_comm_error_counts.py-->line:56]:》》》》》用例【获取通讯异常次数，type超限】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,612 [test_76_get_comm_error_counts.py-->line:57]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:34:36,612 [test_76_get_comm_error_counts.py-->line:58]:joint:1
+INFO 2026-03-27 11:34:36,612 [test_76_get_comm_error_counts.py-->line:64]:✅ 用例【获取通讯异常次数，type超限】异常断言通过
+INFO 2026-03-27 11:34:36,613 [test_76_get_comm_error_counts.py-->line:65]:》》》用例【获取通讯异常次数，type超限】测试完成《《《
+INFO 2026-03-27 11:34:36,617 [test_76_get_comm_error_counts.py-->line:74]:》》》》》用例【获取通讯异常次数（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:36,618 [test_76_get_comm_error_counts.py-->line:75]:test_api:get_comm_error_counts
+INFO 2026-03-27 11:34:41,095 [test_76_get_comm_error_counts.py-->line:105]:》》》》》用例【获取通讯异常次数（下电）】开始测试《《《《《
+DEBUG 2026-03-27 11:34:41,096 [test_76_get_comm_error_counts.py-->line:106]:test_api:get_comm_error_counts
+INFO 2026-03-27 11:34:54,399 [test_76_get_comm_error_counts.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 11:35:47,908 [test_76_get_comm_error_counts.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 11:35:47,910 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:47,911 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:47,928 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,106 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,107 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,122 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,142 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,142 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,154 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,173 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,174 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,189 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,208 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,208 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,223 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,244 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,244 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,255 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,274 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,275 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,288 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,308 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,308 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,323 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,342 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,343 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,356 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,375 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,376 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,388 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,407 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,408 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,423 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,442 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,443 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,458 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,477 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,477 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,490 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,509 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,510 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,520 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,539 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,540 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,555 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,575 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,575 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,587 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,607 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,607 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,620 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,641 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,641 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,655 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,674 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,675 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,687 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,707 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,707 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,718 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,740 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,740 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,755 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,775 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,776 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,788 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,809 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,809 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,820 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,841 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,841 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,855 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,878 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,879 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,888 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,909 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,910 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,920 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,941 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,942 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,953 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:48,973 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:48,974 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:48,986 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:35:49,007 [test_76_get_comm_error_counts.py-->line:56]:》》》》》用例【获取通讯异常次数，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 11:35:49,008 [test_76_get_comm_error_counts.py-->line:57]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:49,008 [test_76_get_comm_error_counts.py-->line:58]:joint:8
+INFO 2026-03-27 11:35:49,009 [test_76_get_comm_error_counts.py-->line:64]:✅ 用例【获取通讯异常次数，关节超限】异常断言通过
+INFO 2026-03-27 11:35:49,010 [test_76_get_comm_error_counts.py-->line:65]:》》》用例【获取通讯异常次数，关节超限】测试完成《《《
+INFO 2026-03-27 11:35:49,016 [test_76_get_comm_error_counts.py-->line:56]:》》》》》用例【获取通讯异常次数，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 11:35:49,017 [test_76_get_comm_error_counts.py-->line:57]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:49,018 [test_76_get_comm_error_counts.py-->line:58]:joint:0
+INFO 2026-03-27 11:35:49,019 [test_76_get_comm_error_counts.py-->line:64]:✅ 用例【获取通讯异常次数，关节超限】异常断言通过
+INFO 2026-03-27 11:35:49,019 [test_76_get_comm_error_counts.py-->line:65]:》》》用例【获取通讯异常次数，关节超限】测试完成《《《
+INFO 2026-03-27 11:35:49,025 [test_76_get_comm_error_counts.py-->line:56]:》》》》》用例【获取通讯异常次数，type超限】开始测试《《《《《
+DEBUG 2026-03-27 11:35:49,026 [test_76_get_comm_error_counts.py-->line:57]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:49,027 [test_76_get_comm_error_counts.py-->line:58]:joint:1
+INFO 2026-03-27 11:35:49,028 [test_76_get_comm_error_counts.py-->line:64]:✅ 用例【获取通讯异常次数，type超限】异常断言通过
+INFO 2026-03-27 11:35:49,028 [test_76_get_comm_error_counts.py-->line:65]:》》》用例【获取通讯异常次数，type超限】测试完成《《《
+INFO 2026-03-27 11:35:49,034 [test_76_get_comm_error_counts.py-->line:56]:》》》》》用例【获取通讯异常次数，type超限】开始测试《《《《《
+DEBUG 2026-03-27 11:35:49,035 [test_76_get_comm_error_counts.py-->line:57]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:35:49,036 [test_76_get_comm_error_counts.py-->line:58]:joint:1
+INFO 2026-03-27 11:35:49,037 [test_76_get_comm_error_counts.py-->line:64]:✅ 用例【获取通讯异常次数，type超限】异常断言通过
+INFO 2026-03-27 11:35:49,037 [test_76_get_comm_error_counts.py-->line:65]:》》》用例【获取通讯异常次数，type超限】测试完成《《《
+INFO 2026-03-27 11:35:49,043 [test_76_get_comm_error_counts.py-->line:74]:》》》》》用例【获取通讯异常次数（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:49,044 [test_76_get_comm_error_counts.py-->line:75]:test_api:get_comm_error_counts
+INFO 2026-03-27 11:35:53,518 [test_76_get_comm_error_counts.py-->line:105]:》》》》》用例【获取通讯异常次数（下电）】开始测试《《《《《
+DEBUG 2026-03-27 11:35:53,519 [test_76_get_comm_error_counts.py-->line:106]:test_api:get_comm_error_counts
+INFO 2026-03-27 11:36:06,810 [test_76_get_comm_error_counts.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 11:36:54,204 [test_76_get_comm_error_counts.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 11:36:54,206 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,206 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,222 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,223 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（1关节）】测试通过
+INFO 2026-03-27 11:36:54,223 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（1关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,228 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,229 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,245 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,245 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（1关节）】测试通过
+INFO 2026-03-27 11:36:54,246 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（1关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,251 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,251 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,267 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,268 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（1关节）】测试通过
+INFO 2026-03-27 11:36:54,268 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（1关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,273 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,274 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,288 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,289 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（1关节）】测试通过
+INFO 2026-03-27 11:36:54,289 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（1关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,294 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,295 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,313 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,313 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（2关节）】测试通过
+INFO 2026-03-27 11:36:54,314 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（2关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,319 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,319 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,334 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,335 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（2关节）】测试通过
+INFO 2026-03-27 11:36:54,335 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（2关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,340 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,340 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,347 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,347 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（2关节）】测试通过
+INFO 2026-03-27 11:36:54,348 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（2关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,352 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,353 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,371 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,372 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（2关节）】测试通过
+INFO 2026-03-27 11:36:54,372 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（2关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,377 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,377 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,392 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,393 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（3关节）】测试通过
+INFO 2026-03-27 11:36:54,393 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（3关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,398 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,398 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,414 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,415 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（3关节）】测试通过
+INFO 2026-03-27 11:36:54,415 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（3关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,420 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,421 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,439 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,439 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（3关节）】测试通过
+INFO 2026-03-27 11:36:54,440 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（3关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,444 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,445 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,461 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,462 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（3关节）】测试通过
+INFO 2026-03-27 11:36:54,462 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（3关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,467 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,467 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,484 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,485 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（4关节）】测试通过
+INFO 2026-03-27 11:36:54,485 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（4关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,490 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,490 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,504 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,505 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（4关节）】测试通过
+INFO 2026-03-27 11:36:54,505 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（4关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,510 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,511 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,519 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,520 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（4关节）】测试通过
+INFO 2026-03-27 11:36:54,520 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（4关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,525 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,525 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,540 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,541 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（4关节）】测试通过
+INFO 2026-03-27 11:36:54,541 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（4关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,546 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,546 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,552 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,553 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（5关节）】测试通过
+INFO 2026-03-27 11:36:54,554 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（5关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,558 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,559 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,577 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,577 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（5关节）】测试通过
+INFO 2026-03-27 11:36:54,578 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（5关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,582 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,583 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,600 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,601 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（5关节）】测试通过
+INFO 2026-03-27 11:36:54,601 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（5关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,606 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,606 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,622 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,623 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（5关节）】测试通过
+INFO 2026-03-27 11:36:54,623 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（5关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,628 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,628 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,644 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,645 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（6关节）】测试通过
+INFO 2026-03-27 11:36:54,645 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（6关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,650 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,651 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,666 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,667 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（6关节）】测试通过
+INFO 2026-03-27 11:36:54,668 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（6关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,672 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,673 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,691 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,692 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（6关节）】测试通过
+INFO 2026-03-27 11:36:54,692 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（6关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,697 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,697 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,712 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,713 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（6关节）】测试通过
+INFO 2026-03-27 11:36:54,713 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（6关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,718 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,718 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,734 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,735 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（7关节）】测试通过
+INFO 2026-03-27 11:36:54,735 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（7关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,740 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,741 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,757 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,757 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（7关节）】测试通过
+INFO 2026-03-27 11:36:54,758 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（7关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,762 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,763 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,781 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,782 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（7关节）】测试通过
+INFO 2026-03-27 11:36:54,782 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（7关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,787 [test_76_get_comm_error_counts.py-->line:30]:》》》》》用例【获取通讯异常次数（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,787 [test_76_get_comm_error_counts.py-->line:31]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,802 [test_76_get_comm_error_counts.py-->line:35]:接口返回：0
+INFO 2026-03-27 11:36:54,803 [test_76_get_comm_error_counts.py-->line:45]:✅ 用例【获取通讯异常次数（7关节）】测试通过
+INFO 2026-03-27 11:36:54,803 [test_76_get_comm_error_counts.py-->line:46]:》》》》》用例【获取通讯异常次数（7关节）】测试完成《《《《《
+INFO 2026-03-27 11:36:54,808 [test_76_get_comm_error_counts.py-->line:56]:》》》》》用例【获取通讯异常次数，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,808 [test_76_get_comm_error_counts.py-->line:57]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,809 [test_76_get_comm_error_counts.py-->line:58]:joint:8
+INFO 2026-03-27 11:36:54,810 [test_76_get_comm_error_counts.py-->line:64]:✅ 用例【获取通讯异常次数，关节超限】异常断言通过
+INFO 2026-03-27 11:36:54,810 [test_76_get_comm_error_counts.py-->line:65]:》》》用例【获取通讯异常次数，关节超限】测试完成《《《
+INFO 2026-03-27 11:36:54,815 [test_76_get_comm_error_counts.py-->line:56]:》》》》》用例【获取通讯异常次数，关节超限】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,815 [test_76_get_comm_error_counts.py-->line:57]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,816 [test_76_get_comm_error_counts.py-->line:58]:joint:0
+INFO 2026-03-27 11:36:54,816 [test_76_get_comm_error_counts.py-->line:64]:✅ 用例【获取通讯异常次数，关节超限】异常断言通过
+INFO 2026-03-27 11:36:54,817 [test_76_get_comm_error_counts.py-->line:65]:》》》用例【获取通讯异常次数，关节超限】测试完成《《《
+INFO 2026-03-27 11:36:54,821 [test_76_get_comm_error_counts.py-->line:56]:》》》》》用例【获取通讯异常次数，type超限】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,822 [test_76_get_comm_error_counts.py-->line:57]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,822 [test_76_get_comm_error_counts.py-->line:58]:joint:1
+INFO 2026-03-27 11:36:54,823 [test_76_get_comm_error_counts.py-->line:64]:✅ 用例【获取通讯异常次数，type超限】异常断言通过
+INFO 2026-03-27 11:36:54,823 [test_76_get_comm_error_counts.py-->line:65]:》》》用例【获取通讯异常次数，type超限】测试完成《《《
+INFO 2026-03-27 11:36:54,828 [test_76_get_comm_error_counts.py-->line:56]:》》》》》用例【获取通讯异常次数，type超限】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,828 [test_76_get_comm_error_counts.py-->line:57]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:54,829 [test_76_get_comm_error_counts.py-->line:58]:joint:1
+INFO 2026-03-27 11:36:54,829 [test_76_get_comm_error_counts.py-->line:64]:✅ 用例【获取通讯异常次数，type超限】异常断言通过
+INFO 2026-03-27 11:36:54,830 [test_76_get_comm_error_counts.py-->line:65]:》》》用例【获取通讯异常次数，type超限】测试完成《《《
+INFO 2026-03-27 11:36:54,834 [test_76_get_comm_error_counts.py-->line:74]:》》》》》用例【获取通讯异常次数（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 11:36:54,835 [test_76_get_comm_error_counts.py-->line:75]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:36:59,116 [test_76_get_comm_error_counts.py-->line:82]:接口返回：None
+INFO 2026-03-27 11:37:02,468 [test_76_get_comm_error_counts.py-->line:95]:✅ 用例【获取通讯异常次数（仅上电）】测试成功
+INFO 2026-03-27 11:37:02,468 [test_76_get_comm_error_counts.py-->line:96]:》》》用例【获取通讯异常次数（仅上电）】测试完成《《《
+INFO 2026-03-27 11:37:02,473 [test_76_get_comm_error_counts.py-->line:105]:》》》》》用例【获取通讯异常次数（下电）】开始测试《《《《《
+DEBUG 2026-03-27 11:37:02,474 [test_76_get_comm_error_counts.py-->line:106]:test_api:get_comm_error_counts
+DEBUG 2026-03-27 11:37:05,795 [test_76_get_comm_error_counts.py-->line:113]:接口返回：None
+INFO 2026-03-27 11:37:11,150 [test_76_get_comm_error_counts.py-->line:126]:✅ 用例【获取通讯异常次数（下电）】测试成功
+INFO 2026-03-27 11:37:11,151 [test_76_get_comm_error_counts.py-->line:127]:》》》用例【获取通讯异常次数（下电）】测试完成《《《
+INFO 2026-03-27 11:37:14,309 [test_76_get_comm_error_counts.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 11:43:23,828 [test_77_get_motors_run_err.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 11:43:23,830 [test_77_get_motors_run_err.py-->line:30]:》》》》》用例【读取运动中电机报错】开始测试《《《《《
+DEBUG 2026-03-27 11:43:23,831 [test_77_get_motors_run_err.py-->line:31]:test_api:get_motors_run_err
+DEBUG 2026-03-27 11:43:23,847 [test_77_get_motors_run_err.py-->line:35]:接口返回：[0, 0, 0, 0, 0, 0, 0]
+INFO 2026-03-27 11:43:24,027 [test_77_get_motors_run_err.py-->line:55]:》》》》》用例【读取运动中电机报错(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 11:43:24,027 [test_77_get_motors_run_err.py-->line:56]:test_api:get_motors_run_err
+INFO 2026-03-27 11:43:28,174 [test_77_get_motors_run_err.py-->line:86]:》》》》》用例【读取运动中电机报错(下电）】开始测试《《《《《
+DEBUG 2026-03-27 11:43:28,174 [test_77_get_motors_run_err.py-->line:87]:test_api:get_motors_run_err
+INFO 2026-03-27 11:43:41,113 [test_77_get_motors_run_err.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 11:45:15,087 [test_77_get_motors_run_err.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 11:45:15,089 [test_77_get_motors_run_err.py-->line:30]:》》》》》用例【读取运动中电机报错】开始测试《《《《《
+DEBUG 2026-03-27 11:45:15,090 [test_77_get_motors_run_err.py-->line:31]:test_api:get_motors_run_err
+DEBUG 2026-03-27 11:45:15,108 [test_77_get_motors_run_err.py-->line:35]:接口返回：[0, 0, 0, 0, 0, 0, 0]
+INFO 2026-03-27 11:45:15,109 [test_77_get_motors_run_err.py-->line:45]:✅ 用例【读取运动中电机报错】测试通过
+INFO 2026-03-27 11:45:15,109 [test_77_get_motors_run_err.py-->line:46]:》》》》》用例【读取运动中电机报错】测试完成《《《《《
+INFO 2026-03-27 11:45:15,115 [test_77_get_motors_run_err.py-->line:55]:》》》》》用例【读取运动中电机报错(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 11:45:15,116 [test_77_get_motors_run_err.py-->line:56]:test_api:get_motors_run_err
+DEBUG 2026-03-27 11:45:19,257 [test_77_get_motors_run_err.py-->line:63]:接口返回：[0, 0, 0, 0, 0, 0, 0]
+INFO 2026-03-27 11:45:19,436 [test_77_get_motors_run_err.py-->line:86]:》》》》》用例【读取运动中电机报错(下电）】开始测试《《《《《
+DEBUG 2026-03-27 11:45:19,436 [test_77_get_motors_run_err.py-->line:87]:test_api:get_motors_run_err
+DEBUG 2026-03-27 11:45:24,920 [test_77_get_motors_run_err.py-->line:94]:接口返回：[0, 0, 0, 0, 0, 0, 0]
+INFO 2026-03-27 11:45:32,398 [test_77_get_motors_run_err.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 11:48:20,544 [test_77_get_motors_run_err.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 11:48:20,546 [test_77_get_motors_run_err.py-->line:30]:》》》》》用例【读取运动中电机报错】开始测试《《《《《
+DEBUG 2026-03-27 11:48:20,546 [test_77_get_motors_run_err.py-->line:31]:test_api:get_motors_run_err
+DEBUG 2026-03-27 11:48:20,560 [test_77_get_motors_run_err.py-->line:35]:接口返回：[0, 0, 0, 0, 0, 0, 0]
+INFO 2026-03-27 11:48:20,560 [test_77_get_motors_run_err.py-->line:45]:✅ 用例【读取运动中电机报错】测试通过
+INFO 2026-03-27 11:48:20,561 [test_77_get_motors_run_err.py-->line:46]:》》》》》用例【读取运动中电机报错】测试完成《《《《《
+INFO 2026-03-27 11:48:20,565 [test_77_get_motors_run_err.py-->line:55]:》》》》》用例【读取运动中电机报错(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 11:48:20,566 [test_77_get_motors_run_err.py-->line:56]:test_api:get_motors_run_err
+DEBUG 2026-03-27 11:48:24,710 [test_77_get_motors_run_err.py-->line:63]:接口返回：[0, 0, 0, 0, 0, 0, 0]
+INFO 2026-03-27 11:48:24,886 [test_77_get_motors_run_err.py-->line:89]:》》》》》用例【读取运动中电机报错(下电）】开始测试《《《《《
+DEBUG 2026-03-27 11:48:24,886 [test_77_get_motors_run_err.py-->line:90]:test_api:get_motors_run_err
+DEBUG 2026-03-27 11:48:30,368 [test_77_get_motors_run_err.py-->line:97]:接口返回：[0, 0, 0, 0, 0, 0, 0]
+INFO 2026-03-27 11:48:37,855 [test_77_get_motors_run_err.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 11:49:30,304 [test_77_get_motors_run_err.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 11:49:30,306 [test_77_get_motors_run_err.py-->line:30]:》》》》》用例【读取运动中电机报错】开始测试《《《《《
+DEBUG 2026-03-27 11:49:30,307 [test_77_get_motors_run_err.py-->line:31]:test_api:get_motors_run_err
+DEBUG 2026-03-27 11:49:30,320 [test_77_get_motors_run_err.py-->line:35]:接口返回：[0, 0, 0, 0, 0, 0, 0]
+INFO 2026-03-27 11:49:30,321 [test_77_get_motors_run_err.py-->line:45]:✅ 用例【读取运动中电机报错】测试通过
+INFO 2026-03-27 11:49:30,322 [test_77_get_motors_run_err.py-->line:46]:》》》》》用例【读取运动中电机报错】测试完成《《《《《
+INFO 2026-03-27 11:49:30,328 [test_77_get_motors_run_err.py-->line:55]:》》》》》用例【读取运动中电机报错(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 11:49:30,329 [test_77_get_motors_run_err.py-->line:56]:test_api:get_motors_run_err
+DEBUG 2026-03-27 11:49:34,474 [test_77_get_motors_run_err.py-->line:63]:接口返回：[0, 0, 0, 0, 0, 0, 0]
+INFO 2026-03-27 11:49:34,475 [test_77_get_motors_run_err.py-->line:73]:✅ 用例【读取运动中电机报错(仅上电）】测试通过
+INFO 2026-03-27 11:49:34,476 [test_77_get_motors_run_err.py-->line:74]:》》》》》用例【读取运动中电机报错(仅上电）】测试完成《《《《《
+INFO 2026-03-27 11:49:37,830 [test_77_get_motors_run_err.py-->line:79]:✅ 用例【读取运动中电机报错(仅上电）】测试成功
+INFO 2026-03-27 11:49:37,831 [test_77_get_motors_run_err.py-->line:80]:》》》用例【读取运动中电机报错(仅上电）】测试完成《《《
+INFO 2026-03-27 11:49:37,837 [test_77_get_motors_run_err.py-->line:89]:》》》》》用例【读取运动中电机报错(下电）】开始测试《《《《《
+DEBUG 2026-03-27 11:49:37,838 [test_77_get_motors_run_err.py-->line:90]:test_api:get_motors_run_err
+DEBUG 2026-03-27 11:49:41,025 [test_77_get_motors_run_err.py-->line:97]:接口返回：[0, 0, 0, 0, 0, 0, 0]
+INFO 2026-03-27 11:49:41,026 [test_77_get_motors_run_err.py-->line:107]:✅ 用例【读取运动中电机报错(下电）】测试通过
+INFO 2026-03-27 11:49:41,026 [test_77_get_motors_run_err.py-->line:108]:》》》》》用例【读取运动中电机报错(下电）】测试完成《《《《《
+INFO 2026-03-27 11:49:46,380 [test_77_get_motors_run_err.py-->line:113]:✅ 用例【读取运动中电机报错(下电）】测试成功
+INFO 2026-03-27 11:49:46,381 [test_77_get_motors_run_err.py-->line:114]:》》》用例【读取运动中电机报错(下电）】测试完成《《《
+INFO 2026-03-27 11:49:49,549 [test_77_get_motors_run_err.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 11:59:17,732 [test_78_get_quick_move_info.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 11:59:17,735 [test_78_get_quick_move_info.py-->line:30]:》》》》》用例【读取quickmove信息
+】开始测试《《《《《
+DEBUG 2026-03-27 11:59:17,735 [test_78_get_quick_move_info.py-->line:31]:test_api:get_quick_move_info
+DEBUG 2026-03-27 11:59:17,757 [test_78_get_quick_move_info.py-->line:35]:接口返回：[[0.0, 0.0, 0.0, 0.0, 0.0, 90.0, 0.0], [51.0, 0.0, 533.6, -17.0, -89.99, -162.99], 0, 0, 1, 1, 1, 1, 1, 1]
+INFO 2026-03-27 11:59:21,235 [test_78_get_quick_move_info.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 12:01:07,796 [test_78_get_quick_move_info.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 12:01:07,799 [test_78_get_quick_move_info.py-->line:30]:》》》》》用例【读取quickmove信息
+】开始测试《《《《《
+DEBUG 2026-03-27 12:01:07,799 [test_78_get_quick_move_info.py-->line:31]:test_api:get_quick_move_info
+DEBUG 2026-03-27 12:01:07,819 [test_78_get_quick_move_info.py-->line:35]:接口返回：[[0.0, 0.0, 0.0, 0.0, 0.0, 90.0, 0.0], [51.0, 0.0, 533.6, -18.57, -89.99, -161.42], 0, 0, 1, 1, 1, 1, 1, 1]
+INFO 2026-03-27 12:01:08,094 [test_78_get_quick_move_info.py-->line:55]:》》》》》用例【读取quickmove信息(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 12:01:08,094 [test_78_get_quick_move_info.py-->line:56]:test_api:get_quick_move_info
+DEBUG 2026-03-27 12:01:12,370 [test_78_get_quick_move_info.py-->line:63]:接口返回：None
+INFO 2026-03-27 12:01:15,719 [test_78_get_quick_move_info.py-->line:76]:✅ 用例【读取quickmove信息(仅上电）】测试成功
+INFO 2026-03-27 12:01:15,720 [test_78_get_quick_move_info.py-->line:77]:》》》用例【读取quickmove信息(仅上电）】测试完成《《《
+INFO 2026-03-27 12:01:15,725 [test_78_get_quick_move_info.py-->line:86]:》》》》》用例【读取quickmove信息(下电）】开始测试《《《《《
+DEBUG 2026-03-27 12:01:15,726 [test_78_get_quick_move_info.py-->line:87]:test_api:get_quick_move_info
+DEBUG 2026-03-27 12:01:19,034 [test_78_get_quick_move_info.py-->line:94]:接口返回：None
+INFO 2026-03-27 12:01:24,385 [test_78_get_quick_move_info.py-->line:107]:✅ 用例【读取quickmove信息(下电）】测试成功
+INFO 2026-03-27 12:01:24,386 [test_78_get_quick_move_info.py-->line:108]:》》》用例【读取quickmove信息(下电）】测试完成《《《
+INFO 2026-03-27 12:01:27,554 [test_78_get_quick_move_info.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 13:49:44,349 [test_79_is_servo_enable.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 13:49:44,351 [test_79_is_servo_enable.py-->line:30]:》》》》》用例【检测关节链接状态
+】开始测试《《《《《
+DEBUG 2026-03-27 13:49:44,351 [test_79_is_servo_enable.py-->line:31]:test_api:is_servo_enable
+INFO 2026-03-27 13:49:44,520 [test_79_is_servo_enable.py-->line:55]:》》》》》用例【检测关节链接状态(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 13:49:44,521 [test_79_is_servo_enable.py-->line:56]:test_api:is_servo_enable
+INFO 2026-03-27 13:49:48,661 [test_79_is_servo_enable.py-->line:86]:》》》》》用例【检测关节链接状态(下电）】开始测试《《《《《
+DEBUG 2026-03-27 13:49:48,662 [test_79_is_servo_enable.py-->line:87]:test_api:is_servo_enable
+INFO 2026-03-27 13:50:01,614 [test_79_is_servo_enable.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 13:55:43,789 [test_79_is_servo_enable.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 13:55:43,791 [test_79_is_servo_enable.py-->line:30]:》》》》》用例【检测关节链接状态（1关节）
+】开始测试《《《《《
+DEBUG 2026-03-27 13:55:43,792 [test_79_is_servo_enable.py-->line:31]:test_api:is_servo_enable
+DEBUG 2026-03-27 13:55:43,800 [test_79_is_servo_enable.py-->line:35]:接口返回：1
+INFO 2026-03-27 13:55:43,801 [test_79_is_servo_enable.py-->line:45]:✅ 用例【检测关节链接状态（1关节）
+】测试通过
+INFO 2026-03-27 13:55:43,802 [test_79_is_servo_enable.py-->line:46]:》》》》》用例【检测关节链接状态（1关节）
+】测试完成《《《《《
+INFO 2026-03-27 13:55:43,807 [test_79_is_servo_enable.py-->line:30]:》》》》》用例【检测关节链接状态（2关节）
+】开始测试《《《《《
+DEBUG 2026-03-27 13:55:43,808 [test_79_is_servo_enable.py-->line:31]:test_api:is_servo_enable
+DEBUG 2026-03-27 13:55:43,821 [test_79_is_servo_enable.py-->line:35]:接口返回：1
+INFO 2026-03-27 13:55:43,821 [test_79_is_servo_enable.py-->line:45]:✅ 用例【检测关节链接状态（2关节）
+】测试通过
+INFO 2026-03-27 13:55:43,822 [test_79_is_servo_enable.py-->line:46]:》》》》》用例【检测关节链接状态（2关节）
+】测试完成《《《《《
+INFO 2026-03-27 13:55:43,828 [test_79_is_servo_enable.py-->line:30]:》》》》》用例【检测关节链接状态（3关节）
+】开始测试《《《《《
+DEBUG 2026-03-27 13:55:43,828 [test_79_is_servo_enable.py-->line:31]:test_api:is_servo_enable
+DEBUG 2026-03-27 13:55:43,845 [test_79_is_servo_enable.py-->line:35]:接口返回：1
+INFO 2026-03-27 13:55:43,845 [test_79_is_servo_enable.py-->line:45]:✅ 用例【检测关节链接状态（3关节）
+】测试通过
+INFO 2026-03-27 13:55:43,846 [test_79_is_servo_enable.py-->line:46]:》》》》》用例【检测关节链接状态（3关节）
+】测试完成《《《《《
+INFO 2026-03-27 13:55:43,850 [test_79_is_servo_enable.py-->line:30]:》》》》》用例【检测关节链接状态（4关节）
+】开始测试《《《《《
+DEBUG 2026-03-27 13:55:43,851 [test_79_is_servo_enable.py-->line:31]:test_api:is_servo_enable
+DEBUG 2026-03-27 13:55:43,867 [test_79_is_servo_enable.py-->line:35]:接口返回：1
+INFO 2026-03-27 13:55:43,868 [test_79_is_servo_enable.py-->line:45]:✅ 用例【检测关节链接状态（4关节）
+】测试通过
+INFO 2026-03-27 13:55:43,868 [test_79_is_servo_enable.py-->line:46]:》》》》》用例【检测关节链接状态（4关节）
+】测试完成《《《《《
+INFO 2026-03-27 13:55:43,873 [test_79_is_servo_enable.py-->line:30]:》》》》》用例【检测关节链接状态（5关节）
+】开始测试《《《《《
+DEBUG 2026-03-27 13:55:43,873 [test_79_is_servo_enable.py-->line:31]:test_api:is_servo_enable
+DEBUG 2026-03-27 13:55:43,890 [test_79_is_servo_enable.py-->line:35]:接口返回：1
+INFO 2026-03-27 13:55:43,891 [test_79_is_servo_enable.py-->line:45]:✅ 用例【检测关节链接状态（5关节）
+】测试通过
+INFO 2026-03-27 13:55:43,891 [test_79_is_servo_enable.py-->line:46]:》》》》》用例【检测关节链接状态（5关节）
+】测试完成《《《《《
+INFO 2026-03-27 13:55:43,896 [test_79_is_servo_enable.py-->line:30]:》》》》》用例【检测关节链接状态（6关节）
+】开始测试《《《《《
+DEBUG 2026-03-27 13:55:43,896 [test_79_is_servo_enable.py-->line:31]:test_api:is_servo_enable
+DEBUG 2026-03-27 13:55:43,912 [test_79_is_servo_enable.py-->line:35]:接口返回：1
+INFO 2026-03-27 13:55:43,913 [test_79_is_servo_enable.py-->line:45]:✅ 用例【检测关节链接状态（6关节）
+】测试通过
+INFO 2026-03-27 13:55:43,913 [test_79_is_servo_enable.py-->line:46]:》》》》》用例【检测关节链接状态（6关节）
+】测试完成《《《《《
+INFO 2026-03-27 13:55:43,918 [test_79_is_servo_enable.py-->line:30]:》》》》》用例【检测关节链接状态（7关节）
+】开始测试《《《《《
+DEBUG 2026-03-27 13:55:43,919 [test_79_is_servo_enable.py-->line:31]:test_api:is_servo_enable
+DEBUG 2026-03-27 13:55:43,934 [test_79_is_servo_enable.py-->line:35]:接口返回：1
+INFO 2026-03-27 13:55:43,935 [test_79_is_servo_enable.py-->line:45]:✅ 用例【检测关节链接状态（7关节）
+】测试通过
+INFO 2026-03-27 13:55:43,936 [test_79_is_servo_enable.py-->line:46]:》》》》》用例【检测关节链接状态（7关节）
+】测试完成《《《《《
+INFO 2026-03-27 13:55:43,941 [test_79_is_servo_enable.py-->line:55]:》》》》》用例【检测关节链接状态（关节超限）】开始测试《《《《《
+DEBUG 2026-03-27 13:55:43,942 [test_79_is_servo_enable.py-->line:56]:test_api:is_servo_enable
+INFO 2026-03-27 13:55:43,943 [test_79_is_servo_enable.py-->line:62]:✅ 用例【检测关节链接状态（关节超限）】异常断言通过
+INFO 2026-03-27 13:55:43,943 [test_79_is_servo_enable.py-->line:63]:》》》用例【检测关节链接状态（关节超限）】测试完成《《《
+INFO 2026-03-27 13:55:43,948 [test_79_is_servo_enable.py-->line:55]:》》》》》用例【检测关节链接状态（关节超限）】开始测试《《《《《
+DEBUG 2026-03-27 13:55:43,949 [test_79_is_servo_enable.py-->line:56]:test_api:is_servo_enable
+INFO 2026-03-27 13:55:43,950 [test_79_is_servo_enable.py-->line:62]:✅ 用例【检测关节链接状态（关节超限）】异常断言通过
+INFO 2026-03-27 13:55:43,950 [test_79_is_servo_enable.py-->line:63]:》》》用例【检测关节链接状态（关节超限）】测试完成《《《
+INFO 2026-03-27 13:55:43,955 [test_79_is_servo_enable.py-->line:72]:》》》》》用例【检测关节链接状态(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 13:55:43,955 [test_79_is_servo_enable.py-->line:73]:test_api:is_servo_enable
+DEBUG 2026-03-27 13:55:48,234 [test_79_is_servo_enable.py-->line:80]:接口返回：None
+INFO 2026-03-27 13:55:51,584 [test_79_is_servo_enable.py-->line:93]:✅ 用例【检测关节链接状态(仅上电）】测试成功
+INFO 2026-03-27 13:55:51,584 [test_79_is_servo_enable.py-->line:94]:》》》用例【检测关节链接状态(仅上电）】测试完成《《《
+INFO 2026-03-27 13:55:51,589 [test_79_is_servo_enable.py-->line:103]:》》》》》用例【检测关节链接状态(下电）】开始测试《《《《《
+DEBUG 2026-03-27 13:55:51,590 [test_79_is_servo_enable.py-->line:104]:test_api:is_servo_enable
+DEBUG 2026-03-27 13:55:54,902 [test_79_is_servo_enable.py-->line:111]:接口返回：None
+INFO 2026-03-27 13:56:00,261 [test_79_is_servo_enable.py-->line:124]:✅ 用例【检测关节链接状态(下电）】测试成功
+INFO 2026-03-27 13:56:00,262 [test_79_is_servo_enable.py-->line:125]:》》》用例【检测关节链接状态(下电）】测试完成《《《
+INFO 2026-03-27 13:56:03,426 [test_79_is_servo_enable.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 13:58:37,037 [test_79_is_servo_enable.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 13:58:37,039 [test_79_is_servo_enable.py-->line:30]:》》》》》用例【检测关节链接状态（1关节）
+】开始测试《《《《《
+DEBUG 2026-03-27 13:58:37,040 [test_79_is_servo_enable.py-->line:31]:test_api:is_servo_enable
+DEBUG 2026-03-27 13:58:37,052 [test_79_is_servo_enable.py-->line:35]:接口返回：1
+INFO 2026-03-27 13:58:37,053 [test_79_is_servo_enable.py-->line:45]:✅ 用例【检测关节链接状态（1关节）
+】测试通过
+INFO 2026-03-27 13:58:37,053 [test_79_is_servo_enable.py-->line:46]:》》》》》用例【检测关节链接状态（1关节）
+】测试完成《《《《《
+INFO 2026-03-27 13:58:37,058 [test_79_is_servo_enable.py-->line:30]:》》》》》用例【检测关节链接状态（2关节）
+】开始测试《《《《《
+DEBUG 2026-03-27 13:58:37,059 [test_79_is_servo_enable.py-->line:31]:test_api:is_servo_enable
+DEBUG 2026-03-27 13:58:37,074 [test_79_is_servo_enable.py-->line:35]:接口返回：1
+INFO 2026-03-27 13:58:37,074 [test_79_is_servo_enable.py-->line:45]:✅ 用例【检测关节链接状态（2关节）
+】测试通过
+INFO 2026-03-27 13:58:37,075 [test_79_is_servo_enable.py-->line:46]:》》》》》用例【检测关节链接状态（2关节）
+】测试完成《《《《《
+INFO 2026-03-27 13:58:37,079 [test_79_is_servo_enable.py-->line:30]:》》》》》用例【检测关节链接状态（3关节）
+】开始测试《《《《《
+DEBUG 2026-03-27 13:58:37,080 [test_79_is_servo_enable.py-->line:31]:test_api:is_servo_enable
+DEBUG 2026-03-27 13:58:37,088 [test_79_is_servo_enable.py-->line:35]:接口返回：1
+INFO 2026-03-27 13:58:37,089 [test_79_is_servo_enable.py-->line:45]:✅ 用例【检测关节链接状态（3关节）
+】测试通过
+INFO 2026-03-27 13:58:37,090 [test_79_is_servo_enable.py-->line:46]:》》》》》用例【检测关节链接状态（3关节）
+】测试完成《《《《《
+INFO 2026-03-27 13:58:37,095 [test_79_is_servo_enable.py-->line:30]:》》》》》用例【检测关节链接状态（4关节）
+】开始测试《《《《《
+DEBUG 2026-03-27 13:58:37,095 [test_79_is_servo_enable.py-->line:31]:test_api:is_servo_enable
+DEBUG 2026-03-27 13:58:37,110 [test_79_is_servo_enable.py-->line:35]:接口返回：1
+INFO 2026-03-27 13:58:37,111 [test_79_is_servo_enable.py-->line:45]:✅ 用例【检测关节链接状态（4关节）
+】测试通过
+INFO 2026-03-27 13:58:37,111 [test_79_is_servo_enable.py-->line:46]:》》》》》用例【检测关节链接状态（4关节）
+】测试完成《《《《《
+INFO 2026-03-27 13:58:37,116 [test_79_is_servo_enable.py-->line:30]:》》》》》用例【检测关节链接状态（5关节）
+】开始测试《《《《《
+DEBUG 2026-03-27 13:58:37,116 [test_79_is_servo_enable.py-->line:31]:test_api:is_servo_enable
+DEBUG 2026-03-27 13:58:37,132 [test_79_is_servo_enable.py-->line:35]:接口返回：1
+INFO 2026-03-27 13:58:37,133 [test_79_is_servo_enable.py-->line:45]:✅ 用例【检测关节链接状态（5关节）
+】测试通过
+INFO 2026-03-27 13:58:37,133 [test_79_is_servo_enable.py-->line:46]:》》》》》用例【检测关节链接状态（5关节）
+】测试完成《《《《《
+INFO 2026-03-27 13:58:37,138 [test_79_is_servo_enable.py-->line:30]:》》》》》用例【检测关节链接状态（6关节）
+】开始测试《《《《《
+DEBUG 2026-03-27 13:58:37,138 [test_79_is_servo_enable.py-->line:31]:test_api:is_servo_enable
+DEBUG 2026-03-27 13:58:37,155 [test_79_is_servo_enable.py-->line:35]:接口返回：1
+INFO 2026-03-27 13:58:37,156 [test_79_is_servo_enable.py-->line:45]:✅ 用例【检测关节链接状态（6关节）
+】测试通过
+INFO 2026-03-27 13:58:37,156 [test_79_is_servo_enable.py-->line:46]:》》》》》用例【检测关节链接状态（6关节）
+】测试完成《《《《《
+INFO 2026-03-27 13:58:37,161 [test_79_is_servo_enable.py-->line:30]:》》》》》用例【检测关节链接状态（7关节）
+】开始测试《《《《《
+DEBUG 2026-03-27 13:58:37,161 [test_79_is_servo_enable.py-->line:31]:test_api:is_servo_enable
+DEBUG 2026-03-27 13:58:37,178 [test_79_is_servo_enable.py-->line:35]:接口返回：1
+INFO 2026-03-27 13:58:37,179 [test_79_is_servo_enable.py-->line:45]:✅ 用例【检测关节链接状态（7关节）
+】测试通过
+INFO 2026-03-27 13:58:37,179 [test_79_is_servo_enable.py-->line:46]:》》》》》用例【检测关节链接状态（7关节）
+】测试完成《《《《《
+INFO 2026-03-27 13:58:37,184 [test_79_is_servo_enable.py-->line:55]:》》》》》用例【检测关节链接状态（关节超限）】开始测试《《《《《
+DEBUG 2026-03-27 13:58:37,184 [test_79_is_servo_enable.py-->line:56]:test_api:is_servo_enable
+INFO 2026-03-27 13:58:37,185 [test_79_is_servo_enable.py-->line:62]:✅ 用例【检测关节链接状态（关节超限）】异常断言通过
+INFO 2026-03-27 13:58:37,186 [test_79_is_servo_enable.py-->line:63]:》》》用例【检测关节链接状态（关节超限）】测试完成《《《
+INFO 2026-03-27 13:58:37,191 [test_79_is_servo_enable.py-->line:55]:》》》》》用例【检测关节链接状态（关节超限）】开始测试《《《《《
+DEBUG 2026-03-27 13:58:37,191 [test_79_is_servo_enable.py-->line:56]:test_api:is_servo_enable
+INFO 2026-03-27 13:58:37,192 [test_79_is_servo_enable.py-->line:62]:✅ 用例【检测关节链接状态（关节超限）】异常断言通过
+INFO 2026-03-27 13:58:37,192 [test_79_is_servo_enable.py-->line:63]:》》》用例【检测关节链接状态（关节超限）】测试完成《《《
+INFO 2026-03-27 13:58:37,197 [test_79_is_servo_enable.py-->line:72]:》》》》》用例【检测关节链接状态(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 13:58:37,197 [test_79_is_servo_enable.py-->line:73]:test_api:is_servo_enable
+DEBUG 2026-03-27 13:58:41,478 [test_79_is_servo_enable.py-->line:80]:接口返回：None
+INFO 2026-03-27 13:58:44,827 [test_79_is_servo_enable.py-->line:93]:✅ 用例【检测关节链接状态(仅上电）】测试成功
+INFO 2026-03-27 13:58:44,828 [test_79_is_servo_enable.py-->line:94]:》》》用例【检测关节链接状态(仅上电）】测试完成《《《
+INFO 2026-03-27 13:58:44,833 [test_79_is_servo_enable.py-->line:103]:》》》》》用例【检测关节链接状态(下电）】开始测试《《《《《
+DEBUG 2026-03-27 13:58:44,833 [test_79_is_servo_enable.py-->line:104]:test_api:is_servo_enable
+DEBUG 2026-03-27 13:58:48,142 [test_79_is_servo_enable.py-->line:111]:接口返回：None
+INFO 2026-03-27 13:58:53,503 [test_79_is_servo_enable.py-->line:124]:✅ 用例【检测关节链接状态(下电）】测试成功
+INFO 2026-03-27 13:58:53,504 [test_79_is_servo_enable.py-->line:125]:》》》用例【检测关节链接状态(下电）】测试完成《《《
+INFO 2026-03-27 13:58:56,673 [test_79_is_servo_enable.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 14:00:09,599 [test_80_is_all_servo_enable.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 14:00:09,601 [test_80_is_all_servo_enable.py-->line:30]:》》》》》用例【检测所有关节连接状态
+】开始测试《《《《《
+DEBUG 2026-03-27 14:00:09,601 [test_80_is_all_servo_enable.py-->line:31]:test_api:is_all_servo_enable
+DEBUG 2026-03-27 14:00:09,614 [test_80_is_all_servo_enable.py-->line:35]:接口返回：1
+INFO 2026-03-27 14:00:09,799 [test_80_is_all_servo_enable.py-->line:55]:》》》》》用例【检测所有关节连接状态(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 14:00:09,799 [test_80_is_all_servo_enable.py-->line:56]:test_api:is_all_servo_enable
+DEBUG 2026-03-27 14:00:14,076 [test_80_is_all_servo_enable.py-->line:63]:接口返回：None
+INFO 2026-03-27 14:00:17,427 [test_80_is_all_servo_enable.py-->line:76]:✅ 用例【检测所有关节连接状态(仅上电）】测试成功
+INFO 2026-03-27 14:00:17,428 [test_80_is_all_servo_enable.py-->line:77]:》》》用例【检测所有关节连接状态(仅上电）】测试完成《《《
+INFO 2026-03-27 14:00:17,433 [test_80_is_all_servo_enable.py-->line:86]:》》》》》用例【检测所有关节连接状态(下电）】开始测试《《《《《
+DEBUG 2026-03-27 14:00:17,434 [test_80_is_all_servo_enable.py-->line:87]:test_api:is_all_servo_enable
+DEBUG 2026-03-27 14:00:20,745 [test_80_is_all_servo_enable.py-->line:94]:接口返回：None
+INFO 2026-03-27 14:00:26,095 [test_80_is_all_servo_enable.py-->line:107]:✅ 用例【检测所有关节连接状态(下电）】测试成功
+INFO 2026-03-27 14:00:26,096 [test_80_is_all_servo_enable.py-->line:108]:》》》用例【检测所有关节连接状态(下电）】测试完成《《《
+INFO 2026-03-27 14:00:29,264 [test_80_is_all_servo_enable.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 14:00:50,297 [test_80_is_all_servo_enable.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 14:00:50,299 [test_80_is_all_servo_enable.py-->line:30]:》》》》》用例【检测所有关节连接状态
+】开始测试《《《《《
+DEBUG 2026-03-27 14:00:50,299 [test_80_is_all_servo_enable.py-->line:31]:test_api:is_all_servo_enable
+DEBUG 2026-03-27 14:00:50,308 [test_80_is_all_servo_enable.py-->line:35]:接口返回：1
+INFO 2026-03-27 14:00:50,309 [test_80_is_all_servo_enable.py-->line:45]:✅ 用例【检测所有关节连接状态
+】测试通过
+INFO 2026-03-27 14:00:50,309 [test_80_is_all_servo_enable.py-->line:46]:》》》》》用例【检测所有关节连接状态
+】测试完成《《《《《
+INFO 2026-03-27 14:00:50,315 [test_80_is_all_servo_enable.py-->line:55]:》》》》》用例【检测所有关节连接状态(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 14:00:50,316 [test_80_is_all_servo_enable.py-->line:56]:test_api:is_all_servo_enable
+DEBUG 2026-03-27 14:00:54,599 [test_80_is_all_servo_enable.py-->line:63]:接口返回：None
+INFO 2026-03-27 14:00:57,951 [test_80_is_all_servo_enable.py-->line:76]:✅ 用例【检测所有关节连接状态(仅上电）】测试成功
+INFO 2026-03-27 14:00:57,952 [test_80_is_all_servo_enable.py-->line:77]:》》》用例【检测所有关节连接状态(仅上电）】测试完成《《《
+INFO 2026-03-27 14:00:57,957 [test_80_is_all_servo_enable.py-->line:86]:》》》》》用例【检测所有关节连接状态(下电）】开始测试《《《《《
+DEBUG 2026-03-27 14:00:57,958 [test_80_is_all_servo_enable.py-->line:87]:test_api:is_all_servo_enable
+DEBUG 2026-03-27 14:01:01,269 [test_80_is_all_servo_enable.py-->line:94]:接口返回：None
+INFO 2026-03-27 14:01:06,629 [test_80_is_all_servo_enable.py-->line:107]:✅ 用例【检测所有关节连接状态(下电）】测试成功
+INFO 2026-03-27 14:01:06,630 [test_80_is_all_servo_enable.py-->line:108]:》》》用例【检测所有关节连接状态(下电）】测试完成《《《
+INFO 2026-03-27 14:01:09,800 [test_80_is_all_servo_enable.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 14:25:23,494 [test_81_set_servo_calibration.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 14:25:23,496 [test_81_set_servo_calibration.py-->line:30]:》》》》》用例【设置关节零位（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:25:23,496 [test_81_set_servo_calibration.py-->line:31]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:25:23,497 [test_81_set_servo_calibration.py-->line:32]:joint:1
+INFO 2026-03-27 14:25:23,831 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:25:24,142 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:25:24,166 [test_81_set_servo_calibration.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:25:24,186 [test_81_set_servo_calibration.py-->line:58]:✅ 用例【设置关节零位（1关节）】测试通过
+INFO 2026-03-27 14:25:24,186 [test_81_set_servo_calibration.py-->line:59]:》》》》》用例【设置关节零位（1关节）】测试完成《《《《《
+INFO 2026-03-27 14:25:24,191 [test_81_set_servo_calibration.py-->line:30]:》》》》》用例【设置关节零位（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:25:24,192 [test_81_set_servo_calibration.py-->line:31]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:25:24,192 [test_81_set_servo_calibration.py-->line:32]:joint:2
+INFO 2026-03-27 14:25:24,528 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:25:24,838 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:25:24,860 [test_81_set_servo_calibration.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:25:24,880 [test_81_set_servo_calibration.py-->line:58]:✅ 用例【设置关节零位（2关节）】测试通过
+INFO 2026-03-27 14:25:24,880 [test_81_set_servo_calibration.py-->line:59]:》》》》》用例【设置关节零位（2关节）】测试完成《《《《《
+INFO 2026-03-27 14:25:24,885 [test_81_set_servo_calibration.py-->line:30]:》》》》》用例【设置关节零位（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:25:24,886 [test_81_set_servo_calibration.py-->line:31]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:25:24,886 [test_81_set_servo_calibration.py-->line:32]:joint:3
+INFO 2026-03-27 14:25:25,224 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:25:25,537 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:25:25,556 [test_81_set_servo_calibration.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:25:25,575 [test_81_set_servo_calibration.py-->line:58]:✅ 用例【设置关节零位（3关节）】测试通过
+INFO 2026-03-27 14:25:25,576 [test_81_set_servo_calibration.py-->line:59]:》》》》》用例【设置关节零位（3关节）】测试完成《《《《《
+INFO 2026-03-27 14:25:25,582 [test_81_set_servo_calibration.py-->line:30]:》》》》》用例【设置关节零位（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:25:25,583 [test_81_set_servo_calibration.py-->line:31]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:25:25,584 [test_81_set_servo_calibration.py-->line:32]:joint:4
+INFO 2026-03-27 14:25:25,920 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:25:26,232 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:25:26,251 [test_81_set_servo_calibration.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:25:26,262 [test_81_set_servo_calibration.py-->line:58]:✅ 用例【设置关节零位（4关节）】测试通过
+INFO 2026-03-27 14:25:26,263 [test_81_set_servo_calibration.py-->line:59]:》》》》》用例【设置关节零位（4关节）】测试完成《《《《《
+INFO 2026-03-27 14:25:26,268 [test_81_set_servo_calibration.py-->line:30]:》》》》》用例【设置关节零位（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:25:26,268 [test_81_set_servo_calibration.py-->line:31]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:25:26,269 [test_81_set_servo_calibration.py-->line:32]:joint:5
+INFO 2026-03-27 14:25:26,607 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:25:26,919 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:25:26,937 [test_81_set_servo_calibration.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:25:26,958 [test_81_set_servo_calibration.py-->line:58]:✅ 用例【设置关节零位（5关节）】测试通过
+INFO 2026-03-27 14:25:26,959 [test_81_set_servo_calibration.py-->line:59]:》》》》》用例【设置关节零位（5关节）】测试完成《《《《《
+INFO 2026-03-27 14:25:26,965 [test_81_set_servo_calibration.py-->line:30]:》》》》》用例【设置关节零位（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:25:26,965 [test_81_set_servo_calibration.py-->line:31]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:25:26,966 [test_81_set_servo_calibration.py-->line:32]:joint:6
+INFO 2026-03-27 14:25:27,300 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:25:27,615 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:25:27,633 [test_81_set_servo_calibration.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:25:27,643 [test_81_set_servo_calibration.py-->line:58]:✅ 用例【设置关节零位（6关节）】测试通过
+INFO 2026-03-27 14:25:27,644 [test_81_set_servo_calibration.py-->line:59]:》》》》》用例【设置关节零位（6关节）】测试完成《《《《《
+INFO 2026-03-27 14:25:27,650 [test_81_set_servo_calibration.py-->line:30]:》》》》》用例【设置关节零位（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:25:27,651 [test_81_set_servo_calibration.py-->line:31]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:25:27,651 [test_81_set_servo_calibration.py-->line:32]:joint:7
+INFO 2026-03-27 14:25:27,987 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:25:28,298 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:25:28,315 [test_81_set_servo_calibration.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:25:28,326 [test_81_set_servo_calibration.py-->line:58]:✅ 用例【设置关节零位（7关节）】测试通过
+INFO 2026-03-27 14:25:28,327 [test_81_set_servo_calibration.py-->line:59]:》》》》》用例【设置关节零位（7关节）】测试完成《《《《《
+INFO 2026-03-27 14:25:28,331 [test_81_set_servo_calibration.py-->line:68]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 14:25:28,332 [test_81_set_servo_calibration.py-->line:69]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:25:28,332 [test_81_set_servo_calibration.py-->line:70]:joint:0
+INFO 2026-03-27 14:25:28,521 [test_81_set_servo_calibration.py-->line:68]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 14:25:28,521 [test_81_set_servo_calibration.py-->line:69]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:25:28,521 [test_81_set_servo_calibration.py-->line:70]:joint:8
+INFO 2026-03-27 14:25:28,601 [test_81_set_servo_calibration.py-->line:86]:》》》》》用例【设置关节零位（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 14:25:28,601 [test_81_set_servo_calibration.py-->line:87]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:25:32,884 [test_81_set_servo_calibration.py-->line:94]:接口返回：None
+INFO 2026-03-27 14:25:36,232 [test_81_set_servo_calibration.py-->line:107]:✅ 用例【设置关节零位（仅上电）】测试成功
+INFO 2026-03-27 14:25:36,232 [test_81_set_servo_calibration.py-->line:108]:》》》用例【设置关节零位（仅上电）】测试完成《《《
+INFO 2026-03-27 14:25:36,237 [test_81_set_servo_calibration.py-->line:117]:》》》》》用例【设置关节零位（下电）】开始测试《《《《《
+DEBUG 2026-03-27 14:25:36,238 [test_81_set_servo_calibration.py-->line:118]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:25:39,553 [test_81_set_servo_calibration.py-->line:125]:接口返回：None
+INFO 2026-03-27 14:25:44,908 [test_81_set_servo_calibration.py-->line:138]:✅ 用例【设置关节零位（下电）】测试成功
+INFO 2026-03-27 14:25:44,909 [test_81_set_servo_calibration.py-->line:139]:》》》用例【设置关节零位（下电）】测试完成《《《
+INFO 2026-03-27 14:25:48,081 [test_81_set_servo_calibration.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 14:26:31,056 [test_81_set_servo_calibration.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 14:26:31,058 [test_81_set_servo_calibration.py-->line:30]:》》》》》用例【设置关节零位（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:26:31,059 [test_81_set_servo_calibration.py-->line:31]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:26:31,059 [test_81_set_servo_calibration.py-->line:32]:joint:1
+INFO 2026-03-27 14:26:31,394 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:26:31,708 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:26:31,726 [test_81_set_servo_calibration.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:26:31,746 [test_81_set_servo_calibration.py-->line:58]:✅ 用例【设置关节零位（1关节）】测试通过
+INFO 2026-03-27 14:26:31,746 [test_81_set_servo_calibration.py-->line:59]:》》》》》用例【设置关节零位（1关节）】测试完成《《《《《
+INFO 2026-03-27 14:26:31,751 [test_81_set_servo_calibration.py-->line:30]:》》》》》用例【设置关节零位（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:26:31,752 [test_81_set_servo_calibration.py-->line:31]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:26:31,752 [test_81_set_servo_calibration.py-->line:32]:joint:2
+INFO 2026-03-27 14:26:32,088 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:26:32,399 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:26:32,417 [test_81_set_servo_calibration.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:26:32,435 [test_81_set_servo_calibration.py-->line:58]:✅ 用例【设置关节零位（2关节）】测试通过
+INFO 2026-03-27 14:26:32,436 [test_81_set_servo_calibration.py-->line:59]:》》》》》用例【设置关节零位（2关节）】测试完成《《《《《
+INFO 2026-03-27 14:26:32,441 [test_81_set_servo_calibration.py-->line:30]:》》》》》用例【设置关节零位（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:26:32,441 [test_81_set_servo_calibration.py-->line:31]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:26:32,442 [test_81_set_servo_calibration.py-->line:32]:joint:3
+INFO 2026-03-27 14:26:32,782 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:26:33,095 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:26:33,147 [test_81_set_servo_calibration.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:26:33,161 [test_81_set_servo_calibration.py-->line:58]:✅ 用例【设置关节零位（3关节）】测试通过
+INFO 2026-03-27 14:26:33,162 [test_81_set_servo_calibration.py-->line:59]:》》》》》用例【设置关节零位（3关节）】测试完成《《《《《
+INFO 2026-03-27 14:26:33,167 [test_81_set_servo_calibration.py-->line:30]:》》》》》用例【设置关节零位（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:26:33,168 [test_81_set_servo_calibration.py-->line:31]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:26:33,169 [test_81_set_servo_calibration.py-->line:32]:joint:4
+INFO 2026-03-27 14:26:33,507 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:26:33,819 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:26:33,841 [test_81_set_servo_calibration.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:26:33,861 [test_81_set_servo_calibration.py-->line:58]:✅ 用例【设置关节零位（4关节）】测试通过
+INFO 2026-03-27 14:26:33,861 [test_81_set_servo_calibration.py-->line:59]:》》》》》用例【设置关节零位（4关节）】测试完成《《《《《
+INFO 2026-03-27 14:26:33,867 [test_81_set_servo_calibration.py-->line:30]:》》》》》用例【设置关节零位（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:26:33,867 [test_81_set_servo_calibration.py-->line:31]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:26:33,868 [test_81_set_servo_calibration.py-->line:32]:joint:5
+INFO 2026-03-27 14:26:34,201 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:26:34,513 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:26:34,530 [test_81_set_servo_calibration.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:26:34,540 [test_81_set_servo_calibration.py-->line:58]:✅ 用例【设置关节零位（5关节）】测试通过
+INFO 2026-03-27 14:26:34,541 [test_81_set_servo_calibration.py-->line:59]:》》》》》用例【设置关节零位（5关节）】测试完成《《《《《
+INFO 2026-03-27 14:26:34,546 [test_81_set_servo_calibration.py-->line:30]:》》》》》用例【设置关节零位（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:26:34,547 [test_81_set_servo_calibration.py-->line:31]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:26:34,547 [test_81_set_servo_calibration.py-->line:32]:joint:6
+INFO 2026-03-27 14:26:34,883 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:26:35,195 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:26:35,217 [test_81_set_servo_calibration.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:26:35,237 [test_81_set_servo_calibration.py-->line:58]:✅ 用例【设置关节零位（6关节）】测试通过
+INFO 2026-03-27 14:26:35,237 [test_81_set_servo_calibration.py-->line:59]:》》》》》用例【设置关节零位（6关节）】测试完成《《《《《
+INFO 2026-03-27 14:26:35,242 [test_81_set_servo_calibration.py-->line:30]:》》》》》用例【设置关节零位（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:26:35,243 [test_81_set_servo_calibration.py-->line:31]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:26:35,243 [test_81_set_servo_calibration.py-->line:32]:joint:7
+INFO 2026-03-27 14:26:35,580 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:26:35,893 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:26:35,915 [test_81_set_servo_calibration.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:26:35,932 [test_81_set_servo_calibration.py-->line:58]:✅ 用例【设置关节零位（7关节）】测试通过
+INFO 2026-03-27 14:26:35,933 [test_81_set_servo_calibration.py-->line:59]:》》》》》用例【设置关节零位（7关节）】测试完成《《《《《
+INFO 2026-03-27 14:26:35,938 [test_81_set_servo_calibration.py-->line:68]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 14:26:35,938 [test_81_set_servo_calibration.py-->line:69]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:26:35,939 [test_81_set_servo_calibration.py-->line:70]:joint:0
+INFO 2026-03-27 14:26:35,940 [test_81_set_servo_calibration.py-->line:76]:✅ 用例【设置关节超限】异常断言通过
+INFO 2026-03-27 14:26:35,940 [test_81_set_servo_calibration.py-->line:77]:》》》用例【设置关节超限】测试完成《《《
+INFO 2026-03-27 14:26:35,945 [test_81_set_servo_calibration.py-->line:68]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 14:26:35,946 [test_81_set_servo_calibration.py-->line:69]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:26:35,946 [test_81_set_servo_calibration.py-->line:70]:joint:8
+INFO 2026-03-27 14:26:35,947 [test_81_set_servo_calibration.py-->line:76]:✅ 用例【设置关节超限】异常断言通过
+INFO 2026-03-27 14:26:35,948 [test_81_set_servo_calibration.py-->line:77]:》》》用例【设置关节超限】测试完成《《《
+INFO 2026-03-27 14:26:35,953 [test_81_set_servo_calibration.py-->line:86]:》》》》》用例【设置关节零位（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 14:26:35,954 [test_81_set_servo_calibration.py-->line:87]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:26:40,233 [test_81_set_servo_calibration.py-->line:94]:接口返回：None
+INFO 2026-03-27 14:26:43,590 [test_81_set_servo_calibration.py-->line:107]:✅ 用例【设置关节零位（仅上电）】测试成功
+INFO 2026-03-27 14:26:43,591 [test_81_set_servo_calibration.py-->line:108]:》》》用例【设置关节零位（仅上电）】测试完成《《《
+INFO 2026-03-27 14:26:43,596 [test_81_set_servo_calibration.py-->line:117]:》》》》》用例【设置关节零位（下电）】开始测试《《《《《
+DEBUG 2026-03-27 14:26:43,596 [test_81_set_servo_calibration.py-->line:118]:test_api:set_servo_calibration
+DEBUG 2026-03-27 14:26:46,914 [test_81_set_servo_calibration.py-->line:125]:接口返回：None
+INFO 2026-03-27 14:26:52,273 [test_81_set_servo_calibration.py-->line:138]:✅ 用例【设置关节零位（下电）】测试成功
+INFO 2026-03-27 14:26:52,274 [test_81_set_servo_calibration.py-->line:139]:》》》用例【设置关节零位（下电）】测试完成《《《
+INFO 2026-03-27 14:26:55,448 [test_81_set_servo_calibration.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 14:38:12,270 [test_82_release_servo.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 14:38:12,272 [test_82_release_servo.py-->line:30]:》》》》》用例【单个电机掉电（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:38:12,273 [test_82_release_servo.py-->line:31]:test_api:release_servo
+DEBUG 2026-03-27 14:38:12,273 [test_82_release_servo.py-->line:32]:joint:1
+INFO 2026-03-27 14:38:12,613 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:38:12,924 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:38:12,949 [test_82_release_servo.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:38:23,755 [test_82_release_servo.py-->line:58]:✅ 用例【单个电机掉电（1关节）】测试通过
+INFO 2026-03-27 14:38:23,755 [test_82_release_servo.py-->line:59]:》》》》》用例【单个电机掉电（1关节）】测试完成《《《《《
+INFO 2026-03-27 14:38:23,760 [test_82_release_servo.py-->line:30]:》》》》》用例【单个电机掉电（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:38:23,760 [test_82_release_servo.py-->line:31]:test_api:release_servo
+DEBUG 2026-03-27 14:38:23,761 [test_82_release_servo.py-->line:32]:joint:2
+INFO 2026-03-27 14:38:24,345 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:38:24,655 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:38:24,676 [test_82_release_servo.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:38:28,573 [test_82_release_servo.py-->line:58]:✅ 用例【单个电机掉电（2关节）】测试通过
+INFO 2026-03-27 14:38:28,574 [test_82_release_servo.py-->line:59]:》》》》》用例【单个电机掉电（2关节）】测试完成《《《《《
+INFO 2026-03-27 14:38:28,579 [test_82_release_servo.py-->line:30]:》》》》》用例【单个电机掉电（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:38:28,579 [test_82_release_servo.py-->line:31]:test_api:release_servo
+DEBUG 2026-03-27 14:38:28,580 [test_82_release_servo.py-->line:32]:joint:3
+INFO 2026-03-27 14:38:29,045 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:38:29,355 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:38:29,380 [test_82_release_servo.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:38:35,006 [test_82_release_servo.py-->line:58]:✅ 用例【单个电机掉电（3关节）】测试通过
+INFO 2026-03-27 14:38:35,007 [test_82_release_servo.py-->line:59]:》》》》》用例【单个电机掉电（3关节）】测试完成《《《《《
+INFO 2026-03-27 14:38:35,013 [test_82_release_servo.py-->line:30]:》》》》》用例【单个电机掉电（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:38:35,013 [test_82_release_servo.py-->line:31]:test_api:release_servo
+DEBUG 2026-03-27 14:38:35,014 [test_82_release_servo.py-->line:32]:joint:4
+INFO 2026-03-27 14:38:35,578 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:38:35,889 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:38:35,911 [test_82_release_servo.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:38:36,101 [test_82_release_servo.py-->line:30]:》》》》》用例【单个电机掉电（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:38:36,102 [test_82_release_servo.py-->line:31]:test_api:release_servo
+DEBUG 2026-03-27 14:38:36,102 [test_82_release_servo.py-->line:32]:joint:5
+INFO 2026-03-27 14:38:36,428 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:38:36,739 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:38:36,766 [test_82_release_servo.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:38:49,562 [test_82_release_servo.py-->line:58]:✅ 用例【单个电机掉电（5关节）】测试通过
+INFO 2026-03-27 14:38:49,562 [test_82_release_servo.py-->line:59]:》》》》》用例【单个电机掉电（5关节）】测试完成《《《《《
+INFO 2026-03-27 14:38:49,568 [test_82_release_servo.py-->line:30]:》》》》》用例【单个电机掉电（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:38:49,569 [test_82_release_servo.py-->line:31]:test_api:release_servo
+DEBUG 2026-03-27 14:38:49,570 [test_82_release_servo.py-->line:32]:joint:6
+INFO 2026-03-27 14:38:49,897 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:38:50,209 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:38:50,240 [test_82_release_servo.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:38:52,995 [test_82_release_servo.py-->line:30]:》》》》》用例【单个电机掉电（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:38:52,996 [test_82_release_servo.py-->line:31]:test_api:release_servo
+DEBUG 2026-03-27 14:38:52,997 [test_82_release_servo.py-->line:32]:joint:7
+INFO 2026-03-27 14:38:53,322 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:38:53,636 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:38:53,664 [test_82_release_servo.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:38:53,685 [test_82_release_servo.py-->line:68]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 14:38:53,686 [test_82_release_servo.py-->line:69]:test_api:release_servo
+DEBUG 2026-03-27 14:38:53,686 [test_82_release_servo.py-->line:70]:joint:0
+INFO 2026-03-27 14:38:53,687 [test_82_release_servo.py-->line:76]:✅ 用例【设置关节超限】异常断言通过
+INFO 2026-03-27 14:38:53,688 [test_82_release_servo.py-->line:77]:》》》用例【设置关节超限】测试完成《《《
+INFO 2026-03-27 14:38:53,693 [test_82_release_servo.py-->line:68]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 14:38:53,693 [test_82_release_servo.py-->line:69]:test_api:release_servo
+DEBUG 2026-03-27 14:38:53,694 [test_82_release_servo.py-->line:70]:joint:8
+INFO 2026-03-27 14:38:53,694 [test_82_release_servo.py-->line:76]:✅ 用例【设置关节超限】异常断言通过
+INFO 2026-03-27 14:38:53,695 [test_82_release_servo.py-->line:77]:》》》用例【设置关节超限】测试完成《《《
+INFO 2026-03-27 14:38:53,700 [test_82_release_servo.py-->line:86]:》》》》》用例【单个电机掉电（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 14:38:53,701 [test_82_release_servo.py-->line:87]:test_api:release_servo
+DEBUG 2026-03-27 14:39:00,827 [test_82_release_servo.py-->line:94]:接口返回：None
+INFO 2026-03-27 14:39:04,175 [test_82_release_servo.py-->line:107]:✅ 用例【单个电机掉电（仅上电）】测试成功
+INFO 2026-03-27 14:39:04,175 [test_82_release_servo.py-->line:108]:》》》用例【单个电机掉电（仅上电）】测试完成《《《
+INFO 2026-03-27 14:39:04,180 [test_82_release_servo.py-->line:117]:》》》》》用例【单个电机掉电（下电）】开始测试《《《《《
+DEBUG 2026-03-27 14:39:04,181 [test_82_release_servo.py-->line:118]:test_api:release_servo
+DEBUG 2026-03-27 14:39:10,348 [test_82_release_servo.py-->line:125]:接口返回：None
+INFO 2026-03-27 14:39:15,699 [test_82_release_servo.py-->line:138]:✅ 用例【单个电机掉电（下电）】测试成功
+INFO 2026-03-27 14:39:15,699 [test_82_release_servo.py-->line:139]:》》》用例【单个电机掉电（下电）】测试完成《《《
+INFO 2026-03-27 14:39:18,874 [test_82_release_servo.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 14:40:14,729 [test_82_release_servo.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 14:40:14,731 [test_82_release_servo.py-->line:30]:》》》》》用例【单个电机掉电（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:40:14,732 [test_82_release_servo.py-->line:31]:test_api:release_servo
+DEBUG 2026-03-27 14:40:14,732 [test_82_release_servo.py-->line:32]:joint:1
+INFO 2026-03-27 14:40:15,327 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:40:15,640 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:40:15,666 [test_82_release_servo.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:40:20,559 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（1关节）】测试通过
+INFO 2026-03-27 14:40:20,559 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（1关节）】测试完成《《《《《
+INFO 2026-03-27 14:40:20,564 [test_82_release_servo.py-->line:30]:》》》》》用例【单个电机掉电（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:40:20,565 [test_82_release_servo.py-->line:31]:test_api:release_servo
+DEBUG 2026-03-27 14:40:20,565 [test_82_release_servo.py-->line:32]:joint:2
+INFO 2026-03-27 14:40:20,899 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:40:21,213 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:40:21,241 [test_82_release_servo.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:40:29,782 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（2关节）】测试通过
+INFO 2026-03-27 14:40:29,782 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（2关节）】测试完成《《《《《
+INFO 2026-03-27 14:40:29,787 [test_82_release_servo.py-->line:30]:》》》》》用例【单个电机掉电（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:40:29,788 [test_82_release_servo.py-->line:31]:test_api:release_servo
+DEBUG 2026-03-27 14:40:29,788 [test_82_release_servo.py-->line:32]:joint:3
+INFO 2026-03-27 14:40:30,119 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:40:30,431 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:40:30,459 [test_82_release_servo.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:40:36,147 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（3关节）】测试通过
+INFO 2026-03-27 14:40:36,148 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（3关节）】测试完成《《《《《
+INFO 2026-03-27 14:40:36,154 [test_82_release_servo.py-->line:30]:》》》》》用例【单个电机掉电（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:40:36,154 [test_82_release_servo.py-->line:31]:test_api:release_servo
+DEBUG 2026-03-27 14:40:36,155 [test_82_release_servo.py-->line:32]:joint:4
+INFO 2026-03-27 14:40:36,477 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:40:36,792 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:40:36,819 [test_82_release_servo.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:40:42,027 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（4关节）】测试通过
+INFO 2026-03-27 14:40:42,028 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（4关节）】测试完成《《《《《
+INFO 2026-03-27 14:40:42,033 [test_82_release_servo.py-->line:30]:》》》》》用例【单个电机掉电（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:40:42,033 [test_82_release_servo.py-->line:31]:test_api:release_servo
+DEBUG 2026-03-27 14:40:42,034 [test_82_release_servo.py-->line:32]:joint:5
+INFO 2026-03-27 14:40:42,359 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:40:42,671 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:40:42,699 [test_82_release_servo.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:40:42,700 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（5关节）】测试通过
+INFO 2026-03-27 14:40:42,700 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（5关节）】测试完成《《《《《
+INFO 2026-03-27 14:40:42,705 [test_82_release_servo.py-->line:30]:》》》》》用例【单个电机掉电（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:40:42,706 [test_82_release_servo.py-->line:31]:test_api:release_servo
+DEBUG 2026-03-27 14:40:42,706 [test_82_release_servo.py-->line:32]:joint:6
+INFO 2026-03-27 14:40:43,039 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:40:43,350 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:40:43,377 [test_82_release_servo.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:40:43,378 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（6关节）】测试通过
+INFO 2026-03-27 14:40:43,379 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（6关节）】测试完成《《《《《
+INFO 2026-03-27 14:40:43,384 [test_82_release_servo.py-->line:30]:》》》》》用例【单个电机掉电（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:40:43,384 [test_82_release_servo.py-->line:31]:test_api:release_servo
+DEBUG 2026-03-27 14:40:43,385 [test_82_release_servo.py-->line:32]:joint:7
+INFO 2026-03-27 14:40:43,713 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 14:40:44,025 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 14:40:44,054 [test_82_release_servo.py-->line:40]:接口返回：1
+INFO 2026-03-27 14:40:44,055 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（7关节）】测试通过
+INFO 2026-03-27 14:40:44,056 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（7关节）】测试完成《《《《《
+INFO 2026-03-27 14:40:44,061 [test_82_release_servo.py-->line:65]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 14:40:44,061 [test_82_release_servo.py-->line:66]:test_api:release_servo
+DEBUG 2026-03-27 14:40:44,062 [test_82_release_servo.py-->line:67]:joint:0
+INFO 2026-03-27 14:40:44,062 [test_82_release_servo.py-->line:73]:✅ 用例【设置关节超限】异常断言通过
+INFO 2026-03-27 14:40:44,063 [test_82_release_servo.py-->line:74]:》》》用例【设置关节超限】测试完成《《《
+INFO 2026-03-27 14:40:44,068 [test_82_release_servo.py-->line:65]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 14:40:44,068 [test_82_release_servo.py-->line:66]:test_api:release_servo
+DEBUG 2026-03-27 14:40:44,069 [test_82_release_servo.py-->line:67]:joint:8
+INFO 2026-03-27 14:40:44,069 [test_82_release_servo.py-->line:73]:✅ 用例【设置关节超限】异常断言通过
+INFO 2026-03-27 14:40:44,070 [test_82_release_servo.py-->line:74]:》》》用例【设置关节超限】测试完成《《《
+INFO 2026-03-27 14:40:44,074 [test_82_release_servo.py-->line:83]:》》》》》用例【单个电机掉电（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 14:40:44,075 [test_82_release_servo.py-->line:84]:test_api:release_servo
+DEBUG 2026-03-27 14:40:51,205 [test_82_release_servo.py-->line:91]:接口返回：None
+INFO 2026-03-27 14:40:54,558 [test_82_release_servo.py-->line:104]:✅ 用例【单个电机掉电（仅上电）】测试成功
+INFO 2026-03-27 14:40:54,559 [test_82_release_servo.py-->line:105]:》》》用例【单个电机掉电（仅上电）】测试完成《《《
+INFO 2026-03-27 14:40:54,564 [test_82_release_servo.py-->line:114]:》》》》》用例【单个电机掉电（下电）】开始测试《《《《《
+DEBUG 2026-03-27 14:40:54,564 [test_82_release_servo.py-->line:115]:test_api:release_servo
+DEBUG 2026-03-27 14:41:00,730 [test_82_release_servo.py-->line:122]:接口返回：None
+INFO 2026-03-27 14:41:06,080 [test_82_release_servo.py-->line:135]:✅ 用例【单个电机掉电（下电）】测试成功
+INFO 2026-03-27 14:41:06,080 [test_82_release_servo.py-->line:136]:》》》用例【单个电机掉电（下电）】测试完成《《《
+INFO 2026-03-27 14:41:09,239 [test_82_release_servo.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 14:42:12,564 [test_82_release_servo.py-->line:19]:初始化完成，接口测试开始
+INFO 2026-03-27 14:42:12,566 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:42:12,566 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:42:12,566 [test_82_release_servo.py-->line:33]:joint:1
+DEBUG 2026-03-27 14:42:12,592 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:42:16,809 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（1关节）】测试通过
+INFO 2026-03-27 14:42:16,809 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（1关节）】测试完成《《《《《
+INFO 2026-03-27 14:42:16,815 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:42:16,815 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:42:16,815 [test_82_release_servo.py-->line:33]:joint:2
+DEBUG 2026-03-27 14:42:16,842 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:42:20,132 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（2关节）】测试通过
+INFO 2026-03-27 14:42:20,132 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（2关节）】测试完成《《《《《
+INFO 2026-03-27 14:42:20,137 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:42:20,138 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:42:20,138 [test_82_release_servo.py-->line:33]:joint:3
+DEBUG 2026-03-27 14:42:20,165 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:42:22,813 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（3关节）】测试通过
+INFO 2026-03-27 14:42:22,813 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（3关节）】测试完成《《《《《
+INFO 2026-03-27 14:42:22,819 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:42:22,819 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:42:22,819 [test_82_release_servo.py-->line:33]:joint:4
+DEBUG 2026-03-27 14:42:22,846 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:42:25,466 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（4关节）】测试通过
+INFO 2026-03-27 14:42:25,467 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（4关节）】测试完成《《《《《
+INFO 2026-03-27 14:42:25,473 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:42:25,474 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:42:25,475 [test_82_release_servo.py-->line:33]:joint:5
+DEBUG 2026-03-27 14:42:25,500 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:42:39,027 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（5关节）】测试通过
+INFO 2026-03-27 14:42:39,027 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（5关节）】测试完成《《《《《
+INFO 2026-03-27 14:42:39,032 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:42:39,032 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:42:39,033 [test_82_release_servo.py-->line:33]:joint:6
+DEBUG 2026-03-27 14:42:39,051 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:42:43,936 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（6关节）】测试通过
+INFO 2026-03-27 14:42:43,937 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（6关节）】测试完成《《《《《
+INFO 2026-03-27 14:42:43,941 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:42:43,942 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:42:43,942 [test_82_release_servo.py-->line:33]:joint:7
+DEBUG 2026-03-27 14:42:43,970 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:42:51,243 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（7关节）】测试通过
+INFO 2026-03-27 14:42:51,244 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（7关节）】测试完成《《《《《
+INFO 2026-03-27 14:42:51,249 [test_82_release_servo.py-->line:65]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 14:42:51,249 [test_82_release_servo.py-->line:66]:test_api:release_servo
+DEBUG 2026-03-27 14:42:51,250 [test_82_release_servo.py-->line:67]:joint:0
+INFO 2026-03-27 14:42:51,250 [test_82_release_servo.py-->line:73]:✅ 用例【设置关节超限】异常断言通过
+INFO 2026-03-27 14:42:51,251 [test_82_release_servo.py-->line:74]:》》》用例【设置关节超限】测试完成《《《
+INFO 2026-03-27 14:42:51,256 [test_82_release_servo.py-->line:65]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 14:42:51,257 [test_82_release_servo.py-->line:66]:test_api:release_servo
+DEBUG 2026-03-27 14:42:51,258 [test_82_release_servo.py-->line:67]:joint:8
+INFO 2026-03-27 14:42:51,259 [test_82_release_servo.py-->line:73]:✅ 用例【设置关节超限】异常断言通过
+INFO 2026-03-27 14:42:51,259 [test_82_release_servo.py-->line:74]:》》》用例【设置关节超限】测试完成《《《
+INFO 2026-03-27 14:42:51,265 [test_82_release_servo.py-->line:83]:》》》》》用例【单个电机掉电（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 14:42:51,266 [test_82_release_servo.py-->line:84]:test_api:release_servo
+DEBUG 2026-03-27 14:42:58,391 [test_82_release_servo.py-->line:91]:接口返回：None
+INFO 2026-03-27 14:43:01,745 [test_82_release_servo.py-->line:104]:✅ 用例【单个电机掉电（仅上电）】测试成功
+INFO 2026-03-27 14:43:01,745 [test_82_release_servo.py-->line:105]:》》》用例【单个电机掉电（仅上电）】测试完成《《《
+INFO 2026-03-27 14:43:01,750 [test_82_release_servo.py-->line:114]:》》》》》用例【单个电机掉电（下电）】开始测试《《《《《
+DEBUG 2026-03-27 14:43:01,751 [test_82_release_servo.py-->line:115]:test_api:release_servo
+DEBUG 2026-03-27 14:43:07,918 [test_82_release_servo.py-->line:122]:接口返回：None
+INFO 2026-03-27 14:43:13,268 [test_82_release_servo.py-->line:135]:✅ 用例【单个电机掉电（下电）】测试成功
+INFO 2026-03-27 14:43:13,269 [test_82_release_servo.py-->line:136]:》》》用例【单个电机掉电（下电）】测试完成《《《
+INFO 2026-03-27 14:43:16,425 [test_82_release_servo.py-->line:22]:环境清理完成，接口测试结束
+INFO 2026-03-27 14:43:31,005 [test_82_release_servo.py-->line:19]:初始化完成，接口测试开始
+INFO 2026-03-27 14:43:31,007 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:43:31,008 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:43:31,009 [test_82_release_servo.py-->line:33]:joint:1
+DEBUG 2026-03-27 14:43:31,028 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:43:34,781 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（1关节）】测试通过
+INFO 2026-03-27 14:43:34,781 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（1关节）】测试完成《《《《《
+INFO 2026-03-27 14:43:34,787 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:43:34,788 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:43:34,788 [test_82_release_servo.py-->line:33]:joint:2
+DEBUG 2026-03-27 14:43:34,816 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:43:37,076 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（2关节）】测试通过
+INFO 2026-03-27 14:43:37,077 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（2关节）】测试完成《《《《《
+INFO 2026-03-27 14:43:37,081 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:43:37,082 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:43:37,082 [test_82_release_servo.py-->line:33]:joint:3
+DEBUG 2026-03-27 14:43:37,109 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:43:39,476 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（3关节）】测试通过
+INFO 2026-03-27 14:43:39,477 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（3关节）】测试完成《《《《《
+INFO 2026-03-27 14:43:39,482 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:43:39,483 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:43:39,483 [test_82_release_servo.py-->line:33]:joint:4
+DEBUG 2026-03-27 14:43:39,511 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:43:41,422 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（4关节）】测试通过
+INFO 2026-03-27 14:43:41,422 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（4关节）】测试完成《《《《《
+INFO 2026-03-27 14:43:41,427 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:43:41,428 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:43:41,428 [test_82_release_servo.py-->line:33]:joint:5
+DEBUG 2026-03-27 14:43:41,456 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:43:55,390 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（5关节）】测试通过
+INFO 2026-03-27 14:43:55,390 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（5关节）】测试完成《《《《《
+INFO 2026-03-27 14:43:55,395 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:43:55,396 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:43:55,396 [test_82_release_servo.py-->line:33]:joint:6
+DEBUG 2026-03-27 14:43:55,418 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:43:57,862 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（6关节）】测试通过
+INFO 2026-03-27 14:43:57,862 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（6关节）】测试完成《《《《《
+INFO 2026-03-27 14:43:57,869 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:43:57,869 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:43:57,870 [test_82_release_servo.py-->line:33]:joint:7
+DEBUG 2026-03-27 14:43:57,896 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:44:00,935 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（7关节）】测试通过
+INFO 2026-03-27 14:44:00,935 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（7关节）】测试完成《《《《《
+INFO 2026-03-27 14:44:00,941 [test_82_release_servo.py-->line:65]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 14:44:00,942 [test_82_release_servo.py-->line:66]:test_api:release_servo
+DEBUG 2026-03-27 14:44:00,942 [test_82_release_servo.py-->line:67]:joint:0
+INFO 2026-03-27 14:44:00,943 [test_82_release_servo.py-->line:73]:✅ 用例【设置关节超限】异常断言通过
+INFO 2026-03-27 14:44:00,943 [test_82_release_servo.py-->line:74]:》》》用例【设置关节超限】测试完成《《《
+INFO 2026-03-27 14:44:00,949 [test_82_release_servo.py-->line:65]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 14:44:00,950 [test_82_release_servo.py-->line:66]:test_api:release_servo
+DEBUG 2026-03-27 14:44:00,950 [test_82_release_servo.py-->line:67]:joint:8
+INFO 2026-03-27 14:44:00,951 [test_82_release_servo.py-->line:73]:✅ 用例【设置关节超限】异常断言通过
+INFO 2026-03-27 14:44:00,951 [test_82_release_servo.py-->line:74]:》》》用例【设置关节超限】测试完成《《《
+INFO 2026-03-27 14:44:00,956 [test_82_release_servo.py-->line:83]:》》》》》用例【单个电机掉电（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 14:44:00,957 [test_82_release_servo.py-->line:84]:test_api:release_servo
+DEBUG 2026-03-27 14:44:08,086 [test_82_release_servo.py-->line:91]:接口返回：None
+INFO 2026-03-27 14:44:11,437 [test_82_release_servo.py-->line:104]:✅ 用例【单个电机掉电（仅上电）】测试成功
+INFO 2026-03-27 14:44:11,438 [test_82_release_servo.py-->line:105]:》》》用例【单个电机掉电（仅上电）】测试完成《《《
+INFO 2026-03-27 14:44:11,446 [test_82_release_servo.py-->line:114]:》》》》》用例【单个电机掉电（下电）】开始测试《《《《《
+DEBUG 2026-03-27 14:44:11,447 [test_82_release_servo.py-->line:115]:test_api:release_servo
+DEBUG 2026-03-27 14:44:17,611 [test_82_release_servo.py-->line:122]:接口返回：None
+INFO 2026-03-27 14:44:22,970 [test_82_release_servo.py-->line:135]:✅ 用例【单个电机掉电（下电）】测试成功
+INFO 2026-03-27 14:44:22,971 [test_82_release_servo.py-->line:136]:》》》用例【单个电机掉电（下电）】测试完成《《《
+INFO 2026-03-27 14:44:26,138 [test_82_release_servo.py-->line:22]:环境清理完成，接口测试结束
+INFO 2026-03-27 14:53:00,600 [test_83_focus_servo.py-->line:21]:初始化完成，接口测试开始
+INFO 2026-03-27 14:53:00,602 [test_83_focus_servo.py-->line:33]:》》》》》用例【单个电机上电（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:53:00,602 [test_83_focus_servo.py-->line:34]:test_api:focus_servo
+DEBUG 2026-03-27 14:53:00,603 [test_83_focus_servo.py-->line:35]:joint:1
+DEBUG 2026-03-27 14:53:01,673 [test_83_focus_servo.py-->line:43]:接口返回：1
+INFO 2026-03-27 14:53:08,097 [test_83_focus_servo.py-->line:58]:✅ 用例【单个电机上电（1关节）】测试通过
+INFO 2026-03-27 14:53:08,097 [test_83_focus_servo.py-->line:59]:》》》》》用例【单个电机上电（1关节）】测试完成《《《《《
+INFO 2026-03-27 14:53:08,102 [test_83_focus_servo.py-->line:33]:》》》》》用例【单个电机上电（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:53:08,103 [test_83_focus_servo.py-->line:34]:test_api:focus_servo
+DEBUG 2026-03-27 14:53:08,103 [test_83_focus_servo.py-->line:35]:joint:2
+DEBUG 2026-03-27 14:53:09,173 [test_83_focus_servo.py-->line:43]:接口返回：1
+INFO 2026-03-27 14:53:10,943 [test_83_focus_servo.py-->line:58]:✅ 用例【单个电机上电（2关节）】测试通过
+INFO 2026-03-27 14:53:10,944 [test_83_focus_servo.py-->line:59]:》》》》》用例【单个电机上电（2关节）】测试完成《《《《《
+INFO 2026-03-27 14:53:10,949 [test_83_focus_servo.py-->line:33]:》》》》》用例【单个电机上电（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:53:10,950 [test_83_focus_servo.py-->line:34]:test_api:focus_servo
+DEBUG 2026-03-27 14:53:10,951 [test_83_focus_servo.py-->line:35]:joint:3
+DEBUG 2026-03-27 14:53:12,019 [test_83_focus_servo.py-->line:43]:接口返回：1
+INFO 2026-03-27 14:53:13,339 [test_83_focus_servo.py-->line:58]:✅ 用例【单个电机上电（3关节）】测试通过
+INFO 2026-03-27 14:53:13,341 [test_83_focus_servo.py-->line:59]:》》》》》用例【单个电机上电（3关节）】测试完成《《《《《
+INFO 2026-03-27 14:53:13,347 [test_83_focus_servo.py-->line:33]:》》》》》用例【单个电机上电（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:53:13,348 [test_83_focus_servo.py-->line:34]:test_api:focus_servo
+DEBUG 2026-03-27 14:53:13,349 [test_83_focus_servo.py-->line:35]:joint:4
+DEBUG 2026-03-27 14:53:14,423 [test_83_focus_servo.py-->line:43]:接口返回：1
+INFO 2026-03-27 14:53:15,931 [test_83_focus_servo.py-->line:58]:✅ 用例【单个电机上电（4关节）】测试通过
+INFO 2026-03-27 14:53:15,931 [test_83_focus_servo.py-->line:59]:》》》》》用例【单个电机上电（4关节）】测试完成《《《《《
+INFO 2026-03-27 14:53:15,936 [test_83_focus_servo.py-->line:33]:》》》》》用例【单个电机上电（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:53:15,937 [test_83_focus_servo.py-->line:34]:test_api:focus_servo
+DEBUG 2026-03-27 14:53:15,938 [test_83_focus_servo.py-->line:35]:joint:5
+DEBUG 2026-03-27 14:53:17,008 [test_83_focus_servo.py-->line:43]:接口返回：1
+INFO 2026-03-27 14:53:19,455 [test_83_focus_servo.py-->line:58]:✅ 用例【单个电机上电（5关节）】测试通过
+INFO 2026-03-27 14:53:19,456 [test_83_focus_servo.py-->line:59]:》》》》》用例【单个电机上电（5关节）】测试完成《《《《《
+INFO 2026-03-27 14:53:19,460 [test_83_focus_servo.py-->line:33]:》》》》》用例【单个电机上电（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:53:19,461 [test_83_focus_servo.py-->line:34]:test_api:focus_servo
+DEBUG 2026-03-27 14:53:19,461 [test_83_focus_servo.py-->line:35]:joint:6
+DEBUG 2026-03-27 14:53:20,523 [test_83_focus_servo.py-->line:43]:接口返回：1
+INFO 2026-03-27 14:53:21,415 [test_83_focus_servo.py-->line:58]:✅ 用例【单个电机上电（6关节）】测试通过
+INFO 2026-03-27 14:53:21,416 [test_83_focus_servo.py-->line:59]:》》》》》用例【单个电机上电（6关节）】测试完成《《《《《
+INFO 2026-03-27 14:53:21,422 [test_83_focus_servo.py-->line:33]:》》》》》用例【单个电机上电（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:53:21,423 [test_83_focus_servo.py-->line:34]:test_api:focus_servo
+DEBUG 2026-03-27 14:53:21,423 [test_83_focus_servo.py-->line:35]:joint:7
+DEBUG 2026-03-27 14:53:22,490 [test_83_focus_servo.py-->line:43]:接口返回：1
+INFO 2026-03-27 14:53:23,238 [test_83_focus_servo.py-->line:58]:✅ 用例【单个电机上电（7关节）】测试通过
+INFO 2026-03-27 14:53:23,239 [test_83_focus_servo.py-->line:59]:》》》》》用例【单个电机上电（7关节）】测试完成《《《《《
+INFO 2026-03-27 14:53:23,244 [test_83_focus_servo.py-->line:68]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 14:53:23,244 [test_83_focus_servo.py-->line:69]:test_api:focus_servo
+DEBUG 2026-03-27 14:53:23,245 [test_83_focus_servo.py-->line:70]:joint:0
+INFO 2026-03-27 14:53:23,246 [test_83_focus_servo.py-->line:76]:✅ 用例【设置关节超限】异常断言通过
+INFO 2026-03-27 14:53:23,246 [test_83_focus_servo.py-->line:77]:》》》用例【设置关节超限】测试完成《《《
+INFO 2026-03-27 14:53:23,251 [test_83_focus_servo.py-->line:68]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 14:53:23,252 [test_83_focus_servo.py-->line:69]:test_api:focus_servo
+DEBUG 2026-03-27 14:53:23,252 [test_83_focus_servo.py-->line:70]:joint:8
+INFO 2026-03-27 14:53:23,253 [test_83_focus_servo.py-->line:76]:✅ 用例【设置关节超限】异常断言通过
+INFO 2026-03-27 14:53:23,253 [test_83_focus_servo.py-->line:77]:》》》用例【设置关节超限】测试完成《《《
+INFO 2026-03-27 14:53:23,258 [test_83_focus_servo.py-->line:86]:》》》》》用例【单个电机上电（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 14:53:23,260 [test_83_focus_servo.py-->line:87]:test_api:focus_servo
+DEBUG 2026-03-27 14:53:30,394 [test_83_focus_servo.py-->line:94]:接口返回：None
+INFO 2026-03-27 14:53:33,743 [test_83_focus_servo.py-->line:107]:✅ 用例【单个电机上电（仅上电）】测试成功
+INFO 2026-03-27 14:53:33,744 [test_83_focus_servo.py-->line:108]:》》》用例【单个电机上电（仅上电）】测试完成《《《
+INFO 2026-03-27 14:53:33,748 [test_83_focus_servo.py-->line:117]:》》》》》用例【单个电机上电（下电）】开始测试《《《《《
+DEBUG 2026-03-27 14:53:33,749 [test_83_focus_servo.py-->line:118]:test_api:focus_servo
+DEBUG 2026-03-27 14:53:39,913 [test_83_focus_servo.py-->line:125]:接口返回：None
+INFO 2026-03-27 14:53:45,271 [test_83_focus_servo.py-->line:138]:✅ 用例【单个电机上电（下电）】测试成功
+INFO 2026-03-27 14:53:45,272 [test_83_focus_servo.py-->line:139]:》》》用例【单个电机上电（下电）】测试完成《《《
+INFO 2026-03-27 14:53:48,432 [test_83_focus_servo.py-->line:24]:环境清理完成，接口测试结束
+INFO 2026-03-27 14:54:01,234 [test_82_release_servo.py-->line:19]:初始化完成，接口测试开始
+INFO 2026-03-27 14:54:01,236 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（1关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:54:01,237 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:54:01,237 [test_82_release_servo.py-->line:33]:joint:1
+DEBUG 2026-03-27 14:54:01,266 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:54:05,340 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（1关节）】测试通过
+INFO 2026-03-27 14:54:05,340 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（1关节）】测试完成《《《《《
+INFO 2026-03-27 14:54:05,345 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（2关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:54:05,346 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:54:05,347 [test_82_release_servo.py-->line:33]:joint:2
+DEBUG 2026-03-27 14:54:05,374 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:54:07,333 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（2关节）】测试通过
+INFO 2026-03-27 14:54:07,334 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（2关节）】测试完成《《《《《
+INFO 2026-03-27 14:54:07,339 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（3关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:54:07,340 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:54:07,340 [test_82_release_servo.py-->line:33]:joint:3
+DEBUG 2026-03-27 14:54:07,367 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:54:09,087 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（3关节）】测试通过
+INFO 2026-03-27 14:54:09,088 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（3关节）】测试完成《《《《《
+INFO 2026-03-27 14:54:09,094 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（4关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:54:09,095 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:54:09,095 [test_82_release_servo.py-->line:33]:joint:4
+DEBUG 2026-03-27 14:54:09,121 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:54:11,839 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（4关节）】测试通过
+INFO 2026-03-27 14:54:11,839 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（4关节）】测试完成《《《《《
+INFO 2026-03-27 14:54:11,844 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（5关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:54:11,844 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:54:11,845 [test_82_release_servo.py-->line:33]:joint:5
+DEBUG 2026-03-27 14:54:11,871 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:54:14,899 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（5关节）】测试通过
+INFO 2026-03-27 14:54:14,900 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（5关节）】测试完成《《《《《
+INFO 2026-03-27 14:54:14,904 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（6关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:54:14,905 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:54:14,905 [test_82_release_servo.py-->line:33]:joint:6
+DEBUG 2026-03-27 14:54:14,931 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:54:16,578 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（6关节）】测试通过
+INFO 2026-03-27 14:54:16,579 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（6关节）】测试完成《《《《《
+INFO 2026-03-27 14:54:16,584 [test_82_release_servo.py-->line:31]:》》》》》用例【单个电机掉电（7关节）】开始测试《《《《《
+DEBUG 2026-03-27 14:54:16,584 [test_82_release_servo.py-->line:32]:test_api:release_servo
+DEBUG 2026-03-27 14:54:16,585 [test_82_release_servo.py-->line:33]:joint:7
+DEBUG 2026-03-27 14:54:16,611 [test_82_release_servo.py-->line:37]:接口返回：1
+INFO 2026-03-27 14:54:18,480 [test_82_release_servo.py-->line:55]:✅ 用例【单个电机掉电（7关节）】测试通过
+INFO 2026-03-27 14:54:18,481 [test_82_release_servo.py-->line:56]:》》》》》用例【单个电机掉电（7关节）】测试完成《《《《《
+INFO 2026-03-27 14:54:18,485 [test_82_release_servo.py-->line:65]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 14:54:18,486 [test_82_release_servo.py-->line:66]:test_api:release_servo
+DEBUG 2026-03-27 14:54:18,486 [test_82_release_servo.py-->line:67]:joint:0
+INFO 2026-03-27 14:54:18,487 [test_82_release_servo.py-->line:73]:✅ 用例【设置关节超限】异常断言通过
+INFO 2026-03-27 14:54:18,488 [test_82_release_servo.py-->line:74]:》》》用例【设置关节超限】测试完成《《《
+INFO 2026-03-27 14:54:18,492 [test_82_release_servo.py-->line:65]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 14:54:18,493 [test_82_release_servo.py-->line:66]:test_api:release_servo
+DEBUG 2026-03-27 14:54:18,493 [test_82_release_servo.py-->line:67]:joint:8
+INFO 2026-03-27 14:54:18,494 [test_82_release_servo.py-->line:73]:✅ 用例【设置关节超限】异常断言通过
+INFO 2026-03-27 14:54:18,494 [test_82_release_servo.py-->line:74]:》》》用例【设置关节超限】测试完成《《《
+INFO 2026-03-27 14:54:18,499 [test_82_release_servo.py-->line:83]:》》》》》用例【单个电机掉电（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 14:54:18,499 [test_82_release_servo.py-->line:84]:test_api:release_servo
+DEBUG 2026-03-27 14:54:25,625 [test_82_release_servo.py-->line:91]:接口返回：None
+INFO 2026-03-27 14:54:28,973 [test_82_release_servo.py-->line:104]:✅ 用例【单个电机掉电（仅上电）】测试成功
+INFO 2026-03-27 14:54:28,974 [test_82_release_servo.py-->line:105]:》》》用例【单个电机掉电（仅上电）】测试完成《《《
+INFO 2026-03-27 14:54:28,979 [test_82_release_servo.py-->line:114]:》》》》》用例【单个电机掉电（下电）】开始测试《《《《《
+DEBUG 2026-03-27 14:54:28,979 [test_82_release_servo.py-->line:115]:test_api:release_servo
+DEBUG 2026-03-27 14:54:35,153 [test_82_release_servo.py-->line:122]:接口返回：None
+INFO 2026-03-27 14:54:40,507 [test_82_release_servo.py-->line:135]:✅ 用例【单个电机掉电（下电）】测试成功
+INFO 2026-03-27 14:54:40,508 [test_82_release_servo.py-->line:136]:》》》用例【单个电机掉电（下电）】测试完成《《《
+INFO 2026-03-27 14:54:43,679 [test_82_release_servo.py-->line:22]:环境清理完成，接口测试结束
+INFO 2026-03-27 15:00:50,681 [test_84_set_break.py-->line:20]:初始化完成，接口测试开始
+INFO 2026-03-27 15:00:50,682 [test_84_set_break.py-->line:32]:》》》》》用例【设置一关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:00:50,683 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:00:50,683 [test_84_set_break.py-->line:34]:joint:1
+DEBUG 2026-03-27 15:00:51,705 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:00:51,706 [test_84_set_break.py-->line:49]:✅ 用例【设置一关节刹车开关】测试通过
+INFO 2026-03-27 15:00:51,707 [test_84_set_break.py-->line:50]:》》》》》用例【设置一关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:00:51,711 [test_84_set_break.py-->line:32]:》》》》》用例【设置一关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:00:51,712 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:00:51,712 [test_84_set_break.py-->line:34]:joint:1
+DEBUG 2026-03-27 15:00:52,727 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:00:52,729 [test_84_set_break.py-->line:49]:✅ 用例【设置一关节刹车开关】测试通过
+INFO 2026-03-27 15:00:52,730 [test_84_set_break.py-->line:50]:》》》》》用例【设置一关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:00:52,735 [test_84_set_break.py-->line:32]:》》》》》用例【设置二关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:00:52,736 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:00:52,736 [test_84_set_break.py-->line:34]:joint:2
+DEBUG 2026-03-27 15:00:53,764 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:00:53,764 [test_84_set_break.py-->line:49]:✅ 用例【设置二关节刹车开关】测试通过
+INFO 2026-03-27 15:00:53,765 [test_84_set_break.py-->line:50]:》》》》》用例【设置二关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:00:53,770 [test_84_set_break.py-->line:32]:》》》》》用例【设置二关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:00:53,770 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:00:53,771 [test_84_set_break.py-->line:34]:joint:2
+DEBUG 2026-03-27 15:00:54,781 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:00:54,782 [test_84_set_break.py-->line:49]:✅ 用例【设置二关节刹车开关】测试通过
+INFO 2026-03-27 15:00:54,783 [test_84_set_break.py-->line:50]:》》》》》用例【设置二关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:00:54,788 [test_84_set_break.py-->line:32]:》》》》》用例【设置三关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:00:54,789 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:00:54,790 [test_84_set_break.py-->line:34]:joint:3
+DEBUG 2026-03-27 15:00:55,818 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:00:55,818 [test_84_set_break.py-->line:49]:✅ 用例【设置三关节刹车开关】测试通过
+INFO 2026-03-27 15:00:55,819 [test_84_set_break.py-->line:50]:》》》》》用例【设置三关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:00:55,824 [test_84_set_break.py-->line:32]:》》》》》用例【设置三关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:00:55,825 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:00:55,826 [test_84_set_break.py-->line:34]:joint:3
+DEBUG 2026-03-27 15:00:56,836 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:00:56,837 [test_84_set_break.py-->line:49]:✅ 用例【设置三关节刹车开关】测试通过
+INFO 2026-03-27 15:00:56,838 [test_84_set_break.py-->line:50]:》》》》》用例【设置三关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:00:56,843 [test_84_set_break.py-->line:32]:》》》》》用例【设置四关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:00:56,844 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:00:56,845 [test_84_set_break.py-->line:34]:joint:4
+DEBUG 2026-03-27 15:00:57,874 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:00:57,875 [test_84_set_break.py-->line:49]:✅ 用例【设置四关节刹车开关】测试通过
+INFO 2026-03-27 15:00:57,875 [test_84_set_break.py-->line:50]:》》》》》用例【设置四关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:00:57,880 [test_84_set_break.py-->line:32]:》》》》》用例【设置四关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:00:57,880 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:00:57,880 [test_84_set_break.py-->line:34]:joint:4
+DEBUG 2026-03-27 15:00:58,891 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:00:58,893 [test_84_set_break.py-->line:49]:✅ 用例【设置四关节刹车开关】测试通过
+INFO 2026-03-27 15:00:58,893 [test_84_set_break.py-->line:50]:》》》》》用例【设置四关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:00:58,898 [test_84_set_break.py-->line:32]:》》》》》用例【设置五关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:00:58,899 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:00:58,899 [test_84_set_break.py-->line:34]:joint:5
+DEBUG 2026-03-27 15:00:59,917 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:00:59,918 [test_84_set_break.py-->line:49]:✅ 用例【设置五关节刹车开关】测试通过
+INFO 2026-03-27 15:00:59,918 [test_84_set_break.py-->line:50]:》》》》》用例【设置五关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:00:59,923 [test_84_set_break.py-->line:32]:》》》》》用例【设置五关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:00:59,923 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:00:59,924 [test_84_set_break.py-->line:34]:joint:5
+DEBUG 2026-03-27 15:01:00,935 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:01:00,936 [test_84_set_break.py-->line:49]:✅ 用例【设置五关节刹车开关】测试通过
+INFO 2026-03-27 15:01:00,937 [test_84_set_break.py-->line:50]:》》》》》用例【设置五关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:01:00,941 [test_84_set_break.py-->line:32]:》》》》》用例【设置六关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:01:00,942 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:01:00,942 [test_84_set_break.py-->line:34]:joint:6
+DEBUG 2026-03-27 15:01:01,963 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:01:01,964 [test_84_set_break.py-->line:49]:✅ 用例【设置六关节刹车开关】测试通过
+INFO 2026-03-27 15:01:01,965 [test_84_set_break.py-->line:50]:》》》》》用例【设置六关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:01:01,970 [test_84_set_break.py-->line:32]:》》》》》用例【设置六关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:01:01,971 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:01:01,972 [test_84_set_break.py-->line:34]:joint:6
+DEBUG 2026-03-27 15:01:02,982 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:01:02,983 [test_84_set_break.py-->line:49]:✅ 用例【设置六关节刹车开关】测试通过
+INFO 2026-03-27 15:01:02,984 [test_84_set_break.py-->line:50]:》》》》》用例【设置六关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:01:02,989 [test_84_set_break.py-->line:59]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 15:01:02,990 [test_84_set_break.py-->line:60]:test_api:set_break
+DEBUG 2026-03-27 15:01:02,991 [test_84_set_break.py-->line:61]:joint:0
+INFO 2026-03-27 15:01:02,992 [test_84_set_break.py-->line:67]:✅ 用例【设置关节超限】异常断言通过
+INFO 2026-03-27 15:01:02,993 [test_84_set_break.py-->line:68]:》》》用例【设置关节超限】测试完成《《《
+INFO 2026-03-27 15:01:02,998 [test_84_set_break.py-->line:59]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 15:01:02,999 [test_84_set_break.py-->line:60]:test_api:set_break
+DEBUG 2026-03-27 15:01:02,999 [test_84_set_break.py-->line:61]:joint:7
+INFO 2026-03-27 15:01:03,189 [test_84_set_break.py-->line:59]:》》》》》用例【设置开关状态超限】开始测试《《《《《
+DEBUG 2026-03-27 15:01:03,190 [test_84_set_break.py-->line:60]:test_api:set_break
+DEBUG 2026-03-27 15:01:03,190 [test_84_set_break.py-->line:61]:joint:1
+INFO 2026-03-27 15:01:03,191 [test_84_set_break.py-->line:67]:✅ 用例【设置开关状态超限】异常断言通过
+INFO 2026-03-27 15:01:03,192 [test_84_set_break.py-->line:68]:》》》用例【设置开关状态超限】测试完成《《《
+INFO 2026-03-27 15:01:03,197 [test_84_set_break.py-->line:59]:》》》》》用例【设置开关状态超限】开始测试《《《《《
+DEBUG 2026-03-27 15:01:03,198 [test_84_set_break.py-->line:60]:test_api:set_break
+DEBUG 2026-03-27 15:01:03,199 [test_84_set_break.py-->line:61]:joint:2
+INFO 2026-03-27 15:01:03,200 [test_84_set_break.py-->line:67]:✅ 用例【设置开关状态超限】异常断言通过
+INFO 2026-03-27 15:01:03,200 [test_84_set_break.py-->line:68]:》》》用例【设置开关状态超限】测试完成《《《
+INFO 2026-03-27 15:01:03,206 [test_84_set_break.py-->line:77]:》》》》》用例【设置关节刹车开关（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 15:01:03,207 [test_84_set_break.py-->line:78]:test_api:set_break
+DEBUG 2026-03-27 15:01:08,486 [test_84_set_break.py-->line:86]:接口返回：None
+INFO 2026-03-27 15:01:11,830 [test_84_set_break.py-->line:99]:✅ 用例【设置关节刹车开关（仅上电）】测试成功
+INFO 2026-03-27 15:01:11,830 [test_84_set_break.py-->line:100]:》》》用例【设置关节刹车开关（仅上电）】测试完成《《《
+INFO 2026-03-27 15:01:11,835 [test_84_set_break.py-->line:109]:》》》》》用例【设置关节刹车开关（下电）】开始测试《《《《《
+DEBUG 2026-03-27 15:01:11,836 [test_84_set_break.py-->line:110]:test_api:set_break
+DEBUG 2026-03-27 15:01:16,146 [test_84_set_break.py-->line:118]:接口返回：None
+INFO 2026-03-27 15:01:21,496 [test_84_set_break.py-->line:131]:✅ 用例【设置关节刹车开关（下电）】测试成功
+INFO 2026-03-27 15:01:21,496 [test_84_set_break.py-->line:132]:》》》用例【设置关节刹车开关（下电）】测试完成《《《
+INFO 2026-03-27 15:01:24,661 [test_84_set_break.py-->line:23]:环境清理完成，接口测试结束
+INFO 2026-03-27 15:03:30,009 [test_84_set_break.py-->line:20]:初始化完成，接口测试开始
+INFO 2026-03-27 15:03:30,011 [test_84_set_break.py-->line:32]:》》》》》用例【设置一关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:03:30,012 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:03:30,012 [test_84_set_break.py-->line:34]:joint:1
+DEBUG 2026-03-27 15:03:31,030 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:03:31,031 [test_84_set_break.py-->line:49]:✅ 用例【设置一关节刹车开关】测试通过
+INFO 2026-03-27 15:03:31,032 [test_84_set_break.py-->line:50]:》》》》》用例【设置一关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:03:31,037 [test_84_set_break.py-->line:32]:》》》》》用例【设置一关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:03:31,037 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:03:31,037 [test_84_set_break.py-->line:34]:joint:1
+DEBUG 2026-03-27 15:03:32,051 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:03:32,052 [test_84_set_break.py-->line:49]:✅ 用例【设置一关节刹车开关】测试通过
+INFO 2026-03-27 15:03:32,052 [test_84_set_break.py-->line:50]:》》》》》用例【设置一关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:03:32,058 [test_84_set_break.py-->line:32]:》》》》》用例【设置二关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:03:32,059 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:03:32,059 [test_84_set_break.py-->line:34]:joint:2
+DEBUG 2026-03-27 15:03:33,079 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:03:33,080 [test_84_set_break.py-->line:49]:✅ 用例【设置二关节刹车开关】测试通过
+INFO 2026-03-27 15:03:33,081 [test_84_set_break.py-->line:50]:》》》》》用例【设置二关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:03:33,086 [test_84_set_break.py-->line:32]:》》》》》用例【设置二关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:03:33,087 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:03:33,088 [test_84_set_break.py-->line:34]:joint:2
+DEBUG 2026-03-27 15:03:34,096 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:03:34,097 [test_84_set_break.py-->line:49]:✅ 用例【设置二关节刹车开关】测试通过
+INFO 2026-03-27 15:03:34,098 [test_84_set_break.py-->line:50]:》》》》》用例【设置二关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:03:34,103 [test_84_set_break.py-->line:32]:》》》》》用例【设置三关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:03:34,103 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:03:34,104 [test_84_set_break.py-->line:34]:joint:3
+DEBUG 2026-03-27 15:03:35,125 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:03:35,126 [test_84_set_break.py-->line:49]:✅ 用例【设置三关节刹车开关】测试通过
+INFO 2026-03-27 15:03:35,126 [test_84_set_break.py-->line:50]:》》》》》用例【设置三关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:03:35,131 [test_84_set_break.py-->line:32]:》》》》》用例【设置三关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:03:35,131 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:03:35,132 [test_84_set_break.py-->line:34]:joint:3
+DEBUG 2026-03-27 15:03:36,142 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:03:36,143 [test_84_set_break.py-->line:49]:✅ 用例【设置三关节刹车开关】测试通过
+INFO 2026-03-27 15:03:36,143 [test_84_set_break.py-->line:50]:》》》》》用例【设置三关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:03:36,148 [test_84_set_break.py-->line:32]:》》》》》用例【设置四关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:03:36,149 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:03:36,149 [test_84_set_break.py-->line:34]:joint:4
+DEBUG 2026-03-27 15:03:37,166 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:03:37,167 [test_84_set_break.py-->line:49]:✅ 用例【设置四关节刹车开关】测试通过
+INFO 2026-03-27 15:03:37,168 [test_84_set_break.py-->line:50]:》》》》》用例【设置四关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:03:37,172 [test_84_set_break.py-->line:32]:》》》》》用例【设置四关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:03:37,173 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:03:37,173 [test_84_set_break.py-->line:34]:joint:4
+DEBUG 2026-03-27 15:03:38,185 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:03:38,186 [test_84_set_break.py-->line:49]:✅ 用例【设置四关节刹车开关】测试通过
+INFO 2026-03-27 15:03:38,186 [test_84_set_break.py-->line:50]:》》》》》用例【设置四关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:03:38,191 [test_84_set_break.py-->line:32]:》》》》》用例【设置五关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:03:38,191 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:03:38,192 [test_84_set_break.py-->line:34]:joint:5
+DEBUG 2026-03-27 15:03:39,211 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:03:39,211 [test_84_set_break.py-->line:49]:✅ 用例【设置五关节刹车开关】测试通过
+INFO 2026-03-27 15:03:39,212 [test_84_set_break.py-->line:50]:》》》》》用例【设置五关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:03:39,217 [test_84_set_break.py-->line:32]:》》》》》用例【设置五关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:03:39,218 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:03:39,218 [test_84_set_break.py-->line:34]:joint:5
+DEBUG 2026-03-27 15:03:40,231 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:03:40,232 [test_84_set_break.py-->line:49]:✅ 用例【设置五关节刹车开关】测试通过
+INFO 2026-03-27 15:03:40,233 [test_84_set_break.py-->line:50]:》》》》》用例【设置五关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:03:40,238 [test_84_set_break.py-->line:32]:》》》》》用例【设置六关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:03:40,238 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:03:40,238 [test_84_set_break.py-->line:34]:joint:6
+DEBUG 2026-03-27 15:03:41,266 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:03:41,267 [test_84_set_break.py-->line:49]:✅ 用例【设置六关节刹车开关】测试通过
+INFO 2026-03-27 15:03:41,267 [test_84_set_break.py-->line:50]:》》》》》用例【设置六关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:03:41,272 [test_84_set_break.py-->line:32]:》》》》》用例【设置六关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:03:41,273 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:03:41,273 [test_84_set_break.py-->line:34]:joint:6
+DEBUG 2026-03-27 15:03:42,287 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:03:42,288 [test_84_set_break.py-->line:49]:✅ 用例【设置六关节刹车开关】测试通过
+INFO 2026-03-27 15:03:42,289 [test_84_set_break.py-->line:50]:》》》》》用例【设置六关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:03:42,295 [test_84_set_break.py-->line:32]:》》》》》用例【设置七关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:03:42,296 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:03:42,296 [test_84_set_break.py-->line:34]:joint:7
+DEBUG 2026-03-27 15:03:43,324 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:03:43,325 [test_84_set_break.py-->line:49]:✅ 用例【设置七关节刹车开关】测试通过
+INFO 2026-03-27 15:03:43,326 [test_84_set_break.py-->line:50]:》》》》》用例【设置七关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:03:43,331 [test_84_set_break.py-->line:32]:》》》》》用例【设置七关节刹车开关】开始测试《《《《《
+DEBUG 2026-03-27 15:03:43,332 [test_84_set_break.py-->line:33]:test_api:set_break
+DEBUG 2026-03-27 15:03:43,333 [test_84_set_break.py-->line:34]:joint:7
+DEBUG 2026-03-27 15:03:44,351 [test_84_set_break.py-->line:39]:接口返回：1
+INFO 2026-03-27 15:03:44,352 [test_84_set_break.py-->line:49]:✅ 用例【设置七关节刹车开关】测试通过
+INFO 2026-03-27 15:03:44,353 [test_84_set_break.py-->line:50]:》》》》》用例【设置七关节刹车开关】测试完成《《《《《
+INFO 2026-03-27 15:03:44,359 [test_84_set_break.py-->line:59]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 15:03:44,360 [test_84_set_break.py-->line:60]:test_api:set_break
+DEBUG 2026-03-27 15:03:44,360 [test_84_set_break.py-->line:61]:joint:0
+INFO 2026-03-27 15:03:44,362 [test_84_set_break.py-->line:67]:✅ 用例【设置关节超限】异常断言通过
+INFO 2026-03-27 15:03:44,362 [test_84_set_break.py-->line:68]:》》》用例【设置关节超限】测试完成《《《
+INFO 2026-03-27 15:03:44,368 [test_84_set_break.py-->line:59]:》》》》》用例【设置关节超限】开始测试《《《《《
+DEBUG 2026-03-27 15:03:44,369 [test_84_set_break.py-->line:60]:test_api:set_break
+DEBUG 2026-03-27 15:03:44,370 [test_84_set_break.py-->line:61]:joint:8
+INFO 2026-03-27 15:03:44,371 [test_84_set_break.py-->line:67]:✅ 用例【设置关节超限】异常断言通过
+INFO 2026-03-27 15:03:44,372 [test_84_set_break.py-->line:68]:》》》用例【设置关节超限】测试完成《《《
+INFO 2026-03-27 15:03:44,378 [test_84_set_break.py-->line:59]:》》》》》用例【设置开关状态超限】开始测试《《《《《
+DEBUG 2026-03-27 15:03:44,378 [test_84_set_break.py-->line:60]:test_api:set_break
+DEBUG 2026-03-27 15:03:44,379 [test_84_set_break.py-->line:61]:joint:1
+INFO 2026-03-27 15:03:44,379 [test_84_set_break.py-->line:67]:✅ 用例【设置开关状态超限】异常断言通过
+INFO 2026-03-27 15:03:44,380 [test_84_set_break.py-->line:68]:》》》用例【设置开关状态超限】测试完成《《《
+INFO 2026-03-27 15:03:44,384 [test_84_set_break.py-->line:59]:》》》》》用例【设置开关状态超限】开始测试《《《《《
+DEBUG 2026-03-27 15:03:44,385 [test_84_set_break.py-->line:60]:test_api:set_break
+DEBUG 2026-03-27 15:03:44,385 [test_84_set_break.py-->line:61]:joint:2
+INFO 2026-03-27 15:03:44,386 [test_84_set_break.py-->line:67]:✅ 用例【设置开关状态超限】异常断言通过
+INFO 2026-03-27 15:03:44,386 [test_84_set_break.py-->line:68]:》》》用例【设置开关状态超限】测试完成《《《
+INFO 2026-03-27 15:03:44,391 [test_84_set_break.py-->line:77]:》》》》》用例【设置关节刹车开关（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 15:03:44,392 [test_84_set_break.py-->line:78]:test_api:set_break
+DEBUG 2026-03-27 15:03:49,672 [test_84_set_break.py-->line:86]:接口返回：None
+INFO 2026-03-27 15:03:53,024 [test_84_set_break.py-->line:99]:✅ 用例【设置关节刹车开关（仅上电）】测试成功
+INFO 2026-03-27 15:03:53,025 [test_84_set_break.py-->line:100]:》》》用例【设置关节刹车开关（仅上电）】测试完成《《《
+INFO 2026-03-27 15:03:53,030 [test_84_set_break.py-->line:109]:》》》》》用例【设置关节刹车开关（下电）】开始测试《《《《《
+DEBUG 2026-03-27 15:03:53,031 [test_84_set_break.py-->line:110]:test_api:set_break
+DEBUG 2026-03-27 15:03:57,351 [test_84_set_break.py-->line:118]:接口返回：None
+INFO 2026-03-27 15:04:02,704 [test_84_set_break.py-->line:131]:✅ 用例【设置关节刹车开关（下电）】测试成功
+INFO 2026-03-27 15:04:02,705 [test_84_set_break.py-->line:132]:》》》用例【设置关节刹车开关（下电）】测试完成《《《
+INFO 2026-03-27 15:04:05,875 [test_84_set_break.py-->line:23]:环境清理完成，接口测试结束
+INFO 2026-03-27 15:15:27,452 [test_85_release_all_servo.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 15:15:27,454 [test_85_release_all_servo.py-->line:30]:》》》》》用例【所有电机掉电】开始测试《《《《《
+DEBUG 2026-03-27 15:15:27,455 [test_85_release_all_servo.py-->line:31]:test_api:release_all_servo
+INFO 2026-03-27 15:15:27,621 [test_85_release_all_servo.py-->line:63]:》》》》》用例【所有电机掉电(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 15:15:27,622 [test_85_release_all_servo.py-->line:64]:test_api:release_all_servo
+INFO 2026-03-27 15:15:31,767 [test_85_release_all_servo.py-->line:94]:》》》》》用例【所有电机掉电(下电）】开始测试《《《《《
+DEBUG 2026-03-27 15:15:31,768 [test_85_release_all_servo.py-->line:95]:test_api:release_all_servo
+INFO 2026-03-27 15:15:44,722 [test_85_release_all_servo.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 15:18:04,337 [test_85_release_all_servo.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 15:18:04,339 [test_85_release_all_servo.py-->line:30]:》》》》》用例【所有电机掉电】开始测试《《《《《
+DEBUG 2026-03-27 15:18:04,340 [test_85_release_all_servo.py-->line:31]:test_api:release_all_servos
+DEBUG 2026-03-27 15:18:05,142 [test_85_release_all_servo.py-->line:35]:接口返回：1
+INFO 2026-03-27 15:18:22,091 [test_85_release_all_servo.py-->line:63]:》》》》》用例【所有电机掉电(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 15:18:22,092 [test_85_release_all_servo.py-->line:64]:test_api:release_all_servos
+DEBUG 2026-03-27 15:18:29,214 [test_85_release_all_servo.py-->line:71]:接口返回：None
+INFO 2026-03-27 15:18:32,571 [test_85_release_all_servo.py-->line:84]:✅ 用例【所有电机掉电(仅上电）】测试成功
+INFO 2026-03-27 15:18:32,571 [test_85_release_all_servo.py-->line:85]:》》》用例【所有电机掉电(仅上电）】测试完成《《《
+INFO 2026-03-27 15:18:32,577 [test_85_release_all_servo.py-->line:94]:》》》》》用例【所有电机掉电(下电）】开始测试《《《《《
+DEBUG 2026-03-27 15:18:32,578 [test_85_release_all_servo.py-->line:95]:test_api:release_all_servos
+DEBUG 2026-03-27 15:18:38,752 [test_85_release_all_servo.py-->line:102]:接口返回：None
+INFO 2026-03-27 15:18:44,100 [test_85_release_all_servo.py-->line:115]:✅ 用例【所有电机掉电(下电）】测试成功
+INFO 2026-03-27 15:18:44,101 [test_85_release_all_servo.py-->line:116]:》》》用例【所有电机掉电(下电）】测试完成《《《
+INFO 2026-03-27 15:18:47,270 [test_85_release_all_servo.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 15:19:39,354 [test_85_release_all_servos.py-->line:18]:初始化完成，接口测试开始
+INFO 2026-03-27 15:19:39,356 [test_85_release_all_servos.py-->line:30]:》》》》》用例【所有电机掉电】开始测试《《《《《
+DEBUG 2026-03-27 15:19:39,357 [test_85_release_all_servos.py-->line:31]:test_api:release_all_servos
+DEBUG 2026-03-27 15:19:40,154 [test_85_release_all_servos.py-->line:35]:接口返回：1
+INFO 2026-03-27 15:19:43,737 [test_85_release_all_servos.py-->line:53]:✅ 用例【所有电机掉电】测试通过
+INFO 2026-03-27 15:19:43,737 [test_85_release_all_servos.py-->line:54]:》》》》》用例【所有电机掉电】测试完成《《《《《
+INFO 2026-03-27 15:19:43,742 [test_85_release_all_servos.py-->line:63]:》》》》》用例【所有电机掉电(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 15:19:43,743 [test_85_release_all_servos.py-->line:64]:test_api:release_all_servos
+DEBUG 2026-03-27 15:19:51,863 [test_85_release_all_servos.py-->line:71]:接口返回：None
+INFO 2026-03-27 15:19:55,214 [test_85_release_all_servos.py-->line:84]:✅ 用例【所有电机掉电(仅上电）】测试成功
+INFO 2026-03-27 15:19:55,214 [test_85_release_all_servos.py-->line:85]:》》》用例【所有电机掉电(仅上电）】测试完成《《《
+INFO 2026-03-27 15:19:55,220 [test_85_release_all_servos.py-->line:94]:》》》》》用例【所有电机掉电(下电）】开始测试《《《《《
+DEBUG 2026-03-27 15:19:55,220 [test_85_release_all_servos.py-->line:95]:test_api:release_all_servos
+DEBUG 2026-03-27 15:20:01,395 [test_85_release_all_servos.py-->line:102]:接口返回：None
+INFO 2026-03-27 15:20:06,760 [test_85_release_all_servos.py-->line:115]:✅ 用例【所有电机掉电(下电）】测试成功
+INFO 2026-03-27 15:20:06,761 [test_85_release_all_servos.py-->line:116]:》》》用例【所有电机掉电(下电）】测试完成《《《
+INFO 2026-03-27 15:20:09,921 [test_85_release_all_servos.py-->line:21]:环境清理完成，接口测试结束
+INFO 2026-03-27 15:25:43,095 [test_85_release_all_servos.py-->line:19]:初始化完成，接口测试开始
+INFO 2026-03-27 15:25:43,097 [test_85_release_all_servos.py-->line:31]:》》》》》用例【所有电机掉电】开始测试《《《《《
+DEBUG 2026-03-27 15:25:43,097 [test_85_release_all_servos.py-->line:32]:test_api:release_all_servos
+DEBUG 2026-03-27 15:25:43,902 [test_85_release_all_servos.py-->line:36]:接口返回：1
+INFO 2026-03-27 15:25:48,928 [test_85_release_all_servos.py-->line:54]:✅ 用例【所有电机掉电】测试通过
+INFO 2026-03-27 15:25:48,929 [test_85_release_all_servos.py-->line:55]:》》》》》用例【所有电机掉电】测试完成《《《《《
+INFO 2026-03-27 15:25:48,934 [test_85_release_all_servos.py-->line:64]:》》》》》用例【所有电机掉电(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 15:25:48,934 [test_85_release_all_servos.py-->line:65]:test_api:release_all_servos
+DEBUG 2026-03-27 15:25:56,066 [test_85_release_all_servos.py-->line:72]:接口返回：None
+INFO 2026-03-27 15:25:59,418 [test_85_release_all_servos.py-->line:85]:✅ 用例【所有电机掉电(仅上电）】测试成功
+INFO 2026-03-27 15:25:59,420 [test_85_release_all_servos.py-->line:86]:》》》用例【所有电机掉电(仅上电）】测试完成《《《
+INFO 2026-03-27 15:25:59,425 [test_85_release_all_servos.py-->line:95]:》》》》》用例【所有电机掉电(下电）】开始测试《《《《《
+DEBUG 2026-03-27 15:25:59,426 [test_85_release_all_servos.py-->line:96]:test_api:release_all_servos
+DEBUG 2026-03-27 15:26:05,583 [test_85_release_all_servos.py-->line:103]:接口返回：None
+INFO 2026-03-27 15:26:10,928 [test_85_release_all_servos.py-->line:116]:✅ 用例【所有电机掉电(下电）】测试成功
+INFO 2026-03-27 15:26:10,928 [test_85_release_all_servos.py-->line:117]:》》》用例【所有电机掉电(下电）】测试完成《《《
+INFO 2026-03-27 15:26:14,089 [test_85_release_all_servos.py-->line:22]:环境清理完成，接口测试结束
+INFO 2026-03-27 15:27:09,547 [test_86_focus_all_servos.py-->line:21]:初始化完成，接口测试开始
+INFO 2026-03-27 15:27:09,549 [test_86_focus_all_servos.py-->line:33]:》》》》》用例【所有电机上电】开始测试《《《《《
+DEBUG 2026-03-27 15:27:09,550 [test_86_focus_all_servos.py-->line:34]:test_api:focus_all_servos
+INFO 2026-03-27 15:27:11,516 [test_86_focus_all_servos.py-->line:67]:》》》》》用例【所有电机上电(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 15:27:11,516 [test_86_focus_all_servos.py-->line:68]:test_api:focus_all_servos
+INFO 2026-03-27 15:27:15,662 [test_86_focus_all_servos.py-->line:98]:》》》》》用例【所有电机上电(下电）】开始测试《《《《《
+DEBUG 2026-03-27 15:27:15,663 [test_86_focus_all_servos.py-->line:99]:test_api:focus_all_servos
+INFO 2026-03-27 15:27:28,622 [test_86_focus_all_servos.py-->line:24]:环境清理完成，接口测试结束
+INFO 2026-03-27 15:28:14,235 [test_86_focus_all_servos.py-->line:21]:初始化完成，接口测试开始
+INFO 2026-03-27 15:28:14,237 [test_86_focus_all_servos.py-->line:33]:》》》》》用例【所有电机上电】开始测试《《《《《
+DEBUG 2026-03-27 15:28:14,237 [test_86_focus_all_servos.py-->line:34]:test_api:focus_all_servos
+DEBUG 2026-03-27 15:28:16,279 [test_86_focus_all_servos.py-->line:42]:接口返回：1
+INFO 2026-03-27 15:28:19,707 [test_86_focus_all_servos.py-->line:57]:✅ 用例【所有电机上电】测试通过
+INFO 2026-03-27 15:28:19,707 [test_86_focus_all_servos.py-->line:58]:》》》》》用例【所有电机上电】测试完成《《《《《
+INFO 2026-03-27 15:28:19,712 [test_86_focus_all_servos.py-->line:67]:》》》》》用例【所有电机上电(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 15:28:19,713 [test_86_focus_all_servos.py-->line:68]:test_api:focus_all_servos
+DEBUG 2026-03-27 15:28:26,834 [test_86_focus_all_servos.py-->line:75]:接口返回：None
+INFO 2026-03-27 15:28:30,190 [test_86_focus_all_servos.py-->line:88]:✅ 用例【所有电机上电(仅上电）】测试成功
+INFO 2026-03-27 15:28:30,190 [test_86_focus_all_servos.py-->line:89]:》》》用例【所有电机上电(仅上电）】测试完成《《《
+INFO 2026-03-27 15:28:30,195 [test_86_focus_all_servos.py-->line:98]:》》》》》用例【所有电机上电(下电）】开始测试《《《《《
+DEBUG 2026-03-27 15:28:30,196 [test_86_focus_all_servos.py-->line:99]:test_api:focus_all_servos
+DEBUG 2026-03-27 15:28:36,363 [test_86_focus_all_servos.py-->line:106]:接口返回：None
+INFO 2026-03-27 15:28:41,715 [test_86_focus_all_servos.py-->line:119]:✅ 用例【所有电机上电(下电）】测试成功
+INFO 2026-03-27 15:28:41,716 [test_86_focus_all_servos.py-->line:120]:》》》用例【所有电机上电(下电）】测试完成《《《
+INFO 2026-03-27 15:28:44,892 [test_86_focus_all_servos.py-->line:24]:环境清理完成，接口测试结束
+INFO 2026-03-27 16:10:30,679 [test_85_release_all_servos.py-->line:19]:初始化完成，接口测试开始
+INFO 2026-03-27 16:10:30,681 [test_85_release_all_servos.py-->line:31]:》》》》》用例【所有电机掉电】开始测试《《《《《
+DEBUG 2026-03-27 16:10:30,681 [test_85_release_all_servos.py-->line:32]:test_api:release_all_servos
+DEBUG 2026-03-27 16:10:31,476 [test_85_release_all_servos.py-->line:36]:接口返回：1
+INFO 2026-03-27 16:10:37,518 [test_85_release_all_servos.py-->line:54]:✅ 用例【所有电机掉电】测试通过
+INFO 2026-03-27 16:10:37,518 [test_85_release_all_servos.py-->line:55]:》》》》》用例【所有电机掉电】测试完成《《《《《
+INFO 2026-03-27 16:10:37,524 [test_85_release_all_servos.py-->line:64]:》》》》》用例【所有电机掉电(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 16:10:37,525 [test_85_release_all_servos.py-->line:65]:test_api:release_all_servos
+DEBUG 2026-03-27 16:10:44,662 [test_85_release_all_servos.py-->line:72]:接口返回：None
+INFO 2026-03-27 16:10:48,014 [test_85_release_all_servos.py-->line:85]:✅ 用例【所有电机掉电(仅上电）】测试成功
+INFO 2026-03-27 16:10:48,015 [test_85_release_all_servos.py-->line:86]:》》》用例【所有电机掉电(仅上电）】测试完成《《《
+INFO 2026-03-27 16:10:48,020 [test_85_release_all_servos.py-->line:95]:》》》》》用例【所有电机掉电(下电）】开始测试《《《《《
+DEBUG 2026-03-27 16:10:48,021 [test_85_release_all_servos.py-->line:96]:test_api:release_all_servos
+INFO 2026-03-27 16:11:07,831 [test_87_write_move_c_r.py-->line:20]:初始化完成，接口测试开始
+INFO 2026-03-27 16:11:07,833 [test_87_write_move_c_r.py-->line:33]:》》》》》用例【圆弧轨迹运动（优弧）】开始测试《《《《《
+DEBUG 2026-03-27 16:11:07,833 [test_87_write_move_c_r.py-->line:34]:test_api:write_move_c_r
+INFO 2026-03-27 16:11:10,159 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 16:11:10,471 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 16:11:12,707 [test_87_write_move_c_r.py-->line:45]:接口返回：0,get_res返回：[299.9, 0.0, 158.3, 179.99, 19.99, 10.0]
+INFO 2026-03-27 16:11:12,904 [test_87_write_move_c_r.py-->line:33]:》》》》》用例【圆弧轨迹运动（劣弧）】开始测试《《《《《
+DEBUG 2026-03-27 16:11:12,904 [test_87_write_move_c_r.py-->line:34]:test_api:write_move_c_r
+INFO 2026-03-27 16:11:14,055 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 16:11:14,369 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 16:11:16,610 [test_87_write_move_c_r.py-->line:45]:接口返回：0,get_res返回：[299.9, 0.0, 158.3, 179.99, 19.99, 10.0]
+INFO 2026-03-27 16:11:16,637 [test_87_write_move_c_r.py-->line:72]:》》》》》用例【设置半径超限】开始测试《《《《《
+DEBUG 2026-03-27 16:11:16,638 [test_87_write_move_c_r.py-->line:73]:test_api:write_move_c_r
+INFO 2026-03-27 16:11:16,660 [test_87_write_move_c_r.py-->line:72]:》》》》》用例【设置半径超限】开始测试《《《《《
+DEBUG 2026-03-27 16:11:16,660 [test_87_write_move_c_r.py-->line:73]:test_api:write_move_c_r
+INFO 2026-03-27 16:11:16,681 [test_87_write_move_c_r.py-->line:72]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2026-03-27 16:11:16,682 [test_87_write_move_c_r.py-->line:73]:test_api:write_move_c_r
+INFO 2026-03-27 16:11:16,703 [test_87_write_move_c_r.py-->line:72]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2026-03-27 16:11:16,703 [test_87_write_move_c_r.py-->line:73]:test_api:write_move_c_r
+INFO 2026-03-27 16:11:16,724 [test_87_write_move_c_r.py-->line:72]:》》》》》用例【设置rank值超限】开始测试《《《《《
+DEBUG 2026-03-27 16:11:16,724 [test_87_write_move_c_r.py-->line:73]:test_api:write_move_c_r
+INFO 2026-03-27 16:11:16,746 [test_87_write_move_c_r.py-->line:72]:》》》》》用例【设置rank值超限】开始测试《《《《《
+DEBUG 2026-03-27 16:11:16,746 [test_87_write_move_c_r.py-->line:73]:test_api:write_move_c_r
+INFO 2026-03-27 16:11:16,767 [test_87_write_move_c_r.py-->line:91]:》》》》》用例【圆弧轨迹运动（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 16:11:16,768 [test_87_write_move_c_r.py-->line:92]:test_api:write_move_c_r
+DEBUG 2026-03-27 16:11:23,555 [test_87_write_move_c_r.py-->line:100]:接口返回：-1
+INFO 2026-03-27 16:11:23,577 [test_87_write_move_c_r.py-->line:124]:》》》》》用例【圆弧轨迹运动（下电）】开始测试《《《《《
+DEBUG 2026-03-27 16:11:23,578 [test_87_write_move_c_r.py-->line:125]:test_api:write_move_c_r
+DEBUG 2026-03-27 16:11:31,695 [test_87_write_move_c_r.py-->line:133]:接口返回：-1
+INFO 2026-03-27 16:11:39,187 [test_87_write_move_c_r.py-->line:23]:环境清理完成，接口测试结束
+INFO 2026-03-27 16:14:07,646 [test_87_write_move_c_r.py-->line:20]:初始化完成，接口测试开始
+INFO 2026-03-27 16:14:07,648 [test_87_write_move_c_r.py-->line:33]:》》》》》用例【圆弧轨迹运动（优弧）】开始测试《《《《《
+DEBUG 2026-03-27 16:14:07,649 [test_87_write_move_c_r.py-->line:34]:test_api:write_move_c_r
+INFO 2026-03-27 16:14:09,974 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 16:14:10,285 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 16:14:12,522 [test_87_write_move_c_r.py-->line:45]:接口返回：0,get_res返回：[299.9, 0.0, 158.2, 179.99, 19.99, 10.0]
+INFO 2026-03-27 16:14:12,708 [test_87_write_move_c_r.py-->line:33]:》》》》》用例【圆弧轨迹运动（劣弧）】开始测试《《《《《
+DEBUG 2026-03-27 16:14:12,708 [test_87_write_move_c_r.py-->line:34]:test_api:write_move_c_r
+INFO 2026-03-27 16:14:13,868 [settings.py-->line:130]:当前运动状态为0
+INFO 2026-03-27 16:14:14,179 [settings.py-->line:144]:机械臂运动完成
+DEBUG 2026-03-27 16:14:16,414 [test_87_write_move_c_r.py-->line:45]:接口返回：0,get_res返回：[300.0, 0.0, 158.2, 179.99, 19.99, 10.0]
+INFO 2026-03-27 16:14:16,441 [test_87_write_move_c_r.py-->line:72]:》》》》》用例【设置半径超限】开始测试《《《《《
+DEBUG 2026-03-27 16:14:16,442 [test_87_write_move_c_r.py-->line:73]:test_api:write_move_c_r
+INFO 2026-03-27 16:14:16,443 [test_87_write_move_c_r.py-->line:79]:✅ 用例【设置半径超限】异常断言通过
+INFO 2026-03-27 16:14:16,443 [test_87_write_move_c_r.py-->line:80]:》》》用例【设置半径超限】测试完成《《《
+INFO 2026-03-27 16:14:16,448 [test_87_write_move_c_r.py-->line:72]:》》》》》用例【设置半径超限】开始测试《《《《《
+DEBUG 2026-03-27 16:14:16,449 [test_87_write_move_c_r.py-->line:73]:test_api:write_move_c_r
+INFO 2026-03-27 16:14:16,449 [test_87_write_move_c_r.py-->line:79]:✅ 用例【设置半径超限】异常断言通过
+INFO 2026-03-27 16:14:16,450 [test_87_write_move_c_r.py-->line:80]:》》》用例【设置半径超限】测试完成《《《
+INFO 2026-03-27 16:14:16,455 [test_87_write_move_c_r.py-->line:72]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2026-03-27 16:14:16,455 [test_87_write_move_c_r.py-->line:73]:test_api:write_move_c_r
+INFO 2026-03-27 16:14:16,456 [test_87_write_move_c_r.py-->line:79]:✅ 用例【设置速度超限】异常断言通过
+INFO 2026-03-27 16:14:16,456 [test_87_write_move_c_r.py-->line:80]:》》》用例【设置速度超限】测试完成《《《
+INFO 2026-03-27 16:14:16,461 [test_87_write_move_c_r.py-->line:72]:》》》》》用例【设置速度超限】开始测试《《《《《
+DEBUG 2026-03-27 16:14:16,462 [test_87_write_move_c_r.py-->line:73]:test_api:write_move_c_r
+INFO 2026-03-27 16:14:16,462 [test_87_write_move_c_r.py-->line:79]:✅ 用例【设置速度超限】异常断言通过
+INFO 2026-03-27 16:14:16,463 [test_87_write_move_c_r.py-->line:80]:》》》用例【设置速度超限】测试完成《《《
+INFO 2026-03-27 16:14:16,467 [test_87_write_move_c_r.py-->line:72]:》》》》》用例【设置rank值超限】开始测试《《《《《
+DEBUG 2026-03-27 16:14:16,468 [test_87_write_move_c_r.py-->line:73]:test_api:write_move_c_r
+INFO 2026-03-27 16:14:16,469 [test_87_write_move_c_r.py-->line:79]:✅ 用例【设置rank值超限】异常断言通过
+INFO 2026-03-27 16:14:16,469 [test_87_write_move_c_r.py-->line:80]:》》》用例【设置rank值超限】测试完成《《《
+INFO 2026-03-27 16:14:16,474 [test_87_write_move_c_r.py-->line:72]:》》》》》用例【设置rank值超限】开始测试《《《《《
+DEBUG 2026-03-27 16:14:16,474 [test_87_write_move_c_r.py-->line:73]:test_api:write_move_c_r
+INFO 2026-03-27 16:14:16,475 [test_87_write_move_c_r.py-->line:79]:✅ 用例【设置rank值超限】异常断言通过
+INFO 2026-03-27 16:14:16,475 [test_87_write_move_c_r.py-->line:80]:》》》用例【设置rank值超限】测试完成《《《
+INFO 2026-03-27 16:14:16,480 [test_87_write_move_c_r.py-->line:90]:》》》》》用例【圆弧轨迹运动（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 16:14:16,481 [test_87_write_move_c_r.py-->line:91]:test_api:write_move_c_r
+DEBUG 2026-03-27 16:14:23,419 [test_87_write_move_c_r.py-->line:99]:接口返回：-1
+INFO 2026-03-27 16:14:26,775 [test_87_write_move_c_r.py-->line:112]:✅ 用例【圆弧轨迹运动（仅上电）】测试成功
+INFO 2026-03-27 16:14:26,775 [test_87_write_move_c_r.py-->line:113]:》》》用例【圆弧轨迹运动（仅上电）】测试完成《《《
+INFO 2026-03-27 16:14:26,781 [test_87_write_move_c_r.py-->line:123]:》》》》》用例【圆弧轨迹运动（下电）】开始测试《《《《《
+DEBUG 2026-03-27 16:14:26,781 [test_87_write_move_c_r.py-->line:124]:test_api:write_move_c_r
+DEBUG 2026-03-27 16:14:32,745 [test_87_write_move_c_r.py-->line:132]:接口返回：-1
+INFO 2026-03-27 16:14:38,088 [test_87_write_move_c_r.py-->line:145]:✅ 用例【圆弧轨迹运动（下电）】测试成功
+INFO 2026-03-27 16:14:38,089 [test_87_write_move_c_r.py-->line:146]:》》》用例【圆弧轨迹运动（下电）】测试完成《《《
+INFO 2026-03-27 16:14:41,249 [test_87_write_move_c_r.py-->line:23]:环境清理完成，接口测试结束
+INFO 2026-03-27 16:20:59,867 [test_88_get_zero_pos.py-->line:21]:初始化完成，接口测试开始
+INFO 2026-03-27 16:20:59,869 [test_88_get_zero_pos.py-->line:33]:》》》》》用例【读取零位编码器值
+】开始测试《《《《《
+DEBUG 2026-03-27 16:20:59,869 [test_88_get_zero_pos.py-->line:34]:test_api:get_zero_pos
+DEBUG 2026-03-27 16:20:59,884 [test_88_get_zero_pos.py-->line:38]:接口返回：[1071325698, 1075314568, 1073611907, 1076027655, 1073936641, 1080110340, 870990338]
+INFO 2026-03-27 16:21:00,063 [test_88_get_zero_pos.py-->line:58]:》》》》》用例【读取零位编码器值(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 16:21:00,063 [test_88_get_zero_pos.py-->line:59]:test_api:get_zero_pos
+DEBUG 2026-03-27 16:21:04,348 [test_88_get_zero_pos.py-->line:66]:接口返回：None
+INFO 2026-03-27 16:21:07,700 [test_88_get_zero_pos.py-->line:79]:✅ 用例【读取零位编码器值(仅上电）】测试成功
+INFO 2026-03-27 16:21:07,701 [test_88_get_zero_pos.py-->line:80]:》》》用例【读取零位编码器值(仅上电）】测试完成《《《
+INFO 2026-03-27 16:21:07,707 [test_88_get_zero_pos.py-->line:89]:》》》》》用例【读取零位编码器值(下电）】开始测试《《《《《
+DEBUG 2026-03-27 16:21:07,708 [test_88_get_zero_pos.py-->line:90]:test_api:get_zero_pos
+DEBUG 2026-03-27 16:21:11,024 [test_88_get_zero_pos.py-->line:97]:接口返回：None
+INFO 2026-03-27 16:21:19,174 [test_88_get_zero_pos.py-->line:24]:环境清理完成，接口测试结束
+INFO 2026-03-27 16:23:00,492 [test_88_get_zero_pos.py-->line:21]:初始化完成，接口测试开始
+INFO 2026-03-27 16:23:00,494 [test_88_get_zero_pos.py-->line:33]:》》》》》用例【读取零位编码器值
+】开始测试《《《《《
+DEBUG 2026-03-27 16:23:00,495 [test_88_get_zero_pos.py-->line:34]:test_api:get_zero_pos
+DEBUG 2026-03-27 16:23:00,509 [test_88_get_zero_pos.py-->line:38]:接口返回：[1071325698, 1075314568, 1073611907, 1076027655, 1073936641, 1080110340, 870990338]
+INFO 2026-03-27 16:23:00,510 [test_88_get_zero_pos.py-->line:48]:✅ 用例【读取零位编码器值
+】测试通过
+INFO 2026-03-27 16:23:00,510 [test_88_get_zero_pos.py-->line:49]:》》》》》用例【读取零位编码器值
+】测试完成《《《《《
+INFO 2026-03-27 16:23:00,515 [test_88_get_zero_pos.py-->line:58]:》》》》》用例【读取零位编码器值(仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 16:23:00,516 [test_88_get_zero_pos.py-->line:59]:test_api:get_zero_pos
+DEBUG 2026-03-27 16:23:04,790 [test_88_get_zero_pos.py-->line:66]:接口返回：None
+INFO 2026-03-27 16:23:08,142 [test_88_get_zero_pos.py-->line:79]:✅ 用例【读取零位编码器值(仅上电）】测试成功
+INFO 2026-03-27 16:23:08,143 [test_88_get_zero_pos.py-->line:80]:》》》用例【读取零位编码器值(仅上电）】测试完成《《《
+INFO 2026-03-27 16:23:08,148 [test_88_get_zero_pos.py-->line:89]:》》》》》用例【读取零位编码器值(下电）】开始测试《《《《《
+DEBUG 2026-03-27 16:23:08,149 [test_88_get_zero_pos.py-->line:90]:test_api:get_zero_pos
+DEBUG 2026-03-27 16:23:11,469 [test_88_get_zero_pos.py-->line:97]:接口返回：None
+INFO 2026-03-27 16:23:16,816 [test_88_get_zero_pos.py-->line:110]:✅ 用例【读取零位编码器值(下电）】测试成功
+INFO 2026-03-27 16:23:16,816 [test_88_get_zero_pos.py-->line:111]:》》》用例【读取零位编码器值(下电）】测试完成《《《
+INFO 2026-03-27 16:23:19,982 [test_88_get_zero_pos.py-->line:24]:环境清理完成，接口测试结束
+INFO 2026-03-27 17:27:33,568 [test_89_get_digital_inputs.py-->line:21]:初始化完成，接口测试开始
+INFO 2026-03-27 17:27:33,572 [test_89_get_digital_inputs.py-->line:33]:》》》》》用例【读取末端所有引脚状态（松开末端）】开始测试《《《《《
+DEBUG 2026-03-27 17:27:33,572 [test_89_get_digital_inputs.py-->line:34]:test_api:get_digital_inputs
+DEBUG 2026-03-27 17:27:33,595 [test_89_get_digital_inputs.py-->line:43]:接口返回：[1, 1, 0]
+INFO 2026-03-27 17:27:33,596 [test_89_get_digital_inputs.py-->line:53]:✅ 用例【读取末端所有引脚状态（松开末端）】测试通过
+INFO 2026-03-27 17:27:33,597 [test_89_get_digital_inputs.py-->line:54]:》》》》》用例【读取末端所有引脚状态（松开末端）】测试完成《《《《《
+INFO 2026-03-27 17:27:33,603 [test_89_get_digital_inputs.py-->line:33]:》》》》》用例【读取末端所有引脚状态（按下末端）】开始测试《《《《《
+DEBUG 2026-03-27 17:27:33,604 [test_89_get_digital_inputs.py-->line:34]:test_api:get_digital_inputs
+DEBUG 2026-03-27 17:27:33,629 [test_89_get_digital_inputs.py-->line:43]:接口返回：[1, 1, 0]
+INFO 2026-03-27 17:27:33,916 [test_89_get_digital_inputs.py-->line:63]:》》》》》用例【读取末端所有引脚状态（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 17:27:33,917 [test_89_get_digital_inputs.py-->line:64]:test_api:get_digital_inputs
+DEBUG 2026-03-27 17:27:38,195 [test_89_get_digital_inputs.py-->line:71]:接口返回：None
+INFO 2026-03-27 17:27:41,551 [test_89_get_digital_inputs.py-->line:84]:✅ 用例【读取末端所有引脚状态（仅上电）】测试成功
+INFO 2026-03-27 17:27:41,552 [test_89_get_digital_inputs.py-->line:85]:》》》用例【读取末端所有引脚状态（仅上电）】测试完成《《《
+INFO 2026-03-27 17:27:41,557 [test_89_get_digital_inputs.py-->line:94]:》》》》》用例【读取末端所有引脚状态(下电）】开始测试《《《《《
+DEBUG 2026-03-27 17:27:41,558 [test_89_get_digital_inputs.py-->line:95]:test_api:get_digital_inputs
+DEBUG 2026-03-27 17:27:44,873 [test_89_get_digital_inputs.py-->line:102]:接口返回：None
+INFO 2026-03-27 17:27:50,225 [test_89_get_digital_inputs.py-->line:115]:✅ 用例【读取末端所有引脚状态(下电）】测试成功
+INFO 2026-03-27 17:27:50,226 [test_89_get_digital_inputs.py-->line:116]:》》》用例【读取末端所有引脚状态(下电）】测试完成《《《
+INFO 2026-03-27 17:27:53,388 [test_89_get_digital_inputs.py-->line:24]:环境清理完成，接口测试结束
+INFO 2026-03-27 17:28:39,986 [test_89_get_digital_inputs.py-->line:21]:初始化完成，接口测试开始
+INFO 2026-03-27 17:28:39,988 [test_89_get_digital_inputs.py-->line:33]:》》》》》用例【读取末端所有引脚状态（松开末端）】开始测试《《《《《
+DEBUG 2026-03-27 17:28:39,988 [test_89_get_digital_inputs.py-->line:34]:test_api:get_digital_inputs
+DEBUG 2026-03-27 17:28:40,017 [test_89_get_digital_inputs.py-->line:43]:接口返回：[1, 1, 0]
+INFO 2026-03-27 17:28:40,018 [test_89_get_digital_inputs.py-->line:53]:✅ 用例【读取末端所有引脚状态（松开末端）】测试通过
+INFO 2026-03-27 17:28:40,018 [test_89_get_digital_inputs.py-->line:54]:》》》》》用例【读取末端所有引脚状态（松开末端）】测试完成《《《《《
+INFO 2026-03-27 17:28:40,023 [test_89_get_digital_inputs.py-->line:33]:》》》》》用例【读取末端所有引脚状态（按下末端）】开始测试《《《《《
+DEBUG 2026-03-27 17:28:40,023 [test_89_get_digital_inputs.py-->line:34]:test_api:get_digital_inputs
+DEBUG 2026-03-27 17:28:40,042 [test_89_get_digital_inputs.py-->line:43]:接口返回：[1, 1, 0]
+INFO 2026-03-27 17:28:40,313 [test_89_get_digital_inputs.py-->line:63]:》》》》》用例【读取末端所有引脚状态（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 17:28:40,314 [test_89_get_digital_inputs.py-->line:64]:test_api:get_digital_inputs
+DEBUG 2026-03-27 17:28:44,587 [test_89_get_digital_inputs.py-->line:71]:接口返回：None
+INFO 2026-03-27 17:28:47,949 [test_89_get_digital_inputs.py-->line:84]:✅ 用例【读取末端所有引脚状态（仅上电）】测试成功
+INFO 2026-03-27 17:28:47,950 [test_89_get_digital_inputs.py-->line:85]:》》》用例【读取末端所有引脚状态（仅上电）】测试完成《《《
+INFO 2026-03-27 17:28:47,956 [test_89_get_digital_inputs.py-->line:94]:》》》》》用例【读取末端所有引脚状态(下电）】开始测试《《《《《
+DEBUG 2026-03-27 17:28:47,957 [test_89_get_digital_inputs.py-->line:95]:test_api:get_digital_inputs
+DEBUG 2026-03-27 17:28:51,274 [test_89_get_digital_inputs.py-->line:102]:接口返回：None
+INFO 2026-03-27 17:28:56,625 [test_89_get_digital_inputs.py-->line:115]:✅ 用例【读取末端所有引脚状态(下电）】测试成功
+INFO 2026-03-27 17:28:56,627 [test_89_get_digital_inputs.py-->line:116]:》》》用例【读取末端所有引脚状态(下电）】测试完成《《《
+INFO 2026-03-27 17:28:59,791 [test_89_get_digital_inputs.py-->line:24]:环境清理完成，接口测试结束
+INFO 2026-03-27 17:29:12,315 [test_89_get_digital_inputs.py-->line:21]:初始化完成，接口测试开始
+INFO 2026-03-27 17:29:12,317 [test_89_get_digital_inputs.py-->line:33]:》》》》》用例【读取末端所有引脚状态（松开末端）】开始测试《《《《《
+DEBUG 2026-03-27 17:29:12,317 [test_89_get_digital_inputs.py-->line:34]:test_api:get_digital_inputs
+DEBUG 2026-03-27 17:29:14,121 [test_89_get_digital_inputs.py-->line:43]:接口返回：[1, 1, 0]
+INFO 2026-03-27 17:29:14,122 [test_89_get_digital_inputs.py-->line:53]:✅ 用例【读取末端所有引脚状态（松开末端）】测试通过
+INFO 2026-03-27 17:29:14,122 [test_89_get_digital_inputs.py-->line:54]:》》》》》用例【读取末端所有引脚状态（松开末端）】测试完成《《《《《
+INFO 2026-03-27 17:29:14,128 [test_89_get_digital_inputs.py-->line:33]:》》》》》用例【读取末端所有引脚状态（按下末端）】开始测试《《《《《
+DEBUG 2026-03-27 17:29:14,129 [test_89_get_digital_inputs.py-->line:34]:test_api:get_digital_inputs
+DEBUG 2026-03-27 17:29:16,858 [test_89_get_digital_inputs.py-->line:43]:接口返回：[1, 1, 0]
+INFO 2026-03-27 17:29:17,128 [test_89_get_digital_inputs.py-->line:63]:》》》》》用例【读取末端所有引脚状态（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 17:29:17,128 [test_89_get_digital_inputs.py-->line:64]:test_api:get_digital_inputs
+DEBUG 2026-03-27 17:29:21,403 [test_89_get_digital_inputs.py-->line:71]:接口返回：None
+INFO 2026-03-27 17:29:24,751 [test_89_get_digital_inputs.py-->line:84]:✅ 用例【读取末端所有引脚状态（仅上电）】测试成功
+INFO 2026-03-27 17:29:24,751 [test_89_get_digital_inputs.py-->line:85]:》》》用例【读取末端所有引脚状态（仅上电）】测试完成《《《
+INFO 2026-03-27 17:29:24,757 [test_89_get_digital_inputs.py-->line:94]:》》》》》用例【读取末端所有引脚状态(下电）】开始测试《《《《《
+DEBUG 2026-03-27 17:29:24,757 [test_89_get_digital_inputs.py-->line:95]:test_api:get_digital_inputs
+DEBUG 2026-03-27 17:29:28,076 [test_89_get_digital_inputs.py-->line:102]:接口返回：None
+INFO 2026-03-27 17:29:33,426 [test_89_get_digital_inputs.py-->line:115]:✅ 用例【读取末端所有引脚状态(下电）】测试成功
+INFO 2026-03-27 17:29:33,426 [test_89_get_digital_inputs.py-->line:116]:》》》用例【读取末端所有引脚状态(下电）】测试完成《《《
+INFO 2026-03-27 17:29:36,584 [test_89_get_digital_inputs.py-->line:24]:环境清理完成，接口测试结束
+INFO 2026-03-27 17:29:46,709 [test_89_get_digital_inputs.py-->line:21]:初始化完成，接口测试开始
+INFO 2026-03-27 17:29:46,711 [test_89_get_digital_inputs.py-->line:33]:》》》》》用例【读取末端所有引脚状态（松开末端）】开始测试《《《《《
+DEBUG 2026-03-27 17:29:46,711 [test_89_get_digital_inputs.py-->line:34]:test_api:get_digital_inputs
+DEBUG 2026-03-27 17:29:48,301 [test_89_get_digital_inputs.py-->line:43]:接口返回：[1, 1, 0]
+INFO 2026-03-27 17:29:48,302 [test_89_get_digital_inputs.py-->line:53]:✅ 用例【读取末端所有引脚状态（松开末端）】测试通过
+INFO 2026-03-27 17:29:48,302 [test_89_get_digital_inputs.py-->line:54]:》》》》》用例【读取末端所有引脚状态（松开末端）】测试完成《《《《《
+INFO 2026-03-27 17:29:48,308 [test_89_get_digital_inputs.py-->line:33]:》》》》》用例【读取末端所有引脚状态（按下末端）】开始测试《《《《《
+DEBUG 2026-03-27 17:29:48,308 [test_89_get_digital_inputs.py-->line:34]:test_api:get_digital_inputs
+DEBUG 2026-03-27 17:29:51,155 [test_89_get_digital_inputs.py-->line:43]:接口返回：[1, 1, 1]
+INFO 2026-03-27 17:29:51,156 [test_89_get_digital_inputs.py-->line:53]:✅ 用例【读取末端所有引脚状态（按下末端）】测试通过
+INFO 2026-03-27 17:29:51,157 [test_89_get_digital_inputs.py-->line:54]:》》》》》用例【读取末端所有引脚状态（按下末端）】测试完成《《《《《
+INFO 2026-03-27 17:29:51,162 [test_89_get_digital_inputs.py-->line:63]:》》》》》用例【读取末端所有引脚状态（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 17:29:51,163 [test_89_get_digital_inputs.py-->line:64]:test_api:get_digital_inputs
+DEBUG 2026-03-27 17:29:55,451 [test_89_get_digital_inputs.py-->line:71]:接口返回：None
+INFO 2026-03-27 17:29:58,809 [test_89_get_digital_inputs.py-->line:84]:✅ 用例【读取末端所有引脚状态（仅上电）】测试成功
+INFO 2026-03-27 17:29:58,810 [test_89_get_digital_inputs.py-->line:85]:》》》用例【读取末端所有引脚状态（仅上电）】测试完成《《《
+INFO 2026-03-27 17:29:58,816 [test_89_get_digital_inputs.py-->line:94]:》》》》》用例【读取末端所有引脚状态(下电）】开始测试《《《《《
+DEBUG 2026-03-27 17:29:58,817 [test_89_get_digital_inputs.py-->line:95]:test_api:get_digital_inputs
+DEBUG 2026-03-27 17:30:02,139 [test_89_get_digital_inputs.py-->line:102]:接口返回：None
+INFO 2026-03-27 17:30:07,492 [test_89_get_digital_inputs.py-->line:115]:✅ 用例【读取末端所有引脚状态(下电）】测试成功
+INFO 2026-03-27 17:30:07,493 [test_89_get_digital_inputs.py-->line:116]:》》》用例【读取末端所有引脚状态(下电）】测试完成《《《
+INFO 2026-03-27 17:30:10,646 [test_89_get_digital_inputs.py-->line:24]:环境清理完成，接口测试结束
+INFO 2026-03-27 17:31:26,013 [test_90_is_btn_clicked.py-->line:21]:初始化完成，接口测试开始
+INFO 2026-03-27 17:31:26,213 [test_90_is_btn_clicked.py-->line:63]:》》》》》用例【末端led按钮是否按下（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 17:31:26,213 [test_90_is_btn_clicked.py-->line:64]:test_api:is_btn_clicked
+DEBUG 2026-03-27 17:31:30,502 [test_90_is_btn_clicked.py-->line:71]:接口返回：None
+INFO 2026-03-27 17:31:33,865 [test_90_is_btn_clicked.py-->line:84]:✅ 用例【末端led按钮是否按下（仅上电）】测试成功
+INFO 2026-03-27 17:31:33,866 [test_90_is_btn_clicked.py-->line:85]:》》》用例【末端led按钮是否按下（仅上电）】测试完成《《《
+INFO 2026-03-27 17:31:33,871 [test_90_is_btn_clicked.py-->line:94]:》》》》》用例【末端led按钮是否按下(下电）】开始测试《《《《《
+DEBUG 2026-03-27 17:31:33,872 [test_90_is_btn_clicked.py-->line:95]:test_api:is_btn_clicked
+DEBUG 2026-03-27 17:31:37,181 [test_90_is_btn_clicked.py-->line:102]:接口返回：None
+INFO 2026-03-27 17:31:42,528 [test_90_is_btn_clicked.py-->line:115]:✅ 用例【末端led按钮是否按下(下电）】测试成功
+INFO 2026-03-27 17:31:42,528 [test_90_is_btn_clicked.py-->line:116]:》》》用例【末端led按钮是否按下(下电）】测试完成《《《
+INFO 2026-03-27 17:31:45,699 [test_90_is_btn_clicked.py-->line:24]:环境清理完成，接口测试结束
+INFO 2026-03-27 17:32:28,830 [test_90_is_btn_clicked.py-->line:21]:初始化完成，接口测试开始
+INFO 2026-03-27 17:32:28,832 [test_90_is_btn_clicked.py-->line:33]:》》》》》用例【末端led按钮是否按下（松开末端）】开始测试《《《《《
+DEBUG 2026-03-27 17:32:28,833 [test_90_is_btn_clicked.py-->line:34]:test_api:is_btn_clicked
+DEBUG 2026-03-27 17:32:30,214 [test_90_is_btn_clicked.py-->line:43]:接口返回：0
+INFO 2026-03-27 17:32:30,401 [test_90_is_btn_clicked.py-->line:33]:》》》》》用例【末端led按钮是否按下（按下末端）】开始测试《《《《《
+DEBUG 2026-03-27 17:32:30,402 [test_90_is_btn_clicked.py-->line:34]:test_api:is_btn_clicked
+DEBUG 2026-03-27 17:32:32,042 [test_90_is_btn_clicked.py-->line:43]:接口返回：1
+INFO 2026-03-27 17:32:32,061 [test_90_is_btn_clicked.py-->line:63]:》》》》》用例【末端led按钮是否按下（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 17:32:32,061 [test_90_is_btn_clicked.py-->line:64]:test_api:is_btn_clicked
+DEBUG 2026-03-27 17:32:37,331 [test_90_is_btn_clicked.py-->line:71]:接口返回：None
+INFO 2026-03-27 17:32:40,682 [test_90_is_btn_clicked.py-->line:84]:✅ 用例【末端led按钮是否按下（仅上电）】测试成功
+INFO 2026-03-27 17:32:40,683 [test_90_is_btn_clicked.py-->line:85]:》》》用例【末端led按钮是否按下（仅上电）】测试完成《《《
+INFO 2026-03-27 17:32:40,689 [test_90_is_btn_clicked.py-->line:94]:》》》》》用例【末端led按钮是否按下(下电）】开始测试《《《《《
+DEBUG 2026-03-27 17:32:40,690 [test_90_is_btn_clicked.py-->line:95]:test_api:is_btn_clicked
+DEBUG 2026-03-27 17:32:44,007 [test_90_is_btn_clicked.py-->line:102]:接口返回：None
+INFO 2026-03-27 17:32:49,358 [test_90_is_btn_clicked.py-->line:115]:✅ 用例【末端led按钮是否按下(下电）】测试成功
+INFO 2026-03-27 17:32:49,359 [test_90_is_btn_clicked.py-->line:116]:》》》用例【末端led按钮是否按下(下电）】测试完成《《《
+INFO 2026-03-27 17:32:52,519 [test_90_is_btn_clicked.py-->line:24]:环境清理完成，接口测试结束
+INFO 2026-03-27 17:33:25,118 [test_90_is_btn_clicked.py-->line:21]:初始化完成，接口测试开始
+INFO 2026-03-27 17:33:25,120 [test_90_is_btn_clicked.py-->line:33]:》》》》》用例【末端led按钮是否按下（松开末端）】开始测试《《《《《
+DEBUG 2026-03-27 17:33:25,121 [test_90_is_btn_clicked.py-->line:34]:test_api:is_btn_clicked
+DEBUG 2026-03-27 17:33:52,282 [test_90_is_btn_clicked.py-->line:43]:接口返回：0
+INFO 2026-03-27 17:33:52,283 [test_90_is_btn_clicked.py-->line:53]:✅ 用例【末端led按钮是否按下（松开末端）】测试通过
+INFO 2026-03-27 17:33:52,283 [test_90_is_btn_clicked.py-->line:54]:》》》》》用例【末端led按钮是否按下（松开末端）】测试完成《《《《《
+INFO 2026-03-27 17:33:52,288 [test_90_is_btn_clicked.py-->line:33]:》》》》》用例【末端led按钮是否按下（按下末端）】开始测试《《《《《
+DEBUG 2026-03-27 17:33:52,289 [test_90_is_btn_clicked.py-->line:34]:test_api:is_btn_clicked
+DEBUG 2026-03-27 17:33:54,824 [test_90_is_btn_clicked.py-->line:43]:接口返回：1
+INFO 2026-03-27 17:33:54,825 [test_90_is_btn_clicked.py-->line:53]:✅ 用例【末端led按钮是否按下（按下末端）】测试通过
+INFO 2026-03-27 17:33:54,825 [test_90_is_btn_clicked.py-->line:54]:》》》》》用例【末端led按钮是否按下（按下末端）】测试完成《《《《《
+INFO 2026-03-27 17:33:54,830 [test_90_is_btn_clicked.py-->line:63]:》》》》》用例【末端led按钮是否按下（仅上电）】开始测试《《《《《
+DEBUG 2026-03-27 17:33:54,831 [test_90_is_btn_clicked.py-->line:64]:test_api:is_btn_clicked
+DEBUG 2026-03-27 17:33:59,109 [test_90_is_btn_clicked.py-->line:71]:接口返回：None
+INFO 2026-03-27 17:34:02,469 [test_90_is_btn_clicked.py-->line:84]:✅ 用例【末端led按钮是否按下（仅上电）】测试成功
+INFO 2026-03-27 17:34:02,470 [test_90_is_btn_clicked.py-->line:85]:》》》用例【末端led按钮是否按下（仅上电）】测试完成《《《
+INFO 2026-03-27 17:34:02,475 [test_90_is_btn_clicked.py-->line:94]:》》》》》用例【末端led按钮是否按下(下电）】开始测试《《《《《
+DEBUG 2026-03-27 17:34:02,476 [test_90_is_btn_clicked.py-->line:95]:test_api:is_btn_clicked
+DEBUG 2026-03-27 17:34:05,790 [test_90_is_btn_clicked.py-->line:102]:接口返回：None
+INFO 2026-03-27 17:34:11,137 [test_90_is_btn_clicked.py-->line:115]:✅ 用例【末端led按钮是否按下(下电）】测试成功
+INFO 2026-03-27 17:34:11,137 [test_90_is_btn_clicked.py-->line:116]:》》》用例【末端led按钮是否按下(下电）】测试完成《《《
+INFO 2026-03-27 17:34:14,302 [test_90_is_btn_clicked.py-->line:24]:环境清理完成，接口测试结束
