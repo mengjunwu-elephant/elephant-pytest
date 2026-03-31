@@ -1,4 +1,5 @@
 import pytest
+from time import sleep
 import allure
 from common1.test_data_handler import get_test_data_from_excel
 from common1 import logger
@@ -10,6 +11,8 @@ cases = get_test_data_from_excel(MercuryBase.PRO_GRIPPER_TEST_DATA_FILE, "get_pr
 def device():
     dev = MercuryBase()
     logger.info("初始化完成，接口测试开始")
+    dev.mc.set_pro_gripper_angle(50)
+    sleep(3)
     yield dev
     dev.close()
     logger.info("环境清理完成，接口测试结束")

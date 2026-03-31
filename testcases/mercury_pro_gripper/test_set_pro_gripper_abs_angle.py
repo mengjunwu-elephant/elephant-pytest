@@ -83,7 +83,7 @@ def test_stop(device, case):
     logger.info(f"》》》用例【{case['title']}】开始测试《《《")
 
     with allure.step("调用设置绝对值接口"):
-        abs_res = device.mc.set_abs_gripper_value(100)
+        abs_res = device.mc.set_pro_gripper_abs_angle(100)
         allure.attach(str(abs_res), "设置绝对值返回", allure.attachment_type.TEXT)
         sleep(0.5)
 

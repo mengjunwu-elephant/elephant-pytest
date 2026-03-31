@@ -12,6 +12,7 @@ cases = get_test_data_from_excel(MercuryBase.MY_HAND_TEST_DATA_FILE, "get_hand_g
 def device():
     dev = MercuryBase()
     logger.info("初始化完成，接口测试开始")
+    dev.set_default_torque()
     yield dev
     dev.close()
     logger.info("环境清理完成，接口测试结束")

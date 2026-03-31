@@ -44,12 +44,8 @@ def test_set_limit_switch_normal(device, case):
     with allure.step("设置限位开关"):
         response = device.mc.set_limit_switch(case["parameter_1"], case["parameter_2"])
 
-    if '仅上电' in case['title'] or '下电' in case['title']:
-        with allure.step("机械臂断言响应为 None"):
-            assert response is None, f"机械臂返回值应为 None，实际为 {response}"
-    else:
-        with allure.step("机械臂断言返回类型"):
-            assert isinstance(response, int)
+    with allure.step("机械臂断言返回类型"):
+        assert isinstance(response, int)
 
     with allure.step("机械臂断言响应结果"):
         allure.attach(str(case["l_expect_data"]),name = '机械臂期望值',attachment_type=allure.attachment_type.TEXT)

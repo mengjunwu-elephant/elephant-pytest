@@ -7,7 +7,7 @@ from common1 import logger
 from settings import MercuryBase
 
 # 从 Excel 中提取测试数据
-cases = get_test_data_from_excel(MercuryBase.TEST_DATA_FILE, "set_pro_gripper_speed")
+cases = get_test_data_from_excel(MercuryBase.PRO_GRIPPER_TEST_DATA_FILE, "set_pro_gripper_speed")
 
 @pytest.fixture(scope="module")
 def device():

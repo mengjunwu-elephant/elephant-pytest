@@ -209,5 +209,6 @@ class MercuryBase:
 
     def set_default_speed(self) -> None:
         for i in range(6):
-            self.mc.set_hand_gripper_speed(i + 1, 100)
+            self.mc.set_hand_gripper_speed(i + 1, 20)
+        self.mc.set_hand_gripper_speed(1, 100)
 

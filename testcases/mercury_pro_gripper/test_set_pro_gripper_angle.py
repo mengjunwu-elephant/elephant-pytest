@@ -1,7 +1,7 @@
 import pytest
 import allure
 from pymycobot.error import MercuryDataException
-
+from time import sleep
 from common1.test_data_handler import get_test_data_from_excel
 from common1.assert_utils import assert_almost_equal
 from common1 import logger
@@ -29,6 +29,7 @@ def test_set_pro_gripper_angle_normal(device, case):
 
     with allure.step("调用设置接口"):
         set_res = device.mc.set_pro_gripper_angle(case["value"])
+        sleep(5)
         allure.attach(str(set_res), "设置接口返回值", allure.attachment_type.TEXT)
 
     with allure.step("调用获取接口"):

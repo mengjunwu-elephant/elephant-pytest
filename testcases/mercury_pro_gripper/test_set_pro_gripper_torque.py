@@ -37,7 +37,7 @@ def test_set_pro_gripper_torque_normal(device, case):
         assert isinstance(set_res, int), f"类型错误，返回类型为 {type(set_res)}"
 
     with allure.step("断言设置返回值与期望相符"):
-        allure.attach(str(case['expect_date']),'期望值',allure.attachment_type.TEXT)
+        allure.attach(str(case['expect_data']),'期望值',allure.attachment_type.TEXT)
         allure.attach(str(set_res),'实际值',allure.attachment_type.TEXT)
         assert set_res == case["expect_data"], f"期望 {case['expect_data']}，实际 {set_res}"
 

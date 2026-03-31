@@ -21,10 +21,11 @@ def device():
 
 @pytest.fixture(autouse=True)
 def reset_coords(device):
-    # 每个用例后自动重置坐标
-    yield
+    # 每个用例前自动重置坐标
     device.init_coords()
     device.wait()
+    yield
+
 
 @allure.feature("轨迹接口")
 @allure.story("正常写入轨迹点")

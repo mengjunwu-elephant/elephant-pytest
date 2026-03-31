@@ -28,8 +28,8 @@ def test_get_pro_gripper_status_0(device, case):
     logger.info(f"》》》用例【{case['title']}】开始测试《《《")
     logger.debug(f"test_api: {case['api']} | test_parameters: {case['parameter']}")
 
-    with allure.step("设置夹爪参数为 (100, 5)"):
-        device.mc.set_gripper_value(100, 5)
+    with allure.step("设置夹爪角度为 100"):
+        device.mc.set_pro_gripper_angle(100)
         sleep(0.2)
 
     with allure.step("获取夹爪状态"):
@@ -85,8 +85,8 @@ def test_get_pro_gripper_status_2(device, case):
         print("请放置物体到夹爪中间后，点击回车开始测试")
         input()
 
-    with allure.step("设置夹爪参数为 (0, 100)"):
-        device.mc.set_gripper_value(0, 100)
+    with allure.step("设置夹爪角度为 0"):
+        device.mc.set_pro_gripper_angle(0)
         sleep(3)
 
     with allure.step("获取夹爪状态"):

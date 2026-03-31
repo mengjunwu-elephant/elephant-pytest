@@ -31,7 +31,7 @@ def test_set_pro_gripper_calibration(device, case):
         assert isinstance(response, int), f"返回类型错误，实际为 {type(response)}"
 
     with allure.step("断言返回值等于期望值"):
-        allure.attach(str(case['expect_date']),'期望值',allure.attachment_type.TEXT)
+        allure.attach(str(case['expect_data']),'期望值',allure.attachment_type.TEXT)
         allure.attach(str(response),'实际值',allure.attachment_type.TEXT)
         assert response == case["expect_data"], f"期望：{case['expect_data']}，实际：{response}"
 
