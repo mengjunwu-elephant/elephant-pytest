@@ -78,7 +78,10 @@ class MercuryBase:
 
         start_time = time.time()
         last_log_time = start_time
+
+
         logger.info(f'当前左臂运动状态为{self.ml.is_moving()}，当前右臂运动状态为{self.mr.is_moving()}')
+
         while self.ml.is_moving() or self.mr.is_moving():
             # 超时检查
             if time.time() - start_time > timeout:

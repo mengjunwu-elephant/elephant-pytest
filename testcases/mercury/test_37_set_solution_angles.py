@@ -26,8 +26,9 @@ def device():
 
 @pytest.fixture(autouse=True)
 def reset_position(device):
-    yield
     device.init_coords()
+    yield
+
 
 
 @allure.feature("解算角度设置")

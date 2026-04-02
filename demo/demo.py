@@ -1,138 +1,62 @@
 import time
 
-from pymycobot import Pro450Client
+from pymycobot import Mercury
+ml = Mercury("/dev/left_arm",debug=True)
+mr = Mercury("/dev/right_arm",debug=True)
 
-mc = Pro450Client(debug=1)
 
-mc.power_on()
-# mc.set_control_mode(0)
-# print(mc.get_robot_status())
-# mc.over_limit_return_zero()
-# mc.set_servo_calibration(4)
-# mc.send_angle(2,125,10)
-# mc.send_angles([10,10,10,10,10,10],10)
-# mc.set_free_move_mode(1)
-# print(mc.get_system_version())
-# print(mc.get_modified_version())
-# mc.fourier_trajectories(0)
-# print(mc.get_angles())
-# mc.set_motor_type('A1C2')
-# print(mc.get_robot_type())
-# mc.parameter_identify()
-# print(mc.get_tool_modify_version())
-# print(mc.get_tool_config())
-# mc.flash_tool_firmware('1.3', 1)
-# for i in range(6):
-#     mc.set_collision_threshold(i+1,200)
-# mc.resume()
-mc.set_free_move_mode(1)
-# print(mc.get_system_version())
-# print(mc.get_modified_version())
-# mc.set_servo_calibration(3)
-# print(mc.get_angles())
-# mc.over_limit_return_zero()
-# mc.fourier_trajectories(0)
-# print(mc.get_angles())
-# print(mc.get_robot_status())
-# mc.drag_teach_save()
-# time.sleep(10)
-# mc.drag_teach_pause()
-# time.sleep(5)
-# mc.drag_teach_execute()
-# mc.set_pro_gripper_open()
-# mc.set_pro_gripper_offset(2)
-# print(mc.get_pro_gripper_offset())
-# while 1:
-#     mc.send_angle(2,-80,100)
-#     mc.send_angle(2,0,100)
-# mc.over_limit_return_zero()
-# mc.set_motor_enabled(254,1)
-# mc.set_fresh_mode(1)
-# mc.over_limit_return_zero()
-# mc.flash_tool_firmware('1.3', 1)
-# print(mc.get_atom_version())
+def wait(timeout=30.0):
+    """等待机械臂停止运动"""
+    time.sleep(0.3)
+    from common1 import logger
 
-# mc.send_angle(6,0,10)
-# print(mc.get_tool_modify_version())
-# mc.set_tool_serial_baud_rate(115200)
-# print(mc.get_tool_config())
-# mc.over_limit_return_zero()
-# print(mc.get_robot_status())
-# print(mc.get_motors_run_err())
-# print(mc.get_torque_comp())
-# mc.set_fusion_parameters(0)
-# mc.get_fusion_parameters(3)
-# mc.clear_error_information()
-# mc.set_tool_serial_timeout(100000)
-# mc.set_tool_serial_baud_rate(1)# mc.send_angles([0, 30, -100, -20, 0.0, 0.0],50)
-# mc.set_free_move_mode(1)
-# mc.power_on()
+    start_time = time.time()
+    last_log_time = start_time
 
-# print(mc.solve_inv_kinematics([400.9, -400.8, 298.4, 179.99, 0.0, -90.0],[0, 30, -100, -20, 0.0, 0.0]))
-# mc.write_move_c([200.9, -86.8, 298.4, 179.99, 0.0, -90.0],[250.9, -86.8, 298.4, 179.99, 0.0, -90.0],10)
-# mc.fourier_trajectories(0)
-# mc.parameter_identify()
-# print(mc.flash_tool_firmware('1.3',1))
-# mc.set_fresh_mode(1)
-# print(mc.get_fresh_mode())
-# mc.power_on()
-# mc.power_off()
-# mc.resume()
-# mc.send_angle(4,90,10)
-# mc.power_on()
-# print(len(a))
-# mc.set_joint_max_angle(2,125)
-# mc.set_joint_min_angle(2,-125)
-# print(mc.get_system_version())
-# print(mc.get_joint_min_angle(2))
-# print(mc.get_joint_max_angle(2))
-# mc.set_free_move_mode(1)
-# print(mc.get_robot_status())
-# mc.set_motor_type('A3C0')
-# print(mc.get_robot_type())
-# mc.fourier_trajectories(0)
-# mc.set_control_mode(0)
-# print(mc.get_collision_mode())
-# mc.resume()
-# mc.set_tool_serial_baud_rate(1000000)
-#
-# for i in range(100):
-#     print(mc.set_pro_gripper_open())
-#     time.sleep(1)
-#     print(mc.get_pro_gripper_angle())
-#     time.sleep(1)
-#     print(mc.set_pro_gripper_close())
-#     time.sleep(1)
-#     print(mc.get_pro_gripper_angle())
-#     time.sleep(1)
+    for i in range(100):
+        print(f'当前左臂运动状态为{ml.is_moving()}，当前右臂运动状态为{mr.is_moving()}')
 
-# print(mc.get_pro_gripper_angle())
-# print(mc.get_torque_comp())
-# print(mc.get_collision_threshold())
-# mc.send_angle(6,120,10)
-# mc.resume()
-# print(mc.get_error_information())
-# print(mc.get_robot_status())
-# print(mc.flash_tool_firmware('1.3',0))
-# mc.send_angle(2,-120,10)
-# mc.servo_restore(254)
-# mc.set_free_move_mode(1)
-# mc.set_servo_calibration(6)
-# print(mc.get_robot_status())
-# print(mc.get_angles())
-# print(mc.get_coords())
-# print(mc.get_robot_status())
-# print(mc.set_free_move_mode(1))
-# mc.clear_error_information()
-# print(mc.send_coords([470, -85.5, 136.0, -160.0, 0.0, -90.0], 10))
-# print(mc.get_error_information())
-# mc.set_fresh_mode(1)
-# print(mc.send_angles([0, 30, -100, -20, 0.0, 0.0],10))
-# print(mc.jog_coord(1, 1, 10))
-# print(mc.jog_increment_coord(1,-949,10))
-# print(mc.send_angle(5,162,10))
-# print(mc.get_robot_status())
-# while 1:
-#     print(mc.get_angles())
-#     time.sleep(1)
-# mc.set_free_move_mode(1)
+    while ml.is_moving() or mr.is_moving():
+        # 超时检查
+        if time.time() - start_time > timeout:
+            print(f'机械臂运动超时（{timeout}秒）')
+            raise TimeoutError(f'机械臂运动超时')
+        # 每秒记录一次状态
+        current_time = time.time()
+        if current_time - last_log_time >= 1.0:
+            elapsed = current_time - start_time
+            left_status = "运动中" if ml.is_moving() else "已停止"
+            right_status = "运动中" if mr.is_moving() else "已停止"
+            print(f'等待机械臂停止... 已等待{elapsed:.1f}秒 | 左臂:{left_status} | 右臂:{right_status}')
+            last_log_time = current_time
+
+    time.sleep(0.3)
+    print('机械臂运动完成')
+
+
+print(ml.power_on())
+print(mr.power_on())
+
+
+
+for i in range(1,8):
+    for j in range(2):
+
+        mr.jog_angle(i,j,50)
+
+        wait()
+
+        # c = time.time()
+        # while True:
+        #     print(mr.is_moving())
+        #     if mr.is_moving() == 1 or ml.is_moving() == 1:
+        #         break
+        # d = time.time() - c
+        # print(f'关节{i},方向{j},右臂检测到移动的时间{d}')
+        #
+        # while True:
+        #     if mr.is_moving() == 0 and ml.is_moving() == 0:
+        #         break
+
+
+        mr.send_angles([0,0,0,0,0,90,0],100)

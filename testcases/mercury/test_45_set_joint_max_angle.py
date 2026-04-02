@@ -19,6 +19,7 @@ def device():
     logger.info("初始化完成，接口测试开始")
     yield dev
     dev.set_default_joint_max_angle()
+    device.go_zero()
     dev.mr.power_off()
     dev.ml.power_off()
     dev.close()
@@ -41,6 +42,9 @@ def test_set_joint_max_angle_left(device, case):
     param = case["parameter"]
 
     logger.info(f"》》》用例【{title}】开始测试《《《")
+
+    if joint_id == 4 and param == -5:
+        device.ml.send_angle(joint_id,param - 10,device.speed)
 
     with allure.step("设置最大角度 + 执行运动指令"):
         l_response = device.ml.set_joint_max_angle(joint_id,param)
@@ -68,6 +72,9 @@ def test_set_joint_max_angle_right(device, case):
     param = case["parameter"]
 
     logger.info(f"》》》用例【{title}】开始测试《《《")
+
+    if joint_id == 4 and param == -5:
+        device.mr.send_angle(joint_id,param - 10,device.speed)
 
     with allure.step("设置最大角度 + 执行运动指令"):
         r_response = device.mr.set_joint_max_angle(joint_id,param)

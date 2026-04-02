@@ -31,6 +31,7 @@ def setup_env(device):
     device.init_coords()
     yield
     device.go_zero()
+    device.wait()
     device.reset()
 
 

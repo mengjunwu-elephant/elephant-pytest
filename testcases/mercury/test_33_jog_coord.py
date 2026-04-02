@@ -30,9 +30,9 @@ def reset_coords(device):
 
 
 @allure.feature("jog_coord 接口测试")
-@allure.story("正常功能验证")
+@allure.story("左臂正常功能验证")
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
-def test_jog_coord_normal(device, case):
+def test_jog_coord_normal1(device, case):
     axis = case["axis"]
     param = case["parameter"]
     speed = case["speed"]
@@ -43,16 +43,37 @@ def test_jog_coord_normal(device, case):
 
     with allure.step("发送 jog_coord 指令（左臂）"):
         l_response = device.ml.jog_coord(axis, param, speed)
-
-    with allure.step("发送 jog_coord 指令（右臂）"):
-        r_response = device.mr.jog_coord(axis, param, speed)
+        device.wait()
 
     with allure.step("断言响应类型"):
         assert isinstance(l_response, int), f"左臂响应应为 int，实际为 {type(l_response)}"
-        assert isinstance(r_response, int), f"右臂响应应为 int，实际为 {type(r_response)}"
 
     with allure.step("断言返回值正确"):
         assert_almost_equal(l_response,case["l_expect_data"],tol=2,name='jog坐标运动'), f"左臂期望值：{case['l_expect_data']}，实际值：{l_response}"
+
+    logger.info(f"✅ 用例【{case['title']}】测试通过")
+    logger.info(f"》》》用例【{case['title']}】测试完成《《《")
+
+@allure.feature("jog_coord 接口测试")
+@allure.story("右臂正常功能验证")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
+def test_jog_coord_normal2(device, case):
+    axis = case["axis"]
+    param = case["parameter"]
+    speed = case["speed"]
+    title = case["title"]
+
+    logger.info(f"》》》开始用例【{title}】《《《")
+    logger.debug(f"Axis: {axis}, Param: {param}, Speed: {speed}")
+
+    with allure.step("发送 jog_coord 指令（右臂）"):
+        r_response = device.mr.jog_coord(axis, param, speed)
+        device.wait()
+
+    with allure.step("断言响应类型"):
+        assert isinstance(r_response, int), f"右臂响应应为 int，实际为 {type(r_response)}"
+
+    with allure.step("断言返回值正确"):
         assert_almost_equal(r_response,case["r_expect_data"],tol=2,name='jog坐标运动'), f"右臂期望值：{case['r_expect_data']}，实际值：{r_response}"
 
     logger.info(f"✅ 用例【{case['title']}】测试通过")
@@ -70,8 +91,8 @@ def test_jog_coord_exception(device, case):
     logger.info(f"》》》开始异常用例【{title}】《《《")
     logger.debug(f"Axis: {axis}, Param: {param}, Speed: {speed}")
 
-    with allure.step("发送异常 jog_coord 指令并断言抛出 MercuryDataException") as exc_info:
-        with pytest.raises(MercuryDataException):
+    with allure.step("发送异常 jog_coord 指令并断言抛出 MercuryDataException"):
+        with pytest.raises(MercuryDataException) as exc_info:
             device.ml.jog_coord(axis, param, speed)
 
     logger.info(f"✅ 用例【{case['title']}】触发了预期异常: {exc_info.value}")

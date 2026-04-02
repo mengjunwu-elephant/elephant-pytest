@@ -17,8 +17,8 @@ ml = Mercury("/dev/left_arm")
 mr = Mercury("/dev/right_arm")
 
 # 设置模式
-ml.set_movement_type(3)
-mr.set_movement_type(3)
+ml.set_movement_type(4)
+mr.set_movement_type(4)
 ml.set_vr_mode(1)
 mr.set_vr_mode(1)
 ml.set_pro_gripper_speed(14, 100)
@@ -122,7 +122,7 @@ def control_arm(arm):
                 arm_data[0], -arm_data[1] + 10, arm_data[2],
                 -arm_data[3], arm_data[4], 135 + arm_data[5], arm_data[6] - 20
             ]
-
+            print(f'右臂角度:{mercury_list}')
         elif arm == 2:
             arm_data = obj.get_arm_data(1)
             x, y = arm_data[11], arm_data[12]
@@ -132,7 +132,7 @@ def control_arm(arm):
                 arm_data[0], -arm_data[1] + 10, arm_data[2],
                 -arm_data[3], arm_data[4], 135 + arm_data[5], arm_data[6] + 20
             ]
-
+            print(f'左臂角度:{mercury_list}')
         else:
             raise ValueError("error arm")
 
@@ -151,17 +151,24 @@ def control_arm(arm):
 
         if atom_btn == 0:
             exit()
-
-        mc.send_angles(mercury_list, 6, _async=True)
+        # print(f'机械臂角度:',mercury_list)
+        mc.send_angles(mercury_list, 50, _async=True)
         time.sleep(0.01)
+        print(f'机械臂当前角度{mc.get_angles()}')
 
 
 def main():
     threading.Thread(target=control_arm, args=(1,)).start()
     threading.Thread(target=control_arm, args=(2,)).start()
     while True:
-        time.sleep(1)
-
+        try:
+            time.sleep(1)
+        except KeyboardInterrupt:
+            ml.set_movement_type(0)
+            mr.set_movement_type(0)
+            print('》》》》》》》》》》已结束遥操，切换至位置模式《《《《《《《《《《《')
+            break
 
 if __name__ == "__main__":
+    # time.sleep(10)
     main()

@@ -15,7 +15,9 @@ def device():
     dev.ml.power_on()
     dev.mr.power_on()
     logger.info("初始化完成，接口测试开始")
+    dev.init_coords()
     yield dev
+    dev.go_zero()
     dev.mr.power_off()
     dev.ml.power_off()
     dev.close()

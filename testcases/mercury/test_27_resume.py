@@ -32,6 +32,7 @@ def setup_env(device):
     device.init_coords()
     yield
     device.go_zero()
+    device.wait()
     device.reset()
 
 
@@ -74,8 +75,8 @@ def test_resume_exception(device, case):
     logger.info(f"》》》用例【{title}】开始测试《《《")
     logger.debug(f"参数: {case['parameter']}")
 
-    with allure.step("调用 resume 接口并断言抛出 MercuryDataException")as exc_info:
-        with pytest.raises(MercuryDataException):
+    with allure.step("调用 resume 接口并断言抛出 MercuryDataException"):
+        with pytest.raises(MercuryDataException)as exc_info:
             device.ml.resume(case["parameter"])
             device.mr.resume(case["parameter"])
 

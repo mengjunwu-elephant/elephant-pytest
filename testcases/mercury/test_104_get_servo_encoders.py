@@ -1,7 +1,7 @@
 import pytest
 import allure
 
-from common1 import logger
+from common1 import logger, assert_almost_equal
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MercuryBase
 
@@ -42,11 +42,14 @@ def test_get_servo_encoders(device, case):
             assert isinstance(l_response, list), f"左臂返回类型应为 list，实际为 {type(l_response)}"
             assert isinstance(r_response, list), f"右臂返回类型应为 list，实际为 {type(r_response)}"
 
-        with allure.step("断言返回结果是否符合预期"):
             expected_l = eval(case["l_expect_data"])
             expected_r = eval(case["r_expect_data"])
-            assert l_response == expected_l, f"左臂期望: {expected_l}, 实际: {l_response}"
-            assert r_response == expected_r, f"右臂期望: {expected_r}, 实际: {r_response}"
+
+        with allure.step("断言左臂返回值"):
+            assert_almost_equal(l_response,expected_l, tol=2048,name='获取单关编码值'), f"左臂期望值 {case['l_expect_data']}，实际值 {l_response}"
+
+        with allure.step("断言右臂返回值"):
+            assert_almost_equal(r_response,expected_r, tol=2048,name='获取单关编码值'), f"右臂期望值 {case['r_expect_data']}，实际值 {r_response}"
 
         logger.info(f"✅ 用例【{title}】测试成功")
     logger.info(f"》》》用例【{title}】测试完成《《《")

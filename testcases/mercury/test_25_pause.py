@@ -32,6 +32,7 @@ def setup_and_teardown(device):
     device.init_coords()
     yield
     device.go_zero()
+    device.wait()
     device.reset()
 
 

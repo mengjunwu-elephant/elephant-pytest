@@ -349,36 +349,36 @@ def get():
             time.sleep(lap)
             current = m.get_servo_currents()
             time.sleep(lap)
-            # servo_status = m.get_servo_status()
-            # time.sleep(lap)
+            servo_status = m.get_servo_status()
+            time.sleep(lap)
             robot_status = m.get_robot_status()
             time.sleep(lap)
             logging.info(f"当前角度{r_a}")
             logging.info(f"当前坐标{r_c}")
             logging.info(f"当前速度{speed}")
             logging.info(f"当前电流{current}")
-            # logging.info(f"当前舵机状态{servo_status}")
+            logging.info(f"当前舵机状态{servo_status}")
             logging.info(f"当前机器状态{robot_status}")
-            if r_a is not None or -1:
+            if r_a is not None:
                 print(f"angles{r_a}")
             else:
                 a += 1
-            if r_c is not None or -1:
+            if r_c is not None:
                 print(f"coords{r_c}")
             else:
                 c += 1
-            if speed is not None or -1:
+            if speed is not None:
                 print(f"speed{speed}")
             else:
                 sp += 1
-            if current is not None or -1:
+            if current is not None:
                 print(f"current{current}")
             else:
                 cu += 1
-            # if servo_status is not None:
-            #     print(f"servo_statue{servo_status}")
-            # else:
-            #     se_sta += 1
+            if servo_status is not None:
+                print(f"servo_statue{servo_status}")
+            else:
+                se_sta += 1
             print(f"机械臂状态{robot_status}")
             print(f"当前发送次数{count} 角度空值次数{a} 坐标空值次数{c} 速度空值次数{sp} 电流空值次数{cu} 舵机状态空值次数{se_sta}")
             logging.info(f"当前发送次数{count} 发送时间间隔{lap} 角度空值{(a / count) * 100}% 坐标空值{(c / count) * 100}% 速度空值{(sp / count) * 100}% 电流空值{(cu / count) * 100}% 状态空值{(se_sta / count) * 100}%")

@@ -74,6 +74,8 @@ def test_jog_angle_right(device, case):
 
     with allure.step("发送 jog_angle 指令（右臂）"):
         response = device.mr.jog_angle(joint, param, speed)
+
+        sleep(0.7)
         device.wait()
 
     with allure.step("判断是否到达软件限位（右臂）"):
@@ -103,8 +105,8 @@ def test_jog_angle_exception(device, case):
     logger.info(f"》》》开始异常用例【{title}】《《《")
     logger.debug(f"joint={joint}, param={param}, speed={speed}")
 
-    with allure.step("发送非法 jog_angle 指令，期待触发 MercuryDataException") as exc_info:
-        with pytest.raises(MercuryDataException):
+    with allure.step("发送非法 jog_angle 指令，期待触发 MercuryDataException"):
+        with pytest.raises(MercuryDataException) as exc_info:
             device.ml.jog_angle(joint, param, speed)
             device.mr.jog_angle(joint, param, speed)
 
