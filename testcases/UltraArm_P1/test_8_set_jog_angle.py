@@ -23,6 +23,7 @@ def reset_device(device):
 def test_set_jog_angle0(device, case):
     title = case["title"]
     expected = case["expect_data"]
+    joint = case["joint"]
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
@@ -30,8 +31,17 @@ def test_set_jog_angle0(device, case):
     logger.debug(f'position:{case["position"]}')
     logger.debug(f'speed:{case["speed"]}')
 
+    with allure.step(f"调整关节角度，避免耦合"):
+        if joint == 2:
+            device.mc.set_angle(3,110,device.speed)
+            device.wait()
+        elif joint == 3:
+            device.mc.set_angle(2,50,device.speed)
+            device.wait()
+
     with allure.step(f"调用 {case['api']} 接口"):
         set_res = device.mc.set_jog_angle(case["joint"],case["position"],case["speed"])
+        device.wait()
         logger.debug(f"接口返回：{set_res}")
 
     with allure.step(f'调用 get_angles 接口'):

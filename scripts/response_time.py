@@ -2,10 +2,10 @@ import time
 from time import sleep
 import statistics
 
-from pymycobot import Pro450Client
+from pymycobot import UltraArmP1
 
-mc = Pro450Client(debug=1)
-sleep(2)
+mc = UltraArmP1('com5',debug=1)
+# sleep(2)
 
 def measure_time(func, *args, times=1000):
     """
@@ -68,18 +68,18 @@ def measure_time(func, *args, times=1000):
 
 
 if __name__ == '__main__':
-    mc.set_fresh_mode(0)
-    mc.set_tool_serial_baud_rate(115200)
-    print(mc.get_tool_config())
-    stats = measure_time(mc.get_atom_version)
+    # mc.set_fresh_mode(0)
+    # mc.set_tool_serial_baud_rate(115200)
+    # print(mc.get_tool_config())
+    stats = measure_time(mc.check_sd_card)
 
 
     print("\n========= 统计结果 =========")
     print(f"总运行次数: {stats['times']}")
     print(f"有效次数: {stats['valid_times']}")
     print(f"平均响应时间: {stats['average']} ms")
-    print(f"最小值: {stats['min']} ms")
     print(f"最大值: {stats['max']} ms")
+    print(f"最小值: {stats['min']} ms")
     print(f"中位数: {stats['median']} ms")
     print(f"方差: {stats['variance']}")
     print(f"标准差: {stats['std_dev']}")

@@ -12,12 +12,18 @@ from settings import UltraArmP1Base
 cases = get_test_data_from_excel(UltraArmP1Base.TEST_DATA_FILE, "set_jog_coord")
 
 
+@pytest.fixture(autouse=True)
+def reset_device(device):
+    yield
+    device.go_zero()
+    
 @allure.feature("点动控制坐标")
 @allure.story("正确设置set_jog_coord")
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
 def test_set_jog_coord0(device, case):
     title = case["title"]
     expected = case["expect_data"]
+    axis = case["axis"]
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
@@ -25,8 +31,17 @@ def test_set_jog_coord0(device, case):
     logger.debug(f'position:{case["position"]}')
     logger.debug(f'speed:{case["speed"]}')
 
+    with allure.step(f"调整关节角度，避免耦合"):
+        if axis == 2:
+            device.mc.set_angle(3,110,device.speed)
+            device.wait()
+        elif axis == 3:
+            device.mc.set_angle(2,50,device.speed)
+            device.wait()
+
     with allure.step(f"调用 {case['api']} 接口"):
         set_res = device.mc.set_jog_coord(case["axis"],case["position"],case["speed"])
+        device.wait()
         logger.debug(f"接口返回：{set_res}")
 
     with allure.step("断言返回值类型为 str"):

@@ -1,0 +1,21 @@
+2026-04-02 19:09:50.761 DEBU [pymycobot.ultraArmP1] _write: M62 P1 S1
+2026-04-02 19:09:50.776 DEBU [pymycobot.ultraArmP1] _write: M61
+2026-04-02 19:09:51.079 WARN [pymycobot.ultraArmP1] request timeout, received buffer: 
+2026-04-02 19:10:11.082 DEBU [pymycobot.ultraArmP1] _write: M62 P1 S1
+2026-04-02 19:10:11.097 DEBU [pymycobot.ultraArmP1] _write: M61
+2026-04-02 19:10:11.402 WARN [pymycobot.ultraArmP1] request timeout, received buffer: 
+2026-04-02 19:10:15.245 DEBU [pymycobot.ultraArmP1] _write: M62 P1 S1
+2026-04-02 19:10:15.260 DEBU [pymycobot.ultraArmP1] _write: M61
+2026-04-02 19:10:15.578 WARN [pymycobot.ultraArmP1] request timeout, received buffer: 
+2026-04-02 19:10:18.443 DEBU [pymycobot.ultraArmP1] _write: M62 P1 S1
+2026-04-02 19:10:18.458 DEBU [pymycobot.ultraArmP1] _write: M61
+2026-04-02 19:10:18.760 WARN [pymycobot.ultraArmP1] request timeout, received buffer: 
+2026-04-02 19:10:23.107 DEBU [pymycobot.ultraArmP1] _write: M62 P1 S1
+2026-04-02 19:10:23.122 DEBU [pymycobot.ultraArmP1] _write: M61
+2026-04-02 19:10:23.441 WARN [pymycobot.ultraArmP1] request timeout, received buffer: 
+2026-04-02 19:10:26.175 DEBU [pymycobot.ultraArmP1] _write: M62 P1 S1
+2026-04-02 19:10:26.190 DEBU [pymycobot.ultraArmP1] _write: M61
+2026-04-02 19:10:26.494 WARN [pymycobot.ultraArmP1] request timeout, received buffer: 
+2026-04-02 19:10:29.627 DEBU [pymycobot.ultraArmP1] _write: M62 P1 S1
+2026-04-02 19:10:29.642 DEBU [pymycobot.ultraArmP1] _write: M61
+2026-04-02 19:10:29.946 WARN [pymycobot.ultraArmP1] request timeout, received buffer: 

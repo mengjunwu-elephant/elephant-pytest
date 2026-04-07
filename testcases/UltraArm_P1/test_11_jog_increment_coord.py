@@ -13,11 +13,12 @@ cases = get_test_data_from_excel(UltraArmP1Base.TEST_DATA_FILE, "jog_increment_c
 
 
 @allure.feature("关节步进模式")
-@allure.story("插补模式设置jog_increment_coord")
+@allure.story("正确设置jog_increment_coord")
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
 def test_jog_increment_coord0(device, case):
     title = case["title"]
     expected = case["expect_data"]
+    axis = case["axis"]
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
@@ -25,19 +26,28 @@ def test_jog_increment_coord0(device, case):
     logger.debug(f'increment:{case["increment"]}')
     logger.debug(f'speed:{case["speed"]}')
 
+    with allure.step(f"调整关节角度，避免耦合"):
+        if axis == 2:
+            device.mc.set_angle(3,110,device.speed)
+            device.wait()
+        elif axis == 3:
+            device.mc.set_angle(2,50,device.speed)
+            device.wait()
+
     with allure.step("调用 get_coords 接口"):
-        init_get_res = device.mc.get_coords()[case['axis']-1]
+        init_get_res = device.mc.get_coords_info()[case['axis']-1]
 
     with allure.step(f"调用 {case['api']} 接口"):
         set_res = device.mc.jog_increment_coord(case["axis"],case["increment"],case["speed"])
+        device.wait()
         logger.debug(f"接口返回：{set_res}")
 
     with allure.step(f'调用 get_coords 接口'):
-        target_get_res = device.mc.get_coords()[case['axis']-1]
+        target_get_res = device.mc.get_coords_info()[case['axis']-1]
         logger.debug(f"接口返回：{target_get_res}")
 
-    with allure.step("断言返回值类型为 int"):
-        assert isinstance(set_res, int), f"返回类型错误,应为{type(expected)},实际为 {type(set_res)}"
+    with allure.step("断言返回值类型为 str"):
+        assert isinstance(set_res, str), f"返回类型错误,应为{type(expected)},实际为 {type(set_res)}"
 
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
@@ -47,7 +57,7 @@ def test_jog_increment_coord0(device, case):
     with allure.step("断言 get_coords 返回值"):
         allure.attach(str(init_get_res+case["increment"]), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(target_get_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(target_get_res, init_get_res+case["increment"], 2,'插补模式设置jog_increment_coord'), f"用例【{title}】断言失败，期望 {init_get_res+case['increment']},实际 {target_get_res}"
+        assert_almost_equal(target_get_res, init_get_res+case["increment"], 2,'正确设置jog_increment_coord'), f"用例【{title}】断言失败，期望 {init_get_res+case['increment']},实际 {target_get_res}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')

@@ -1666,3 +1666,207 @@ End
 2026-03-26 14:24:47.865 DEBU [pymycobot.ultraArmP1] _read: angles[-0.010,7.820,129.990,0.080]
 coords[209.811,-0.037,-0.273,0.002]
 
+2026-03-26 17:02:23.517 DEBU [pymycobot.ultraArmP1] _write: G1 A0 B0 C90 D0 F20000
+2026-03-26 17:02:23.865 DEBU [pymycobot.ultraArmP1] _read: is_stm32_powered = 1
+2026-03-26 17:02:44.922 DEBU [pymycobot.ultraArmP1] _read: is_stm32_powered = 1is_stm32_powered = 0
+2026-03-26 17:02:47.949 DEBU [pymycobot.ultraArmP1] _read: is_stm32_powered = 1is_stm32_powered = 0is_stm32_powered = 1End
+End
+
+2026-03-26 17:02:47.950 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:02:47.964 DEBU [pymycobot.ultraArmP1] _read: angles[0.000,0.350,101.950,-0.430]
+coords[221.321,0.000,62.009,-0.008]
+
+2026-03-26 17:02:54.111 DEBU [pymycobot.ultraArmP1] _write: G1 A0 B0 C90 D0 F20000
+2026-03-26 17:02:54.141 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+
+2026-03-26 17:02:54.805 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+End
+End
+
+2026-03-26 17:02:54.807 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:02:54.820 DEBU [pymycobot.ultraArmP1] _read: angles[0.000,0.000,90.000,-0.080]
+coords[223.500,0.000,91.000,-0.001]
+
+2026-03-26 17:06:07.856 DEBU [pymycobot.ultraArmP1] _write: G1 A0 B0 C90 D0 F20000
+2026-03-26 17:06:07.886 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+
+2026-03-26 17:06:09.212 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+End
+End
+
+2026-03-26 17:06:09.213 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:06:09.227 DEBU [pymycobot.ultraArmP1] _read: angles[0.050,0.000,90.000,0.000]
+coords[223.500,0.195,91.000,-0.001]
+
+2026-03-26 17:06:24.062 DEBU [pymycobot.ultraArmP1] _write: G1 A0 B0 C90 D0 F20000
+2026-03-26 17:06:24.092 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+
+2026-03-26 17:06:24.107 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+DATA:LimitError[6]                                              
+2026-03-26 17:06:24.110 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:06:24.122 DEBU [pymycobot.ultraArmP1] _read: angles[-169.270,0.000,86.390,-0.080]
+coords[-219.319,-41.560,99.815,2.953]
+
+2026-03-26 17:06:31.312 DEBU [pymycobot.ultraArmP1] _write: G1 A0 B0 C90 D0 F20000
+2026-03-26 17:06:31.343 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+
+2026-03-26 17:06:31.373 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+DATA:LimitError[6]                                              
+2026-03-26 17:06:31.375 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:06:31.388 DEBU [pymycobot.ultraArmP1] _read: angles[-169.270,0.000,86.390,0.170]
+coords[-219.319,-41.560,99.815,2.957]
+
+2026-03-26 17:06:41.680 DEBU [pymycobot.ultraArmP1] _write: G1 A0 B0 C90 D0 F20000
+2026-03-26 17:06:41.710 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+
+2026-03-26 17:06:43.058 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+End
+End
+
+2026-03-26 17:06:43.060 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:06:43.073 DEBU [pymycobot.ultraArmP1] _read: angles[0.010,0.000,89.910,0.170]
+coords[223.500,0.039,91.220,0.003]
+
+2026-03-26 17:09:21.704 DEBU [pymycobot.ultraArmP1] _write: G1 A0 B0 C90 D0 F20000
+2026-03-26 17:09:21.734 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+
+2026-03-26 17:09:21.794 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+End
+End
+
+2026-03-26 17:09:21.795 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:09:21.809 DEBU [pymycobot.ultraArmP1] _read: angles[0.020,0.000,90.080,0.170]
+coords[223.500,0.078,90.805,0.003]
+
+2026-03-26 17:09:38.837 DEBU [pymycobot.ultraArmP1] _write: G1 A0 B0 C90 D0 F20000
+2026-03-26 17:09:38.867 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+
+2026-03-26 17:09:40.230 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+End
+End
+
+2026-03-26 17:09:40.232 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:09:40.245 DEBU [pymycobot.ultraArmP1] _read: angles[0.070,0.000,90.000,0.170]
+coords[223.500,0.273,91.000,0.002]
+
+2026-03-26 17:13:05.154 DEBU [pymycobot.ultraArmP1] _write: G1 A0 B0 C90 D0 F20000
+2026-03-26 17:13:05.185 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+
+2026-03-26 17:13:05.366 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+End
+End
+
+2026-03-26 17:13:05.369 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:13:05.381 DEBU [pymycobot.ultraArmP1] _read: angles[0.020,0.000,90.000,0.170]
+coords[223.500,0.078,91.000,0.003]
+
+2026-03-26 17:13:05.385 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:13:05.396 DEBU [pymycobot.ultraArmP1] _read: angles[0.020,0.000,90.080,0.170]
+coords[223.500,0.078,90.805,0.003]
+
+2026-03-26 17:14:42.350 DEBU [pymycobot.ultraArmP1] _write: M13 J1 D1 F1
+2026-03-26 17:15:40.425 DEBU [pymycobot.ultraArmP1] _read: DATA:LimitError[1]                                              
+2026-03-26 17:15:40.427 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:15:40.439 DEBU [pymycobot.ultraArmP1] _read: angles[157.790,0.000,90.080,0.170]
+coords[-206.917,84.484,90.805,-2.751]
+
+2026-03-26 17:15:40.441 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:15:40.454 DEBU [pymycobot.ultraArmP1] _read: angles[157.860,0.000,90.080,0.170]
+coords[-207.020,84.231,90.805,-2.752]
+
+2026-03-26 17:16:46.475 DEBU [pymycobot.ultraArmP1] _write: M13 J1 D0 F10
+2026-03-26 17:16:46.531 DEBU [pymycobot.ultraArmP1] _read: DATA:LimitError[1]                                             
+2026-03-26 17:16:46.537 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:16:46.546 DEBU [pymycobot.ultraArmP1] _read: angles[157.880,0.000,90.080,0.350]
+coords[-207.049,84.159,90.805,-2.749]
+end
+end
+
+2026-03-26 17:16:46.555 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:16:46.561 DEBU [pymycobot.ultraArmP1] _read: angles[157.850,0.000,90.080,0.350]
+coords[-207.005,84.267,90.80
+2026-03-26 17:16:46.576 DEBU [pymycobot.ultraArmP1] _read: angles[157.850,0.000,90.080,0.350]
+coords[-207.005,84.267,90.805,-2.749]
+
+2026-03-26 17:18:44.978 DEBU [pymycobot.ultraArmP1] _write: M13 J1 D1 F10
+2026-03-26 17:20:01.869 DEBU [pymycobot.ultraArmP1] _read: DATA:LimitError[1]                                              
+2026-03-26 17:20:01.871 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:20:02.080 DEBU [pymycobot.ultraArmP1] _read: angles[157.420,0.000,90.080,4.830]
+coords[-206.367,85.818,90.805,-2.663]
+end
+end
+
+2026-03-26 17:20:02.083 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:20:02.095 DEBU [pymycobot.ultraArmP1] _read: angles[157.850,0.000,90.080,5.000]
+coords[-207.005,84.267,90.805,-2.668]
+
+2026-03-26 17:22:01.613 DEBU [pymycobot.ultraArmP1] _write: M13 J2 D1 F200
+2026-03-26 17:22:01.658 DEBU [pymycobot.ultraArmP1] _read: DATA:LimitError[1]                                              
+2026-03-26 17:22:01.660 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:22:01.673 DEBU [pymycobot.ultraArmP1] _read: angles[157.830,0.000,90.170,5.000]
+coords[-206.976,84.339,90.585,-2.667]
+
+2026-03-26 17:22:01.675 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:22:01.688 DEBU [pymycobot.ultraArmP1] _read: end
+end
+angles[157.830,0.080,90.170,5.000]
+coords[-207.157,84.413,90.585,-2.667]
+
+2026-03-26 17:22:09.752 DEBU [pymycobot.ultraArmP1] _write: M13 J2 D1 F200
+2026-03-26 17:22:09.797 DEBU [pymycobot.ultraArmP1] _read: DATA:LimitError[1]                                              
+2026-03-26 17:22:09.800 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:22:09.812 DEBU [pymycobot.ultraArmP1] _read: angles[157.830,0.080,90.170,5.270]
+coords[-207.157,84.413,90.585,-2.663]
+
+2026-03-26 17:22:09.814 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:22:09.827 DEBU [pymycobot.ultraArmP1] _read: angles[157.830,0.080,90.170,5.270]
+coords[-207.157,84.413,90.585,-2.663]
+
+2026-03-26 17:22:23.918 DEBU [pymycobot.ultraArmP1] _write: G1 A0 B0 C90 D0 F20000
+2026-03-26 17:22:23.947 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+
+2026-03-26 17:22:25.257 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+End
+End
+
+2026-03-26 17:22:25.259 DEBU [pymycobot.ultraArmP1] _write: M13 J2 D1 F200
+2026-03-26 17:22:58.986 DEBU [pymycobot.ultraArmP1] _read: DATA:LimitError[6]                                              
+2026-03-26 17:22:58.988 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:22:59.001 DEBU [pymycobot.ultraArmP1] _read: angles[0.140,76.640,90.080,0.610]
+coords[359.710,0.879,-16.846,0.008]
+
+2026-03-26 17:22:59.003 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:22:59.016 DEBU [pymycobot.ultraArmP1] _read: angles[0.140,76.720,90.080,0.610]
+coords[359.755,0.879,-17.036,0.008]
+
+2026-03-26 17:35:40.458 DEBU [pymycobot.ultraArmP1] _write: G1 A0 B0 C90 D0 F20000
+2026-03-26 17:35:40.487 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+
+2026-03-26 17:35:42.249 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+End
+End
+
+2026-03-26 17:35:42.251 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:35:42.264 DEBU [pymycobot.ultraArmP1] _read: angles[0.040,0.350,90.000,0.350]
+coords[224.551,0.157,90.996,0.005]
+
+2026-03-26 17:35:42.266 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:35:42.279 DEBU [pymycobot.ultraArmP1] _read: angles[0.040,0.350,90.000,0.350]
+coords[224.355,0.157,90.998,0.005]
+
+2026-03-26 17:38:37.036 DEBU [pymycobot.ultraArmP1] _write: M30 J3
+2026-03-26 17:38:43.697 DEBU [pymycobot.ultraArmP1] _read: End
+End
+
+2026-03-26 17:38:43.699 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:38:43.712 DEBU [pymycobot.ultraArmP1] _read: angles[-0.010,0.610,90.000,0.610]
+coords[225.210,-0.039,91.210,0.011]
+
+2026-03-26 17:38:43.715 DEBU [pymycobot.ultraArmP1] _write: M12
+2026-03-26 17:38:43.727 DEBU [pymycobot.ultraArmP1] _read: angles[-0.010,0.610,90.000,0.610]
+coords[224.990,-0.039,90.992,0.011]
+
+2026-03-26 19:02:24.000 DEBU [pymycobot.ultraArmP1] _write: G1 A0 B0 C90 D0 F20000
+2026-03-26 19:02:24.031 DEBU [pymycobot.ultraArmP1] _read: QUEUE SIZE:[0]
+
+2026-03-26 19:03:54.013 ERRO [pymycobot.ultraArmP1] _timeout: b'QUEUE SIZE:[0]\r\n'

@@ -105,9 +105,8 @@ logger.info("✅ 异常断言通过,异常信息：%s", exc.value)
 
 ## 步骤 7：参数日志（`logger.debug` 查漏补缺）
 - 每条用例在 `logger.info` 开始之后，对**本用例会参与 API 调用的字段**打 `logger.debug`（勿在 production 路径打印敏感信息）。
-- 推荐二选一（**以同文件存量为准，勿混用**，见上文「同文件风格一致」）：
-  - 逐项：`logger.debug(f'axis:{case["axis"]}')` 等形式（与 UltraArm P1 多数用例一致）；
-  - 整行排障：`logger.debug("用例详情: %s", case)`（Mercury 部分用例已采用）。
+- 推荐（**以同文件存量为准**，见上文「同文件风格一致」）：
+  - 逐项：`logger.debug(f'axis:{case["axis"]}')` 等形式；
 - 若已从 `case` 解包到局部变量，至少 `logger.debug` 这些局部量，避免失败时 log 里看不到实际入参。
 
 ## 反模式（避免）
