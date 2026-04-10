@@ -1,159 +1,106 @@
 import time
+from time import sleep
+
 import pytest
 import allure
-from pymycobot.error import MyCobotPro450DataException
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
-from common1.assert_utils import assert_almost_equal
 from settings import MyAGVProBase
 
 # 从 Excel 读取测试数据
-cases = get_test_data_from_excel(MyAGVProBase.TEST_DATA_FILE, "send_angle")
-
-pytestmark = pytest.mark.slow
+cases = get_test_data_from_excel(MyAGVProBase.TEST_DATA_FILE, "set_communication_state")
 
 
-@pytest.fixture(scope="module")
-def device():
-    """设备初始化和清理"""
-    dev = MyAGVProBase()
-    logger.info("初始化完成，接口测试开始")
-    yield dev
-    dev.default_settings()
-    dev.go_zero()
-    dev.wait()
-    dev.mc.close()
-    logger.info("环境清理完成，接口测试结束")
-
-@pytest.fixture(autouse=True)
-def reset_device(device):
-    yield
-    device.go_zero()
-
-@allure.feature("设置单关节角度")
-@allure.story("插补模式设置单关节角度")
-@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
-def test_send_angle0(device, case):
+@allure.feature("设置通信模式")
+@allure.story("设置通信模式（上电）")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "power_on"], ids=lambda c: c["title"])
+def test_set_communication_state1(device, case):
     title = case["title"]
     expected = case["expect_data"]
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
-    logger.debug(f'joint:{case["joint"]}')
-    logger.debug(f'angle:{case["angle"]}')
-    logger.debug(f'speed:{case["speed"]}')
 
-    with allure.step(f'设置为插补模式'):
-        device.mc.set_fresh_mode(0)
-        mode = '刷新' if device.mc.get_fresh_mode() else '插补'
-        logger.debug(f'当前模式为{mode}')
+    with allure.step("小车上电"):
+        device.mc.power_on()
 
-    with allure.step('设置2关节角度时，调整3关节姿态，防止碰撞'):
-        if case["joint"] == 2 and case["angle"] == -125:
-            device.mc.send_angle(3, 90, device.speed)
-            device.wait()
-        elif case["joint"] == 2 and case["angle"] == 125:
-            device.mc.send_angle(3, -90, device.speed)
-            device.wait()
-        else:
-            pass
+    with allure.step("调用 set_communication_state 接口"):
+        response = device.mc.set_communication_state(case['state'])
+        logger.debug(f"设置接口返回：{response}")
 
-    with allure.step(f"调用 {case['api']} 接口"):
-        set_res = device.mc.send_angle(case["joint"],case["angle"],case["speed"])
-        device.wait()
-        logger.debug(f"接口返回：{set_res}")
+    with allure.step("调用 get_communication_state 接口"):
+        response_get = device.mc.get_communication_state()
+        logger.debug(f"读取接口返回：{response_get}")
 
-    with allure.step(f'调用 get_angle 接口'):
-        get_res = device.mc.get_angle(case["joint"])
-        logger.debug(f"接口返回：{get_res}")
+    if case['state'] == 2:
+        input(f'请按下松开急停后, 回车继续测试')
 
     with allure.step("断言返回值类型为 int"):
-        assert isinstance(set_res, int), f"返回类型错误,应为{type(expected)},实际为 {type(set_res)}"
+        assert isinstance(response, int), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"
 
-    with allure.step("断言接口返回结果"):
+    with allure.step("断言设置接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(set_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert set_res == expected, f"用例【{title}】断言失败，期望 {expected},实际 {set_res}"
+        allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert response == expected, f"用例【{title}】断言失败，期望 {expected},实际 {response}"
 
-    with allure.step("断言 get_angle 返回值"):
-        allure.attach(str(case["angle"]), name="期望值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(get_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(get_res, case["angle"], 1,'插补模式设置单关节角度'), f"用例【{title}】断言失败，期望 {case['angle']},实际 {get_res}"
+    with allure.step("断言读取接口返回结果"):
+        allure.attach(str(case['expect_data_get']), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response_get), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert response_get == case['expect_data_get'], f"用例【{title}】断言失败，期望 {case['expect_data_get']},实际 {response_get}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
 
 
-@allure.feature("设置单关节角度")
-@allure.story("刷新模式设置单关节角度")
-@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal1"], ids=lambda c: c["title"])
-def test_send_angle1(device, case):
+@allure.feature("设置通信模式")
+@allure.story("设置通信模式（下电）")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "power_off"], ids=lambda c: c["title"])
+def test_set_communication_state2(device, case):
     title = case["title"]
     expected = case["expect_data"]
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
-    logger.debug(f'joint:{case["joint"]}')
-    logger.debug(f'angle:{case["angle"]}')
-    logger.debug(f'speed:{case["speed"]}')
 
-    with allure.step(f'设置为刷新模式'):
-        device.mc.set_fresh_mode(1)
-        mode = '刷新' if device.mc.get_fresh_mode() else '插补'
-        logger.debug(f'当前模式为{mode}')
+    with allure.step("小车下电"):
+        device.mc.power_off()
 
-    with allure.step('设置2关节角度时，调整3关节姿态，防止碰撞'):
-        if case["joint"] == 2 and case["angle"] == -125:
-            device.mc.send_angle(3, 90, device.speed)
-            device.wait()
-        elif case["joint"] == 2 and case["angle"] == 125:
-            device.mc.send_angle(3, -90, device.speed)
-            device.wait()
-        else:
-            pass
+    with allure.step("调用 set_communication_state 接口"):
+        response = device.mc.set_communication_state(case['state'])
+        logger.debug(f"接口返回：{response}")
 
-    with allure.step(f"调用 {case['api']} 接口"):
-        set_res = device.mc.send_angle(case["joint"],case["angle"], case["speed"])
-        device.wait()
-        logger.debug(f"接口返回：{set_res}")
+    with allure.step("小车上电"):
+        device.mc.power_on()
 
-    with allure.step(f'调用 get_angle 接口'):
-        get_res = device.mc.get_angle(case['joint'])
-        logger.debug(f"接口返回：{get_res}")
-
-    with allure.step("断言返回值类型为 int"):
-        assert isinstance(set_res, int), f"返回类型错误,应为{type(expected)},实际为 {type(set_res)}"
+    with allure.step("断言返回值类型"):
+        assert response is None, f"机械臂返回类型错误，期望None，实际{type(response)}"
 
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(set_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert set_res == expected, f"用例【{title}】断言失败，期望 {expected},实际 {set_res}"
-
-    with allure.step("断言 get_angle 返回值"):
-        allure.attach(str(case["angle"]), name="期望值", attachment_type=allure.attachment_type.TEXT)
-        allure.attach(str(get_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(get_res, case["angle"], 1,'刷新模式设置单关节角度'), f"用例【{title}】断言失败，期望 {case['angle']},实际 {get_res}"
+        allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert response == expected, f"用例【{title}】断言失败，期望 {expected},实际 {response}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
 
-@allure.feature("设置单关节角度")
-@allure.story("超限报错验证")
+@allure.feature("设置通信模式")
+@allure.story("设置通信模式（参数超限）")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
-def test_send_angle_exception(device, case):
+def test_set_communication_state3(device, case):
     title = case["title"]
-    expected = case["expect_data"]
+
+    if '（参数类型超限）' in title:
+        state = eval(case['state'])
+    else:
+        state = case['state']
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
-    logger.debug(f'joint:{case["joint"]}')
-    logger.debug(f'angle:{case["angle"]}')
-    logger.debug(f'speed:{case["speed"]}')
 
-    with allure.step(f"断言抛出 Mycobot450Exception,关节为{case['joint']},角度为{case['angle']}, 速度为{case['speed']}"):
-        with pytest.raises(MyCobotPro450DataException):
-            device.mc.send_angle(case["joint"],case["angle"], case["speed"])
+    with allure.step(f"断言抛出 ValueError,模式为{state}"):
+        with pytest.raises(ValueError):
+            device.mc.set_communication_state(state)
 
     logger.info(f"✅ 用例【{title}】异常断言通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")

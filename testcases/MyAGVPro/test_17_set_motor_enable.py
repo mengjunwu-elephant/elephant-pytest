@@ -1,42 +1,80 @@
 import time
+from time import sleep
+
 import pytest
 import allure
-from pymycobot.error import MyCobotPro450DataException
 
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MyAGVProBase
 
 # 从 Excel 读取测试数据
-cases = get_test_data_from_excel(MyAGVProBase.TEST_DATA_FILE, "servo_restore")
+cases = get_test_data_from_excel(MyAGVProBase.TEST_DATA_FILE, "set_motor_enable")
 
+@pytest.fixture(autouse=True)
+def reset(device):
+    # 每个用例后所有电机自动使能
+    yield
+    device.set_motor_enable_reset()
 
-@pytest.fixture(scope="module")
-def device():
-    """设备初始化和清理"""
-    dev = MyAGVProBase()
-    logger.info("初始化完成，接口测试开始")
-    yield dev
-    dev.default_settings()
-    dev.mc.close()
-    logger.info("环境清理完成，接口测试结束")
-
-@allure.feature("关节异常恢复")
-@allure.story("正确恢复各关节")
+@allure.feature("电机使能")
+@allure.story("电机使能（上电）")
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
-def test_servo_restore1(device, case):
+def test_set_motor_enable1(device, case):
     title = case["title"]
     expected = case["expect_data"]
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
 
-    with allure.step(f"调用 {case['api']} 接口"):
-        response = device.mc.servo_restore(case["joint"])
+    with allure.step("小车上电"):
+        device.mc.power_on()
+
+    with allure.step("调用 set_motor_enable 接口"):
+        response = device.mc.set_motor_enable(case['motor_id'], case['state'])
         logger.debug(f"接口返回：{response}")
+
+    res = input(f"254代表所有电机, 状态0对应车轮放松, 状态1对应车轮锁紧\n"
+                f"电机{case['motor_id']}状态{case['state']}\n"
+                f"查看对应电机状态是否正确, 正确回车, 错误输入1\n")
+
+    with allure.step("断言对应电机状态是否正确"):
+        assert res != '1', f"电机{case['motor_id']}状态错误, 期望 '', 实际为 {res}"
 
     with allure.step("断言返回值类型为 int"):
         assert isinstance(response, int), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"
+
+    with allure.step("断言设置接口返回结果"):
+        allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert response == expected, f"用例【{title}】断言失败，期望 {expected},实际 {response}"
+
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
+
+
+@allure.feature("电机使能")
+@allure.story("电机使能（下电）")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "power_off"], ids=lambda c: c["title"])
+def test_set_motor_enable2(device, case):
+    title = case["title"]
+    expected = case["expect_data"]
+
+    logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
+    logger.debug(f'test_api:{case["api"]}')
+
+    with allure.step("小车下电"):
+        device.mc.power_off()
+
+    with allure.step("调用 set_motor_enable 接口"):
+        response = device.mc.set_motor_enable(case['motor_id'], case['state'])
+        logger.debug(f"接口返回：{response}")
+
+    with allure.step("小车上电"):
+        device.mc.power_on()
+
+    with allure.step("断言返回值类型"):
+        assert response is None, f"机械臂返回类型错误，期望None，实际{type(response)}"
 
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
@@ -46,21 +84,45 @@ def test_servo_restore1(device, case):
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
 
-
-@allure.feature("关节异常恢复")
-@allure.story("设置关节超限")
-@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
-def test_servo_restore_exception(device, case):
+@allure.feature("电机使能")
+@allure.story("电机使能（参数超限）")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception1"], ids=lambda c: c["title"])
+def test_set_motor_enable3(device, case):
     title = case["title"]
-    expected = case["expect_data"]
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
-    logger.debug(f'joint:{case["joint"]}')
 
-    with allure.step(f"断言抛出 Mycobot450Exception,关节为{case['joint']}"):
-        with pytest.raises(MyCobotPro450DataException):
-            device.mc.servo_restore(case['joint'])
+    if '（参数类型超限）' in title:
+        motor_id = eval(case['motor_id'])
+    else:
+        motor_id = case['motor_id']
+
+    with allure.step(f"断言抛出 ValueError"):
+        with pytest.raises(ValueError):
+            device.mc.set_motor_enable(motor_id, case['state'])
 
     logger.info(f"✅ 用例【{title}】异常断言通过")
     logger.info(f"》》》用例【{title}】测试完成《《《")
+
+@allure.feature("电机使能")
+@allure.story("电机使能（参数超限）")
+@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception2"], ids=lambda c: c["title"])
+def test_set_motor_enable4(device, case):
+    title = case["title"]
+
+    logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
+    logger.debug(f'test_api:{case["api"]}')
+
+    if '（参数类型超限）' in title:
+        state = eval(case['state'])
+    else:
+        state = case['state']
+
+    with allure.step(f"断言抛出 ValueError"):
+        with pytest.raises(ValueError):
+            device.mc.set_motor_enable(case['motor_id'], state)
+
+    logger.info(f"✅ 用例【{title}】异常断言通过")
+    logger.info(f"》》》用例【{title}】测试完成《《《")
+

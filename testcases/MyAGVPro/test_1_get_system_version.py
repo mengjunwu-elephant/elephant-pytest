@@ -17,7 +17,7 @@ pytestmark = pytest.mark.smoke
 def test_get_system_version1(device, case):
     title = case["title"]
 
-    expected = int(input(f'请输入当前主版本号: '))
+    expected = float(input(f'请输入当前主版本号: '))
     logger.debug(f'当前主版本号: {expected}')
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')

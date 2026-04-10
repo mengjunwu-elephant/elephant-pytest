@@ -1,46 +1,77 @@
 import time
+from time import sleep
+
 import pytest
 import allure
 
-from common1 import logger
+from common1 import logger, assert_almost_equal
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MyAGVProBase
 
 # 从 Excel 读取测试数据
-cases = get_test_data_from_excel(MyAGVProBase.TEST_DATA_FILE, "over_limit_return_zero")
+cases = get_test_data_from_excel(MyAGVProBase.TEST_DATA_FILE, "get_motor_temps")
 
 
-@pytest.fixture(scope="module")
-def device():
-    """设备初始化和清理"""
-    dev = MyAGVProBase()
-    logger.info("初始化完成，接口测试开始")
-    dev.mc.set_free_move_mode(1)
-    yield dev
-    dev.mc.set_free_move_mode(0)
-    dev.mc.clear_error_information()
-    dev.mc.close()
-    logger.info("环境清理完成，接口测试结束")
+@allure.feature("读取所有电机状态")
+@allure.story("读取所有电机状态（上电）")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "power_on"], ids=lambda c: c["title"])
+def test_get_motor_temps1(device, case):
+    title = case["title"]
+    expected = eval(case["expect_data"])
 
-@allure.feature("超限回零")
-@allure.story("查看机械臂是否能够在任意位置回零")
-@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
-def test_over_limit_return_zero(device, case):
+    logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
+    logger.debug(f'test_api:{case["api"]}')
+
+    with allure.step("小车上电"):
+        device.mc.power_on()
+
+    with allure.step("小车运动"):
+        device.mc.move_forward(case['speed'])
+        sleep(2)
+
+    with allure.step("调用 get_motor_temps 接口"):
+        response = device.mc.get_motor_temps()
+        logger.debug(f"接口返回：{response}")
+
+    with allure.step("小车停止运动"):
+        device.mc.stop()
+
+    with allure.step("断言返回值类型为 list"):
+        assert isinstance(response, list), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"
+
+    with allure.step("断言返回值list长度"):
+        assert len(response) == case['list_len'], f"返回类型错误,应为{type(expected)},实际为 {type(response)}"
+
+    with allure.step("断言读取接口返回结果"):
+        allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert_almost_equal(response, expected, case['range_limitation'],'电机温度'), f"用例【{title}】断言失败，期望 {expected},实际 {response}"
+
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
+
+@allure.feature("读取所有电机状态")
+@allure.story("读取所有电机状态（下电）")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "power_off"], ids=lambda c: c["title"])
+def test_get_motor_temps2(device, case):
     title = case["title"]
     expected = case["expect_data"]
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
 
-    with allure.step('手动调整机械臂到任意位置'):
-        input('请按住末端按钮手动调整机械臂到任意位置，然后按回车键继续')
+    with allure.step("小车下电"):
+        device.mc.power_off()
 
-    with allure.step(f'调用 {case["api"]} 接口'):
-        response = device.mc.over_limit_return_zero()
+    with allure.step("调用 get_motor_temps 接口"):
+        response = device.mc.get_motor_temps()
         logger.debug(f"接口返回：{response}")
 
-    with allure.step("断言返回值类型为 int"):
-        assert isinstance(response, int), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"
+    with allure.step("小车上电"):
+        device.mc.power_on()
+
+    with allure.step("断言返回值类型"):
+        assert response is None, f"机械臂返回类型错误，期望None，实际{type(response)}"
 
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
@@ -49,4 +80,3 @@ def test_over_limit_return_zero(device, case):
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
-

@@ -1,69 +1,77 @@
+import time
+from time import sleep
+
 import pytest
 import allure
+
 from common1 import logger
 from common1.test_data_handler import get_test_data_from_excel
 from settings import MyAGVProBase
 
-# 读取测试数据
-cases = get_test_data_from_excel(MyAGVProBase.TEST_DATA_FILE, "clear_error_information")
+# 从 Excel 读取测试数据
+cases = get_test_data_from_excel(MyAGVProBase.TEST_DATA_FILE, "get_auto_report_state")
 
-@pytest.fixture(autouse=True)
-def reset_device(device):
-    yield
-    device.mc.clear_error_information()
-    device.go_zero()
 
-@allure.feature("错误信息清除接口")
-@allure.story("奇异点错误清除")
-@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal1"], ids=lambda c: c["title"])
-def test_clear_error_information_with_error(device, case):
+@allure.feature("读取自动上发状态")
+@allure.story("读取自动上发状态（上电）")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "power_on"], ids=lambda c: c["title"])
+def test_get_auto_report_state1(device, case):
     title = case["title"]
-    logger.info(f"》》》用例【{title}】开始测试《《《")
+    expected = case["expect_data"]
 
-    logger.debug(f"test_api: {case['api']}")
+    logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
+    logger.debug(f'test_api:{case["api"]}')
+
+    with allure.step("小车上电"):
+        device.mc.power_on()
+
+    with allure.step("调用 set_auto_report_state 接口"):
+        response = device.mc.set_auto_report_state(case['parameters'])
+        logger.debug(f"设置接口返回：{response}")
+
+    with allure.step("调用 get_auto_report_state 接口"):
+        response_get = device.mc.get_auto_report_state()
+        logger.debug(f"读取接口返回：{response_get}")
+
+    with allure.step("断言返回值类型为 int"):
+        assert isinstance(response_get, int), f"返回类型错误,应为{type(expected)},实际为 {type(response_get)}"
+
+    with allure.step("断言读取接口返回结果"):
+        allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response_get), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert response_get == expected, f"用例【{title}】断言失败，期望 {expected},实际 {response_get}"
+
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
 
 
-    with allure.step("使机械臂进入奇异点位置"):
-        device.mc.send_angles(eval(case['target_angles']), device.speed)
-        device.mc.send_coord(case['axis'],case['target_coord'], device.speed)
-
-    with allure.step("清除错误信息"):
-        response = device.mc.clear_error_information()
-
-    with allure.step("断言返回类型为 int"):
-        assert isinstance(response, int), f"左臂返回类型错误：{type(response)}"
-
-    with allure.step("断言返回结果"):
-        allure.attach(str(case["expect_data"]),name= "期望值",attachment_type= allure.attachment_type.TEXT)
-        allure.attach(str(response),name= "实际值",attachment_type= allure.attachment_type.TEXT)
-        assert response == case["expect_data"], f"断言失败，期望：{case['expect_data']}，实际：{response}"
-
-    logger.info(f"✅ 用例【{title}】测试成功")
-    logger.info(f"》》》用例【{title}】测试完成《《《")
-
-
-@allure.feature("错误信息清除接口")
-@allure.story("无异常状态清除")
-@pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "normal2"], ids=lambda c: c["title"])
-def test_clear_error_information_no_error(device, case):
+@allure.feature("读取自动上发状态")
+@allure.story("读取自动上发状态（下电）")
+@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "power_off"], ids=lambda c: c["title"])
+def test_get_auto_report_state2(device, case):
     title = case["title"]
-    logger.info(f"》》》用例【{title}】开始测试《《《")
+    expected = case["expect_data"]
 
-    logger.debug(f"test_api: {case['api']}")
+    logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
+    logger.debug(f'test_api:{case["api"]}')
 
+    with allure.step("小车下电"):
+        device.mc.power_off()
 
-    with allure.step("清除错误信息（当前无异常）"):
-        response = device.mc.clear_error_information()
+    with allure.step("调用 get_auto_report_state 接口"):
+        response = device.mc.get_auto_report_state()
+        logger.debug(f"接口返回：{response}")
 
-    with allure.step("断言返回类型为 int"):
-        assert isinstance(response, int), f"左臂返回类型错误：{type(response)}"
-    with allure.step("右臂断言返回类型为 int"):
-        assert isinstance(response, int), f"右臂返回类型错误：{type(response)}"
+    with allure.step("小车上电"):
+        device.mc.power_on()
 
-    with allure.step("断言返回结果"):
-        allure.attach(str(case["expect_data"]),name= "期望值",attachment_type= allure.attachment_type.TEXT)
-        allure.attach(str(response),name= "实际值",attachment_type= allure.attachment_type.TEXT)
-        assert response == case["expect_data"], f"断言失败，期望：{case['expect_data']}，实际：{response}"
+    with allure.step("断言返回值类型"):
+        assert response is None, f"机械臂返回类型错误，期望None，实际{type(response)}"
 
-    logger.info(f"✅ 用例【{title}】测试成功")
-    logger.info(f"》》》用例【{title}】测试完成《《《")
+    with allure.step("断言接口返回结果"):
+        allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert response == expected, f"用例【{title}】断言失败，期望 {expected},实际 {response}"
+
+    logger.info(f'✅ 用例【{title}】测试通过')
+    logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
