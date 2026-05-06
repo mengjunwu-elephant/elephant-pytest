@@ -228,7 +228,8 @@ def move():
 
     while not stop_threads.is_set():
         # 速度设置
-        speed = random.randint(1, 100)
+        # speed = random.randint(1, 100)
+        speed = 100
 
         # 角度运动
         for joint, limits in joints.items():

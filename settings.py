@@ -50,7 +50,7 @@ def _mycobot450_move_wait_timeout_sec() -> float:
 # ---------------------------------------------------------------------------
 # UltraArm P1（串口）
 # ---------------------------------------------------------------------------
-DEFAULT_ULTRAARM_PORT = "com5"
+DEFAULT_ULTRAARM_PORT = "com10"
 DEFAULT_ULTRAARM_BAUD = 1000000
 
 
@@ -394,15 +394,19 @@ class Mycobot280Base:
 # UltraArm P1
 # ---------------------------------------------------------------------------
 class UltraArmP1Base:
-    speed = 5000
+    speed = 50
     zero_angles = [0, 0, 90, 0]
-    coords_init_angles = [0, 0, 110, 0]
+    coords_init_angles = [0, 10, 110, 0]
     min_angles = [-162, -114, -154, -162, -162, -165]
     max_angles = [162, 114, 154, 162, 162, 165]
 
     base_io_pin_count = 12
 
     TEST_DATA_FILE = os.path.join(BASE_DIR, r"test_data/UltraArm_P1.xlsx")
+    # collision_unlock 用例；也可合并到 UltraArm_P1.xlsx 同名 sheet 后改从此处读主表
+    COLLISION_UNLOCK_DATA_FILE = os.path.join(
+        BASE_DIR, r"test_data/UltraArm_P1_collision_unlock.xlsx"
+    )
     ATTACHMENTS_TEST_DATA_FILE = os.path.join(
         BASE_DIR, r"test_data/UltraArm_P1_Attachments.xlsx"
     )

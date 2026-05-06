@@ -2,10 +2,11 @@ import time
 from time import sleep
 import statistics
 
-from pymycobot import UltraArmP1
+from pymycobot import Pro450Client,UltraArmP1
 
-mc = UltraArmP1('com5',debug=1)
+mc = UltraArmP1('com10',debug=1)
 # sleep(2)
+# mc = Pro450Client()
 
 def measure_time(func, *args, times=1000):
     """
