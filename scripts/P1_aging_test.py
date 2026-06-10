@@ -32,7 +32,7 @@ JOINT_CASES = {
     "J4": {"min": [0.0, 10.0, 110.0, -179.0], "max": [0.0, 10.0, 110.0, 179.0]},
 }
 
-ANGLE_TOLERANCE_DEG = 1.0
+ANGLE_TOLERANCE_DEG = 0.5
 # 坐标：XYZ 允许误差 1 mm；Rx 为角度分量，允许误差 1°
 COORD_TOLERANCE_MM = 1.0
 COORD_TOLERANCE_RX_DEG = 1.0
@@ -538,7 +538,7 @@ def get_current_time() -> str:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="UltraArm P1 aging test (joint limits loop).")
-    parser.add_argument("--port", default="COM10", help="Serial port, e.g. COM11")
+    parser.add_argument("--port", default="COM9", help="Serial port, e.g. COM11")
     parser.add_argument("--baud", type=int, default=1_000_000, help="Baudrate")
     parser.add_argument("--speed", type=int, default=80, help="set_angles speed")
     parser.add_argument("--poll", type=float, default=0.2, help="Monitor poll interval seconds")

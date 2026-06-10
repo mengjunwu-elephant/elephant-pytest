@@ -50,7 +50,7 @@ def _mycobot450_move_wait_timeout_sec() -> float:
 # ---------------------------------------------------------------------------
 # UltraArm P1（串口）
 # ---------------------------------------------------------------------------
-DEFAULT_ULTRAARM_PORT = "com10"
+DEFAULT_ULTRAARM_PORT = "com3"
 DEFAULT_ULTRAARM_BAUD = 1000000
 
 
@@ -396,7 +396,7 @@ class Mycobot280Base:
 class UltraArmP1Base:
     speed = 50
     zero_angles = [0, 0, 90, 0]
-    coords_init_angles = [0, 10, 110, 0]
+    coords_init_angles = [0, 20, 110, 0]
     min_angles = [-162, -114, -154, -162, -162, -165]
     max_angles = [162, 114, 154, 162, 162, 165]
 

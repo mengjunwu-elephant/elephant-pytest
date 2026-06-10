@@ -31,6 +31,14 @@ def drag_teach(drag_time=30,times=1,execute=0):
 
 
 if __name__ == '__main__':
-    mc.set_pro_gripper_offset(5)
-    drag_teach(drag_time=20,times=2,execute=1)
+    # mc.set_pro_gripper_offset(5)
+    drag_teach(drag_time=10,times=1,execute=1)
     # mc.drag_teach_execute()
+    # mc.set_control_mode(0)
+    # mc.servo_restore(1)
+    # mc.power_on()
+    # mc.servo_restore(1)
+    # print(mc.get_robot_status())
+    # mc.get_atom_version()
+    # print(mc.get_atom_version())
+    # print(mc.get_tool_modify_version())

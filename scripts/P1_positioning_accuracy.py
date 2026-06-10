@@ -213,7 +213,7 @@ def run_absolute_coords(
 
 
 def run_repeat_coords(
-    mc: UltraArmP1, speed: int, targets: list[list[float]], repeat_n: int
+    mc: UltraArmP1, speed: int, targets: list[list[float]], repeat_n: int 
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     detail: list[dict[str, Any]] = []
     summary: list[dict[str, Any]] = []

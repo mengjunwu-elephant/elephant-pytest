@@ -1,10 +1,10 @@
 {
-  "python.defaultInterpreterPath": "C:\\Users\\Elephant\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+  "python.defaultInterpreterPath": "D:\\python\\python.exe",
   "editor.codeLens": true,
   "python.analysis.extraPaths": ["${workspaceFolder}"],
   "terminal.integrated.env.windows": {
     "PYTHONPATH": "${workspaceFolder}",
-    "PATH": "C:\\Users\\Elephant\\AppData\\Local\\Programs\\Python\\Python310;C:\\Users\\Elephant\\AppData\\Local\\Programs\\Python\\Python310\\Scripts;${env:PATH}"
+    "PATH": "D:\\python;D:\\python\\Scripts;${env:PATH}"
   },
   "python.terminal.executeInFileDir": false,
   "python.envFile": "${workspaceFolder}/.env",
@@ -18,5 +18,8 @@
     "--ignore=testcases/mercury_e1",
     "--ignore=testcases/mercury_my_hand",
     "--ignore=testcases/mercury_pro_gripper"
+  ],
+  "cursorpyright.analysis.extraPaths": [
+    "${workspaceFolder}"
   ]
 }
