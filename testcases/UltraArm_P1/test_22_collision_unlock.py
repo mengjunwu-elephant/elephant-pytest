@@ -12,7 +12,7 @@ from common1.test_data_handler import get_test_data_from_excel
 from settings import UltraArmP1Base
 
 cases: list[dict[str, Any]] = get_test_data_from_excel(
-    UltraArmP1Base.COLLISION_UNLOCK_DATA_FILE,
+    UltraArmP1Base.TEST_DATA_FILE,
     "collision_unlock",
     required_columns=(
         "title",

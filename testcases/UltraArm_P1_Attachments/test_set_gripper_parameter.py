@@ -23,7 +23,7 @@ def test_set_gripper_parameter_normal(device, case):
     logger.debug(f"test_value: {case['value']}")
 
     with allure.step(f"调用 {case['api']} 接口"):
-        set_res = device.mc.set_gripper_angle(case["parameter"],case['value'])
+        set_res = device.mc.set_gripper_parameter(case["parameter"], case["value"])
         time.sleep(5)
         allure.attach(str(set_res), "设置接口返回值", allure.attachment_type.TEXT)
         logger.debug(f'接口返回：{set_res}')

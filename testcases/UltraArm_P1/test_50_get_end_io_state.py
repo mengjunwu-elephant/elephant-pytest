@@ -1,4 +1,4 @@
-import time
+# -*- coding: utf-8 -*-
 import pytest
 import allure
 from pymycobot.error import ultraArmP1DataException
@@ -8,24 +8,13 @@ from common1.test_data_handler import get_test_data_from_excel
 from settings import UltraArmP1Base
 
 # 从 Excel 读取测试数据
-cases = get_test_data_from_excel(UltraArmP1Base.TEST_DATA_FILE, "get_base_io_input")
+cases = get_test_data_from_excel(UltraArmP1Base.TEST_DATA_FILE, "get_end_io_state")
 
 
-@pytest.fixture(scope="module")
-def device():
-    """设备初始化和清理"""
-    dev = UltraArmP1Base()
-    logger.info("初始化完成，接口测试开始")
-    input('请确认底座IO测试工具已连接,点击回车继续测试')
-    yield dev
-    dev.default_base_io_output()
-    dev.mc.close()
-    logger.info("环境清理完成，接口测试结束")
-
-@allure.feature("设置底座IO输出")
-@allure.story("正确设置底座IO输出")
+@allure.feature("末端IO状态")
+@allure.story("读取单个末端IO引脚状态")
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])
-def test_get_base_io_input1(device, case):
+def test_get_end_io_state(device, case):
     title = case["title"]
     expected = case["expect_data"]
 
@@ -34,13 +23,11 @@ def test_get_base_io_input1(device, case):
     logger.debug(f'pin_no:{case["pin_no"]}')
 
     with allure.step(f"调用 {case['api']} 接口"):
-        response = device.mc.get_base_io_state(case["pin_no"])
-        time.sleep(1)
-
+        response = device.mc.get_end_io_state(case["pin_no"])
         logger.debug(f"接口返回：{response}")
 
     with allure.step("断言返回值类型为 int"):
-        assert isinstance(response, int), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"
+        assert isinstance(response, int), f"返回类型错误,应为 int,实际为 {type(response)}"
 
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
@@ -50,12 +37,12 @@ def test_get_base_io_input1(device, case):
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')
 
-@allure.feature("设置底座IO输出")
+
+@allure.feature("末端IO状态")
 @allure.story("超限参数验证")
 @pytest.mark.parametrize("case", [c for c in cases if c.get("test_type") == "exception"], ids=lambda c: c["title"])
-def test_get_base_io_input_exception(device, case):
+def test_get_end_io_state_exception(device, case):
     title = case["title"]
-    expected = case["expect_data"]
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
@@ -63,7 +50,7 @@ def test_get_base_io_input_exception(device, case):
 
     with allure.step(f"断言抛出 ultraArmP1DataException,引脚为{case['pin_no']}"):
         with pytest.raises(ultraArmP1DataException) as exc:
-            device.mc.get_base_io_state(case['pin_no'])
+            device.mc.get_end_io_state(case["pin_no"])
 
     logger.info(f"✅ 用例【{title}】异常断言通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

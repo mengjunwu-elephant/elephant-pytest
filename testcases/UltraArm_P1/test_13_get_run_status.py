@@ -17,7 +17,7 @@ def test_get_run_status_normal(device, case):
     title = case["title"]
     expected = case["expect_data"]
     logger.info(f"》》》用例【{title}】开始测试《《《")
-    logger.debug(f"接口: {case['api']}，参数: {case['parameter']}")
+    logger.debug(f"接口: {case['api']}")
 
     with allure.step("获取运动状态"):
         response = device.mc.get_run_status()
@@ -41,7 +41,7 @@ def test_get_run_status_normal1(device, case):
     title = case["title"]
     expected = case["expect_data"]
     logger.info(f"》》》用例【{title}】开始测试《《《")
-    logger.debug(f"接口: {case['api']}，参数: {case['parameter']}")
+    logger.debug(f"接口: {case['api']}")
     sleep(5)
     with allure.step("使机械臂运动"):
         device.mc.send_angles(device.coords_init_angles,device.speed,_async=True)
