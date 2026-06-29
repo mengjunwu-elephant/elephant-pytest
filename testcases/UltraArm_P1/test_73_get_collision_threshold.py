@@ -18,6 +18,8 @@ def test_get_collision_threshold(device, case):
 
     logger.info(f'》》》》》用例【{title}】开始测试《《《《《')
     logger.debug(f'test_api:{case["api"]}')
+    logger.debug(f'expect_data:{case["expect_data"]}')
+    expected = eval(case["expect_data"])
 
     with allure.step(f"调用 {case['api']} 接口"):
         response = device.mc.get_collision_threshold()
@@ -29,6 +31,11 @@ def test_get_collision_threshold(device, case):
     with allure.step("断言列表长度为 4"):
         allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
         assert len(response) == 4, f"用例【{title}】断言失败，期望长度 4，实际 {len(response)}"
+
+    with allure.step("断言返回值与期望值一致"):
+        allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(response), name="实际值", attachment_type=allure.attachment_type.TEXT)
+        assert response == expected, f"用例【{title}】断言失败，期望 {expected}，实际 {response}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')

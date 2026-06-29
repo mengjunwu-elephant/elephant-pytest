@@ -24,8 +24,8 @@ def test_set_preview_mode0(device, case):
         response = device.mc.set_preview_mode(eval(case["coords"]))
         logger.debug(f"接口返回：{response}")
 
-    with allure.step("断言返回值类型为 str"):
-        assert isinstance(response, str), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"
+    with allure.step("断言返回值类型为 int"):
+        assert isinstance(response, int), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"
 
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)

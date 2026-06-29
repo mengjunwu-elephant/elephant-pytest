@@ -62,11 +62,11 @@ def run_set_angle_step_repeat(device: UltraArmP1Base, case: dict[str, Any]) -> t
     return last_set, expected, final, tol
 
 
-# @pytest.fixture(autouse=True)
-# def reset_device(device):
-#     yield
-#     device.mc.go_home()
-#     device.wait()
+@pytest.fixture(autouse=True)
+def reset_device(device):
+    yield
+    device.mc.go_home()
+    device.wait()
 
 @allure.feature("设置单关节角度")
 @allure.story("设置单关节角度")
@@ -88,7 +88,7 @@ def test_set_angle0(device, case):
             device.mc.set_angle(3,115,device.speed)
             device.wait()
         elif joint == 3:
-            device.mc.set_angle(2,50,device.speed)
+            device.mc.set_angle(2,70,device.speed)
             device.wait()
 
     with allure.step(f"调用 {case['api']} 接口"):

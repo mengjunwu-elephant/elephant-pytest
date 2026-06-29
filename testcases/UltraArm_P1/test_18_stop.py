@@ -35,17 +35,17 @@ def test_stop_normal(device, case):
     title = case["title"]
     expected = case["expect_data"]
     logger.info(f"》》》用例【{title}】开始测试《《《")
-    logger.debug(f"接口: {case['api']}，参数: {case['parameter']}")
+    logger.debug(f"接口: {case['api']}")
 
     with allure.step('使机械臂运动'):
-        device.mc.send_angles(device.coords_init_angles,device.speed,_async=True)
+        device.mc.set_angles(device.coords_init_angles,device.speed,_async=False)
         time.sleep(0.5)
 
     with allure.step("调用 stop 接口"):
-        response = device.mc.stop(case["parameter"])
+        response = device.mc.stop()
 
-    with allure.step("断言返回值类型为 int"):
-        assert isinstance(response, int), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"
+    with allure.step("断言返回值类型为 str"):
+        assert isinstance(response, str), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"
 
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)
@@ -53,20 +53,4 @@ def test_stop_normal(device, case):
         assert response == expected, f"用例【{title}】断言失败，期望 {expected},实际 {response}"
 
     logger.info(f"✅ 用例【{title}】测试通过")
-    logger.info(f"》》》用例【{title}】测试完成《《《")
-
-
-@allure.feature("stop 接口测试")
-@allure.story("异常参数校验")
-@pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "exception"], ids=lambda c: c["title"])
-def test_stop_exception(device, case):
-    title = case["title"]
-    logger.info(f"》》》用例【{title}】开始测试《《《")
-    logger.debug(f"接口: {case['api']}，参数: {case['parameter']}")
-
-    with allure.step("调用 stop 接口并断言抛出 ultraArmP1DataException"):
-        with pytest.raises(ultraArmP1DataException) as exc:
-            device.mc.stop(case["parameter"])
-
-    logger.info(f"✅ 用例【{title}】异常断言通过,异常信息：{exc.value}")
     logger.info(f"》》》用例【{title}】测试完成《《《")

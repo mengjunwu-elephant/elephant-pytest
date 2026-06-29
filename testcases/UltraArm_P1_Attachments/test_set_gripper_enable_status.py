@@ -4,6 +4,7 @@ import allure
 from pymycobot.error import ultraArmP1DataException
 
 from common1 import logger
+from common1.operator_input import prompt_continue
 from common1.test_data_handler import get_test_data_from_excel
 from settings import UltraArmP1Base
 
@@ -22,17 +23,17 @@ def test_set_gripper_enable_status(device, case):
     logger.debug(f'test_api:{case["api"]}')
 
     with allure.step(f'提示请连接夹爪，并确认状态'):
-        if case['status'] == '1':
-            input("夹爪即将掉使能5s,请确认夹爪使能状态,按回车键继续测试")
-        elif case['status'] == '0':
-            input("夹爪即将上使能5s,请确认夹爪使能状态,按回车键继续测试")
+        if case['status'] == 1:
+            prompt_continue("夹爪即将掉使能5s,请确认夹爪使能状态,按回车键继续测试")
+        elif case['status'] == 0:
+            prompt_continue("夹爪即将上使能5s,请确认夹爪使能状态,按回车键继续测试")
 
     with allure.step(f'调用 set_gripper_enable_status 接口'):
         response = device.mc.set_gripper_enable_status(int(case['status']))
         time.sleep(5)
 
-    with allure.step("断言返回值类型为 int"):
-        assert isinstance(response, int), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"
+    with allure.step("断言返回值类型为 str"):
+        assert isinstance(response, str), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"
 
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)

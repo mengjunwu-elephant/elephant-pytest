@@ -12,6 +12,13 @@ from settings import UltraArmP1Base
 # 加载测试数据
 cases = get_test_data_from_excel(UltraArmP1Base.ATTACHMENTS_TEST_DATA_FILE, "set_gripper_parameter")
 
+@pytest.fixture(scope="module")
+def device():
+    dev = UltraArmP1Base()
+    logger.info("初始化完成，接口测试开始")
+    yield dev
+    dev.mc.set_gripper_parameter(21,1)
+    logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("设置夹爪参数")
 @allure.story("正常用例")
@@ -33,8 +40,8 @@ def test_set_gripper_parameter_normal(device, case):
         allure.attach(str(get_res), "获取接口返回值", allure.attachment_type.TEXT)
         logger.debug(f'接口返回：{get_res}')
 
-    with allure.step("断言设置接口返回值类型为 int"):
-        assert isinstance(set_res, int), f"类型错误，实际为 {type(set_res)}"
+    with allure.step("断言设置接口返回值类型为 str"):
+        assert isinstance(set_res, str), f"类型错误，实际为 {type(set_res)}"
 
     with allure.step("断言设置返回值正确"):
         allure.attach(str(case['expect_data']),'期望值',allure.attachment_type.TEXT)

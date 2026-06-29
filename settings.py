@@ -50,7 +50,7 @@ def _mycobot450_move_wait_timeout_sec() -> float:
 # ---------------------------------------------------------------------------
 # UltraArm P1（串口）
 # ---------------------------------------------------------------------------
-DEFAULT_ULTRAARM_PORT = "com3"
+DEFAULT_ULTRAARM_PORT = "com8"
 DEFAULT_ULTRAARM_BAUD = 1000000
 
 
@@ -396,17 +396,16 @@ class Mycobot280Base:
 class UltraArmP1Base:
     speed = 50
     zero_angles = [0, 0, 90, 0]
-    coords_init_angles = [0, 20, 110, 0]
-    min_angles = [-162, -114, -154, -162, -162, -165]
-    max_angles = [162, 114, 154, 162, 162, 165]
+    coords_init_angles = [0, 30, 130, 0]  #[260.76, 0.0, -17.73, 0.0]
+    min_angles = [-165, -18, 89, -179]
+    max_angles = [165, 85, 200, 179]
+    min_coords = [-350, -362.43, -186.265, -180.0]
+    max_coords = [360.43, 362.43, 93.44, 180.0]
 
-    base_io_pin_count = 12
+    base_io_pin_count = 10
 
     TEST_DATA_FILE = os.path.join(BASE_DIR, r"test_data/UltraArm_P1.xlsx")
     # collision_unlock 用例；也可合并到 UltraArm_P1.xlsx 同名 sheet 后改从此处读主表
-    COLLISION_UNLOCK_DATA_FILE = os.path.join(
-        BASE_DIR, r"test_data/UltraArm_P1_collision_unlock.xlsx"
-    )
     ATTACHMENTS_TEST_DATA_FILE = os.path.join(
         BASE_DIR, r"test_data/UltraArm_P1_Attachments.xlsx"
     )
@@ -425,8 +424,11 @@ class UltraArmP1Base:
         self.mc = UltraArmP1(resolved_port, resolved_baud, debug=dbg)
 
     def default_base_io_output(self) -> None:
-        for i in range(1, int(self.base_io_pin_count) + 1):
-            self.mc.set_base_io_output(i, 0)
+        for i in range(1, 6):
+            self.mc.set_base_io_output(i, 0, 0)
+            time.sleep(0.2)
+        for i in range(6, 11):
+            self.mc.set_base_io_output(i, 0, 1)
             time.sleep(0.2)
 
     def go_zero(self) -> None:

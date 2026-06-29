@@ -3,14 +3,12 @@ import pytest
 import allure
 
 from common1 import logger
+from common1.operator_input import prompt_continue
 from common1.test_data_handler import get_test_data_from_excel
 from settings import UltraArmP1Base
 
 # 从 Excel 读取测试数据
 cases = get_test_data_from_excel(UltraArmP1Base.TEST_DATA_FILE, "check_sd_card")
-
-pytestmark = pytest.mark.peripheral
-
 
 @allure.feature("SD卡")
 @allure.story("检查SD卡是否插入")
@@ -23,7 +21,7 @@ def test_check_sd_card(device, case):
     logger.debug(f'test_api:{case["api"]}')
 
     with allure.step("确认 SD 卡已插入"):
-        input("请确认 SD 卡已插入机械臂，按回车键继续测试")
+        prompt_continue("请确认 SD 卡已插入机械臂，按回车键继续测试")
 
     with allure.step(f"调用 {case['api']} 接口"):
         response = device.mc.check_sd_card()

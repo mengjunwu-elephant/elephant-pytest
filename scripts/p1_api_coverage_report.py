@@ -36,6 +36,8 @@ def tested_apis() -> set[str]:
         "send_angles": "set_angles",
         "send_coord": "set_coord",
         "send_coords": "set_coords",
+        "quick_off_laser": "set_pwm_laser_mode",
+        "quick_off_custom_pwm": "set_pwm_custom_mode",
     }
     expanded = set(found)
     for k, v in aliases.items():

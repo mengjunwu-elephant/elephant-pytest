@@ -4,6 +4,7 @@ import allure
 from pymycobot.error import ultraArmP1DataException
 
 from common1 import logger
+from common1.operator_input import prompt_continue
 from common1.test_data_handler import get_test_data_from_excel
 from settings import UltraArmP1Base
 
@@ -16,10 +17,8 @@ def device():
     """设备初始化和清理"""
     dev = UltraArmP1Base()
     logger.info("初始化完成，接口测试开始")
-    input('请确认底座IO测试工具已连接,点击回车继续测试')
+    prompt_continue('请确认底座IO测试工具已连接,点击回车继续测试')
     yield dev
-    dev.default_base_io_output()
-    dev.mc.close()
     logger.info("环境清理完成，接口测试结束")
 
 @allure.feature("设置底座IO输出")
@@ -62,7 +61,7 @@ def test_get_base_io_input_exception(device, case):
     logger.debug(f'pin_no:{case["pin_no"]}')
 
     with allure.step(f"断言抛出 ultraArmP1DataException,引脚为{case['pin_no']}"):
-        with pytest.raises(ultraArmP1DataException) as exc:
+        with pytest.raises(ultraArmP1DataException) as exc: 
             device.mc.get_base_io_state(case['pin_no'])
 
     logger.info(f"✅ 用例【{title}】异常断言通过,异常信息：{exc.value}")

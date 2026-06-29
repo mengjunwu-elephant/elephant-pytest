@@ -3,6 +3,7 @@ import pytest
 import allure
 
 from common1 import logger
+from common1.operator_input import prompt_continue
 from common1.test_data_handler import get_test_data_from_excel
 from settings import UltraArmP1Base
 
@@ -31,7 +32,7 @@ def test_set_joint_enable(device, case):
     logger.debug(f'test_api:{case["api"]}')
 
     with allure.step(f'提示机械臂即将掉使能'):
-        input("机械臂即将掉使能5s,请扶好机械臂,按回车键继续测试")
+        prompt_continue("机械臂即将掉使能5s,请扶好机械臂,按回车键继续测试")
 
     with allure.step(f'调用 set_joint_release 接口'):
         device.mc.set_joint_release()
@@ -42,7 +43,7 @@ def test_set_joint_enable(device, case):
         logger.debug(f"接口返回：{response}")
 
     with allure.step('确认 set_joint_enable 接口是否生效'):
-        input("机械臂已上使能,请确认各关节已锁紧,按回车键继续测试")
+        prompt_continue("机械臂已上使能,请确认各关节已锁紧,按回车键继续测试")
 
     with allure.step("断言返回值类型为 int"):
         assert isinstance(response, int), f"返回类型错误,应为{type(expected)},实际为 {type(response)}"

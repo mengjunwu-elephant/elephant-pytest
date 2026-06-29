@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
-import os
-import sys
 import time
-from typing import Any, Optional
+from typing import Any
 
 import allure
 import pytest
 
 from common1 import logger
+from common1.operator_input import prompt_continue
 from common1.test_data_handler import get_test_data_from_excel
 from settings import UltraArmP1Base
 
@@ -23,74 +22,6 @@ cases: list[dict[str, Any]] = get_test_data_from_excel(
         "test_type",
     ),
 )
-
-
-def _wait_tkinter_ok_or_cancel() -> Optional[str]:
-    """有桌面环境时弹出「确定/取消」对话框；失败返回 None（调用方做其它回退）。"""
-    try:
-        import tkinter as tk
-        from tkinter import messagebox
-    except Exception as e:
-        logger.debug("tkinter 未可用: %s", e)
-        return None
-    text = (
-        "请用手或治具做好阻挡，点击「确定」后机械臂将全关节运动（应在阻挡下触发碰撞）。\n"
-        "未准备好请点击「取消」以跳过本用例。"
-    )
-    root = tk.Tk()
-    root.withdraw()
-    try:
-        ok = bool(messagebox.askokcancel("UltraArm P1 碰撞测试", text))
-    except Exception as e:
-        logger.debug("无法显示确认对话框: %s", e)
-        try:
-            root.destroy()
-        except Exception:
-            pass
-        return None
-    try:
-        root.destroy()
-    except Exception:
-        pass
-    return "ok" if ok else "cancel"
-
-
-def _wait_for_operator_block_ready() -> None:
-    """本机终端：input 回车；无 TTY 时试弹窗确定（适合测试资源管理器）；再不行则倒计时。"""
-    msg = (
-        "请手动阻挡机械臂（末端运动路径），准备好后按回车："
-        "机械臂将全关节运动，应在阻挡下触发碰撞。"
-    )
-    if sys.stdin is not None and sys.stdin.isatty():
-        input(msg)
-        return
-    use_gui = os.environ.get("ELEPHANT_P1_COLLISION_NO_GUI", "").strip() not in (
-        "1",
-        "true",
-        "yes",
-    )
-    if use_gui:
-        with allure.step("无 TTY：弹出确认窗（在阻挡就绪后点确定）"):
-            r = _wait_tkinter_ok_or_cancel()
-        if r == "ok":
-            return
-        if r == "cancel":
-            pytest.skip("用户点击取消，未执行全关节运动")
-    raw = (os.environ.get("ELEPHANT_P1_COLLISION_UNLOCK_PREP_SEC") or "8").strip()
-    try:
-        sec = float(raw)
-    except ValueError:
-        sec = 8.0
-    with allure.step("非 TTY 且无有效输入方式：按秒数等待（请同期完成阻挡）"):
-        logger.info(
-            "未检测到 TTY 且未使用 GUI 确认/已禁用，将等待 %.1f 秒后再运动。"
-            "可设 ELEPHANT_P1_COLLISION_NO_GUI=0 尝试弹窗，或设 ELEPHANT_P1_COLLISION_UNLOCK_PREP_SEC。",
-            sec,
-        )
-        if sec > 0:
-            time.sleep(sec)
-        else:
-            logger.info("ELEPHANT_P1_COLLISION_UNLOCK_PREP_SEC=0，不等待，立即开始运动。")
 
 
 @pytest.fixture(autouse=True)
@@ -126,7 +57,11 @@ def test_collision_unlock(device: Any, case: dict[str, Any]) -> None:
         device.mc.set_angles(device.coords_init_angles, device.speed)
         device.wait()
 
-    _wait_for_operator_block_ready()
+    prompt_continue(
+        "请手动阻挡机械臂（末端运动路径），准备好后按回车："
+        "机械臂将全关节运动，应在阻挡下触发碰撞。",
+        title="UltraArm P1 碰撞测试",
+    )
 
     with allure.step("全关节运动（应在阻挡下触发碰撞）"):
         device.mc.set_angles(angles, speed)

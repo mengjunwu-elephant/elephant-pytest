@@ -3,14 +3,12 @@ import pytest
 import allure
 
 from common1 import logger
+from common1.operator_input import prompt_continue
 from common1.test_data_handler import get_test_data_from_excel
 from settings import UltraArmP1Base
 
 # 从 Excel 读取测试数据
 cases = get_test_data_from_excel(UltraArmP1Base.TEST_DATA_FILE, "get_bluetooth_signal_strength")
-
-pytestmark = pytest.mark.peripheral
-
 
 @allure.feature("获取蓝牙信号强度")
 @allure.story("蓝牙连接状态下获取信号强度")
@@ -22,7 +20,7 @@ def test_get_bluetooth_signal_strength(device, case):
     logger.debug(f'test_api:{case["api"]}')
 
     with allure.step("确认蓝牙已连接"):
-        input("请确认机械臂蓝牙已连接，按回车键继续测试")
+        prompt_continue("请确认机械臂蓝牙已连接，按回车键继续测试")
 
     with allure.step(f"调用 {case['api']} 接口"):
         response = device.mc.get_bluetooth_signal_strength()

@@ -31,13 +31,17 @@ def test_jog_increment_angle0(device, case):
     logger.debug(f'joint:{case["joint"]}')
     logger.debug(f'increment:{case["increment"]}')
     logger.debug(f'speed:{case["speed"]}')
+    logger.debug(f'target_angle:{case["target_angle"]}')
 
     with allure.step(f"调整关节角度，避免耦合"):
         if joint == 2:
-            device.mc.set_angle(3,110,device.speed)
+            device.mc.set_angle(3,120,device.speed)
             device.wait()
         elif joint == 3:
             device.mc.set_angle(2,50,device.speed)
+            device.wait()
+        elif joint == 3 and case["increment"] == -30:
+            device.mc.set_angle(3,150,device.speed)
             device.wait()
 
     with allure.step(f"调用 {case['api']} 接口"):
@@ -58,9 +62,9 @@ def test_jog_increment_angle0(device, case):
         assert set_res == expected, f"用例【{title}】断言失败，期望 {expected},实际 {set_res}"
 
     with allure.step("断言 get_angle 返回值"):
-        allure.attach(str(case["increment"]), name="期望值", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(case["target_angle"]), name="期望值", attachment_type=allure.attachment_type.TEXT)
         allure.attach(str(get_res), name="实际值", attachment_type=allure.attachment_type.TEXT)
-        assert_almost_equal(get_res, case["increment"], 1,'正确设置jog_increment_angle'), f"用例【{title}】断言失败，期望 {case['increment']},实际 {get_res}"
+        assert_almost_equal(get_res, case["target_angle"], 1,'正确设置jog_increment_angle'), f"用例【{title}】断言失败，期望 {case['target_angle']},实际 {get_res}"
 
     logger.info(f'✅ 用例【{title}】测试通过')
     logger.info(f'》》》》》用例【{case["title"]}】测试完成《《《《《')

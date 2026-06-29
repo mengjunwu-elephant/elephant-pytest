@@ -586,7 +586,8 @@ class ElephantQtRunner(QMainWindow):
             ans = QMessageBox.question(
                 self,
                 "需人工交互（input）",
-                "当前选择的测试代码中包含 input()，执行时会在控制台等待输入。\n\n"
+                "当前选择的测试代码中包含人工交互（input / prompt_continue / prompt_text），"
+                "执行时会在控制台等待输入或弹出确认窗。\n\n"
                 "从本界面启动的子进程通常没有可用的交互式标准输入，用例容易卡住；"
                 "请优先在系统终端中复制日志里的完整命令执行，或确保测试机为 pytest 提供可用控制台。\n\n"
                 "将自动添加 pytest 参数 -s（不捕获输出），便于对照终端提示。\n\n"
@@ -595,7 +596,7 @@ class ElephantQtRunner(QMainWindow):
                 QMessageBox.StandardButton.No,
             )
             if ans != QMessageBox.StandardButton.Yes:
-                self._append_log(f"[跳过] {rel}（含 input()，已取消）")
+                self._append_log(f"[跳过] {rel}（含人工交互，已取消）")
                 self._start_next_pytest()
                 return
 

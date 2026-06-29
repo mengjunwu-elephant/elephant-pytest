@@ -5,6 +5,7 @@ import allure
 from pymycobot.error import ultraArmP1DataException
 
 from common1 import logger
+from common1.operator_input import prompt_continue, prompt_text
 from common1.test_data_handler import get_test_data_from_excel
 from settings import UltraArmP1Base
 
@@ -17,10 +18,9 @@ def device():
     """设备初始化和清理；数字 IO 与底座 IO 共用底座，teardown 时复位底座 IO。"""
     dev = UltraArmP1Base()
     logger.info("初始化完成，接口测试开始")
-    input("请确认数字IO测试工具已连接，点击回车继续测试")
+    prompt_continue("请确认数字IO测试工具已连接，点击回车继续测试")
     yield dev
-    dev.default_base_io_output()
-    dev.mc.close()
+    dev.default_digital_io_output()
     logger.info("环境清理完成，接口测试结束")
 
 
@@ -40,17 +40,15 @@ def test_set_digital_io_output_normal(device, case):
         set_res = device.mc.set_digital_io_output(case["pin_no"], case["state"])
         logger.debug(f"接口返回：{set_res}")
 
-    with allure.step("判断数字IO是否设置成功（可选人工确认）"):
-        result = input(f"当前设置引脚为 {case['pin_no']}，状态为 {case['state']}，请观察数字IO是否有响应，输入 0 表示失败：")
-        if result == "0":
-            assert False, f"用例【{title}】人工判定失败"
-
     with allure.step("读取数字IO状态"):
-        get_res = device.mc.get_digital_io_input(case["pin_no"])
+        if case["pin_no"] == 3:
+            get_res = device.mc.get_end_io_state(1)
+        elif case["pin_no"] == 4:
+            get_res = device.mc.get_end_io_state(2)
         logger.debug(f"接口返回：{get_res}")
 
-    with allure.step("断言返回值类型为 int"):
-        assert isinstance(set_res, int), f"返回类型错误，应为 int，实际为 {type(set_res)}"
+    with allure.step("断言返回值类型为 str"):
+        assert isinstance(set_res, str), f"返回类型错误，应为 int，实际为 {type(set_res)}"
 
     with allure.step("断言接口返回结果"):
         allure.attach(str(expected), name="期望值", attachment_type=allure.attachment_type.TEXT)

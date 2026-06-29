@@ -1,8 +1,31 @@
-# P1_Modbus — Python 串口库
+# P1_Modbus — Python 串口库（v0.3.0）
 
-本目录位于仓库 **`elephant-pytest`** 根下的 `P1_Modbus/`。面向 UltraArm P1（从站地址 **`0x2E`**）的 **Modbus RTU** 风格串口协议：CRC16（多项式 `0xA001`，低字节在前）、粘包拆帧、指令封装。
+本目录位于仓库 **`elephant-pytest`** 根下的 `P1_Modbus/`。面向 UltraArm P1（从站地址 **`0x2E`**）的 **Modbus RTU** 风格串口协议：CRC16、粘包拆帧、**Pro450 风格三层架构**（ModbusRTU + CommandAddress + 业务类）。
 
-协议细节以同目录 **[`ultraArm P1协议文档.xlsx`](ultraArm%20P1协议文档.xlsx)** 为准。
+协议细节以 **[`ultraArm P1协议文档.xlsx`](ultraArm%20P1协议文档.xlsx)** 与 **[`../docs/ultraArm_P1_zh.md`](../docs/ultraArm_P1_zh.md)** 为准。
+
+---
+
+## 架构（v0.3，对齐 Pro450）
+
+```
+UltraArmP1Modbus (ultra_api.py)   — docs 命名 + 物理量校验
+        ↓
+P1Client (commands.py)            — g* / m* 直接组帧
+        ↓
+ModbusRTU (modbus_rtu.py)         — read_p1 / write_p1 / request + PDU 工具 + 线程锁
+        ↓
+crc.py + framing.py               — CRC + 粘包
+CommandAddress (command_address.py) — 地址常量
+```
+
+| 模块 | 职责 |
+|------|------|
+| **`modbus_rtu.py`** | 串口事务 + **PDU 组帧/解析**（``build_read_pdu``、``decode_*`` 等同模块） |
+| **`command_address.py`** | 全部 G/M 地址常量（风格同 Pro450 ``CommandAddress``） |
+| **`commands.py`** | ``P1Client``：每条指令直接 ``read_p1(A.M405)`` / ``write_p1(...)`` |
+| **`ultra_api_limits.py`** | 用户侧物理量范围校验 |
+| **`models.py`** | 结构化 payload（``ConveyorControl`` 等） |
 
 ---
 
@@ -20,342 +43,154 @@ pip install -e ".[dev]"
 
 ## 快速开始
 
-### 方式 A：高层 `UltraArmP1Modbus`（推荐）
-
-`get_*` / `set_*` 命名；角度、坐标已按 **÷100** 转为浮点（度 / mm）；**首次收发自动开串口**；**`debug=True` 自动向 stderr 打 TX/RX**，无需 `logging.basicConfig`。
-
 ```python
 from p1_modbus import UltraArmP1Modbus
 
 arm = UltraArmP1Modbus("COM5", baudrate=115200, timeout=0.5, debug=True)
 try:
-    print(arm.get_system_version())       # G6 → int
-    print(arm.get_angles())               # M405 → list[float] 度
-    print(arm.get_coords())               # M406 → list[float] mm
-    arm.set_estop()                       # M15 → 0
+    print(arm.get_system_version())      # G6
+    print(arm.get_angles_info())         # M405 → list[float] 度
+    print(arm.get_coords_info())         # M406 → list[float] mm
+    arm.stop()                           # M15
 finally:
     arm.close()
 ```
 
-或使用上下文：
-
-```python
-with UltraArmP1Modbus("COM5", baudrate=115200, timeout=0.5, debug=True) as arm:
-    print(arm.get_errors())
-```
-
-### 方式 B：底层 `P1Client`（G/M 原始方法）
-
-返回 **原始字节** 或 **协议数值**；适合自定义组帧或与文档逐字节对照。
-
-```python
-from p1_modbus import P1Client
-
-with P1Client("COM5", baudrate=115200, timeout=0.5, debug=True) as bot:
-    v = bot.read_main_fw_version()        # int（G6，u16 BE）
-    raw = bot.m405_read_angles()          # bytes，自行解析
-```
+**`debug=True`** 时自动向 stderr 打印 TX/RX 十六进制；**参数超限**在组帧前抛 `ValueError`，不会下发串口。
 
 ---
 
-## 串口、调试与事务
+## Modbus 覆盖对照
 
-| 行为 | 说明 |
-|------|------|
-| **自动打开** | 首次 `request()`、`poll_events()` 或访问 `serial` 属性时内部 `_ensure_open()`；也可显式 `open()`。 |
-| **`debug=True`** | 为 logger `p1_modbus.serial` 设置 DEBUG，并在**尚无 handler** 时自动添加 **stderr** `StreamHandler`；打印 `TX` / `RX` 十六进制（空格分隔、大写）。传入自定义 `logger=` 且已有 handler 时不会重复挂载。 |
-| **`event_hook`** | 可选回调 `Callable[[bytes], None]`；在 `request()` 等待应答时若收到限位/碰撞事件帧会先调用再丢弃。 |
-| **`request(pdu, expect_fc=...)`** | 发送 **不含 CRC** 的 PDU，库自动追加 CRC；返回完整应答帧（含 CRC）。超时抛 `TimeoutError`；功能码不符抛 `ProtocolError`。 |
+### xlsx「modbus协议」页 — 已实现
 
----
+`CommandAddress` 收录 G6/G7/G0/G1 系列、M5–M40、M50–M63、M70、M80–M83、M119、M401/M402/M405/M406、G8、M200、G11、**M600** 等（见 `p1_modbus/command_address.py`）。底层通过 ``P1Client`` 的 ``g*`` / ``m*`` 或 ``read_p1`` / ``write_p1`` 调用。
 
-## 读/写帧格式（摘要）
+### 文档有、xlsx 未收录 — 已实现（地址待实机确认）
 
-**读 `0x03` 应答**：`2E 03 AH AL BC DATA... CRC` — `BC` 为数据字节数，解析见 `_parse_p1_read_payload`。
+| 文档 API | G/M | 候选地址 | 说明 |
+|----------|-----|----------|------|
+| `set_conveyor_stop` | M39 | `0x000E` | 0 字节写 |
+| `coord_inverse_solution` | M46 | `0x001E` | FC03 + 8B 坐标×100 |
+| `angle_correct_solution` | M47 | `0x0032` | FC03 + 8B 角度×100 |
+| `get_pwm_status` | M84 | `0x0033` | FC03 读 |
 
-**写 `0x10` 请求**：`2E 10 AH AL BC DATA... CRC` — `BC` 为后续负载字节数。
+请用 [`scripts/probe_missing_modbus.py`](scripts/probe_missing_modbus.py) 或抓包验证后更新 `command_address.py` 中未验证地址：
 
-**主动上报（事件）**：`2E 10 00 30 ...`（限位）、`2E 10 00 31 ...`（碰撞）；`request()` 内会自动跳过，也可用 `poll_events()` 轮询。
-
----
-
-## 模块与导出
-
-```python
-from p1_modbus import (
-    P1Client,
-    UltraArmP1Modbus,
-    ProtocolError,
-    PreviewPose,
-    RgbColor,
-    GripperParams,
-    ConveyorParams,
-    decode_limit_event,
-    decode_collision_event,
-)
+```bash
+cd P1_Modbus
+python scripts/probe_missing_modbus.py COM5
+# 或先 pip install -e ".[dev]" 后在任意目录 import p1_modbus
 ```
 
-- **`ProtocolError`**：应答功能码或格式异常。
-- **`PreviewPose`** / **`RgbColor`** / **`GripperParams`** / **`ConveyorParams`**：见下文「数据模型」。
+### 明确不实现
+
+| 项 | 原因 |
+|----|------|
+| **M601 / M602** | 方案范围外 |
+| 屏端 WiFi/SD/485/机器码/碰撞阈值等 | modbus 页无映射 |
+| `_async` 闭环到位 | Modbus 层不支持 |
+
+### pymycobot 有、本库 Modbus 无映射（只读/网络类）
+
+`get_wifi_ip`、`check_sd_card`、`get_collision_threshold`、`receive_485_data` 等 — 需走其它通信方式，不在本库范围。
 
 ---
 
 ## 数据模型
 
-| 类型 | 用途 | 说明 |
-|------|------|------|
-| **`RgbColor(r, g, b)`** | M23 RGB | 三个分量；线上为各 16 位大端（与文档示例一致）。 |
-| **`PreviewPose(payload: bytes)`** | M51 预览 | **恰好 8 字节**，由上位机按固件约定编码。 |
-| **`GripperParams(j, k, l)`** | M24 / M26 | J、K、L 为 16 位无符号逻辑值；线上大端。 |
-| **`ConveyorParams(payload: bytes)`** | M38 传送带 | **恰好 10 字节**。 |
+| 类型 | 用途 |
+|------|------|
+| **`RgbColor(r, g, b)`** | M23，各分量 u16 BE |
+| **`ConveyorControl(state, direction, speed, distance)`** | M38，10 字节 J/K/L/S |
+| **`BaseIoOutput(pin_no, pin_status, pin_signal)`** | M60，6 字节 |
+| **`DigitalIoOutput(pin_no, pin_signal)`** | M62，4 字节 |
+| **`PreviewPose` / `KinematicsInput`** | M51/M46/M47 读请求尾 8B（×100 int16 BE） |
+| **`GripperParams(j, k, l)`** | M24/M26 |
+| **`ConveyorParams(payload)`** | M38 原始 10 字节（兼容） |
 
 ---
 
-## 事件解析
+## `UltraArmP1Modbus` — 公开 API（文档命名）
+
+命名对齐 **`docs/ultraArm_P1_zh.md`**；每个方法含中文 docstring 与参数范围说明。
+
+### 读
+
+| 方法 | 协议 | 返回 |
+|------|------|------|
+| `get_system_version` | G6 | `int` |
+| `get_modify_version` | G7 | `int` |
+| `get_system_screen_version` | M401 | `int` |
+| `get_modify_screen_version` | M402 | `int` |
+| `get_angles_info` | M405 | `list[float]` 度 |
+| `get_coords_info` | M406 | `list[float]` mm |
+| `get_error_information` | G8 | `list[int]` |
+| `get_run_status` | M200 | `int` |
+| `get_queue_size` | M600 | `int` |
+| `get_motor_enable_status` | M22 | `list[int]` |
+| `get_zero_calibration_state` | M119 | `list[int]` |
+| `get_gripper_angle` | M50 | `int` 1–100 |
+| `get_gripper_parameter(addr)` | M26 | `int` |
+| `get_all_base_io_states` | M61 | `list[int]` |
+| `get_base_io_state(pin_no)` | M61 | `int` |
+| `get_all_end_io_states` | M63 | `list[int]` |
+| `get_end_io_state(pin_no)` | M63 | `int` |
+| `get_pwm_status` | M84 | `list[int]` 长度 4 |
+| `coord_inverse_solution(coords)` | M46 | `list[float]` 关节角 |
+| `angle_correct_solution(angles)` | M47 | `list[float]` 坐标 |
+
+### 写 / 控制
+
+| 方法 | 协议 | 说明 |
+|------|------|------|
+| `set_coords_max_speed(coords)` | G0 | 四坐标 + 内部最大速度 |
+| `set_coords(...)` | G0/G1 | 四坐标 + speed；`max_speed` 选 G0/G1 |
+| `set_coord` / `set_angles` / `set_angle` | G1 | 单轴/全关节 |
+| `set_jog_angle` / `set_jog_coord` | M13/M14 | 点动 |
+| `jog_increment_angle` / `jog_increment_coord` | M19/M20 | 步进 |
+| `stop` | M15 | 急停 |
+| `collision_unlock` | M5 | 碰撞解锁 |
+| `set_joint_release` / `set_joint_enable` | M17/M18 | 放松/抱紧 |
+| `set_color` | M23 | RGB 0–255 |
+| `set_conveyor_control` | M38 | state/direction/speed/distance |
+| `set_conveyor_stop` | M39 | 传送带停止 |
+| `set_preview_mode(coords)` | M51 | 可达性；返回 0/1 |
+| `set_base_io_output` / `set_digital_io_output` | M60/M62 | 结构化 IO |
+| `set_pump_state` | M70 | 0/1/2 |
+| `set_pwm_laser_mode` / `set_pwm_laser` | M80/M81 | 激光 |
+| `set_pwm_custom_mode` / `set_pwm_custom` | M82/M83 | 自定义 PWM |
+| `set_gripper_*` | M24–M29 | 夹爪 |
+| `clear_error_status` | M40 | 清错 |
+| `upgrade_restart` | G11 | 升级重启 |
+| … | … | 其余见 `ultra_api.py` |
+
+**返回值**：多数 `set_*` 成功返回 **`0`**；`set_preview_mode` 不可达返回 **`1`**。超时/协议错误继承 `P1Client.request()` 异常。
+
+**范围校验**：关节角、坐标、速度 1–100、RGB/PWM/IO/传送带等 — 见 `ultra_api_limits.py`；超限 **`ValueError`**，不发送 Modbus。
+
+---
+
+## `P1Client` — 底层 G/M
+
+除上述高层 API 外，`P1Client` 仍提供：
+
+- **`read_p1(addr, tail)`** / **`write_p1(addr, data)`** — P1 读写原语
+- **`g*` / `m*` / `read_*`** — 与 xlsx 一一对应的底层方法
+- **新增**：`m39_conveyor_stop`、`m46_inverse_solution`、`m47_forward_solution`、`m84_read_pwm_status`
+- **payload 修正**：`m38_conveyor(ConveyorControl)`、`m60_set_base_io(BaseIoOutput)`、`m25_gripper_angle(angle, speed)` 整型 1–100 等
+
+寄存器摘要见 ``CommandAddress``（``python -c "from p1_modbus import CommandAddress; print(CommandAddress.G6)"``）。
+
+---
+
+## 事件帧
+
+主动上报：`2E 10 00 30`（限位）、`2E 10 00 31`（碰撞）。`request()` 内自动跳过；亦可用 `poll_events()`。
 
 ```python
 from p1_modbus import decode_limit_event, decode_collision_event
-
-for frame in arm.poll_events():
-    if frame[2:4] == b"\x00\x30":
-        a, b = decode_limit_event(frame)
-    elif frame[2:4] == b"\x00\x31":
-        a, b = decode_collision_event(frame)
 ```
-
-返回 `(frame[4], frame[5])`，具体语义以固件为准。
-
----
-
-## `P1Client` — 全部 G/M 接口
-
-`P1Client` = `P1ClientBase` + `P1CommandsMixin`。下列方法均通过内部 `request()` 收发；**写类**方法返回 **完整应答 `bytes`（含 CRC）**；**读类**返回解析后的 **`int` / `tuple` / `bytes`**。
-
-### 固件版本（主控 `0x00xx`）
-
-| 方法 | 协议 | 返回值 | 说明 |
-|------|------|--------|------|
-| `read_main_fw_version()` | G6 | `int` | 2 字节负载大端 **u16**（如 `00 0A` → 10）。 |
-| `read_main_fw_patch()` | G7 | `int` | 同上（如 `00 05` → 5）。 |
-
-### 运动与控制（`payload` 为 **bytes**，长度须与文档一致）
-
-| 方法 | 协议 | 参数 | 返回 |
-|------|------|------|------|
-| `g0_coordinate_max_speed(payload10)` | G0 | 10 字节 | `bytes` |
-| `g1_coordinate_fixed_speed(payload10)` | G1 坐标规定速度 | 10 字节 | `bytes` |
-| `g1_joint(payload10)` | G1 关节 | 10 字节 | `bytes` |
-| `g1_single_coordinate(payload6)` | G1 单坐标 | 6 字节 | `bytes` |
-| `g1_single_joint(payload6)` | G1 单关节 | 6 字节 | `bytes` |
-| `g10_reboot_stm32()` | G10 重启 STM32 | — | `bytes` |
-| `m5_unlock()` | M5 解锁 | — | `bytes` |
-| `m13_continuous_joint(payload6)` | M13 持续关节 | 6 字节 | 高层见 ``set_jog_angle`` |
-| `m14_continuous_coordinate(payload6)` | M14 持续坐标 | 6 字节 | 高层见 ``set_jog_coord`` |
-| `m19_step_joint(payload6)` | M19 步进关节 | 6 字节 | 高层见 ``jog_increment_angle`` |
-| `m20_step_coordinate(payload6)` | M20 步进坐标 | 6 字节 | 高层见 ``jog_increment_coord`` |
-| `m15_estop()` | M15 急停 | — | `bytes` |
-| `m17_relax_motors()` | M17 放松电机 | — | `bytes` |
-| `m18_brake_motors()` | M18 抱紧电机 | — | `bytes` |
-
-### 状态、灯、校准、传送带
-
-| 方法 | 协议 | 返回值 / 参数 |
-|------|------|----------------|
-| `m22_read_motor_status()` | M22 | `tuple[int,...]` 五个字节状态 |
-| `m23_rgb(color: RgbColor)` | M23 | `bytes` |
-| `m30_zero_calibration(joint_index)` | M30 零位校准 | `int` 关节索引 |
-| `m31_encoder_calibration_j1()` | M31 J1 编码器校准 | `bytes` |
-| `m32_clear_zero_calibration(joint_index)` | M32 清除零位状态 | `bytes` |
-| `m34_buzzer(on: bool)` | M34 蜂鸣器 | `bytes` |
-| `m35_enable_end_button()` | M35 末端按钮使能 | `bytes` |
-| `m36_disable_end_button()` | M36 末端按钮失能 | `bytes` |
-| `m37_force_homing()` | M37 强制回零 | `bytes` |
-| `m38_conveyor(params: ConveyorParams)` | M38 传送带 | `bytes` |
-| `m40_clear_errors()` | M40 清除错误 | `bytes` |
-| `m51_preview(pose: PreviewPose)` | M51 预览 | `bool`（可达为 True） |
-
-### 零位与夹爪
-
-| 方法 | 协议 | 返回值 / 参数 |
-|------|------|----------------|
-| `m119_read_zero_calibration_state()` | M119 | `tuple[int,int,int,int]` 四关节标志 |
-| `m50_read_gripper_angle_centideg()` | M50 | `int` 原始 u16，**角度度值 ÷100** |
-| `m25_gripper_angle(angle_centideg, speed_centideg)` | M25 | 两 u16 大端含义见文档 |
-| `m24_set_gripper_params(p: GripperParams)` | M24 | `bytes` |
-| `m26_read_gripper_params(p: GripperParams)` | M26 | `int` u16（查询依赖 J/K） |
-| `m27_read_gripper_motion_state()` | M27 | `int` u16 BE |
-| `m28_gripper_enable(enable: bool)` | M28 | `bytes` |
-| `m29_gripper_zero_calibration()` | M29 | `bytes` |
-
-### IO、吸泵、激光、自定义 PWM
-
-| 方法 | 协议 | 参数 |
-|------|------|------|
-| `m70_pump(on_mask)` | M70 吸泵 | 低字节掩码 |
-| `m60_set_base_io(payload6)` | M60 底座 IO | 6 字节 |
-| `m61_read_base_io()` | M61 | 返回 **`bytes`** 负载 |
-| `m62_set_tool_io(payload4)` | M62 末端输出 | 4 字节 |
-| `m63_read_tool_io()` | M63 | 返回 **`bytes`** |
-| `m80_laser_switch(on)` | M80 激光开关 | `bool` |
-| `m81_laser_pwm(level)` | M81 激光 PWM 档位 | 0–255 |
-| `m82_custom_pwm_switch(on)` | M82 | `bool` |
-| `m83_custom_pwm_level(level)` | M83 | 0–255 |
-
-### 屏端总线（地址区 **`0x01xx`**）
-
-| 方法 | 协议 | 返回值 |
-|------|------|--------|
-| `read_display_fw_version()` | M401 | `int` u16 BE（如 `00 0C` → 12） |
-| `read_display_fw_patch()` | M402 | `int` u16 BE |
-| `m405_read_angles()` | M405 | **`bytes`**（大端 int16 序列，**×0.01°**） |
-| `m406_read_coordinates()` | M406 | **`bytes`**（同上，一般 **×0.01 mm**） |
-| `g8_read_errors()` | G8 读错误 | **`bytes`** |
-| `m200_read_main_runtime_state()` | M200 | `int` 单字节状态 |
-| `g11_request_stm32_fw_update()` | G11 升级请求 | `bytes` |
-| `m600_read_motion_buffer_size()` | M600 缓冲区大小 | `int` u16 BE |
-
-### 底层事务（`P1ClientBase`）
-
-| 成员 | 说明 |
-|------|------|
-| `open()` / `close()` | 打开/关闭串口。 |
-| `poll_events(max_frames=16)` | 非阻塞读取已到达的 **事件帧** 列表。 |
-| `request(pdu_without_crc: bytes, *, expect_fc=None)` | 一次完整事务。 |
-
----
-
-## `UltraArmP1Modbus` — 全部 `get_*` / `set_*`
-
-继承 `P1Client`，故仍可使用所有 `m*` / `g*` / `read_*` 方法。下列为 **封装层** 约定：
-
-- **`get_*`**：返回 **`int`**、**`list[int]`** 或 **`list[float]`**（角度/坐标）。
-- **`set_*`**：成功返回 **`0`**；异常抛出同底层。
-
-### `get_*` 一览
-
-| 方法 | 对应底层 | 返回类型 | 说明 |
-|------|----------|----------|------|
-| `get_system_version()` | G6 | `int` | 主控版本 u16。 |
-| `get_modify_version()` | G7 | `int` | 主控更正版本 u16。 |
-| `get_system_screen_version()` | M401 | `int` | 屏幕版本 u16。 |
-| `get_screen_modify_version()` | M402 | `int` | 屏幕更正版本 u16。 |
-| `get_angles()` | M405 | `list[float]` | 各关节 **度**，int16 百分之一度 ÷100。 |
-| `get_coords()` | M406 | `list[float]` | 坐标 **mm**（int16 ×0.01 ÷100）。 |
-| `get_errors()` | G8 | `list[int]` | 错误负载按 **u8** 列表。 |
-| `get_runtime_state()` | M200 | `int` | 运行状态字节。 |
-| `get_buffer_size()` | M600 | `int` | 缓冲区大小 u16。 |
-| `get_motor_status()` | M22 | `list[int]` | 五路状态。 |
-| `get_zero_calibration_state()` | M119 | `list[int]` | 四关节零位标志。 |
-| `get_gripper_angle_centideg()` | M50 | `int` | 夹爪角度原始 **×100** 整数。 |
-| `get_gripper_motion_state()` | M27 | `int` | u16。 |
-| `get_gripper_param(j, k)` | M26 | `int` | 内部 `GripperParams(j,k,0)`。 |
-| `get_base_io()` | M61 | `list[int]` | 各字节 0–255。 |
-| `get_tool_io()` | M63 | `list[int]` | 同上。 |
-| `get_pose_preview_ok(pose8)` | M51 | `int` | `pose8` 为 **8 个 0–255**；可达 `1` 否则 `0`。 |
-
-**示例**：
-
-```python
-reachable = arm.get_pose_preview_ok([0, 0, 0, 0, 0, 0, 0, 0])
-deg = arm.get_gripper_angle_centideg() / 100.0   # 转为度（若需浮点度）
-```
-
-### `set_*` 一览
-
-#### 角度 / 坐标 + 速度（`UltraArmP1Modbus` 封装）
-
-与 `get_angles` / `get_coords` 一致：物理量按 **度或毫米** 传入，库内对 **目标值与速度** 做 **`×100`** 后压成 **大端 int16**（centi 单位）。**单关节 / 单坐标 6 字节**线格式为：**轴号 int16（1–4）+ 目标 int16（×100）+ 速度 int16（×100）**。例：关节 1 运动到 **0°**、速度 **100** → 负载 ``00 01 00 00 27 10``，整帧 ``2E 10 00 07 06 00 01 00 00 27 10`` + CRC。
-
-**轴号（1–4）**：坐标 **1=X, 2=Y, 3=Z, 4=RX**；关节 **1–4**。``set_angle(axis, value, speed)`` / ``set_coord(axis, value, speed)`` 使用上述线格式（**不**先读 M405/M406）。``set_angle([int_axis, value], speed)`` 在首元为 ``int`` 且 1–4 时与三参数等价；若两元均为浮点等，则仍按 **两维目标值 + 速度** 的旧 6 字节组帧。
-
-| 方法 | 协议 | 参数 | 线长 |
-|------|------|------|------|
-| `set_coords(x, y, z, rx, speed, *, max_speed=True)` | G0 / G1 坐标 | 五元：X,Y,Z,RX + speed；`max_speed=True` 为 G0，``False`` 为 G1 | 10 |
-| `set_coords([x,y,z,rx], speed, *, max_speed=True)` | 同上 | 兼容列表 + speed | 10 |
-| `set_coord(axis, value, speed)` | G1 单坐标 | 轴号 1–4 + 单维目标 + speed（6B 线格式同上） | 6 |
-| `set_coord([axis, value], speed)` | G1 单坐标 | 首元须 ``int`` 且 1–4 时与三参数等价 | 6 |
-| `set_coord([a,b], speed)` | G1 单坐标 | 两浮点：两坐标分量 + speed（旧式两 int16） | 6 |
-| `set_angles(j1, j2, j3, j4, speed)` | G1 关节 | 四关节 + speed | 10 |
-| `set_angles([j1..j4], speed)` | 同上 | 兼容列表 + speed | 10 |
-| `set_angle(axis, value, speed)` | G1 单关节 | 轴号 1–4 + 角度 + speed（6B 线格式） | 6 |
-| `set_angle([axis, value], speed)` | G1 单关节 | 首元须 ``int`` 且 1–4 时与三参数等价 | 6 |
-| `set_angle([j_a,j_b], speed)` | G1 单关节 | 两浮点：两关节角 + speed（旧式） | 6 |
-
-**点动 / 步进（M13/M14/M19/M20）6 字节**（大端 int16×3）：**字节 1–2** 轴号 **1–4**（关节 A–D 或坐标 X,Y,Z,RX）；**字节 3–4** 对点动为方向 **D**（**1** 正向，**0** 反向），对步进为步进角/步进位移（**×100**，与角度/坐标物理量一致）；**字节 5–6** 速度 **F**（**×100**，与 ``set_angle`` 速度相同编码）。
-
-| 方法 | 协议 | 参数 | 线长 |
-|------|------|------|------|
-| `set_jog_angle(joint, direction, speed)` | M13 | 关节 1–4、``direction`` 1/0 或 ``True``/``False``、速度 | 6 |
-| `set_jog_coord(axis, direction, speed)` | M14 | 坐标轴 1–4、方向、速度 | 6 |
-| `jog_increment_angle(joint, step_angle, speed)` | M19 | 关节 1–4、步进角度（度）、速度 | 6 |
-| `jog_increment_coord(axis, step, speed)` | M20 | 轴 1–4、步进位移、速度 | 6 |
-
-```python
-# G0 最大速度坐标（推荐：按轴 1–4 = X,Y,Z,RX）
-arm.set_coords(10.0, 20.0, 30.0, 40.0, 50.0)
-arm.set_coords([10.0, 20.0, 30.0, 40.0], 50.0)  # 与上等价
-# G1 规定速度坐标
-arm.set_coords(10.0, 20.0, 30.0, 40.0, 50.0, max_speed=False)
-# 单关节：关节 1 → 0°，速度 100（线负载 00 01 00 00 27 10）
-print(arm.set_angle(1, 0, 100))
-# 只改 Z（轴 3），单坐标线格式同上
-arm.set_coord(3, 100.0, 25.0)
-arm.set_angles(0.0, 10.0, -5.0, 3.0, 30.0)
-print(arm.set_angle(1, 10.0, 100.0))   # 关节 1 → 10°，速度 100
-# 关节 2 正向点动，速度 80
-arm.set_jog_angle(2, True, 80.0)
-# Z 轴反向点动，速度 50
-arm.set_jog_coord(3, 0, 50.0)
-# 关节 1 步进 0.5°，速度 100
-arm.jog_increment_angle(1, 0.5, 100.0)
-arm.jog_increment_coord(1, 1.0, 60.0)  # X 步进 1mm（若设备为 mm）
-```
-
-底层若需 **原始 10/6 字节**，仍请使用 `P1Client.g0_coordinate_max_speed(bytes)` 等自行组帧。
-
-#### 其它 `set_*`
-
-| 方法 | 协议 | 参数 | 返回 |
-|------|------|------|------|
-| `set_reboot_stm32()` | G10 | — | `0` |
-| `set_unlock()` | M5 | — | `0` |
-| `set_estop()` | M15 | — | `0` |
-| `set_relax_motors()` | M17 | — | `0` |
-| `set_brake_motors()` | M18 | — | `0` |
-| `set_rgb(r, g, b)` | M23 | 三个 `int` | `0` |
-| `set_zero_calibration(joint_index)` | M30 | 关节索引 | `0` |
-| `set_encoder_calibration_j1()` | M31 | — | `0` |
-| `set_clear_zero_calibration(joint_index)` | M32 | 关节索引 | `0` |
-| `set_buzzer(on)` | M34 | `bool` | `0` |
-| `set_end_button_enable()` | M35 | — | `0` |
-| `set_end_button_disable()` | M36 | — | `0` |
-| `set_force_homing()` | M37 | — | `0` |
-| `set_conveyor(payload10)` | M38 | `Sequence[int]` 长度 **10**（原始字节低 8 位） | `0` |
-| `set_clear_errors()` | M40 | — | `0` |
-| `set_gripper_angle(angle_centideg, speed_centideg)` | M25 | 两 `int` | `0` |
-| `set_gripper_params(j, k, l_val)` | M24 | 三 16 位参数 | `0` |
-| `set_gripper_enable(enable)` | M28 | `bool` | `0` |
-| `set_gripper_zero_calibration()` | M29 | — | `0` |
-| `set_pump(on_mask)` | M70 | 0–255 掩码 | `0` |
-| `set_base_io(payload6)` | M60 | 长度 6 | `0` |
-| `set_tool_io(payload4)` | M62 | 长度 4 | `0` |
-| `set_laser_switch(on)` | M80 | `bool` | `0` |
-| `set_laser_pwm(level)` | M81 | 0–255 | `0` |
-| `set_custom_pwm_switch(on)` | M82 | `bool` | `0` |
-| `set_custom_pwm_level(level)` | M83 | 0–255 | `0` |
-| `set_stm32_fw_update_request()` | G11 | — | `0` |
-
-**`payloadN`（非运动类）**：`list` / `tuple` 中每个元素取 **低 8 位** 作为一字节，长度须等于 **N**。
-
----
-
-## 其它子模块（扩展/测试）
-
-| 模块 | 作用 |
-|------|------|
-| `p1_modbus.crc` | `crc16_modbus`、`append_crc`、`verify_crc` |
-| `p1_modbus.framing` | `pop_first_frame`、`SLAVE_ID` |
-| `p1_modbus.errors` | `ProtocolError` |
 
 ---
 
@@ -366,11 +201,14 @@ cd P1_Modbus
 pytest -q
 ```
 
+含 `test_command_address`、`test_modbus_rtu`（golden PDU/payload）、`test_ultra_api_limits`。
+
 ---
 
 ## 对接前检查
 
-- 版本、角度、坐标的解析以 **实机回读** 与 **xlsx** 一致为准；若与抓包不符，优先核对 `BC` 与寄存器布局。
-- 运动类 **10/6 字节 payload** 的字段顺序、单位以厂家文档为准，本库只负责按长度原样下发。
+- M39/M46/M47/M84 地址以 **实机探测** 为准。
+- 运动 payload 字段顺序以 xlsx 为准；本库在 ``P1Client`` 各方法内按长度原样组帧。
+- CRC：`append_crc` / `verify_crc` 自洽；与标准 Modbus 经典向量的 **整数表示** 可能相差字节序，以本库与 P1 实机一致为准。
 
-更多脚本示例见 [`examples/basic_usage.py`](examples/basic_usage.py)、仓库 [`../demo/P1_modbus_demo.py`](../demo/P1_modbus_demo.py)。
+示例脚本：[`examples/basic_usage.py`](examples/basic_usage.py)、[`scripts/probe_missing_modbus.py`](scripts/probe_missing_modbus.py)。

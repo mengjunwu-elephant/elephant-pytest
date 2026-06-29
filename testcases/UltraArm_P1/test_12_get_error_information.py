@@ -3,6 +3,7 @@ from time import sleep
 import pytest
 import allure
 from common1 import logger
+from common1.operator_input import prompt_continue
 from common1.test_data_handler import get_test_data_from_excel
 from settings import UltraArmP1Base
 from pymycobot.error import ultraArmP1DataException
@@ -56,7 +57,7 @@ def test_singular_point_error(device, case):
         device.wait()
         device.mc.send_coord(case['axis'], case['target_coord'], device.speed)
         sleep(1)
-        input("请观察机械臂末端是否变蓝，点击回车继续测试")
+        prompt_continue("请观察机械臂末端是否变蓝，点击回车继续测试")
 
     with allure.step("获取错误信息"):
         response = device.mc.get_error_information()

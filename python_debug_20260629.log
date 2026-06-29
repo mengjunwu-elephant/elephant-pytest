@@ -1,0 +1,5 @@
+2026-06-29 14:05:12.828 DEBU [pymycobot.ultraarm_p1_base] _write: $M40*49
+2026-06-29 14:05:12.859 DEBU [pymycobot.ultraarm_p1_base]  _read: $M407 angles:33.680,22.230,150.370,28.710;coords:171.157,114.061,-41.099,62.390;pwr:1;run:0;err:32*1B
+2026-06-29 14:05:12.877 DEBU [pymycobot.ultraarm_p1_base]  _read: $M40 OK*6D
+2026-06-29 14:05:12.877 DEBU [pymycobot.ultraarm_p1_base] _write: $M5*78
+2026-06-29 14:05:12.907 DEBU [pymycobot.ultraarm_p1_base]  _read: $M5 OK*5C

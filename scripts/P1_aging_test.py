@@ -26,16 +26,16 @@ COORD_LIMITS = (
 )
 
 JOINT_CASES = {
-    "J1": {"min": [-158.0, 10.0, 110.0, 0.0], "max": [158.0, 10.0, 110.0, 0.0]},
+    "J1": {"min": [-165.0, 10.0, 110.0, 0.0], "max": [165.0, 10.0, 110.0, 0.0]},
     "J2": {"min": [0.0, -18.0, 120.0, 0.0], "max": [0.0, 85.0, 110.0, 0.0]},
-    "J3": {"min": [0.0, 10.0, 89.0, 0.0], "max": [150, 60.0, 190.0, 0.0]},
+    "J3": {"min": [0.0, 10.0, 89.0, 0.0], "max": [100, 60.0, 200.0, 0.0]},
     "J4": {"min": [0.0, 10.0, 110.0, -179.0], "max": [0.0, 10.0, 110.0, 179.0]},
 }
 
-ANGLE_TOLERANCE_DEG = 0.5
+ANGLE_TOLERANCE_DEG = 0.1
 # 坐标：XYZ 允许误差 1 mm；Rx 为角度分量，允许误差 1°
-COORD_TOLERANCE_MM = 1.0
-COORD_TOLERANCE_RX_DEG = 1.0
+COORD_TOLERANCE_MM = 0.1
+COORD_TOLERANCE_RX_DEG = 0.1
 
 MAX_CONSECUTIVE_MONITOR_INVALID = 20
 
@@ -538,7 +538,7 @@ def get_current_time() -> str:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="UltraArm P1 aging test (joint limits loop).")
-    parser.add_argument("--port", default="COM9", help="Serial port, e.g. COM11")
+    parser.add_argument("--port", default="COM3", help="Serial port, e.g. COM11")
     parser.add_argument("--baud", type=int, default=1_000_000, help="Baudrate")
     parser.add_argument("--speed", type=int, default=80, help="set_angles speed")
     parser.add_argument("--poll", type=float, default=0.2, help="Monitor poll interval seconds")

@@ -85,11 +85,15 @@ def _allure_story_label(decorator_list: list[ast.expr]) -> str | None:
     return None
 
 
-def _function_body_uses_input(node: ast.FunctionDef) -> bool:
-    """检测 test 函数体内是否调用 input(...)。"""
-    for n in ast.walk(node):
-        if isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id == "input":
-            return True
+_OPERATOR_PROMPT_FUNCS = frozenset({"input", "prompt_continue", "prompt_text"})
+
+
+def _tree_uses_operator_input(tree: ast.AST) -> bool:
+    """检测模块/函数内是否调用 input 或 operator_input 封装。"""
+    for n in ast.walk(tree):
+        if isinstance(n, ast.Call) and isinstance(n.func, ast.Name):
+            if n.func.id in _OPERATOR_PROMPT_FUNCS:
+                return True
     return False
 
 
@@ -123,6 +127,7 @@ def discover_under_root(project_root: Path, testcase_root: str) -> list[TestModu
             continue
         used: dict[str, int] = {}
         items: list[TestItem] = []
+        file_uses_input = _tree_uses_operator_input(tree)
         for node in tree.body:
             if not isinstance(node, ast.FunctionDef):
                 continue
@@ -130,7 +135,7 @@ def discover_under_root(project_root: Path, testcase_root: str) -> list[TestModu
                 continue
             story = _allure_story_label(node.decorator_list)
             label = _label_for_test_function(node.name, story, used)
-            uses_in = _function_body_uses_input(node)
+            uses_in = file_uses_input or _tree_uses_operator_input(node)
             items.append(
                 TestItem(func_name=node.name, label=label, uses_input=uses_in),
             )
