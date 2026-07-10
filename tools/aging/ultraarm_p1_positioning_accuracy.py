@@ -12,9 +12,9 @@ UltraArm P1：绝对定位精度 & 重复定位精度 demo（结果写入 Excel�
 
 运行示例（在项目根目录）::
 
-    python scripts/P1_positioning_accuracy.py --port COM10 --baud 1000000
+    python tools/aging/ultraarm_p1_positioning_accuracy.py --port COM10 --baud 1000000
 
-默认会在 scripts 目录下生成 ``P1_positioning_accuracy_<时间戳>.xlsx``。
+默认会在 tools/aging 目录下生成 ``P1_positioning_accuracy_<时间戳>.xlsx``。
 """
 
 from __future__ import annotations
@@ -628,7 +628,7 @@ def parse_args() -> argparse.Namespace:
         "--out",
         type=str,
         default="",
-        help="输出 xlsx 路径；默认写入 scripts/P1_positioning_accuracy_<时间戳>.xlsx",
+        help="输出 xlsx 路径；默认写入 tools/aging/P1_positioning_accuracy_<时间戳>.xlsx",
     )
     return p.parse_args()
 
