@@ -18,6 +18,12 @@ def _goto_coords_init(device: UltraArmP1Base) -> None:
     device.wait()
 
 
+@pytest.fixture(autouse=True)
+def reset_device(device):
+    yield
+    device.go_zero()
+    device.wait()
+
 @allure.feature("坐标步进模式")
 @allure.story("初始点位四轴步进±20mm")
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])

@@ -1,4 +1,0 @@
-pyserial>=3.5
-
-[dev]
-pytest>=7.0

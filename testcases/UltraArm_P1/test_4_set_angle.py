@@ -85,7 +85,7 @@ def test_set_angle0(device, case):
 
     with allure.step(f"调整关节角度，避免耦合"):
         if joint == 2:
-            device.mc.set_angle(3,115,device.speed)
+            device.mc.set_angle(3,125,device.speed)
             device.wait()
         elif joint == 3:
             device.mc.set_angle(2,70,device.speed)

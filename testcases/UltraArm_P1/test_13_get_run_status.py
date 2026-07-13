@@ -10,6 +10,12 @@ from settings import UltraArmP1Base
 cases = get_test_data_from_excel(UltraArmP1Base.TEST_DATA_FILE, "get_run_status")
 
 
+@pytest.fixture(autouse=True)
+def reset_device(device):
+    yield
+    device.go_zero()
+    device.wait()
+
 @allure.feature("检查机械臂运动状态")
 @allure.story("静止状态下运动状态查询")
 @pytest.mark.parametrize("case", [c for c in cases if c["test_type"] == "normal"], ids=lambda c: c["title"])

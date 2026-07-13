@@ -27,9 +27,9 @@ COORD_LIMITS = (
 
 JOINT_CASES = {
     "J1": {"min": [-165.0, 10.0, 110.0, 0.0], "max": [165.0, 10.0, 110.0, 0.0]},
-    "J2": {"min": [0.0, -18.0, 120.0, 0.0], "max": [0.0, 85.0, 110.0, 0.0]},
-    "J3": {"min": [0.0, 10.0, 89.0, 0.0], "max": [100, 60.0, 200.0, 0.0]},
-    "J4": {"min": [0.0, 10.0, 110.0, -179.0], "max": [0.0, 10.0, 110.0, 179.0]},
+    "J2": {"min": [10.0, -18.0, 120.0, 0.0], "max": [-10.0, 85.0, 110.0, 0.0]},
+    "J3": {"min": [5.0, 10.0, 89.0, 0.0], "max": [100, 60.0, 200.0, 0.0]},
+    "J4": {"min": [6.0, 10.0, 110.0, -179.0], "max": [8.0, 10.0, 110.0, 179.0]},
 }
 
 ANGLE_TOLERANCE_DEG = 0.1
@@ -538,7 +538,7 @@ def get_current_time() -> str:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="UltraArm P1 aging test (joint limits loop).")
-    parser.add_argument("--port", default="COM3", help="Serial port, e.g. COM11")
+    parser.add_argument("--port", default="COM8", help="Serial port, e.g. COM11")
     parser.add_argument("--baud", type=int, default=1_000_000, help="Baudrate")
     parser.add_argument("--speed", type=int, default=80, help="set_angles speed")
     parser.add_argument("--poll", type=float, default=0.2, help="Monitor poll interval seconds")

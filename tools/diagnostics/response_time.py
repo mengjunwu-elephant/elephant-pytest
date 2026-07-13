@@ -4,7 +4,7 @@ import statistics
 
 from pymycobot import Pro450Client,UltraArmP1
 
-mc = UltraArmP1('com3',debug=1)
+mc = UltraArmP1('com8',debug=1)
 # sleep(2)
 # mc = Pro450Client()
 
@@ -72,7 +72,7 @@ if __name__ == '__main__':
     # mc.set_fresh_mode(0)
     # mc.set_tool_serial_baud_rate(115200)
     # print(mc.get_tool_config())
-    stats = measure_time(mc.set_wifi_password,'12345678','12345678')
+    stats = measure_time(mc.get_limit_switch_state)
 
 
     print("\n========= 统计结果 =========")

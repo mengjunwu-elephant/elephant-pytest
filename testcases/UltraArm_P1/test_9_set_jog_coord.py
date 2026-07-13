@@ -31,12 +31,14 @@ def test_set_jog_coord0(device, case):
     logger.debug(f'position:{case["position"]}')
     logger.debug(f'speed:{case["speed"]}')
 
-    with allure.step(f"调整关节角度，避免耦合"):
-        if axis == 2:
-            device.mc.set_angle(3,110,device.speed)
+    with allure.step(f"机械臂运动到坐标初始姿态"):
+        device.mc.set_angles(device.coords_init_angles, device.speed)
+        device.wait()
+        if case["axis"] == 4 and case["position"] == 0:
+            device.mc.set_angle(1,-10,device.speed)
             device.wait()
-        elif axis == 3:
-            device.mc.set_angle(2,50,device.speed)
+        elif case["axis"] == 4 and case["position"] == 1:
+            device.mc.set_angle(1,10,device.speed)
             device.wait()
 
     with allure.step(f"调用 {case['api']} 接口"):
